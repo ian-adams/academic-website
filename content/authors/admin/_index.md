@@ -48,6 +48,6 @@ I am a Ph.D. candidate in Political Science at the University of Utah. I study p
 
 I am a cross-disciplinary scholar, and strive to produce original research with practical value. My work improves the lives of the men and women of law enforcement and the communities they serve. I have been honored to be recognized as a 2018 American Society of Public Administration Founders’ Fellow, and a 2020 doctoral fellow of the Academy of Criminal Justice Sciences. 
 
-My current CV can be found in the menu above, or the direct link below. Please use the Google Scholar, ResearchGate, or CV options (the icons under my picture will take you directly there!) to find links to publications and other materials. I'm always happy to provide a full-text copy of any research as well, just email me!
+My current CV can be found in the menu above, or the direct link below. Please use the Google Scholar, ResearchGate, or CV options (the icons under my picture will take you directly there!) to find links to publications and other materials. I'm always happy to provide a full-text copy of any research as well, just email me. Thanks for dropping by!
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/cv.pdf" "newtab" >}}CV{{< /staticref >}}.

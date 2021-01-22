@@ -1,5 +1,5 @@
 (() => {
-  // ns-hugo:D:\Google Drive (SG)\R\academic-new\themes\github.com\wowchemy\wowchemy-hugo-modules\wowchemy\assets\js\wowchemy-theming.js
+  // ns-hugo:D:\Google Drive (SG)\R\academic-website-git\themes\github.com\wowchemy\wowchemy-hugo-modules\wowchemy\assets\js\wowchemy-theming.js
   var body = document.body;
   function getThemeMode() {
     return parseInt(localStorage.getItem("wcTheme") || 2);
