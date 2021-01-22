@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vignette | Ian T. Adams</title>
+    <link>https://ianadamsresearch.com/tag/vignette/</link>
+      <atom:link href="https://ianadamsresearch.com/tag/vignette/index.xml" rel="self" type="application/rss+xml" />
+    <description>vignette</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2021`</copyright><lastBuildDate>Sat, 23 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ianadamsresearch.com/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>vignette</title>
+      <link>https://ianadamsresearch.com/tag/vignette/</link>
+    </image>
+    
+    <item>
+      <title>Randomizing Vignette Factorial Designs in Survey Research with Qualtrics</title>
+      <link>https://ianadamsresearch.com/post/qualtrics/randomizing-vignettes-in-survey-research-with-qualtrics/</link>
+      <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/post/qualtrics/randomizing-vignettes-in-survey-research-with-qualtrics/</guid>
+      <description>
+&lt;script src=&#34;https://ianadamsresearch.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Sometimes in survey research, we want to present varying conditions in a short descriptive text, often called a vignette, and measure the effects of those conditions on an outcome of interest.&lt;/p&gt;
+&lt;p&gt;For example, say we have been hired by DinoCreations Inc. to gauge the public’s willingness to spend tax dollars on our brand new Island Adventure theme park, complete with living dinosaurs created from ancient DNA held within amber! We want to know if varying the dinosaurs type and size in a vignette results in statistically significant differences in potential patrons willingness to visit. We have two types of dinosaurs, and they come in three sizes. Will our potential guests be more likely to purchase a vacation package dependent on the type and size of dinosaurs we advertise with?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/mean.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There are multiple ways we could do this. For example, we could just type out each of the six vignette (2x3) and have those randomly display to respondents. However, some vignette designs have a lot more conditions to evaluate. Here, I’ll demonstrate a simple 2x3 vignette factorial design, but the method can easily be modified for larger designs. The survey platform Qualtrics makes this easy, using embedded data and the randomizer in survey flows.&lt;/p&gt;
+&lt;div id=&#34;placeholder-descriptive-text&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Placeholder Descriptive Text&lt;/h2&gt;
+&lt;p&gt;Following months of research, we have determined that there are TWO types of dinosaurs (T-rex and Stegosaurus), and each dinosaur comes in three sizes (big, humongous, and ginormous). Lucky for us, this is a perfect opportunity to put a 2x3 factorial vignette design into play!&lt;/p&gt;
+&lt;p&gt;For now, let’s create a place holder question in the survey. Our vignette will be about dinosaurs, and we are interested in willingness to visit our new Dinocreations.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/placeholder.JPG&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;building-the-randomizer&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Building the Randomizer&lt;/h2&gt;
+&lt;p&gt;Next we need to build a randomizer inside the survey flow. Once inside the survey flow, click the “add below” text inside the survey block, then click the “randomizer” tag.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/randomizer.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now we want to add the type of information this randomizer will handle, in this case, “type” of dinosaur. Click “Add a new element here,” using the “embedded data” type, and assign “type” as the element name. Then assign a type of dinosaur, I chose “terrifying Tyrannasaurus Rex.” Then repeat this step, and assign a different type of dinosaur, in this case an “adorable Stegosaurus.” Finally, &lt;strong&gt;make sure you tell the randomizer to randomly present only 1 of these options&lt;/strong&gt;. Click the “evenly present options” if you want there to be a randomized and equal chance for your survey respondents to see each choice (so here, a 1:2 chance, but for size, a 1:3 chance).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/type_pic.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now we want to build another randomizer, this time to vary the size of the dinosaur in our vignette. Using the same steps as above, we will add a size randomizer that uses three elements of big, humongous, and ginormous, and then &lt;strong&gt;make sure only one of these options is presented&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/pic_size.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;For the final step in the survey flow, we want to make sure both randomizers are &lt;strong&gt;ABOVE&lt;/strong&gt; the vignette question. This assures that the appropriate information is placed into our survey vignette question.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/survey_flow_final.JPG&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;back-to-the-vignette-and-inserting-piped-text&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Back to the vignette, and inserting piped text&lt;/h2&gt;
+&lt;p&gt;Save and close the survey flow interface. Now we need to use the “piped text” interface to get our vignette put together. We have decided to concentrate on customers who will be leaving on their honeymoon soon. The plain text in this box is text that EVERY survey respondent will see, while the SIZE and TYPE placeholders will need to be modified to import the embedded data we defined in the survey flow steps above.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/pic_honeymoon.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;To use the piped text funcionality, highlight SIZE, and then click the “piped text” tab directly above:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/pip_piped.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Then, click the “embedded data” option, and type in “size” (without the quotation marks) and hit enter. Repeat this step for the TYPE placeholder, with the “type” embedded data. After you delete the placeholders, you should have something that looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/final%20vignette%20setup.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now, let’s see if our survey is working. Use the “preview” button at the top of the page. Check it a few times to make sure the randomization is working. Here, in two consecutive previews, I can already see the randomization is working!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/stego_gino.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;and&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/trex_humon_pic.JPG&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusion&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Analyzing the results is outside of the scope of this post, but there are plenty of guides for that. Now go forth and randomize your vignettes!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

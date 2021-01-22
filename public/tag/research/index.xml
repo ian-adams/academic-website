@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>research | Ian T. Adams</title>
+    <link>https://ianadamsresearch.com/tag/research/</link>
+      <atom:link href="https://ianadamsresearch.com/tag/research/index.xml" rel="self" type="application/rss+xml" />
+    <description>research</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2021`</copyright><lastBuildDate>Tue, 12 Jan 2021 10:53:17 -0700</lastBuildDate>
+    <image>
+      <url>https://ianadamsresearch.com/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>research</title>
+      <link>https://ianadamsresearch.com/tag/research/</link>
+    </image>
+    
+    <item>
+      <title>Public Policy Data Sources</title>
+      <link>https://ianadamsresearch.com/post/2021-01-12-public-policy-data-sources/</link>
+      <pubDate>Tue, 12 Jan 2021 10:53:17 -0700</pubDate>
+      <guid>https://ianadamsresearch.com/post/2021-01-12-public-policy-data-sources/</guid>
+      <description>
+&lt;script src=&#34;https://ianadamsresearch.com/post/2021-01-12-public-policy-data-sources/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;general-data-sources&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;General Data Sources&lt;/h1&gt;
+&lt;p&gt;The questions posed in public policy research are astoundingly varied. Crime, medicine, environmental, and political questions are all valid domains. Given that variety, it is no surprise that the data sources tapped by public policy scholars are similarly varied.&lt;/p&gt;
+&lt;p&gt;With that in mind, the following list should be considered only a start. All of the sources below have been used by scholars and practitioners to investigate interesting questions from across public policy.&lt;/p&gt;
+&lt;div id=&#34;us-census&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;US Census&lt;/h2&gt;
+&lt;p&gt;The Census Bureau’s mission is to serve as the nation’s leading provider of quality data about its people and economy.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://data.census.gov/cedsci/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;inter-university-consortium-for-political-and-social-research-icpsr&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Inter-University Consortium for Political and Social Research (ICPSR)&lt;/h2&gt;
+&lt;p&gt;(Personal favorite!) An international consortium of more than 750 academic institutions and research organizations, Inter-university Consortium for Political and Social Research (ICPSR) provides leadership and training in data access, curation, and methods of analysis for the social science research community.&lt;/p&gt;
+&lt;p&gt;ICPSR maintains a data archive of more than 250,000 files of research in the social and behavioral sciences. It hosts 21 specialized collections of data in education, aging, criminal justice, substance abuse, terrorism, and other fields.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.icpsr.umich.edu/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;world-development-indicators-wdi-online&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;World Development Indicators (WDI) Online&lt;/h2&gt;
+&lt;p&gt;The primary World Bank collection of development indicators, compiled from officially-recognized international sources. It presents the most current and accurate global development data available, and includes national, regional and global estimates&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://datacatalog.worldbank.org/dataset/world-development-indicators&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;council-of-european-social-science-data-archives-cessda-portal&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Council of European Social Science Data Archives (CESSDA) Portal&lt;/h2&gt;
+&lt;p&gt;Research data and metadata, including sociological surveys, election studies, longitudinal studies, opinion polls, and census data.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.nsd.uib.no/cessda/home.html&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;google-database-search&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Google Database Search&lt;/h2&gt;
+&lt;p&gt;Dataset Search is a search engine for datasets.Using a simple keyword search, users can discover datasets hosted in thousands of repositories across the Web. The nice thing about this one is it can find data in many of the others listed here!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://datasetsearch.research.google.com/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;world-bank-research-data-sets&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;World Bank Research Data Sets&lt;/h2&gt;
+&lt;p&gt;Datasets for the World bank. Free and open access to global development data.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://data.worldbank.org/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;us-government-data.gov&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;US Government “Data.gov”&lt;/h2&gt;
+&lt;p&gt;Data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://data.gov/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;iqss-institute-for-qualitative-social-science-at-harvard-dataverse-network&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;IQSS (Institute for Qualitative Social Science at Harvard) Dataverse Network&lt;/h2&gt;
+&lt;p&gt;Also known as the “Harvard Dataverse,” and is a repository for research data.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dataverse.harvard.edu/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;american-national-election-studies-anes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;American National Election Studies (ANES)&lt;/h2&gt;
+&lt;p&gt;Data on voting, public opinion, and political participation&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.electionstudies.org/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;general-social-survey-gss&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;General Social Survey (GSS)&lt;/h2&gt;
+&lt;p&gt;The GSS has been a reliable source of data to help researchers, students, and journalists monitor and explain trends in American behaviors, demographics, and opinions.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gss.norc.org/Get-The-Data&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pew-research-center-for-people-and-the-press&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pew Research Center for People and the Press&lt;/h2&gt;
+&lt;p&gt;Pew Research Center is a nonpartisan fact tank that informs the public about the issues, attitudes and trends shaping the world.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.pewresearch.org/download-datasets/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;state-data-center-sdc-program-from-us-census&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;State Data Center (SDC) Program from US Census&lt;/h2&gt;
+&lt;p&gt;The State Data Center (SDC) program is one of the Census Bureau’s longest and most successful partnerships. The partnership was created to make data available locally.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.census.gov/about/partners/sdc.html&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

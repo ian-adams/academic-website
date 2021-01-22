@@ -1,0 +1,84 @@
+---
+title: Testing Netlify hosting with R Markdown
+author: ''
+date: '2020-05-23'
+slug: testing-netlify-hosting-with-r-markdown
+categories:
+  - R
+  - website
+tags:
+  - Demo
+  - R Markdown
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-05-23T12:48:35-06:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+This report was generated on `r Sys.Date()`, as a demo of `textclean` from https://github.com/trinker/textclean#check-text
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+```{r include=FALSE}
+library(dplyr)
+library(textshape)
+library(lexicon)
+library(textclean)
+```
+
+## Fast example with created examples
+
+```{r}
+x <- c("i like", "<p>i want. </p>. thet them ther .", "I am ! that|", "", NA, 
+    "&quot;they&quot; they,were there", ".", "   ", "?", "3;", "I like goud eggs!", 
+    "bi\xdfchen Z\xfcrcher", "i 4like...", "\\tgreat",  "She said \"yes\"")
+Encoding(x) <- "latin1"
+x <- as.factor(x)
+check_text(x)
+```
+
+### And if all is well the user should be greeted by a cow:
+```{r}
+y <- c("A valid sentence.", "yet another!")
+check_text(y)
+```
+
+## Row Filtering
+
+It is useful to drop/remove empty rows or unwanted rows (for example the researcher dialogue from a transcript). The `drop_empty_row` & `drop_row` do empty row do just this. First I’ll demo the removal of empty rows.
+
+```{r}
+## create a data set wit empty rows
+(dat <- rbind.data.frame(DATA[, c(1, 4)], matrix(rep(" ", 4), 
+    ncol =2, dimnames=list(12:13, colnames(DATA)[c(1, 4)]))))
+
+drop_empty_row(dat)
+```
+
+
+Next we drop out rows. The `drop_row` function takes a data set, a column (named or numeric position) and regex terms to search for. The `terms` argument takes regex(es) allowing for partial matching. `terms` is case sensitive but can be changed via the `ignore.case` argument.
+
+```{r}
+drop_row(dataframe = DATA, column = "person", terms = c("sam", "greg"))
+
+drop_row(DATA, 1, c("sam", "greg"))
+
+keep_row(DATA, 1, c("sam", "greg"))
+
+drop_row(DATA, "state", c("Comp"))
+
+drop_row(DATA, "state", c("I "))
+
+drop_row(DATA, "state", c("you"), ignore.case = TRUE)
+```
+
+
+

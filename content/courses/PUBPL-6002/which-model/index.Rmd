@@ -1,0 +1,46 @@
+---
+title: Which Model do I use?
+author: Ian Adams
+date: '2021-01-18'
+slug: which-model
+categories:
+  - stats
+tags:
+  - '6002'
+  - 'stats'
+linktitle: "Which Model"
+summary: ~
+lastmod: 'r Sys.Date()'
+toc: false
+type: docs
+menu:
+  example:
+    name: Model Selection
+    weight: 4
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r data, include=FALSE}
+library(tidyverse)
+models_simple <- read_csv("models_simple.csv")
+
+```
+
+# Introduction
+
+This is a very constrained, simple table to help students decide what type of statistical modeling is appropriate for their research question and data set.
+
+```{r table, echo=FALSE}
+library(kableExtra)
+
+kableExtra::kbl(models_simple, caption = "Which Model Do I Use?") %>%
+  kable_styling() %>% 
+    pack_rows("Single Comparison Tests", 1, 4) %>%
+    pack_rows("Association Tests", 5, 10)
+
+```

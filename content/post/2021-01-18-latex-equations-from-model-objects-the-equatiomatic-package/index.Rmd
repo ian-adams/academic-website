@@ -1,0 +1,118 @@
+---
+# Documentation: https://wowchemy.com/docs/managing-content/
+
+title: "Latex Equations From Model Objects the Equatiomatic Package"
+subtitle: ""
+summary: ""
+authors: []
+tags: []
+categories: []
+date: 2021-01-18T19:27:18-07:00
+lastmod: 2021-01-18T19:27:18-07:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+```{r global-opts, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+```
+
+As I was building a recent preprint, and trying to translate a long Bayesian formula (courtesy the big brain of [Scott Mourtgos](https://smourtgos.netlify.app/)) into properly specified LaTeX, I thought there has to be a better way. As usual, my decision to [follow Andrew Heiss' github](https://github.com/andrewheiss) paid off, as I saw he has been authoring the `equatiomatic` package. The project is maintained by Daniel Anderson, and you can [check it out yourself here](https://datalorax.github.io/equatiomatic/).
+
+The beauty of `equatiomatic` is clear - it takes your model object in R and translates it into beautifully rendered LaTeX equations.
+
+Thought I'd quickly demo the package using some easy data I had laying around.
+
+## Walking Through `equatiomatic`
+
+First get the package installed and loaded:
+
+```{r remedy001, eval=FALSE, include=TRUE}
+# package install
+# install.packages("equatiomatic", repos = "http://cran.us.r-project.org")
+
+# load up
+library(equatiomatic)
+
+```
+
+I'm using some data from my most recent publication in *Public Administration Review*, which tests competing theories of body-worn camera (BWC) activation. We ask: Is variation in BWC activations more explained by officer attitudes towards the cameras, by officer demographics, or by job function. I won't repeat the whole analysis here, but you can [find out by visiting the article](https://doi.org/10.1111/puar.13339)!
+
+```{r data, message=FALSE, warning=FALSE}
+library(tidyverse)
+
+activations <- read_csv("activations.csv")
+
+head(activations)
+
+```
+
+
+Let's build a quick (and misspecified here) version of one of the main models of interest in the paper:
+
+```{r model}
+
+job_function <- lm(totalactivations ~ forcecount + totalprimarycalls + arrests + Line_Officer, activations)
+
+```
+
+
+Now, we give the results of that model to `equatiomatic` and let it extract and build:
+
+```{r eq, echo=TRUE, message=FALSE, warning=FALSE}
+
+equatiomatic::extract_eq(job_function,
+                         wrap = TRUE,        # Long equation needs to wrap 
+                         terms_per_line = 2) # Max two equation terms per line
+
+```
+We can take the output directly to Rmarkdown using the given LaTeX!
+
+$$
+\begin{aligned}
+\operatorname{totalactivations} &= \alpha + \beta_{1}(\operatorname{forcecount})\ + \\
+&\quad \beta_{2}(\operatorname{totalprimarycalls}) + \beta_{3}(\operatorname{arrests})\ + \\
+&\quad \beta_{4}(\operatorname{Line\_Officer}) + \epsilon
+\end{aligned}
+$$
+
+Absolutely gorgeous! But it gets better, we can include the coefficients instead of funny Greek letters!
+
+```{r eq2, message=FALSE, warning=FALSE}
+
+equatiomatic::extract_eq(job_function,
+                         use_coefs = TRUE,   # Use coefficients instead of beta
+                         wrap = TRUE,        # Long equation needs to wrap 
+                         terms_per_line = 2) # Max two equation terms per line
+
+```
+Again, copy/paste over the LaTeX given by equatiomatic, and:
+
+$$
+\begin{aligned}
+\operatorname{totalactivations} &= 6.19 + 10.66(\operatorname{forcecount})\ + \\
+&\quad 0.65(\operatorname{totalprimarycalls}) + 3.91(\operatorname{arrests})\ + \\
+&\quad 18.78(\operatorname{Line\_Officer}) + \epsilon
+\end{aligned}
+$$
+
+By the way, the package isn't limited to linear regressions, and already has support for logistic and probit regressions with `glm()`, and ordered logistic regressions. Hit up the package home to follow development. 
+
+I am completely impressed by this young package so far, and can't wait to see what else is coming!

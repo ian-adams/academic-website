@@ -1,0 +1,341 @@
+---
+title: Testing Netlify hosting with R Markdown
+author: ''
+date: '2020-05-23'
+slug: testing-netlify-hosting-with-r-markdown
+categories:
+  - R
+  - website
+tags:
+  - Demo
+  - R Markdown
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-05-23T12:48:35-06:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>This report was generated on 2020-12-30, as a demo of <code>textclean</code> from <a href="https://github.com/trinker/textclean#check-text" class="uri">https://github.com/trinker/textclean#check-text</a></p>
+<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
+<div id="fast-example-with-created-examples" class="section level2">
+<h2>Fast example with created examples</h2>
+<pre class="r"><code>x &lt;- c(&quot;i like&quot;, &quot;&lt;p&gt;i want. &lt;/p&gt;. thet them ther .&quot;, &quot;I am ! that|&quot;, &quot;&quot;, NA, 
+    &quot;&amp;quot;they&amp;quot; they,were there&quot;, &quot;.&quot;, &quot;   &quot;, &quot;?&quot;, &quot;3;&quot;, &quot;I like goud eggs!&quot;, 
+    &quot;bi\xdfchen Z\xfcrcher&quot;, &quot;i 4like...&quot;, &quot;\\tgreat&quot;,  &quot;She said \&quot;yes\&quot;&quot;)
+Encoding(x) &lt;- &quot;latin1&quot;
+x &lt;- as.factor(x)
+check_text(x)</code></pre>
+<pre><code>## 
+## =============
+## NON CHARACTER
+## =============
+## 
+## The text variable is not a character column (likely `factor`):
+## 
+## 
+## *Suggestion: Consider using `as.character` or `stringsAsFactors = FALSE` when reading in
+##              Also, consider rerunning `check_text` after fixing
+## 
+## 
+## =====
+## DIGIT
+## =====
+## 
+## The following observations contain digits/numbers:
+## 
+## 10, 13
+## 
+## This issue affected the following text:
+## 
+## 10: 3;
+## 13: i 4like...
+## 
+## *Suggestion: Consider using `replace_number`
+## 
+## 
+## ========
+## EMOTICON
+## ========
+## 
+## The following observations contain emoticons:
+## 
+## 6
+## 
+## This issue affected the following text:
+## 
+## 6: &amp;quot;they&amp;quot; they,were there
+## 
+## *Suggestion: Consider using `replace_emoticons`
+## 
+## 
+## =====
+## EMPTY
+## =====
+## 
+## The following observations contain empty text cells (all white space):
+## 
+## 1
+## 
+## This issue affected the following text:
+## 
+## 1: i like
+## 
+## *Suggestion: Consider running `drop_empty_row`
+## 
+## 
+## =======
+## ESCAPED
+## =======
+## 
+## The following observations contain escaped back spaced characters:
+## 
+## 14
+## 
+## This issue affected the following text:
+## 
+## 14: \tgreat
+## 
+## *Suggestion: Consider using `replace_white`
+## 
+## 
+## ====
+## HTML
+## ====
+## 
+## The following observations contain HTML markup:
+## 
+## 2, 6
+## 
+## This issue affected the following text:
+## 
+## 2: &lt;p&gt;i want. &lt;/p&gt;. thet them ther .
+## 6: &amp;quot;they&amp;quot; they,were there
+## 
+## *Suggestion: Consider running `replace_html`
+## 
+## 
+## ==========
+## INCOMPLETE
+## ==========
+## 
+## The following observations contain incomplete sentences (e.g., uses ending punctuation like &#39;...&#39;):
+## 
+## 13
+## 
+## This issue affected the following text:
+## 
+## 13: i 4like...
+## 
+## *Suggestion: Consider using `replace_incomplete`
+## 
+## 
+## =============
+## MISSING VALUE
+## =============
+## 
+## The following observations contain missing values:
+## 
+## 5
+## 
+## *Suggestion: Consider running `drop_NA`
+## 
+## 
+## ========
+## NO ALPHA
+## ========
+## 
+## The following observations contain elements with no alphabetic (a-z) letters:
+## 
+## 4, 7, 8, 9, 10
+## 
+## This issue affected the following text:
+## 
+## 4: 
+## 7: .
+## 8:    
+## 9: ?
+## 10: 3;
+## 
+## *Suggestion: Consider cleaning the raw text or running `filter_row`
+## 
+## 
+## ==========
+## NO ENDMARK
+## ==========
+## 
+## The following observations contain elements with missing ending punctuation:
+## 
+## 1, 3, 4, 6, 8, 10, 12, 14, 15
+## 
+## This issue affected the following text:
+## 
+## 1: i like
+## 3: I am ! that|
+## 4: 
+## 6: &amp;quot;they&amp;quot; they,were there
+## 8:    
+## 10: 3;
+## 12: bißchen Zürcher
+## 14: \tgreat
+## 15: She said &quot;yes&quot;
+## 
+## *Suggestion: Consider cleaning the raw text or running `add_missing_endmark`
+## 
+## 
+## ====================
+## NO SPACE AFTER COMMA
+## ====================
+## 
+## The following observations contain commas with no space afterwards:
+## 
+## 6
+## 
+## This issue affected the following text:
+## 
+## 6: &amp;quot;they&amp;quot; they,were there
+## 
+## *Suggestion: Consider running `add_comma_space`
+## 
+## 
+## =========
+## NON ASCII
+## =========
+## 
+## The following observations contain non-ASCII text:
+## 
+## 12
+## 
+## This issue affected the following text:
+## 
+## 12: bißchen Zürcher
+## 
+## *Suggestion: Consider running `replace_non_ascii`
+## 
+## 
+## ==================
+## NON SPLIT SENTENCE
+## ==================
+## 
+## The following observations contain unsplit sentences (more than one sentence per element):
+## 
+## 2, 3
+## 
+## This issue affected the following text:
+## 
+## 2: &lt;p&gt;i want. &lt;/p&gt;. thet them ther .
+## 3: I am ! that|
+## 
+## *Suggestion: Consider running `textshape::split_sentence`</code></pre>
+<div id="and-if-all-is-well-the-user-should-be-greeted-by-a-cow" class="section level3">
+<h3>And if all is well the user should be greeted by a cow:</h3>
+<pre class="r"><code>y &lt;- c(&quot;A valid sentence.&quot;, &quot;yet another!&quot;)
+check_text(y)</code></pre>
+<pre><code>## 
+##  ------------- 
+## No problems found!
+## This text is virtuosic! 
+##  ---------------- 
+##   \   ^__^ 
+##    \  (oo)\ ________ 
+##       (__)\         )\ /\ 
+##            ||------w|
+##            ||      ||</code></pre>
+</div>
+</div>
+<div id="row-filtering" class="section level2">
+<h2>Row Filtering</h2>
+<p>It is useful to drop/remove empty rows or unwanted rows (for example the researcher dialogue from a transcript). The <code>drop_empty_row</code> &amp; <code>drop_row</code> do empty row do just this. First I’ll demo the removal of empty rows.</p>
+<pre class="r"><code>## create a data set wit empty rows
+(dat &lt;- rbind.data.frame(DATA[, c(1, 4)], matrix(rep(&quot; &quot;, 4), 
+    ncol =2, dimnames=list(12:13, colnames(DATA)[c(1, 4)]))))</code></pre>
+<pre><code>##        person                                 state
+## 1         sam         Computer is fun. Not too fun.
+## 2        greg               No it&#39;s not, it&#39;s dumb.
+## 3     teacher                    What should we do?
+## 4         sam                  You liar, it stinks!
+## 5        greg               I am telling the truth!
+## 6       sally                How can we be certain?
+## 7        greg                      There is no way.
+## 8         sam                       I distrust you.
+## 9       sally           What are you talking about?
+## 10 researcher         Shall we move on?  Good then.
+## 11       greg I&#39;m hungry.  Let&#39;s eat.  You already?
+## 12                                                 
+## 13</code></pre>
+<pre class="r"><code>drop_empty_row(dat)</code></pre>
+<pre><code>##        person                                 state
+## 1         sam         Computer is fun. Not too fun.
+## 2        greg               No it&#39;s not, it&#39;s dumb.
+## 3     teacher                    What should we do?
+## 4         sam                  You liar, it stinks!
+## 5        greg               I am telling the truth!
+## 6       sally                How can we be certain?
+## 7        greg                      There is no way.
+## 8         sam                       I distrust you.
+## 9       sally           What are you talking about?
+## 10 researcher         Shall we move on?  Good then.
+## 11       greg I&#39;m hungry.  Let&#39;s eat.  You already?</code></pre>
+<p>Next we drop out rows. The <code>drop_row</code> function takes a data set, a column (named or numeric position) and regex terms to search for. The <code>terms</code> argument takes regex(es) allowing for partial matching. <code>terms</code> is case sensitive but can be changed via the <code>ignore.case</code> argument.</p>
+<pre class="r"><code>drop_row(dataframe = DATA, column = &quot;person&quot;, terms = c(&quot;sam&quot;, &quot;greg&quot;))</code></pre>
+<pre><code>##       person sex adult                         state code
+## 1    teacher   m     1            What should we do?   K3
+## 2      sally   f     0        How can we be certain?   K6
+## 3      sally   f     0   What are you talking about?   K9
+## 4 researcher   f     1 Shall we move on?  Good then.  K10</code></pre>
+<pre class="r"><code>drop_row(DATA, 1, c(&quot;sam&quot;, &quot;greg&quot;))</code></pre>
+<pre><code>##       person sex adult                         state code
+## 1    teacher   m     1            What should we do?   K3
+## 2      sally   f     0        How can we be certain?   K6
+## 3      sally   f     0   What are you talking about?   K9
+## 4 researcher   f     1 Shall we move on?  Good then.  K10</code></pre>
+<pre class="r"><code>keep_row(DATA, 1, c(&quot;sam&quot;, &quot;greg&quot;))</code></pre>
+<pre><code>##   person sex adult                                 state code
+## 1    sam   m     0         Computer is fun. Not too fun.   K1
+## 2   greg   m     0               No it&#39;s not, it&#39;s dumb.   K2
+## 3    sam   m     0                  You liar, it stinks!   K4
+## 4   greg   m     0               I am telling the truth!   K5
+## 5   greg   m     0                      There is no way.   K7
+## 6    sam   m     0                       I distrust you.   K8
+## 7   greg   m     0 I&#39;m hungry.  Let&#39;s eat.  You already?  K11</code></pre>
+<pre class="r"><code>drop_row(DATA, &quot;state&quot;, c(&quot;Comp&quot;))</code></pre>
+<pre><code>##        person sex adult                                 state code
+## 1        greg   m     0               No it&#39;s not, it&#39;s dumb.   K2
+## 2     teacher   m     1                    What should we do?   K3
+## 3         sam   m     0                  You liar, it stinks!   K4
+## 4        greg   m     0               I am telling the truth!   K5
+## 5       sally   f     0                How can we be certain?   K6
+## 6        greg   m     0                      There is no way.   K7
+## 7         sam   m     0                       I distrust you.   K8
+## 8       sally   f     0           What are you talking about?   K9
+## 9  researcher   f     1         Shall we move on?  Good then.  K10
+## 10       greg   m     0 I&#39;m hungry.  Let&#39;s eat.  You already?  K11</code></pre>
+<pre class="r"><code>drop_row(DATA, &quot;state&quot;, c(&quot;I &quot;))</code></pre>
+<pre><code>##       person sex adult                                 state code
+## 1        sam   m     0         Computer is fun. Not too fun.   K1
+## 2       greg   m     0               No it&#39;s not, it&#39;s dumb.   K2
+## 3    teacher   m     1                    What should we do?   K3
+## 4        sam   m     0                  You liar, it stinks!   K4
+## 5      sally   f     0                How can we be certain?   K6
+## 6       greg   m     0                      There is no way.   K7
+## 7      sally   f     0           What are you talking about?   K9
+## 8 researcher   f     1         Shall we move on?  Good then.  K10
+## 9       greg   m     0 I&#39;m hungry.  Let&#39;s eat.  You already?  K11</code></pre>
+<pre class="r"><code>drop_row(DATA, &quot;state&quot;, c(&quot;you&quot;), ignore.case = TRUE)</code></pre>
+<pre><code>##       person sex adult                         state code
+## 1        sam   m     0 Computer is fun. Not too fun.   K1
+## 2       greg   m     0       No it&#39;s not, it&#39;s dumb.   K2
+## 3    teacher   m     1            What should we do?   K3
+## 4       greg   m     0       I am telling the truth!   K5
+## 5      sally   f     0        How can we be certain?   K6
+## 6       greg   m     0              There is no way.   K7
+## 7 researcher   f     1 Shall we move on?  Good then.  K10</code></pre>
+</div>

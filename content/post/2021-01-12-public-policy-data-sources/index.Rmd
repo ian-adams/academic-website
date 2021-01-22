@@ -1,0 +1,110 @@
+---
+# Documentation: https://wowchemy.com/docs/managing-content/
+
+title: "Public Policy Data Sources"
+subtitle: "A Short List for Public Policy Students"
+summary: ""
+authors: []
+tags: [research, public policy]
+categories: []
+date: 2021-01-12T10:53:17-07:00
+lastmod: 2021-01-12T10:53:17-07:00
+featured: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+# General Data Sources
+
+The questions posed in public policy research are astoundingly varied. Crime, medicine, environmental, and political questions are all valid domains. Given that variety, it is no surprise that the data sources tapped by public policy scholars are similarly varied. 
+
+With that in mind, the following list should be considered only a start. All of the sources below have been used by scholars and practitioners to investigate interesting questions from across public policy.
+
+## US Census
+
+The Census Bureau's mission is to serve as the nation's leading provider of quality data about its people and economy.
+
+[LINK](https://data.census.gov/cedsci/)
+
+
+## Inter-University Consortium for Political and Social Research (ICPSR)
+
+(Personal favorite!) An international consortium of more than 750 academic institutions and research organizations, Inter-university Consortium for Political and Social Research (ICPSR) provides leadership and training in data access, curation, and methods of analysis for the social science research community.
+
+ICPSR maintains a data archive of more than 250,000 files of research in the social and behavioral sciences. It hosts 21 specialized collections of data in education, aging, criminal justice, substance abuse, terrorism, and other fields.
+
+[LINK](http://www.icpsr.umich.edu/)
+
+## World Development Indicators (WDI) Online
+
+The primary World Bank collection of development indicators, compiled from officially-recognized international sources. It presents the most current and accurate global development data available, and includes national, regional and global estimates
+
+[LINK](https://datacatalog.worldbank.org/dataset/world-development-indicators)
+
+## Council of European Social Science Data Archives (CESSDA) Portal
+
+Research data and metadata, including sociological surveys, election studies, longitudinal studies, opinion polls, and census data.
+
+[LINK](http://www.nsd.uib.no/cessda/home.html)
+
+## Google Database Search
+
+Dataset Search is a search engine for datasets.Using a simple keyword search, users can discover datasets hosted in thousands of repositories across the Web. The nice thing about this one is it can find data in many of the others listed here!
+
+[LINK](https://datasetsearch.research.google.com/)
+
+## World Bank Research Data Sets
+
+Datasets for the World bank. Free and open access to global development data.
+
+[LINK](https://data.worldbank.org/)
+
+## US Government "Data.gov"
+
+Data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.
+
+[LINK](http://data.gov/)
+
+## IQSS (Institute for Qualitative Social Science at Harvard) Dataverse Network
+
+Also known as the "Harvard Dataverse," and is a repository for research data.
+
+[LINK](https://dataverse.harvard.edu/)
+
+
+## American National Election Studies (ANES)
+
+Data on voting, public opinion, and political participation
+
+[LINK](http://www.electionstudies.org/)
+
+## General Social Survey (GSS)
+
+The GSS has been a reliable source of data to help researchers, students, and journalists monitor and explain trends in American behaviors, demographics, and opinions.
+
+[LINK](https://gss.norc.org/Get-The-Data)
+
+## Pew Research Center for People and the Press
+
+Pew Research Center is a nonpartisan fact tank that informs the public about the issues, attitudes and trends shaping the world.
+
+[LINK](https://www.pewresearch.org/download-datasets/)
+
+## State Data Center (SDC) Program from US Census
+
+The State Data Center (SDC) program is one of the Census Bureau's longest and most successful partnerships. The partnership was created to make data available locally.
+
+[LINK](https://www.census.gov/about/partners/sdc.html)

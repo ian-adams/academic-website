@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>stats | Ian T. Adams</title>
+    <link>https://ianadamsresearch.com/category/stats/</link>
+      <atom:link href="https://ianadamsresearch.com/category/stats/index.xml" rel="self" type="application/rss+xml" />
+    <description>stats</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2021`</copyright><lastBuildDate>Mon, 18 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ianadamsresearch.com/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>stats</title>
+      <link>https://ianadamsresearch.com/category/stats/</link>
+    </image>
+    
+    <item>
+      <title>Which Model do I use?</title>
+      <link>https://ianadamsresearch.com/courses/pubpl-6002/which-model/</link>
+      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/courses/pubpl-6002/which-model/</guid>
+      <description>
+&lt;script src=&#34;https://ianadamsresearch.com/courses/pubpl-6002/which-model/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://ianadamsresearch.com/courses/pubpl-6002/which-model/index_files/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://ianadamsresearch.com/courses/pubpl-6002/which-model/index_files/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;This is a very constrained, simple table to help students decide what type of statistical modeling is appropriate for their research question and data set.&lt;/p&gt;
+&lt;table class=&#34;table&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:table&#34;&gt;Table 1: &lt;/span&gt;Which Model Do I Use?
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Comparing
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Dependent (outcome) Variable
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Independent (explanatory) variable
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Parametric Test (normally distributed data)
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Non-parametric test (ordinal or skewed data)
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr grouplength=&#34;4&#34;&gt;
+&lt;td colspan=&#34;5&#34; style=&#34;border-bottom: 1px solid;&#34;&gt;
+&lt;strong&gt;Single Comparison Tests&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+Averages of two independent groups
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Scale
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Nominal (Binary)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Independent t-test
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Mann-Whitney test/ Wilcoxon rank sum
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+Averages of 3+ independent groups
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Scale
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Nominal
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+One-way ANOVA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Kruskal-Wallis test
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+The average difference between paired (matched) samples e.g. test scores before and after a class
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Scale
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Time or Condition variable
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Paired t-test
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Wilcoxon signed rank test
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+The 3+ measurements on the same subject
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Scale
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Time or Condition variable
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Repeated measures ANOVA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Friedman test
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr grouplength=&#34;6&#34;&gt;
+&lt;td colspan=&#34;5&#34; style=&#34;border-bottom: 1px solid;&#34;&gt;
+&lt;strong&gt;Association Tests&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+Relationship between 2 continuous variables
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Scale
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Scale
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Pearson’s Correlation Coefficient
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Spearman’s Correlation Coefficient
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+What is value of DV when value of IV changes?
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Scale
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Any
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Simple Linear Regression
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Transform the data
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+What is value of DV when value of IV changes?
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Nominal (Binary)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Any
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Logistic regression
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+What is value of DV when value of IV changes?
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Nominal (Count)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Any
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Poisson Regression
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+What is value of DV when value of IV changes?
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Nominal (Count, overdispersed)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Any
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Negative Binomial Regression
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+Assessing the relationship between two categorical variables
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Categorical
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Categorical
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Chi-squared test
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

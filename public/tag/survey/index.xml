@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>survey | Ian T. Adams</title>
+    <link>https://ianadamsresearch.com/tag/survey/</link>
+      <atom:link href="https://ianadamsresearch.com/tag/survey/index.xml" rel="self" type="application/rss+xml" />
+    <description>survey</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2021`</copyright><lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ianadamsresearch.com/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>survey</title>
+      <link>https://ianadamsresearch.com/tag/survey/</link>
+    </image>
+    
+    <item>
+      <title>Tidying STM with tidytext</title>
+      <link>https://ianadamsresearch.com/post/tidy-stm/tidying-stm-with-tidytext/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/post/tidy-stm/tidying-stm-with-tidytext/</guid>
+      <description>
+&lt;script src=&#34;https://ianadamsresearch.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;libraries&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Libraries&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidytext)
+library(ggthemes)
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(scales)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;load-previous-stm-objects&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Load Previous STM Objects&lt;/h2&gt;
+&lt;p&gt;I have previously run &lt;code&gt;stm&lt;/code&gt; models for topics ranging from 3 to 25. Based on the fit indices, a six-topic model was selected. I am not showing that analysis here, but instead loading the saved &lt;code&gt;stm&lt;/code&gt; objects (the model and the ‘out’ object).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tidy-the-stm-model&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tidy the stm model&lt;/h2&gt;
+&lt;p&gt;I am using the &lt;code&gt;tidytext&lt;/code&gt; package from Julia Silge, which she &lt;a href=&#34;https://juliasilge.com/blog/evaluating-stm/&#34;&gt;demonstrates in a blog post here&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;td_beta &amp;lt;- tidy(modelfit6)
+td_beta&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,416 x 3
+##    topic term        beta
+##    &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt;
+##  1     1 abil    9.13e-61
+##  2     2 abil    6.07e-55
+##  3     3 abil    1.51e- 2
+##  4     4 abil    2.98e-54
+##  5     5 abil    3.66e-63
+##  6     6 abil    2.39e-58
+##  7     1 account 1.57e-91
+##  8     2 account 1.37e-25
+##  9     3 account 4.28e-66
+## 10     4 account 6.47e-63
+## # ... with 1,406 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;td_gamma &amp;lt;- tidy(modelfit6, matrix = &amp;quot;gamma&amp;quot;,
+                 document_names = rownames(out$meta))
+
+td_gamma&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,266 x 3
+##    document topic   gamma
+##    &amp;lt;chr&amp;gt;    &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;
+##  1 1            1 0.00343
+##  2 2            1 0.00462
+##  3 3            1 0.0861 
+##  4 4            1 0.0467 
+##  5 5            1 0.0106 
+##  6 6            1 0.00306
+##  7 7            1 0.00419
+##  8 8            1 0.0511 
+##  9 9            1 0.00356
+## 10 10           1 0.144  
+## # ... with 1,256 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-topic-relevance&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Plot Topic Relevance&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;top_terms &amp;lt;- td_beta %&amp;gt;%
+  arrange(beta) %&amp;gt;%
+  group_by(topic) %&amp;gt;%
+  top_n(7, beta) %&amp;gt;%
+  arrange(-beta) %&amp;gt;%
+  select(topic, term) %&amp;gt;%
+  summarise(terms = list(term)) %&amp;gt;%
+  mutate(terms = map(terms, paste, collapse = &amp;quot;, &amp;quot;)) %&amp;gt;% 
+  unnest()
+
+gamma_terms &amp;lt;- td_gamma %&amp;gt;%
+  group_by(topic) %&amp;gt;%
+  summarise(gamma = mean(gamma)) %&amp;gt;%
+  arrange(desc(gamma)) %&amp;gt;%
+  left_join(top_terms, by = &amp;quot;topic&amp;quot;) %&amp;gt;%
+  mutate(topic = paste0(&amp;quot;Topic &amp;quot;, topic),
+         topic = reorder(topic, gamma))
+
+gamma_terms %&amp;gt;%
+  top_n(6, gamma) %&amp;gt;%
+  ggplot(aes(topic, gamma, label = terms, fill = topic)) +
+  geom_col(show.legend = FALSE) +
+  geom_text(hjust = 0.85, nudge_y = 0.0005, size = 3) +
+  coord_flip() +
+  theme_hc() +
+  theme(plot.title = element_text(size = 14)) +
+  labs(x = NULL, y = expression(gamma),
+       title = &amp;quot;Top Six Topics by Prevalence in the Officer Responses&amp;quot;,
+       subtitle = &amp;quot;With the top words that contribute to each topic&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Tidy-STM/2020-06-23-tidying-stm-with-tidytext.en_files/figure-html/remedy003-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;table-of-topic-proportions-with-top-terms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Table of Topic Proportions with Top Terms&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;require(knitr)
+gamma_terms %&amp;gt;%
+  select(topic, gamma, terms) %&amp;gt;%
+  kable(digits = 3, 
+        col.names = c(&amp;quot;Topic&amp;quot;, &amp;quot;Expected topic proportion&amp;quot;, &amp;quot;Top 6 terms&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Topic&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Expected topic proportion&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Top 6 terms&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Topic 6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.240&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;complaint, protect, public, fals, make, tool, time&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Topic 5&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.214&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;affect, way, chang, made, turn, situat, also&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Topic 3&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.192&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;camera, job, help, bodi, wear, captur, action&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Topic 4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.149&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;offic, peopl, work, worri, one, say, good&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Topic 2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.117&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;use, video, will, call, without, review, someth&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Topic 1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.088&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;know, person, feel, wear, like, supervisor, think&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Randomizing Vignette Factorial Designs in Survey Research with Qualtrics</title>
+      <link>https://ianadamsresearch.com/post/qualtrics/randomizing-vignettes-in-survey-research-with-qualtrics/</link>
+      <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/post/qualtrics/randomizing-vignettes-in-survey-research-with-qualtrics/</guid>
+      <description>
+&lt;script src=&#34;https://ianadamsresearch.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Sometimes in survey research, we want to present varying conditions in a short descriptive text, often called a vignette, and measure the effects of those conditions on an outcome of interest.&lt;/p&gt;
+&lt;p&gt;For example, say we have been hired by DinoCreations Inc. to gauge the public’s willingness to spend tax dollars on our brand new Island Adventure theme park, complete with living dinosaurs created from ancient DNA held within amber! We want to know if varying the dinosaurs type and size in a vignette results in statistically significant differences in potential patrons willingness to visit. We have two types of dinosaurs, and they come in three sizes. Will our potential guests be more likely to purchase a vacation package dependent on the type and size of dinosaurs we advertise with?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/mean.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There are multiple ways we could do this. For example, we could just type out each of the six vignette (2x3) and have those randomly display to respondents. However, some vignette designs have a lot more conditions to evaluate. Here, I’ll demonstrate a simple 2x3 vignette factorial design, but the method can easily be modified for larger designs. The survey platform Qualtrics makes this easy, using embedded data and the randomizer in survey flows.&lt;/p&gt;
+&lt;div id=&#34;placeholder-descriptive-text&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Placeholder Descriptive Text&lt;/h2&gt;
+&lt;p&gt;Following months of research, we have determined that there are TWO types of dinosaurs (T-rex and Stegosaurus), and each dinosaur comes in three sizes (big, humongous, and ginormous). Lucky for us, this is a perfect opportunity to put a 2x3 factorial vignette design into play!&lt;/p&gt;
+&lt;p&gt;For now, let’s create a place holder question in the survey. Our vignette will be about dinosaurs, and we are interested in willingness to visit our new Dinocreations.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/placeholder.JPG&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;building-the-randomizer&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Building the Randomizer&lt;/h2&gt;
+&lt;p&gt;Next we need to build a randomizer inside the survey flow. Once inside the survey flow, click the “add below” text inside the survey block, then click the “randomizer” tag.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/randomizer.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now we want to add the type of information this randomizer will handle, in this case, “type” of dinosaur. Click “Add a new element here,” using the “embedded data” type, and assign “type” as the element name. Then assign a type of dinosaur, I chose “terrifying Tyrannasaurus Rex.” Then repeat this step, and assign a different type of dinosaur, in this case an “adorable Stegosaurus.” Finally, &lt;strong&gt;make sure you tell the randomizer to randomly present only 1 of these options&lt;/strong&gt;. Click the “evenly present options” if you want there to be a randomized and equal chance for your survey respondents to see each choice (so here, a 1:2 chance, but for size, a 1:3 chance).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/type_pic.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now we want to build another randomizer, this time to vary the size of the dinosaur in our vignette. Using the same steps as above, we will add a size randomizer that uses three elements of big, humongous, and ginormous, and then &lt;strong&gt;make sure only one of these options is presented&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/pic_size.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;For the final step in the survey flow, we want to make sure both randomizers are &lt;strong&gt;ABOVE&lt;/strong&gt; the vignette question. This assures that the appropriate information is placed into our survey vignette question.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/survey_flow_final.JPG&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;back-to-the-vignette-and-inserting-piped-text&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Back to the vignette, and inserting piped text&lt;/h2&gt;
+&lt;p&gt;Save and close the survey flow interface. Now we need to use the “piped text” interface to get our vignette put together. We have decided to concentrate on customers who will be leaving on their honeymoon soon. The plain text in this box is text that EVERY survey respondent will see, while the SIZE and TYPE placeholders will need to be modified to import the embedded data we defined in the survey flow steps above.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/pic_honeymoon.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;To use the piped text funcionality, highlight SIZE, and then click the “piped text” tab directly above:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/pip_piped.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Then, click the “embedded data” option, and type in “size” (without the quotation marks) and hit enter. Repeat this step for the TYPE placeholder, with the “type” embedded data. After you delete the placeholders, you should have something that looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/final%20vignette%20setup.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now, let’s see if our survey is working. Use the “preview” button at the top of the page. Check it a few times to make sure the randomization is working. Here, in two consecutive previews, I can already see the randomization is working!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/stego_gino.JPG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;and&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/Qualtrics/2020-05-23-randomizing-vignettes-in-survey-research-with-qualtrics.en_files/trex_humon_pic.JPG&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusion&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Analyzing the results is outside of the scope of this post, but there are plenty of guides for that. Now go forth and randomize your vignettes!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
