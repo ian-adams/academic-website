@@ -64,6 +64,8 @@ Authors:
 
 [^1]: Corresponding author: Scott M. Mourtgos, University of Utah, scott.mourtgos\@utah.edu
 
+This article is forthcoming (2021) at the *Justice Evaluation Journal*
+
 # Introduction
 
 Untested sexual assault kits (SAKs) represent a critical public policy gap in addressing sexual assault, with estimates suggesting that as many as 400,000 SAKs remain untested in police storage across the country (Office of the Press Secretary, 2015). Indeed, despite the evidentiary usefulness of SAKs (Valentine et al., 2019), large numbers of SAKs are ‘shelved’ and never submitted to crime laboratories for analysis (Campbell et al., 2015; Hendrix et al., 2019; Lovell et al., 2018; Lovrich et al., 2004; Wells, 2016). The fact that many SAKs remain untested has resulted in pointed critiques of police investigatory practices in sexual assault cases (Campbell et al., 2019; Campbell & Fehler-Cabral, 2019; Goodman-Williams & Campbell, 2019; Valentine et al., 2019) and has served as a catalyst for mandatory SAK testing policies at both the state and municipal levels over the past decade (Davis et al., 2020).
