@@ -1,0 +1,79 @@
+---
+# Documentation: https://wowchemy.com/docs/managing-content/
+
+title: "Police Body Worn Cameras Effects on Officers Burnout and Perceived Organizational Support"
+authors: [Ian T. Adams, Sharon H. Mastracci]
+date: 2019-01-01
+doi: "https://doi.org/10.1177/1098611118783987"
+
+# Schedule page publish date (NOT publication's date).
+publishDate: 2021-01-22T17:01:31-07:00
+
+# Publication type.
+# Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
+# 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
+# 7 = Thesis; 8 = Patent
+publication_types: ["2"]
+
+# Publication name and optional abbreviated publication name.
+publication: "Police Quarterly, (22), 1, _pp. 5--30_"
+publication_short: ""
+
+abstract: "Police departments in the United States are rapidly adopting body-worn cameras (BWCs). To date, no study has investigated the effects of BWCs on police officers themselves, despite evidence suggesting negative effects of electronic performance monitoring on employee well-being. Police officers already experience higher levels of burnout than other professions. We hypothesize that the intense surveillance of BWCs will manifest in how police officers perceive the organizational support of their departments and will increase burnout. We test these hypotheses using data from patrol officers (n¼271) and structural equation modeling. We find BWCs increase police officer burnout, and this effect is statistically different from zero. We also find that BWCs decrease officers’ perceived organizational support, which mediates the relationship between BWCs and burnout. Greater perceived organizational support can blunt the negative effects of BWCs. Our study is the first to situate effects on officers at the center of BWC literature."
+
+# Summary. An optional shortened abstract.
+summary: ""
+
+tags: []
+categories: []
+featured: false
+draft: false
+
+# Custom links (optional).
+#   Uncomment and edit lines below to show custom links.
+# links:
+# - name: Follow
+#   url: https://twitter.com
+#   icon_pack: fab
+#   icon: twitter
+
+url_pdf: https://doi.org/10.1177/1098611118783987
+url_code:
+url_dataset:
+url_poster:
+url_project:
+url_slides:
+url_source:
+url_video:
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder. 
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Associated Projects (optional).
+#   Associate this publication with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `internal-project` references `content/project/internal-project/index.md`.
+#   Otherwise, set `projects: []`.
+projects: []
+
+# Slides (optional).
+#   Associate this publication with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides: "example"` references `content/slides/example/index.md`.
+#   Otherwise, set `slides: ""`.
+slides: ""
+---
+[Download file](/pdfs/bwc-burnout.pdf)
+
+## BibTeX citation
+
+```bibtex
+ @article{Adams_Mastracci_2019, title={Police Body-Worn Cameras: Effects on Officers’ Burnout and Perceived Organizational Support}, volume={22}, DOI={https://doi.org/10.1177/1098611118783987}, abstractNote={Police departments in the United States are rapidly adopting body-worn cameras (BWCs). To date, no study has investigated the effects of BWCs on police officers themselves, despite evidence suggesting negative effects of electronic performance monitoring on employee well-being. Police officers already experience higher levels of burnout than other professions. We hypothesize that the intense surveillance of BWCs will manifest in how police officers perceive the organizational support of their departments and will increase burnout. We test these hypotheses using data from patrol officers (n=271) and structural equation modeling. We find BWCs increase police officer burnout, and this effect is statistically different from zero. We also find that BWCs decrease officers’ perceived organizational support, which mediates the relationship between BWCs and burnout. Greater perceived organizational support can blunt the negative effects of BWCs. Our study is the first to situate effects on officers at the center of BWC literature.}, number={1}, journal={Police Quarterly}, author={Adams, Ian T. and Mastracci, Sharon H.}, year={2019}, pages={5–30} }
+
+```
+
