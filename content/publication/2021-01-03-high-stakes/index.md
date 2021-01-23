@@ -34,7 +34,7 @@ editor_options:
 
 Forthcoming (2021), *Public Administration Review*
 
-[Download a copy of the pre-print here](/pdfs/high-stakes)
+[Download a copy of the pre-print here](/pdfs/high-stakes.pdf)
 
 **Authors:**
 
