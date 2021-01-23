@@ -34,6 +34,8 @@ editor_options:
 
 Forthcoming (2021), *Public Administration Review*
 
+[Download a copy of the pre-print here](/pdfs/high-stakes)
+
 **Authors:**
 
 > Ian T. Adams[^1] [ian.adams\@utah.edu](mailto:ian.adams@utah.edu) Department of Political Science, University of Utah
