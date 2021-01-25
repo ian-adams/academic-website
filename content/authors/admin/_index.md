@@ -40,6 +40,9 @@ social:
 - icon: researchgate
   icon_pack: ai
   link: https://www.researchgate.net/profile/Ian_Adams11
+- icon: impactstory
+  icon_pack: ai
+  link: https://profiles.impactstory.org/u/0000-0001-5595-8070
 superuser: true
 title: Ian T. Adams
 ---
