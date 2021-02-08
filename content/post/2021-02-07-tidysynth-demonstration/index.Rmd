@@ -1,0 +1,186 @@
+---
+# Documentation: https://wowchemy.com/docs/managing-content/
+
+title: "Tidysynth Demonstration"
+subtitle: ""
+summary: ""
+authors: []
+tags: []
+categories: []
+date: 2021-02-07T19:56:23-07:00
+lastmod: 2021-02-07T19:56:23-07:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+Synthetic control methodologies come in many flavors. Most commonly, Scott Mourtgos and I use "Bayesian Structural Time Series," but there are others. One exciting new package brings synth models to the `tidyverse`. [Eric Dunford](https://github.com/edunford) just released his [new package `tidysynth`](https://github.com/edunford/tidysynth), and I wanted to give it a spin.
+
+To demonstrate the package, the vignette uses data from [Abadie et al. (2010)](https://economics.mit.edu/files/11859), which tests the effects of an anti-smoking proposition on cigarette consumption.
+
+```{r remedy001, message=FALSE, warning=FALSE}
+
+library(tidyverse)
+library(tidysynth)
+
+data("smoking")
+
+smoking %>% glimpse()
+
+```
+
+The main computations happen within just a few pipes (ahh, the beauty of `tidy`!). 
+
+```{r remedy002}
+
+smoking_out <-
+  
+  smoking %>%
+  
+  # initial the synthetic control object
+  synthetic_control(outcome = cigsale, # outcome
+                    unit = state, # unit index in the panel data
+                    time = year, # time index in the panel data
+                    i_unit = "California", # unit where the intervention occurred
+                    i_time = 1988, # time period when the intervention occurred
+                    generate_placebos=T # generate placebo synthetic controls (for inference)
+                    ) %>%
+  
+  # Generate the aggregate predictors used to fit the weights
+  
+  # average log income, retail price of cigarettes, and proportion of the
+  # population between 15 and 24 years of age from 1980 - 1988
+  generate_predictor(time_window = 1980:1988,
+                     ln_income = mean(lnincome, na.rm = T),
+                     ret_price = mean(retprice, na.rm = T),
+                     youth = mean(age15to24, na.rm = T)) %>%
+  
+  # average beer consumption in the donor pool from 1984 - 1988
+  generate_predictor(time_window = 1984:1988,
+                     beer_sales = mean(beer, na.rm = T)) %>%
+  
+  # Lagged cigarette sales 
+  generate_predictor(time_window = 1975,
+                     cigsale_1975 = cigsale) %>%
+  generate_predictor(time_window = 1980,
+                     cigsale_1980 = cigsale) %>%
+  generate_predictor(time_window = 1988,
+                     cigsale_1988 = cigsale) %>%
+  
+  
+  # Generate the fitted weights for the synthetic control
+  generate_weights(optimization_window = 1970:1988, # time to use in the optimization task
+                   margin_ipop = .02,sigf_ipop = 7,bound_ipop = 6 # optimizer options
+  ) %>%
+  
+  # Generate the synthetic control
+  generate_control()
+
+```
+
+If everything is workign like it should, the synthetic control should close match the observed trend in the pre-intervention period. 
+
+```{r remedy003}
+
+smoking_out %>% plot_trends()
+
+```
+
+One can easily see that the post-propostion period is deviating downward. But to capture the actual quantitative differences between the observed and synthetic models, we can use `plot_differences()`.
+
+```{r remedy004}
+
+smoking_out %>% plot_differences()
+
+```
+
+We might also want to know which (and how) units and variables were weighted by the model.
+
+```{r remedy005}
+
+smoking_out %>% plot_weights()
+
+```
+
+
+Smooth! The package also includes a host of `grab_` functions to quickly retrieve parts of the tidy output. For example, a balance table can show us how comparable the synthetic control is to the observed covariates of the treated unit.
+
+```{r remedy006}
+
+smoking_out %>% grab_balance_table()
+
+```
+
+
+Everything looks good there. One of the main uses for synthetic control models is for inference. In other words, can we infer causality for the somewhat dramatic change between the pre- and post-intervention periods? The package developer has included some very nice features to help with inference. From the package developer:
+
+> For inference, the method relies on repeating the method for every donor in the donor pool exactly as was done for the treated unit — i.e. generating placebo synthetic controls. By setting `generate_placebos = TRUE` when initializing the synth pipeline with `synthetic_control()`, placebo cases are automatically generated when constructing the synthetic control of interest. This makes it easy to explore how unique difference between the observed and synthetic unit is when compared to the placebos.
+
+```{r remedy007}
+
+smoking_out %>% plot_placebos()
+
+```
+
+You might wonder why the plot above is only plotting a few of the donor cases. This is because the plain function of `plot_placebos()` automatically drops those cases where the data has a poor fit to the model. This is a fairly large difference between this package, which uses a frequentist approach, and BSTS, which obviously uses a Bayesian approach. Still, the package developer has a `prune = FALSE` argument you can use to see all the cases, regardless of data --> model fit.
+
+> Note that the plot_placebos() function automatically prunes any placebos that poorly fit the data in the pre-intervention period. The reason for doing so is purely visual: those units tend to throw off the scale when plotting the placebos. To prune, the function looks at the pre-intervention period mean squared prediction error (MSPE) (i.e. a metric that reflects how well the synthetic control maps to the observed outcome time series in pre-intervention period). If a placebo control has a MSPE that is two times beyond the target case (e.g. “California”), then it’s dropped. To turn off this behavior, set prune = FALSE.
+
+```{r remedy008}
+
+smoking_out %>% plot_placebos(prune = FALSE)
+
+```
+
+Some researchers prefer a frequentist approach, and one of the advantages of this approach is that we can derive Fisher's Exact P-values [based on work from Abadie et al., (2010)](https://economics.mit.edu/files/11859). Interpretation is straightforward: 
+
+> If the intervention had no effect, then the post-period and pre-period should continue to map onto one another fairly well, yielding a ratio close to 1. If the placebo units fit the data similarly, then we can’t reject the hull hypothesis that there is no effect brought about by the intervention.
+
+> This ratio can be easily plotted using plot_mspe_ratio(), offering insight into the rarity of the case where the intervention actually occurred.
+
+```{r remedy009}
+
+smoking_out %>% plot_mspe_ratio()
+
+```
+
+For those who want to publish their results, reviewers and readers are going to want a table of results. The `tidysynth` package has you covered.
+
+```{r remedy010}
+
+smoking_out %>% grab_signficance()
+
+```
+I really appreciate the work that's gone into this package. It highlights the value of the `tidyverse` with human-readable code, and straightforward piping to make for very functional analysis with limited work. Great job to the developer!
+
+I suggest reading further, as the package is apparently under active development. I also don't go into the many `grab_` functions that allow for the researcher to quickly "grab" elements of the model. 
+
+```{r remedy011, echo=FALSE}
+
+tibble::tribble(
+                   ~Function,                                                                                                                                         ~Description,
+            "grab_outcome()",                                                                                     "Extract the outcome variable generated by synthetic_control().",
+         "grab_predictors()",                                                                          "Extract the aggregate-level covariates generated by generate_predictor().",
+       "grab_unit_weights()",                                                                                          "Extract the unit weights generated by generate_weights().",
+  "grab_predictor_weights()",                                                                            "Extract the predictor variable weights generated by generate_weights().",
+               "grab_loss()",                                                                    "Extract the RMSE loss of the optimized weights generated by generate_weights().",
+  "grab_synthetic_control()",                                                                                  "Extract the synthetic control generated using generate_control().",
+        "grab_signficance()",   "Generate inferential statistics comparing the rarity of the unit that actually received the intervention to the placebo units in the donor pool.",
+      "grab_balance_table()", "Compare the distributions of the aggregate-level predictors for the observed intervention unit, the synthetic control, and the donor pool average."
+  )
+
+```
