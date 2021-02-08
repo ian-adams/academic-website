@@ -91,7 +91,7 @@ smoking %&gt;% glimpse()</code></pre>
   
   # Generate the synthetic control
   generate_control()</code></pre>
-<p>If everything is workign like it should, the synthetic control should close match the observed trend in the pre-intervention period.</p>
+<p>If everything is working like it should, the synthetic control should closely match the observed trend in the pre-intervention period.</p>
 <pre class="r"><code>smoking_out %&gt;% plot_trends()</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/remedy003-1.png" width="672" /></p>
 <p>One can easily see that the post-propostion period is deviating downward. But to capture the actual quantitative differences between the observed and synthetic models, we can use <code>plot_differences()</code>.</p>

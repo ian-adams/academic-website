@@ -92,7 +92,7 @@ smoking_out <-
 
 ```
 
-If everything is workign like it should, the synthetic control should close match the observed trend in the pre-intervention period. 
+If everything is working like it should, the synthetic control should closely match the observed trend in the pre-intervention period. 
 
 ```{r remedy003}
 

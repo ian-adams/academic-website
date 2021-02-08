@@ -81,7 +81,7 @@ smoking %&amp;gt;% glimpse()&lt;/code&gt;&lt;/pre&gt;
   
   # Generate the synthetic control
   generate_control()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If everything is workign like it should, the synthetic control should close match the observed trend in the pre-intervention period.&lt;/p&gt;
+&lt;p&gt;If everything is working like it should, the synthetic control should closely match the observed trend in the pre-intervention period.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;smoking_out %&amp;gt;% plot_trends()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/2021-02-07-tidysynth-demonstration/index_files/figure-html/remedy003-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;One can easily see that the post-propostion period is deviating downward. But to capture the actual quantitative differences between the observed and synthetic models, we can use &lt;code&gt;plot_differences()&lt;/code&gt;.&lt;/p&gt;
