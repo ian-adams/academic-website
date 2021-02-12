@@ -4,7 +4,7 @@
 title: "Mandatory Sexual Assault Kit Testing Policies and Arrest Trends a Natural Experiment"
 authors: [Scott M. Mourtgos, Ian T. Adams, Justin Nix, Tara Richards]
 date: 2021-01-11T16:00:37-07:00
-doi: ""
+doi: "https://doi.org/10.1080/24751979.2021.1881410"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2021-01-11T16:00:37-07:00
@@ -53,7 +53,7 @@ image:
   focal_point: ""
   preview_only: false
 
-draft: yes
+draft: no
 ---
 
 Authors:  
@@ -63,8 +63,6 @@ Authors:
   - [Tara Richards](https://scholar.google.com/citations?user=VZ_LDHQAAAAJ), University of Nebraska Omaha
 
 [^1]: Corresponding author: Scott M. Mourtgos, University of Utah, scott.mourtgos\@utah.edu
-
-This article is forthcoming (2021) at the *Justice Evaluation Journal*
 
 # Introduction
 
