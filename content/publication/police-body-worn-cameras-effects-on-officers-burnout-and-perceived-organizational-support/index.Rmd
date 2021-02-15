@@ -37,7 +37,7 @@ draft: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: https://doi.org/10.1177/1098611118783987
+url_pdf: https://ianadamsresearch.com/pdfs/bwc-burnout-postprint.pdf
 url_code:
 url_dataset:
 url_poster:
@@ -68,7 +68,8 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
-[Download file](/pdfs/bwc-burnout.pdf)
+
+[Download post-print here](/pdfs/bwc-burnout-postprint.pdf)
 
 ## BibTeX citation
 
