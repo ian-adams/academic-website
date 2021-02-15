@@ -1,5 +1,5 @@
 +++
-title = "It's not depersonalization, It's emotional labor: Examining surface acting and use-of-force with evidence from the US"
+title = "It's not Depersonalization, It's Emotional Labor: Examining Surface Acting and Use-of-Force with evidence from the US"
 date = "2020-01-01"
 authors = ["Sharon H. Mastracci", "Ian T. Adams"]
 publication_types = ["2"]
