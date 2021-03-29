@@ -1,0 +1,700 @@
+---
+title: Week 10 Solutions
+author: Ian Adams
+date: '2021-03-28'
+slug: week-10
+categories:
+  - R
+tags:
+  - '6002'
+linktitle: Week 10 Soultions
+summary: ~
+lastmod: '2021-3-29T09:22:38-07:00'
+toc: false
+type: docs
+menu:
+  example:
+    name: Week 10 Solutions
+    weight: 4
+---
+
+```{r remedy001, include=FALSE}
+library("nycflights13")
+library("tidyverse")
+
+```
+
+# So you want to be a data scientist
+
+This week can feel like a bit of a doozy, as the difficulty really ramps up. Something to remember - most data scientists spend most of their time cleaning, transforming, and *tidying* their data. That's what these chapters and questions are all about. So I want to make sure you have the correct answers, but more importantly, I want you to know **you are not alone**, this stuff is hard! I've put the quote in front of you before, but this little bit of wisdom from Hadley Wickham, lead author of our class textbook, is important during times like we're having right now:
+
+> “There is no way of going from knowing nothing about a subject to knowing something about a subject without going through a period of much frustration and suckiness. **Push through. You’ll suck less**.”
+
+Now, onto the answers!
+
+## Exercise 5.2.4
+
+<div class="question">
+Why is `NA ^ 0` not missing? Why is `NA | TRUE` not missing?
+Why is `FALSE & NA` not missing? Can you figure out the general rule?
+(`NA * 0` is a tricky counterexample!)
+</div>
+
+<div class="answer">
+
+```{r}
+NA ^ 0
+```
+
+`NA ^ 0 == 1` since for all numeric values $x ^ 0 = 1$.
+
+```{r}
+NA | TRUE
+```
+
+`NA | TRUE` is `TRUE` because anything **or** `TRUE` is `TRUE`. 
+If the missing value were `TRUE`, then `TRUE | TRUE == TRUE`,
+and if the missing value was `FALSE`, then `FALSE | TRUE == TRUE`.
+
+```{r}
+NA & FALSE
+```
+
+The value of `NA & FALSE` is `FALSE` because anything **and** `FALSE` is always `FALSE`.
+If the missing value were `TRUE`, then `TRUE & FALSE == FALSE`,
+and if the missing value was `FALSE`, then `FALSE & FALSE == FALSE`.
+
+```{r}
+NA | FALSE
+```
+
+For `NA | FALSE`, the value is unknown since `TRUE | FALSE == TRUE`, but `FALSE | FALSE == FALSE`.
+
+```{r}
+NA & TRUE
+```
+
+For `NA & TRUE`, the value is unknown since `FALSE & TRUE== FALSE`, but `TRUE & TRUE == TRUE`.
+
+```{r}
+NA * 0
+```
+
+Since $x * 0 = 0$ for all finite numbers we might expect `NA * 0 == 0`, but that's not the case.
+The reason that `NA * 0 != 0` is that $0 \times \infty$ and $0 \times -\infty$ are undefined.
+R represents undefined results as `NaN`, which is an abbreviation of "[not a number](https://en.wikipedia.org/wiki/NaN)".
+
+```{r}
+Inf * 0
+-Inf * 0
+```
+
+</div>
+
+## Exercise 5.3.1
+
+<div class="question">
+How could you use `arrange()` to sort all missing values to the start? (Hint: use `is.na()`).
+</div>
+
+<div class="answer">
+
+The `arrange()` function puts `NA` values last.
+```{r}
+arrange(flights, dep_time) %>%
+  tail()
+```
+Using `desc()` does not change that.
+```{r}
+arrange(flights, desc(dep_time))
+```
+
+To put `NA` values first, we can add an indicator of whether the column has a missing value.
+Then we sort by the missing indicator column and the column of interest. 
+For example, to sort the data frame by departure time (`dep_time`) in ascending order but `NA` values first, run the following.
+```{r}
+arrange(flights, desc(is.na(dep_time)), dep_time)
+```
+The `flights`  will first be sorted by `desc(is.na(dep_time))`.
+Since `desc(is.na(dep_time))` is either `TRUE` when `dep_time` is missing, or `FALSE`, when it is not, the rows with missing values of `dep_time` will come first, since `TRUE > FALSE`.
+
+</div>
+
+## Exercise 5.4.1
+
+<div class="question">
+Brainstorm as many ways as possible to select `dep_time`, `dep_delay`, `arr_time`, and `arr_delay` from flights.
+</div>
+
+<div class="answer">
+
+These are a few ways to select columns.
+
+-   Specify columns names as unquoted variable names.
+    ```{r}
+    select(flights, dep_time, dep_delay, arr_time, arr_delay)
+    ```
+
+-   Specify column names as strings.
+    ```{r}
+    select(flights, "dep_time", "dep_delay", "arr_time", "arr_delay")
+    ```
+
+-   Specify the column numbers of the variables.
+    ```{r}
+    select(flights, 4, 6, 7, 9)
+    ```
+    This works, but is not good practice for two reasons.
+    First, the column location of variables may change, resulting in code that 
+    may continue to run without error, but produce the wrong answer. 
+    Second code is obfuscated, since it is not clear from the code which 
+    variables are being selected. What variable does column 6 correspond to? 
+    I just wrote the code, and I've already forgotten.
+
+-   Specify the names of the variables with character vector and `any_of()` or `all_of()` 
+    ```{r}
+    select(flights, all_of(c("dep_time", "dep_delay", "arr_time", "arr_delay")))
+    ```
+    ```{r}
+    select(flights, any_of(c("dep_time", "dep_delay", "arr_time", "arr_delay")))
+    ```
+    This is useful because the names of the variables can be stored in a 
+    variable and passed to `all_of()` or `any_of()`.
+    ```{r}
+    variables <- c("dep_time", "dep_delay", "arr_time", "arr_delay")
+    select(flights, all_of(variables))
+    ```
+    These two functions replace the deprecated function `one_of()`.
+
+-   Selecting the variables by matching the start of their names using `starts_with()`.
+    ```{r}
+    select(flights, starts_with("dep_"), starts_with("arr_"))
+    ```
+
+-   Selecting the variables using regular expressions with `matches()`.
+    Regular expressions provide a flexible way to match string patterns
+    and are discussed in the [Strings](https://r4ds.had.co.nz/strings.html) chapter.
+    ```{r}
+    select(flights, matches("^(dep|arr)_(time|delay)$"))
+    ```
+
+-   Specify the names of the variables with a character vector and use the bang-bang operator (`!!`). 
+    ```{r}
+    variables <- c("dep_time", "dep_delay", "arr_time", "arr_delay")
+    select(flights, !!variables)
+    ```
+    This and the following answers use the features of **tidy evaluation** not covered in R4DS but covered in the [Programming with dplyr](https://dplyr.tidyverse.org/articles/programming.html) vignette.
+
+-   Specify the names of the variables in a character or list vector and use the bang-bang-bang operator.
+    ```{r}
+    variables <- c("dep_time", "dep_delay", "arr_time", "arr_delay")
+    select(flights, !!!variables)
+    ```  
+
+-   Specify the unquoted names of the variables in a list using `syms()` and use the bang-bang-bang operator.
+    ```{r}
+    variables <- syms(c("dep_time", "dep_delay", "arr_time", "arr_delay"))
+    select(flights, !!!variables)
+    ```        
+
+Some things that **don't** work are:
+
+-   Matching the ends of their names using `ends_with()` since this will incorrectly
+    include other variables. For example,
+    ```{r}
+    select(flights, ends_with("arr_time"), ends_with("dep_time"))
+    ```
+
+-   Matching the names using `contains()` since there is not a pattern that can
+    include all these variables without incorrectly including others.
+    ```{r}
+    select(flights, contains("_time"), contains("arr_"))
+    ```
+
+</div>
+
+## Exercise 5.5.2
+
+<div class="question">
+
+Compare `air_time` with `arr_time - dep_time`. 
+What do you expect to see? 
+What do you see? 
+What do you need to do to fix it?
+
+</div>
+
+<div class="answer">
+
+I expect that `air_time` is the difference between the arrival (`arr_time`) and departure times (`dep_time`).
+In other words, `air_time = arr_time - dep_time`.
+
+To check that this relationship, I'll first need to convert the times to a form more amenable to arithmetic operations using the same calculations as the [previous exercise](#exercise-5.5.1).
+```{r}
+flights_airtime <-
+  mutate(flights,
+    dep_time = (dep_time %/% 100 * 60 + dep_time %% 100) %% 1440,
+    arr_time = (arr_time %/% 100 * 60 + arr_time %% 100) %% 1440,
+    air_time_diff = air_time - arr_time + dep_time
+  )
+```
+
+So, does `air_time = arr_time - dep_time`?
+If so, there should be no flights with non-zero values of `air_time_diff`.
+```{r}
+nrow(filter(flights_airtime, air_time_diff != 0))
+```
+
+It turns out that there are many flights for which `air_time != arr_time - dep_time`.
+Other than data errors, I can think of two reasons why `air_time` would not equal `arr_time - dep_time`.
+
+1.  The flight passes midnight, so `arr_time < dep_time`.
+    In these cases, the difference in airtime should be by 24 hours (1,440 minutes).
+
+1.  The flight crosses time zones, and the total air time will be off by hours (multiples of 60). 
+    All flights in `flights` departed from New York City and are domestic flights in the US.
+    This means that flights will all be to the same or more westerly time zones.
+    Given the time-zones in the US, the differences due to time-zone should be 60 minutes (Central)
+    120 minutes (Mountain), 180 minutes (Pacific), 240 minutes (Alaska), or 300 minutes (Hawaii).
+    
+Both of these explanations have clear patterns that I would expect to see if they 
+were true. 
+In particular, in both cases, since time-zones and crossing midnight only affects the hour part of the time, all values of `air_time_diff` should be divisible by 60.
+I'll visually check this hypothesis by plotting the distribution of `air_time_diff`.
+If those two explanations are correct, distribution of `air_time_diff` should comprise only spikes at multiples of 60.
+```{r}
+ggplot(flights_airtime, aes(x = air_time_diff)) +
+  geom_histogram(binwidth = 1)
+```
+This is not the case.
+While, the distribution of `air_time_diff` has modes at multiples of 60 as hypothesized, 
+it shows that there are many flights in which the difference between air time and local arrival and departure times is not divisible by 60.
+
+Let's also look at flights with Los Angeles as a destination.
+The discrepancy should be 180 minutes.
+```{r}
+ggplot(filter(flights_airtime, dest == "LAX"), aes(x = air_time_diff)) +
+  geom_histogram(binwidth = 1)
+```
+
+To fix these time-zone issues, I would want to convert all the times to a date-time to handle overnight flights, and from local time to a common time zone, most likely [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), to handle flights crossing time-zones.
+The `tzone` column of `nycflights13::airports` gives the time-zone of each airport.
+See the ["Dates and Times"](https://r4ds.had.co.nz/dates-and-times.html) for an introduction on working with date and time data.
+
+But that still leaves the other differences unexplained. 
+So what else might be going on? 
+There seem to be too many problems for this to be data entry problems, so I'm probably missing something. 
+So, I'll reread the documentation to make sure that I understand the definitions of `arr_time`, `dep_time`, and
+`air_time`. 
+The documentation contains a link to the source of the `flights` data, <https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236>.
+This documentation shows that the `flights` data does not contain the variables `TaxiIn`, `TaxiOff`, `WheelsIn`, and `WheelsOff`.
+It appears that the `air_time` variable refers to flight time, which is defined as the time between wheels-off (take-off) and wheels-in (landing).
+But the flight time does not include time spent on the runway taxiing to and from gates.
+With this new understanding of the data, I now know that the relationship between `air_time`, `arr_time`, and `dep_time` is `air_time <= arr_time - dep_time`, supposing that the time zones of `arr_time` and `dep_time` are in the same time zone.
+
+</div>
+
+## Exercise 5.6.7
+
+Brainstorm at least 5 different ways to assess the typical delay characteristics of a group of flights. 
+Consider the following scenarios:
+
+-   A flight is 15 minutes early 50% of the time, and 15 minutes late 50% of the time.
+-   A flight is always 10 minutes late.
+-   A flight is 30 minutes early 50% of the time, and 30 minutes late 50% of the time.
+-   99% of the time a flight is on time. 1% of the time it’s 2 hours late.
+
+Which is more important: arrival delay or departure delay?
+
+</div>
+
+<div class="answer">
+
+What this question gets at is a fundamental question of data analysis: the cost function.
+As analysts, the reason we are interested in flight delay because it is costly to passengers.
+But it is worth thinking carefully about how it is costly and use that information in ranking and measuring these scenarios.
+
+In many scenarios, arrival delay is more important.
+In most cases, being arriving late is more costly to the passenger since it could disrupt the next stages of their travel, such as connecting flights or scheduled meetings.  
+If a departure is delayed without affecting the arrival time, this delay will not have those affects plans nor does it affect the total time spent traveling.
+This delay could be beneficial, if less time is spent in the cramped confines of the airplane itself, or a negative, if that delayed time is still spent in the cramped confines of the airplane on the runway.
+
+Variation in arrival time is worse than consistency.
+If a flight is always 30 minutes late and that delay is known, then it is as if the arrival time is that delayed time.
+The traveler could easily plan for this. 
+But higher variation in flight times makes it harder to plan.
+
+### 5.6.7.2
+
+<div class="question">
+
+Come up with another approach that will give you the same output as `not_cancelled %>% count(dest)` and `not_cancelled %>% count(tailnum, wt = distance)` (without using `count()`).
+</div>
+
+<div class="answer">
+
+```{r not_cancelled}
+not_cancelled <- flights %>%
+  filter(!is.na(dep_delay), !is.na(arr_delay))
+```
+
+The first expression is the following.
+
+```{r}
+not_cancelled %>% 
+  count(dest)
+```
+
+The `count()` function counts the number of instances within each group of variables.
+Instead of using the `count()` function, we can combine the `group_by()` and `summarise()` verbs.
+
+```{r}
+not_cancelled %>%
+  group_by(dest) %>%
+  summarise(n = length(dest))
+```
+
+An alternative method for getting the number of observations in a data frame is the function `n()`.
+
+```{r}
+not_cancelled %>%
+  group_by(dest) %>%
+  summarise(n = n())
+```
+
+Another alternative to `count()` is to use `group_by()` followed by `tally()`.
+In fact, `count()` is effectively a short-cut for `group_by()` followed by `tally()`.
+
+```{r}
+not_cancelled %>%
+  group_by(tailnum) %>%
+  tally()
+```
+
+The second expression also uses the `count()` function, but adds a `wt` argument.
+
+```{r}
+not_cancelled %>% 
+  count(tailnum, wt = distance)
+```
+
+As before, we can replicate `count()` by combining the `group_by()` and `summarise()` verbs.
+But this time instead of using `length()`, we will use `sum()` with the weighting variable.
+
+```{r}
+not_cancelled %>%
+  group_by(tailnum) %>%
+  summarise(n = sum(distance))
+```
+
+Like the previous example, we can also use the combination `group_by()` and `tally()`.
+Any arguments to `tally()` are summed.
+
+```{r}
+not_cancelled %>%
+  group_by(tailnum) %>%
+  tally(distance)
+```
+
+</div>
+
+### 5.6.7.3
+
+<div class="question">
+Our definition of cancelled flights `(is.na(dep_delay) | is.na(arr_delay))` is slightly suboptimal. 
+Why? 
+Which is the most important column?
+</div>
+
+<div class="answer">
+
+If a flight never departs, then it won't arrive.
+A flight could also depart and not arrive if it crashes, or if it is redirected and lands in an airport other than its intended destination.
+So the most important column is `arr_delay`, which indicates the amount of delay in arrival.
+```{r}
+filter(flights, !is.na(dep_delay), is.na(arr_delay)) %>%
+  select(dep_time, arr_time, sched_arr_time, dep_delay, arr_delay)
+```
+
+In this data `dep_time` can be non-missing and `arr_delay` missing but `arr_time` not missing.
+Some further [research](https://hyp.is/TsdRpofJEeqzs6-vUOfVBg/jrnold.github.io/r4ds-exercise-solutions/transform.html) found that these rows correspond to diverted flights.
+The [BTS](https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236) database that is the source for the `flights` table contains additional information for diverted flights that is not included in the nycflights13 data. 
+The source contains a column `DivArrDelay` with the description:
+
+> Difference in minutes between scheduled and actual arrival time for a diverted flight reaching scheduled destination. 
+> The `ArrDelay` column remains `NULL` for all diverted flights.
+
+</div>
+
+### 5.6.7.4
+
+<div class="question">
+Look at the number of cancelled flights per day. 
+Is there a pattern?
+Is the proportion of cancelled flights related to the average delay?
+</div>
+
+<div class="answer">
+
+One pattern in cancelled flights per day is that the number of cancelled flights increases with the total number of flights per day.
+The proportion of cancelled flights increases with the average delay of flights.
+
+To answer these questions, use definition of cancelled used in the 
+chapter [Section 5.6.3](https://r4ds.had.co.nz/transform.html#counts) and the
+relationship `!(is.na(arr_delay) & is.na(dep_delay))` is equal to 
+`!is.na(arr_delay) | !is.na(dep_delay)` by [De Morgan's law](https://en.wikipedia.org/wiki/De_Morgan%27s_laws).
+
+The first part of the question asks for any pattern in the number of cancelled flights per day.
+I'll look at the relationship between the number of cancelled flights per day and the total number of flights in a day.
+There should be an increasing relationship for two reasons.
+First, if all flights are equally likely to be cancelled, then days with more flights should have a higher number of cancellations.
+Second, it is likely that days with more flights would have a higher probability of cancellations because congestion itself can cause delays and any delay would affect more flights, and large delays can lead to cancellations.
+```{r}
+cancelled_per_day <- 
+  flights %>%
+  mutate(cancelled = (is.na(arr_delay) | is.na(dep_delay))) %>%
+  group_by(year, month, day) %>%
+  summarise(
+    cancelled_num = sum(cancelled),
+    flights_num = n(),
+  )
+```
+Plotting `flights_num` against `cancelled_num` shows that the number of flights
+cancelled increases with the total number of flights.
+```{r}
+ggplot(cancelled_per_day) +
+  geom_point(aes(x = flights_num, y = cancelled_num)) 
+
+```
+
+The second part of the question asks whether there is a relationship between the proportion of flights cancelled and the average departure delay.
+I implied this in my answer to the first part of the question, when I noted that increasing delays could result in increased cancellations.
+The question does not specify which delay, so I will show the relationship for both.
+```{r}
+cancelled_and_delays <- 
+  flights %>%
+  mutate(cancelled = (is.na(arr_delay) | is.na(dep_delay))) %>%
+  group_by(year, month, day) %>%
+  summarise(
+    cancelled_prop = mean(cancelled),
+    avg_dep_delay = mean(dep_delay, na.rm = TRUE),
+    avg_arr_delay = mean(arr_delay, na.rm = TRUE)
+  ) %>%
+  ungroup()
+```
+
+There is a strong increasing relationship between both average departure delay and  
+and average arrival delay and the proportion of cancelled flights.
+```{r}
+ggplot(cancelled_and_delays) +
+  geom_point(aes(x = avg_dep_delay, y = cancelled_prop))
+
+```
+
+```{r}
+ggplot(cancelled_and_delays) +
+  geom_point(aes(x = avg_arr_delay, y = cancelled_prop))
+
+```
+
+</div>
+
+### 5.6.7.5
+
+<div class="question">
+Which carrier has the worst delays? 
+Challenge: can you disentangle the effects of bad airports vs. bad carriers? 
+Why/why not? 
+(Hint: think about `flights %>% group_by(carrier, dest) %>% summarise(n())`)
+</div>
+
+<div class="answer">
+
+```{r}
+flights %>%
+  group_by(carrier) %>%
+  summarise(arr_delay = mean(arr_delay, na.rm = TRUE)) %>%
+  arrange(desc(arr_delay))
+```
+
+What airline corresponds to the `"F9"` carrier code?
+```{r}
+filter(airlines, carrier == "F9")
+```
+
+You can get part of the way to disentangling the effects of airports versus bad carriers by comparing the average delay of each carrier to the average delay of flights within a route (flights from the same origin to the same destination).
+Comparing delays between carriers and within each route disentangles the effect of carriers and airports.
+A better analysis would compare the average delay of a carrier's flights to the average delay of *all other* carrier's flights within a route.
+
+```{r}
+flights %>%
+  filter(!is.na(arr_delay)) %>%
+  # Total delay by carrier within each origin, dest
+  group_by(origin, dest, carrier) %>%
+  summarise(
+    arr_delay = sum(arr_delay),
+    flights = n()
+  ) %>%
+  # Total delay within each origin dest
+  group_by(origin, dest) %>%
+  mutate(
+    arr_delay_total = sum(arr_delay),
+    flights_total = sum(flights)
+  ) %>%
+  # average delay of each carrier - average delay of other carriers
+  ungroup() %>%
+  mutate(
+    arr_delay_others = (arr_delay_total - arr_delay) /
+      (flights_total - flights),
+    arr_delay_mean = arr_delay / flights,
+    arr_delay_diff = arr_delay_mean - arr_delay_others
+  ) %>%
+  # remove NaN values (when there is only one carrier)
+  filter(is.finite(arr_delay_diff)) %>%
+  # average over all airports it flies to
+  group_by(carrier) %>%
+  summarise(arr_delay_diff = mean(arr_delay_diff)) %>%
+  arrange(desc(arr_delay_diff))
+```
+
+There are more sophisticated ways to do this analysis, however comparing the delay of flights within each route goes a long ways toward disentangling airport and carrier effects.
+To see a more complete example of this analysis, see this FiveThirtyEight [piece](https://fivethirtyeight.com/features/the-best-and-worst-airlines-airports-and-flights-summer-2015-update/).
+
+</div>
+
+### 5.6.7.6
+
+<div class="question">
+
+What does the sort argument to `count()` do?
+When might you use it?
+
+</div>
+
+<div class="answer">
+
+The sort argument to `count()` sorts the results in order of `n`.
+You could use this anytime you would run `count()` followed by `arrange()`.
+
+For example, the following expression counts the number of flights to a destination and sorts the returned data from highest to lowest.
+```{r}
+flights %>%
+  count(dest, sort = TRUE)
+```
+
+</div>
+
+## Exercise 5.7.1
+
+<div class="question">
+
+Refer back to the lists of useful mutate and filtering functions.
+Describe how each operation changes when you combine it with grouping.
+
+</div>
+
+<div class="answer">
+
+Summary functions (`mean()`), offset functions (`lead()`, `lag()`), ranking functions (`min_rank()`, `row_number()`), operate within each group when used with `group_by()` in 
+`mutate()` or `filter()`.
+Arithmetic operators (`+`, `-`), logical operators (`<`, `==`), modular arithmetic operators (`%%`, `%/%`), logarithmic functions (`log`) are not affected by `group_by`.
+
+Summary functions like `mean()`, `median()`, `sum()`, `std()` and others covered
+in the section [Useful Summary Functions](https://r4ds.had.co.nz/transform.html#summarise-funs) 
+calculate their values within each group when used with `mutate()` or `filter()` and `group_by()`.
+```{r}
+tibble(x = 1:9,
+       group = rep(c("a", "b", "c"), each = 3)) %>%
+  mutate(x_mean = mean(x)) %>%
+  group_by(group) %>%
+  mutate(x_mean_2 = mean(x))
+```
+
+Arithmetic operators `+`, `-`, `*`, `/`, `^` are not affected by `group_by()`.
+```{r}
+tibble(x = 1:9,
+       group = rep(c("a", "b", "c"), each = 3)) %>%
+  mutate(y = x + 2) %>%
+  group_by(group) %>%
+  mutate(z = x + 2)
+```
+
+The modular arithmetic operators `%/%` and `%%` are not affected by `group_by()`
+```{r}
+tibble(x = 1:9,
+       group = rep(c("a", "b", "c"), each = 3)) %>%
+  mutate(y = x %% 2) %>%
+  group_by(group) %>%
+  mutate(z = x %% 2)
+```
+
+The logarithmic functions `log()`, `log2()`, and `log10()` are not affected by
+`group_by()`.
+```{r}
+tibble(x = 1:9,
+       group = rep(c("a", "b", "c"), each = 3)) %>%
+  mutate(y = log(x)) %>%
+  group_by(group) %>%
+  mutate(z = log(x))
+```
+
+The offset functions `lead()` and `lag()` respect the groupings in `group_by()`.
+The functions `lag()` and `lead()` will only return values within each group.
+```{r}
+tibble(x = 1:9,
+       group = rep(c("a", "b", "c"), each = 3)) %>%
+  group_by(group) %>%
+  mutate(lag_x = lag(x),
+         lead_x = lead(x))
+```
+
+The cumulative and rolling aggregate functions `cumsum()`, `cumprod()`, `cummin()`, `cummax()`, and `cummean()` calculate values within each group.
+```{r}
+tibble(x = 1:9,
+       group = rep(c("a", "b", "c"), each = 3)) %>%
+  mutate(x_cumsum = cumsum(x)) %>%
+  group_by(group) %>%
+  mutate(x_cumsum_2 = cumsum(x))
+
+```
+
+Logical comparisons, `<`, `<=`, `>`, `>=`, `!=`, and `==` are not affected by `group_by()`.
+```{r}
+tibble(x = 1:9,
+       y = 9:1,
+       group = rep(c("a", "b", "c"), each = 3)) %>%
+  mutate(x_lte_y = x <= y) %>%
+  group_by(group) %>%
+  mutate(x_lte_y_2 = x <= y)
+```
+
+Ranking functions like `min_rank()` work within each group when used with `group_by()`.
+```{r}
+tibble(x = 1:9,
+       group = rep(c("a", "b", "c"), each = 3)) %>%
+  mutate(rnk = min_rank(x)) %>%
+  group_by(group) %>%
+  mutate(rnk2 = min_rank(x))
+```
+
+Though not asked in the question, note that `arrange()` ignores groups when sorting values.
+```{r}
+tibble(x = runif(9),
+       group = rep(c("a", "b", "c"), each = 3)) %>%
+  group_by(group) %>%
+  arrange(x)
+
+```
+However, the order of values from `arrange()` can interact with groups when 
+used with functions that rely on the ordering of elements, such as `lead()`, `lag()`,
+or `cumsum()`.
+```{r}
+tibble(group = rep(c("a", "b", "c"), each = 3), 
+       x = runif(9)) %>%
+  group_by(group) %>%
+  arrange(x) %>%
+  mutate(lag_x = lag(x))
+
+```
+
+</div>

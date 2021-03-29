@@ -5,12 +5,1023 @@
     <link>https://ianadamsresearch.com/tag/6002/</link>
       <atom:link href="https://ianadamsresearch.com/tag/6002/index.xml" rel="self" type="application/rss+xml" />
     <description>6002</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2021`</copyright><lastBuildDate>Mon, 18 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2021`</copyright><lastBuildDate>Sun, 28 Mar 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ianadamsresearch.com/media/android-chrome-512x512.png</url>
       <title>6002</title>
       <link>https://ianadamsresearch.com/tag/6002/</link>
     </image>
+    
+    <item>
+      <title>Week 10 Solutions</title>
+      <link>https://ianadamsresearch.com/courses/pubpl-6002/week-10/</link>
+      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/courses/pubpl-6002/week-10/</guid>
+      <description>
+&lt;script src=&#34;https://ianadamsresearch.com/courses/pubpl-6002/week-10/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;so-you-want-to-be-a-data-scientist&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;So you want to be a data scientist&lt;/h1&gt;
+&lt;p&gt;This week can feel like a bit of a doozy, as the difficulty really ramps up. Something to remember - most data scientists spend most of their time cleaning, transforming, and &lt;em&gt;tidying&lt;/em&gt; their data. That’s what these chapters and questions are all about. So I want to make sure you have the correct answers, but more importantly, I want you to know &lt;strong&gt;you are not alone&lt;/strong&gt;, this stuff is hard! I’ve put the quote in front of you before, but this little bit of wisdom from Hadley Wickham, lead author of our class textbook, is important during times like we’re having right now:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“There is no way of going from knowing nothing about a subject to knowing something about a subject without going through a period of much frustration and suckiness. &lt;strong&gt;Push through. You’ll suck less&lt;/strong&gt;.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now, onto the answers!&lt;/p&gt;
+&lt;div id=&#34;exercise-5.2.4&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercise 5.2.4&lt;/h2&gt;
+&lt;div class=&#34;question&#34;&gt;
+&lt;p&gt;Why is &lt;code&gt;NA ^ 0&lt;/code&gt; not missing? Why is &lt;code&gt;NA | TRUE&lt;/code&gt; not missing?
+Why is &lt;code&gt;FALSE &amp;amp; NA&lt;/code&gt; not missing? Can you figure out the general rule?
+(&lt;code&gt;NA * 0&lt;/code&gt; is a tricky counterexample!)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;answer&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;NA ^ 0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;NA ^ 0 == 1&lt;/code&gt; since for all numeric values &lt;span class=&#34;math inline&#34;&gt;\(x ^ 0 = 1\)&lt;/span&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;NA | TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;NA | TRUE&lt;/code&gt; is &lt;code&gt;TRUE&lt;/code&gt; because anything &lt;strong&gt;or&lt;/strong&gt; &lt;code&gt;TRUE&lt;/code&gt; is &lt;code&gt;TRUE&lt;/code&gt;.
+If the missing value were &lt;code&gt;TRUE&lt;/code&gt;, then &lt;code&gt;TRUE | TRUE == TRUE&lt;/code&gt;,
+and if the missing value was &lt;code&gt;FALSE&lt;/code&gt;, then &lt;code&gt;FALSE | TRUE == TRUE&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;NA &amp;amp; FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The value of &lt;code&gt;NA &amp;amp; FALSE&lt;/code&gt; is &lt;code&gt;FALSE&lt;/code&gt; because anything &lt;strong&gt;and&lt;/strong&gt; &lt;code&gt;FALSE&lt;/code&gt; is always &lt;code&gt;FALSE&lt;/code&gt;.
+If the missing value were &lt;code&gt;TRUE&lt;/code&gt;, then &lt;code&gt;TRUE &amp;amp; FALSE == FALSE&lt;/code&gt;,
+and if the missing value was &lt;code&gt;FALSE&lt;/code&gt;, then &lt;code&gt;FALSE &amp;amp; FALSE == FALSE&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;NA | FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] NA&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For &lt;code&gt;NA | FALSE&lt;/code&gt;, the value is unknown since &lt;code&gt;TRUE | FALSE == TRUE&lt;/code&gt;, but &lt;code&gt;FALSE | FALSE == FALSE&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;NA &amp;amp; TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] NA&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For &lt;code&gt;NA &amp;amp; TRUE&lt;/code&gt;, the value is unknown since &lt;code&gt;FALSE &amp;amp; TRUE== FALSE&lt;/code&gt;, but &lt;code&gt;TRUE &amp;amp; TRUE == TRUE&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;NA * 0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] NA&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Since &lt;span class=&#34;math inline&#34;&gt;\(x * 0 = 0\)&lt;/span&gt; for all finite numbers we might expect &lt;code&gt;NA * 0 == 0&lt;/code&gt;, but that’s not the case.
+The reason that &lt;code&gt;NA * 0 != 0&lt;/code&gt; is that &lt;span class=&#34;math inline&#34;&gt;\(0 \times \infty\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(0 \times -\infty\)&lt;/span&gt; are undefined.
+R represents undefined results as &lt;code&gt;NaN&lt;/code&gt;, which is an abbreviation of “&lt;a href=&#34;https://en.wikipedia.org/wiki/NaN&#34;&gt;not a number&lt;/a&gt;”.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Inf * 0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] NaN&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;-Inf * 0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] NaN&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercise-5.3.1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercise 5.3.1&lt;/h2&gt;
+&lt;div class=&#34;question&#34;&gt;
+&lt;p&gt;How could you use &lt;code&gt;arrange()&lt;/code&gt; to sort all missing values to the start? (Hint: use &lt;code&gt;is.na()&lt;/code&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;answer&#34;&gt;
+&lt;p&gt;The &lt;code&gt;arrange()&lt;/code&gt; function puts &lt;code&gt;NA&lt;/code&gt; values last.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;arrange(flights, dep_time) %&amp;gt;%
+  tail()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 19
+##    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##   &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+## 1  2013     9    30       NA           1842        NA       NA           2019
+## 2  2013     9    30       NA           1455        NA       NA           1634
+## 3  2013     9    30       NA           2200        NA       NA           2312
+## 4  2013     9    30       NA           1210        NA       NA           1330
+## 5  2013     9    30       NA           1159        NA       NA           1344
+## 6  2013     9    30       NA            840        NA       NA           1020
+## # ... with 11 more variables: arr_delay &amp;lt;dbl&amp;gt;, carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;,
+## #   tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;, air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;,
+## #   hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using &lt;code&gt;desc()&lt;/code&gt; does not change that.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;arrange(flights, desc(dep_time))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013    10    30     2400           2359         1      327            337
+##  2  2013    11    27     2400           2359         1      515            445
+##  3  2013    12     5     2400           2359         1      427            440
+##  4  2013    12     9     2400           2359         1      432            440
+##  5  2013    12     9     2400           2250        70       59           2356
+##  6  2013    12    13     2400           2359         1      432            440
+##  7  2013    12    19     2400           2359         1      434            440
+##  8  2013    12    29     2400           1700       420      302           2025
+##  9  2013     2     7     2400           2359         1      432            436
+## 10  2013     2     7     2400           2359         1      443            444
+## # ... with 336,766 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To put &lt;code&gt;NA&lt;/code&gt; values first, we can add an indicator of whether the column has a missing value.
+Then we sort by the missing indicator column and the column of interest.
+For example, to sort the data frame by departure time (&lt;code&gt;dep_time&lt;/code&gt;) in ascending order but &lt;code&gt;NA&lt;/code&gt; values first, run the following.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;arrange(flights, desc(is.na(dep_time)), dep_time)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     1       NA           1630        NA       NA           1815
+##  2  2013     1     1       NA           1935        NA       NA           2240
+##  3  2013     1     1       NA           1500        NA       NA           1825
+##  4  2013     1     1       NA            600        NA       NA            901
+##  5  2013     1     2       NA           1540        NA       NA           1747
+##  6  2013     1     2       NA           1620        NA       NA           1746
+##  7  2013     1     2       NA           1355        NA       NA           1459
+##  8  2013     1     2       NA           1420        NA       NA           1644
+##  9  2013     1     2       NA           1321        NA       NA           1536
+## 10  2013     1     2       NA           1545        NA       NA           1910
+## # ... with 336,766 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;flights&lt;/code&gt; will first be sorted by &lt;code&gt;desc(is.na(dep_time))&lt;/code&gt;.
+Since &lt;code&gt;desc(is.na(dep_time))&lt;/code&gt; is either &lt;code&gt;TRUE&lt;/code&gt; when &lt;code&gt;dep_time&lt;/code&gt; is missing, or &lt;code&gt;FALSE&lt;/code&gt;, when it is not, the rows with missing values of &lt;code&gt;dep_time&lt;/code&gt; will come first, since &lt;code&gt;TRUE &amp;gt; FALSE&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercise-5.4.1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercise 5.4.1&lt;/h2&gt;
+&lt;div class=&#34;question&#34;&gt;
+&lt;p&gt;Brainstorm as many ways as possible to select &lt;code&gt;dep_time&lt;/code&gt;, &lt;code&gt;dep_delay&lt;/code&gt;, &lt;code&gt;arr_time&lt;/code&gt;, and &lt;code&gt;arr_delay&lt;/code&gt; from flights.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;answer&#34;&gt;
+&lt;p&gt;These are a few ways to select columns.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Specify columns names as unquoted variable names.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(flights, dep_time, dep_delay, arr_time, arr_delay)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    dep_time dep_delay arr_time arr_delay
+##       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1      517         2      830        11
+##  2      533         4      850        20
+##  3      542         2      923        33
+##  4      544        -1     1004       -18
+##  5      554        -6      812       -25
+##  6      554        -4      740        12
+##  7      555        -5      913        19
+##  8      557        -3      709       -14
+##  9      557        -3      838        -8
+## 10      558        -2      753         8
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Specify column names as strings.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(flights, &amp;quot;dep_time&amp;quot;, &amp;quot;dep_delay&amp;quot;, &amp;quot;arr_time&amp;quot;, &amp;quot;arr_delay&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    dep_time dep_delay arr_time arr_delay
+##       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1      517         2      830        11
+##  2      533         4      850        20
+##  3      542         2      923        33
+##  4      544        -1     1004       -18
+##  5      554        -6      812       -25
+##  6      554        -4      740        12
+##  7      555        -5      913        19
+##  8      557        -3      709       -14
+##  9      557        -3      838        -8
+## 10      558        -2      753         8
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Specify the column numbers of the variables.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(flights, 4, 6, 7, 9)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    dep_time dep_delay arr_time arr_delay
+##       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1      517         2      830        11
+##  2      533         4      850        20
+##  3      542         2      923        33
+##  4      544        -1     1004       -18
+##  5      554        -6      812       -25
+##  6      554        -4      740        12
+##  7      555        -5      913        19
+##  8      557        -3      709       -14
+##  9      557        -3      838        -8
+## 10      558        -2      753         8
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This works, but is not good practice for two reasons.
+First, the column location of variables may change, resulting in code that
+may continue to run without error, but produce the wrong answer.
+Second code is obfuscated, since it is not clear from the code which
+variables are being selected. What variable does column 6 correspond to?
+I just wrote the code, and I’ve already forgotten.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Specify the names of the variables with character vector and &lt;code&gt;any_of()&lt;/code&gt; or &lt;code&gt;all_of()&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(flights, all_of(c(&amp;quot;dep_time&amp;quot;, &amp;quot;dep_delay&amp;quot;, &amp;quot;arr_time&amp;quot;, &amp;quot;arr_delay&amp;quot;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    dep_time dep_delay arr_time arr_delay
+##       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1      517         2      830        11
+##  2      533         4      850        20
+##  3      542         2      923        33
+##  4      544        -1     1004       -18
+##  5      554        -6      812       -25
+##  6      554        -4      740        12
+##  7      555        -5      913        19
+##  8      557        -3      709       -14
+##  9      557        -3      838        -8
+## 10      558        -2      753         8
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(flights, any_of(c(&amp;quot;dep_time&amp;quot;, &amp;quot;dep_delay&amp;quot;, &amp;quot;arr_time&amp;quot;, &amp;quot;arr_delay&amp;quot;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    dep_time dep_delay arr_time arr_delay
+##       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1      517         2      830        11
+##  2      533         4      850        20
+##  3      542         2      923        33
+##  4      544        -1     1004       -18
+##  5      554        -6      812       -25
+##  6      554        -4      740        12
+##  7      555        -5      913        19
+##  8      557        -3      709       -14
+##  9      557        -3      838        -8
+## 10      558        -2      753         8
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is useful because the names of the variables can be stored in a
+variable and passed to &lt;code&gt;all_of()&lt;/code&gt; or &lt;code&gt;any_of()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;variables &amp;lt;- c(&amp;quot;dep_time&amp;quot;, &amp;quot;dep_delay&amp;quot;, &amp;quot;arr_time&amp;quot;, &amp;quot;arr_delay&amp;quot;)
+select(flights, all_of(variables))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    dep_time dep_delay arr_time arr_delay
+##       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1      517         2      830        11
+##  2      533         4      850        20
+##  3      542         2      923        33
+##  4      544        -1     1004       -18
+##  5      554        -6      812       -25
+##  6      554        -4      740        12
+##  7      555        -5      913        19
+##  8      557        -3      709       -14
+##  9      557        -3      838        -8
+## 10      558        -2      753         8
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These two functions replace the deprecated function &lt;code&gt;one_of()&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Selecting the variables by matching the start of their names using &lt;code&gt;starts_with()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(flights, starts_with(&amp;quot;dep_&amp;quot;), starts_with(&amp;quot;arr_&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    dep_time dep_delay arr_time arr_delay
+##       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1      517         2      830        11
+##  2      533         4      850        20
+##  3      542         2      923        33
+##  4      544        -1     1004       -18
+##  5      554        -6      812       -25
+##  6      554        -4      740        12
+##  7      555        -5      913        19
+##  8      557        -3      709       -14
+##  9      557        -3      838        -8
+## 10      558        -2      753         8
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Selecting the variables using regular expressions with &lt;code&gt;matches()&lt;/code&gt;.
+Regular expressions provide a flexible way to match string patterns
+and are discussed in the &lt;a href=&#34;https://r4ds.had.co.nz/strings.html&#34;&gt;Strings&lt;/a&gt; chapter.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(flights, matches(&amp;quot;^(dep|arr)_(time|delay)$&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    dep_time dep_delay arr_time arr_delay
+##       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1      517         2      830        11
+##  2      533         4      850        20
+##  3      542         2      923        33
+##  4      544        -1     1004       -18
+##  5      554        -6      812       -25
+##  6      554        -4      740        12
+##  7      555        -5      913        19
+##  8      557        -3      709       -14
+##  9      557        -3      838        -8
+## 10      558        -2      753         8
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Specify the names of the variables with a character vector and use the bang-bang operator (&lt;code&gt;!!&lt;/code&gt;).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;variables &amp;lt;- c(&amp;quot;dep_time&amp;quot;, &amp;quot;dep_delay&amp;quot;, &amp;quot;arr_time&amp;quot;, &amp;quot;arr_delay&amp;quot;)
+select(flights, !!variables)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    dep_time dep_delay arr_time arr_delay
+##       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1      517         2      830        11
+##  2      533         4      850        20
+##  3      542         2      923        33
+##  4      544        -1     1004       -18
+##  5      554        -6      812       -25
+##  6      554        -4      740        12
+##  7      555        -5      913        19
+##  8      557        -3      709       -14
+##  9      557        -3      838        -8
+## 10      558        -2      753         8
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This and the following answers use the features of &lt;strong&gt;tidy evaluation&lt;/strong&gt; not covered in R4DS but covered in the &lt;a href=&#34;https://dplyr.tidyverse.org/articles/programming.html&#34;&gt;Programming with dplyr&lt;/a&gt; vignette.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Specify the names of the variables in a character or list vector and use the bang-bang-bang operator.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;variables &amp;lt;- c(&amp;quot;dep_time&amp;quot;, &amp;quot;dep_delay&amp;quot;, &amp;quot;arr_time&amp;quot;, &amp;quot;arr_delay&amp;quot;)
+select(flights, !!!variables)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    dep_time dep_delay arr_time arr_delay
+##       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1      517         2      830        11
+##  2      533         4      850        20
+##  3      542         2      923        33
+##  4      544        -1     1004       -18
+##  5      554        -6      812       -25
+##  6      554        -4      740        12
+##  7      555        -5      913        19
+##  8      557        -3      709       -14
+##  9      557        -3      838        -8
+## 10      558        -2      753         8
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Specify the unquoted names of the variables in a list using &lt;code&gt;syms()&lt;/code&gt; and use the bang-bang-bang operator.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;variables &amp;lt;- syms(c(&amp;quot;dep_time&amp;quot;, &amp;quot;dep_delay&amp;quot;, &amp;quot;arr_time&amp;quot;, &amp;quot;arr_delay&amp;quot;))
+select(flights, !!!variables)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    dep_time dep_delay arr_time arr_delay
+##       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1      517         2      830        11
+##  2      533         4      850        20
+##  3      542         2      923        33
+##  4      544        -1     1004       -18
+##  5      554        -6      812       -25
+##  6      554        -4      740        12
+##  7      555        -5      913        19
+##  8      557        -3      709       -14
+##  9      557        -3      838        -8
+## 10      558        -2      753         8
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some things that &lt;strong&gt;don’t&lt;/strong&gt; work are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Matching the ends of their names using &lt;code&gt;ends_with()&lt;/code&gt; since this will incorrectly
+include other variables. For example,&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(flights, ends_with(&amp;quot;arr_time&amp;quot;), ends_with(&amp;quot;dep_time&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 4
+##    arr_time sched_arr_time dep_time sched_dep_time
+##       &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1      830            819      517            515
+##  2      850            830      533            529
+##  3      923            850      542            540
+##  4     1004           1022      544            545
+##  5      812            837      554            600
+##  6      740            728      554            558
+##  7      913            854      555            600
+##  8      709            723      557            600
+##  9      838            846      557            600
+## 10      753            745      558            600
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Matching the names using &lt;code&gt;contains()&lt;/code&gt; since there is not a pattern that can
+include all these variables without incorrectly including others.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(flights, contains(&amp;quot;_time&amp;quot;), contains(&amp;quot;arr_&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 x 6
+##    dep_time sched_dep_time arr_time sched_arr_time air_time arr_delay
+##       &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1      517            515      830            819      227        11
+##  2      533            529      850            830      227        20
+##  3      542            540      923            850      160        33
+##  4      544            545     1004           1022      183       -18
+##  5      554            600      812            837      116       -25
+##  6      554            558      740            728      150        12
+##  7      555            600      913            854      158        19
+##  8      557            600      709            723       53       -14
+##  9      557            600      838            846      140        -8
+## 10      558            600      753            745      138         8
+## # ... with 336,766 more rows&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercise-5.5.2&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercise 5.5.2&lt;/h2&gt;
+&lt;div class=&#34;question&#34;&gt;
+&lt;p&gt;Compare &lt;code&gt;air_time&lt;/code&gt; with &lt;code&gt;arr_time - dep_time&lt;/code&gt;.
+What do you expect to see?
+What do you see?
+What do you need to do to fix it?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;answer&#34;&gt;
+&lt;p&gt;I expect that &lt;code&gt;air_time&lt;/code&gt; is the difference between the arrival (&lt;code&gt;arr_time&lt;/code&gt;) and departure times (&lt;code&gt;dep_time&lt;/code&gt;).
+In other words, &lt;code&gt;air_time = arr_time - dep_time&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To check that this relationship, I’ll first need to convert the times to a form more amenable to arithmetic operations using the same calculations as the &lt;a href=&#34;#exercise-5.5.1&#34;&gt;previous exercise&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights_airtime &amp;lt;-
+  mutate(flights,
+    dep_time = (dep_time %/% 100 * 60 + dep_time %% 100) %% 1440,
+    arr_time = (arr_time %/% 100 * 60 + arr_time %% 100) %% 1440,
+    air_time_diff = air_time - arr_time + dep_time
+  )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So, does &lt;code&gt;air_time = arr_time - dep_time&lt;/code&gt;?
+If so, there should be no flights with non-zero values of &lt;code&gt;air_time_diff&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nrow(filter(flights_airtime, air_time_diff != 0))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 327150&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It turns out that there are many flights for which &lt;code&gt;air_time != arr_time - dep_time&lt;/code&gt;.
+Other than data errors, I can think of two reasons why &lt;code&gt;air_time&lt;/code&gt; would not equal &lt;code&gt;arr_time - dep_time&lt;/code&gt;.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;The flight passes midnight, so &lt;code&gt;arr_time &amp;lt; dep_time&lt;/code&gt;.
+In these cases, the difference in airtime should be by 24 hours (1,440 minutes).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The flight crosses time zones, and the total air time will be off by hours (multiples of 60).
+All flights in &lt;code&gt;flights&lt;/code&gt; departed from New York City and are domestic flights in the US.
+This means that flights will all be to the same or more westerly time zones.
+Given the time-zones in the US, the differences due to time-zone should be 60 minutes (Central)
+120 minutes (Mountain), 180 minutes (Pacific), 240 minutes (Alaska), or 300 minutes (Hawaii).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Both of these explanations have clear patterns that I would expect to see if they
+were true.
+In particular, in both cases, since time-zones and crossing midnight only affects the hour part of the time, all values of &lt;code&gt;air_time_diff&lt;/code&gt; should be divisible by 60.
+I’ll visually check this hypothesis by plotting the distribution of &lt;code&gt;air_time_diff&lt;/code&gt;.
+If those two explanations are correct, distribution of &lt;code&gt;air_time_diff&lt;/code&gt; should comprise only spikes at multiples of 60.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights_airtime, aes(x = air_time_diff)) +
+  geom_histogram(binwidth = 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 9430 rows containing non-finite values (stat_bin).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/courses/pubpl-6002/week-10/index_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; /&gt;
+This is not the case.
+While, the distribution of &lt;code&gt;air_time_diff&lt;/code&gt; has modes at multiples of 60 as hypothesized,
+it shows that there are many flights in which the difference between air time and local arrival and departure times is not divisible by 60.&lt;/p&gt;
+&lt;p&gt;Let’s also look at flights with Los Angeles as a destination.
+The discrepancy should be 180 minutes.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(filter(flights_airtime, dest == &amp;quot;LAX&amp;quot;), aes(x = air_time_diff)) +
+  geom_histogram(binwidth = 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 148 rows containing non-finite values (stat_bin).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/courses/pubpl-6002/week-10/index_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;To fix these time-zone issues, I would want to convert all the times to a date-time to handle overnight flights, and from local time to a common time zone, most likely &lt;a href=&#34;https://en.wikipedia.org/wiki/Coordinated_Universal_Time&#34;&gt;UTC&lt;/a&gt;, to handle flights crossing time-zones.
+The &lt;code&gt;tzone&lt;/code&gt; column of &lt;code&gt;nycflights13::airports&lt;/code&gt; gives the time-zone of each airport.
+See the &lt;a href=&#34;https://r4ds.had.co.nz/dates-and-times.html&#34;&gt;“Dates and Times”&lt;/a&gt; for an introduction on working with date and time data.&lt;/p&gt;
+&lt;p&gt;But that still leaves the other differences unexplained.
+So what else might be going on?
+There seem to be too many problems for this to be data entry problems, so I’m probably missing something.
+So, I’ll reread the documentation to make sure that I understand the definitions of &lt;code&gt;arr_time&lt;/code&gt;, &lt;code&gt;dep_time&lt;/code&gt;, and
+&lt;code&gt;air_time&lt;/code&gt;.
+The documentation contains a link to the source of the &lt;code&gt;flights&lt;/code&gt; data, &lt;a href=&#34;https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&#34; class=&#34;uri&#34;&gt;https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&lt;/a&gt;.
+This documentation shows that the &lt;code&gt;flights&lt;/code&gt; data does not contain the variables &lt;code&gt;TaxiIn&lt;/code&gt;, &lt;code&gt;TaxiOff&lt;/code&gt;, &lt;code&gt;WheelsIn&lt;/code&gt;, and &lt;code&gt;WheelsOff&lt;/code&gt;.
+It appears that the &lt;code&gt;air_time&lt;/code&gt; variable refers to flight time, which is defined as the time between wheels-off (take-off) and wheels-in (landing).
+But the flight time does not include time spent on the runway taxiing to and from gates.
+With this new understanding of the data, I now know that the relationship between &lt;code&gt;air_time&lt;/code&gt;, &lt;code&gt;arr_time&lt;/code&gt;, and &lt;code&gt;dep_time&lt;/code&gt; is &lt;code&gt;air_time &amp;lt;= arr_time - dep_time&lt;/code&gt;, supposing that the time zones of &lt;code&gt;arr_time&lt;/code&gt; and &lt;code&gt;dep_time&lt;/code&gt; are in the same time zone.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercise-5.6.7&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercise 5.6.7&lt;/h2&gt;
+&lt;p&gt;Brainstorm at least 5 different ways to assess the typical delay characteristics of a group of flights.
+Consider the following scenarios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A flight is 15 minutes early 50% of the time, and 15 minutes late 50% of the time.&lt;/li&gt;
+&lt;li&gt;A flight is always 10 minutes late.&lt;/li&gt;
+&lt;li&gt;A flight is 30 minutes early 50% of the time, and 30 minutes late 50% of the time.&lt;/li&gt;
+&lt;li&gt;99% of the time a flight is on time. 1% of the time it’s 2 hours late.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Which is more important: arrival delay or departure delay?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;answer&#34;&gt;
+
+&lt;p&gt;What this question gets at is a fundamental question of data analysis: the cost function.
+As analysts, the reason we are interested in flight delay because it is costly to passengers.
+But it is worth thinking carefully about how it is costly and use that information in ranking and measuring these scenarios.&lt;/p&gt;
+&lt;p&gt;In many scenarios, arrival delay is more important.
+In most cases, being arriving late is more costly to the passenger since it could disrupt the next stages of their travel, such as connecting flights or scheduled meetings.&lt;br /&gt;
+If a departure is delayed without affecting the arrival time, this delay will not have those affects plans nor does it affect the total time spent traveling.
+This delay could be beneficial, if less time is spent in the cramped confines of the airplane itself, or a negative, if that delayed time is still spent in the cramped confines of the airplane on the runway.&lt;/p&gt;
+&lt;p&gt;Variation in arrival time is worse than consistency.
+If a flight is always 30 minutes late and that delay is known, then it is as if the arrival time is that delayed time.
+The traveler could easily plan for this.
+But higher variation in flight times makes it harder to plan.&lt;/p&gt;
+&lt;div id=&#34;section&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;5.6.7.2&lt;/h3&gt;
+&lt;div class=&#34;question&#34;&gt;
+&lt;p&gt;Come up with another approach that will give you the same output as &lt;code&gt;not_cancelled %&amp;gt;% count(dest)&lt;/code&gt; and &lt;code&gt;not_cancelled %&amp;gt;% count(tailnum, wt = distance)&lt;/code&gt; (without using &lt;code&gt;count()&lt;/code&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;answer&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;not_cancelled &amp;lt;- flights %&amp;gt;%
+  filter(!is.na(dep_delay), !is.na(arr_delay))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The first expression is the following.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;not_cancelled %&amp;gt;% 
+  count(dest)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 104 x 2
+##    dest      n
+##    &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt;
+##  1 ABQ     254
+##  2 ACK     264
+##  3 ALB     418
+##  4 ANC       8
+##  5 ATL   16837
+##  6 AUS    2411
+##  7 AVL     261
+##  8 BDL     412
+##  9 BGR     358
+## 10 BHM     269
+## # ... with 94 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;count()&lt;/code&gt; function counts the number of instances within each group of variables.
+Instead of using the &lt;code&gt;count()&lt;/code&gt; function, we can combine the &lt;code&gt;group_by()&lt;/code&gt; and &lt;code&gt;summarise()&lt;/code&gt; verbs.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;not_cancelled %&amp;gt;%
+  group_by(dest) %&amp;gt;%
+  summarise(n = length(dest))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 104 x 2
+##    dest      n
+##    &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt;
+##  1 ABQ     254
+##  2 ACK     264
+##  3 ALB     418
+##  4 ANC       8
+##  5 ATL   16837
+##  6 AUS    2411
+##  7 AVL     261
+##  8 BDL     412
+##  9 BGR     358
+## 10 BHM     269
+## # ... with 94 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An alternative method for getting the number of observations in a data frame is the function &lt;code&gt;n()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;not_cancelled %&amp;gt;%
+  group_by(dest) %&amp;gt;%
+  summarise(n = n())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 104 x 2
+##    dest      n
+##    &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt;
+##  1 ABQ     254
+##  2 ACK     264
+##  3 ALB     418
+##  4 ANC       8
+##  5 ATL   16837
+##  6 AUS    2411
+##  7 AVL     261
+##  8 BDL     412
+##  9 BGR     358
+## 10 BHM     269
+## # ... with 94 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Another alternative to &lt;code&gt;count()&lt;/code&gt; is to use &lt;code&gt;group_by()&lt;/code&gt; followed by &lt;code&gt;tally()&lt;/code&gt;.
+In fact, &lt;code&gt;count()&lt;/code&gt; is effectively a short-cut for &lt;code&gt;group_by()&lt;/code&gt; followed by &lt;code&gt;tally()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;not_cancelled %&amp;gt;%
+  group_by(tailnum) %&amp;gt;%
+  tally()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 4,037 x 2
+##    tailnum     n
+##    &amp;lt;chr&amp;gt;   &amp;lt;int&amp;gt;
+##  1 D942DN      4
+##  2 N0EGMQ    352
+##  3 N10156    145
+##  4 N102UW     48
+##  5 N103US     46
+##  6 N104UW     46
+##  7 N10575    269
+##  8 N105UW     45
+##  9 N107US     41
+## 10 N108UW     60
+## # ... with 4,027 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The second expression also uses the &lt;code&gt;count()&lt;/code&gt; function, but adds a &lt;code&gt;wt&lt;/code&gt; argument.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;not_cancelled %&amp;gt;% 
+  count(tailnum, wt = distance)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 4,037 x 2
+##    tailnum      n
+##    &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt;
+##  1 D942DN    3418
+##  2 N0EGMQ  239143
+##  3 N10156  109664
+##  4 N102UW   25722
+##  5 N103US   24619
+##  6 N104UW   24616
+##  7 N10575  139903
+##  8 N105UW   23618
+##  9 N107US   21677
+## 10 N108UW   32070
+## # ... with 4,027 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As before, we can replicate &lt;code&gt;count()&lt;/code&gt; by combining the &lt;code&gt;group_by()&lt;/code&gt; and &lt;code&gt;summarise()&lt;/code&gt; verbs.
+But this time instead of using &lt;code&gt;length()&lt;/code&gt;, we will use &lt;code&gt;sum()&lt;/code&gt; with the weighting variable.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;not_cancelled %&amp;gt;%
+  group_by(tailnum) %&amp;gt;%
+  summarise(n = sum(distance))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 4,037 x 2
+##    tailnum      n
+##    &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt;
+##  1 D942DN    3418
+##  2 N0EGMQ  239143
+##  3 N10156  109664
+##  4 N102UW   25722
+##  5 N103US   24619
+##  6 N104UW   24616
+##  7 N10575  139903
+##  8 N105UW   23618
+##  9 N107US   21677
+## 10 N108UW   32070
+## # ... with 4,027 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Like the previous example, we can also use the combination &lt;code&gt;group_by()&lt;/code&gt; and &lt;code&gt;tally()&lt;/code&gt;.
+Any arguments to &lt;code&gt;tally()&lt;/code&gt; are summed.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;not_cancelled %&amp;gt;%
+  group_by(tailnum) %&amp;gt;%
+  tally(distance)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 4,037 x 2
+##    tailnum      n
+##    &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt;
+##  1 D942DN    3418
+##  2 N0EGMQ  239143
+##  3 N10156  109664
+##  4 N102UW   25722
+##  5 N103US   24619
+##  6 N104UW   24616
+##  7 N10575  139903
+##  8 N105UW   23618
+##  9 N107US   21677
+## 10 N108UW   32070
+## # ... with 4,027 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;5.6.7.3&lt;/h3&gt;
+&lt;div class=&#34;question&#34;&gt;
+&lt;p&gt;Our definition of cancelled flights &lt;code&gt;(is.na(dep_delay) | is.na(arr_delay))&lt;/code&gt; is slightly suboptimal.
+Why?
+Which is the most important column?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;answer&#34;&gt;
+&lt;p&gt;If a flight never departs, then it won’t arrive.
+A flight could also depart and not arrive if it crashes, or if it is redirected and lands in an airport other than its intended destination.
+So the most important column is &lt;code&gt;arr_delay&lt;/code&gt;, which indicates the amount of delay in arrival.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(flights, !is.na(dep_delay), is.na(arr_delay)) %&amp;gt;%
+  select(dep_time, arr_time, sched_arr_time, dep_delay, arr_delay)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,175 x 5
+##    dep_time arr_time sched_arr_time dep_delay arr_delay
+##       &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1     1525     1934           1805        -5        NA
+##  2     1528     2002           1647        29        NA
+##  3     1740     2158           2020        -5        NA
+##  4     1807     2251           2103        29        NA
+##  5     1939       29           2151        59        NA
+##  6     1952     2358           2207        22        NA
+##  7     2016       NA           2220        46        NA
+##  8      905     1313           1045        43        NA
+##  9     1125     1445           1146       120        NA
+## 10     1848     2333           2151         8        NA
+## # ... with 1,165 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this data &lt;code&gt;dep_time&lt;/code&gt; can be non-missing and &lt;code&gt;arr_delay&lt;/code&gt; missing but &lt;code&gt;arr_time&lt;/code&gt; not missing.
+Some further &lt;a href=&#34;https://hyp.is/TsdRpofJEeqzs6-vUOfVBg/jrnold.github.io/r4ds-exercise-solutions/transform.html&#34;&gt;research&lt;/a&gt; found that these rows correspond to diverted flights.
+The &lt;a href=&#34;https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&#34;&gt;BTS&lt;/a&gt; database that is the source for the &lt;code&gt;flights&lt;/code&gt; table contains additional information for diverted flights that is not included in the nycflights13 data.
+The source contains a column &lt;code&gt;DivArrDelay&lt;/code&gt; with the description:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Difference in minutes between scheduled and actual arrival time for a diverted flight reaching scheduled destination.
+The &lt;code&gt;ArrDelay&lt;/code&gt; column remains &lt;code&gt;NULL&lt;/code&gt; for all diverted flights.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;5.6.7.4&lt;/h3&gt;
+&lt;div class=&#34;question&#34;&gt;
+&lt;p&gt;Look at the number of cancelled flights per day.
+Is there a pattern?
+Is the proportion of cancelled flights related to the average delay?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;answer&#34;&gt;
+&lt;p&gt;One pattern in cancelled flights per day is that the number of cancelled flights increases with the total number of flights per day.
+The proportion of cancelled flights increases with the average delay of flights.&lt;/p&gt;
+&lt;p&gt;To answer these questions, use definition of cancelled used in the
+chapter &lt;a href=&#34;https://r4ds.had.co.nz/transform.html#counts&#34;&gt;Section 5.6.3&lt;/a&gt; and the
+relationship &lt;code&gt;!(is.na(arr_delay) &amp;amp; is.na(dep_delay))&lt;/code&gt; is equal to
+&lt;code&gt;!is.na(arr_delay) | !is.na(dep_delay)&lt;/code&gt; by &lt;a href=&#34;https://en.wikipedia.org/wiki/De_Morgan%27s_laws&#34;&gt;De Morgan’s law&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The first part of the question asks for any pattern in the number of cancelled flights per day.
+I’ll look at the relationship between the number of cancelled flights per day and the total number of flights in a day.
+There should be an increasing relationship for two reasons.
+First, if all flights are equally likely to be cancelled, then days with more flights should have a higher number of cancellations.
+Second, it is likely that days with more flights would have a higher probability of cancellations because congestion itself can cause delays and any delay would affect more flights, and large delays can lead to cancellations.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cancelled_per_day &amp;lt;- 
+  flights %&amp;gt;%
+  mutate(cancelled = (is.na(arr_delay) | is.na(dep_delay))) %&amp;gt;%
+  group_by(year, month, day) %&amp;gt;%
+  summarise(
+    cancelled_num = sum(cancelled),
+    flights_num = n(),
+  )&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` has grouped output by &amp;#39;year&amp;#39;, &amp;#39;month&amp;#39;. You can override using the `.groups` argument.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Plotting &lt;code&gt;flights_num&lt;/code&gt; against &lt;code&gt;cancelled_num&lt;/code&gt; shows that the number of flights
+cancelled increases with the total number of flights.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(cancelled_per_day) +
+  geom_point(aes(x = flights_num, y = cancelled_num)) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/courses/pubpl-6002/week-10/index_files/figure-html/unnamed-chunk-37-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The second part of the question asks whether there is a relationship between the proportion of flights cancelled and the average departure delay.
+I implied this in my answer to the first part of the question, when I noted that increasing delays could result in increased cancellations.
+The question does not specify which delay, so I will show the relationship for both.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cancelled_and_delays &amp;lt;- 
+  flights %&amp;gt;%
+  mutate(cancelled = (is.na(arr_delay) | is.na(dep_delay))) %&amp;gt;%
+  group_by(year, month, day) %&amp;gt;%
+  summarise(
+    cancelled_prop = mean(cancelled),
+    avg_dep_delay = mean(dep_delay, na.rm = TRUE),
+    avg_arr_delay = mean(arr_delay, na.rm = TRUE)
+  ) %&amp;gt;%
+  ungroup()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` has grouped output by &amp;#39;year&amp;#39;, &amp;#39;month&amp;#39;. You can override using the `.groups` argument.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There is a strong increasing relationship between both average departure delay and&lt;br /&gt;
+and average arrival delay and the proportion of cancelled flights.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(cancelled_and_delays) +
+  geom_point(aes(x = avg_dep_delay, y = cancelled_prop))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/courses/pubpl-6002/week-10/index_files/figure-html/unnamed-chunk-39-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(cancelled_and_delays) +
+  geom_point(aes(x = avg_arr_delay, y = cancelled_prop))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/courses/pubpl-6002/week-10/index_files/figure-html/unnamed-chunk-40-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section-3&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;5.6.7.5&lt;/h3&gt;
+&lt;div class=&#34;question&#34;&gt;
+&lt;p&gt;Which carrier has the worst delays?
+Challenge: can you disentangle the effects of bad airports vs. bad carriers?
+Why/why not?
+(Hint: think about &lt;code&gt;flights %&amp;gt;% group_by(carrier, dest) %&amp;gt;% summarise(n())&lt;/code&gt;)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;answer&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
+  group_by(carrier) %&amp;gt;%
+  summarise(arr_delay = mean(arr_delay, na.rm = TRUE)) %&amp;gt;%
+  arrange(desc(arr_delay))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 16 x 2
+##    carrier arr_delay
+##    &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt;
+##  1 F9         21.9  
+##  2 FL         20.1  
+##  3 EV         15.8  
+##  4 YV         15.6  
+##  5 OO         11.9  
+##  6 MQ         10.8  
+##  7 WN          9.65 
+##  8 B6          9.46 
+##  9 9E          7.38 
+## 10 UA          3.56 
+## 11 US          2.13 
+## 12 VX          1.76 
+## 13 DL          1.64 
+## 14 AA          0.364
+## 15 HA         -6.92 
+## 16 AS         -9.93&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What airline corresponds to the &lt;code&gt;&#34;F9&#34;&lt;/code&gt; carrier code?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(airlines, carrier == &amp;quot;F9&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 2
+##   carrier name                  
+##   &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;                 
+## 1 F9      Frontier Airlines Inc.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can get part of the way to disentangling the effects of airports versus bad carriers by comparing the average delay of each carrier to the average delay of flights within a route (flights from the same origin to the same destination).
+Comparing delays between carriers and within each route disentangles the effect of carriers and airports.
+A better analysis would compare the average delay of a carrier’s flights to the average delay of &lt;em&gt;all other&lt;/em&gt; carrier’s flights within a route.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
+  filter(!is.na(arr_delay)) %&amp;gt;%
+  # Total delay by carrier within each origin, dest
+  group_by(origin, dest, carrier) %&amp;gt;%
+  summarise(
+    arr_delay = sum(arr_delay),
+    flights = n()
+  ) %&amp;gt;%
+  # Total delay within each origin dest
+  group_by(origin, dest) %&amp;gt;%
+  mutate(
+    arr_delay_total = sum(arr_delay),
+    flights_total = sum(flights)
+  ) %&amp;gt;%
+  # average delay of each carrier - average delay of other carriers
+  ungroup() %&amp;gt;%
+  mutate(
+    arr_delay_others = (arr_delay_total - arr_delay) /
+      (flights_total - flights),
+    arr_delay_mean = arr_delay / flights,
+    arr_delay_diff = arr_delay_mean - arr_delay_others
+  ) %&amp;gt;%
+  # remove NaN values (when there is only one carrier)
+  filter(is.finite(arr_delay_diff)) %&amp;gt;%
+  # average over all airports it flies to
+  group_by(carrier) %&amp;gt;%
+  summarise(arr_delay_diff = mean(arr_delay_diff)) %&amp;gt;%
+  arrange(desc(arr_delay_diff))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` has grouped output by &amp;#39;origin&amp;#39;, &amp;#39;dest&amp;#39;. You can override using the `.groups` argument.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 15 x 2
+##    carrier arr_delay_diff
+##    &amp;lt;chr&amp;gt;            &amp;lt;dbl&amp;gt;
+##  1 OO              27.3  
+##  2 F9              17.3  
+##  3 EV              11.0  
+##  4 B6               6.41 
+##  5 FL               2.57 
+##  6 VX              -0.202
+##  7 AA              -0.970
+##  8 WN              -1.27 
+##  9 UA              -1.86 
+## 10 MQ              -2.48 
+## 11 YV              -2.81 
+## 12 9E              -3.54 
+## 13 US              -4.14 
+## 14 DL             -10.2  
+## 15 AS             -15.8&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There are more sophisticated ways to do this analysis, however comparing the delay of flights within each route goes a long ways toward disentangling airport and carrier effects.
+To see a more complete example of this analysis, see this FiveThirtyEight &lt;a href=&#34;https://fivethirtyeight.com/features/the-best-and-worst-airlines-airports-and-flights-summer-2015-update/&#34;&gt;piece&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section-4&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;5.6.7.6&lt;/h3&gt;
+&lt;div class=&#34;question&#34;&gt;
+&lt;p&gt;What does the sort argument to &lt;code&gt;count()&lt;/code&gt; do?
+When might you use it?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;answer&#34;&gt;
+&lt;p&gt;The sort argument to &lt;code&gt;count()&lt;/code&gt; sorts the results in order of &lt;code&gt;n&lt;/code&gt;.
+You could use this anytime you would run &lt;code&gt;count()&lt;/code&gt; followed by &lt;code&gt;arrange()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For example, the following expression counts the number of flights to a destination and sorts the returned data from highest to lowest.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
+  count(dest, sort = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 105 x 2
+##    dest      n
+##    &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt;
+##  1 ORD   17283
+##  2 ATL   17215
+##  3 LAX   16174
+##  4 BOS   15508
+##  5 MCO   14082
+##  6 CLT   14064
+##  7 SFO   13331
+##  8 FLL   12055
+##  9 MIA   11728
+## 10 DCA    9705
+## # ... with 95 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercise-5.7.1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercise 5.7.1&lt;/h2&gt;
+&lt;div class=&#34;question&#34;&gt;
+&lt;p&gt;Refer back to the lists of useful mutate and filtering functions.
+Describe how each operation changes when you combine it with grouping.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;answer&#34;&gt;
+&lt;p&gt;Summary functions (&lt;code&gt;mean()&lt;/code&gt;), offset functions (&lt;code&gt;lead()&lt;/code&gt;, &lt;code&gt;lag()&lt;/code&gt;), ranking functions (&lt;code&gt;min_rank()&lt;/code&gt;, &lt;code&gt;row_number()&lt;/code&gt;), operate within each group when used with &lt;code&gt;group_by()&lt;/code&gt; in
+&lt;code&gt;mutate()&lt;/code&gt; or &lt;code&gt;filter()&lt;/code&gt;.
+Arithmetic operators (&lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;), logical operators (&lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;==&lt;/code&gt;), modular arithmetic operators (&lt;code&gt;%%&lt;/code&gt;, &lt;code&gt;%/%&lt;/code&gt;), logarithmic functions (&lt;code&gt;log&lt;/code&gt;) are not affected by &lt;code&gt;group_by&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Summary functions like &lt;code&gt;mean()&lt;/code&gt;, &lt;code&gt;median()&lt;/code&gt;, &lt;code&gt;sum()&lt;/code&gt;, &lt;code&gt;std()&lt;/code&gt; and others covered
+in the section &lt;a href=&#34;https://r4ds.had.co.nz/transform.html#summarise-funs&#34;&gt;Useful Summary Functions&lt;/a&gt;
+calculate their values within each group when used with &lt;code&gt;mutate()&lt;/code&gt; or &lt;code&gt;filter()&lt;/code&gt; and &lt;code&gt;group_by()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tibble(x = 1:9,
+       group = rep(c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;), each = 3)) %&amp;gt;%
+  mutate(x_mean = mean(x)) %&amp;gt;%
+  group_by(group) %&amp;gt;%
+  mutate(x_mean_2 = mean(x))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 4
+## # Groups:   group [3]
+##       x group x_mean x_mean_2
+##   &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
+## 1     1 a          5        2
+## 2     2 a          5        2
+## 3     3 a          5        2
+## 4     4 b          5        5
+## 5     5 b          5        5
+## 6     6 b          5        5
+## 7     7 c          5        8
+## 8     8 c          5        8
+## 9     9 c          5        8&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Arithmetic operators &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;*&lt;/code&gt;, &lt;code&gt;/&lt;/code&gt;, &lt;code&gt;^&lt;/code&gt; are not affected by &lt;code&gt;group_by()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tibble(x = 1:9,
+       group = rep(c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;), each = 3)) %&amp;gt;%
+  mutate(y = x + 2) %&amp;gt;%
+  group_by(group) %&amp;gt;%
+  mutate(z = x + 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 4
+## # Groups:   group [3]
+##       x group     y     z
+##   &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1     1 a         3     3
+## 2     2 a         4     4
+## 3     3 a         5     5
+## 4     4 b         6     6
+## 5     5 b         7     7
+## 6     6 b         8     8
+## 7     7 c         9     9
+## 8     8 c        10    10
+## 9     9 c        11    11&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The modular arithmetic operators &lt;code&gt;%/%&lt;/code&gt; and &lt;code&gt;%%&lt;/code&gt; are not affected by &lt;code&gt;group_by()&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tibble(x = 1:9,
+       group = rep(c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;), each = 3)) %&amp;gt;%
+  mutate(y = x %% 2) %&amp;gt;%
+  group_by(group) %&amp;gt;%
+  mutate(z = x %% 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 4
+## # Groups:   group [3]
+##       x group     y     z
+##   &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1     1 a         1     1
+## 2     2 a         0     0
+## 3     3 a         1     1
+## 4     4 b         0     0
+## 5     5 b         1     1
+## 6     6 b         0     0
+## 7     7 c         1     1
+## 8     8 c         0     0
+## 9     9 c         1     1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The logarithmic functions &lt;code&gt;log()&lt;/code&gt;, &lt;code&gt;log2()&lt;/code&gt;, and &lt;code&gt;log10()&lt;/code&gt; are not affected by
+&lt;code&gt;group_by()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tibble(x = 1:9,
+       group = rep(c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;), each = 3)) %&amp;gt;%
+  mutate(y = log(x)) %&amp;gt;%
+  group_by(group) %&amp;gt;%
+  mutate(z = log(x))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 4
+## # Groups:   group [3]
+##       x group     y     z
+##   &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1     1 a     0     0    
+## 2     2 a     0.693 0.693
+## 3     3 a     1.10  1.10 
+## 4     4 b     1.39  1.39 
+## 5     5 b     1.61  1.61 
+## 6     6 b     1.79  1.79 
+## 7     7 c     1.95  1.95 
+## 8     8 c     2.08  2.08 
+## 9     9 c     2.20  2.20&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The offset functions &lt;code&gt;lead()&lt;/code&gt; and &lt;code&gt;lag()&lt;/code&gt; respect the groupings in &lt;code&gt;group_by()&lt;/code&gt;.
+The functions &lt;code&gt;lag()&lt;/code&gt; and &lt;code&gt;lead()&lt;/code&gt; will only return values within each group.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tibble(x = 1:9,
+       group = rep(c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;), each = 3)) %&amp;gt;%
+  group_by(group) %&amp;gt;%
+  mutate(lag_x = lag(x),
+         lead_x = lead(x))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 4
+## # Groups:   group [3]
+##       x group lag_x lead_x
+##   &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt;  &amp;lt;int&amp;gt;
+## 1     1 a        NA      2
+## 2     2 a         1      3
+## 3     3 a         2     NA
+## 4     4 b        NA      5
+## 5     5 b         4      6
+## 6     6 b         5     NA
+## 7     7 c        NA      8
+## 8     8 c         7      9
+## 9     9 c         8     NA&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The cumulative and rolling aggregate functions &lt;code&gt;cumsum()&lt;/code&gt;, &lt;code&gt;cumprod()&lt;/code&gt;, &lt;code&gt;cummin()&lt;/code&gt;, &lt;code&gt;cummax()&lt;/code&gt;, and &lt;code&gt;cummean()&lt;/code&gt; calculate values within each group.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tibble(x = 1:9,
+       group = rep(c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;), each = 3)) %&amp;gt;%
+  mutate(x_cumsum = cumsum(x)) %&amp;gt;%
+  group_by(group) %&amp;gt;%
+  mutate(x_cumsum_2 = cumsum(x))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 4
+## # Groups:   group [3]
+##       x group x_cumsum x_cumsum_2
+##   &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;int&amp;gt;      &amp;lt;int&amp;gt;
+## 1     1 a            1          1
+## 2     2 a            3          3
+## 3     3 a            6          6
+## 4     4 b           10          4
+## 5     5 b           15          9
+## 6     6 b           21         15
+## 7     7 c           28          7
+## 8     8 c           36         15
+## 9     9 c           45         24&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Logical comparisons, &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;lt;=&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt;, &lt;code&gt;!=&lt;/code&gt;, and &lt;code&gt;==&lt;/code&gt; are not affected by &lt;code&gt;group_by()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tibble(x = 1:9,
+       y = 9:1,
+       group = rep(c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;), each = 3)) %&amp;gt;%
+  mutate(x_lte_y = x &amp;lt;= y) %&amp;gt;%
+  group_by(group) %&amp;gt;%
+  mutate(x_lte_y_2 = x &amp;lt;= y)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 5
+## # Groups:   group [3]
+##       x     y group x_lte_y x_lte_y_2
+##   &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;lgl&amp;gt;   &amp;lt;lgl&amp;gt;    
+## 1     1     9 a     TRUE    TRUE     
+## 2     2     8 a     TRUE    TRUE     
+## 3     3     7 a     TRUE    TRUE     
+## 4     4     6 b     TRUE    TRUE     
+## 5     5     5 b     TRUE    TRUE     
+## 6     6     4 b     FALSE   FALSE    
+## 7     7     3 c     FALSE   FALSE    
+## 8     8     2 c     FALSE   FALSE    
+## 9     9     1 c     FALSE   FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ranking functions like &lt;code&gt;min_rank()&lt;/code&gt; work within each group when used with &lt;code&gt;group_by()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tibble(x = 1:9,
+       group = rep(c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;), each = 3)) %&amp;gt;%
+  mutate(rnk = min_rank(x)) %&amp;gt;%
+  group_by(group) %&amp;gt;%
+  mutate(rnk2 = min_rank(x))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 4
+## # Groups:   group [3]
+##       x group   rnk  rnk2
+##   &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;
+## 1     1 a         1     1
+## 2     2 a         2     2
+## 3     3 a         3     3
+## 4     4 b         4     1
+## 5     5 b         5     2
+## 6     6 b         6     3
+## 7     7 c         7     1
+## 8     8 c         8     2
+## 9     9 c         9     3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Though not asked in the question, note that &lt;code&gt;arrange()&lt;/code&gt; ignores groups when sorting values.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tibble(x = runif(9),
+       group = rep(c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;), each = 3)) %&amp;gt;%
+  group_by(group) %&amp;gt;%
+  arrange(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 2
+## # Groups:   group [3]
+##       x group
+##   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;
+## 1 0.250 b    
+## 2 0.283 c    
+## 3 0.293 b    
+## 4 0.502 a    
+## 5 0.513 b    
+## 6 0.569 a    
+## 7 0.757 c    
+## 8 0.790 c    
+## 9 0.915 a&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;However, the order of values from &lt;code&gt;arrange()&lt;/code&gt; can interact with groups when
+used with functions that rely on the ordering of elements, such as &lt;code&gt;lead()&lt;/code&gt;, &lt;code&gt;lag()&lt;/code&gt;,
+or &lt;code&gt;cumsum()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tibble(group = rep(c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;), each = 3), 
+       x = runif(9)) %&amp;gt;%
+  group_by(group) %&amp;gt;%
+  arrange(x) %&amp;gt;%
+  mutate(lag_x = lag(x))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 3
+## # Groups:   group [3]
+##   group      x   lag_x
+##   &amp;lt;chr&amp;gt;  &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
+## 1 b     0.0769 NA     
+## 2 c     0.177  NA     
+## 3 b     0.274   0.0769
+## 4 a     0.290  NA     
+## 5 a     0.598   0.290 
+## 6 b     0.645   0.274 
+## 7 a     0.648   0.598 
+## 8 c     0.732   0.177 
+## 9 c     0.971   0.732&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Which Model do I use?</title>
