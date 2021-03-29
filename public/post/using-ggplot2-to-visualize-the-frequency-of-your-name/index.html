@@ -1,0 +1,1291 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Ian T. Adams">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="How popular is your name?I really liked this simple ggplot2 excercise from Jenna Eagleson that I stumbled across today. I’m going to reproduce it here, and I think it’s a useful exercise for students who are still learning the tidyverse and ggplot2 packages to play around with.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#707070">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=B612+Mono&family=B612:wght@400;700&family=Jura:wght@400;700&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.min.c86854b3e36fb246345fef205fdd22e7.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu03b976185cb6921f1410bd532878b174_20806_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu03b976185cb6921f1410bd532878b174_20806_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@LiminalMori">
+  <meta property="twitter:creator" content="@LiminalMori">
+  
+  <meta property="og:site_name" content="Ian T. Adams">
+  <meta property="og:url" content="https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/">
+  <meta property="og:title" content="Using ggplot2 to visualize the frequency of your name! | Ian T. Adams">
+  <meta property="og:description" content="How popular is your name?I really liked this simple ggplot2 excercise from Jenna Eagleson that I stumbled across today. I’m going to reproduce it here, and I think it’s a useful exercise for students who are still learning the tidyverse and ggplot2 packages to play around with."><meta property="og:image" content="https://ianadamsresearch.com/media/android-chrome-512x512.png">
+  <meta property="twitter:image" content="https://ianadamsresearch.com/media/android-chrome-512x512.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-03-29T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-03-29T16:37:35-06:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/"
+  },
+  "headline": "Using ggplot2 to visualize the frequency of your name!",
+  
+  "datePublished": "2021-03-29T00:00:00Z",
+  "dateModified": "2021-03-29T16:37:35-06:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Ian T. Adams"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ian T. Adams",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ianadamsresearch.com/images/icon_hu03b976185cb6921f1410bd532878b174_20806_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "How popular is your name?\rI really liked this simple ggplot2 excercise from Jenna Eagleson that I stumbled across today. I’m going to reproduce it here, and I think it’s a useful exercise for students who are still learning the tidyverse and ggplot2 packages to play around with."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Using ggplot2 to visualize the frequency of your name! | Ian T. Adams</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.js"></script>
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Ian T. Adams</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Ian T. Adams</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/publication/"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/media/cv.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Using ggplot2 to visualize the frequency of your name!</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Mar 29, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+<script src="https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/index_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="how-popular-is-your-name" class="section level1">
+<h1>How popular is your name?</h1>
+<p>I really liked this simple <code>ggplot2</code> excercise from <a href="https://twitter.com/JennaEagleson">Jenna Eagleson</a> that I stumbled across today. I’m going to reproduce it here, and I think it’s a useful exercise for students who are still learning the <code>tidyverse</code> and <code>ggplot2</code> packages to play around with. I know <em>I</em> get bored with diamonds, and even <code>palmerspenguins</code>, so it’s good to throw something else into the mix to keep the learners’ minds engaged.</p>
+<div id="first-steps" class="section level2">
+<h2>First Steps</h2>
+<p>We’ll be using just two packages today - so make sure you have both <code>tidyverse</code> and the <code>babynames</code> packages loaded up.</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --</code></pre>
+<pre><code>## v ggplot2 3.3.3     v purrr   0.3.4
+## v tibble  3.1.0     v dplyr   1.0.5
+## v tidyr   1.1.3     v stringr 1.4.0
+## v readr   1.4.0     v forcats 0.5.1</code></pre>
+<pre><code>## Warning: package &#39;tibble&#39; was built under R version 4.0.4</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.0.4</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(babynames)</code></pre>
+<pre><code>## Warning: package &#39;babynames&#39; was built under R version 4.0.4</code></pre>
+<p>You might not be familiar with the <code>babynames</code> package. Here’s how Jenna describes it:</p>
+<blockquote>
+<p>The <code>babynames</code> package has a data frame provided by the Social Security Administration with: year, sex, name, n (number of instances), and prop (number of instances of given name and gender in that year divided by total applicants). Unfortunately, this data only has binary male/female as sex options. This data set includes every name with at least 5 instances!</p>
+</blockquote>
+</div>
+<div id="initial-plotting" class="section level2">
+<h2>Initial Plotting</h2>
+<p>Our most basic plot takes all the names and plots them over time. Keep in mind that the dataset we’re working with is very large, so this plot might take a while to generate!</p>
+<pre class="r"><code>babynames %&gt;%
+  ggplot() +
+  geom_point(mapping = aes(x = year, y = n))</code></pre>
+<p><img src="https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/index_files/figure-html/remedy002-1.png" width="672" /></p>
+<hr />
+</div>
+<div id="but-what-about-your-name" class="section level2">
+<h2>But What About <em>Your</em> Name?</h2>
+<p>The <code>babynames</code> package lets us tease out specific names. For now, let’s assign your name and sex to some variables that we can then plug into the plot. I’ll use my info here, but replace with whatever combination of name and sex you are interested in!</p>
+<pre class="r"><code>myname &lt;- &quot;Ian&quot;
+mysex &lt;- &quot;M&quot;</code></pre>
+<p>Now let’s create a plot using those parameters to see how common the name has been over time:</p>
+<pre class="r"><code>babynames %&gt;%
+  filter(name == myname, sex == mysex) %&gt;%
+  ggplot() +
+  geom_point(mapping = aes(x = year, y = n))</code></pre>
+<p><img src="https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/index_files/figure-html/remedy004-1.png" width="672" /></p>
+<p>There you go! I was born in 1978, so it looks like I got in on the name before it was too cool :)</p>
+</div>
+<div id="further-steps" class="section level2">
+<h2>Further Steps</h2>
+<p>But what if I want to see the distribution of my name’s popularity plotted against all other names? Good question, and here’s one way to go about it:</p>
+<pre class="r"><code>mynameis &lt;- &quot;Ian&quot;
+mysexis &lt;- &quot;M&quot;
+
+myname &lt;- babynames %&gt;%
+  filter(name == mynameis, sex == mysexis)
+
+mynameminyear &lt;- min(myname$year)-5
+maxyear &lt;- max(babynames$year)
+
+babynames %&gt;%
+  filter(year &gt; mynameminyear) %&gt;%
+  ggplot() +
+  geom_point(mapping = aes(x = year, y = prop), alpha = 0.2, color = &quot;gray&quot;) +
+    geom_point(data = myname, mapping = aes(x = year, y = prop), alpha = 0.8, color = &quot;#013175&quot;) +
+# the below is just formatting, not required!  
+theme_minimal() +
+ theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(),
+        axis.title = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank()) +
+  ggtitle(paste(&quot;Popularity of the name &quot;, mynameis, &quot; from &quot;, mynameminyear, &quot; to &quot;, maxyear))</code></pre>
+<p><img src="https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/index_files/figure-html/remedy005-1.png" width="672" />
+Cool!</p>
+<hr />
+</div>
+<div id="plotting-multiple-names" class="section level2">
+<h2>Plotting Multiple Names</h2>
+<p>Maybe you want to compare names with your siblings or your children - easily done. In this example we’ll be comparing three names, but the example could be expanded to however many you want!</p>
+<pre class="r"><code>name_one &lt;- &quot;Ian&quot;
+sex_one &lt;- &quot;M&quot;
+
+name_two &lt;- &quot;Annette&quot;
+sex_two &lt;- &quot;F&quot;
+
+name_three &lt;- &quot;Nancy&quot;
+sex_three &lt;- &quot;F&quot;</code></pre>
+<p>With the names set, now we can plot. You might start to see patterns to what we’ve been doing before. That’s good - one of the advantages of <code>ggplot2</code> is that it brings a “grammar of graphics” to R, meaning we should be able to take pieces from different places and put them into new contexts.</p>
+<pre class="r"><code>firstname &lt;- babynames %&gt;%
+  filter(name == name_one, sex == sex_one)
+
+secondname &lt;- babynames %&gt;%
+  filter(name == name_two, sex == sex_two)
+
+thirdname &lt;- babynames %&gt;%
+  filter(name == name_three, sex == sex_three)
+
+legendcolors &lt;- c(&quot;name_one&quot; = &quot;#219EBC&quot;, &quot;name_two&quot; = &quot;#FB8500&quot;, &quot;name_three&quot; = &quot;#023047&quot;)
+
+
+babynames %&gt;%
+  ggplot() +
+  geom_point(mapping = aes(x = year, y = prop), alpha = 0.1, color = &quot;gray&quot;) +
+  geom_point(data = firstname, mapping = aes(x = year, y = prop, color = &quot;name_one&quot;), alpha = 0.8) +
+  geom_point(data = secondname, mapping = aes(x = year, y = prop, color = &quot;name_two&quot;), alpha = 0.8) +
+  geom_point(data = thirdname, mapping = aes(x = year, y = prop, color = &quot;name_three&quot;), alpha = 0.8) +
+ 
+# The below is formatting and not required!
+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(),
+        axis.title = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank()) +
+  ggtitle(paste(&quot;Who has the most popular name?&quot;)) +
+  scale_color_manual(name = &quot;Name&quot;, values = legendcolors, labels = c(&quot;Ian&quot;, &quot;Annette&quot;, &quot;Nancy&quot;))</code></pre>
+<p><img src="https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/index_files/figure-html/remedy007-1.png" width="672" /></p>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/&amp;text=Using%20ggplot2%20to%20visualize%20the%20frequency%20of%20your%20name!" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/&amp;t=Using%20ggplot2%20to%20visualize%20the%20frequency%20of%20your%20name!" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Using%20ggplot2%20to%20visualize%20the%20frequency%20of%20your%20name!&amp;body=https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/&amp;title=Using%20ggplot2%20to%20visualize%20the%20frequency%20of%20your%20name!" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Using%20ggplot2%20to%20visualize%20the%20frequency%20of%20your%20name!%20https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/&amp;title=Using%20ggplot2%20to%20visualize%20the%20frequency%20of%20your%20name!" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://ianadamsresearch.com/"><img class="avatar mr-3 avatar-circle" src="/author/ian-t.-adams/avatar_hu61315067a8503ec7752dab6b32e24b03_1429959_270x270_fill_q75_lanczos_center.jpg" alt="Ian T. Adams"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://ianadamsresearch.com/">Ian T. Adams</a></h5>
+      <h6 class="card-subtitle">Ph.D. Candidate and Instructor</h6>
+      <p class="card-text">My research interests include public workplace surveillance, policing, and emotional labor.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/LiminalMori" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=g9lY5RUAAAAJ&amp;hl" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/ian-adams" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.researchgate.net/profile/Ian_Adams11" target="_blank" rel="noopener">
+        <i class="ai ai-researchgate"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://profiles.impactstory.org/u/0000-0001-5595-8070" target="_blank" rel="noopener">
+        <i class="ai ai-impactstory"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    ©<code>2021</code>
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/wowchemy.min.d0d321ad6c45c08297f04e4ff03367d3.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

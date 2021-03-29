@@ -5,12 +5,139 @@
     <link>https://ianadamsresearch.com/</link>
       <atom:link href="https://ianadamsresearch.com/index.xml" rel="self" type="application/rss+xml" />
     <description>Ian T. Adams</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2021`</copyright><lastBuildDate>Sun, 28 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2021`</copyright><lastBuildDate>Mon, 29 Mar 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ianadamsresearch.com/media/android-chrome-512x512.png</url>
       <title>Ian T. Adams</title>
       <link>https://ianadamsresearch.com/</link>
     </image>
+    
+    <item>
+      <title>Using ggplot2 to visualize the frequency of your name!</title>
+      <link>https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/</link>
+      <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/</guid>
+      <description>
+&lt;script src=&#34;https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;how-popular-is-your-name&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;How popular is your name?&lt;/h1&gt;
+&lt;p&gt;I really liked this simple &lt;code&gt;ggplot2&lt;/code&gt; excercise from &lt;a href=&#34;https://twitter.com/JennaEagleson&#34;&gt;Jenna Eagleson&lt;/a&gt; that I stumbled across today. I’m going to reproduce it here, and I think it’s a useful exercise for students who are still learning the &lt;code&gt;tidyverse&lt;/code&gt; and &lt;code&gt;ggplot2&lt;/code&gt; packages to play around with. I know &lt;em&gt;I&lt;/em&gt; get bored with diamonds, and even &lt;code&gt;palmerspenguins&lt;/code&gt;, so it’s good to throw something else into the mix to keep the learners’ minds engaged.&lt;/p&gt;
+&lt;div id=&#34;first-steps&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;First Steps&lt;/h2&gt;
+&lt;p&gt;We’ll be using just two packages today - so make sure you have both &lt;code&gt;tidyverse&lt;/code&gt; and the &lt;code&gt;babynames&lt;/code&gt; packages loaded up.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## v ggplot2 3.3.3     v purrr   0.3.4
+## v tibble  3.1.0     v dplyr   1.0.5
+## v tidyr   1.1.3     v stringr 1.4.0
+## v readr   1.4.0     v forcats 0.5.1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;tibble&amp;#39; was built under R version 4.0.4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;dplyr&amp;#39; was built under R version 4.0.4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(babynames)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;babynames&amp;#39; was built under R version 4.0.4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You might not be familiar with the &lt;code&gt;babynames&lt;/code&gt; package. Here’s how Jenna describes it:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;code&gt;babynames&lt;/code&gt; package has a data frame provided by the Social Security Administration with: year, sex, name, n (number of instances), and prop (number of instances of given name and gender in that year divided by total applicants). Unfortunately, this data only has binary male/female as sex options. This data set includes every name with at least 5 instances!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div id=&#34;initial-plotting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Initial Plotting&lt;/h2&gt;
+&lt;p&gt;Our most basic plot takes all the names and plots them over time. Keep in mind that the dataset we’re working with is very large, so this plot might take a while to generate!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;babynames %&amp;gt;%
+  ggplot() +
+  geom_point(mapping = aes(x = year, y = n))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/index_files/figure-html/remedy002-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;but-what-about-your-name&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;But What About &lt;em&gt;Your&lt;/em&gt; Name?&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;babynames&lt;/code&gt; package lets us tease out specific names. For now, let’s assign your name and sex to some variables that we can then plug into the plot. I’ll use my info here, but replace with whatever combination of name and sex you are interested in!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;myname &amp;lt;- &amp;quot;Ian&amp;quot;
+mysex &amp;lt;- &amp;quot;M&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now let’s create a plot using those parameters to see how common the name has been over time:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;babynames %&amp;gt;%
+  filter(name == myname, sex == mysex) %&amp;gt;%
+  ggplot() +
+  geom_point(mapping = aes(x = year, y = n))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/index_files/figure-html/remedy004-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There you go! I was born in 1978, so it looks like I got in on the name before it was too cool :)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;further-steps&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Further Steps&lt;/h2&gt;
+&lt;p&gt;But what if I want to see the distribution of my name’s popularity plotted against all other names? Good question, and here’s one way to go about it:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mynameis &amp;lt;- &amp;quot;Ian&amp;quot;
+mysexis &amp;lt;- &amp;quot;M&amp;quot;
+
+myname &amp;lt;- babynames %&amp;gt;%
+  filter(name == mynameis, sex == mysexis)
+
+mynameminyear &amp;lt;- min(myname$year)-5
+maxyear &amp;lt;- max(babynames$year)
+
+babynames %&amp;gt;%
+  filter(year &amp;gt; mynameminyear) %&amp;gt;%
+  ggplot() +
+  geom_point(mapping = aes(x = year, y = prop), alpha = 0.2, color = &amp;quot;gray&amp;quot;) +
+    geom_point(data = myname, mapping = aes(x = year, y = prop), alpha = 0.8, color = &amp;quot;#013175&amp;quot;) +
+# the below is just formatting, not required!  
+theme_minimal() +
+ theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(),
+        axis.title = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank()) +
+  ggtitle(paste(&amp;quot;Popularity of the name &amp;quot;, mynameis, &amp;quot; from &amp;quot;, mynameminyear, &amp;quot; to &amp;quot;, maxyear))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/index_files/figure-html/remedy005-1.png&#34; width=&#34;672&#34; /&gt;
+Cool!&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plotting-multiple-names&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Plotting Multiple Names&lt;/h2&gt;
+&lt;p&gt;Maybe you want to compare names with your siblings or your children - easily done. In this example we’ll be comparing three names, but the example could be expanded to however many you want!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;name_one &amp;lt;- &amp;quot;Ian&amp;quot;
+sex_one &amp;lt;- &amp;quot;M&amp;quot;
+
+name_two &amp;lt;- &amp;quot;Annette&amp;quot;
+sex_two &amp;lt;- &amp;quot;F&amp;quot;
+
+name_three &amp;lt;- &amp;quot;Nancy&amp;quot;
+sex_three &amp;lt;- &amp;quot;F&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With the names set, now we can plot. You might start to see patterns to what we’ve been doing before. That’s good - one of the advantages of &lt;code&gt;ggplot2&lt;/code&gt; is that it brings a “grammar of graphics” to R, meaning we should be able to take pieces from different places and put them into new contexts.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;firstname &amp;lt;- babynames %&amp;gt;%
+  filter(name == name_one, sex == sex_one)
+
+secondname &amp;lt;- babynames %&amp;gt;%
+  filter(name == name_two, sex == sex_two)
+
+thirdname &amp;lt;- babynames %&amp;gt;%
+  filter(name == name_three, sex == sex_three)
+
+legendcolors &amp;lt;- c(&amp;quot;name_one&amp;quot; = &amp;quot;#219EBC&amp;quot;, &amp;quot;name_two&amp;quot; = &amp;quot;#FB8500&amp;quot;, &amp;quot;name_three&amp;quot; = &amp;quot;#023047&amp;quot;)
+
+
+babynames %&amp;gt;%
+  ggplot() +
+  geom_point(mapping = aes(x = year, y = prop), alpha = 0.1, color = &amp;quot;gray&amp;quot;) +
+  geom_point(data = firstname, mapping = aes(x = year, y = prop, color = &amp;quot;name_one&amp;quot;), alpha = 0.8) +
+  geom_point(data = secondname, mapping = aes(x = year, y = prop, color = &amp;quot;name_two&amp;quot;), alpha = 0.8) +
+  geom_point(data = thirdname, mapping = aes(x = year, y = prop, color = &amp;quot;name_three&amp;quot;), alpha = 0.8) +
+ 
+# The below is formatting and not required!
+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(),
+        axis.title = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank()) +
+  ggtitle(paste(&amp;quot;Who has the most popular name?&amp;quot;)) +
+  scale_color_manual(name = &amp;quot;Name&amp;quot;, values = legendcolors, labels = c(&amp;quot;Ian&amp;quot;, &amp;quot;Annette&amp;quot;, &amp;quot;Nancy&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/using-ggplot2-to-visualize-the-frequency-of-your-name/index_files/figure-html/remedy007-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 10 Solutions</title>
