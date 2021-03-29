@@ -155,6 +155,6 @@ theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), pa
         axis.text.y = element_blank(),
         axis.ticks.y = element_blank()) +
   ggtitle(paste("Who has the most popular name?")) +
-  scale_color_manual(name = "Name", values = legendcolors, labels = c("Ian", "Annette", "Nancy"))
+  scale_color_manual(name = "Name", values = legendcolors, labels = c("Ian", "Nancy", "Annette"))
 
 ```
