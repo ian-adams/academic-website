@@ -35,9 +35,10 @@ Now, onto the answers!
 ## Exercise 5.2.4
 
 <div class="question">
-Why is `NA ^ 0` not missing? Why is `NA | TRUE` not missing?
-Why is `FALSE & NA` not missing? Can you figure out the general rule?
-(`NA * 0` is a tricky counterexample!)
+> Why is `NA ^ 0` not missing? Why is `NA | TRUE` not missing?
+> Why is `FALSE & NA` not missing? Can you figure out the general rule?
+> (`NA * 0` is a tricky counterexample!)
+
 </div>
 
 <div class="answer">
@@ -94,7 +95,8 @@ Inf * 0
 ## Exercise 5.3.1
 
 <div class="question">
-How could you use `arrange()` to sort all missing values to the start? (Hint: use `is.na()`).
+> How could you use `arrange()` to sort all missing values to the start? (Hint: use `is.na()`).
+
 </div>
 
 <div class="answer">
@@ -123,7 +125,8 @@ Since `desc(is.na(dep_time))` is either `TRUE` when `dep_time` is missing, or `F
 ## Exercise 5.4.1
 
 <div class="question">
-Brainstorm as many ways as possible to select `dep_time`, `dep_delay`, `arr_time`, and `arr_delay` from flights.
+> Brainstorm as many ways as possible to select `dep_time`, `dep_delay`, `arr_time`, and `arr_delay` from flights.
+
 </div>
 
 <div class="answer">
@@ -217,10 +220,11 @@ Some things that **don't** work are:
 
 <div class="question">
 
-Compare `air_time` with `arr_time - dep_time`. 
-What do you expect to see? 
-What do you see? 
-What do you need to do to fix it?
+> Compare `air_time` with `arr_time - dep_time`. 
+> What do you expect to see? 
+> What do you see? 
+> What do you need to do to fix it?
+
 
 </div>
 
@@ -296,15 +300,16 @@ With this new understanding of the data, I now know that the relationship betwee
 
 ## Exercise 5.6.7
 
-Brainstorm at least 5 different ways to assess the typical delay characteristics of a group of flights. 
-Consider the following scenarios:
+> Brainstorm at least 5 different ways to assess the typical delay characteristics of a group of flights. 
+> Consider the following scenarios:
+> 
+> -   A flight is 15 minutes early 50% of the time, and 15 minutes late 50% of the time.
+> -   A flight is always 10 minutes late.
+> -   A flight is 30 minutes early 50% of the time, and 30 minutes late 50% of the time.
+> -   99% of the time a flight is on time. 1% of the time it’s 2 hours late.
+> 
+> Which is more important: arrival delay or departure delay?
 
--   A flight is 15 minutes early 50% of the time, and 15 minutes late 50% of the time.
--   A flight is always 10 minutes late.
--   A flight is 30 minutes early 50% of the time, and 30 minutes late 50% of the time.
--   99% of the time a flight is on time. 1% of the time it’s 2 hours late.
-
-Which is more important: arrival delay or departure delay?
 
 </div>
 
@@ -328,7 +333,8 @@ But higher variation in flight times makes it harder to plan.
 
 <div class="question">
 
-Come up with another approach that will give you the same output as `not_cancelled %>% count(dest)` and `not_cancelled %>% count(tailnum, wt = distance)` (without using `count()`).
+> Come up with another approach that will give you the same output as `not_cancelled %>% count(dest)` and `not_cancelled %>% count(tailnum, wt = distance)` (without using `count()`).
+
 </div>
 
 <div class="answer">
@@ -401,9 +407,10 @@ not_cancelled %>%
 ### 5.6.7.3
 
 <div class="question">
-Our definition of cancelled flights `(is.na(dep_delay) | is.na(arr_delay))` is slightly suboptimal. 
-Why? 
-Which is the most important column?
+> Our definition of cancelled flights `(is.na(dep_delay) | is.na(arr_delay))` is slightly suboptimal. 
+> Why? 
+> Which is the most important column?
+
 </div>
 
 <div class="answer">
@@ -429,9 +436,10 @@ The source contains a column `DivArrDelay` with the description:
 ### 5.6.7.4
 
 <div class="question">
-Look at the number of cancelled flights per day. 
-Is there a pattern?
-Is the proportion of cancelled flights related to the average delay?
+> Look at the number of cancelled flights per day. 
+> Is there a pattern?
+> Is the proportion of cancelled flights related to the average delay?
+
 </div>
 
 <div class="answer">
@@ -502,10 +510,11 @@ ggplot(cancelled_and_delays) +
 ### 5.6.7.5
 
 <div class="question">
-Which carrier has the worst delays? 
-Challenge: can you disentangle the effects of bad airports vs. bad carriers? 
-Why/why not? 
-(Hint: think about `flights %>% group_by(carrier, dest) %>% summarise(n())`)
+> Which carrier has the worst delays? 
+> Challenge: can you disentangle the effects of bad airports vs. bad carriers? 
+> Why/why not? 
+> (Hint: think about `flights %>% group_by(carrier, dest) %>% summarise(n())`)
+
 </div>
 
 <div class="answer">
@@ -566,8 +575,9 @@ To see a more complete example of this analysis, see this FiveThirtyEight [piece
 
 <div class="question">
 
-What does the sort argument to `count()` do?
-When might you use it?
+> What does the sort argument to `count()` do?
+> When might you use it?
+
 
 </div>
 
@@ -588,8 +598,9 @@ flights %>%
 
 <div class="question">
 
-Refer back to the lists of useful mutate and filtering functions.
-Describe how each operation changes when you combine it with grouping.
+> Refer back to the lists of useful mutate and filtering functions.
+> Describe how each operation changes when you combine it with grouping.
+
 
 </div>
 

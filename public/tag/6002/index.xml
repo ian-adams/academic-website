@@ -31,9 +31,11 @@
 &lt;div id=&#34;exercise-5.2.4&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Exercise 5.2.4&lt;/h2&gt;
 &lt;div class=&#34;question&#34;&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Why is &lt;code&gt;NA ^ 0&lt;/code&gt; not missing? Why is &lt;code&gt;NA | TRUE&lt;/code&gt; not missing?
 Why is &lt;code&gt;FALSE &amp;amp; NA&lt;/code&gt; not missing? Can you figure out the general rule?
 (&lt;code&gt;NA * 0&lt;/code&gt; is a tricky counterexample!)&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class=&#34;answer&#34;&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;NA ^ 0&lt;/code&gt;&lt;/pre&gt;
@@ -69,7 +71,9 @@ R represents undefined results as &lt;code&gt;NaN&lt;/code&gt;, which is an abbr
 &lt;div id=&#34;exercise-5.3.1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Exercise 5.3.1&lt;/h2&gt;
 &lt;div class=&#34;question&#34;&gt;
+&lt;blockquote&gt;
 &lt;p&gt;How could you use &lt;code&gt;arrange()&lt;/code&gt; to sort all missing values to the start? (Hint: use &lt;code&gt;is.na()&lt;/code&gt;).&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class=&#34;answer&#34;&gt;
 &lt;p&gt;The &lt;code&gt;arrange()&lt;/code&gt; function puts &lt;code&gt;NA&lt;/code&gt; values last.&lt;/p&gt;
@@ -132,7 +136,9 @@ Since &lt;code&gt;desc(is.na(dep_time))&lt;/code&gt; is either &lt;code&gt;TRUE&
 &lt;div id=&#34;exercise-5.4.1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Exercise 5.4.1&lt;/h2&gt;
 &lt;div class=&#34;question&#34;&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Brainstorm as many ways as possible to select &lt;code&gt;dep_time&lt;/code&gt;, &lt;code&gt;dep_delay&lt;/code&gt;, &lt;code&gt;arr_time&lt;/code&gt;, and &lt;code&gt;arr_delay&lt;/code&gt; from flights.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class=&#34;answer&#34;&gt;
 &lt;p&gt;These are a few ways to select columns.&lt;/p&gt;
@@ -370,10 +376,12 @@ include all these variables without incorrectly including others.&lt;/p&gt;
 &lt;div id=&#34;exercise-5.5.2&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Exercise 5.5.2&lt;/h2&gt;
 &lt;div class=&#34;question&#34;&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Compare &lt;code&gt;air_time&lt;/code&gt; with &lt;code&gt;arr_time - dep_time&lt;/code&gt;.
 What do you expect to see?
 What do you see?
 What do you need to do to fix it?&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class=&#34;answer&#34;&gt;
 &lt;p&gt;I expect that &lt;code&gt;air_time&lt;/code&gt; is the difference between the arrival (&lt;code&gt;arr_time&lt;/code&gt;) and departure times (&lt;code&gt;dep_time&lt;/code&gt;).
@@ -435,6 +443,7 @@ With this new understanding of the data, I now know that the relationship betwee
 &lt;/div&gt;
 &lt;div id=&#34;exercise-5.6.7&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Exercise 5.6.7&lt;/h2&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Brainstorm at least 5 different ways to assess the typical delay characteristics of a group of flights.
 Consider the following scenarios:&lt;/p&gt;
 &lt;ul&gt;
@@ -444,6 +453,7 @@ Consider the following scenarios:&lt;/p&gt;
 &lt;li&gt;99% of the time a flight is on time. 1% of the time it’s 2 hours late.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Which is more important: arrival delay or departure delay?&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class=&#34;answer&#34;&gt;
 
@@ -461,7 +471,9 @@ But higher variation in flight times makes it harder to plan.&lt;/p&gt;
 &lt;div id=&#34;section&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;5.6.7.2&lt;/h3&gt;
 &lt;div class=&#34;question&#34;&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Come up with another approach that will give you the same output as &lt;code&gt;not_cancelled %&amp;gt;% count(dest)&lt;/code&gt; and &lt;code&gt;not_cancelled %&amp;gt;% count(tailnum, wt = distance)&lt;/code&gt; (without using &lt;code&gt;count()&lt;/code&gt;).&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class=&#34;answer&#34;&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;not_cancelled &amp;lt;- flights %&amp;gt;%
@@ -599,9 +611,11 @@ Any arguments to &lt;code&gt;tally()&lt;/code&gt; are summed.&lt;/p&gt;
 &lt;div id=&#34;section-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;5.6.7.3&lt;/h3&gt;
 &lt;div class=&#34;question&#34;&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Our definition of cancelled flights &lt;code&gt;(is.na(dep_delay) | is.na(arr_delay))&lt;/code&gt; is slightly suboptimal.
 Why?
 Which is the most important column?&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class=&#34;answer&#34;&gt;
 &lt;p&gt;If a flight never departs, then it won’t arrive.
@@ -636,9 +650,11 @@ The &lt;code&gt;ArrDelay&lt;/code&gt; column remains &lt;code&gt;NULL&lt;/code&g
 &lt;div id=&#34;section-2&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;5.6.7.4&lt;/h3&gt;
 &lt;div class=&#34;question&#34;&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Look at the number of cancelled flights per day.
 Is there a pattern?
 Is the proportion of cancelled flights related to the average delay?&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class=&#34;answer&#34;&gt;
 &lt;p&gt;One pattern in cancelled flights per day is that the number of cancelled flights increases with the total number of flights per day.
@@ -693,10 +709,12 @@ and average arrival delay and the proportion of cancelled flights.&lt;/p&gt;
 &lt;div id=&#34;section-3&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;5.6.7.5&lt;/h3&gt;
 &lt;div class=&#34;question&#34;&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Which carrier has the worst delays?
 Challenge: can you disentangle the effects of bad airports vs. bad carriers?
 Why/why not?
 (Hint: think about &lt;code&gt;flights %&amp;gt;% group_by(carrier, dest) %&amp;gt;% summarise(n())&lt;/code&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class=&#34;answer&#34;&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
@@ -785,8 +803,10 @@ To see a more complete example of this analysis, see this FiveThirtyEight &lt;a 
 &lt;div id=&#34;section-4&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;5.6.7.6&lt;/h3&gt;
 &lt;div class=&#34;question&#34;&gt;
+&lt;blockquote&gt;
 &lt;p&gt;What does the sort argument to &lt;code&gt;count()&lt;/code&gt; do?
 When might you use it?&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class=&#34;answer&#34;&gt;
 &lt;p&gt;The sort argument to &lt;code&gt;count()&lt;/code&gt; sorts the results in order of &lt;code&gt;n&lt;/code&gt;.
@@ -814,8 +834,10 @@ You could use this anytime you would run &lt;code&gt;count()&lt;/code&gt; follow
 &lt;div id=&#34;exercise-5.7.1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Exercise 5.7.1&lt;/h2&gt;
 &lt;div class=&#34;question&#34;&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Refer back to the lists of useful mutate and filtering functions.
 Describe how each operation changes when you combine it with grouping.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class=&#34;answer&#34;&gt;
 &lt;p&gt;Summary functions (&lt;code&gt;mean()&lt;/code&gt;), offset functions (&lt;code&gt;lead()&lt;/code&gt;, &lt;code&gt;lag()&lt;/code&gt;), ranking functions (&lt;code&gt;min_rank()&lt;/code&gt;, &lt;code&gt;row_number()&lt;/code&gt;), operate within each group when used with &lt;code&gt;group_by()&lt;/code&gt; in
@@ -987,15 +1009,15 @@ The functions &lt;code&gt;lag()&lt;/code&gt; and &lt;code&gt;lead()&lt;/code&gt;
 ## # Groups:   group [3]
 ##       x group
 ##   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;
-## 1 0.250 b    
-## 2 0.283 c    
-## 3 0.293 b    
-## 4 0.502 a    
-## 5 0.513 b    
-## 6 0.569 a    
-## 7 0.757 c    
-## 8 0.790 c    
-## 9 0.915 a&lt;/code&gt;&lt;/pre&gt;
+## 1 0.238 c    
+## 2 0.267 a    
+## 3 0.269 b    
+## 4 0.322 a    
+## 5 0.407 b    
+## 6 0.416 c    
+## 7 0.954 b    
+## 8 0.983 c    
+## 9 0.992 a&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;However, the order of values from &lt;code&gt;arrange()&lt;/code&gt; can interact with groups when
 used with functions that rely on the ordering of elements, such as &lt;code&gt;lead()&lt;/code&gt;, &lt;code&gt;lag()&lt;/code&gt;,
 or &lt;code&gt;cumsum()&lt;/code&gt;.&lt;/p&gt;
@@ -1008,15 +1030,15 @@ or &lt;code&gt;cumsum()&lt;/code&gt;.&lt;/p&gt;
 ## # Groups:   group [3]
 ##   group      x   lag_x
 ##   &amp;lt;chr&amp;gt;  &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
-## 1 b     0.0769 NA     
-## 2 c     0.177  NA     
-## 3 b     0.274   0.0769
-## 4 a     0.290  NA     
-## 5 a     0.598   0.290 
-## 6 b     0.645   0.274 
-## 7 a     0.648   0.598 
-## 8 c     0.732   0.177 
-## 9 c     0.971   0.732&lt;/code&gt;&lt;/pre&gt;
+## 1 b     0.0831 NA     
+## 2 c     0.168  NA     
+## 3 c     0.247   0.168 
+## 4 c     0.519   0.247 
+## 5 a     0.542  NA     
+## 6 b     0.579   0.0831
+## 7 a     0.610   0.542 
+## 8 a     0.682   0.610 
+## 9 b     0.797   0.579&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
