@@ -8,7 +8,7 @@ tags: []
 subtitle: ''
 summary: ''
 authors: []
-lastmod: '2021-03-29T16:37:35-06:00'
+lastmod: '2021-03-29T17:37:35-06:00'
 featured: no
 image:
   caption: ''
@@ -25,16 +25,16 @@ I really liked this simple `ggplot2` exercise from [Jenna Eagleson](https://twit
 
 ## First Steps
 
-We'll be using just two packages today - so make sure you have both `tidyverse` and the `babynames` packages loaded up.
+We'll be using just two packages today - so make sure you have both `tidyverse` and the `babynames` packages loaded up (and installed if this is the first time you've encountered them).
 
-```{r remedy001}
+```{r remedy001, message=FALSE, warning=FALSE}
 
 library(tidyverse)
 library(babynames)
 
 ```
 
-You might not be familiar with the `babynames` package. Here's how Jenna describes it:
+You might not be familiar with the `babynames` package, but it contains a very large data frame containing 1,924,665 entries of all names used at least five times from 1880 thru 2017. Here's how Jenna describes it:
 
 > The `babynames` package has a data frame provided by the Social Security Administration with: year, sex, name, n (number of instances), and prop (number of instances of given name and gender in that year divided by total applicants). Unfortunately, this data only has binary male/female as sex options. This data set includes every name with at least 5 instances!
 
@@ -126,7 +126,7 @@ sex_three <- "F"
 
 ```
 
-With the names set, now we can plot. You might start to see patterns to what we've been doing before. That's good - one of the advantages of `ggplot2` is that it brings a "grammar of graphics" to R, meaning we should be able to take pieces from different places and put them into new contexts.
+With the names set, now we can plot. You might start to see patterns to what we've been doing before. That's good - one of the advantages of `ggplot2` is that it brings a "grammar of graphics" to R, meaning we should be able to take separate pieces from different places and put them into new contexts.
 
 ```{r remedy007}
 

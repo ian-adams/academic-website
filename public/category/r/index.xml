@@ -1012,15 +1012,15 @@ The functions &lt;code&gt;lag()&lt;/code&gt; and &lt;code&gt;lead()&lt;/code&gt;
 ## # Groups:   group [3]
 ##        x group
 ##    &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;
-## 1 0.0168 a    
-## 2 0.230  a    
-## 3 0.260  b    
-## 4 0.411  b    
-## 5 0.420  c    
-## 6 0.659  a    
-## 7 0.779  b    
-## 8 0.871  c    
-## 9 0.935  c&lt;/code&gt;&lt;/pre&gt;
+## 1 0.0941 a    
+## 2 0.170  b    
+## 3 0.606  a    
+## 4 0.729  c    
+## 5 0.744  b    
+## 6 0.874  b    
+## 7 0.897  c    
+## 8 0.932  a    
+## 9 0.956  c&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;However, the order of values from &lt;code&gt;arrange()&lt;/code&gt; can interact with groups when
 used with functions that rely on the ordering of elements, such as &lt;code&gt;lead()&lt;/code&gt;, &lt;code&gt;lag()&lt;/code&gt;,
 or &lt;code&gt;cumsum()&lt;/code&gt;.&lt;/p&gt;
@@ -1031,17 +1031,17 @@ or &lt;code&gt;cumsum()&lt;/code&gt;.&lt;/p&gt;
   mutate(lag_x = lag(x))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 3
 ## # Groups:   group [3]
-##   group      x   lag_x
-##   &amp;lt;chr&amp;gt;  &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
-## 1 c     0.0439 NA     
-## 2 b     0.151  NA     
-## 3 b     0.157   0.151 
-## 4 c     0.246   0.0439
-## 5 c     0.621   0.246 
-## 6 a     0.663  NA     
-## 7 b     0.715   0.157 
-## 8 a     0.730   0.663 
-## 9 a     0.889   0.730&lt;/code&gt;&lt;/pre&gt;
+##   group       x    lag_x
+##   &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
+## 1 a     0.00549 NA      
+## 2 c     0.109   NA      
+## 3 a     0.152    0.00549
+## 4 a     0.351    0.152  
+## 5 c     0.552    0.109  
+## 6 b     0.576   NA      
+## 7 b     0.768    0.576  
+## 8 c     0.810    0.552  
+## 9 b     0.885    0.768&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;section-5&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;5.7.1.2&lt;/h3&gt;

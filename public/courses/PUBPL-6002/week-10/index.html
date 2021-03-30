@@ -1684,15 +1684,15 @@ The functions <code>lag()</code> and <code>lead()</code> will only return values
 ## # Groups:   group [3]
 ##        x group
 ##    &lt;dbl&gt; &lt;chr&gt;
-## 1 0.0168 a    
-## 2 0.230  a    
-## 3 0.260  b    
-## 4 0.411  b    
-## 5 0.420  c    
-## 6 0.659  a    
-## 7 0.779  b    
-## 8 0.871  c    
-## 9 0.935  c</code></pre>
+## 1 0.0941 a    
+## 2 0.170  b    
+## 3 0.606  a    
+## 4 0.729  c    
+## 5 0.744  b    
+## 6 0.874  b    
+## 7 0.897  c    
+## 8 0.932  a    
+## 9 0.956  c</code></pre>
 <p>However, the order of values from <code>arrange()</code> can interact with groups when
 used with functions that rely on the ordering of elements, such as <code>lead()</code>, <code>lag()</code>,
 or <code>cumsum()</code>.</p>
@@ -1703,17 +1703,17 @@ or <code>cumsum()</code>.</p>
   mutate(lag_x = lag(x))</code></pre>
 <pre><code>## # A tibble: 9 x 3
 ## # Groups:   group [3]
-##   group      x   lag_x
-##   &lt;chr&gt;  &lt;dbl&gt;   &lt;dbl&gt;
-## 1 c     0.0439 NA     
-## 2 b     0.151  NA     
-## 3 b     0.157   0.151 
-## 4 c     0.246   0.0439
-## 5 c     0.621   0.246 
-## 6 a     0.663  NA     
-## 7 b     0.715   0.157 
-## 8 a     0.730   0.663 
-## 9 a     0.889   0.730</code></pre>
+##   group       x    lag_x
+##   &lt;chr&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+## 1 a     0.00549 NA      
+## 2 c     0.109   NA      
+## 3 a     0.152    0.00549
+## 4 a     0.351    0.152  
+## 5 c     0.552    0.109  
+## 6 b     0.576   NA      
+## 7 b     0.768    0.576  
+## 8 c     0.810    0.552  
+## 9 b     0.885    0.768</code></pre>
 </div>
 <div id="section-5" class="section level3">
 <h3>5.7.1.2</h3>

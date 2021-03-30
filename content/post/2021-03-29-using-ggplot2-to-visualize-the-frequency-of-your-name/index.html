@@ -8,7 +8,7 @@ tags: []
 subtitle: ''
 summary: ''
 authors: []
-lastmod: '2021-03-29T16:37:35-06:00'
+lastmod: '2021-03-29T17:37:35-06:00'
 featured: no
 image:
   caption: ''
@@ -22,24 +22,13 @@ projects: []
 
 <div id="how-popular-is-your-name" class="section level1">
 <h1>How popular is your name?</h1>
-<p>I really liked this simple <code>ggplot2</code> excercise from <a href="https://twitter.com/JennaEagleson">Jenna Eagleson</a> that I stumbled across today. I’m going to reproduce it here, and I think it’s a useful exercise for students who are still learning the <code>tidyverse</code> and <code>ggplot2</code> packages to play around with. I know <em>I</em> get bored with diamonds, and even <code>palmerspenguins</code>, so it’s good to throw something else into the mix to keep the learners’ minds engaged.</p>
+<p>I really liked this simple <code>ggplot2</code> exercise from <a href="https://twitter.com/JennaEagleson">Jenna Eagleson</a> that I stumbled across today. I’m going to reproduce it here, and I think it’s a useful exercise for students who are still learning the <code>tidyverse</code> and <code>ggplot2</code> packages to play around with. I know <em>I</em> get bored with diamonds, and even <code>palmerspenguins</code>, so it’s good to throw something else into the mix to keep the learners’ minds engaged.</p>
 <div id="first-steps" class="section level2">
 <h2>First Steps</h2>
-<p>We’ll be using just two packages today - so make sure you have both <code>tidyverse</code> and the <code>babynames</code> packages loaded up.</p>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --</code></pre>
-<pre><code>## v ggplot2 3.3.3     v purrr   0.3.4
-## v tibble  3.1.0     v dplyr   1.0.5
-## v tidyr   1.1.3     v stringr 1.4.0
-## v readr   1.4.0     v forcats 0.5.1</code></pre>
-<pre><code>## Warning: package &#39;tibble&#39; was built under R version 4.0.4</code></pre>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.0.4</code></pre>
-<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code>library(babynames)</code></pre>
-<pre><code>## Warning: package &#39;babynames&#39; was built under R version 4.0.4</code></pre>
-<p>You might not be familiar with the <code>babynames</code> package. Here’s how Jenna describes it:</p>
+<p>We’ll be using just two packages today - so make sure you have both <code>tidyverse</code> and the <code>babynames</code> packages loaded up (and installed if this is the first time you’ve encountered them).</p>
+<pre class="r"><code>library(tidyverse)
+library(babynames)</code></pre>
+<p>You might not be familiar with the <code>babynames</code> package, but it contains a very large data frame containing 1,924,665 entries of all names used at least five times from 1880 thru 2017. Here’s how Jenna describes it:</p>
 <blockquote>
 <p>The <code>babynames</code> package has a data frame provided by the Social Security Administration with: year, sex, name, n (number of instances), and prop (number of instances of given name and gender in that year divided by total applicants). Unfortunately, this data only has binary male/female as sex options. This data set includes every name with at least 5 instances!</p>
 </blockquote>
@@ -105,7 +94,7 @@ sex_two &lt;- &quot;F&quot;
 
 name_three &lt;- &quot;Nancy&quot;
 sex_three &lt;- &quot;F&quot;</code></pre>
-<p>With the names set, now we can plot. You might start to see patterns to what we’ve been doing before. That’s good - one of the advantages of <code>ggplot2</code> is that it brings a “grammar of graphics” to R, meaning we should be able to take pieces from different places and put them into new contexts.</p>
+<p>With the names set, now we can plot. You might start to see patterns to what we’ve been doing before. That’s good - one of the advantages of <code>ggplot2</code> is that it brings a “grammar of graphics” to R, meaning we should be able to take separate pieces from different places and put them into new contexts.</p>
 <pre class="r"><code>firstname &lt;- babynames %&gt;%
   filter(name == name_one, sex == sex_one)
 
@@ -131,7 +120,7 @@ theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), pa
         axis.text.y = element_blank(),
         axis.ticks.y = element_blank()) +
   ggtitle(paste(&quot;Who has the most popular name?&quot;)) +
-  scale_color_manual(name = &quot;Name&quot;, values = legendcolors, labels = c(&quot;Ian&quot;, &quot;Annette&quot;, &quot;Nancy&quot;))</code></pre>
+  scale_color_manual(name = &quot;Name&quot;, values = legendcolors, labels = c(&quot;Ian&quot;, &quot;Nancy&quot;, &quot;Annette&quot;))</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/remedy007-1.png" width="672" /></p>
 </div>
 </div>
