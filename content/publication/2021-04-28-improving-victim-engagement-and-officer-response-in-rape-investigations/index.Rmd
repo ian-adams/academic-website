@@ -10,7 +10,7 @@ tags:
   - public policy
   - research
 authors: [Scott M. Mourtgos, Ian T. Adams, Sharon H. Mastracci]
-doi: ''
+doi: 'https://doi.org/10.1016/j.jcrimjus.2021.101818'
 publishDate: '2021-04-28T17:30:23-06:00'
 publication_types:
   - '2'
