@@ -21,7 +21,7 @@ image:
 projects: []
 ---
 
-Sometimes in survey research, we want to present varying conditions in a short descriptive text, often called a vignette, and measure the effects of those conditions on an outcome of interest. 
+In survey research, we sometimes want to present varying conditions in a short descriptive text, often called a vignette, and measure the effects of those conditions on an outcome of interest. 
 
 For example, say we have been hired by DinoCreations Inc. to gauge the public's willingness to spend tax dollars on our brand new Island Adventure theme park, complete with living dinosaurs created from ancient DNA held within amber! We want to know if varying the dinosaurs type and size in a vignette results in statistically significant differences in potential patrons willingness to visit. We have two types of dinosaurs, and they come in three sizes. Will our potential guests be more likely to purchase a vacation package dependent on the type and size of dinosaurs we advertise with?
 
