@@ -163,7 +163,7 @@ tbl_summary(gtdata,
   bold_labels()
 ```
 
-Perhaps unsurprisingly, law enforcement agencies are predominantly led by males. However, there may be progress over the eight years. Compared to the LEMAS 2013 data, which estimated just 2.7% of agencies were led by women, my analysis estimates that overall 6.2% of agencies are led by women. The proportion of women-led agencies tends to be stable around 6% until we get to the larger population centers, and in the largest (between 1M and 10M pop.), 17% of the agencies are led by women.
+Perhaps unsurprisingly, law enforcement agencies are predominantly led by males. However, there may be progress over the decade or so. Compared to the LEMAS 2013 data, which estimated just 2.7% of agencies were led by women, my analysis estimates that overall 6.2% of agencies are led by women. The proportion of women-led agencies tends to be stable around 6% until we get to the larger population centers, and in the largest (between 1M and 10M pop.), 17% of the agencies are led by women. This is much larger than the 8.5% suggested by the 2016 LEMAS, though the largest category there is 250,000+ population.
 
 In terms of racial characteristics, this analysis suggests that, overall, 98% of agencies are led by White chief executives. This percentage is negatively correlated with population. In other words, the percentage of White chief executives tends to decrease as the size of population served increases. Even at the top-end of population size, however, these positions are heavily skewed, as seen in the largest (1M to 10M) areas, where 93% of chief executives are estimated to be White. 
 
