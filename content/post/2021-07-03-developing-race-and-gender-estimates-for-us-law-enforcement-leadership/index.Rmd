@@ -1,0 +1,194 @@
+---
+title: Developing Race and Gender Estimates for US Law Enforcement Leadership
+author: ''
+date: '2021-07-03'
+slug: developing-race-and-gender-estimates-for-us-law-enforcement-leadership
+categories:
+  - police
+  - R
+  - research
+  - stats
+tags:
+  - police
+  - stats
+subtitle: 'A Use-Case for the `predictrace` Package'
+summary: ''
+authors: []
+lastmod: '2021-07-03T18:10:47-06:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r include=FALSE}
+library(predictrace)
+library(tidyverse)
+library(here)
+library(gtable)
+library(kableExtra)
+library(gtsummary)
+library(gt)
+
+data <- read_csv(here("resources", "all-agencies-USA-5.12.2021.csv"))
+
+data$DeptType <- as_factor(data$DeptType)
+
+```
+
+
+# Introduction
+
+Researchers might be interested in developing a descriptive understanding of the gender and race composition of a particular industry, organization, or other institution. Oftentimes this is done with sampling from a population. This is the case in law enforcement. With approximately 18,000 sub-federal law enforcement agencies in the United States, and somewhere around 800,000 officers, it can be a challenging environment for researchers. Given the huge variation in agency type, size, composition, etc., generalizing across "law enforcement" is tricky at best.
+
+In this preliminary analysis, I attempt a population-level inference for US law enforcement agencies, to develop estimates of race and gender proportions in the "chief executive" spot. The chief executive for a sherrif's office is the Sheriff (often elected), while in a state-level agency it might be Executive Director - there is a lot of variation. 
+
+## Gender and Race in US Law Enforcement
+
+[John Shjarback and Natalie Today (2019)](https://doi.org/10.1080/08974454.2018.1520674) use data from the 2013 Law Enforcement Management and Administrative Statistics (LEMAS) survey to analyze correlates of women in supervisory, mid-level, and chief executive roles in 2,826 municipal police, sheriff's offices, and primary state law enforcement agencies. The 2013 LEMAS data was the first national survey to report on this level of data, and **just 2.7% of the agencies were led by women**. My goal here will be to see if using a commercial database of a much larger set of agencies, combined with a probabilistic inference of gender and race, will allow for a more up-to-date estimate than the 2013 LEMAS data allows. 
+
+But another method might be obtaining population-level information and inferring race and gender for the individuals based on that information. [Jacob Kaplan](https://jacobdkaplan.com/) has developed the `predictrace` package to do just that. The package develops a probability of race and gender based on the first name of a subject. This is from [the package's introduction](https://jacobkap.github.io/predictrace/index.html):
+
+> The goal of predictrace is to predict the race of a surname or first name and the gender of a first name. This package uses U.S. Census data which says how many people of each race has a certain surname. For first name data, this package uses data from Tzioumis (2018). From this we can predict which race is mostly likely to have that surname or first name. The possible races are American Indian, Asian, Black, Hispanic, White, or two or more races. For the gender of first names, this package uses data from the United States Social Security Administration (SSA) that tells how many people of a given name are female and how many are male (no other genders are included). I use this to determine the proportion of each gender a name is, and use the gender with the higher proportion as the most likely gender for that name. Please note that the Census data on the race of first names is far smaller than the SSA data on the gender of first names, so you will match far fewer first names to race than to gender.
+
+## Data
+
+In this short demonstration, I will attempt to develop race and gender estimates for individuals who lead US law enforcement agencies. To do so, I will rely on a commercial dataset from the National Directory of Law Enforcement Administrators (NDLEA). The dataset contains just over 37,000 listings for the chief administrator of law enforcement organizations at every level of the US system - from municipal police to heads of major federal agencies like the FBI, and everything in-between. The company that puts this database together commits to contacting every agency on the list at least once a year, and the company representative I spoke to said they are closer to once every three months. In my experience the dataset has been very reliable when I need to contact a head administrator directly.
+
+However, in order to constrain the analysis, I will just be looking at Campus Law Enforcement, County Sheriffs, Municipal Law Enforcement, and State Police and Highway Patrol agencies (n=18,064). I'll also reduce this to a simpler dataset by retaining only the department type, first name of administrator, state, and population served.
+
+```{r include=FALSE}
+data_sub <- data %>%
+  select(
+  DeptType, FirstName, MailingState, Population
+) %>%
+  filter(DeptType == "Municipal Law Enforcement" | 
+         DeptType == "County Sheriffs" |
+         DeptType == "Campus Law Enforcement" |
+         DeptType == "State Police and Highway Patrols") %>% 
+  droplevels() # get rid of the other ~100 factor levels
+
+## Cutting data_sub$Population into data_sub$Population_rec
+data_sub$Population <- cut(data_sub$Population,
+  include.lowest = TRUE,
+  right = TRUE,
+  dig.lab = 2,
+  breaks = c(0, 25000, 50000, 1e+05, 1e+06, 1e+07)
+)
+## Recoding data_sub$Population into data_sub$Population_rec
+data_sub$Population <- fct_recode(data_sub$Population,
+  "<25,000" = "[0,2.5e+04]",
+  "25k-50k" = "(2.5e+04,5e+04]",
+  "50k-100k" = "(5e+04,1e+05]",
+  "100k-1M" = "(1e+05,1e+06]",
+  "1M-10M" = "(1e+06,1e+07]"
+) 
+
+```
+
+Let's check and see if that looks right.
+```{r echo=FALSE}
+data_sub %>% sample_n(10) %>% kable()
+```
+
+Looks like population data is pretty spotty (there's an outlier from a typo that had the population of Shelby County, TN, at over 93 million! I fixed it behind the scenes here), but that's not our main focus here today. Overall, it's looking pretty good!
+
+## Inferring Race and Gender from First Name Data
+
+Kaplan's package `predictrace` will derive a gender and race classification for first names contained within our dataset. First we'll use the `predict_gender` call, and then the `predict_race` functions to build the initial lists.
+
+```{r echo=FALSE}
+gender <- predict_gender(data_sub$FirstName)
+
+race <- predict_race(data_sub$FirstName, surname = FALSE)
+```
+
+As you can see, the package reports probabilities for each entry, and gives a best-guess (`likely_gender` and `likely_race`) given those probabilities.
+
+```{r echo=FALSE}
+race %>% sample_n(10) %>% kable()
+```
+
+```{r echo=FALSE}
+gender %>% sample_n(10) %>% kable()
+```
+
+So now let's quickly add the best-guess from the `predictrace` package back to our original data, and quickly get a feel for the overall distribution of gender and race.
+```{r echo=FALSE}
+data_sub$gender <- as_factor(gender$likely_gender)
+data_sub$race <- as_factor(race$likely_race)
+
+data_sub %>% vtable::sumtable()
+```
+
+
+```{r include=FALSE}
+write_csv(data, here("resources", "data_sub.csv"))
+```
+
+## Results 
+
+Let's breakdown race and gender estimates by population of the area served by the agency. Because of the very low counts in Hispanic/White, and Asian/White, I'm going to collapse those into Hispanic and Asian categories respectively. As population data for very small areas (<1000 pop.) can be spotty in the NDLEA, we lose some observations.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+## Recoding data_sub$race into data_sub$race_rec
+data_sub$race <- fct_recode(data_sub$race,
+  "White" = "white",
+  "Black" = "black",
+  "Hispanic" = "hispanic",
+  "Hispanic" = "hispanic, white",
+  "Asian" = "asian",
+  "Asian" = "asian, white"
+)
+
+gtdata <- data_sub %>% select(Population, race, gender)
+
+tbl_summary(gtdata,
+            by = Population,  # split table by group
+            missing = "ifany",
+            digits = all_categorical() ~ c(0, 2)) %>% 
+  #add_n() %>% # add column with total number of non-missing observations
+  add_overall() %>%
+  #add_p() %>% # test for a difference between groups
+  modify_header(label = "**Variable**") %>% # update the column header
+  modify_caption("**Race and Gender of Chief Administrator, by Population Served**") %>%
+  #modify_footnote(update = all_stat_cols() ~ "Missing observations not displayed") %>%
+  bold_labels()
+```
+
+Perhaps unsurprisingly, law enforcement agencies are predominantly led by White males. However, there may be progress over the eight years. Compared to the LEMAS 2013 data, which estimated just 2.7% of agencies were led by women, my analysis estimates that overall 6.2% of agencies are led by women. The proportion of women-led agencies tends to be stable around 6% until we get to the larger population centers, and in the largest (between 1M and 10M pop.), 17% of the agencies are led by women.
+
+In terms of racial characteristics, overall 98% of agencies are led by White chief executives. This percentage is negatively correlated with population. In other words, the percentage of White chief executives tends to decrease as the size of population served increases. Even at the top-end of population size, however, these positions are heavily skewed, as seen in the largest (1M to 10M) areas, where 93% of chief executives are estimated to be White.
+
+Let's see if the proportions hold across agency types as well.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+gtdata2 <- data_sub %>% select(DeptType, race, gender)
+
+tbl_summary(gtdata2,
+            by = DeptType, # split table by group
+            missing = "ifany",
+            digits = all_categorical() ~ c(0,2)) %>% # don't list missing separately
+  #add_n() %>% # add column with total number of non-missing observations
+  add_overall() %>%
+  #add_p() %>% # test for a difference between groups
+  modify_header(label = "**Variable**") %>% # update the column header
+  modify_caption("**Race and Gender of Chief Administrator, by Department Type**") %>%
+  #modify_footnote(update = all_stat_cols() ~ "Missing observations not displayed") %>%
+  bold_labels()
+```
+
+
+As you can see, based on these results, agency type does not seem to be correlated with higher percentages of non-white chief executives. However, campus law enforcement agencies are much more likely than other agency types to be led by women - over 13% compared to the average of 6.3% overall.
+
+## Conclusion
+
+As always, lots of warnings here about how seriously we should take these estimates. They are, after all, based on probabilistic inferences about race and gender given only a first name. There are lots of weaknesses to consider in that approach. On the other hand, this gives a much broader look at nearly the entire population of US law enforcement agencies in their respective categories (municipal, sheriff's, campus, and state law enforcement). 
+
+Many thanks to Jacob Kaplan, who developed the `predictrace` package for R, as this quick analysis wouldn't be possible without his hard work. 
+
+
+

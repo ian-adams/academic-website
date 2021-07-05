@@ -5,12 +5,1861 @@
     <link>https://ianadamsresearch.com/category/research/</link>
       <atom:link href="https://ianadamsresearch.com/category/research/index.xml" rel="self" type="application/rss+xml" />
     <description>Research</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2021`</copyright><lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2021`</copyright><lastBuildDate>Sat, 03 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ianadamsresearch.com/media/android-chrome-512x512.png</url>
       <title>Research</title>
       <link>https://ianadamsresearch.com/category/research/</link>
     </image>
+    
+    <item>
+      <title>Developing Race and Gender Estimates for US Law Enforcement Leadership</title>
+      <link>https://ianadamsresearch.com/post/developing-race-and-gender-estimates-for-us-law-enforcement-leadership/</link>
+      <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/post/developing-race-and-gender-estimates-for-us-law-enforcement-leadership/</guid>
+      <description>
+&lt;script src=&#34;https://ianadamsresearch.com/post/developing-race-and-gender-estimates-for-us-law-enforcement-leadership/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://ianadamsresearch.com/post/developing-race-and-gender-estimates-for-us-law-enforcement-leadership/index_files/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://ianadamsresearch.com/post/developing-race-and-gender-estimates-for-us-law-enforcement-leadership/index_files/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Researchers might be interested in developing a descriptive understanding of the gender and race composition of a particular industry, organization, or other institution. Oftentimes this is done with sampling from a population. This is the case in law enforcement. With approximately 18,000 sub-federal law enforcement agencies in the United States, and somewhere around 800,000 officers, it can be a challenging environment for researchers. Given the huge variation in agency type, size, composition, etc., generalizing across “law enforcement” is tricky at best.&lt;/p&gt;
+&lt;p&gt;In this preliminary analysis, I attempt a population-level inference for US law enforcement agencies, to develop estimates of race and gender proportions in the “chief executive” spot. The chief executive for a sherrif’s office is the Sheriff (often elected), while in a state-level agency it might be Executive Director - there is a lot of variation.&lt;/p&gt;
+&lt;div id=&#34;gender-and-race-in-us-law-enforcement&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Gender and Race in US Law Enforcement&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1080/08974454.2018.1520674&#34;&gt;John Shjarback and Natalie Today (2019)&lt;/a&gt; use data from the 2013 Law Enforcement Management and Administrative Statistics (LEMAS) survey to analyze correlates of women in supervisory, mid-level, and chief executive roles in 2,826 municipal police, sheriff’s offices, and primary state law enforcement agencies. The 2013 LEMAS data was the first national survey to report on this level of data, and &lt;strong&gt;just 2.7% of the agencies were led by women&lt;/strong&gt;. My goal here will be to see if using a commercial database of a much larger set of agencies, combined with a probabilistic inference of gender and race, will allow for a more up-to-date estimate than the 2013 LEMAS data allows.&lt;/p&gt;
+&lt;p&gt;But another method might be obtaining population-level information and inferring race and gender for the individuals based on that information. &lt;a href=&#34;https://jacobdkaplan.com/&#34;&gt;Jacob Kaplan&lt;/a&gt; has developed the &lt;code&gt;predictrace&lt;/code&gt; package to do just that. The package develops a probability of race and gender based on the first name of a subject. This is from &lt;a href=&#34;https://jacobkap.github.io/predictrace/index.html&#34;&gt;the package’s introduction&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The goal of predictrace is to predict the race of a surname or first name and the gender of a first name. This package uses U.S. Census data which says how many people of each race has a certain surname. For first name data, this package uses data from Tzioumis (2018). From this we can predict which race is mostly likely to have that surname or first name. The possible races are American Indian, Asian, Black, Hispanic, White, or two or more races. For the gender of first names, this package uses data from the United States Social Security Administration (SSA) that tells how many people of a given name are female and how many are male (no other genders are included). I use this to determine the proportion of each gender a name is, and use the gender with the higher proportion as the most likely gender for that name. Please note that the Census data on the race of first names is far smaller than the SSA data on the gender of first names, so you will match far fewer first names to race than to gender.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data&lt;/h2&gt;
+&lt;p&gt;In this short demonstration, I will attempt to develop race and gender estimates for individuals who lead US law enforcement agencies. To do so, I will rely on a commercial dataset from the National Directory of Law Enforcement Administrators (NDLEA). The dataset contains just over 37,000 listings for the chief administrator of law enforcement organizations at every level of the US system - from municipal police to heads of major federal agencies like the FBI, and everything in-between. The company that puts this database together commits to contacting every agency on the list at least once a year, and the company representative I spoke to said they are closer to once every three months. In my experience the dataset has been very reliable when I need to contact a head administrator directly.&lt;/p&gt;
+&lt;p&gt;However, in order to constrain the analysis, I will just be looking at Campus Law Enforcement, County Sheriffs, Municipal Law Enforcement, and State Police and Highway Patrol agencies (n=18,064). I’ll also reduce this to a simpler dataset by retaining only the department type, first name of administrator, state, and population served.&lt;/p&gt;
+Let’s check and see if that looks right.
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+DeptType
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+FirstName
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+MailingState
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Population
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Campus Law Enforcement
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Jessica
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+TX
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;lt;25,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Municipal Law Enforcement
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Tim
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+TX
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;lt;25,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Campus Law Enforcement
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Kevin
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+AL
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;lt;25,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Municipal Law Enforcement
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Daniel
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+OH
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;lt;25,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Municipal Law Enforcement
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Shawn
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+WI
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;lt;25,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Municipal Law Enforcement
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Rob
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+CA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;lt;25,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+County Sheriffs
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+JD
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NC
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+25k-50k
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Municipal Law Enforcement
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Danny
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+IN
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;lt;25,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Municipal Law Enforcement
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Mark
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+UT
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;lt;25,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Municipal Law Enforcement
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+J
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NC
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+50k-100k
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Looks like population data is pretty spotty (there’s an outlier from a typo that had the population of Shelby County, TN, at over 93 million! I fixed it behind the scenes here), but that’s not our main focus here today. Overall, it’s looking pretty good!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;inferring-race-and-gender-from-first-name-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Inferring Race and Gender from First Name Data&lt;/h2&gt;
+&lt;p&gt;Kaplan’s package &lt;code&gt;predictrace&lt;/code&gt; will derive a gender and race classification for first names contained within our dataset. First we’ll use the &lt;code&gt;predict_gender&lt;/code&gt; call, and then the &lt;code&gt;predict_race&lt;/code&gt; functions to build the initial lists.&lt;/p&gt;
+&lt;p&gt;As you can see, the package reports probabilities for each entry, and gives a best-guess (&lt;code&gt;likely_gender&lt;/code&gt; and &lt;code&gt;likely_race&lt;/code&gt;) given those probabilities.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+match_name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+likely_race
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+probability_american_indian
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+probability_asian
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+probability_black
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+probability_hispanic
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+probability_white
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+probability_2races
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Malik
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+malik
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0000
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.2286
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.3429
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0286
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.4000
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Patrick
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+patrick
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0008
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0226
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0243
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0120
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9394
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0008
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Paul
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+paul
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0011
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0307
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0145
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0214
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9314
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0009
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+James
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+james
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0012
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0147
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0328
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0100
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9402
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0012
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Shawn
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+shawn
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0019
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0160
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0302
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0099
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9402
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0019
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Scott
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+scott
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0006
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0087
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0027
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0043
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9831
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0006
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Gary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+gary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0009
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0190
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0168
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0080
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9540
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0013
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Ron
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+ron
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0034
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0469
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0402
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0235
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.8844
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0017
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+David
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+david
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0011
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0239
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0139
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0322
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9281
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0008
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Patrick
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+patrick
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0008
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0226
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0243
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0120
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9394
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0008
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+match_name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+likely_gender
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+probability_female
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+probability_male
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Anthony
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+anthony
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0048567
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9951433
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Andrew
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+andrew
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0037694
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9962306
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Doug
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+doug
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0002225
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9997775
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Randy
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+randy
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0149574
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9850426
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Bill
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+bill
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0044454
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9955546
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Mike
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+mike
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0032230
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9967770
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+John
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+john
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0042106
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9957894
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Darren
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+darren
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0055283
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9944717
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Jeffery
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+jeffery
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0054980
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9945020
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Kal
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+kal
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0000000
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.0000000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+So now let’s quickly add the best-guess from the &lt;code&gt;predictrace&lt;/code&gt; package back to our original data, and quickly get a feel for the overall distribution of gender and race.
+&lt;table class=&#34;table&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-7&#34;&gt;Table 1: &lt;/span&gt;Summary Statistics
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Variable
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+N
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Percent
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DeptType
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+18064
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… Municipal Law Enforcement
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+11835
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+65.5%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… Campus Law Enforcement
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2102
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+11.6%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… State Police and Highway Patrols
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+960
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+5.3%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… County Sheriffs
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+3167
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+17.5%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Population
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+17054
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… &amp;lt;25,000
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+13755
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+80.7%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… 25k-50k
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1570
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+9.2%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… 50k-100k
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+872
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+5.1%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… 100k-1M
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+798
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+4.7%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… 1M-10M
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+59
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.3%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+gender
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+17559
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+16447
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+93.7%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… female
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1112
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+6.3%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+race
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+17082
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+16738
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+98%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… black
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+72
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.4%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… hispanic
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+242
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1.4%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… hispanic, white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… asian
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+27
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.2%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+… asian, white
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;results&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Results&lt;/h2&gt;
+&lt;p&gt;Let’s breakdown race and gender estimates by population of the area served by the agency. Because of the very low counts in Hispanic/White, and Asian/White, I’m going to collapse those into Hispanic and Asian categories respectively. As population data for very small areas (&amp;lt;1000 pop.) can be spotty in the NDLEA, we lose some observations.&lt;/p&gt;
+&lt;div id=&#34;sslzouebxm&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;style&gt;html {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
+}
+
+#sslzouebxm .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#sslzouebxm .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sslzouebxm .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#sslzouebxm .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#sslzouebxm .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sslzouebxm .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sslzouebxm .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#sslzouebxm .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#sslzouebxm .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#sslzouebxm .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#sslzouebxm .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#sslzouebxm .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#sslzouebxm .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#sslzouebxm .gt_from_md &gt; :first-child {
+  margin-top: 0;
+}
+
+#sslzouebxm .gt_from_md &gt; :last-child {
+  margin-bottom: 0;
+}
+
+#sslzouebxm .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#sslzouebxm .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#sslzouebxm .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sslzouebxm .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#sslzouebxm .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sslzouebxm .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#sslzouebxm .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#sslzouebxm .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sslzouebxm .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sslzouebxm .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#sslzouebxm .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sslzouebxm .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#sslzouebxm .gt_left {
+  text-align: left;
+}
+
+#sslzouebxm .gt_center {
+  text-align: center;
+}
+
+#sslzouebxm .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#sslzouebxm .gt_font_normal {
+  font-weight: normal;
+}
+
+#sslzouebxm .gt_font_bold {
+  font-weight: bold;
+}
+
+#sslzouebxm .gt_font_italic {
+  font-style: italic;
+}
+
+#sslzouebxm .gt_super {
+  font-size: 65%;
+}
+
+#sslzouebxm .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+&lt;/style&gt;
+&lt;table class=&#34;gt_table&#34;&gt;
+  &lt;caption&gt;&lt;span id=&#34;tab:unnamed-chunk-9&#34;&gt;Table 2: &lt;/span&gt;&lt;strong&gt;Race and Gender of Chief Administrator, by Population Served&lt;/strong&gt;&lt;/caption&gt;
+  
+  &lt;thead class=&#34;gt_col_headings&#34;&gt;
+    &lt;tr&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_left&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;Variable&lt;/strong&gt;&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;Overall&lt;/strong&gt;, N = 17,054&lt;sup class=&#34;gt_footnote_marks&#34;&gt;1&lt;/sup&gt;&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;&amp;lt;25,000&lt;/strong&gt;, N = 13,755&lt;sup class=&#34;gt_footnote_marks&#34;&gt;1&lt;/sup&gt;&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;25k-50k&lt;/strong&gt;, N = 1,570&lt;sup class=&#34;gt_footnote_marks&#34;&gt;1&lt;/sup&gt;&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;50k-100k&lt;/strong&gt;, N = 872&lt;sup class=&#34;gt_footnote_marks&#34;&gt;1&lt;/sup&gt;&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;100k-1M&lt;/strong&gt;, N = 798&lt;sup class=&#34;gt_footnote_marks&#34;&gt;1&lt;/sup&gt;&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;1M-10M&lt;/strong&gt;, N = 59&lt;sup class=&#34;gt_footnote_marks&#34;&gt;1&lt;/sup&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class=&#34;gt_table_body&#34;&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;font-weight: bold;&#34;&gt;race&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;White&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;15,844 (97.95%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;12,796 (98.13%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;1,483 (97.95%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;793 (97.42%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;720 (95.87%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;52 (92.86%)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;Black&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;67 (0.41%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;50 (0.38%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;6 (0.40%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;6 (0.74%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;4 (0.53%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;1 (1.79%)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;Hispanic&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;236 (1.46%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;175 (1.34%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;23 (1.52%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;14 (1.72%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;21 (2.80%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;3 (5.36%)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;Asian&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;28 (0.17%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;19 (0.15%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;2 (0.13%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;1 (0.12%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;6 (0.80%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;0 (0.00%)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;Unknown&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;879&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;715&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;56&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;58&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;47&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;3&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;font-weight: bold;&#34;&gt;gender&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;male&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;15,583 (93.77%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;12,569 (93.85%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;1,456 (94.12%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;791 (93.94%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;718 (92.17%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;49 (83.05%)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;female&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;1,036 (6.23%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;823 (6.15%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;91 (5.88%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;51 (6.06%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;61 (7.83%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;10 (16.95%)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;Unknown&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;435&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;363&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;23&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;30&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;19&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;0&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  
+  &lt;tfoot&gt;
+    &lt;tr class=&#34;gt_footnotes&#34;&gt;
+      &lt;td colspan=&#34;7&#34;&gt;
+        &lt;p class=&#34;gt_footnote&#34;&gt;
+          &lt;sup class=&#34;gt_footnote_marks&#34;&gt;
+            &lt;em&gt;1&lt;/em&gt;
+          &lt;/sup&gt;
+           
+          n (%)
+          &lt;br /&gt;
+        &lt;/p&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Perhaps unsurprisingly, law enforcement agencies are predominantly led by White males. However, there may be progress over the eight years. Compared to the LEMAS 2013 data, which estimated just 2.7% of agencies were led by women, my analysis estimates that overall 6.2% of agencies are led by women. The proportion of women-led agencies tends to be stable around 6% until we get to the larger population centers, and in the largest (between 1M and 10M pop.), 17% of the agencies are led by women.&lt;/p&gt;
+&lt;p&gt;In terms of racial characteristics, overall 98% of agencies are led by White chief executives. This percentage is negatively correlated with population. In other words, the percentage of White chief executives tends to decrease as the size of population served increases. Even at the top-end of population size, however, these positions are heavily skewed, as seen in the largest (1M to 10M) areas, where 93% of chief executives are estimated to be White.&lt;/p&gt;
+&lt;p&gt;Let’s see if the proportions hold across agency types as well.&lt;/p&gt;
+&lt;div id=&#34;mtnewdgupx&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;style&gt;html {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
+}
+
+#mtnewdgupx .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mtnewdgupx .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mtnewdgupx .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mtnewdgupx .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mtnewdgupx .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mtnewdgupx .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mtnewdgupx .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mtnewdgupx .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mtnewdgupx .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mtnewdgupx .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mtnewdgupx .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mtnewdgupx .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mtnewdgupx .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mtnewdgupx .gt_from_md &gt; :first-child {
+  margin-top: 0;
+}
+
+#mtnewdgupx .gt_from_md &gt; :last-child {
+  margin-bottom: 0;
+}
+
+#mtnewdgupx .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mtnewdgupx .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#mtnewdgupx .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mtnewdgupx .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#mtnewdgupx .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mtnewdgupx .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mtnewdgupx .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mtnewdgupx .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mtnewdgupx .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mtnewdgupx .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#mtnewdgupx .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mtnewdgupx .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#mtnewdgupx .gt_left {
+  text-align: left;
+}
+
+#mtnewdgupx .gt_center {
+  text-align: center;
+}
+
+#mtnewdgupx .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mtnewdgupx .gt_font_normal {
+  font-weight: normal;
+}
+
+#mtnewdgupx .gt_font_bold {
+  font-weight: bold;
+}
+
+#mtnewdgupx .gt_font_italic {
+  font-style: italic;
+}
+
+#mtnewdgupx .gt_super {
+  font-size: 65%;
+}
+
+#mtnewdgupx .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+&lt;/style&gt;
+&lt;table class=&#34;gt_table&#34;&gt;
+  &lt;caption&gt;&lt;span id=&#34;tab:unnamed-chunk-10&#34;&gt;Table 3: &lt;/span&gt;&lt;strong&gt;Race and Gender of Chief Administrator, by Department Type&lt;/strong&gt;&lt;/caption&gt;
+  
+  &lt;thead class=&#34;gt_col_headings&#34;&gt;
+    &lt;tr&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_left&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;Variable&lt;/strong&gt;&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;Overall&lt;/strong&gt;, N = 18,064&lt;sup class=&#34;gt_footnote_marks&#34;&gt;1&lt;/sup&gt;&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;Municipal Law Enforcement&lt;/strong&gt;, N = 11,835&lt;sup class=&#34;gt_footnote_marks&#34;&gt;1&lt;/sup&gt;&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;Campus Law Enforcement&lt;/strong&gt;, N = 2,102&lt;sup class=&#34;gt_footnote_marks&#34;&gt;1&lt;/sup&gt;&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;State Police and Highway Patrols&lt;/strong&gt;, N = 960&lt;sup class=&#34;gt_footnote_marks&#34;&gt;1&lt;/sup&gt;&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34;&gt;&lt;strong&gt;County Sheriffs&lt;/strong&gt;, N = 3,167&lt;sup class=&#34;gt_footnote_marks&#34;&gt;1&lt;/sup&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class=&#34;gt_table_body&#34;&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;font-weight: bold;&#34;&gt;race&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;White&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;16,738 (97.99%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;11,036 (98.12%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;1,910 (96.76%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;849 (98.61%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;2,943 (98.10%)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;Black&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;72 (0.42%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;40 (0.36%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;15 (0.76%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;5 (0.58%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;12 (0.40%)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;Hispanic&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;244 (1.43%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;155 (1.38%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;46 (2.33%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;7 (0.81%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;36 (1.20%)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;Asian&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;28 (0.16%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;16 (0.14%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;3 (0.15%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;0 (0.00%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;9 (0.30%)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;Unknown&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;982&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;588&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;128&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;99&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;167&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;font-weight: bold;&#34;&gt;gender&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;male&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;16,447 (93.67%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;10,911 (94.56%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;1,772 (86.78%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;820 (92.03%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;2,944 (95.37%)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;female&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;1,112 (6.33%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;628 (5.44%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;270 (13.22%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;71 (7.97%)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;143 (4.63%)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_left&#34; style=&#34;text-align: left; text-indent: 10px;&#34;&gt;Unknown&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;505&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;296&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;60&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;69&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;80&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  
+  &lt;tfoot&gt;
+    &lt;tr class=&#34;gt_footnotes&#34;&gt;
+      &lt;td colspan=&#34;6&#34;&gt;
+        &lt;p class=&#34;gt_footnote&#34;&gt;
+          &lt;sup class=&#34;gt_footnote_marks&#34;&gt;
+            &lt;em&gt;1&lt;/em&gt;
+          &lt;/sup&gt;
+           
+          n (%)
+          &lt;br /&gt;
+        &lt;/p&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;As you can see, based on these results, agency type does not seem to be correlated with higher percentages of non-white chief executives. However, campus law enforcement agencies are much more likely than other agency types to be led by women - over 13% compared to the average of 6.3% overall.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusion&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;As always, lots of warnings here about how seriously we should take these estimates. They are, after all, based on probabilistic inferences about race and gender given only a first name. There are lots of weaknesses to consider in that approach. On the other hand, this gives a much broader look at nearly the entire population of US law enforcement agencies in their respective categories (municipal, sheriff’s, campus, and state law enforcement).&lt;/p&gt;
+&lt;p&gt;Many thanks to Jacob Kaplan, who developed the &lt;code&gt;predictrace&lt;/code&gt; package for R, as this quick analysis wouldn’t be possible without his hard work.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>The Effect of Body-Worn Camera Activation and Auditing Policies on Perceptions of Monitoring Fairness</title>
