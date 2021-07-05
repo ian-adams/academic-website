@@ -23,7 +23,7 @@ image:
 projects: []
 ---
 
-```{r include=FALSE}
+```{r message=FALSE, warning=FALSE, include=FALSE}
 library(predictrace)
 library(tidyverse)
 library(here)
@@ -47,7 +47,9 @@ In this preliminary analysis, I attempt a population-level inference for US law 
 
 ## Gender and Race in US Law Enforcement
 
-[John Shjarback and Natalie Today (2019)](https://doi.org/10.1080/08974454.2018.1520674) use data from the 2013 Law Enforcement Management and Administrative Statistics (LEMAS) survey to analyze correlates of women in supervisory, mid-level, and chief executive roles in 2,826 municipal police, sheriff's offices, and primary state law enforcement agencies. The 2013 LEMAS data was the first national survey to report on this level of data, and **just 2.7% of the agencies were led by women**. My goal here will be to see if using a commercial database of a much larger set of agencies, combined with a probabilistic inference of gender and race, will allow for a more up-to-date estimate than the 2013 LEMAS data allows. 
+[John Shjarback and Natalie Todak (2019)](https://doi.org/10.1080/08974454.2018.1520674) use data from the 2013 Law Enforcement Management and Administrative Statistics (LEMAS) survey to analyze correlates of women in supervisory, mid-level, and chief executive roles in 2,826 municipal police, sheriff's offices, and primary state law enforcement agencies. The 2013 LEMAS data was the first national survey to report on this level of data, and **just 2.7% of the agencies were led by women**. My goal here will be to see if using a commercial database of a much larger set of agencies, combined with a probabilistic estimate of gender and race, compares to the estimates from the 2013 LEMAS. 
+
+[The 2016 LEMAS](https://bjs.ojp.gov/content/pub/pdf/lpd16p.pdf) estimates that for chiefs across all size of local agencies, 89.6% were White, 4% Black, 3.1% Hispanic, and 2.4% other. It also estimates that in those same agencies, just 2.6% of chiefs were female. However, this 2016 sample design results in 2,612 local agencies (rather than the larger sample of all agencies), and uses a stratified sampling that intentionally oversamples from the largest agencies (+100 full-time officers). 
 
 But another method might be obtaining population-level information and inferring race and gender for the individuals based on that information. [Jacob Kaplan](https://jacobdkaplan.com/) has developed the `predictrace` package to do just that. The package develops a probability of race and gender based on the first name of a subject. This is from [the package's introduction](https://jacobkap.github.io/predictrace/index.html):
 
@@ -57,18 +59,18 @@ But another method might be obtaining population-level information and inferring
 
 In this short demonstration, I will attempt to develop race and gender estimates for individuals who lead US law enforcement agencies. To do so, I will rely on a commercial dataset from the National Directory of Law Enforcement Administrators (NDLEA). The dataset contains just over 37,000 listings for the chief administrator of law enforcement organizations at every level of the US system - from municipal police to heads of major federal agencies like the FBI, and everything in-between. The company that puts this database together commits to contacting every agency on the list at least once a year, and the company representative I spoke to said they are closer to once every three months. In my experience the dataset has been very reliable when I need to contact a head administrator directly.
 
-However, in order to constrain the analysis, I will just be looking at Campus Law Enforcement, County Sheriffs, Municipal Law Enforcement, and State Police and Highway Patrol agencies (n=18,064). I'll also reduce this to a simpler dataset by retaining only the department type, first name of administrator, state, and population served.
+However, in order to constrain the analysis, I will just be looking at Campus Law Enforcement, County Sheriffs, and Municipal Law Enforcement agencies (n=17,104). Because I look at some correlations later with population, I drop any observations missing that information (missing n= 204), leaving a total of 16,900 observations. I'll also reduce this to a simpler dataset by retaining only the department type, first name of administrator, state, and population served.
 
 ```{r include=FALSE}
 data_sub <- data %>%
   select(
-  DeptType, FirstName, MailingState, Population
-) %>%
+  DeptType, FirstName, MailingState, Population) %>%
   filter(DeptType == "Municipal Law Enforcement" | 
          DeptType == "County Sheriffs" |
-         DeptType == "Campus Law Enforcement" |
-         DeptType == "State Police and Highway Patrols") %>% 
+         DeptType == "Campus Law Enforcement") %>% 
   droplevels() # get rid of the other ~100 factor levels
+
+data_sub <- data_sub %>% drop_na()
 
 ## Cutting data_sub$Population into data_sub$Population_rec
 data_sub$Population <- cut(data_sub$Population,
@@ -90,6 +92,7 @@ data_sub$Population <- fct_recode(data_sub$Population,
 
 Let's check and see if that looks right.
 ```{r echo=FALSE}
+set.seed(7146)
 data_sub %>% sample_n(10) %>% kable()
 ```
 
@@ -108,10 +111,12 @@ race <- predict_race(data_sub$FirstName, surname = FALSE)
 As you can see, the package reports probabilities for each entry, and gives a best-guess (`likely_gender` and `likely_race`) given those probabilities.
 
 ```{r echo=FALSE}
+set.seed(4)
 race %>% sample_n(10) %>% kable()
 ```
 
 ```{r echo=FALSE}
+set.seed(3)
 gender %>% sample_n(10) %>% kable()
 ```
 
@@ -158,9 +163,9 @@ tbl_summary(gtdata,
   bold_labels()
 ```
 
-Perhaps unsurprisingly, law enforcement agencies are predominantly led by White males. However, there may be progress over the eight years. Compared to the LEMAS 2013 data, which estimated just 2.7% of agencies were led by women, my analysis estimates that overall 6.2% of agencies are led by women. The proportion of women-led agencies tends to be stable around 6% until we get to the larger population centers, and in the largest (between 1M and 10M pop.), 17% of the agencies are led by women.
+Perhaps unsurprisingly, law enforcement agencies are predominantly led by males. However, there may be progress over the eight years. Compared to the LEMAS 2013 data, which estimated just 2.7% of agencies were led by women, my analysis estimates that overall 6.2% of agencies are led by women. The proportion of women-led agencies tends to be stable around 6% until we get to the larger population centers, and in the largest (between 1M and 10M pop.), 17% of the agencies are led by women.
 
-In terms of racial characteristics, overall 98% of agencies are led by White chief executives. This percentage is negatively correlated with population. In other words, the percentage of White chief executives tends to decrease as the size of population served increases. Even at the top-end of population size, however, these positions are heavily skewed, as seen in the largest (1M to 10M) areas, where 93% of chief executives are estimated to be White.
+In terms of racial characteristics, this analysis suggests that, overall, 98% of agencies are led by White chief executives. This percentage is negatively correlated with population. In other words, the percentage of White chief executives tends to decrease as the size of population served increases. Even at the top-end of population size, however, these positions are heavily skewed, as seen in the largest (1M to 10M) areas, where 93% of chief executives are estimated to be White. 
 
 Let's see if the proportions hold across agency types as well.
 
@@ -186,9 +191,13 @@ As you can see, based on these results, agency type does not seem to be correlat
 
 ## Conclusion
 
+There is a lot of investigation needed before relying on these estimates, as they are even more [overwhelmingly White than previous reporting would suggest](https://www.washingtonpost.com/nation/2020/06/04/urban-areas-police-are-consistently-much-whiter-than-people-they-serve/). Recall that the 2016 LEMAS estimated that among local agency chiefs, 89.6% were White, 4% Black, 3.1% Hispanic, and 2.4% other race. The differences here suggest more analysis is needed, but several obvious options present themselves. It may be there are substantial gaps between the sampling in the LEMAS versus a population-level estimate. Alternatively, the probabilities themselves are skewing towards White likelihoods. The inclusion of more than just local agencies in this analysis also deserves some thought, as there may be agency characteristics that lead to higher proportions of non-Whites to be selected for the top job. 
+
+Some of the gaps are too large to comfortably chalk up to sampling or research design. The 2016 LEMAS estimated that in agencies serving over 250,000 people, just 65% of chiefs were White, while the current analysis would suggest this number is between 92-96%. That large of a gap is a strong suggestion that the inference of race for this population is questionable. On the other hand, the gender inferences seem much more stable across this analysis and previous ones.
+
 As always, lots of warnings here about how seriously we should take these estimates. They are, after all, based on probabilistic inferences about race and gender given only a first name. There are lots of weaknesses to consider in that approach. On the other hand, this gives a much broader look at nearly the entire population of US law enforcement agencies in their respective categories (municipal, sheriff's, campus, and state law enforcement). 
 
-Many thanks to Jacob Kaplan, who developed the `predictrace` package for R, as this quick analysis wouldn't be possible without his hard work. 
+Many thanks to Jacob Kaplan, who developed the `predictrace` package for R, as this quick analysis would not be possible without his hard work. 
 
 
 
