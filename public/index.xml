@@ -5,12 +5,32 @@
     <link>https://ianadamsresearch.com/</link>
       <atom:link href="https://ianadamsresearch.com/index.xml" rel="self" type="application/rss+xml" />
     <description>Ian T. Adams</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2021`</copyright><lastBuildDate>Sat, 03 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2021`</copyright><lastBuildDate>Tue, 06 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ianadamsresearch.com/media/android-chrome-512x512.png</url>
       <title>Ian T. Adams</title>
       <link>https://ianadamsresearch.com/</link>
     </image>
+    
+    <item>
+      <title>Elevated Police Turnover following the Summer of George Floyd Protests: A Synthetic Control Study</title>
+      <link>https://ianadamsresearch.com/publication/2021-07-06-elevated-police-turnover/</link>
+      <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/2021-07-06-elevated-police-turnover/</guid>
+      <description>
+&lt;script src=&#34;https://ianadamsresearch.com/publication/2021-07-06-elevated-police-turnover/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;important-links&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Important links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Forthcoming at &lt;a href=&#34;https://onlinelibrary.wiley.com/journal/17459133&#34;&gt;&lt;em&gt;Criminology &amp;amp; Public Policy&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Short write-up at &lt;a href=&#34;https://jnix.netlify.app/publication/42-cpp-turnover/&#34;&gt;Justin Nix’s blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ianadamsresearch.com/pdfs/officer-turnover-floyd.pdf&#34;&gt;Download pre-print here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Developing Race and Gender Estimates for US Law Enforcement Leadership</title>
