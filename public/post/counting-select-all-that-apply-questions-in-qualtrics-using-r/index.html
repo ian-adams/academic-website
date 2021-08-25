@@ -34,10 +34,10 @@
   
     
   
-  <meta name="description" content="Presented at the Political Research Colloquium, University of Utah, Oct. 30, 2020">
+  <meta name="description" content="Qualtrics Messy DataMy friend Devon Cantwell reached out with an interesting messy data caused by how Qualtrics produces “select all that apply” variables. For example, in her (mock) survey, she asks students to select all the colors that they personally find attractive from a list.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://ianadamsresearch.com/post/powerpoint-embed-testing/">
+  <link rel="alternate" hreflang="en-us" href="https://ianadamsresearch.com/post/counting-select-all-that-apply-questions-in-qualtrics-using-r/">
 
   
 
@@ -263,7 +263,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu03b976185cb6921f1410bd532878b174_20806_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu03b976185cb6921f1410bd532878b174_20806_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://ianadamsresearch.com/post/powerpoint-embed-testing/">
+  <link rel="canonical" href="https://ianadamsresearch.com/post/counting-select-all-that-apply-questions-in-qualtrics-using-r/">
 
   
   
@@ -281,15 +281,15 @@
   <meta property="twitter:creator" content="@LiminalMori">
   
   <meta property="og:site_name" content="Ian T. Adams">
-  <meta property="og:url" content="https://ianadamsresearch.com/post/powerpoint-embed-testing/">
-  <meta property="og:title" content="The Effect of Body-Worn Camera Activation and Auditing Policies on Perceptions of Monitoring Fairness | Ian T. Adams">
-  <meta property="og:description" content="Presented at the Political Research Colloquium, University of Utah, Oct. 30, 2020"><meta property="og:image" content="https://ianadamsresearch.com/media/android-chrome-512x512.png">
+  <meta property="og:url" content="https://ianadamsresearch.com/post/counting-select-all-that-apply-questions-in-qualtrics-using-r/">
+  <meta property="og:title" content="Counting &#34;Select All That Apply&#34; Questions in Qualtrics | Ian T. Adams">
+  <meta property="og:description" content="Qualtrics Messy DataMy friend Devon Cantwell reached out with an interesting messy data caused by how Qualtrics produces “select all that apply” variables. For example, in her (mock) survey, she asks students to select all the colors that they personally find attractive from a list."><meta property="og:image" content="https://ianadamsresearch.com/media/android-chrome-512x512.png">
   <meta property="twitter:image" content="https://ianadamsresearch.com/media/android-chrome-512x512.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-10-30T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2021-08-25T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-10-30T11:59:54-06:00">
+    <meta property="article:modified_time" content="2021-08-25T09:17:35-06:00">
   
 
   
@@ -313,12 +313,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://ianadamsresearch.com/post/powerpoint-embed-testing/"
+    "@id": "https://ianadamsresearch.com/post/counting-select-all-that-apply-questions-in-qualtrics-using-r/"
   },
-  "headline": "The Effect of Body-Worn Camera Activation and Auditing Policies on Perceptions of Monitoring Fairness",
+  "headline": "Counting \"Select All That Apply\" Questions in Qualtrics",
   
-  "datePublished": "2020-10-30T00:00:00Z",
-  "dateModified": "2020-10-30T11:59:54-06:00",
+  "datePublished": "2021-08-25T00:00:00Z",
+  "dateModified": "2021-08-25T09:17:35-06:00",
   
   "author": {
     "@type": "Person",
@@ -333,7 +333,7 @@
       "url": "https://ianadamsresearch.com/images/icon_hu03b976185cb6921f1410bd532878b174_20806_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Presented at the Political Research Colloquium, University of Utah, Oct. 30, 2020"
+  "description": "Qualtrics Messy Data\rMy friend Devon Cantwell reached out with an interesting messy data caused by how Qualtrics produces “select all that apply” variables. For example, in her (mock) survey, she asks students to select all the colors that they personally find attractive from a list."
 }
 </script>
 
@@ -351,7 +351,7 @@
 
 
 
-  <title>The Effect of Body-Worn Camera Activation and Auditing Policies on Perceptions of Monitoring Fairness | Ian T. Adams</title>
+  <title>Counting &#34;Select All That Apply&#34; Questions in Qualtrics | Ian T. Adams</title>
 
 </head>
 
@@ -660,10 +660,8 @@
   
   
 <div class="article-container pt-3">
-  <h1>The Effect of Body-Worn Camera Activation and Auditing Policies on Perceptions of Monitoring Fairness</h1>
+  <h1>Counting &#34;Select All That Apply&#34; Questions in Qualtrics</h1>
 
-  
-  <p class="page-subtitle">A National Survey Vignette Experiment</p>
   
 
   
@@ -683,7 +681,7 @@
           Last updated on
       
     
-    Oct 30, 2020
+    Aug 25, 2021
   </span>
   
 
@@ -692,7 +690,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -706,7 +704,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a>, <a href="/category/website/">website</a>, <a href="/category/research/">Research</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a>, <a href="/category/stats/">stats</a>, <a href="/category/research/">Research</a></span>
   
 
 </div>
@@ -735,13 +733,53 @@
 
     <div class="article-style">
       
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="https://ianadamsresearch.com/post/counting-select-all-that-apply-questions-in-qualtrics-using-r/index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>The Department of Political Science at the University of Utah periodically holds political research colloquiums (PRC) for graduate students and faculty to present early and current research findings. This is my presentation at the PRC held Oct. 30, 2020. I describe early findings from one of my dissertation chapters. This research uses a randomized vignette experiment to investigate the effects of various body-worn camera activation and review/audit policies on how officers perceive the fairness of monitoring.</p>
-<iframe src="https://onedrive.live.com/embed?cid=88E07230498FF330&amp;resid=88E07230498FF330%21215407&amp;authkey=AOUeIPrXrVFFZpg&amp;em=2&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameborder="0">
-This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.
-</iframe>
+<div id="qualtrics-messy-data" class="section level1">
+<h1>Qualtrics Messy Data</h1>
+<p>My friend <a href="https://www.devoncantwell.com/about-devon">Devon Cantwell</a> reached out with an interesting messy data caused by how Qualtrics produces “select all that apply” variables. For example, in her (mock) survey, she asks students to select all the colors that they personally find attractive from a list. When downloaded from Qualtrics, we get a dataframe that looks like this:</p>
+<pre class="r"><code>glimpse(dat)</code></pre>
+<pre><code>## Rows: 940
+## Columns: 4
+## $ color_1 &lt;fct&gt; Sparkle, Blue, Blue, Sparkle, Blue, Sparkle, Sparkle, Green, B~
+## $ color_2 &lt;fct&gt; NA, Moldy Book, NA, Moldy Book, Moldy Book, Honey Bee, Moldy B~
+## $ color_3 &lt;fct&gt; NA, Apple Core Brown, NA, Apple Core Brown, NA, NA, NA, NA, NA~
+## $ color_4 &lt;fct&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~</code></pre>
+<p>So all students pick at least one color, some pick two, but relatively few pick three or four. One thing we might want to know is the first color selected by respondent? That’s relatively easy:</p>
+<pre class="r"><code>dat %&gt;% count(color_1)</code></pre>
+<pre><code>## # A tibble: 8 x 2
+##   color_1              n
+##   &lt;fct&gt;            &lt;int&gt;
+## 1 Blue               233
+## 2 Green              134
+## 3 Yellow              14
+## 4 Sparkle            189
+## 5 Apple Core Brown     6
+## 6 Honey Bee           13
+## 7 Moldy Book          42
+## 8 &lt;NA&gt;               309</code></pre>
+<p>But this only tells us the first color selected, not how many times a color was selected. What if we want to count all the instances where “Moldy Book” was selected, across columns? Or getting a more succinct answer for all colors? Because these are not ordered in any way, and the respondent wasn’t asked for an ordered preference, we need to count across the variables.</p>
+<p>We can use <code>tidyr</code> for a quick solution:</p>
+<pre class="r"><code>library(tidyr)
+
+dat %&gt;%
+  gather(key, value, na.rm = TRUE) %&gt;%
+  count(value)</code></pre>
+<pre><code>## Warning: attributes are not identical across measure variables;
+## they will be dropped</code></pre>
+<pre><code>## # A tibble: 7 x 2
+##   value                n
+##   &lt;chr&gt;            &lt;int&gt;
+## 1 Apple Core Brown    78
+## 2 Blue               233
+## 3 Green              134
+## 4 Honey Bee           32
+## 5 Moldy Book         222
+## 6 Sparkle            230
+## 7 Yellow              38</code></pre>
+<p>Good thing we checked! It turns out that Sparkle and Moldy Book are basically just as popular as Blue! If we had stopped with just checking the first color picked, our inference for color preference would have been way off.</p>
+</div>
 
     </div>
 
@@ -754,7 +792,17 @@ This is an embedded <a target="_blank" href="https://office.com">Microsoft Offic
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/bwc/">BWC</a>
+  <a class="badge badge-light" href="/tag/demo/">Demo</a>
+  
+  <a class="badge badge-light" href="/tag/r-markdown/">R Markdown</a>
+  
+  <a class="badge badge-light" href="/tag/qualtrics/">qualtrics</a>
+  
+  <a class="badge badge-light" href="/tag/stats/">stats</a>
+  
+  <a class="badge badge-light" href="/tag/survey/">survey</a>
+  
+  <a class="badge badge-light" href="/tag/research/">research</a>
   
 </div>
 
@@ -771,7 +819,7 @@ This is an embedded <a target="_blank" href="https://office.com">Microsoft Offic
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://ianadamsresearch.com/post/powerpoint-embed-testing/&amp;text=The%20Effect%20of%20Body-Worn%20Camera%20Activation%20and%20Auditing%20Policies%20on%20Perceptions%20of%20Monitoring%20Fairness" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://ianadamsresearch.com/post/counting-select-all-that-apply-questions-in-qualtrics-using-r/&amp;text=Counting%20&amp;#34;Select%20All%20That%20Apply&amp;#34;%20Questions%20in%20Qualtrics" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -784,7 +832,7 @@ This is an embedded <a target="_blank" href="https://office.com">Microsoft Offic
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://ianadamsresearch.com/post/powerpoint-embed-testing/&amp;t=The%20Effect%20of%20Body-Worn%20Camera%20Activation%20and%20Auditing%20Policies%20on%20Perceptions%20of%20Monitoring%20Fairness" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://ianadamsresearch.com/post/counting-select-all-that-apply-questions-in-qualtrics-using-r/&amp;t=Counting%20&amp;#34;Select%20All%20That%20Apply&amp;#34;%20Questions%20in%20Qualtrics" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -797,7 +845,7 @@ This is an embedded <a target="_blank" href="https://office.com">Microsoft Offic
       
       
       <li>
-        <a href="mailto:?subject=The%20Effect%20of%20Body-Worn%20Camera%20Activation%20and%20Auditing%20Policies%20on%20Perceptions%20of%20Monitoring%20Fairness&amp;body=https://ianadamsresearch.com/post/powerpoint-embed-testing/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Counting%20&amp;#34;Select%20All%20That%20Apply&amp;#34;%20Questions%20in%20Qualtrics&amp;body=https://ianadamsresearch.com/post/counting-select-all-that-apply-questions-in-qualtrics-using-r/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -810,7 +858,7 @@ This is an embedded <a target="_blank" href="https://office.com">Microsoft Offic
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://ianadamsresearch.com/post/powerpoint-embed-testing/&amp;title=The%20Effect%20of%20Body-Worn%20Camera%20Activation%20and%20Auditing%20Policies%20on%20Perceptions%20of%20Monitoring%20Fairness" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://ianadamsresearch.com/post/counting-select-all-that-apply-questions-in-qualtrics-using-r/&amp;title=Counting%20&amp;#34;Select%20All%20That%20Apply&amp;#34;%20Questions%20in%20Qualtrics" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -823,7 +871,7 @@ This is an embedded <a target="_blank" href="https://office.com">Microsoft Offic
       
       
       <li>
-        <a href="whatsapp://send?text=The%20Effect%20of%20Body-Worn%20Camera%20Activation%20and%20Auditing%20Policies%20on%20Perceptions%20of%20Monitoring%20Fairness%20https://ianadamsresearch.com/post/powerpoint-embed-testing/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Counting%20&amp;#34;Select%20All%20That%20Apply&amp;#34;%20Questions%20in%20Qualtrics%20https://ianadamsresearch.com/post/counting-select-all-that-apply-questions-in-qualtrics-using-r/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -836,7 +884,7 @@ This is an embedded <a target="_blank" href="https://office.com">Microsoft Offic
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://ianadamsresearch.com/post/powerpoint-embed-testing/&amp;title=The%20Effect%20of%20Body-Worn%20Camera%20Activation%20and%20Auditing%20Policies%20on%20Perceptions%20of%20Monitoring%20Fairness" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://ianadamsresearch.com/post/counting-select-all-that-apply-questions-in-qualtrics-using-r/&amp;title=Counting%20&amp;#34;Select%20All%20That%20Apply&amp;#34;%20Questions%20in%20Qualtrics" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1002,15 +1050,15 @@ This is an embedded <a target="_blank" href="https://office.com">Microsoft Offic
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/counting-select-all-that-apply-questions-in-qualtrics-using-r/">Counting &#34;Select All That Apply&#34; Questions in Qualtrics</a></li>
-      
       <li><a href="/post/developing-race-and-gender-estimates-for-us-law-enforcement-leadership/">Developing Race and Gender Estimates for US Law Enforcement Leadership</a></li>
-      
-      <li><a href="/post/website-migrated/">Website migrated</a></li>
       
       <li><a href="/post/tidy-stm/tidying-stm-with-tidytext/">Tidying STM with tidytext</a></li>
       
+      <li><a href="/post/qualtrics/randomizing-vignettes-in-survey-research-with-qualtrics/">Randomizing Vignette Factorial Designs in Survey Research with Qualtrics</a></li>
+      
       <li><a href="/post/markdown-testing/testing-netlify-hosting-with-r-markdown/">Testing Netlify hosting with R Markdown</a></li>
+      
+      <li><a href="/courses/pubpl-6002/which-model/">Which Model do I use?</a></li>
       
     </ul>
   </div>
