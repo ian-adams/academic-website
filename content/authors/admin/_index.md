@@ -47,10 +47,8 @@ superuser: true
 title: Ian T. Adams
 ---
 
-I am a Ph.D. candidate in Political Science at the University of Utah. I study public administration, policing, and emotional labor theory. I am particularly interested in the consequences of work-place surveillance on front-line public employees. That line of research has been strongly motivated by the [example of body-worn cameras in policing](https://scholars.org/contribution/need-nuanced-research-uses-and-misuses-body-worn-police-cameras).
+Ian T. Adams is a Ph.D. Candidate in the Department of Political Science at the University of Utah, and researches at the nexus of policing, policy, and technology, with a specific interest in body-worn cameras. Adams has [over twenty peer-reviewed publications](https://scholar.google.com/citations?user=g9lY5RUAAAAJ&hl=en) on these and related topics, and his work has been published in the top general interest journals of both criminal justice and public administration, including [*Justice Quarterly*](http://www.tandfonline.com/doi/abs/10.1080/07418825.2019.1679864) and [*Public Administration Review*](https://doi.org/10.1111/puar.13339). 
 
-I am a cross-disciplinary scholar, and strive to produce original research with practical value. My work improves the lives of the men and women of law enforcement and the communities they serve. I have been honored to be recognized as a 2018 American Society of Public Administration Founders’ Fellow, and a 2020 doctoral fellow of the Academy of Criminal Justice Sciences. 
-
-My current CV can be found in the menu above, or the direct link below. Please use the Google Scholar, ResearchGate, or CV options (the icons under my picture will take you directly there!) to find links to publications and other materials. I'm always happy to provide a full-text copy of any research as well, just email me. Thanks for dropping by!
+His research has been featured in news articles including at the [*Washington Post*](https://www.washingtonpost.com/nation/2021/10/02/police-firefighters-resist-vaccination/), and his public-facing communication has appeared in multiple written, radio, and podcast outlets. Adams is a 2018 American Society of Public Administration Founders’ Fellow, and a 2020/2021 doctoral fellow of the Academy of Criminal Justice Sciences.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/cv.pdf" "newtab" >}}CV{{< /staticref >}}.
