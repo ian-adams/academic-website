@@ -14,12 +14,10 @@ education:
 email: "ian.adams@utah.edu"
 highlight_name: true
 interests:
-- Public Administration
-- Emotional Labor
-- Policing
-- Body-Worn Cameras
+- Criminal Justice Policy
+- Human Capital in Policing
+- Body-Worn Cameras & Technology 
 - Survey Methodology
-- Language Topic Modeling
 organizations:
 - name: University of Utah
   url: https://poli-sci.utah.edu/
