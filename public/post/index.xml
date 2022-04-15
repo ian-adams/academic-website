@@ -2563,7 +2563,7 @@ plot(predict)&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This is a post to breadcrumb the migration of the previous website. Turns out that updating the hugo package, the blogdown package, the academic theme, and installing the Rstudio preview build all in the same day was a good way to blow up the previous iteration.&lt;/p&gt;
 &lt;p&gt;Note that because of a change in the file structure under the new &lt;code&gt;hugo&lt;/code&gt;, the image links from previous posts are going to break. When I have the time and interest, I’ll go back and fix.&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The ease with which I can blow up a hugo/academic/blogdown website is equalled only by the utter incompetence I am capable of when trying to fix it.&lt;/p&gt;&amp;mdash; Ian T. Adams (@LiminalMori) &lt;a href=&#34;https://twitter.com/LiminalMori/status/1344353682591084544?ref_src=twsrc%5Etfw&#34;&gt;December 30, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The ease with which I can blow up a hugo/academic/blogdown website is equalled only by the utter incompetence I am capable of when trying to fix it.&lt;/p&gt;&amp;mdash; Ian T. Adams (@ian_t_adams) &lt;a href=&#34;https://twitter.com/ian_t_adams/status/1344353682591084544?ref_src=twsrc%5Etfw&#34;&gt;December 30, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 </description>
