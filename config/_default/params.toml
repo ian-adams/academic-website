@@ -88,16 +88,16 @@ show_related = {docs = true, page = false, post = true, project = true, publicat
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "ian.adams@utah.edu"
+email = "ian.adams@sc.edu"
 phone = ""
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "", city = "Salt Lake City", region = "UT", postcode = "84103", country = "United States", country_code = "US"}
+address = {street = "", city = "Columbia", region = "SC", postcode = "29205", country = "United States", country_code = "US"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "40.7635", longitude = "-111.84436"}
+coordinates = {latitude = "33.993788", longitude = " -81.029587"}
 
 # Directions for visitors to locate you.
 directions = "Email me and we'll meet up :)"
