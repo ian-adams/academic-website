@@ -1,0 +1,56 @@
+---
+title: 'Defanged (preprint)'
+author: 'Ian T. Adams, Scott M. Mourtgos, Kyle D. McLean, Geoffrey P. Alpert'
+date: '2022-09-15'
+slug: defanged-preprint
+categories: []
+tags: []
+authors: []
+doi: 'https://doi.org/10.31219/osf.io/gkq42'
+publishDate: '2022-09-15T09:33:27-04:00'
+publication_types:
+  - '3'
+publication: ''
+publication_short: ''
+abstract: ''
+summary: ''
+featured: no
+draft: no
+url_pdf: "https://ianadamsresearch.com/pdfs/UoF_ordinality_CJPR_preprint.pdf"
+url_code: ~
+url_dataset: ~
+url_poster: ~
+url_project: ~
+url_slides: ~
+url_source: ~
+url_video: ~
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+slides: ''
+---
+
+## Important links
+
+- [OSF (preprint)](https://osf.io/gkq42/)
+- [Preprint hosted here](/pdfs/defanged_preprint.pdf)
+
+
+
+## BibTeX citation
+
+```bibtex
+
+@misc{adams_mourtgos_mclean_alpert_2022,
+ title={Defanged},
+ url={osf.io/gkq42},
+ DOI={10.31219/osf.io/gkq42},
+ publisher={OSF Preprints},
+ author={Adams, Ian T and Mourtgos, Scott M and McLean, Kyle and Alpert, Geoffrey P},
+ year={2022},
+ month={Sep}
+}
+```
+

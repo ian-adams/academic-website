@@ -5,12 +5,43 @@
     <link>https://ianadamsresearch.com/</link>
       <atom:link href="https://ianadamsresearch.com/index.xml" rel="self" type="application/rss+xml" />
     <description>Ian T. Adams</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2022`</copyright><lastBuildDate>Tue, 31 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2022`</copyright><lastBuildDate>Thu, 15 Sep 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ianadamsresearch.com/media/android-chrome-512x512.png</url>
       <title>Ian T. Adams</title>
       <link>https://ianadamsresearch.com/</link>
     </image>
+    
+    <item>
+      <title>Defanged (preprint)</title>
+      <link>https://ianadamsresearch.com/publication/defanged-preprint/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/defanged-preprint/</guid>
+      <description>
+
+
+&lt;div id=&#34;important-links&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Important links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://osf.io/gkq42/&#34;&gt;OSF (preprint)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ianadamsresearch.com/pdfs/defanged_preprint.pdf&#34;&gt;Preprint hosted here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bibtex-citation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;BibTeX citation&lt;/h2&gt;
+&lt;pre class=&#34;bibtex&#34;&gt;&lt;code&gt;
+@misc{adams_mourtgos_mclean_alpert_2022,
+ title={Defanged},
+ url={osf.io/gkq42},
+ DOI={10.31219/osf.io/gkq42},
+ publisher={OSF Preprints},
+ author={Adams, Ian T and Mourtgos, Scott M and McLean, Kyle and Alpert, Geoffrey P},
+ year={2022},
+ month={Sep}
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Challenging the Ordinality of Police Use-of-Force Policy</title>
