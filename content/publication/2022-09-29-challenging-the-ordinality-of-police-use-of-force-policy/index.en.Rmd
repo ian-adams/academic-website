@@ -36,16 +36,7 @@ slides: ''
 
 - [Download pre-print here](https://doi.org/10.1177/08874034211038346)
 - [Official Journal Link](#)
-- [GitHub repository](#)
 
-## Abstract
-
-Abstract here
-
-
-## Important figure
-
-Key figure here
 
 
 ## BibTeX citation
