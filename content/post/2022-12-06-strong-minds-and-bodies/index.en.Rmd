@@ -3,7 +3,7 @@ title: Strong Minds and Bodies
 author: Ian Adams
 date: '2022-12-06'
 slug: strong-minds-and-bodies
-categories: []
+categories: [academia, fitness]
 tags: []
 subtitle: ''
 summary: ''
