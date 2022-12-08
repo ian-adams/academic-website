@@ -20,7 +20,7 @@ image:
 projects: []
 ---
 
-*Note: GPT3 is relatively highly skilled in producing essays. Question though - how is it at generating fiction? The answer - not as good. What will this look like in a year? In five years? If I were a creative writer, I wouldn't be so sure about the primacy of the human mind.*
+*Note: GPT3 is relatively highly skilled in producing essays. Question though - how is it at generating fiction? The answer - not as good. What will this look like in a year? In five years? If I were a creative writer, I wouldn't be so sure about the primacy of the human mind. Nonetheless, I think our literature communities are safe for a while yet. Teachers in the grade schools might be surprised at what their students can turn in tho - I know my own kids are definitely aware of ChatGPT.*
 
 **Summary**
 
