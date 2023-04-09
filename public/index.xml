@@ -5,12 +5,26 @@
     <link>https://ianadamsresearch.com/</link>
       <atom:link href="https://ianadamsresearch.com/index.xml" rel="self" type="application/rss+xml" />
     <description>Ian T. Adams</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2023`</copyright><lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2023`</copyright><lastBuildDate>Sun, 09 Apr 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ianadamsresearch.com/media/android-chrome-512x512.png</url>
       <title>Ian T. Adams</title>
       <link>https://ianadamsresearch.com/</link>
     </image>
+    
+    <item>
+      <title>Agency-level fatal police shootings over time</title>
+      <link>https://ianadamsresearch.com/post/agency-level-fatal-police-shootings-over-time/</link>
+      <pubDate>Sun, 09 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/post/agency-level-fatal-police-shootings-over-time/</guid>
+      <description>
+
+
+&lt;!-- ## Import --&gt;
+&lt;!-- ## Shiny version of the &#34;by agency over time&#34; above --&gt;
+&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/agency-level-fatal-police-shootings-over-time/index.en_files/figure-html/remedy004-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>LEMAS 2016 and 2020 Turnover Comparison</title>
