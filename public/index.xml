@@ -20,9 +20,8 @@
       <description>
 
 
-&lt;!-- ## Import --&gt;
-&lt;!-- ## Shiny version of the &#34;by agency over time&#34; above --&gt;
-&lt;p&gt;&lt;img src=&#34;https://ianadamsresearch.com/post/agency-level-fatal-police-shootings-over-time/index.en_files/figure-html/remedy004-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;iframe height=&#34;400&#34; width=&#34;100%&#34; frameborder=&#34;no&#34; src=&#34;http://ian-adams.shinyapps.io/agency-level-fatal-OIS-interact?_ga=2.130262031.1689258234.1681081673-2145317459.1681081673&#34;&gt;
+&lt;/iframe&gt;
 </description>
     </item>
     
