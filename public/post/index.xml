@@ -20,7 +20,9 @@
       <description>
 
 
-&lt;iframe height=&#34;400&#34; width=&#34;100%&#34; frameborder=&#34;no&#34; src=&#34;http://ian-adams.shinyapps.io/agency-level-fatal-OIS-interact?_ga=2.130262031.1689258234.1681081673-2145317459.1681081673&#34;&gt;
+&lt;p&gt;Dr. Justin Nix has been &lt;a href=&#34;https://github.com/jnixy/agency-level-fatal-OIS&#34;&gt;hard at work locating historical data&lt;/a&gt; for lethal police shootings in the United States. With his permission, the following tool allows you to see individual agencies in the dataset.&lt;/p&gt;
+&lt;p&gt;Several limitations are to be noted with this data, please see &lt;a href=&#34;https://jnix.netlify.app/post/post23-are-ois-increasing/&#34;&gt;his post explaining the project for more&lt;/a&gt;.&lt;/p&gt;
+&lt;iframe height=&#34;400&#34; width=&#34;100%&#34; frameborder=&#34;no&#34; src=&#34;https://ian-adams.shinyapps.io/visualize_agency_OIS_time/?_ga=2.133213966.1689258234.1681081673-2145317459.1681081673&#34;&gt;
 &lt;/iframe&gt;
 </description>
     </item>
