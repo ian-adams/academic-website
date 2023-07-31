@@ -100,11 +100,11 @@ address = {street = "", city = "Columbia", region = "SC", postcode = "29205", co
 coordinates = {latitude = "33.993788", longitude = " -81.029587"}
 
 # Directions for visitors to locate you.
-directions = "Email me and we'll meet up :)"
+directions = "Email me and we'll meet up"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.
-office_hours = ["Anytime, anywhere"]
+office_hours = []
 
 # Enter an optional link for booking appointments (e.g. calendly.com).
 appointment_url = ""
