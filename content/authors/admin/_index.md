@@ -1,5 +1,5 @@
 ---
-bio: My research interests include human capital in criminal justice, policing, and criminal justice policy.
+title: "Ian T. Adams, Ph.D."
 education:
   courses:
   - course: Ph.D. Political Science
@@ -11,17 +11,16 @@ education:
   - course: BS in Marketing
     institution: University of Utah
     year: 2003
-email: "ian.adams@sc.edu"
+email: ian.adams@sc.edu
 highlight_name: true
 interests:
 - Police Practices & Behavior
 - Human Capital in Policing
-- Body-Worn Cameras & Technology 
+- "Body-Worn Cameras & Technology"
 - Artificial Intelligence in Policing
 organizations:
 - name: University of South Carolina
   url: https://www.sc.edu/study/colleges_schools/artsandsciences/criminology_and_criminal_justice/our_people/directory/adams_ian.php
-  
 role: Assistant Professor, Department of Criminology & Criminal Justice
 social:
 - icon: envelope
@@ -30,22 +29,23 @@ social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/ian_t_adams
-- icon: graduation-cap
+- icon: "graduation-cap"
   icon_pack: fas
   link: https://scholar.google.com/citations?user=g9lY5RUAAAAJ&hl
 - icon: github
   icon_pack: fab
-  link: https://github.com/ian-adams
+  link: "https://github.com/ian-adams"
 - icon: researchgate
   icon_pack: ai
   link: https://www.researchgate.net/profile/Ian_Adams11
 superuser: true
-title: Ian T. Adams, Ph.D.
+bio: My research interests include human capital in criminal justice, policing, and
+  criminal justice policy.
 ---
 
 Ian T. Adams is an [Assistant Professor in the Department of Criminology & Criminal Justice](https://www.sc.edu/study/colleges_schools/artsandsciences/criminology_and_criminal_justice/our_people/directory/adams_ian.php) at the University of South Carolina. His applied research focuses on the practical concerns of police practitioners, with a specific interest in technology, policy, personnel, and use-of-force in law enforcement. 
 
-Dr. Adams has [over forty peer-reviewed publications](https://scholar.google.com/citations?user=g9lY5RUAAAAJ&hl=en) on these and related topics, and his work has been published in the top general interest journals of both criminal justice and public administration, including *Justice Quarterly*, *Criminology & Public Policy*, and *Public Administration Review*. 
+Dr. Adams has [over forty peer-reviewed publications](https://scholar.google.com/citations?user=g9lY5RUAAAAJ&hl=en) on these and related topics, and his work has been published in the top general interest journals of both criminal justice and public administration, including *Justice Quarterly*, *Criminology & Public Policy*, and *Public Administration Review*. He is the recipient of the [2024 Early Career Award](https://ascpolicing.org/awards/) from the American Society of Criminology, Division of Policing.
 
 Dr. Adams is the co-founder of the [Police Accountability and Policy Evaluation Research (PAPER) Lab](https://paper-lab.org/), and senior faculty of the [Governance & Responsible AI Laboratory (GRAIL)](https://www.grail-lab.org/). He is committed to the goal of marrying police practice and high-quality scientific evidence, an aim that is supported by his appointment as a [2023 National Institute of Justice LEADS Academic](https://nij.ojp.gov/bio/ian-adams). In sum, he and his colleagues have secured more than $2.5 million in research grants from both governmental and philanthropic organizations. 
 
