@@ -51,6 +51,6 @@ Dr. Adams is the co-founder of the [Police Accountability and Policy Evaluation 
 
 Dr. Adams serves as a Senior Research Advisor for the [Excellence in Policing and Public Safety (EPPS)](https://sc.edu/study/colleges_schools/law/centers/epps/epps_team.php) program at the University of South Carolina’s Joseph F. Rice School of Law, an affiliate of the [Police Staffing Observatory](https://cj.msu.edu/research-excellence/pso/pso-team.html) at Michigan State University, and a managing editor of [*Police Practice & Research: An International Journal*](https://www.tandfonline.com/action/journalInformation?show=editorialBoard&journalCode=gppr20). In addition, he has consulted as a policing expert across the US and internationally, including Australia and Europe.
 
-His research has been featured in news articles including at the *Washington Post*, *New York Times*, and *NPR*, among others, and his public-facing communication has appeared in multiple written, radio, and podcast outlets. 
+His research and comments are routinely featured in media coverage, including at the *Washington Post*, *New York Times*, and *NPR*, among others, and his public-facing communication has appeared in multiple written, radio, and podcast outlets. 
 
 {{< icon name="download" pack="fas" >}} Download his {{< staticref "media/cv.pdf" "newtab" >}}CV{{< /staticref >}} here.
