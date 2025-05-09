@@ -23,9 +23,9 @@ organizations:
   url: https://www.sc.edu/study/colleges_schools/artsandsciences/criminology_and_criminal_justice/our_people/directory/adams_ian.php
 role: Assistant Professor, Department of Criminology & Criminal Justice
 social:
-- icon: envelope
-  icon_pack: fas
-  link: /#contact
+# - icon: envelope
+#   icon_pack: fas
+#   link: /#contact
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/ian_t_adams
@@ -39,8 +39,7 @@ social:
   icon_pack: ai
   link: https://www.researchgate.net/profile/Ian_Adams11
 superuser: true
-bio: My research interests include human capital in criminal justice, policing, and
-  criminal justice policy.
+bio: My research interests center around policing policy, people, behavior, and technology.
 ---
 
 Ian T. Adams is a leading scholar of policing. He is an [Assistant Professor in the Department of Criminology & Criminal Justice](https://www.sc.edu/study/colleges_schools/artsandsciences/criminology_and_criminal_justice/our_people/directory/adams_ian.php) at the University of South Carolina. His applied research focuses on the practical concerns of police practitioners, with a specific interest in technology, policy, personnel, and use-of-force in law enforcement. 
