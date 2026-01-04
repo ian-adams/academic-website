@@ -42,7 +42,7 @@ Additionally, this data represents **descriptive statistics only** and cannot es
 
 ## Automatic Data Updates
 
-This post automatically downloads the latest data from [Mapping Police Violence](https://mappingpoliceviolence.org/) whenever the website is rebuilt. The visualizations below will update as new data becomes available.
+This post automatically downloads the latest data from [Mapping Police Violence](https://mappingpoliceviolence.us/) whenever the website is rebuilt. The visualizations below will update as new data becomes available.
 
 ```{r load-packages}
 library(tidyverse)
@@ -633,7 +633,7 @@ if ("median_household_income_acs_census_tract" %in% names(df_shootings)) {
 
 ### Primary Data Source
 
-All data comes from [Mapping Police Violence](https://mappingpoliceviolence.org/), which aggregates information from:
+All data comes from [Mapping Police Violence](https://mappingpoliceviolence.us/), which aggregates information from:
 
 - **Fatal Encounters** - A database documenting all deaths through police interaction
 - **The Washington Post's Fatal Force database** - Tracking fatal police shootings
@@ -641,7 +641,7 @@ All data comes from [Mapping Police Violence](https://mappingpoliceviolence.org/
 
 ### Update Frequency
 
-This blog post **automatically downloads the latest MPV data whenever the website is rebuilt**. The database is continuously updated as new incidents are reported and verified.
+This blog post **automatically downloads the latest MPV data whenever my website is rebuilt**. The database is continuously updated as new incidents are reported and verified.
 
 ### Important Methodological Considerations
 
