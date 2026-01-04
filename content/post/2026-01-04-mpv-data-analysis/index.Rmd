@@ -38,6 +38,10 @@ Therefore, **these numbers undercount the total instances of lethal force used b
 
 Additionally, this data represents **descriptive statistics only** and cannot establish causal relationships without additional controls for local crime rates, police deployment patterns, population demographics, socioeconomic factors, and jurisdictional policies.
 
+This is a **vibe-coded prototype**: a rapid, exploratory build to see how far one can get in standing up a public-data dashboard with automated ingestion and standard visual analytics.
+
+**Critical disclaimer:** I have not independently verified the MPV data, nor have I formally audited or validated my cleaning and harmonization routines. Treat everything here as exploratory and illustrative. The outputs are not suitable for professional, policy, legal, journalistic, or operational use, and should not be relied upon as an authoritative accounting of levels, rates, rankings, or trends.
+
 ---
 
 ## Automatic Data Updates
@@ -672,4 +676,4 @@ For an interactive version of this analysis with real-time filtering and explora
 
 *Last updated: `r formatted_date`*
 
-*This analysis is provided for research and educational purposes. The data should be interpreted within the broader context of research on policing, public safety, and racial justice.*
+*This analysis is provided for research and educational purposes. The data should be interpreted within the broader context of research on policing.*
