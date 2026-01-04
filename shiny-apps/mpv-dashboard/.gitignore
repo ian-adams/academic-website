@@ -1,0 +1,14 @@
+# Data files (auto-downloaded by app)
+Data/
+*.xlsx
+*.csv
+
+# R/RStudio files
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Shiny-specific
+rsconnect/

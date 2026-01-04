@@ -1,0 +1,94 @@
+---
+title: "Interactive Dashboard for Mapping Police Violence Data"
+subtitle: 'Exploring Patterns in Fatal Police Encounters'
+date: '2026-01-04'
+authors: []
+tags: [police, data visualization, shiny]
+categories: [R, Police]
+summary: 'An interactive Shiny dashboard for exploring temporal, demographic, and geographic patterns in the Mapping Police Violence dataset.'
+lastmod: '2026-01-04'
+featured: yes
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+I've developed an interactive dashboard to explore data from [Mapping Police Violence](https://mappingpoliceviolence.org/), a comprehensive database tracking police killings in the United States. The dashboard automatically pulls the latest data and provides multiple analytical views to examine temporal trends, demographic patterns, and geographic distributions.
+
+## Dashboard Features
+
+The **MPV Analytical Engine** includes several key analytical modules:
+
+### Overview Panel
+- Real-time statistics including total incidents, per capita rates, and demographic breakdowns
+- Cumulative trajectory visualization comparing year-over-year trends
+- Temporal heatmaps showing patterns by day and month
+- Day-of-week analysis
+
+### Demographics
+- Racial and ethnic distribution of victims
+- Age distribution and age-by-race breakdowns
+- Analysis of unarmed victims by demographic group
+
+### Behavioral Context
+- Armed/unarmed status of victims
+- Types of alleged weapons
+- Fleeing status at time of incident
+- Mental health-related encounters over time
+- Body camera adoption trends
+
+### Geographic Analysis
+- National map of incidents
+- State and city-level breakdowns
+- Top jurisdictions by incident count
+
+### Accountability
+- Criminal charges filed against officers over time
+- Neighborhood income disparities
+
+## Interactive Dashboard
+
+<iframe src="https://iadams.shinyapps.io/Shiny_police_killings/" width="100%" height="800px" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+
+**Note:** The dashboard may take a moment to load as it downloads and processes the latest data from Mapping Police Violence.
+
+[Click here to open the dashboard in a new window](https://iadams.shinyapps.io/Shiny_police_killings/)
+
+## Important Methodological Notes
+
+This dashboard presents **descriptive statistics only**. The data shows observed patterns but cannot establish causal relationships without additional controls for:
+
+- Local crime rates
+- Police deployment density
+- Population demographics
+- Socioeconomic factors
+- Jurisdictional policies
+
+The dashboard uses US Census population projections (2013-2025) to calculate per capita rates. All racial categorizations follow the source data from Mapping Police Violence.
+
+## Data Source
+
+Data is automatically synchronized from [Mapping Police Violence](https://mappingpoliceviolence.org/), which aggregates information from:
+- Fatal Encounters
+- The Washington Post's Fatal Force database
+- Additional cases identified through crowdsourcing and research
+
+## Technical Details
+
+The dashboard is built using:
+- **R Shiny** with the `bslib` framework for modern UI components
+- **tidyverse** for data manipulation
+- **plotly** for interactive visualizations
+- **sf** and **rnaturalearth** for geographic mapping
+
+The app automatically downloads fresh data daily and includes robust data cleaning pipelines to standardize variables across time periods.
+
+## Code Availability
+
+The complete source code for this dashboard is available in the [academic-website repository](https://github.com/ian-adams/academic-website/tree/master/shiny-apps/mpv-dashboard).
+
+---
+
+*This dashboard is provided for research and educational purposes. The data presented reflects reported incidents and should be interpreted within the context of broader research on policing, public safety, and racial justice.*
