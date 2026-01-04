@@ -15,6 +15,7 @@ image:
 projects: []
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <div id="important-data-limitations" class="section level2">
@@ -27,6 +28,8 @@ projects: []
 </ul>
 <p>Therefore, <strong>these numbers undercount the total instances of lethal force used by police.</strong> When interpreting these statistics, it's critical to remember that we are looking at deaths only, not all incidents where officers used potentially lethal force.</p>
 <p>Additionally, this data represents <strong>descriptive statistics only</strong> and cannot establish causal relationships without additional controls for local crime rates, police deployment patterns, population demographics, socioeconomic factors, and jurisdictional policies.</p>
+<p>This is a <strong>vibe-coded prototype</strong>: a rapid, exploratory build to see how far one can get in standing up a public-data dashboard with automated ingestion and standard visual analytics.</p>
+<p><strong>Critical disclaimer:</strong> I have not independently verified the MPV data, nor have I formally audited or validated my cleaning and harmonization routines. Treat everything here as exploratory and illustrative. The outputs are not suitable for professional, policy, legal, journalistic, or operational use, and should not be relied upon as an authoritative accounting of levels, rates, rankings, or trends.</p>
 </div>
 
 <hr/>
@@ -48,24 +51,99 @@ projects: []
 
 <div id="static-visualizations" class="section level2">
 <h2>Static Visualizations</h2>
-<p><em><strong>Note:</strong> The static visualizations for this post will appear here after building the site locally with blogdown. The analysis will include:</em></p>
-<ul>
-<li>Cumulative trends over time</li>
-<li>Demographic patterns by race, age, and ethnicity</li>
-<li>Behavioral context (armed status, mental health, etc.)</li>
-<li>Temporal patterns (seasonal and daily)</li>
-<li>Geographic distribution maps</li>
-<li>Per capita analysis</li>
-<li>Accountability metrics</li>
-</ul>
-<p><em>To generate these visualizations, build the site locally using:</em></p>
-<pre><code>blogdown::build_site()</code></pre>
+
+<h3>Cumulative Trends</h3>
+<p>These charts show the cumulative count of police killings throughout each year, allowing year-over-year comparison.</p>
+
+<div class="figure">
+<img src="{{< blogdown/postref >}}index_files/figure-html/cumulative-all-deaths-1.png" alt="Cumulative count of all police killings by method (gunshot, taser, vehicle, restraint, etc.)" width="672" />
+<p class="caption">Cumulative count of all police killings by method</p>
 </div>
+
+<div class="figure">
+<img src="{{< blogdown/postref >}}index_files/figure-html/cumulative-shootings-1.png" alt="Cumulative count of fatal police shootings only" width="672" />
+<p class="caption">Cumulative count of fatal police shootings only</p>
+</div>
+
+<hr/>
+
+<h3>Demographic Patterns</h3>
+
+<h4>Race and Ethnicity</h4>
+
+<div class="figure">
+<img src="{{< blogdown/postref >}}index_files/figure-html/race-distribution-1.png" alt="Distribution of fatal police shootings by race/ethnicity" width="672" />
+<p class="caption">Distribution of fatal police shootings by race/ethnicity</p>
+</div>
+
+<div class="figure">
+<img src="{{< blogdown/postref >}}index_files/figure-html/race-by-year-1.png" alt="Fatal police shootings by year and race" width="672" />
+<p class="caption">Fatal police shootings by year and race, with percentage of unknown race highlighted</p>
+</div>
+
+<h4>Age Distribution</h4>
+
+<div class="figure">
+<img src="{{< blogdown/postref >}}index_files/figure-html/age-distribution-1.png" alt="Age distribution of police shooting victims" width="672" />
+<p class="caption">Age distribution of police shooting victims</p>
+</div>
+
+<div class="figure">
+<img src="{{< blogdown/postref >}}index_files/figure-html/age-race-distribution-1.png" alt="Age distribution by race" width="672" />
+<p class="caption">Age distribution by race for the three largest racial groups</p>
+</div>
+
+<hr/>
+
+<h3>Behavioral Context</h3>
+
+<h4>Armed Status</h4>
+
+<div class="figure">
+<img src="{{< blogdown/postref >}}index_files/figure-html/armed-status-1.png" alt="Armed/unarmed status" width="672" />
+<p class="caption">Armed/unarmed status of police shooting victims</p>
+</div>
+
+<div class="figure">
+<img src="{{< blogdown/postref >}}index_files/figure-html/unarmed-by-race-1.png" alt="Percentage unarmed by race" width="672" />
+<p class="caption">Percentage of victims who were unarmed, by race</p>
+</div>
+
+<h4>Mental Health Context</h4>
+
+<div class="figure">
+<img src="{{< blogdown/postref >}}index_files/figure-html/mental-health-trend-1.png" alt="Mental health trend" width="672" />
+<p class="caption">Percentage of victims with documented mental illness symptoms over time</p>
+</div>
+
+<hr/>
+
+<h3>Temporal Patterns</h3>
+
+<h4>When Do Shootings Occur?</h4>
+
+<div class="figure">
+<img src="{{< blogdown/postref >}}index_files/figure-html/seasonal-heatmap-1.png" alt="Seasonal heatmap" width="672" />
+<p class="caption">Heatmap showing daily patterns of police shootings across the calendar year</p>
+</div>
+
+<div class="figure">
+<img src="{{< blogdown/postref >}}index_files/figure-html/day-of-week-1.png" alt="Day of week distribution" width="672" />
+<p class="caption">Distribution of police shootings by day of week</p>
+</div>
+
+</div>
+
+<hr/>
 
 <div id="data-source" class="section level2">
 <h2>Data Source</h2>
 <p>All data comes from <a href="https://mappingpoliceviolence.us/">Mapping Police Violence</a>, which aggregates information from Fatal Encounters, The Washington Post's Fatal Force database, and additional cases identified through crowdsourcing and independent research.</p>
+
+<h3>Related Resources</h3>
+<p>For an interactive version of this analysis with real-time filtering and exploration capabilities, see the <a href="/post/2026-01-04-mapping-police-violence-dashboard/">Interactive MPV Dashboard</a>.</p>
 </div>
 
 <hr/>
+
 <p><em>This analysis is provided for research and educational purposes. The data should be interpreted within the broader context of research on policing, public safety, and racial justice.</em></p>
