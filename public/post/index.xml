@@ -5,12 +5,111 @@
     <link>https://ianadamsresearch.com/post/</link>
       <atom:link href="https://ianadamsresearch.com/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2026`</copyright><lastBuildDate>Sun, 09 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2026`</copyright><lastBuildDate>Sun, 04 Jan 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ianadamsresearch.com/media/android-chrome-512x512.png</url>
       <title>Posts</title>
       <link>https://ianadamsresearch.com/post/</link>
     </image>
+    
+    <item>
+      <title>Interactive Dashboard for Mapping Police Violence Data</title>
+      <link>https://ianadamsresearch.com/post/2026-01-04-mapping-police-violence-dashboard/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/post/2026-01-04-mapping-police-violence-dashboard/</guid>
+      <description>
+
+
+&lt;p&gt;I’ve developed an interactive dashboard to explore data from &lt;a href=&#34;https://mappingpoliceviolence.org/&#34;&gt;Mapping Police Violence&lt;/a&gt;, a comprehensive database tracking police killings in the United States. The dashboard automatically pulls the latest data and provides multiple analytical views to examine temporal trends, demographic patterns, and geographic distributions.&lt;/p&gt;
+&lt;div id=&#34;dashboard-features&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Dashboard Features&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;MPV Analytical Engine&lt;/strong&gt; includes several key analytical modules:&lt;/p&gt;
+&lt;div id=&#34;overview-panel&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Overview Panel&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-time statistics including total incidents, per capita rates, and demographic breakdowns&lt;/li&gt;
+&lt;li&gt;Cumulative trajectory visualization comparing year-over-year trends&lt;/li&gt;
+&lt;li&gt;Temporal heatmaps showing patterns by day and month&lt;/li&gt;
+&lt;li&gt;Day-of-week analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;demographics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Demographics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Racial and ethnic distribution of victims&lt;/li&gt;
+&lt;li&gt;Age distribution and age-by-race breakdowns&lt;/li&gt;
+&lt;li&gt;Analysis of unarmed victims by demographic group&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;behavioral-context&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Behavioral Context&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Armed/unarmed status of victims&lt;/li&gt;
+&lt;li&gt;Types of alleged weapons&lt;/li&gt;
+&lt;li&gt;Fleeing status at time of incident&lt;/li&gt;
+&lt;li&gt;Mental health-related encounters over time&lt;/li&gt;
+&lt;li&gt;Body camera adoption trends&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;geographic-analysis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Geographic Analysis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;National map of incidents&lt;/li&gt;
+&lt;li&gt;State and city-level breakdowns&lt;/li&gt;
+&lt;li&gt;Top jurisdictions by incident count&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;accountability&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Accountability&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Criminal charges filed against officers over time&lt;/li&gt;
+&lt;li&gt;Neighborhood income disparities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interactive-dashboard&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Interactive Dashboard&lt;/h2&gt;
+&lt;iframe src=&#34;https://iadams.shinyapps.io/Shiny_police_killings/&#34; width=&#34;100%&#34; height=&#34;800px&#34; style=&#34;border: 1px solid #ccc; border-radius: 4px;&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The dashboard may take a moment to load as it downloads and processes the latest data from Mapping Police Violence.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://iadams.shinyapps.io/Shiny_police_killings/&#34;&gt;Click here to open the dashboard in a new window&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;important-methodological-notes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Important Methodological Notes&lt;/h2&gt;
+&lt;p&gt;This dashboard presents &lt;strong&gt;descriptive statistics only&lt;/strong&gt;. The data shows observed patterns but cannot establish causal relationships without additional controls for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Local crime rates&lt;/li&gt;
+&lt;li&gt;Police deployment density&lt;/li&gt;
+&lt;li&gt;Population demographics&lt;/li&gt;
+&lt;li&gt;Socioeconomic factors&lt;/li&gt;
+&lt;li&gt;Jurisdictional policies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The dashboard uses US Census population projections (2013-2025) to calculate per capita rates. All racial categorizations follow the source data from Mapping Police Violence.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-source&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Source&lt;/h2&gt;
+&lt;p&gt;Data is automatically synchronized from &lt;a href=&#34;https://mappingpoliceviolence.org/&#34;&gt;Mapping Police Violence&lt;/a&gt;, which aggregates information from:
+- Fatal Encounters
+- The Washington Post’s Fatal Force database
+- Additional cases identified through crowdsourcing and research&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;technical-details&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Technical Details&lt;/h2&gt;
+&lt;p&gt;The dashboard is built using:
+- &lt;strong&gt;R Shiny&lt;/strong&gt; with the &lt;code&gt;bslib&lt;/code&gt; framework for modern UI components
+- &lt;strong&gt;tidyverse&lt;/strong&gt; for data manipulation
+- &lt;strong&gt;plotly&lt;/strong&gt; for interactive visualizations
+- &lt;strong&gt;sf&lt;/strong&gt; and &lt;strong&gt;rnaturalearth&lt;/strong&gt; for geographic mapping&lt;/p&gt;
+&lt;p&gt;The app automatically downloads fresh data daily and includes robust data cleaning pipelines to standardize variables across time periods.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-availability&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Code Availability&lt;/h2&gt;
+&lt;p&gt;The complete source code for this dashboard is available in the &lt;a href=&#34;https://github.com/ian-adams/academic-website/tree/master/shiny-apps/mpv-dashboard&#34;&gt;academic-website repository&lt;/a&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;This dashboard is provided for research and educational purposes. The data presented reflects reported incidents and should be interpreted within the context of broader research on policing, public safety, and racial justice.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Agency-level fatal police shootings over time</title>
@@ -3412,6 +3511,92 @@ check_text(y)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;“…nope. Just another fucking suicide.”&lt;/p&gt;
 &lt;p&gt;“Yeah, figured. Alright, see you on the next one,” he said.&lt;/p&gt;
 &lt;p&gt;“Yup.”&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/readme/</guid>
+      <description>&lt;h1 id=&#34;mpv-data-analysis---auto-updating-blog-post&#34;&gt;MPV Data Analysis - Auto-Updating Blog Post&lt;/h1&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This blog post &lt;strong&gt;automatically updates&lt;/strong&gt; whenever the website is rebuilt. It downloads the latest data from Mapping Police Violence and regenerates all visualizations.&lt;/p&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;R Markdown&lt;/strong&gt;: The post is written in R Markdown (&lt;code&gt;index.Rmd&lt;/code&gt;), which contains both text and R code&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Automatic Download&lt;/strong&gt;: When the site builds, the R code downloads the latest MPV Excel file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Processing&lt;/strong&gt;: The code cleans and analyzes the data&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visualization Generation&lt;/strong&gt;: All charts are generated fresh with the latest data&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HTML Output&lt;/strong&gt;: The &lt;code&gt;.Rmd&lt;/code&gt; file is knitted to &lt;code&gt;index.html&lt;/code&gt;, which is then served by Hugo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;build-process&#34;&gt;Build Process&lt;/h2&gt;
+&lt;p&gt;When you rebuild your website (either locally or via Netlify):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Hugo/blogdown processes all &lt;code&gt;.Rmd&lt;/code&gt; files&lt;/li&gt;
+&lt;li&gt;The R code chunks execute in order&lt;/li&gt;
+&lt;li&gt;Fresh data is downloaded from: &lt;code&gt;https://mappingpoliceviolence.us/s/MPVDatasetDownload.xlsx&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Visualizations are created and embedded in the post&lt;/li&gt;
+&lt;li&gt;The HTML output includes the latest data and charts&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;
+&lt;h3 id=&#34;data-disclaimers&#34;&gt;Data Disclaimers&lt;/h3&gt;
+&lt;p&gt;The post includes prominent warnings that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This data captures &lt;strong&gt;killings only&lt;/strong&gt;, not all uses of lethal force&lt;/li&gt;
+&lt;li&gt;Most police shootings are survived, so these numbers undercount total incidents&lt;/li&gt;
+&lt;li&gt;The statistics are descriptive only and don&amp;rsquo;t establish causation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;automatic-updates&#34;&gt;Automatic Updates&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No manual intervention needed&lt;/strong&gt; - just rebuild the site&lt;/li&gt;
+&lt;li&gt;Data is always current as of the last build&lt;/li&gt;
+&lt;li&gt;Date stamps update automatically&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;comprehensive-analysis&#34;&gt;Comprehensive Analysis&lt;/h3&gt;
+&lt;p&gt;Includes visualizations for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cumulative trends (all deaths and shootings only)&lt;/li&gt;
+&lt;li&gt;Demographic patterns (race, age)&lt;/li&gt;
+&lt;li&gt;Behavioral context (armed status, mental health)&lt;/li&gt;
+&lt;li&gt;Temporal patterns (seasonal, day of week)&lt;/li&gt;
+&lt;li&gt;Geographic distribution (maps, states, cities)&lt;/li&gt;
+&lt;li&gt;Per capita rates&lt;/li&gt;
+&lt;li&gt;Accountability and socioeconomic factors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;required-r-packages&#34;&gt;Required R Packages&lt;/h2&gt;
+&lt;p&gt;The analysis requires:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tidyverse&lt;/li&gt;
+&lt;li&gt;readxl&lt;/li&gt;
+&lt;li&gt;lubridate&lt;/li&gt;
+&lt;li&gt;gghighlight&lt;/li&gt;
+&lt;li&gt;ggthemes&lt;/li&gt;
+&lt;li&gt;ggrepel&lt;/li&gt;
+&lt;li&gt;slider&lt;/li&gt;
+&lt;li&gt;sf&lt;/li&gt;
+&lt;li&gt;rnaturalearth&lt;/li&gt;
+&lt;li&gt;rnaturalearthdata&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These should be installed in your R environment where the site builds.&lt;/p&gt;
+&lt;h2 id=&#34;customization&#34;&gt;Customization&lt;/h2&gt;
+&lt;p&gt;To modify the analysis:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Edit &lt;code&gt;index.Rmd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rebuild the site locally to test: &lt;code&gt;blogdown::serve_site()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Commit and push changes&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;data-source&#34;&gt;Data Source&lt;/h2&gt;
+&lt;p&gt;Data automatically downloaded from:
+&lt;strong&gt;Mapping Police Violence&lt;/strong&gt;: &lt;a href=&#34;https://mappingpoliceviolence.org/&#34;&gt;https://mappingpoliceviolence.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The database is continuously updated and currently includes data through 12/31/2025.&lt;/p&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The download happens at build time, so there&amp;rsquo;s a brief delay&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;.Rmd&lt;/code&gt; file has &lt;code&gt;cache=FALSE&lt;/code&gt; on the download chunk to ensure fresh data&lt;/li&gt;
+&lt;li&gt;All file paths are temporary to avoid cluttering the repository&lt;/li&gt;
+&lt;li&gt;Visualizations are embedded directly in the HTML (no separate image files needed)&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

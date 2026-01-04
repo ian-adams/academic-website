@@ -5,12 +5,111 @@
     <link>https://ianadamsresearch.com/tag/police/</link>
       <atom:link href="https://ianadamsresearch.com/tag/police/index.xml" rel="self" type="application/rss+xml" />
     <description>police</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2026`</copyright><lastBuildDate>Sat, 03 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2026`</copyright><lastBuildDate>Sun, 04 Jan 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ianadamsresearch.com/media/android-chrome-512x512.png</url>
       <title>police</title>
       <link>https://ianadamsresearch.com/tag/police/</link>
     </image>
+    
+    <item>
+      <title>Interactive Dashboard for Mapping Police Violence Data</title>
+      <link>https://ianadamsresearch.com/post/2026-01-04-mapping-police-violence-dashboard/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/post/2026-01-04-mapping-police-violence-dashboard/</guid>
+      <description>
+
+
+&lt;p&gt;I’ve developed an interactive dashboard to explore data from &lt;a href=&#34;https://mappingpoliceviolence.org/&#34;&gt;Mapping Police Violence&lt;/a&gt;, a comprehensive database tracking police killings in the United States. The dashboard automatically pulls the latest data and provides multiple analytical views to examine temporal trends, demographic patterns, and geographic distributions.&lt;/p&gt;
+&lt;div id=&#34;dashboard-features&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Dashboard Features&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;MPV Analytical Engine&lt;/strong&gt; includes several key analytical modules:&lt;/p&gt;
+&lt;div id=&#34;overview-panel&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Overview Panel&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-time statistics including total incidents, per capita rates, and demographic breakdowns&lt;/li&gt;
+&lt;li&gt;Cumulative trajectory visualization comparing year-over-year trends&lt;/li&gt;
+&lt;li&gt;Temporal heatmaps showing patterns by day and month&lt;/li&gt;
+&lt;li&gt;Day-of-week analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;demographics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Demographics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Racial and ethnic distribution of victims&lt;/li&gt;
+&lt;li&gt;Age distribution and age-by-race breakdowns&lt;/li&gt;
+&lt;li&gt;Analysis of unarmed victims by demographic group&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;behavioral-context&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Behavioral Context&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Armed/unarmed status of victims&lt;/li&gt;
+&lt;li&gt;Types of alleged weapons&lt;/li&gt;
+&lt;li&gt;Fleeing status at time of incident&lt;/li&gt;
+&lt;li&gt;Mental health-related encounters over time&lt;/li&gt;
+&lt;li&gt;Body camera adoption trends&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;geographic-analysis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Geographic Analysis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;National map of incidents&lt;/li&gt;
+&lt;li&gt;State and city-level breakdowns&lt;/li&gt;
+&lt;li&gt;Top jurisdictions by incident count&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;accountability&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Accountability&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Criminal charges filed against officers over time&lt;/li&gt;
+&lt;li&gt;Neighborhood income disparities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interactive-dashboard&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Interactive Dashboard&lt;/h2&gt;
+&lt;iframe src=&#34;https://iadams.shinyapps.io/Shiny_police_killings/&#34; width=&#34;100%&#34; height=&#34;800px&#34; style=&#34;border: 1px solid #ccc; border-radius: 4px;&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The dashboard may take a moment to load as it downloads and processes the latest data from Mapping Police Violence.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://iadams.shinyapps.io/Shiny_police_killings/&#34;&gt;Click here to open the dashboard in a new window&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;important-methodological-notes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Important Methodological Notes&lt;/h2&gt;
+&lt;p&gt;This dashboard presents &lt;strong&gt;descriptive statistics only&lt;/strong&gt;. The data shows observed patterns but cannot establish causal relationships without additional controls for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Local crime rates&lt;/li&gt;
+&lt;li&gt;Police deployment density&lt;/li&gt;
+&lt;li&gt;Population demographics&lt;/li&gt;
+&lt;li&gt;Socioeconomic factors&lt;/li&gt;
+&lt;li&gt;Jurisdictional policies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The dashboard uses US Census population projections (2013-2025) to calculate per capita rates. All racial categorizations follow the source data from Mapping Police Violence.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-source&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Source&lt;/h2&gt;
+&lt;p&gt;Data is automatically synchronized from &lt;a href=&#34;https://mappingpoliceviolence.org/&#34;&gt;Mapping Police Violence&lt;/a&gt;, which aggregates information from:
+- Fatal Encounters
+- The Washington Post’s Fatal Force database
+- Additional cases identified through crowdsourcing and research&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;technical-details&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Technical Details&lt;/h2&gt;
+&lt;p&gt;The dashboard is built using:
+- &lt;strong&gt;R Shiny&lt;/strong&gt; with the &lt;code&gt;bslib&lt;/code&gt; framework for modern UI components
+- &lt;strong&gt;tidyverse&lt;/strong&gt; for data manipulation
+- &lt;strong&gt;plotly&lt;/strong&gt; for interactive visualizations
+- &lt;strong&gt;sf&lt;/strong&gt; and &lt;strong&gt;rnaturalearth&lt;/strong&gt; for geographic mapping&lt;/p&gt;
+&lt;p&gt;The app automatically downloads fresh data daily and includes robust data cleaning pipelines to standardize variables across time periods.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-availability&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Code Availability&lt;/h2&gt;
+&lt;p&gt;The complete source code for this dashboard is available in the &lt;a href=&#34;https://github.com/ian-adams/academic-website/tree/master/shiny-apps/mpv-dashboard&#34;&gt;academic-website repository&lt;/a&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;This dashboard is provided for research and educational purposes. The data presented reflects reported incidents and should be interpreted within the context of broader research on policing, public safety, and racial justice.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Developing Race and Gender Estimates for US Law Enforcement Leadership</title>

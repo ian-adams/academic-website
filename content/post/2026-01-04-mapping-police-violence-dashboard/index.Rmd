@@ -15,7 +15,10 @@ image:
 projects: []
 ---
 
-I've developed an interactive dashboard to explore data from [Mapping Police Violence](https://mappingpoliceviolence.org/), a comprehensive database tracking police killings in the United States. The dashboard automatically pulls the latest data and provides multiple analytical views to examine temporal trends, demographic patterns, and geographic distributions.
+I've developed an interactive dashboard to explore data from [Mapping Police Violence](https://mappingpoliceviolence.us), a comprehensive database tracking police killings in the United States. The dashboard automatically pulls the latest data and provides multiple analytical views to examine temporal trends, demographic patterns, and geographic distributions. This is a **vibe-coded prototype**: a rapid, exploratory build to see how far one can get in standing up a public-data dashboard with automated ingestion and standard visual analytics.
+
+
+**Critical disclaimer:** I have not independently verified the MPV data, nor have I formally audited or validated my cleaning and harmonization routines. Treat everything here as exploratory and illustrative. The outputs are not suitable for professional, policy, legal, journalistic, or operational use, and should not be relied upon as an authoritative accounting of levels, rates, rankings, or trends.
 
 ## Dashboard Features
 
@@ -70,10 +73,7 @@ The dashboard uses US Census population projections (2013-2025) to calculate per
 
 ## Data Source
 
-Data is automatically synchronized from [Mapping Police Violence](https://mappingpoliceviolence.org/), which aggregates information from:
-- Fatal Encounters
-- The Washington Post's Fatal Force database
-- Additional cases identified through crowdsourcing and research
+Data is automatically synchronized from [Mapping Police Violence](https://mappingpoliceviolence.us).
 
 ## Technical Details
 
