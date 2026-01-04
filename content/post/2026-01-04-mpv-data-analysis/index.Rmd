@@ -1,0 +1,675 @@
+---
+title: "Analyzing Police Violence in America: Updated Data Through 2025"
+subtitle: 'Static Visualizations from Mapping Police Violence Database'
+date: '2026-01-04'
+authors: []
+tags: [police, data visualization, R]
+categories: [R, Police, Data Analysis]
+summary: 'An automatically-updating analysis of police killings in the United States using data from Mapping Police Violence, with static visualizations showing temporal trends, demographic patterns, and geographic distributions.'
+lastmod: '`r Sys.Date()`'
+featured: yes
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 10,
+  fig.height = 7,
+  dpi = 300
+)
+```
+
+## Important Data Limitations
+
+**This analysis presents data on police killings, which represents only a subset of all police uses of lethal force.** The data captures fatal encounters but does not include:
+
+- **Non-fatal police shootings** (research suggests that a slight majority of police shootings are survived)
+- Other uses of lethal force that did not result in death
+- Uses of force that did not involve lethal weapons
+
+Therefore, **these numbers undercount the total instances of lethal force used by police.** When interpreting these statistics, it's critical to remember that we are looking at deaths only, not all incidents where officers used potentially lethal force.
+
+Additionally, this data represents **descriptive statistics only** and cannot establish causal relationships without additional controls for local crime rates, police deployment patterns, population demographics, socioeconomic factors, and jurisdictional policies.
+
+---
+
+## Automatic Data Updates
+
+This post automatically downloads the latest data from [Mapping Police Violence](https://mappingpoliceviolence.org/) whenever the website is rebuilt. The visualizations below will update as new data becomes available.
+
+```{r load-packages}
+library(tidyverse)
+library(readr)
+library(readxl)
+library(lubridate)
+library(gghighlight)
+library(ggthemes)
+library(ggrepel)
+library(slider)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+
+# Suppress package startup messages
+suppressPackageStartupMessages({
+  library(tidyverse)
+})
+```
+
+```{r download-data, cache=FALSE}
+# Download MPV data
+mpv_url <- "https://mappingpoliceviolence.us/s/MPVDatasetDownload.xlsx"
+destfile <- tempfile(fileext = ".xlsx")
+
+# Download fresh data each time
+download.file(mpv_url, destfile, mode = "wb", quiet = TRUE)
+
+# Read the Excel file
+df_mpv <- read_excel(destfile, guess_max = 10000)
+```
+
+```{r clean-data}
+# Clean column names
+names(df_mpv) <- names(df_mpv) %>%
+  str_replace_all(" ", "_") %>%
+  str_replace_all("[^[:alnum:]_]", "") %>%
+  str_to_lower()
+
+# Find the date column
+date_col <- names(df_mpv) %>% str_subset("date") %>% first()
+
+# Parse date field - ALL deaths
+df_all <- df_mpv %>%
+  rename(date = all_of(date_col)) %>%
+  mutate(
+    date = as.Date(date),
+    year = year(date),
+    month = month(date, label = TRUE, abbr = TRUE),
+    day = wday(date, label = TRUE, abbr = TRUE)
+  ) %>%
+  filter(!is.na(date))
+
+# Create shootings-only dataset
+df_shootings <- df_all %>%
+  filter(str_detect(cause_of_death, "Gunshot"))
+
+# Store key dates
+current_date <- Sys.Date()
+formatted_date <- format(current_date, "%B %d, %Y")
+min_year <- min(df_all$year)
+latest_year <- max(df_all$year)
+```
+
+## Data Summary
+
+**Data current as of `r formatted_date`**
+
+- **All Deaths:** `r format(nrow(df_all), big.mark=",")` incidents from `r format(min(df_all$date), "%B %d, %Y")` to `r format(max(df_all$date), "%B %d, %Y")`
+- **Fatal Shootings:** `r format(nrow(df_shootings), big.mark=",")` incidents (`r round(100 * nrow(df_shootings) / nrow(df_all), 1)`%)
+- **Years covered:** `r min_year` - `r latest_year`
+
+---
+
+## Cumulative Trends
+
+These charts show the cumulative count of police killings throughout each year, allowing year-over-year comparison.
+
+```{r cumulative-all-deaths, fig.cap="Cumulative count of all police killings by method (gunshot, taser, vehicle, restraint, etc.)"}
+# Function to create cumulative plot
+create_cumulative_plot <- function(data, title_suffix, y_limit, caption_note) {
+  shootings_data <- data %>%
+    arrange(date) %>%
+    mutate(year = as.numeric(format(date, "%Y"))) %>%
+    group_by(year, date) %>%
+    summarize(daily_count = n(), .groups = 'drop') %>%
+    ungroup() %>%
+    group_by(year) %>%
+    mutate(cum_count = cumsum(daily_count)) %>%
+    ungroup()
+
+  min_year <- min(shootings_data$year)
+  latest_year <- max(shootings_data$year)
+  plot_title <- paste("Cumulative U.S. Police", title_suffix, "by Year,", min_year, "-", latest_year)
+
+  p <- ggplot(shootings_data, aes(x = format(date, "%m-%d"), y = cum_count, group = factor(year))) +
+    geom_point(aes(color = factor(year)), alpha = 0.5, size = 1) +
+    gghighlight(year == latest_year, use_direct_label = FALSE,
+                unhighlighted_params = list(alpha = 0.3)) +
+    scale_x_discrete(name = "Month",
+                     breaks = format(seq(as.Date("2022-01-01"), as.Date("2022-12-31"), by = "1 month"), "%m-%d"),
+                     labels = format(seq(as.Date("2022-01-01"), as.Date("2022-12-31"), by = "1 month"), "%b"),
+                     expand = c(0.01, 0.9)) +
+    scale_y_continuous(name = "Cumulative Count of Deaths", limits = c(0, y_limit)) +
+    theme_tufte() +
+    theme(panel.grid.minor = element_blank(),
+          legend.position = "none",
+          axis.text.x = element_text(angle = 90, vjust = 0.5),
+          axis.text.y = element_text(angle = 0, hjust = 0.5),
+          plot.title = element_text(size = 14, hjust = 0, face = "bold"),
+          plot.title.position = "plot",
+          plot.caption = element_text(size = 10, hjust = 1)) +
+    geom_text_repel(data = shootings_data %>%
+                      group_by(year) %>%
+                      slice_max(date, n = 1) %>%
+                      ungroup(),
+                    aes(x = format(date, "%m-%d"), y = cum_count,
+                        label = paste(year, "(", cum_count, ")")),
+                    size = 3, hjust = 0, direction = "y",
+                    color = "black", fontface = "bold") +
+    labs(title = plot_title,
+         subtitle = paste("Data through", format(max(data$date), "%B %d, %Y")),
+         caption = paste("Source: Ian T. Adams | Data: Mapping Police Violence\n", caption_note))
+
+  return(p)
+}
+
+# Create plot for all deaths
+create_cumulative_plot(df_all, "Killings (All Methods)", 1300,
+                       "Includes all causes: gunshot, taser, vehicle, restraint, etc.")
+```
+
+```{r cumulative-shootings, fig.cap="Cumulative count of fatal police shootings only"}
+# Create plot for shootings only
+create_cumulative_plot(df_shootings, "Fatal Shootings", 1150,
+                       "Filtered to cases with 'Gunshot' in cause of death\nNote: This excludes non-fatal shootings")
+```
+
+---
+
+## Demographic Patterns
+
+### Race and Ethnicity
+
+```{r race-cleanup}
+# Create race variable
+df_shootings <- df_shootings %>%
+  mutate(race_clean = case_when(
+    is.na(victims_race) | victims_race == "" | victims_race == "Unknown race" ~ "Unknown",
+    str_detect(victims_race, "White") ~ "White",
+    str_detect(victims_race, "Black") ~ "Black",
+    str_detect(victims_race, "Hispanic") | str_detect(victims_race, "Latino") ~ "Hispanic",
+    str_detect(victims_race, "Asian") ~ "Asian",
+    str_detect(victims_race, "Native American") ~ "Native American",
+    str_detect(victims_race, "Pacific Islander") ~ "Pacific Islander",
+    TRUE ~ "Other"
+  ))
+
+# Reorder by frequency
+df_shootings$race_clean <- factor(df_shootings$race_clean,
+                                  levels = names(sort(table(df_shootings$race_clean),
+                                                      decreasing = TRUE)))
+```
+
+```{r race-distribution, fig.cap="Distribution of fatal police shootings by race/ethnicity"}
+plot_title <- paste("Distribution of Police Fatal Shootings by Race,", min_year, "-", latest_year)
+
+ggplot(df_shootings, aes(x = race_clean)) +
+  geom_bar(fill = "steelblue", color = "black") +
+  geom_text(aes(label = sprintf("%0.1f%%", (..count..)/sum(..count..)*100)),
+            stat = "count", vjust = -0.5, color = "black", size = 3.5) +
+  theme_tufte() +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 12),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        plot.title = element_text(size = 14, hjust = 0, face = "bold"),
+        plot.title.position = "plot") +
+  labs(y = "Count", title = plot_title,
+       subtitle = paste("as of", formatted_date),
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence")
+```
+
+```{r race-by-year, fig.width=12, fig.cap="Fatal police shootings by year and race, with percentage of unknown race highlighted"}
+# Calculate unknown percentages
+colorsb <- c("#0072b2","#d55e00", "#009e73", "#f0e442", "#56b4e9", "#cc79a7", "#999999", "#E69F00")
+
+df_percent <- df_shootings %>%
+  group_by(year, race_clean) %>%
+  summarize(count = n(), .groups = 'drop') %>%
+  group_by(year) %>%
+  mutate(total = sum(count),
+         percent = count / total * 100) %>%
+  filter(race_clean == "Unknown")
+
+# Create base plot
+p_race_year <- df_shootings %>%
+  ggplot(aes(x = year, fill = race_clean)) +
+  geom_bar(col = 'white') +
+  scale_fill_manual(values = colorsb) +
+  labs(x = 'Year', y = 'Counts',
+       title = 'Fatal Police Shootings by Year and Race',
+       subtitle = paste0('Percentages show unknown race category (as of ', formatted_date, ')'),
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence",
+       fill = 'Race') +
+  scale_x_continuous(breaks = seq(min(df_shootings$year), max(df_shootings$year), by = 1)) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Add percentage labels
+p_race_year +
+  geom_text(data = df_percent,
+            aes(x = year, y = count, label = paste0(round(percent, 1), "%")),
+            position = position_stack(vjust = 0.4), color = "black", size = 3)
+```
+
+### Age Distribution
+
+```{r age-analysis}
+# Create numeric age variable
+df_shootings <- df_shootings %>%
+  mutate(age_numeric = as.numeric(victims_age))
+```
+
+```{r age-distribution, fig.cap="Age distribution of police shooting victims"}
+ggplot(df_shootings %>% filter(!is.na(age_numeric)), aes(x = age_numeric)) +
+  geom_histogram(bins = 50, fill = "steelblue", color = "white") +
+  theme_minimal() +
+  labs(x = "Age", y = "Count",
+       title = "Age Distribution of Police Shooting Victims",
+       subtitle = paste(min_year, "-", latest_year, "| Mean age:",
+                       round(mean(df_shootings$age_numeric, na.rm = TRUE), 1),
+                       "| Median age:", median(df_shootings$age_numeric, na.rm = TRUE)),
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence")
+```
+
+```{r age-race-distribution, fig.width=10, fig.cap="Age distribution by race for the three largest racial groups"}
+age_race <- df_shootings %>%
+  filter(!is.na(age_numeric) & race_clean %in% c("White", "Black", "Hispanic")) %>%
+  mutate(age_group = cut(age_numeric,
+                         breaks = c(0, 18, 25, 35, 45, 55, 65, 100),
+                         labels = c("<18", "18-24", "25-34", "35-44", "45-54", "55-64", "65+")))
+
+ggplot(age_race, aes(x = age_group, fill = race_clean)) +
+  geom_bar(position = "dodge") +
+  scale_fill_brewer(palette = "Set1", name = "Race") +
+  labs(title = "Age and Race: Who Is Most at Risk?",
+       subtitle = "Distribution of police shooting victims by age group and race",
+       x = "Age Group",
+       y = "Number of Deaths",
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+---
+
+## Behavioral Context
+
+### Armed Status
+
+```{r armed-status, fig.cap="Armed/unarmed status of police shooting victims"}
+armedinfo <- df_shootings %>%
+  mutate(armed_status = replace_na(armedunarmed_status, "Unknown")) %>%
+  group_by(armed_status) %>%
+  summarise(n = n()) %>%
+  arrange(desc(n)) %>%
+  mutate(perc = scales::percent(n / sum(n), accuracy = .1))
+
+ggplot(data = armedinfo, aes(x = n, y = reorder(armed_status, n))) +
+  geom_col(aes(fill = n)) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "none") +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_fill_gradient(low = "royalblue3", high = "navyblue") +
+  labs(y = NULL, x = "Number of deaths",
+       title = "Armed Status in Police Fatal Shootings",
+       subtitle = paste(min_year, "-", latest_year),
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence") +
+  geom_text(aes(label = perc), hjust = -.25, size = 4, fontface = "bold") +
+  coord_cartesian(clip = "off")
+```
+
+```{r unarmed-by-race, fig.cap="Percentage of victims who were unarmed, by race"}
+unarmed_race <- df_shootings %>%
+  filter(!is.na(armedunarmed_status) & !is.na(race_clean)) %>%
+  mutate(unarmed = str_detect(tolower(armedunarmed_status), "unarmed")) %>%
+  group_by(race_clean, unarmed) %>%
+  summarize(count = n(), .groups = 'drop') %>%
+  group_by(race_clean) %>%
+  mutate(total = sum(count),
+         pct = count / total * 100) %>%
+  filter(unarmed == TRUE & race_clean %in% c("White", "Black", "Hispanic", "Asian"))
+
+ggplot(unarmed_race, aes(x = reorder(race_clean, -pct), y = pct, fill = race_clean)) +
+  geom_col(show.legend = FALSE) +
+  geom_text(aes(label = paste0(round(pct, 1), "%\n(n=", count, ")")),
+            vjust = -0.5, fontface = "bold", size = 4) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(title = "Who Gets Shot When Unarmed?",
+       subtitle = "Percentage of police shooting victims who were unarmed, by race",
+       x = NULL,
+       y = "Percentage Unarmed",
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 14, face = "bold")) +
+  ylim(0, max(unarmed_race$pct) * 1.2)
+```
+
+### Mental Health Context
+
+```{r mental-health-trend, fig.cap="Percentage of victims with documented mental illness symptoms over time"}
+mental_trend <- df_shootings %>%
+  filter(!is.na(symptoms_of_mental_illness)) %>%
+  mutate(has_mental_illness = case_when(
+    str_detect(tolower(symptoms_of_mental_illness), "yes|drug|alcohol") ~ "Yes",
+    TRUE ~ "No/Unknown"
+  )) %>%
+  group_by(year, has_mental_illness) %>%
+  summarize(count = n(), .groups = 'drop') %>%
+  group_by(year) %>%
+  mutate(total = sum(count),
+         pct = count / total * 100) %>%
+  filter(has_mental_illness == "Yes")
+
+ggplot(mental_trend, aes(x = year, y = pct)) +
+  geom_line(color = "darkblue", linewidth = 1.5) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = TRUE, color = "red", linetype = "dashed") +
+  labs(title = "Mental Health Crisis: Growing Share of Police Shootings",
+       subtitle = "Percentage of victims with documented mental illness symptoms",
+       x = "Year",
+       y = "Percentage with Mental Illness Symptoms",
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 14, face = "bold")) +
+  scale_x_continuous(breaks = seq(min(mental_trend$year), max(mental_trend$year), by = 2))
+```
+
+---
+
+## Temporal Patterns
+
+### When Do Shootings Occur?
+
+```{r seasonal-heatmap, fig.width=10, fig.height=6, fig.cap="Heatmap showing daily patterns of police shootings across the calendar year"}
+# Create month-day heatmap
+heatmap_data <- df_shootings %>%
+  mutate(month_num = as.numeric(month),
+         day_num = day(date)) %>%
+  filter(!is.na(month_num) & !is.na(day_num)) %>%
+  group_by(month_num, day_num) %>%
+  summarize(count = n(), .groups = 'drop')
+
+ggplot(heatmap_data, aes(x = day_num, y = month_num, fill = count)) +
+  geom_tile(color = "white", linewidth = 0.5) +
+  scale_fill_gradient(low = "lightyellow", high = "darkred", name = "Deaths") +
+  scale_y_reverse(breaks = 1:12,
+                  labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                             "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")) +
+  scale_x_continuous(breaks = c(1, 8, 15, 22, 29)) +
+  labs(title = "When Do Police Shootings Occur?",
+       subtitle = paste("Daily patterns across the calendar year,", min_year, "-", latest_year),
+       x = "Day of Month",
+       y = NULL,
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 14, face = "bold"),
+        panel.grid = element_blank())
+```
+
+```{r day-of-week, fig.cap="Distribution of police shootings by day of week"}
+dow_data <- df_shootings %>%
+  group_by(day) %>%
+  summarize(count = n()) %>%
+  mutate(pct = count / sum(count) * 100,
+         expected = 100/7)  # If random, each day = 14.3%
+
+ggplot(dow_data, aes(x = day, y = pct)) +
+  geom_col(aes(fill = pct > expected), show.legend = FALSE) +
+  geom_hline(yintercept = 100/7, linetype = "dashed", color = "red", linewidth = 1) +
+  geom_text(aes(label = paste0(round(pct, 1), "%")), vjust = -0.5, fontface = "bold") +
+  scale_fill_manual(values = c("steelblue", "darkred")) +
+  labs(title = "Are Weekends More Dangerous?",
+       subtitle = "Distribution of police shootings by day of week",
+       x = NULL,
+       y = "Percentage of All Shootings",
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence\nRed line = expected if random (14.3%)") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 14, face = "bold")) +
+  ylim(0, max(dow_data$pct) * 1.1)
+```
+
+---
+
+## Geographic Distribution
+
+```{r geographic-map, fig.width=12, fig.height=8, fig.cap="Geographic distribution of police fatal shootings across the United States"}
+# Filter for valid coordinates
+df_map <- df_shootings %>%
+  filter(!is.na(latitude) & !is.na(longitude))
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+sites <- st_as_sf(df_map, coords = c("longitude", "latitude"),
+                  crs = 4326, agr = "constant")
+
+ggplot(data = world) +
+  geom_sf() +
+  geom_sf(data = sites, size = .5, shape = 10, fill = "darkred", alpha = 0.6) +
+  coord_sf(xlim = c(-125, -66), ylim = c(24, 49), expand = TRUE) +
+  labs(title = "Geographic Distribution of Police Fatal Shootings",
+       subtitle = paste(min_year, "-", latest_year),
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence") +
+  theme_minimal()
+```
+
+```{r top-states, fig.cap="Top 15 states by number of police fatal shootings"}
+stateinfo <- df_shootings %>%
+  filter(!is.na(state)) %>%
+  group_by(state) %>%
+  summarise(n = n()) %>%
+  arrange(desc(n)) %>%
+  top_n(15) %>%
+  mutate(state = factor(state, levels = rev(unique(state))))
+
+ggplot(stateinfo) +
+  aes(x = state, weight = n) +
+  geom_bar(fill = "steelblue") +
+  labs(y = "Number of deaths",
+       title = "Top 15 States for Police Fatal Shootings",
+       subtitle = paste(min_year, "-", latest_year),
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence") +
+  coord_flip() +
+  theme_minimal()
+```
+
+```{r top-cities, fig.width=10, fig.height=8, fig.cap="Top 20 cities by number of shootings, colored by percentage of victims who were unarmed"}
+city_analysis <- df_shootings %>%
+  filter(!is.na(city) & !is.na(state)) %>%
+  mutate(city_state = paste0(city, ", ", state)) %>%
+  group_by(city_state) %>%
+  summarize(
+    count = n(),
+    unarmed_pct = sum(str_detect(tolower(armedunarmed_status), "unarmed"), na.rm = TRUE) / n() * 100,
+    .groups = 'drop'
+  ) %>%
+  arrange(desc(count)) %>%
+  head(20) %>%
+  mutate(city_state = factor(city_state, levels = rev(city_state)))
+
+ggplot(city_analysis, aes(x = count, y = city_state)) +
+  geom_col(aes(fill = unarmed_pct)) +
+  geom_text(aes(label = count), hjust = -0.2, size = 3) +
+  scale_fill_gradient(low = "lightblue", high = "darkred",
+                      name = "% Unarmed") +
+  labs(title = "Top 20 Cities for Police Shootings",
+       subtitle = paste("Color indicates percentage of victims who were unarmed,", min_year, "-", latest_year),
+       x = "Number of Deaths",
+       y = NULL,
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 14, face = "bold")) +
+  coord_cartesian(clip = "off")
+```
+
+---
+
+## Per Capita Analysis
+
+```{r per-capita-setup}
+# Manual population data (with projections for 2024-2025)
+pop_data <- tribble(
+  ~year, ~estimate,
+  2013, 316128839,
+  2014, 318857056,
+  2015, 320738994,
+  2016, 323071755,
+  2017, 325084756,
+  2018, 326687501,
+  2019, 328239523,
+  2020, 331449281,
+  2021, 331893745,
+  2022, 333287557,
+  2023, 334914895,
+  2024, 336673595,  # Projection
+  2025, 338289857   # Projection
+)
+```
+
+```{r per-capita-rate, fig.cap="Police shooting deaths per capita by year, with 92% counting accuracy assumption"}
+# Calculate per capita rates
+events_normalized <- df_shootings %>%
+  group_by(year) %>%
+  summarize(total_events = n()) %>%
+  left_join(pop_data, by = "year") %>%
+  filter(!is.na(estimate)) %>%
+  mutate(
+    events_per_capita = total_events / estimate * 1000000,
+    se = events_per_capita / sqrt(0.92 * total_events)
+  )
+
+ggplot(events_normalized, aes(x = year, y = events_per_capita)) +
+  geom_col(color = "white", linewidth = 0.2, fill = "#7777AB") +
+  geom_errorbar(aes(ymin = events_per_capita, ymax = events_per_capita + 1.96 * se),
+                width = 0.2, color = "black", linewidth = 0.8) +
+  geom_text(aes(label = sprintf("%.2f", events_per_capita), y = events_per_capita/2),
+            vjust = 1.5) +
+  labs(title = "US Police Shooting Deaths per 1,000,000 people by year",
+       subtitle = "assuming 92% counting accuracy",
+       y = "Fatal shootings per capita",
+       x = "Year",
+       caption = "Source: Ian T. Adams | Data: Mapping Police Violence\nPopulation: U.S. Census Bureau") +
+  theme_bw() +
+  theme(axis.text = element_text(size = 12),
+        axis.title = element_text(size = 14),
+        plot.title = element_text(size = 14, face = "bold"),
+        legend.position = "none") +
+  scale_x_continuous(breaks = events_normalized$year, labels = events_normalized$year)
+```
+
+---
+
+## Accountability and Socioeconomic Context
+
+```{r accountability, fig.cap="Percentage of police shooting cases resulting in criminal charges", eval=("criminal_charges" %in% names(df_shootings))}
+# Only run if criminal_charges column exists
+if ("criminal_charges" %in% names(df_shootings)) {
+  charges_trend <- df_shootings %>%
+    filter(!is.na(criminal_charges)) %>%
+    mutate(charged = !str_detect(tolower(criminal_charges), "no charges|no known|pending")) %>%
+    group_by(year) %>%
+    summarize(
+      total = n(),
+      charged = sum(charged),
+      pct_charged = charged / total * 100,
+      .groups = 'drop'
+    )
+
+  ggplot(charges_trend, aes(x = year, y = pct_charged)) +
+    geom_line(color = "darkblue", linewidth = 1.5) +
+    geom_point(aes(size = total), color = "darkblue", alpha = 0.6) +
+    geom_hline(yintercept = mean(charges_trend$pct_charged),
+               linetype = "dashed", color = "red") +
+    scale_size_continuous(name = "Total Cases", range = c(2, 8)) +
+    labs(title = "The Accountability Gap",
+         subtitle = "Percentage of police shooting cases resulting in criminal charges",
+         x = "Year",
+         y = "Percentage Charged",
+         caption = "Source: Ian T. Adams | Data: Mapping Police Violence\nRed line = average across all years") +
+    theme_minimal() +
+    theme(plot.title = element_text(size = 14, face = "bold")) +
+    scale_x_continuous(breaks = seq(min(charges_trend$year), max(charges_trend$year), by = 2))
+}
+```
+
+```{r income-inequality, fig.cap="Police shootings by neighborhood median income and race", eval=("median_household_income_acs_census_tract" %in% names(df_shootings))}
+# Only run if income column exists
+if ("median_household_income_acs_census_tract" %in% names(df_shootings)) {
+  income_analysis <- df_shootings %>%
+    filter(!is.na(median_household_income_acs_census_tract)) %>%
+    mutate(
+      income_bracket = cut(median_household_income_acs_census_tract,
+                           breaks = c(0, 35000, 50000, 75000, 100000, 250001),
+                           labels = c("<$35k", "$35k-50k", "$50k-75k", "$75k-100k", ">$100k"))
+    ) %>%
+    group_by(income_bracket, race_clean) %>%
+    summarize(count = n(), .groups = 'drop') %>%
+    filter(race_clean %in% c("White", "Black", "Hispanic"))
+
+  ggplot(income_analysis, aes(x = income_bracket, y = count, fill = race_clean)) +
+    geom_col(position = "dodge") +
+    scale_fill_brewer(palette = "Set1", name = "Race") +
+    labs(title = "Police Shootings and Neighborhood Poverty",
+         subtitle = "Deaths by census tract median household income and race",
+         x = "Neighborhood Median Income",
+         y = "Number of Deaths",
+         caption = "Source: Ian T. Adams | Data: Mapping Police Violence & U.S. Census Bureau") +
+    theme_minimal() +
+    theme(plot.title = element_text(size = 14, face = "bold"),
+          axis.text.x = element_text(angle = 45, hjust = 1))
+}
+```
+
+---
+
+## Data Sources and Methods
+
+### Primary Data Source
+
+All data comes from [Mapping Police Violence](https://mappingpoliceviolence.org/), which aggregates information from:
+
+- **Fatal Encounters** - A database documenting all deaths through police interaction
+- **The Washington Post's Fatal Force database** - Tracking fatal police shootings
+- **Additional cases** identified through crowdsourcing and independent research
+
+### Update Frequency
+
+This blog post **automatically downloads the latest MPV data whenever the website is rebuilt**. The database is continuously updated as new incidents are reported and verified.
+
+### Important Methodological Considerations
+
+1. **Incomplete Coverage**: This data captures police **killings** only, not all uses of lethal force. Research indicates that a slight majority of police shootings are survived, meaning these statistics undercount total lethal force incidents.
+
+2. **Descriptive Statistics**: All analyses presented here are descriptive. Causal interpretation requires controlling for:
+   - Local crime rates and patterns
+   - Police deployment density
+   - Population demographics
+   - Socioeconomic factors
+   - Jurisdictional policies and training
+
+3. **Data Quality**: While MPV represents the most comprehensive publicly available database, it relies on media reports and public records, which may have gaps or inconsistencies.
+
+4. **Racial Categories**: Racial/ethnic categorizations follow the source data and may not capture the full complexity of identity.
+
+### Code Availability
+
+The R code for this analysis is embedded in this R Markdown document. The source code is available in the [academic-website repository](https://github.com/ian-adams/academic-website).
+
+---
+
+## Related Resources
+
+For an interactive version of this analysis with real-time filtering and exploration capabilities, see the [Interactive MPV Dashboard](/post/2026-01-04-mapping-police-violence-dashboard/).
+
+---
+
+*Last updated: `r formatted_date`*
+
+*This analysis is provided for research and educational purposes. The data should be interpreted within the broader context of research on policing, public safety, and racial justice.*
