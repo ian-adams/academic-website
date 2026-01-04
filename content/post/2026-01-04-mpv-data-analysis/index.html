@@ -1,0 +1,71 @@
+---
+title: "Analyzing Police Violence in America: Updated Data Through 2025"
+subtitle: 'Static Visualizations from Mapping Police Violence Database'
+date: '2026-01-04'
+authors: []
+tags: [police, data visualization, R]
+categories: [R, Police, Data Analysis]
+summary: 'An automatically-updating analysis of police killings in the United States using data from Mapping Police Violence, with interactive dashboard and static visualizations showing temporal trends, demographic patterns, and geographic distributions.'
+lastmod: '2026-01-04'
+featured: yes
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<div id="important-data-limitations" class="section level2">
+<h2>Important Data Limitations</h2>
+<p><strong>This analysis presents data on police killings, which represents only a subset of all police uses of lethal force.</strong> The data captures fatal encounters but does not include:</p>
+<ul>
+<li><strong>Non-fatal police shootings</strong> (research suggests that a slight majority of police shootings are survived)</li>
+<li>Other uses of lethal force that did not result in death</li>
+<li>Uses of force that did not involve lethal weapons</li>
+</ul>
+<p>Therefore, <strong>these numbers undercount the total instances of lethal force used by police.</strong> When interpreting these statistics, it's critical to remember that we are looking at deaths only, not all incidents where officers used potentially lethal force.</p>
+<p>Additionally, this data represents <strong>descriptive statistics only</strong> and cannot establish causal relationships without additional controls for local crime rates, police deployment patterns, population demographics, socioeconomic factors, and jurisdictional policies.</p>
+</div>
+
+<hr/>
+
+<div id="interactive-dashboard" class="section level2">
+<h2>Interactive Dashboard</h2>
+<iframe src="https://iadams.shinyapps.io/Shiny_police_killings/" width="100%" height="800px" style="border: 1px solid #ccc; border-radius: 4px;">
+</iframe>
+<p><strong>Note:</strong> The dashboard may take a moment to load as it downloads and processes the latest data from Mapping Police Violence.</p>
+<p><a href="https://iadams.shinyapps.io/Shiny_police_killings/">Click here to open the dashboard in a new window</a></p>
+</div>
+
+<hr/>
+
+<div id="automatic-data-updates" class="section level2">
+<h2>Automatic Data Updates</h2>
+<p>This post automatically downloads the latest data from <a href="https://mappingpoliceviolence.us/">Mapping Police Violence</a> whenever the website is rebuilt. The static visualizations below will update as new data becomes available.</p>
+</div>
+
+<div id="static-visualizations" class="section level2">
+<h2>Static Visualizations</h2>
+<p><em><strong>Note:</strong> The static visualizations for this post will appear here after building the site locally with blogdown. The analysis will include:</em></p>
+<ul>
+<li>Cumulative trends over time</li>
+<li>Demographic patterns by race, age, and ethnicity</li>
+<li>Behavioral context (armed status, mental health, etc.)</li>
+<li>Temporal patterns (seasonal and daily)</li>
+<li>Geographic distribution maps</li>
+<li>Per capita analysis</li>
+<li>Accountability metrics</li>
+</ul>
+<p><em>To generate these visualizations, build the site locally using:</em></p>
+<pre><code>blogdown::build_site()</code></pre>
+</div>
+
+<div id="data-source" class="section level2">
+<h2>Data Source</h2>
+<p>All data comes from <a href="https://mappingpoliceviolence.us/">Mapping Police Violence</a>, which aggregates information from Fatal Encounters, The Washington Post's Fatal Force database, and additional cases identified through crowdsourcing and independent research.</p>
+</div>
+
+<hr/>
+<p><em>This analysis is provided for research and educational purposes. The data should be interpreted within the broader context of research on policing, public safety, and racial justice.</em></p>
