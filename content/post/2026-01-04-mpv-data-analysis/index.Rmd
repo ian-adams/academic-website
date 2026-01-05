@@ -28,13 +28,13 @@ knitr::opts_chunk$set(
 
 ## Important Data Limitations
 
-**This post presents data on police killings, which represents only a subset of all police uses of lethal force.** The data captures fatal encounters [Mapping Police Violence](https://mappingpoliceviolence.us/) but does not include **non-fatal police shootings** ([research suggests that a majority of police shootings are survived](https://ajph.aphapublications.org/doi/full/10.2105/AJPH.2023.307560)).
+This post presents data on police killings, which represents only a subset of all police uses of lethal force. The data captures fatal encounters [Mapping Police Violence](https://mappingpoliceviolence.us/) but does not include **non-fatal police shootings** ([research suggests that a majority of police shootings are survived](https://ajph.aphapublications.org/doi/full/10.2105/AJPH.2023.307560)).
 
 Therefore, by definition **these numbers undercount the total instances of lethal force used by police.** When interpreting these statistics, it's critical to remember that we are looking at deaths only, not all incidents where officers used potentially lethal force.
 
 Additionally, this data represents **descriptive statistics only** and cannot establish causal relationships without additional controls for local crime rates, police deployment patterns, population demographics, socioeconomic factors, and jurisdictional policies.
 
-Finally, this is a **vibe-coded prototype**: a rapid, exploratory build to see how far one can get in standing up a public-data dashboard with automated ingestion and basic visuals. You definitely *should not rely on these numbers in any kind of professional capacity without further investigation and validation.*
+Finally, this is a **vibe-coded prototype**: a rapid, exploratory build to see how far I can get in standing up a public-data dashboard with automated ingestion and basic visuals. *You definitely should not rely on these numbers in any kind of professional capacity without further investigation and validation.*
 
 **Critical disclaimer:** I have not independently verified the MPV data, nor have I formally audited or validated my cleaning and harmonization routines. Treat everything here as exploratory and illustrative. The outputs are not suitable for professional, policy, legal, journalistic, or operational use, and should not be relied upon as an authoritative accounting of levels, rates, rankings, or trends.
 
@@ -636,7 +636,7 @@ if ("median_household_income_acs_census_tract" %in% names(df_shootings)) {
 All data comes from [Mapping Police Violence](https://mappingpoliceviolence.us/), which aggregates information from:
 
 - **Fatal Encounters** - A database documenting all deaths through police interaction
-- **The Washington Post's Fatal Force database** - Tracking fatal police shootings
+- **The Washington Post's Fatal Force database** - Tracking fatal police shootings (no longer active)
 - **Additional cases** identified through crowdsourcing and independent research
 
 ### Update Frequency
