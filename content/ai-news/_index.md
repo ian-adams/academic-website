@@ -2,6 +2,7 @@
 title: "Research Watch: AI in Police Report Writing and Documentation"
 summary: "Automated news aggregator tracking developments in artificial intelligence for police report writing"
 date: 2026-01-05
+type: ai-news
 layout: list
 ---
 
