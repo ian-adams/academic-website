@@ -29,27 +29,74 @@ scrape_single_rss <- function(feed_url, source_name, log_file = NULL) {
         return(data.frame())
       }
 
-      # Standardize column names (RSS feeds have varying structures)
-      articles <- feed_data %>%
-        mutate(
-          url = item_link %||% link %||% item_guid,
-          title = item_title %||% title,
-          summary = item_description %||% description %||% "",
-          date_published = item_pub_date %||% item_date %||% pubDate %||% NA,
-          source = source_name,
-          date_discovered = format(Sys.time(), "%Y-%m-%d")
-        ) %>%
-        select(url, title, summary, date_published, source, date_discovered) %>%
-        # Remove any rows with missing critical fields
-        filter(!is.na(url), !is.na(title), url != "", title != "")
+      # Get column names
+      cols <- names(feed_data)
 
-      # Clean text fields
+      # Extract URL - try common column names
+      url <- NULL
+      for (col in c("item_link", "link", "item_guid", "guid")) {
+        if (col %in% cols && is.null(url)) {
+          url <- feed_data[[col]]
+        }
+      }
+
+      # Extract title
+      title <- NULL
+      for (col in c("item_title", "title")) {
+        if (col %in% cols && is.null(title)) {
+          title <- feed_data[[col]]
+        }
+      }
+
+      # Extract description/summary
+      summary <- NULL
+      for (col in c("item_description", "description", "item_summary", "summary", "content")) {
+        if (col %in% cols && is.null(summary)) {
+          summary <- feed_data[[col]]
+        }
+      }
+      if (is.null(summary)) summary <- ""
+
+      # Extract publication date
+      date_pub <- NULL
+      for (col in c("item_pub_date", "item_date", "pubDate", "pub_date", "published", "item_published")) {
+        if (col %in% cols && is.null(date_pub)) {
+          date_pub <- feed_data[[col]]
+        }
+      }
+
+      # Create standardized data frame
+      articles <- data.frame(
+        url = as.character(url),
+        title = as.character(title),
+        summary = as.character(summary),
+        date_published_raw = if (!is.null(date_pub)) as.character(date_pub) else NA_character_,
+        source = source_name,
+        date_discovered = format(Sys.time(), "%Y-%m-%d"),
+        stringsAsFactors = FALSE
+      )
+
+      # Remove rows with missing critical fields
+      articles <- articles %>%
+        filter(
+          !is.na(url), !is.na(title),
+          url != "", title != "",
+          url != "NULL", title != "NULL"
+        )
+
+      if (nrow(articles) == 0) {
+        log_message(sprintf("  No valid items found in %s", source_name), log_file, "WARN")
+        return(data.frame())
+      }
+
+      # Clean text fields and parse dates
       articles <- articles %>%
         mutate(
           title = sapply(title, clean_text),
           summary = sapply(summary, clean_text),
-          date_published = sapply(date_published, parse_date)
-        )
+          date_published = sapply(date_published_raw, parse_date)
+        ) %>%
+        select(-date_published_raw)
 
       log_message(sprintf("  Found %d items from %s", nrow(articles), source_name), log_file)
 
