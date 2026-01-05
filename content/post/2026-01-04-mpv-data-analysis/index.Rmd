@@ -28,9 +28,9 @@ knitr::opts_chunk$set(
 
 ## Important Data Limitations
 
-**This analysis presents data on police killings, which represents only a subset of all police uses of lethal force.** The data captures fatal encounters [Mapping Police Violence](https://mappingpoliceviolence.us/) but does not include **non-fatal police shootings** (research suggests that a slight majority of police shootings are survived).
+**This post presents data on police killings, which represents only a subset of all police uses of lethal force.** The data captures fatal encounters [Mapping Police Violence](https://mappingpoliceviolence.us/) but does not include **non-fatal police shootings** ([research suggests that a majority of police shootings are survived](https://ajph.aphapublications.org/doi/full/10.2105/AJPH.2023.307560)).
 
-Therefore, **these numbers undercount the total instances of lethal force used by police.** When interpreting these statistics, it's critical to remember that we are looking at deaths only, not all incidents where officers used potentially lethal force.
+Therefore, by definition **these numbers undercount the total instances of lethal force used by police.** When interpreting these statistics, it's critical to remember that we are looking at deaths only, not all incidents where officers used potentially lethal force.
 
 Additionally, this data represents **descriptive statistics only** and cannot establish causal relationships without additional controls for local crime rates, police deployment patterns, population demographics, socioeconomic factors, and jurisdictional policies.
 
@@ -647,14 +647,14 @@ This blog post **automatically downloads the latest MPV data whenever my website
 
 1. **Incomplete Coverage**: This data captures police **killings** only, not all uses of lethal force. Research indicates that a slight majority of police shootings are survived, meaning these statistics undercount total lethal force incidents.
 
-2. **Descriptive Statistics**: All analyses presented here are descriptive. Causal interpretation requires controlling for:
+2. **Descriptive Statistics**: All analyses presented here are descriptive. Causal interpretation requires controlling for a host of unobserved variables, including but not limited to:
    - Local crime rates and patterns
    - Police deployment density
    - Population demographics
    - Socioeconomic factors
    - Jurisdictional policies and training
 
-3. **Data Quality**: While MPV represents the most comprehensive publicly available database, it relies on media reports and public records, which may have gaps or inconsistencies.
+3. **Data Quality**: While MPV represents the most comprehensive publicly available database, it relies on media reports and public records, which have gaps and inconsistencies.
 
 4. **Racial Categories**: Racial/ethnic categorizations follow the source data and may not capture the full complexity of identity.
 
@@ -662,11 +662,6 @@ This blog post **automatically downloads the latest MPV data whenever my website
 
 The R code for this analysis is embedded in this R Markdown document. The source code is available in the [academic-website repository](https://github.com/ian-adams/academic-website).
 
----
-
-## Related Resources
-
-For an interactive version of this analysis with real-time filtering and exploration capabilities, see the [Interactive MPV Dashboard](/post/2026-01-04-mapping-police-violence-dashboard/).
 
 ---
 
