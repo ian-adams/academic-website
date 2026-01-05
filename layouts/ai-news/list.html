@@ -194,10 +194,11 @@
   let currentFilter = 'all';
 
   // Fetch news data
-  fetch('/data/ai-police-news.json')
+  fetch('{{ .Site.BaseURL }}data/ai-police-news.json')
     .then(response => {
+      console.log('Fetch response:', response.status, response.statusText);
       if (!response.ok) {
-        throw new Error('Failed to load news feed');
+        throw new Error(`Failed to load news feed: ${response.status} ${response.statusText}`);
       }
       return response.json();
     })
