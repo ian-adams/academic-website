@@ -2,6 +2,7 @@
 title: "Research Watch: AI in Police Report Writing and Documentation"
 summary: "Automated news aggregator tracking developments in artificial intelligence for police report writing"
 date: 2026-01-05
+layout: list
 ---
 
 This page automatically tracks news, research, and developments related to artificial intelligence in police report writing and documentation. The feed is updated daily and includes vendor announcements, policy decisions, incidents, and research findings.
