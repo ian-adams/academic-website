@@ -18,6 +18,7 @@
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/</guid>
       <description>
+&lt;script src=&#34;https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;important-data-limitations&#34; class=&#34;section level2&#34;&gt;
@@ -30,6 +31,8 @@
 &lt;/ul&gt;
 &lt;p&gt;Therefore, &lt;strong&gt;these numbers undercount the total instances of lethal force used by police.&lt;/strong&gt; When interpreting these statistics, it&#39;s critical to remember that we are looking at deaths only, not all incidents where officers used potentially lethal force.&lt;/p&gt;
 &lt;p&gt;Additionally, this data represents &lt;strong&gt;descriptive statistics only&lt;/strong&gt; and cannot establish causal relationships without additional controls for local crime rates, police deployment patterns, population demographics, socioeconomic factors, and jurisdictional policies.&lt;/p&gt;
+&lt;p&gt;This is a &lt;strong&gt;vibe-coded prototype&lt;/strong&gt;: a rapid, exploratory build to see how far one can get in standing up a public-data dashboard with automated ingestion and standard visual analytics.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Critical disclaimer:&lt;/strong&gt; I have not independently verified the MPV data, nor have I formally audited or validated my cleaning and harmonization routines. Treat everything here as exploratory and illustrative. The outputs are not suitable for professional, policy, legal, journalistic, or operational use, and should not be relied upon as an authoritative accounting of levels, rates, rankings, or trends.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;hr/&gt;
@@ -51,26 +54,101 @@
 
 &lt;div id=&#34;static-visualizations&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Static Visualizations&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt; The static visualizations for this post will appear here after building the site locally with blogdown. The analysis will include:&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Cumulative trends over time&lt;/li&gt;
-&lt;li&gt;Demographic patterns by race, age, and ethnicity&lt;/li&gt;
-&lt;li&gt;Behavioral context (armed status, mental health, etc.)&lt;/li&gt;
-&lt;li&gt;Temporal patterns (seasonal and daily)&lt;/li&gt;
-&lt;li&gt;Geographic distribution maps&lt;/li&gt;
-&lt;li&gt;Per capita analysis&lt;/li&gt;
-&lt;li&gt;Accountability metrics&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;To generate these visualizations, build the site locally using:&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;blogdown::build_site()&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Cumulative Trends&lt;/h3&gt;
+&lt;p&gt;These charts show the cumulative count of police killings throughout each year, allowing year-over-year comparison.&lt;/p&gt;
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/index_files/figure-html/cumulative-all-deaths-1.png&#34; alt=&#34;Cumulative count of all police killings by method (gunshot, taser, vehicle, restraint, etc.)&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Cumulative count of all police killings by method&lt;/p&gt;
 &lt;/div&gt;
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/index_files/figure-html/cumulative-shootings-1.png&#34; alt=&#34;Cumulative count of fatal police shootings only&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Cumulative count of fatal police shootings only&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr/&gt;
+
+&lt;h3&gt;Demographic Patterns&lt;/h3&gt;
+
+&lt;h4&gt;Race and Ethnicity&lt;/h4&gt;
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/index_files/figure-html/race-distribution-1.png&#34; alt=&#34;Distribution of fatal police shootings by race/ethnicity&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Distribution of fatal police shootings by race/ethnicity&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/index_files/figure-html/race-by-year-1.png&#34; alt=&#34;Fatal police shootings by year and race&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Fatal police shootings by year and race, with percentage of unknown race highlighted&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;Age Distribution&lt;/h4&gt;
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/index_files/figure-html/age-distribution-1.png&#34; alt=&#34;Age distribution of police shooting victims&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Age distribution of police shooting victims&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/index_files/figure-html/age-race-distribution-1.png&#34; alt=&#34;Age distribution by race&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Age distribution by race for the three largest racial groups&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr/&gt;
+
+&lt;h3&gt;Behavioral Context&lt;/h3&gt;
+
+&lt;h4&gt;Armed Status&lt;/h4&gt;
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/index_files/figure-html/armed-status-1.png&#34; alt=&#34;Armed/unarmed status&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Armed/unarmed status of police shooting victims&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/index_files/figure-html/unarmed-by-race-1.png&#34; alt=&#34;Percentage unarmed by race&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Percentage of victims who were unarmed, by race&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;Mental Health Context&lt;/h4&gt;
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/index_files/figure-html/mental-health-trend-1.png&#34; alt=&#34;Mental health trend&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Percentage of victims with documented mental illness symptoms over time&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr/&gt;
+
+&lt;h3&gt;Temporal Patterns&lt;/h3&gt;
+
+&lt;h4&gt;When Do Shootings Occur?&lt;/h4&gt;
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/index_files/figure-html/seasonal-heatmap-1.png&#34; alt=&#34;Seasonal heatmap&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Heatmap showing daily patterns of police shootings across the calendar year&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://ianadamsresearch.com/post/2026-01-04-mpv-data-analysis/index_files/figure-html/day-of-week-1.png&#34; alt=&#34;Day of week distribution&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Distribution of police shootings by day of week&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;hr/&gt;
 
 &lt;div id=&#34;data-source&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data Source&lt;/h2&gt;
 &lt;p&gt;All data comes from &lt;a href=&#34;https://mappingpoliceviolence.us/&#34;&gt;Mapping Police Violence&lt;/a&gt;, which aggregates information from Fatal Encounters, The Washington Post&#39;s Fatal Force database, and additional cases identified through crowdsourcing and independent research.&lt;/p&gt;
+
+&lt;h3&gt;Related Resources&lt;/h3&gt;
+&lt;p&gt;For an interactive version of this analysis with real-time filtering and exploration capabilities, see the &lt;a href=&#34;https://ianadamsresearch.com/post/2026-01-04-mapping-police-violence-dashboard/&#34;&gt;Interactive MPV Dashboard&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;hr/&gt;
+
 &lt;p&gt;&lt;em&gt;This analysis is provided for research and educational purposes. The data should be interpreted within the broader context of research on policing, public safety, and racial justice.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>

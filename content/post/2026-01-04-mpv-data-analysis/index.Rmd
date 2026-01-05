@@ -28,17 +28,13 @@ knitr::opts_chunk$set(
 
 ## Important Data Limitations
 
-**This analysis presents data on police killings, which represents only a subset of all police uses of lethal force.** The data captures fatal encounters but does not include:
-
-- **Non-fatal police shootings** (research suggests that a slight majority of police shootings are survived)
-- Other uses of lethal force that did not result in death
-- Uses of force that did not involve lethal weapons
+**This analysis presents data on police killings, which represents only a subset of all police uses of lethal force.** The data captures fatal encounters [Mapping Police Violence](https://mappingpoliceviolence.us/) but does not include **non-fatal police shootings** (research suggests that a slight majority of police shootings are survived).
 
 Therefore, **these numbers undercount the total instances of lethal force used by police.** When interpreting these statistics, it's critical to remember that we are looking at deaths only, not all incidents where officers used potentially lethal force.
 
 Additionally, this data represents **descriptive statistics only** and cannot establish causal relationships without additional controls for local crime rates, police deployment patterns, population demographics, socioeconomic factors, and jurisdictional policies.
 
-This is a **vibe-coded prototype**: a rapid, exploratory build to see how far one can get in standing up a public-data dashboard with automated ingestion and standard visual analytics.
+Finally, this is a **vibe-coded prototype**: a rapid, exploratory build to see how far one can get in standing up a public-data dashboard with automated ingestion and basic visuals. You definitely *should not rely on these numbers in any kind of professional capacity without further investigation and validation.*
 
 **Critical disclaimer:** I have not independently verified the MPV data, nor have I formally audited or validated my cleaning and harmonization routines. Treat everything here as exploratory and illustrative. The outputs are not suitable for professional, policy, legal, journalistic, or operational use, and should not be relied upon as an authoritative accounting of levels, rates, rankings, or trends.
 
