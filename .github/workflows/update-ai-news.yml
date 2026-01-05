@@ -31,7 +31,7 @@ jobs:
             libsqlite3-dev
 
       - name: Cache R packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
           key: ${{ runner.os }}-r-4.3-packages
@@ -64,7 +64,7 @@ jobs:
 
       - name: Restore database from previous run
         id: restore-db
-        uses: actions/cache@v3
+        uses: actions/cache/restore@v4
         with:
           path: data/ai-police-news/stories.sqlite
           key: ai-news-db-${{ github.run_id }}
@@ -103,7 +103,7 @@ jobs:
           git push
 
       - name: Save database for next run
-        uses: actions/cache/save@v3
+        uses: actions/cache/save@v4
         if: always()
         with:
           path: data/ai-police-news/stories.sqlite
@@ -111,7 +111,7 @@ jobs:
 
       - name: Upload logs as artifact
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: news-aggregator-logs
           path: data/ai-police-news/logs/
