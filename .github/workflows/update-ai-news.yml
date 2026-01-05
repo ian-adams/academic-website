@@ -1,0 +1,157 @@
+name: Update AI Police News Feed
+
+on:
+  # Run daily at 9 AM UTC (4 AM EST / 1 AM PST)
+  schedule:
+    - cron: '0 9 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+  # Run on push to test (remove this after testing)
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'R/news-aggregator/**'
+  #     - '.github/workflows/update-ai-news.yml'
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.3.2'
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libcurl4-openssl-dev \
+            libssl-dev \
+            libxml2-dev \
+            libsqlite3-dev
+
+      - name: Query R dependencies
+        run: |
+          install.packages('remotes')
+          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+
+      - name: Cache R packages
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-r-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-r-${{ hashFiles('.github/R-version') }}-1-
+
+      - name: Install R dependencies
+        run: |
+          install.packages(c(
+            'here',
+            'yaml',
+            'dplyr',
+            'tidyr',
+            'stringr',
+            'purrr',
+            'lubridate',
+            'httr2',
+            'jsonlite',
+            'xml2',
+            'tidyRSS',
+            'DBI',
+            'RSQLite',
+            'digest'
+          ))
+        shell: Rscript {0}
+
+      - name: Create data directories
+        run: |
+          mkdir -p data/ai-police-news/logs
+          mkdir -p static/data
+
+      - name: Restore database from previous run
+        id: restore-db
+        uses: actions/cache@v3
+        with:
+          path: data/ai-police-news/stories.sqlite
+          key: ai-news-db-${{ github.run_id }}
+          restore-keys: |
+            ai-news-db-
+
+      - name: Run news aggregator pipeline
+        env:
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+        run: |
+          Rscript R/news-aggregator/run_pipeline.R
+        continue-on-error: false
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          if [ -f static/data/ai-police-news.json ]; then
+            if git diff --quiet static/data/ai-police-news.json; then
+              echo "changes=false" >> $GITHUB_OUTPUT
+            else
+              echo "changes=true" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add static/data/ai-police-news.json
+          git add static/data/ai-police-news.xml
+          git add data/ai-police-news/needs_review.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update AI police news feed - $(date +'%Y-%m-%d')"
+          git push
+
+      - name: Save database for next run
+        uses: actions/cache/save@v3
+        if: always()
+        with:
+          path: data/ai-police-news/stories.sqlite
+          key: ai-news-db-${{ github.run_id }}
+
+      - name: Upload logs as artifact
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: news-aggregator-logs
+          path: data/ai-police-news/logs/
+          retention-days: 7
+
+      - name: Report summary
+        if: always()
+        run: |
+          echo "## News Aggregator Run Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Run Date:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ -f data/ai-police-news/logs/*.log ]; then
+            LATEST_LOG=$(ls -t data/ai-police-news/logs/*.log | head -1)
+            echo "**Latest Log:**" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            tail -30 "$LATEST_LOG" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ -f data/ai-police-news/needs_review.json ]; then
+            REVIEW_COUNT=$(jq '.count' data/ai-police-news/needs_review.json)
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "**Stories needing review:** $REVIEW_COUNT" >> $GITHUB_STEP_SUMMARY
+          fi

@@ -44,3 +44,8 @@
     name = "CV"
     url = "media/cv.pdf"
     weight = 75
+
+ [[main]]
+    name = "AI Police News"
+    url = "ai-news/"
+    weight = 76
