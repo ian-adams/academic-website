@@ -11,7 +11,7 @@ rss_feeds:
     url: "https://www.govtech.com/public-safety.rss"
 
   - name: "Law Enforcement Today"
-    url: "https://www.lawenforcementtoday.com/feed/"
+    url: "https://lawenforcementtoday.com/index.rss"
 
   # Technology & Policy News
   - name: "Wired"
