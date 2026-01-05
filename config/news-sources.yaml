@@ -88,8 +88,8 @@ search_terms:
 
 # NewsAPI configuration
 newsapi:
-  enabled: true  # Set to false if no API key or want to skip
-  days_back: 7   # How many days back to search
+  enabled: false  # Set to true once API key is working (currently getting 401 errors)
+  days_back: 7    # How many days back to search
 
 # Filtering settings
 filtering:

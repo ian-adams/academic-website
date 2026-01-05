@@ -69,7 +69,7 @@ process_articles <- function(articles, min_relevance_score = 0.3, log_file = NUL
   # Extract location if possible
   articles_filtered <- articles_filtered %>%
     mutate(
-      location = extract_location(paste(title, summary))
+      location = sapply(paste(title, summary), extract_location)
     )
 
   # Flag stories that need manual review (0.4 - 0.7 range)
