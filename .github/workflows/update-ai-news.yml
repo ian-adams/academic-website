@@ -8,14 +8,6 @@ on:
   # Allow manual trigger
   workflow_dispatch:
 
-  # Run on push to test (remove this after testing)
-  # push:
-  #   branches:
-  #     - main
-  #   paths:
-  #     - 'R/news-aggregator/**'
-  #     - '.github/workflows/update-ai-news.yml'
-
 jobs:
   update-news:
     runs-on: ubuntu-latest
@@ -23,8 +15,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
 
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
@@ -40,19 +30,12 @@ jobs:
             libxml2-dev \
             libsqlite3-dev
 
-      - name: Query R dependencies
-        run: |
-          install.packages('remotes')
-          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
-          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
-        shell: Rscript {0}
-
       - name: Cache R packages
         uses: actions/cache@v3
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
-          restore-keys: ${{ runner.os }}-r-${{ hashFiles('.github/R-version') }}-1-
+          key: ${{ runner.os }}-r-4.3-packages
+          restore-keys: ${{ runner.os }}-r-4.3-
 
       - name: Install R dependencies
         run: |
@@ -71,7 +54,7 @@ jobs:
             'DBI',
             'RSQLite',
             'digest'
-          ))
+          ), repos = 'https://cloud.r-project.org')
         shell: Rscript {0}
 
       - name: Create data directories
@@ -142,7 +125,7 @@ jobs:
           echo "**Run Date:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
-          if [ -f data/ai-police-news/logs/*.log ]; then
+          if ls data/ai-police-news/logs/*.log 1> /dev/null 2>&1; then
             LATEST_LOG=$(ls -t data/ai-police-news/logs/*.log | head -1)
             echo "**Latest Log:**" >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
