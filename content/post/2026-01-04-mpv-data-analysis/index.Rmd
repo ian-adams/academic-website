@@ -53,9 +53,9 @@ library(gghighlight)
 library(ggthemes)
 library(ggrepel)
 library(slider)
-library(sf)
-library(rnaturalearth)
-library(rnaturalearthdata)
+#library(sf)
+#library(rnaturalearth)
+#library(rnaturalearthdata)
 
 # Suppress package startup messages
 suppressPackageStartupMessages({
@@ -171,13 +171,13 @@ create_cumulative_plot <- function(data, title_suffix, y_limit, caption_note) {
 }
 
 # Create plot for all deaths
-create_cumulative_plot(df_all, "Killings (All Methods)", 1300,
+create_cumulative_plot(df_all, "Killings (All Methods)", 1400,
                        "Includes all causes: gunshot, taser, vehicle, restraint, etc.")
 ```
 
 ```{r cumulative-shootings, fig.cap="Cumulative count of fatal police shootings only"}
 # Create plot for shootings only
-create_cumulative_plot(df_shootings, "Fatal Shootings", 1150,
+create_cumulative_plot(df_shootings, "Fatal Shootings", 1300,
                        "Filtered to cases with 'Gunshot' in cause of death\nNote: This excludes non-fatal shootings")
 ```
 
@@ -437,28 +437,6 @@ ggplot(dow_data, aes(x = day, y = pct)) +
   ylim(0, max(dow_data$pct) * 1.1)
 ```
 
----
-
-## Geographic Distribution
-
-```{r geographic-map, fig.width=12, fig.height=8, fig.cap="Geographic distribution of police fatal shootings across the United States"}
-# Filter for valid coordinates
-df_map <- df_shootings %>%
-  filter(!is.na(latitude) & !is.na(longitude))
-
-world <- ne_countries(scale = "medium", returnclass = "sf")
-sites <- st_as_sf(df_map, coords = c("longitude", "latitude"),
-                  crs = 4326, agr = "constant")
-
-ggplot(data = world) +
-  geom_sf() +
-  geom_sf(data = sites, size = .5, shape = 10, fill = "darkred", alpha = 0.6) +
-  coord_sf(xlim = c(-125, -66), ylim = c(24, 49), expand = TRUE) +
-  labs(title = "Geographic Distribution of Police Fatal Shootings",
-       subtitle = paste(min_year, "-", latest_year),
-       caption = "Source: Ian T. Adams | Data: Mapping Police Violence") +
-  theme_minimal()
-```
 
 ```{r top-states, fig.cap="Top 15 states by number of police fatal shootings"}
 stateinfo <- df_shootings %>%
