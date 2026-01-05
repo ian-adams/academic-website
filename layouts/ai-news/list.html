@@ -270,8 +270,12 @@
                             story.relevance_score >= 0.4 ? 'medium' : 'low';
       const relevancePercent = Math.round(story.relevance_score * 100);
 
-      const tags = story.tags && story.tags.length > 0 ?
-        story.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
+      // Handle tags as either array or string
+      let tags = '';
+      if (story.tags) {
+        const tagArray = Array.isArray(story.tags) ? story.tags : [story.tags];
+        tags = tagArray.map(tag => `<span class="tag">${tag}</span>`).join('');
+      }
 
       storiesHTML += `
         <div class="news-story" data-type="${story.story_type || 'general'}">
