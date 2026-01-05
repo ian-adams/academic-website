@@ -1,0 +1,110 @@
+# Configuration for AI Police News Aggregator
+# Research Watch: AI in Police Report Writing and Documentation
+
+# RSS Feeds from relevant sources
+rss_feeds:
+  # Law Enforcement Technology News
+  - name: "Police1"
+    url: "https://www.police1.com/rss/police-technology.xml"
+
+  - name: "GovTech Public Safety"
+    url: "https://www.govtech.com/public-safety.rss"
+
+  - name: "Law Enforcement Today"
+    url: "https://www.lawenforcementtoday.com/feed/"
+
+  # Technology & Policy News
+  - name: "Wired"
+    url: "https://www.wired.com/feed/rss"
+
+  - name: "MIT Technology Review"
+    url: "https://www.technologyreview.com/feed/"
+
+  - name: "Ars Technica"
+    url: "https://feeds.arstechnica.com/arstechnica/index"
+
+  - name: "The Verge"
+    url: "https://www.theverge.com/rss/index.xml"
+
+  # Criminal Justice & Civil Liberties
+  - name: "ACLU"
+    url: "https://www.aclu.org/rss.xml"
+
+  - name: "Electronic Frontier Foundation"
+    url: "https://www.eff.org/rss/updates.xml"
+
+  - name: "Brennan Center for Justice"
+    url: "https://www.brennancenter.org/rss.xml"
+
+  # Government & Policy
+  - name: "FCW Federal IT"
+    url: "https://fcw.com/rss-feeds/all.aspx"
+
+  - name: "NextGov"
+    url: "https://www.nextgov.com/rss/all/"
+
+  # AI & Tech News
+  - name: "AI News"
+    url: "https://artificialintelligence-news.com/feed/"
+
+  - name: "VentureBeat AI"
+    url: "https://venturebeat.com/category/ai/feed/"
+
+# Search terms for Google News and NewsAPI
+search_terms:
+  # Core terms - AI report writing
+  - "AI police report writing"
+  - "artificial intelligence police reports"
+  - "automated police report writing"
+  - "AI generated police report"
+  - "police report automation"
+
+  # Vendor-specific
+  - "Axon Draft One"
+  - "Axon AI report"
+  - "Truleo police"
+  - "Veritone police report"
+
+  # Body camera + AI
+  - "body camera AI transcript"
+  - "bodycam AI police report"
+  - "body worn camera artificial intelligence"
+
+  # Incidents and issues
+  - "ChatGPT police report"
+  - "AI police report error"
+  - "AI police report hallucination"
+  - "police report AI mistake"
+  - "AI police documentation"
+
+  # Policy and adoption
+  - "police department AI report"
+  - "law enforcement AI documentation"
+  - "police adopt AI report writing"
+
+  # Use of force specific (common area for AI reports)
+  - "AI use of force report"
+  - "automated use of force documentation"
+
+# NewsAPI configuration
+newsapi:
+  enabled: true  # Set to false if no API key or want to skip
+  days_back: 7   # How many days back to search
+
+# Filtering settings
+filtering:
+  min_relevance_score: 0.3  # Minimum score to include (0-1)
+  review_threshold_low: 0.4  # Flag for review if score is >= this...
+  review_threshold_high: 0.7 # ...and < this
+
+# Output settings
+output:
+  max_stories_json: 150      # Max stories in JSON output
+  max_stories_rss: 50        # Max stories in RSS feed
+  json_path: "static/data/ai-police-news.json"
+  rss_path: "static/data/ai-police-news.xml"
+
+# Logging
+logging:
+  level: "INFO"  # INFO, WARN, ERROR
+  retention_days: 30  # Keep logs for this many days
