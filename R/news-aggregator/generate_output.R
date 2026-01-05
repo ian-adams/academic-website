@@ -55,8 +55,15 @@ generate_json_output <- function(con, output_path = NULL, max_stories = 100, log
       ) %>%
       pmap(function(...) {
         story <- list(...)
-        # Remove empty fields
-        story[sapply(story, function(x) is.null(x) || is.na(x) || x == "")] <- NULL
+        # Remove empty fields - handle vectors/lists safely
+        story[sapply(story, function(x) {
+          if (is.null(x)) return(TRUE)
+          if (length(x) == 0) return(TRUE)
+          if (is.list(x) && length(x) == 1 && is.null(x[[1]])) return(TRUE)
+          if (length(x) == 1 && is.na(x)) return(TRUE)
+          if (length(x) == 1 && x == "") return(TRUE)
+          return(FALSE)
+        })] <- NULL
         story
       })
 
