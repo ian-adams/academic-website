@@ -1,0 +1,140 @@
+name: Update Police K9 Incidents Feed
+
+on:
+  # Run daily at 10 AM UTC (5 AM EST / 2 AM PST)
+  schedule:
+    - cron: '0 10 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  update-k9-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.3.2'
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libcurl4-openssl-dev \
+            libssl-dev \
+            libxml2-dev \
+            libsqlite3-dev
+
+      - name: Cache R packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-r-4.3-packages
+          restore-keys: ${{ runner.os }}-r-4.3-
+
+      - name: Install R dependencies
+        run: |
+          install.packages(c(
+            'here',
+            'yaml',
+            'dplyr',
+            'tidyr',
+            'stringr',
+            'purrr',
+            'lubridate',
+            'httr2',
+            'jsonlite',
+            'xml2',
+            'tidyRSS',
+            'DBI',
+            'RSQLite',
+            'digest'
+          ), repos = 'https://cloud.r-project.org')
+        shell: Rscript {0}
+
+      - name: Create data directories
+        run: |
+          mkdir -p data/k9-incidents/logs
+          mkdir -p static/data
+
+      - name: Restore database from previous run
+        id: restore-db
+        uses: actions/cache/restore@v4
+        with:
+          path: data/k9-incidents/stories.sqlite
+          key: k9-incidents-db-${{ github.run_id }}
+          restore-keys: |
+            k9-incidents-db-
+
+      - name: Run K9 incident aggregator pipeline
+        env:
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+        run: |
+          Rscript R/k9-aggregator/run_pipeline.R
+        continue-on-error: false
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          if [ -f static/data/k9-incidents.json ]; then
+            if git diff --quiet static/data/k9-incidents.json; then
+              echo "changes=false" >> $GITHUB_OUTPUT
+            else
+              echo "changes=true" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add static/data/k9-incidents.json
+          git add static/data/k9-incidents.xml
+          git add data/k9-incidents/needs_review.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update K9 incidents feed - $(date +'%Y-%m-%d')"
+          git push
+
+      - name: Save database for next run
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: data/k9-incidents/stories.sqlite
+          key: k9-incidents-db-${{ github.run_id }}
+
+      - name: Upload logs as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: k9-incidents-logs
+          path: data/k9-incidents/logs/
+          retention-days: 7
+
+      - name: Report summary
+        if: always()
+        run: |
+          echo "## K9 Incident Aggregator Run Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Run Date:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if ls data/k9-incidents/logs/*.log 1> /dev/null 2>&1; then
+            LATEST_LOG=$(ls -t data/k9-incidents/logs/*.log | head -1)
+            echo "**Latest Log:**" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            tail -30 "$LATEST_LOG" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ -f data/k9-incidents/needs_review.json ]; then
+            REVIEW_COUNT=$(jq '.count' data/k9-incidents/needs_review.json)
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "**Stories needing review:** $REVIEW_COUNT" >> $GITHUB_STEP_SUMMARY
+          fi

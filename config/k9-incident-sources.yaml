@@ -1,0 +1,112 @@
+# Configuration for Police K9 Incident Aggregator
+# Research Watch: Police K9 Bites, Incidents, Legal Cases, and Policy
+
+# RSS Feeds from relevant sources
+rss_feeds:
+  # Law Enforcement News
+  - name: "Police1"
+    url: "https://www.police1.com/rss/police-technology.xml"
+
+  - name: "GovTech Public Safety"
+    url: "https://www.govtech.com/public-safety.rss"
+
+  - name: "Law Enforcement Today"
+    url: "lawenforcementtoday.com/index.rss"
+
+  # Criminal Justice & Civil Liberties
+  - name: "ACLU"
+    url: "https://www.aclu.org/rss.xml"
+
+  - name: "Electronic Frontier Foundation"
+    url: "https://www.eff.org/rss/updates.xml"
+
+  - name: "Brennan Center for Justice"
+    url: "https://www.brennancenter.org/rss.xml"
+
+  # Legal News
+  - name: "Law360"
+    url: "https://www.law360.com/articles/rss"
+
+  # Government & Policy
+  - name: "FCW Federal IT"
+    url: "https://fcw.com/rss-feeds/all.aspx"
+
+  - name: "NextGov"
+    url: "https://www.nextgov.com/rss/all/"
+
+# Search terms for Google News and NewsAPI
+search_terms:
+  # Core K9 bite incidents
+  - "police K9 bite"
+  - "police dog attack"
+  - "police canine bite incident"
+  - "K9 unit bite"
+  - "police dog injury"
+  - "canine bite lawsuit"
+
+  # Legal cases and settlements
+  - "police dog bite lawsuit"
+  - "K9 bite settlement"
+  - "police canine excessive force"
+  - "K9 bite legal case"
+  - "police dog attack verdict"
+  - "canine bite civil rights"
+
+  # K9 officer incidents
+  - "police K9 death"
+  - "K9 officer killed"
+  - "police dog injured"
+  - "K9 heat death"
+  - "police canine death"
+  - "K9 left in car"
+
+  # Policy and training
+  - "police K9 policy"
+  - "canine unit policy"
+  - "K9 training standards"
+  - "police dog use of force"
+  - "K9 deployment policy"
+  - "police canine training"
+
+  # Incidents and captures
+  - "police K9 apprehension"
+  - "K9 track suspect"
+  - "police dog capture"
+  - "canine unit deployment"
+
+  # Problems and controversies
+  - "K9 bite statistics"
+  - "police dog bite data"
+  - "K9 unit controversy"
+  - "police canine reform"
+  - "K9 bite racial disparity"
+  - "police dog accountability"
+
+  # Specific incident types
+  - "K9 bite innocent person"
+  - "police dog wrong person"
+  - "K9 bite child"
+  - "police canine mistaken identity"
+
+# NewsAPI configuration
+newsapi:
+  enabled: false  # Set to true once API key is working
+  days_back: 7    # How many days back to search
+
+# Filtering settings
+filtering:
+  min_relevance_score: 0.3  # Minimum score to include (0-1)
+  review_threshold_low: 0.4  # Flag for review if score is >= this...
+  review_threshold_high: 0.7 # ...and < this
+
+# Output settings
+output:
+  max_stories_json: 150      # Max stories in JSON output
+  max_stories_rss: 50        # Max stories in RSS feed
+  json_path: "static/data/k9-incidents.json"
+  rss_path: "static/data/k9-incidents.xml"
+
+# Logging
+logging:
+  level: "INFO"  # INFO, WARN, ERROR
+  retention_days: 30  # Keep logs for this many days
