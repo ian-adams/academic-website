@@ -54,3 +54,8 @@
     name = "K9 Incidents"
     url = "k9-incidents/"
     weight = 77
+
+ [[main]]
+    name = "Force Science News"
+    url = "force-science-news/"
+    weight = 78
