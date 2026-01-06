@@ -19,3 +19,9 @@ resources/_gen/images/publication/2021-01-11-mandatory-sexual-assault-kit-testin
 # AI News Aggregator
 data/ai-police-news/logs/
 data/ai-police-news/stories/
+data/ai-police-news/*.db
+
+# K9 Incidents Aggregator
+data/k9-incidents/logs/
+data/k9-incidents/stories/
+data/k9-incidents/*.db
