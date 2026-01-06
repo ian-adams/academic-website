@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Hugo 0.80.0">
 
-  <title>Research Watch: Police K9 Incidents and Legal Cases | Ian T. Adams</title>
-  <meta name="description" content="Automated news aggregator tracking police K9 bites, incidents, legal cases, and policy developments">
+  <title>Research Watch: Force Science Institute News | Ian T. Adams</title>
+  <meta name="description" content="Automated news aggregator tracking the Force Science Institute&rsquo;s influence on police use-of-force testimony, legal proceedings, and policy">
 
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -111,6 +111,7 @@
         <li><a href="/post/">Posts</a></li>
         <li><a href="/ai-news/">AI Police News</a></li>
         <li><a href="/k9-incidents/">K9 Incidents</a></li>
+        <li><a href="/force-science-news/">Force Science News</a></li>
       </ul>
     </div>
   </nav>
@@ -119,36 +120,44 @@
   <main>
     <article class="article">
   <div class="article-container">
-    <h1>Research Watch: Police K9 Incidents and Legal Cases</h1>
+    <h1>Research Watch: Force Science Institute News</h1>
 
     <div class="article-metadata">
       <div>
         <span class="author-notes">
-          Automatically updated daily | <a href="/data/k9-incidents.xml" target="_blank">RSS Feed</a>
+          Automatically updated daily | <a href="/data/force-science-news.xml" target="_blank">RSS Feed</a>
         </span>
       </div>
     </div>
 
     <div class="article-style">
-      <p>This page automatically tracks news, research, and developments related to police K9 units, including bite incidents, legal cases, policy changes, and significant events. The feed is updated daily and includes incident reports, lawsuits, settlements, policy decisions, and investigative journalism.</p>
-<p>The news aggregator monitors multiple sources including law enforcement outlets, legal news, civil liberties organizations, and general news coverage. Stories are automatically filtered for relevance to police K9 operations and incidents.</p>
+      <p>This page automatically tracks news, research, and developments related to the Force Science Institute (FSI), a private company that produces research on police use-of-force and trains expert witnesses who testify in police shooting cases. The feed surfaces journalistic coverage, legal proceedings, academic critiques, and policy developments.</p>
+<p><strong>About Force Science Institute:</strong> FSI trains and certifies &ldquo;Force Science Analysts&rdquo; who frequently testify as expert witnesses in criminal and civil cases involving police shootings. FSI&rsquo;s research and concepts (such as &ldquo;action beats reaction,&rdquo; &ldquo;inattentional blindness,&rdquo; and &ldquo;slip and capture&rdquo;) shape jury deliberations, prosecutorial decisions, and police training curricula. The organization&rsquo;s methodology has been criticized by academic experts and the Department of Justice.</p>
+<p>Read &ldquo;<a href="https://doi.org/10.1177/10986111251357498" target="_blank" rel="noopener">Forced Science: A Critical Appraisal of the Scientific Rigor of ‘Force Science’ Policing Research</a>&rdquo; in <em>Police Quarterly</em> July, 2025</p>
 <p><strong>Feed includes:</strong></p>
 <ul>
-<li>K9 bite incidents and attacks</li>
-<li>Legal cases, lawsuits, and settlements</li>
-<li>K9 deaths (heat, line of duty, etc.)</li>
-<li>Policy changes and reforms</li>
-<li>Training standards and certifications</li>
-<li>Successful apprehensions and captures</li>
-<li>Opinion and investigative pieces</li>
+<li>Legal proceedings where FSI or FSI-affiliated experts testify</li>
+<li>Daubert/Frye challenges to FSI research or experts</li>
+<li>Prosecutorial decisions citing FSI analysis</li>
+<li>Academic critiques of FSI methodology</li>
+<li>Investigative journalism examining FSI&rsquo;s influence</li>
+<li>Policy developments involving FSI training</li>
+<li>International coverage of FSI influence</li>
 </ul>
-<p><strong>Subscribe:</strong> <a href="/data/k9-incidents.xml">RSS Feed</a></p>
+<p><strong>Relevance Confidence Levels:</strong></p>
+<ul>
+<li><strong>High:</strong> Explicit mention of Force Science Institute, Bill Lewinski, or certified analysts</li>
+<li><strong>Medium:</strong> FSI-affiliated concepts or experts without explicit attribution</li>
+<li><strong>Low:</strong> Contextual signals only; flagged for manual review</li>
+</ul>
+<p><strong>Exclusions:</strong> This feed attempts to exclude FSI&rsquo;s own promotional content and generic police training announcements.</p>
+<p><strong>Subscribe:</strong> <a href="/data/force-science-news.xml">RSS Feed</a></p>
 <hr>
 
     </div>
 
     
-    <div id="k9-news-feed" class="k9-news-feed">
+    <div id="force-science-feed" class="force-science-feed">
       <div class="news-loading">
         <p>Loading latest stories...</p>
       </div>
@@ -158,7 +167,7 @@
 </article>
 
 <style>
-.k9-news-feed {
+.force-science-feed {
   margin-top: 2rem;
 }
 
@@ -270,14 +279,28 @@
 }
 
  
-.story-type-incident { background: #ffebee; color: #c62828; }
-.story-type-legal { background: #e8eaf6; color: #3949ab; }
-.story-type-death { background: #37474f; color: #fff; }
-.story-type-policy { background: #e3f2fd; color: #1976d2; }
-.story-type-training { background: #fff3e0; color: #f57c00; }
-.story-type-capture { background: #e8f5e9; color: #388e3c; }
-.story-type-opinion { background: #fce4ec; color: #c2185b; }
+.story-type-legal { background: #ffebee; color: #c62828; }
+.story-type-daubert { background: #fce4ec; color: #ad1457; }
+.story-type-academic { background: #e8f5e9; color: #2e7d32; }
+.story-type-policy { background: #e3f2fd; color: #1565c0; }
+.story-type-investigative { background: #fff3e0; color: #ef6c00; }
+.story-type-prosecutorial { background: #f3e5f5; color: #7b1fa2; }
+.story-type-international { background: #e0f7fa; color: #00838f; }
+.story-type-opinion { background: #fff8e1; color: #ff8f00; }
 .story-type-general { background: #f5f5f5; color: #666; }
+
+.confidence-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.confidence-high { background: #c8e6c9; color: #2e7d32; }
+.confidence-medium { background: #fff9c4; color: #f9a825; }
+.confidence-low { background: #ffcdd2; color: #c62828; }
 
 .story-summary {
   margin-bottom: 0.8rem;
@@ -318,6 +341,12 @@
   color: #999;
   font-size: 1.1rem;
 }
+
+.entities-list {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
 </style>
 
 <script>
@@ -328,7 +357,7 @@
   let currentFilter = 'all';
 
   
-  fetch('https:\/\/ianadamsresearch.com\/data/k9-incidents.json')
+  fetch('https:\/\/ianadamsresearch.com\/data/force-science-news.json')
     .then(response => {
       console.log('Fetch response:', response.status, response.statusText);
       if (!response.ok) {
@@ -343,7 +372,7 @@
     })
     .catch(error => {
       console.error('Error loading news:', error);
-      document.getElementById('k9-news-feed').innerHTML = `
+      document.getElementById('force-science-feed').innerHTML = `
         <div class="no-stories">
           <p>Unable to load news feed. Please try again later.</p>
         </div>
@@ -351,7 +380,7 @@
     });
 
   function renderFeed() {
-    const container = document.getElementById('k9-news-feed');
+    const container = document.getElementById('force-science-feed');
 
     if (filteredStories.length === 0) {
       container.innerHTML = `
@@ -381,7 +410,7 @@
           </button>
     `;
 
-    const types = ['incident', 'legal', 'death', 'policy', 'training', 'capture', 'opinion'];
+    const types = ['legal', 'daubert', 'academic', 'policy', 'investigative', 'prosecutorial', 'international', 'opinion'];
     types.forEach(type => {
       if (typeCounts[type]) {
         controlsHTML += `
@@ -403,12 +432,20 @@
       const relevanceClass = story.relevance_score >= 0.7 ? 'high' :
                             story.relevance_score >= 0.4 ? 'medium' : 'low';
       const relevancePercent = Math.round(story.relevance_score * 100);
+      const confidence = story.relevance_confidence || 'unknown';
 
       
       let tags = '';
       if (story.tags) {
         const tagArray = Array.isArray(story.tags) ? story.tags : [story.tags];
-        tags = tagArray.map(tag => `<span class="tag">${tag}</span>`).join('');
+        tags = tagArray.slice(0, 8).map(tag => `<span class="tag">${tag}</span>`).join('');
+      }
+
+      // Handle key_entities as either array or string
+      let entities = '';
+      if (story.key_entities) {
+        const entityArray = Array.isArray(story.key_entities) ? story.key_entities : story.key_entities.split(', ');
+        entities = entityArray.join(', ');
       }
 
       storiesHTML += `
@@ -426,15 +463,20 @@
               </span>
             </span>
             <span class="meta-item">
-              📅 ${formatDate(story.date_published || story.date_discovered)}
+              <span class="confidence-badge confidence-${confidence}">
+                ${confidence}
+              </span>
             </span>
             <span class="meta-item">
-              📰 ${story.source}
+              ${formatDate(story.date || story.date_discovered)}
             </span>
-            ${story.location ? `<span class="meta-item">📍 ${story.location}</span>` : ''}
+            <span class="meta-item">
+              ${story.source}
+            </span>
+            ${story.location ? `<span class="meta-item">${story.location}</span>` : ''}
             <span class="meta-item">
               <span class="relevance-score relevance-${relevanceClass}">
-                ${relevancePercent}% relevant
+                ${relevancePercent}%
               </span>
             </span>
           </div>
@@ -443,11 +485,9 @@
             ${story.summary}
           </div>
 
-          ${story.key_entities ? `
-            <div class="story-meta">
-              <span class="meta-item">
-                🏢 ${story.key_entities}
-              </span>
+          ${entities ? `
+            <div class="entities-list">
+              <strong>Entities:</strong> ${entities}
             </div>
           ` : ''}
 
@@ -459,7 +499,7 @@
     container.innerHTML = controlsHTML + storiesHTML;
   }
 
-  // Filter stories by type
+  
   window.filterStories = function(type) {
     currentFilter = type;
     if (type === 'all') {

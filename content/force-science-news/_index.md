@@ -8,7 +8,9 @@ layout: list
 
 This page automatically tracks news, research, and developments related to the Force Science Institute (FSI), a private company that produces research on police use-of-force and trains expert witnesses who testify in police shooting cases. The feed surfaces journalistic coverage, legal proceedings, academic critiques, and policy developments.
 
-**About Force Science Institute:** FSI, founded by William "Bill" Lewinski, trains and certifies "Force Science Analysts" who frequently testify as expert witnesses in criminal and civil cases involving police shootings. FSI's research and concepts (such as "action beats reaction," "inattentional blindness," and "slip and capture") shape jury deliberations, prosecutorial decisions, and police training curricula. The organization's methodology has been criticized by academic experts and the Department of Justice.
+**About Force Science Institute:** FSI trains and certifies "Force Science Analysts" who frequently testify as expert witnesses in criminal and civil cases involving police shootings. FSI's research and concepts (such as "action beats reaction," "inattentional blindness," and "slip and capture") shape jury deliberations, prosecutorial decisions, and police training curricula. The organization's methodology has been criticized by academic experts and the Department of Justice.
+
+Read "[Forced Science: A Critical Appraisal of the Scientific Rigor of ‘Force Science’ Policing Research](https://doi.org/10.1177/10986111251357498)" in *Police Quarterly* July, 2025
 
 **Feed includes:**
 - Legal proceedings where FSI or FSI-affiliated experts testify
@@ -24,7 +26,7 @@ This page automatically tracks news, research, and developments related to the F
 - **Medium:** FSI-affiliated concepts or experts without explicit attribution
 - **Low:** Contextual signals only; flagged for manual review
 
-**Exclusions:** This feed excludes FSI's own promotional content, PoliceOne marketing content, and generic police training announcements.
+**Exclusions:** This feed attempts to exclude FSI's own promotional content and generic police training announcements.
 
 **Subscribe:** [RSS Feed](/data/force-science-news.xml)
 
