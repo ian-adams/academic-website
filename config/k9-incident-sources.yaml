@@ -44,7 +44,7 @@ search_terms:
   - "police dog injury"
   - "canine bite lawsuit"
 
-  # Legal cases and settlements
+  # Legal cases and settlements - Bite Incidents
   - "police dog bite lawsuit"
   - "K9 bite settlement"
   - "police canine excessive force"
@@ -60,7 +60,7 @@ search_terms:
   - "police canine death"
   - "K9 left in car"
 
-  # Policy and training
+  # Policy and training - General
   - "police K9 policy"
   - "canine unit policy"
   - "K9 training standards"
@@ -74,7 +74,7 @@ search_terms:
   - "police dog capture"
   - "canine unit deployment"
 
-  # Problems and controversies
+  # Problems and controversies - Bites
   - "K9 bite statistics"
   - "police dog bite data"
   - "K9 unit controversy"
@@ -87,6 +87,52 @@ search_terms:
   - "police dog wrong person"
   - "K9 bite child"
   - "police canine mistaken identity"
+
+  # Detection Dog Reliability & False Alerts
+  - "drug dog false alert"
+  - "K9 false positive"
+  - "drug sniffing dog reliability"
+  - "detection dog accuracy"
+  - "K9 handler cuing"
+  - "drug dog error rate"
+  - "K9 alert accuracy"
+
+  # Legal Challenges - Detection Dogs
+  - "drug dog probable cause lawsuit"
+  - "K9 detection court case"
+  - "drug sniffing dog fourth amendment"
+  - "K9 alert legal challenge"
+  - "drug dog reliability lawsuit"
+  - "K9 search constitutional challenge"
+
+  # Certification & Training - Detection Dogs
+  - "K9 certification standards lawsuit"
+  - "drug dog certification failure"
+  - "K9 training reliability"
+  - "detection dog decertification"
+  - "K9 certification challenge"
+  - "drug dog training standards"
+
+  # Policy Changes - Detection Dogs & K9 Programs
+  - "police end K9 program"
+  - "K9 unit disbanded"
+  - "drug dog program ended"
+  - "K9 detection policy change"
+  - "agency removes K9 unit"
+  - "police discontinue K9 program"
+
+  # Research & Studies - Detection Dogs
+  - "K9 detection study"
+  - "drug dog accuracy research"
+  - "K9 reliability study"
+  - "detection dog effectiveness research"
+
+  # Detection Dog Issues - Specific Problems
+  - "drug dog handler bias"
+  - "K9 alert without drugs"
+  - "drug dog unreliable"
+  - "K9 certification revoked"
+  - "detection dog policy reform"
 
 # NewsAPI configuration
 newsapi:

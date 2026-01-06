@@ -23,11 +23,12 @@ generate_json_output <- function(con, output_path = NULL, max_stories = 100, log
   log_message("Generating JSON output", log_file)
 
   # Get published stories from database
+  # Order by date_published if available, otherwise use date_discovered
   stories <- dbGetQuery(
     con,
     "SELECT * FROM stories
      WHERE published_on_site = 1
-     ORDER BY date_published DESC, relevance_score DESC
+     ORDER BY COALESCE(NULLIF(date_published, ''), date_discovered) DESC, relevance_score DESC
      LIMIT ?",
     params = list(max_stories)
   )
@@ -44,12 +45,16 @@ generate_json_output <- function(con, output_path = NULL, max_stories = 100, log
     # Format for JSON output
     stories_list <- stories %>%
       mutate(
+        # Use date_published if available, otherwise fall back to date_discovered
+        date = ifelse(!is.na(date_published) & date_published != "",
+                     date_published,
+                     date_discovered),
         # Convert comma-separated strings to arrays
         tags = lapply(strsplit(tags, ",\\s*"), function(x) if (length(x) == 0 || x[1] == "") NULL else x),
         key_entities = lapply(strsplit(key_entities, ",\\s*"), function(x) if (length(x) == 0 || x[1] == "") NULL else x)
       ) %>%
       select(
-        id, url, title, source, date_published, date_discovered,
+        id, url, title, source, date, date_discovered,
         summary, story_type, relevance_score, key_entities,
         location, tags, needs_review
       ) %>%
@@ -103,11 +108,12 @@ generate_rss_feed <- function(con, output_path = NULL, max_stories = 50, log_fil
   log_message("Generating RSS feed", log_file)
 
   # Get recent stories
+  # Order by date_published if available, otherwise use date_discovered
   stories <- dbGetQuery(
     con,
     "SELECT * FROM stories
      WHERE published_on_site = 1
-     ORDER BY date_published DESC, relevance_score DESC
+     ORDER BY COALESCE(NULLIF(date_published, ''), date_discovered) DESC, relevance_score DESC
      LIMIT ?",
     params = list(max_stories)
   )
@@ -146,10 +152,15 @@ generate_rss_feed <- function(con, output_path = NULL, max_stories = 50, log_fil
 
       xml_add_child(item, "description", description)
 
-      # Add pub date
-      if (!is.na(story$date_published)) {
+      # Add pub date - use date_published if available, otherwise date_discovered
+      pub_date_str <- if (!is.na(story$date_published) && story$date_published != "") {
+        story$date_published
+      } else {
+        story$date_discovered
+      }
+      if (!is.na(pub_date_str) && pub_date_str != "") {
         # Convert to RFC 822 format
-        pub_date <- as.POSIXct(story$date_published)
+        pub_date <- as.POSIXct(pub_date_str)
         xml_add_child(item, "pubDate", format(pub_date, "%a, %d %b %Y 00:00:00 %z"))
       }
 
