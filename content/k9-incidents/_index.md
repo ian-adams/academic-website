@@ -11,7 +11,7 @@ This page automatically tracks news, research, and developments related to polic
 The news aggregator monitors multiple sources including law enforcement outlets, legal news, civil liberties organizations, and general news coverage. Stories are automatically filtered for relevance to police K9 operations and incidents.
 
 **Feed includes:**
-- K9 bite incidents and attacks
+- K9 incidents
 - Legal cases, lawsuits, and settlements
 - K9 deaths (heat, line of duty, etc.)
 - Policy changes and reforms
@@ -19,6 +19,7 @@ The news aggregator monitors multiple sources including law enforcement outlets,
 - Successful apprehensions and captures
 - Opinion and investigative pieces
 
-**Subscribe:** [RSS Feed](/data/k9-incidents.xml)
+**Subscribe:** [RSS Feed](/data/k9-incidents.xml). This feed began active tracking on January 6, 2026.
+
 
 ---
