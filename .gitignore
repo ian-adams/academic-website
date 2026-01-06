@@ -25,3 +25,8 @@ data/ai-police-news/*.db
 data/k9-incidents/logs/
 data/k9-incidents/stories/
 data/k9-incidents/*.db
+
+# Force Science Aggregator
+data/force-science/logs/
+data/force-science/stories/
+data/force-science/*.db
