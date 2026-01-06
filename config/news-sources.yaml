@@ -59,32 +59,79 @@ search_terms:
   - "AI generated police report"
   - "police report automation"
 
-  # Vendor-specific
+  # Vendor-specific: Report Writing & Body Cameras
   - "Axon Draft One"
   - "Axon AI report"
   - "Truleo police"
-  - "Veritone police report"
+  - "Veritone police"
+  - "Motorola Solutions police AI"
 
   # Body camera + AI
   - "body camera AI transcript"
   - "bodycam AI police report"
   - "body worn camera artificial intelligence"
 
-  # Incidents and issues
+  # Incidents and issues - Report Writing
   - "ChatGPT police report"
   - "AI police report error"
   - "AI police report hallucination"
   - "police report AI mistake"
   - "AI police documentation"
 
-  # Policy and adoption
-  - "police department AI report"
-  - "law enforcement AI documentation"
-  - "police adopt AI report writing"
-
-  # Use of force specific (common area for AI reports)
+  # Use of force specific
   - "AI use of force report"
   - "automated use of force documentation"
+
+  # Surveillance Technologies - ALPR & License Plate Readers
+  - "Flock Safety police"
+  - "automated license plate reader police"
+  - "ALPR police surveillance"
+  - "license plate reader police"
+  - "Flock Safety surveillance"
+
+  # Facial Recognition
+  - "Clearview AI police"
+  - "police facial recognition"
+  - "facial recognition law enforcement"
+  - "police face recognition technology"
+
+  # Gunshot Detection & Predictive Policing
+  - "ShotSpotter police"
+  - "SoundThinking police"
+  - "gunshot detection AI"
+  - "predictive policing"
+  - "PredPol police"
+  - "Geolitica police"
+  - "AI crime prediction"
+
+  # AI Analytics & Investigation Tools
+  - "police AI video analytics"
+  - "AI police investigation"
+  - "police artificial intelligence tool"
+  - "real-time crime center AI"
+  - "police AI platform"
+
+  # Policy, Adoption, and Oversight
+  - "police department AI adoption"
+  - "law enforcement AI policy"
+  - "police AI regulation"
+  - "AI policing oversight"
+  - "police AI transparency"
+  - "police AI audit"
+
+  # Civil Liberties & Concerns
+  - "police AI bias"
+  - "AI policing discrimination"
+  - "police surveillance AI"
+  - "police AI civil rights"
+  - "police AI accountability"
+
+  # Broader AI in Policing
+  - "AI law enforcement technology"
+  - "police artificial intelligence"
+  - "AI policing tool"
+  - "machine learning police"
+  - "police AI system"
 
 # NewsAPI configuration
 newsapi:
