@@ -1,39 +1,89 @@
 ---
-title: "Research Watch: Force Science Institute News"
-summary: "Automated news aggregator tracking the Force Science Institute's influence on police use-of-force testimony, legal proceedings, and policy"
+title: "Force Science Institute: Critical Scholarship & News Coverage"
+summary: "Critical scholarship on Force Science Institute research. Adams et al. (2025) assess FSI's scientific rigor against Daubert standards for courtroom evidence."
+description: "Critical scholarship on Force Science Institute research. Adams et al. (2025) assess FSI's scientific rigor against Daubert standards for courtroom evidence."
 date: 2026-01-06
+lastmod: 2026-01-07
 type: page
 reading_time: false
 share: false
 profile: false
 comments: false
+tags:
+  - force science
+  - force science institute
+  - daubert
+  - police use of force
+  - expert witness
+  - scientific reliability
+  - bill lewinski
+  - william lewinski
+  - law enforcement executive forum
+  - lon bartel
+  - von kliem
+  - jamie borden
+  - jeff martin
+  - kevin davis
+  - mark kroll
+  - michael brave
+  - frye
+  - human factors
+  - police training
+  - use of force litigation
+  - section 1983
+  - excessive force
+  - police shooting
+  - expert testimony
+authors:
+  - admin
 ---
 
-This page automatically tracks news, research, and developments related to the [Force Science Institute (FSI)](https://www.forcescience.com/), a private company that produces research on police use-of-force. The feed surfaces journalistic coverage, legal proceedings, academic critiques, and policy developments.
+This page aggregates news coverage, legal proceedings, and academic research related to the Force Science Institute (FSI). It is maintained as a resource for researchers, attorneys, and policymakers examining the scientific foundations of use-of-force expert testimony.
 
-**About Force Science Institute:** FSI trains and certifies "Force Science Analysts" who frequently testify as expert witnesses in criminal and civil cases involving police shootings. FSI's research and concepts (such as "action beats reaction," "inattentional blindness," and "slip and capture") shape jury deliberations, prosecutorial decisions, and police training curricula. The organization's methodology has been criticized by academic experts and the Department of Justice.
+## About Force Science Institute
 
-Read "[Forced Science: A Critical Appraisal of the Scientific Rigor of 'Force Science' Policing Research](https://doi.org/10.1177/10986111251357498)" in *Police Quarterly* July, 2025
+[Force Science Institute](https://www.forcescience.com/) is a private, for-profit entity that certifies "Force Science Analysts" and provides expert testimony in police use-of-force cases. FSI-affiliated experts frequently testify in both criminal prosecutions of officers and civil rights litigation under 42 U.S.C. § 1983. FSI presents its work as peer-reviewed scientific research supporting concepts such as "action beats reaction," "inattentional blindness," and "slip and capture"—frameworks that shape jury deliberations, prosecutorial decisions, and police training curricula.
 
-Read "[Training Officers to Shoot First, and He Will Answer Questions Later](https://www.nytimes.com/2015/08/02/us/training-officers-to-shoot-first-and-he-will-answer-questions-later.html)" via the *New York Times*, written by Matt Apuzzo (August 1, 2015).
+The organization was founded by William "Bill" Lewinski, who has testified as an expert witness in numerous high-profile police shooting cases. FSI-affiliated experts include Lon Bartel, Von Kliem, Jamie Borden, Jeff Martin, Kevin Davis, Mark Kroll, and Michael Brave, among others.
 
-**Feed includes:**
-- Legal proceedings where FSI or FSI-affiliated experts testify
-- Daubert/Frye challenges to FSI research or experts
-- Prosecutorial decisions citing FSI analysis
-- Academic critiques of FSI methodology
-- Investigative journalism examining FSI's influence
-- Policy developments involving FSI training
-- International coverage of FSI influence
+## Critical Research: Adams et al. (2025)
 
-**Relevance Confidence Levels:**
-- **High:** Explicit mention of Force Science Institute, Bill Lewinski, or certified analysts
-- **Medium:** FSI-affiliated concepts or experts without explicit attribution
-- **Low:** Contextual signals only; flagged for manual review
+In "[Forced Science: A Critical Appraisal of the Scientific Rigor of 'Force Science' Policing Research](https://doi.org/10.1177/10986111251357498)" (*Police Quarterly*, 2025), Adams, Mourtgos, and Nix assessed FSI's self-selected corpus of 24 "peer-reviewed" articles using three validated measures of scientific reliability: the Maryland Scientific Methods Scale, the Newcastle-Ottawa Quality Assessment Scale, and the Mixed Methods Appraisal Tool.
 
-**Exclusions:** This feed attempts to exclude FSI's own promotional content and generic police training announcements.
+**Key findings:**
 
-**Subscribe:** [RSS Feed](/data/force-science-news.xml). Feed began active tracking on January 6, 2026.
+- **58% of FSI-cited articles** do not appear in journals recognized by Web of Science
+- **42% were published** in *Law Enforcement Executive Forum*, a non-scientific practitioner publication where Lewinski serves as Associate Editor
+- **Mean quality scores** across all validated measures were less than 50% of possible benchmarks
+- Studies consistently fail on **sample size justification**, **convenience sampling**, **lack of confounder control**, and **inability to establish causal inference**
+
+**Implications for Daubert admissibility:** The four *Daubert* criteria for admissibility of scientific evidence in federal courts—testability, peer review and publication, known error rates, and general acceptance in the scientific community—are systematically unmet by the FSI research corpus. These findings are relevant to Daubert and Frye challenges in use-of-force litigation.
+
+## Critical Resources
+
+**Peer-Reviewed Research:**
+- Adams, I. T., Mourtgos, S. M., & Nix, J. (2025). "[Forced Science: A Critical Appraisal of the Scientific Rigor of 'Force Science' Policing Research](https://doi.org/10.1177/10986111251357498)." *Police Quarterly*. DOI: 10.1177/10986111251357498
+
+**Investigative Journalism:**
+- Apuzzo, M. (2015, August 1). "[Training Officers to Shoot First, and He Will Answer Questions Later](https://www.nytimes.com/2015/08/02/us/training-officers-to-shoot-first-and-he-will-answer-questions-later.html)." *The New York Times*.
+
+**Conference Presentation:**
+
+In October 2025, Ian Adams debated Von Kliem (Force Science) at the International Association of Chiefs of Police (IACP) annual conference on the question of whether Force Science research meets scientific standards for courtroom testimony.
+
+<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 1.5rem 0;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/XDowl9LzyJw?si=cno5rtMLDjuHZak8" title="Adams vs. Kliem Debate - IACP 2025: Force Science Research Standards" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+## News Feed
+
+This automated feed tracks news, legal proceedings, and developments related to Force Science Institute. Stories are categorized by type and relevance confidence.
+
+**Feed includes:** Legal proceedings and Daubert/Frye challenges • Prosecutorial decisions citing FSI • Academic critiques • Investigative journalism • Policy developments • International coverage
+
+**Relevance confidence:** High (explicit FSI/Lewinski mention) • Medium (FSI-affiliated concepts) • Low (contextual signals)
+
+**Subscribe:** [RSS Feed](/data/force-science-news.xml) | Feed began January 2026
 
 ---
 
