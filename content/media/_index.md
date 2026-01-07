@@ -18,11 +18,6 @@ This page automatically tracks media coverage, interviews, and mentions of my re
 - Police K9 deployments and outcomes
 - Training and accountability
 
-**Mention Types:**
-- **Quoted:** Direct quotes from interviews or statements
-- **Cited:** Research findings or publications referenced
-- **Referenced:** Named as expert or researcher in context
-- **Byline:** Opinion pieces or articles I've authored
 
 **Subscribe:** [RSS Feed](/data/media-mentions.xml). Feed began active tracking on January 6, 2026.
 
