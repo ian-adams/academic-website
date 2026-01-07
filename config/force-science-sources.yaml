@@ -35,12 +35,18 @@ rss_feeds:
 # Search terms for Google News and NewsAPI
 search_terms:
   # Primary entities - highest priority
-  - "\"Force Science Institute\""
+  # Note: FSI rebranded from "Force Science Institute" to just "Force Science"
+  # Search for "Force Science" (matches both old and new branding)
+  - "\"Force Science\""
   - "\"Force Science\" police"
-  - "\"Bill Lewinski\" police"
-  - "\"William Lewinski\" testimony"
+  - "\"Force Science\" training"
+  - "\"Force Science\" expert"
+  - "\"Bill Lewinski\""
+  - "\"William Lewinski\""
   - "\"Force Science Analyst\""
   - "\"Force Science certified\""
+  # Legacy name - still appears in older coverage and legal documents
+  - "\"Force Science Institute\""
 
   # FSI concepts in police context
   - "\"action beats reaction\" police"
