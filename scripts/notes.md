@@ -1,35 +1,45 @@
 # Research Notes: Publications Tracker
 
-## Semantic Scholar API
+## OpenAlex API
 
 ### Key Info
-- Base URL: `https://api.semanticscholar.org/graph/v1/`
-- No API key required for basic use
-- Rate limit: 100 requests per 5 minutes (unauthenticated)
-- ~200 million papers indexed
-- Python library: `semanticscholar` on PyPI
+- Free, open API with no authentication required
+- Rate limit: 100,000 requests per day
+- Python library: `pyalex` on PyPI
+- Comprehensive scholarly database
 
-### Relevant Endpoints
-1. Author search: `/author/search?query=Ian Adams`
-2. Author by ID: `/author/{author_id}`
-3. Author papers: `/author/{author_id}/papers`
+### Usage with pyalex
+```python
+import pyalex
+from pyalex import Works, Authors
 
-### Paper Fields Available
-- paperId, title, abstract, year, venue
-- authors, citationCount, url
-- publicationDate, fieldsOfStudy
+# Set email for polite pool (faster access)
+pyalex.config.email = "mail@example.com"
 
-### Author Fields Available
-- authorId, name, affiliations
-- paperCount, citationCount, hIndex
-- papers (with nested fields)
+# Get author's works
+Works().filter(authorships__author__id="A5052998143").get()
+
+# Paginate through all works
+pager = Works().filter(authorships__author__id="A5052998143").paginate(per_page=200)
+for page in pager:
+    for work in page:
+        print(work["title"])
+```
+
+### Work Fields Available
+- id, doi, title, display_name
+- publication_year, publication_date
+- abstract_inverted_index (pyalex auto-converts to plaintext via work["abstract"])
+- cited_by_count, cited_by_percentile_year
+- authorships (list with author info)
+- primary_location (venue/journal info)
+- open_access, type
 
 ## Ian Adams Identifiers
 - Google Scholar ID: g9lY5RUAAAAJ
-- Semantic Scholar ID: Will auto-discover by searching "Ian T. Adams" + filtering by paper count/affiliation
-- Known paper on S2: "Fuck: The Police" (paperId: 41e249bc32216bc11d7f2199a33e3af85b895c14)
+- OpenAlex Author ID: A5052998143
+- Works URL: https://openalex.org/works?page=1&filter=authorships.author.id:a5052998143
 - Affiliation: University of South Carolina, Criminology & Criminal Justice
-- Expected paper count: ~40+ peer-reviewed publications
 
 ## API Response Format
 ```python

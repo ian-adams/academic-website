@@ -2,10 +2,10 @@
 """
 Publications Tracker with AI Synopses
 
-Tracks Ian Adams' publications via Semantic Scholar API, generates AI synopses
+Tracks Ian Adams' publications via OpenAlex API, generates AI synopses
 for new articles, maintains citation counts, and publishes to Hugo/Wowchemy website.
 
-Uses Semantic Scholar API (free, reliable) instead of Google Scholar scraping.
+Uses OpenAlex API (free, open, comprehensive) via pyalex library.
 """
 
 import argparse
@@ -16,30 +16,25 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import quote
 
 import anthropic
-import requests
+import pyalex
 import yaml
+from pyalex import Works, Authors
 
 # Configuration Constants
 AUTHOR_NAME = "Ian T. Adams"
-AUTHOR_SEARCH_QUERY = "Ian T. Adams"
-# Semantic Scholar author ID - will be discovered on first run if not set
-SEMANTIC_SCHOLAR_AUTHOR_ID = None  # Set after first successful discovery
+OPENALEX_AUTHOR_ID = "A5052998143"  # Ian's OpenAlex Author ID
+
+# Set email for polite pool (higher rate limits)
+POLITE_POOL_EMAIL = "github-actions@ianadamsresearch.com"
 
 CURRENT_SYNOPSIS_PROMPT_VERSION = 1
 CLAUDE_MODEL = "claude-sonnet-4-20250514"
 MAX_TOKENS = 1024
 
 # Rate limiting
-API_DELAY_SECONDS = 1  # Semantic Scholar allows 100 req/5min unauthenticated
 CLAUDE_DELAY_SECONDS = 2
-
-# Semantic Scholar API
-SEMANTIC_SCHOLAR_API_BASE = "https://api.semanticscholar.org/graph/v1"
-PAPER_FIELDS = "paperId,title,abstract,year,venue,authors,citationCount,url,publicationDate,externalIds"
-AUTHOR_FIELDS = "authorId,name,affiliations,paperCount,citationCount,hIndex"
 
 # File paths (relative to repository root)
 PUBLICATIONS_JSON = "data/publications.json"
@@ -116,8 +111,8 @@ def initialize_publications_data() -> dict:
             "total_articles": 0,
             "synopsis_prompt_version": CURRENT_SYNOPSIS_PROMPT_VERSION,
             "author_name": AUTHOR_NAME,
-            "semantic_scholar_author_id": None,
-            "data_source": "semantic_scholar"
+            "openalex_author_id": OPENALEX_AUTHOR_ID,
+            "data_source": "openalex"
         },
         "articles": {}
     }
@@ -128,156 +123,54 @@ def initialize_run_history() -> dict:
     return {"runs": []}
 
 
-def api_request(url: str, max_retries: int = 3) -> dict:
-    """Make API request with retry logic"""
-    last_error = None
+def fetch_author_publications() -> list:
+    """Fetch all publications for the author from OpenAlex"""
+    log_info(f"Fetching publications for OpenAlex author ID: {OPENALEX_AUTHOR_ID}")
 
-    for attempt in range(max_retries):
-        try:
-            response = requests.get(url, timeout=30)
+    # Configure pyalex for polite pool
+    pyalex.config.email = POLITE_POOL_EMAIL
 
-            if response.status_code == 200:
-                return response.json()
-            elif response.status_code == 429:
-                # Rate limited - wait and retry
-                wait_time = 60  # Wait 1 minute
-                log_warning(f"Rate limited, waiting {wait_time}s...")
-                time.sleep(wait_time)
-                continue
-            elif response.status_code == 404:
-                log_warning(f"Resource not found: {url}")
-                return None
-            else:
-                log_error(f"API error {response.status_code}: {response.text[:200]}")
-                last_error = Exception(f"API error {response.status_code}")
+    all_works = []
 
-        except requests.exceptions.Timeout:
-            last_error = Exception("Request timed out")
-            log_warning(f"Request timed out, attempt {attempt + 1}/{max_retries}")
-        except requests.exceptions.RequestException as e:
-            last_error = e
-            log_warning(f"Request failed: {e}, attempt {attempt + 1}/{max_retries}")
+    try:
+        # Use pagination to get all works
+        # Filter by author ID and paginate through results
+        pager = Works().filter(authorships={"author": {"id": OPENALEX_AUTHOR_ID}}).paginate(per_page=100)
 
-        if attempt < max_retries - 1:
-            wait_time = 2 ** attempt
-            time.sleep(wait_time)
+        page_num = 0
+        for page in pager:
+            page_num += 1
+            all_works.extend(page)
+            log_info(f"Fetched page {page_num}, total works so far: {len(all_works)}")
 
-    if last_error:
-        raise last_error
-    return None
-
-
-def find_author_id(author_name: str) -> str:
-    """Search for author by name and return best match author ID"""
-    log_info(f"Searching for author: {author_name}")
-
-    # Search for author
-    encoded_name = quote(author_name)
-    url = f"{SEMANTIC_SCHOLAR_API_BASE}/author/search?query={encoded_name}&fields={AUTHOR_FIELDS}&limit=10"
-
-    result = api_request(url)
-    if not result or not result.get('data'):
-        raise Exception(f"No authors found matching '{author_name}'")
-
-    # Find best match - look for criminology/policing researcher with many papers
-    candidates = result['data']
-    log_info(f"Found {len(candidates)} author candidates")
-
-    best_match = None
-    best_score = 0
-
-    for candidate in candidates:
-        score = 0
-        name = candidate.get('name', '').lower()
-        affiliations = ' '.join(candidate.get('affiliations', [])).lower()
-        paper_count = candidate.get('paperCount', 0)
-
-        # Scoring criteria
-        if 'ian' in name and 'adams' in name:
-            score += 50
-        if 't.' in name.lower() or 'ian t' in name.lower():
-            score += 20
-        if any(term in affiliations for term in ['south carolina', 'criminology', 'criminal justice', 'policing']):
-            score += 30
-        if paper_count >= 30:
-            score += 20
-        elif paper_count >= 20:
-            score += 10
-
-        log_info(f"  Candidate: {candidate.get('name')} (papers: {paper_count}, score: {score})")
-
-        if score > best_score:
-            best_score = score
-            best_match = candidate
-
-    if not best_match or best_score < 50:
-        # Fall back to first result with reasonable paper count
-        for candidate in candidates:
-            if candidate.get('paperCount', 0) >= 20:
-                best_match = candidate
+            # Safety limit
+            if len(all_works) > 500:
+                log_warning("Reached 500 works limit, stopping pagination")
                 break
-        if not best_match:
-            best_match = candidates[0]
 
-    author_id = best_match.get('authorId')
-    log_info(f"Selected author: {best_match.get('name')} (ID: {author_id}, papers: {best_match.get('paperCount')})")
+        log_info(f"Total publications fetched: {len(all_works)}")
+        return all_works
 
-    return author_id
-
-
-def fetch_author_publications(author_id: str = None) -> list:
-    """Fetch all publications for the author from Semantic Scholar"""
-
-    # If no author ID provided, search for it
-    if not author_id:
-        author_id = find_author_id(AUTHOR_SEARCH_QUERY)
-
-    log_info(f"Fetching publications for author ID: {author_id}")
-
-    # Get author's papers with pagination
-    all_papers = []
-    offset = 0
-    limit = 100
-
-    while True:
-        url = f"{SEMANTIC_SCHOLAR_API_BASE}/author/{author_id}/papers?fields={PAPER_FIELDS}&limit={limit}&offset={offset}"
-
-        result = api_request(url)
-        if not result:
-            break
-
-        papers = result.get('data', [])
-        if not papers:
-            break
-
-        all_papers.extend(papers)
-        log_info(f"Fetched {len(all_papers)} papers so far...")
-
-        # Check if there are more papers
-        if len(papers) < limit:
-            break
-
-        offset += limit
-        time.sleep(API_DELAY_SECONDS)  # Rate limiting
-
-    log_info(f"Total papers fetched: {len(all_papers)}")
-    return all_papers, author_id
+    except Exception as e:
+        log_error(f"Failed to fetch publications: {e}")
+        raise
 
 
-def extract_paper_id(paper: dict) -> str:
-    """Extract unique ID from paper data"""
-    # Prefer Semantic Scholar paperId
-    paper_id = paper.get('paperId')
-    if paper_id:
-        return paper_id
+def extract_work_id(work: dict) -> str:
+    """Extract unique ID from work data"""
+    # Prefer OpenAlex ID
+    openalex_id = work.get('id', '')
+    if openalex_id:
+        # Extract just the ID part (e.g., "W1234567" from "https://openalex.org/W1234567")
+        return openalex_id.split('/')[-1] if '/' in openalex_id else openalex_id
 
-    # Fallback to DOI if available
-    external_ids = paper.get('externalIds', {})
-    if external_ids.get('DOI'):
-        return f"doi_{external_ids['DOI'].replace('/', '_')}"
+    # Fallback to DOI
+    doi = work.get('doi', '')
+    if doi:
+        return f"doi_{doi.replace('https://doi.org/', '').replace('/', '_')}"
 
     # Fallback to title hash
-    title = paper.get('title', '')
+    title = work.get('title', '') or work.get('display_name', '')
     if title:
         return hashlib.md5(title.encode()).hexdigest()[:16]
 
@@ -285,21 +178,69 @@ def extract_paper_id(paper: dict) -> str:
     return hashlib.md5(str(time.time()).encode()).hexdigest()[:16]
 
 
-def parse_authors_from_list(authors_list: list) -> list:
-    """Parse authors from Semantic Scholar author list"""
-    if not authors_list:
+def parse_authors_from_work(work: dict) -> list:
+    """Parse authors from OpenAlex work authorships"""
+    authorships = work.get('authorships', [])
+    if not authorships:
         return []
 
-    return [author.get('name', 'Unknown') for author in authors_list if author.get('name')]
+    authors = []
+    for authorship in authorships:
+        author = authorship.get('author', {})
+        name = author.get('display_name', '')
+        if name:
+            authors.append(name)
+
+    return authors
 
 
-def generate_synopsis(paper: dict, max_retries: int = 2) -> str:
-    """Generate AI synopsis for a paper using Claude API"""
-    title = paper.get('title', 'Unknown')
-    authors = ', '.join(parse_authors_from_list(paper.get('authors', [])))
-    year = paper.get('year', 'Unknown')
-    venue = paper.get('venue', 'Unknown venue')
-    abstract = paper.get('abstract', 'No abstract available')
+def get_venue_from_work(work: dict) -> str:
+    """Extract venue/journal name from work"""
+    primary_location = work.get('primary_location', {})
+    if primary_location:
+        source = primary_location.get('source', {})
+        if source:
+            return source.get('display_name', 'Unknown venue') or 'Unknown venue'
+
+    # Fallback to host venue
+    host_venue = work.get('host_venue', {})
+    if host_venue:
+        return host_venue.get('display_name', 'Unknown venue') or 'Unknown venue'
+
+    return 'Unknown venue'
+
+
+def get_abstract_from_work(work: dict) -> str:
+    """Extract abstract from work (pyalex auto-reconstructs from inverted index)"""
+    # pyalex automatically converts abstract_inverted_index to plaintext
+    abstract = work.get('abstract')
+    if abstract:
+        return abstract
+
+    # Check for abstract_inverted_index and reconstruct if needed
+    abstract_inv = work.get('abstract_inverted_index')
+    if abstract_inv:
+        # Reconstruct from inverted index
+        try:
+            word_positions = []
+            for word, positions in abstract_inv.items():
+                for pos in positions:
+                    word_positions.append((pos, word))
+            word_positions.sort(key=lambda x: x[0])
+            return ' '.join(word for _, word in word_positions)
+        except Exception:
+            pass
+
+    return 'No abstract available'
+
+
+def generate_synopsis(work: dict, max_retries: int = 2) -> str:
+    """Generate AI synopsis for a work using Claude API"""
+    title = work.get('title') or work.get('display_name', 'Unknown')
+    authors = ', '.join(parse_authors_from_work(work))
+    year = work.get('publication_year', 'Unknown')
+    venue = get_venue_from_work(work)
+    abstract = get_abstract_from_work(work)
 
     if not abstract or abstract == 'No abstract available':
         log_warning(f"No abstract available for '{title[:40]}...', skipping synopsis")
@@ -340,19 +281,19 @@ def generate_synopsis(paper: dict, max_retries: int = 2) -> str:
 
 def validate_data(publications: dict, old_count: int) -> bool:
     """Validate publications data before saving"""
-    required_fields = ['paper_id', 'title', 'authors', 'year', 'citation_count', 'first_seen']
+    required_fields = ['work_id', 'title', 'authors', 'year', 'citation_count', 'first_seen']
 
-    for paper_id, article in publications['articles'].items():
+    for work_id, article in publications['articles'].items():
         for field in required_fields:
             if field not in article:
-                raise ValidationError(f"Missing field '{field}' in article {paper_id}")
+                raise ValidationError(f"Missing field '{field}' in article {work_id}")
 
         if not isinstance(article['authors'], list):
-            raise ValidationError(f"'authors' must be list in article {paper_id}")
+            raise ValidationError(f"'authors' must be list in article {work_id}")
         if not isinstance(article['citation_count'], int):
-            raise ValidationError(f"'citation_count' must be int in article {paper_id}")
+            raise ValidationError(f"'citation_count' must be int in article {work_id}")
 
-    # Check no articles lost (allow small decrease due to Semantic Scholar updates)
+    # Check no articles lost (allow small decrease due to data updates)
     new_count = len(publications['articles'])
     if new_count < old_count * 0.9:  # Allow up to 10% decrease
         raise ValidationError(f"Article count decreased significantly: {old_count} -> {new_count}")
@@ -371,7 +312,7 @@ def format_date(iso_timestamp: str) -> str:
         return "Unknown date"
 
 
-def generate_hugo_page(paper_id: str, article: dict):
+def generate_hugo_page(work_id: str, article: dict):
     """Generate Hugo/Wowchemy publication page for an article"""
     synopsis_text = article.get('manual_synopsis') or article.get('llm_synopsis', '')
     synopsis_type = "Manual" if article.get('manual_synopsis') else "AI-generated"
@@ -383,8 +324,9 @@ def generate_hugo_page(paper_id: str, article: dict):
     if not year or year == 0:
         year = 2024
 
-    # Build Semantic Scholar URL
-    semantic_url = f"https://www.semanticscholar.org/paper/{paper_id}" if paper_id else ""
+    # Build OpenAlex URL
+    openalex_url = f"https://openalex.org/{work_id}" if work_id else ""
+    doi_url = article.get('doi', '')
 
     frontmatter = {
         'title': article.get('title', 'Unknown Title'),
@@ -403,19 +345,26 @@ def generate_hugo_page(paper_id: str, article: dict):
         'url_poster': '',
         'url_project': '',
         'url_slides': '',
-        'url_source': semantic_url,
+        'url_source': doi_url or openalex_url,
         'url_video': '',
         'projects': [],
         'tags': [],
         'categories': []
     }
 
-    if semantic_url:
-        frontmatter['links'] = [
-            {'name': 'Semantic Scholar', 'url': semantic_url}
-        ]
+    # Add links
+    links = []
+    if openalex_url:
+        links.append({'name': 'OpenAlex', 'url': openalex_url})
+    if doi_url:
+        links.append({'name': 'DOI', 'url': doi_url})
+    if links:
+        frontmatter['links'] = links
 
     yaml_frontmatter = yaml.dump(frontmatter, default_flow_style=False, allow_unicode=True, sort_keys=False)
+
+    # Determine the best URL for the "View" link
+    view_url = doi_url or openalex_url or '#'
 
     content = f"""---
 {yaml_frontmatter}---
@@ -430,7 +379,7 @@ def generate_hugo_page(paper_id: str, article: dict):
 
 **Citations:** {article.get('citation_count', 0)} (as of {citation_date})
 
-[View on Semantic Scholar]({semantic_url if semantic_url else '#'})
+[View Publication]({view_url})
 
 ## Abstract
 
@@ -438,7 +387,7 @@ def generate_hugo_page(paper_id: str, article: dict):
 """
 
     # Use a safe directory name
-    safe_id = paper_id.replace('/', '_').replace(':', '_')[:50] if paper_id else hashlib.md5(article.get('title', '').encode()).hexdigest()[:16]
+    safe_id = work_id.replace('/', '_').replace(':', '_')[:50] if work_id else hashlib.md5(article.get('title', '').encode()).hexdigest()[:16]
     output_dir = Path(CONTENT_PUBLICATION_DIR) / safe_id
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -454,18 +403,18 @@ def regenerate_all_pages(publications: dict):
     log_info("Regenerating all Hugo pages...")
     pages_generated = 0
 
-    for paper_id, article in publications.get('articles', {}).items():
+    for work_id, article in publications.get('articles', {}).items():
         try:
-            generate_hugo_page(paper_id, article)
+            generate_hugo_page(work_id, article)
             pages_generated += 1
         except Exception as e:
-            log_error(f"Failed to generate page for {paper_id}: {e}")
+            log_error(f"Failed to generate page for {work_id}: {e}")
 
     log_info(f"Generated {pages_generated} Hugo pages")
     return pages_generated
 
 
-def process_publications(publications: dict, papers: list, dry_run: bool = False) -> dict:
+def process_publications(publications: dict, works: list, dry_run: bool = False) -> dict:
     """Process all publications and update database"""
     current_timestamp = get_current_timestamp()
 
@@ -476,18 +425,20 @@ def process_publications(publications: dict, papers: list, dry_run: bool = False
     error_count = 0
     error_details = []
 
-    for paper in papers:
+    for work in works:
         try:
-            paper_id = extract_paper_id(paper)
-            if not paper_id:
-                log_warning(f"Could not extract paper_id for: {paper.get('title', 'Unknown')}")
+            work_id = extract_work_id(work)
+            if not work_id:
+                log_warning(f"Could not extract work_id for: {work.get('title', 'Unknown')}")
                 continue
 
-            if paper_id in publications['articles']:
-                existing = publications['articles'][paper_id]
+            title = work.get('title') or work.get('display_name', 'Unknown Title')
+
+            if work_id in publications['articles']:
+                existing = publications['articles'][work_id]
 
                 old_count = existing.get('citation_count', 0)
-                new_count = paper.get('citationCount', 0) or 0
+                new_count = work.get('cited_by_count', 0) or 0
 
                 if new_count != old_count:
                     existing['citation_count'] = new_count
@@ -498,7 +449,7 @@ def process_publications(publications: dict, papers: list, dry_run: bool = False
                         'count': new_count
                     })
                     updated_citations_count += 1
-                    log_info(f"Updated citations for '{paper.get('title', 'Unknown')[:40]}...': {old_count} -> {new_count}")
+                    log_info(f"Updated citations for '{title[:40]}...': {old_count} -> {new_count}")
 
                 existing['last_updated'] = current_timestamp
 
@@ -510,9 +461,9 @@ def process_publications(publications: dict, papers: list, dry_run: bool = False
 
                 if needs_regeneration and not existing.get('manual_synopsis'):
                     if not dry_run:
-                        log_info(f"Regenerating synopsis for: {paper.get('title', 'Unknown')[:40]}...")
+                        log_info(f"Regenerating synopsis for: {title[:40]}...")
                         try:
-                            synopsis = generate_synopsis(paper)
+                            synopsis = generate_synopsis(work)
                             if synopsis:
                                 existing['llm_synopsis'] = synopsis
                                 existing['llm_synopsis_version'] = CURRENT_SYNOPSIS_PROMPT_VERSION
@@ -525,20 +476,22 @@ def process_publications(publications: dict, papers: list, dry_run: bool = False
 
             else:
                 # New article
-                year = paper.get('year', 0) or 0
+                year = work.get('publication_year', 0) or 0
+                doi = work.get('doi', '')
 
                 new_article_entry = {
-                    'paper_id': paper_id,
-                    'title': paper.get('title', 'Unknown Title'),
-                    'authors': parse_authors_from_list(paper.get('authors', [])),
+                    'work_id': work_id,
+                    'title': title,
+                    'authors': parse_authors_from_work(work),
                     'year': year,
-                    'venue': paper.get('venue', 'Unknown venue') or 'Unknown venue',
-                    'abstract': paper.get('abstract', 'No abstract available') or 'No abstract available',
-                    'semantic_scholar_url': f"https://www.semanticscholar.org/paper/{paper_id}",
-                    'citation_count': paper.get('citationCount', 0) or 0,
+                    'venue': get_venue_from_work(work),
+                    'abstract': get_abstract_from_work(work),
+                    'doi': doi,
+                    'openalex_url': f"https://openalex.org/{work_id}",
+                    'citation_count': work.get('cited_by_count', 0) or 0,
                     'citation_count_history': [{
                         'date': current_timestamp.split('T')[0],
-                        'count': paper.get('citationCount', 0) or 0
+                        'count': work.get('cited_by_count', 0) or 0
                     }],
                     'llm_synopsis': '',
                     'llm_synopsis_version': 0,
@@ -547,13 +500,14 @@ def process_publications(publications: dict, papers: list, dry_run: bool = False
                     'force_regenerate': False,
                     'first_seen': current_timestamp,
                     'last_updated': current_timestamp,
-                    'external_ids': paper.get('externalIds', {})
+                    'open_access': work.get('open_access', {}).get('is_oa', False),
+                    'type': work.get('type', 'unknown')
                 }
 
                 if not dry_run:
-                    log_info(f"Generating synopsis for new article: {paper.get('title', 'Unknown')[:40]}...")
+                    log_info(f"Generating synopsis for new article: {title[:40]}...")
                     try:
-                        synopsis = generate_synopsis(paper)
+                        synopsis = generate_synopsis(work)
                         if synopsis:
                             new_article_entry['llm_synopsis'] = synopsis
                             new_article_entry['llm_synopsis_version'] = CURRENT_SYNOPSIS_PROMPT_VERSION
@@ -563,13 +517,13 @@ def process_publications(publications: dict, papers: list, dry_run: bool = False
                     except Exception as e:
                         log_error(f"Failed to generate synopsis: {e}")
 
-                publications['articles'][paper_id] = new_article_entry
+                publications['articles'][work_id] = new_article_entry
                 new_articles_count += 1
-                log_info(f"Added new article: {paper.get('title', 'Unknown')[:50]}...")
+                log_info(f"Added new article: {title[:50]}...")
 
         except Exception as e:
             error_count += 1
-            title = paper.get('title', 'Unknown')
+            title = work.get('title') or work.get('display_name', 'Unknown')
             error_details.append({
                 'article_title': title,
                 'error': str(e),
@@ -620,7 +574,8 @@ def main():
     current_timestamp = get_current_timestamp()
 
     log_info(f"Starting Publications Tracker at {current_timestamp}")
-    log_info(f"Data source: Semantic Scholar API")
+    log_info(f"Data source: OpenAlex API")
+    log_info(f"Author ID: {OPENALEX_AUTHOR_ID}")
     log_info(f"Mode: {'DRY RUN' if dry_run else 'LIVE'}")
 
     publications = load_json_file(PUBLICATIONS_JSON)
@@ -647,23 +602,15 @@ def main():
     old_article_count = len(publications.get('articles', {}))
 
     try:
-        # Use stored author ID if available, otherwise discover it
-        stored_author_id = publications.get('metadata', {}).get('semantic_scholar_author_id')
+        works = fetch_author_publications()
+        log_info(f"Fetched {len(works)} publications from OpenAlex")
 
-        papers, discovered_author_id = fetch_author_publications(stored_author_id)
-        log_info(f"Fetched {len(papers)} publications from Semantic Scholar")
-
-        # Store the discovered author ID for future runs
-        if discovered_author_id and discovered_author_id != stored_author_id:
-            publications['metadata']['semantic_scholar_author_id'] = discovered_author_id
-            log_info(f"Stored author ID: {discovered_author_id}")
-
-        results = process_publications(publications, papers, dry_run)
+        results = process_publications(publications, works, dry_run)
 
         run_summary = {
             'timestamp': current_timestamp,
             'status': 'success' if results['errors'] == 0 else 'partial_failure',
-            'data_source': 'semantic_scholar',
+            'data_source': 'openalex',
             'new_articles': results['new_articles'],
             'updated_citations': results['updated_citations'],
             'synopsis_generated': results['synopsis_generated'],
@@ -680,7 +627,8 @@ def main():
                     publications['metadata']['last_updated'] = current_timestamp
                     publications['metadata']['total_articles'] = len(publications['articles'])
                     publications['metadata']['synopsis_prompt_version'] = CURRENT_SYNOPSIS_PROMPT_VERSION
-                    publications['metadata']['data_source'] = 'semantic_scholar'
+                    publications['metadata']['data_source'] = 'openalex'
+                    publications['metadata']['openalex_author_id'] = OPENALEX_AUTHOR_ID
 
                     save_json_file(PUBLICATIONS_JSON, publications)
                     log_info(f"Saved publications data to {PUBLICATIONS_JSON}")
@@ -721,7 +669,7 @@ def main():
         run_summary = {
             'timestamp': current_timestamp,
             'status': 'failure',
-            'data_source': 'semantic_scholar',
+            'data_source': 'openalex',
             'new_articles': 0,
             'updated_citations': 0,
             'synopsis_generated': 0,
