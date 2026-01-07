@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """
-Google Scholar Publications Tracker with AI Synopses
+Publications Tracker with AI Synopses
 
-Tracks Ian Adams' Google Scholar publications, generates AI synopses for new articles,
-maintains citation counts, and publishes to Hugo/Wowchemy website.
+Tracks Ian Adams' publications via Semantic Scholar API, generates AI synopses
+for new articles, maintains citation counts, and publishes to Hugo/Wowchemy website.
+
+Uses Semantic Scholar API (free, reliable) instead of Google Scholar scraping.
 """
 
 import argparse
@@ -14,22 +16,30 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import quote
 
 import anthropic
+import requests
 import yaml
-from scholarly import scholarly, ProxyGenerator
-from slugify import slugify
 
 # Configuration Constants
-AUTHOR_NAME = "Ian Adams"
-AUTHOR_SCHOLAR_ID = "g9lY5RUAAAAJ"
+AUTHOR_NAME = "Ian T. Adams"
+AUTHOR_SEARCH_QUERY = "Ian T. Adams"
+# Semantic Scholar author ID - will be discovered on first run if not set
+SEMANTIC_SCHOLAR_AUTHOR_ID = None  # Set after first successful discovery
+
 CURRENT_SYNOPSIS_PROMPT_VERSION = 1
 CLAUDE_MODEL = "claude-sonnet-4-20250514"
 MAX_TOKENS = 1024
 
 # Rate limiting
-SCHOLAR_DELAY_SECONDS = 5
+API_DELAY_SECONDS = 1  # Semantic Scholar allows 100 req/5min unauthenticated
 CLAUDE_DELAY_SECONDS = 2
+
+# Semantic Scholar API
+SEMANTIC_SCHOLAR_API_BASE = "https://api.semanticscholar.org/graph/v1"
+PAPER_FIELDS = "paperId,title,abstract,year,venue,authors,citationCount,url,publicationDate,externalIds"
+AUTHOR_FIELDS = "authorId,name,affiliations,paperCount,citationCount,hIndex"
 
 # File paths (relative to repository root)
 PUBLICATIONS_JSON = "data/publications.json"
@@ -106,7 +116,8 @@ def initialize_publications_data() -> dict:
             "total_articles": 0,
             "synopsis_prompt_version": CURRENT_SYNOPSIS_PROMPT_VERSION,
             "author_name": AUTHOR_NAME,
-            "author_scholar_id": AUTHOR_SCHOLAR_ID
+            "semantic_scholar_author_id": None,
+            "data_source": "semantic_scholar"
         },
         "articles": {}
     }
@@ -117,149 +128,182 @@ def initialize_run_history() -> dict:
     return {"runs": []}
 
 
-def setup_proxy(max_retries: int = 3) -> bool:
-    """
-    Set up proxy for Google Scholar requests.
+def api_request(url: str, max_retries: int = 3) -> dict:
+    """Make API request with retry logic"""
+    last_error = None
 
-    Prefers ScraperAPI if SCRAPER_API_KEY is set (more reliable).
-    Falls back to free proxies otherwise.
-
-    Returns True if proxy was set up successfully.
-    """
-    pg = ProxyGenerator()
-
-    # Try ScraperAPI first (more reliable, used by scholarly maintainers)
-    scraper_api_key = os.getenv('SCRAPER_API_KEY')
-    if scraper_api_key:
-        log_info("Setting up ScraperAPI proxy...")
-        try:
-            success = pg.ScraperAPI(scraper_api_key)
-            if success:
-                scholarly.use_proxy(pg)
-                log_info("ScraperAPI proxy configured successfully")
-                return True
-            else:
-                log_warning("ScraperAPI setup returned False, falling back to free proxies")
-        except Exception as e:
-            log_warning(f"ScraperAPI setup failed: {e}, falling back to free proxies")
-
-    # Fall back to free proxies
-    log_info("Setting up free proxy (this may take a moment)...")
     for attempt in range(max_retries):
         try:
-            success = pg.FreeProxies()
-            if success:
-                scholarly.use_proxy(pg)
-                log_info("Free proxy configured successfully")
-                return True
+            response = requests.get(url, timeout=30)
+
+            if response.status_code == 200:
+                return response.json()
+            elif response.status_code == 429:
+                # Rate limited - wait and retry
+                wait_time = 60  # Wait 1 minute
+                log_warning(f"Rate limited, waiting {wait_time}s...")
+                time.sleep(wait_time)
+                continue
+            elif response.status_code == 404:
+                log_warning(f"Resource not found: {url}")
+                return None
             else:
-                log_warning(f"Free proxy attempt {attempt + 1} returned False")
-        except Exception as e:
-            log_warning(f"Free proxy attempt {attempt + 1} failed: {e}")
+                log_error(f"API error {response.status_code}: {response.text[:200]}")
+                last_error = Exception(f"API error {response.status_code}")
+
+        except requests.exceptions.Timeout:
+            last_error = Exception("Request timed out")
+            log_warning(f"Request timed out, attempt {attempt + 1}/{max_retries}")
+        except requests.exceptions.RequestException as e:
+            last_error = e
+            log_warning(f"Request failed: {e}, attempt {attempt + 1}/{max_retries}")
 
         if attempt < max_retries - 1:
             wait_time = 2 ** attempt
-            log_info(f"Retrying proxy setup in {wait_time}s...")
             time.sleep(wait_time)
 
-    log_warning("All proxy setup attempts failed, proceeding without proxy (may be blocked)")
-    return False
+    if last_error:
+        raise last_error
+    return None
 
 
-def fetch_author_publications(max_retries: int = 3) -> list:
-    """Fetch all publications for the author from Google Scholar with retry logic"""
-    log_info(f"Fetching publications for author ID: {AUTHOR_SCHOLAR_ID}")
+def find_author_id(author_name: str) -> str:
+    """Search for author by name and return best match author ID"""
+    log_info(f"Searching for author: {author_name}")
 
-    last_error = None
-    for attempt in range(max_retries):
-        try:
-            # Get author by ID
-            author = scholarly.search_author_id(AUTHOR_SCHOLAR_ID)
-            author = scholarly.fill(author)
+    # Search for author
+    encoded_name = quote(author_name)
+    url = f"{SEMANTIC_SCHOLAR_API_BASE}/author/search?query={encoded_name}&fields={AUTHOR_FIELDS}&limit=10"
 
-            log_info(f"Found author: {author.get('name', 'Unknown')}")
-            log_info(f"Total publications listed: {len(author.get('publications', []))}")
+    result = api_request(url)
+    if not result or not result.get('data'):
+        raise Exception(f"No authors found matching '{author_name}'")
 
-            publications = []
-            for i, pub in enumerate(author.get('publications', [])):
-                try:
-                    log_info(f"Fetching publication {i+1}/{len(author['publications'])}: {pub.get('bib', {}).get('title', 'Unknown')[:50]}...")
+    # Find best match - look for criminology/policing researcher with many papers
+    candidates = result['data']
+    log_info(f"Found {len(candidates)} author candidates")
 
-                    # Fill in complete publication details
-                    filled_pub = scholarly.fill(pub)
-                    publications.append(filled_pub)
+    best_match = None
+    best_score = 0
 
-                    # Rate limiting - be respectful to Google Scholar
-                    time.sleep(SCHOLAR_DELAY_SECONDS)
+    for candidate in candidates:
+        score = 0
+        name = candidate.get('name', '').lower()
+        affiliations = ' '.join(candidate.get('affiliations', [])).lower()
+        paper_count = candidate.get('paperCount', 0)
 
-                except Exception as e:
-                    log_error(f"Failed to fetch publication details: {e}")
-                    # Still add the partial publication data
-                    publications.append(pub)
-                    continue
+        # Scoring criteria
+        if 'ian' in name and 'adams' in name:
+            score += 50
+        if 't.' in name.lower() or 'ian t' in name.lower():
+            score += 20
+        if any(term in affiliations for term in ['south carolina', 'criminology', 'criminal justice', 'policing']):
+            score += 30
+        if paper_count >= 30:
+            score += 20
+        elif paper_count >= 20:
+            score += 10
 
-            return publications
+        log_info(f"  Candidate: {candidate.get('name')} (papers: {paper_count}, score: {score})")
 
-        except Exception as e:
-            last_error = e
-            log_error(f"Attempt {attempt + 1}/{max_retries} failed to fetch author: {e}")
+        if score > best_score:
+            best_score = score
+            best_match = candidate
 
-            if attempt < max_retries - 1:
-                wait_time = 5 * (attempt + 1)  # 5s, 10s, 15s
-                log_info(f"Retrying in {wait_time}s...")
-                time.sleep(wait_time)
+    if not best_match or best_score < 50:
+        # Fall back to first result with reasonable paper count
+        for candidate in candidates:
+            if candidate.get('paperCount', 0) >= 20:
+                best_match = candidate
+                break
+        if not best_match:
+            best_match = candidates[0]
 
-                # Try to get a new proxy for the retry
-                log_info("Attempting to refresh proxy...")
-                setup_proxy(max_retries=1)
+    author_id = best_match.get('authorId')
+    log_info(f"Selected author: {best_match.get('name')} (ID: {author_id}, papers: {best_match.get('paperCount')})")
 
-    log_error(f"Failed to fetch author after {max_retries} attempts")
-    raise last_error
+    return author_id
 
 
-def extract_scholar_id(article: dict) -> str:
-    """Extract unique scholar ID from article data"""
-    # Try to get author_pub_id first
-    author_pub_id = article.get('author_pub_id', '')
-    if author_pub_id and ':' in author_pub_id:
-        return author_pub_id.split(':')[-1]
-    elif author_pub_id:
-        return author_pub_id
+def fetch_author_publications(author_id: str = None) -> list:
+    """Fetch all publications for the author from Semantic Scholar"""
 
-    # Fallback: create ID from title hash
-    title = article.get('bib', {}).get('title', '')
+    # If no author ID provided, search for it
+    if not author_id:
+        author_id = find_author_id(AUTHOR_SEARCH_QUERY)
+
+    log_info(f"Fetching publications for author ID: {author_id}")
+
+    # Get author's papers with pagination
+    all_papers = []
+    offset = 0
+    limit = 100
+
+    while True:
+        url = f"{SEMANTIC_SCHOLAR_API_BASE}/author/{author_id}/papers?fields={PAPER_FIELDS}&limit={limit}&offset={offset}"
+
+        result = api_request(url)
+        if not result:
+            break
+
+        papers = result.get('data', [])
+        if not papers:
+            break
+
+        all_papers.extend(papers)
+        log_info(f"Fetched {len(all_papers)} papers so far...")
+
+        # Check if there are more papers
+        if len(papers) < limit:
+            break
+
+        offset += limit
+        time.sleep(API_DELAY_SECONDS)  # Rate limiting
+
+    log_info(f"Total papers fetched: {len(all_papers)}")
+    return all_papers, author_id
+
+
+def extract_paper_id(paper: dict) -> str:
+    """Extract unique ID from paper data"""
+    # Prefer Semantic Scholar paperId
+    paper_id = paper.get('paperId')
+    if paper_id:
+        return paper_id
+
+    # Fallback to DOI if available
+    external_ids = paper.get('externalIds', {})
+    if external_ids.get('DOI'):
+        return f"doi_{external_ids['DOI'].replace('/', '_')}"
+
+    # Fallback to title hash
+    title = paper.get('title', '')
     if title:
         return hashlib.md5(title.encode()).hexdigest()[:16]
 
-    # Last resort: random hash
+    # Last resort
     return hashlib.md5(str(time.time()).encode()).hexdigest()[:16]
 
 
-def parse_authors(author_string: str) -> list:
-    """Parse author string into list of authors"""
-    if not author_string:
+def parse_authors_from_list(authors_list: list) -> list:
+    """Parse authors from Semantic Scholar author list"""
+    if not authors_list:
         return []
 
-    # Handle "and" separated authors
-    authors = []
-    for part in author_string.split(' and '):
-        # Clean up whitespace
-        author = part.strip()
-        if author:
-            authors.append(author)
-
-    return authors
+    return [author.get('name', 'Unknown') for author in authors_list if author.get('name')]
 
 
-def generate_synopsis(article: dict, max_retries: int = 2) -> str:
-    """Generate AI synopsis for an article using Claude API"""
-    bib = article.get('bib', {})
+def generate_synopsis(paper: dict, max_retries: int = 2) -> str:
+    """Generate AI synopsis for a paper using Claude API"""
+    title = paper.get('title', 'Unknown')
+    authors = ', '.join(parse_authors_from_list(paper.get('authors', [])))
+    year = paper.get('year', 'Unknown')
+    venue = paper.get('venue', 'Unknown venue')
+    abstract = paper.get('abstract', 'No abstract available')
 
-    title = bib.get('title', 'Unknown')
-    authors = ', '.join(parse_authors(bib.get('author', '')))
-    year = bib.get('pub_year', 'Unknown')
-    venue = bib.get('venue', bib.get('journal', bib.get('conference', 'Unknown venue')))
-    abstract = bib.get('abstract', 'No abstract available')
+    if not abstract or abstract == 'No abstract available':
+        log_warning(f"No abstract available for '{title[:40]}...', skipping synopsis")
+        return ""
 
     prompt = SYNOPSIS_PROMPTS[CURRENT_SYNOPSIS_PROMPT_VERSION].format(
         title=title,
@@ -286,7 +330,7 @@ def generate_synopsis(article: dict, max_retries: int = 2) -> str:
 
         except Exception as e:
             if attempt < max_retries:
-                wait_time = 2 ** attempt  # exponential backoff: 1s, 2s
+                wait_time = 2 ** attempt
                 log_warning(f"Claude API attempt {attempt + 1} failed, retrying in {wait_time}s: {e}")
                 time.sleep(wait_time)
             else:
@@ -296,24 +340,22 @@ def generate_synopsis(article: dict, max_retries: int = 2) -> str:
 
 def validate_data(publications: dict, old_count: int) -> bool:
     """Validate publications data before saving"""
-    required_fields = ['scholar_id', 'title', 'authors', 'year',
-                       'citation_count', 'first_seen']
+    required_fields = ['paper_id', 'title', 'authors', 'year', 'citation_count', 'first_seen']
 
-    for scholar_id, article in publications['articles'].items():
+    for paper_id, article in publications['articles'].items():
         for field in required_fields:
             if field not in article:
-                raise ValidationError(f"Missing field '{field}' in article {scholar_id}")
+                raise ValidationError(f"Missing field '{field}' in article {paper_id}")
 
-        # Validate data types
         if not isinstance(article['authors'], list):
-            raise ValidationError(f"'authors' must be list in article {scholar_id}")
+            raise ValidationError(f"'authors' must be list in article {paper_id}")
         if not isinstance(article['citation_count'], int):
-            raise ValidationError(f"'citation_count' must be int in article {scholar_id}")
+            raise ValidationError(f"'citation_count' must be int in article {paper_id}")
 
-    # Check no articles lost
+    # Check no articles lost (allow small decrease due to Semantic Scholar updates)
     new_count = len(publications['articles'])
-    if new_count < old_count:
-        raise ValidationError(f"Article count decreased: {old_count} -> {new_count}")
+    if new_count < old_count * 0.9:  # Allow up to 10% decrease
+        raise ValidationError(f"Article count decreased significantly: {old_count} -> {new_count}")
 
     return True
 
@@ -329,28 +371,27 @@ def format_date(iso_timestamp: str) -> str:
         return "Unknown date"
 
 
-def generate_hugo_page(scholar_id: str, article: dict):
+def generate_hugo_page(paper_id: str, article: dict):
     """Generate Hugo/Wowchemy publication page for an article"""
-    # Determine which synopsis to use
     synopsis_text = article.get('manual_synopsis') or article.get('llm_synopsis', '')
     synopsis_type = "Manual" if article.get('manual_synopsis') else "AI-generated"
 
-    # Format dates
     synopsis_date = format_date(article.get('llm_synopsis_generated_date', article.get('first_seen')))
     citation_date = format_date(article.get('last_updated'))
 
-    # Get year with fallback
     year = article.get('year', 2024)
     if not year or year == 0:
         year = 2024
 
-    # Generate frontmatter
+    # Build Semantic Scholar URL
+    semantic_url = f"https://www.semanticscholar.org/paper/{paper_id}" if paper_id else ""
+
     frontmatter = {
         'title': article.get('title', 'Unknown Title'),
         'authors': article.get('authors', []),
         'date': f"{year}-01-01",
         'publishDate': f"{year}-01-01",
-        'publication_types': ['2'],  # 2 = Journal article
+        'publication_types': ['2'],
         'publication': article.get('venue', ''),
         'publication_short': '',
         'abstract': article.get('abstract', ''),
@@ -362,20 +403,18 @@ def generate_hugo_page(scholar_id: str, article: dict):
         'url_poster': '',
         'url_project': '',
         'url_slides': '',
-        'url_source': article.get('google_scholar_url', ''),
+        'url_source': semantic_url,
         'url_video': '',
         'projects': [],
         'tags': [],
         'categories': []
     }
 
-    # Add links if we have a Google Scholar URL
-    if article.get('google_scholar_url'):
+    if semantic_url:
         frontmatter['links'] = [
-            {'name': 'Google Scholar', 'url': article['google_scholar_url']}
+            {'name': 'Semantic Scholar', 'url': semantic_url}
         ]
 
-    # Build markdown content
     yaml_frontmatter = yaml.dump(frontmatter, default_flow_style=False, allow_unicode=True, sort_keys=False)
 
     content = f"""---
@@ -391,15 +430,16 @@ def generate_hugo_page(scholar_id: str, article: dict):
 
 **Citations:** {article.get('citation_count', 0)} (as of {citation_date})
 
-[View on Google Scholar]({article.get('google_scholar_url', '#')})
+[View on Semantic Scholar]({semantic_url if semantic_url else '#'})
 
 ## Abstract
 
 {article.get('abstract', 'No abstract available.')}
 """
 
-    # Write to file
-    output_dir = Path(CONTENT_PUBLICATION_DIR) / scholar_id
+    # Use a safe directory name
+    safe_id = paper_id.replace('/', '_').replace(':', '_')[:50] if paper_id else hashlib.md5(article.get('title', '').encode()).hexdigest()[:16]
+    output_dir = Path(CONTENT_PUBLICATION_DIR) / safe_id
     output_dir.mkdir(parents=True, exist_ok=True)
 
     filepath = output_dir / "index.md"
@@ -414,22 +454,21 @@ def regenerate_all_pages(publications: dict):
     log_info("Regenerating all Hugo pages...")
     pages_generated = 0
 
-    for scholar_id, article in publications.get('articles', {}).items():
+    for paper_id, article in publications.get('articles', {}).items():
         try:
-            generate_hugo_page(scholar_id, article)
+            generate_hugo_page(paper_id, article)
             pages_generated += 1
         except Exception as e:
-            log_error(f"Failed to generate page for {scholar_id}: {e}")
+            log_error(f"Failed to generate page for {paper_id}: {e}")
 
     log_info(f"Generated {pages_generated} Hugo pages")
     return pages_generated
 
 
-def process_publications(publications: dict, scholar_results: list, dry_run: bool = False) -> dict:
-    """Process all publications from Scholar and update database"""
+def process_publications(publications: dict, papers: list, dry_run: bool = False) -> dict:
+    """Process all publications and update database"""
     current_timestamp = get_current_timestamp()
 
-    # Counters
     new_articles_count = 0
     updated_citations_count = 0
     synopsis_generated_count = 0
@@ -437,22 +476,18 @@ def process_publications(publications: dict, scholar_results: list, dry_run: boo
     error_count = 0
     error_details = []
 
-    for article in scholar_results:
+    for paper in papers:
         try:
-            bib = article.get('bib', {})
-            scholar_id = extract_scholar_id(article)
-
-            if not scholar_id:
-                log_warning(f"Could not extract scholar_id for article: {bib.get('title', 'Unknown')}")
+            paper_id = extract_paper_id(paper)
+            if not paper_id:
+                log_warning(f"Could not extract paper_id for: {paper.get('title', 'Unknown')}")
                 continue
 
-            # Check if exists in our database
-            if scholar_id in publications['articles']:
-                existing = publications['articles'][scholar_id]
+            if paper_id in publications['articles']:
+                existing = publications['articles'][paper_id]
 
-                # Update citation count
                 old_count = existing.get('citation_count', 0)
-                new_count = article.get('num_citations', 0) or 0
+                new_count = paper.get('citationCount', 0) or 0
 
                 if new_count != old_count:
                     existing['citation_count'] = new_count
@@ -463,54 +498,47 @@ def process_publications(publications: dict, scholar_results: list, dry_run: boo
                         'count': new_count
                     })
                     updated_citations_count += 1
-                    log_info(f"Updated citations for '{bib.get('title', 'Unknown')[:40]}...': {old_count} -> {new_count}")
+                    log_info(f"Updated citations for '{paper.get('title', 'Unknown')[:40]}...': {old_count} -> {new_count}")
 
                 existing['last_updated'] = current_timestamp
 
                 # Check if synopsis needs regeneration
                 needs_regeneration = (
-                    existing.get('force_regenerate', False) == True or
+                    existing.get('force_regenerate', False) or
                     existing.get('llm_synopsis_version', 0) < CURRENT_SYNOPSIS_PROMPT_VERSION
                 )
 
                 if needs_regeneration and not existing.get('manual_synopsis'):
                     if not dry_run:
-                        log_info(f"Regenerating synopsis for: {bib.get('title', 'Unknown')[:40]}...")
+                        log_info(f"Regenerating synopsis for: {paper.get('title', 'Unknown')[:40]}...")
                         try:
-                            synopsis = generate_synopsis(article)
+                            synopsis = generate_synopsis(paper)
                             if synopsis:
                                 existing['llm_synopsis'] = synopsis
                                 existing['llm_synopsis_version'] = CURRENT_SYNOPSIS_PROMPT_VERSION
                                 existing['llm_synopsis_generated_date'] = current_timestamp
                                 existing['force_regenerate'] = False
                                 synopsis_regenerated_count += 1
-
-                                # Rate limiting for Claude API
                                 time.sleep(CLAUDE_DELAY_SECONDS)
                         except Exception as e:
                             log_error(f"Failed to regenerate synopsis: {e}")
 
             else:
-                # New article - create complete entry
-                venue = bib.get('venue', bib.get('journal', bib.get('conference', 'Unknown venue')))
-                year_str = bib.get('pub_year', '0')
-                try:
-                    year = int(year_str) if year_str else 0
-                except (ValueError, TypeError):
-                    year = 0
+                # New article
+                year = paper.get('year', 0) or 0
 
                 new_article_entry = {
-                    'scholar_id': scholar_id,
-                    'title': bib.get('title', 'Unknown Title'),
-                    'authors': parse_authors(bib.get('author', '')),
+                    'paper_id': paper_id,
+                    'title': paper.get('title', 'Unknown Title'),
+                    'authors': parse_authors_from_list(paper.get('authors', [])),
                     'year': year,
-                    'venue': venue,
-                    'abstract': bib.get('abstract', 'No abstract available'),
-                    'google_scholar_url': article.get('pub_url', ''),
-                    'citation_count': article.get('num_citations', 0) or 0,
+                    'venue': paper.get('venue', 'Unknown venue') or 'Unknown venue',
+                    'abstract': paper.get('abstract', 'No abstract available') or 'No abstract available',
+                    'semantic_scholar_url': f"https://www.semanticscholar.org/paper/{paper_id}",
+                    'citation_count': paper.get('citationCount', 0) or 0,
                     'citation_count_history': [{
                         'date': current_timestamp.split('T')[0],
-                        'count': article.get('num_citations', 0) or 0
+                        'count': paper.get('citationCount', 0) or 0
                     }],
                     'llm_synopsis': '',
                     'llm_synopsis_version': 0,
@@ -518,39 +546,37 @@ def process_publications(publications: dict, scholar_results: list, dry_run: boo
                     'manual_synopsis': None,
                     'force_regenerate': False,
                     'first_seen': current_timestamp,
-                    'last_updated': current_timestamp
+                    'last_updated': current_timestamp,
+                    'external_ids': paper.get('externalIds', {})
                 }
 
-                # Generate synopsis for new article
                 if not dry_run:
-                    log_info(f"Generating synopsis for new article: {bib.get('title', 'Unknown')[:40]}...")
+                    log_info(f"Generating synopsis for new article: {paper.get('title', 'Unknown')[:40]}...")
                     try:
-                        synopsis = generate_synopsis(article)
+                        synopsis = generate_synopsis(paper)
                         if synopsis:
                             new_article_entry['llm_synopsis'] = synopsis
                             new_article_entry['llm_synopsis_version'] = CURRENT_SYNOPSIS_PROMPT_VERSION
                             new_article_entry['llm_synopsis_generated_date'] = current_timestamp
                             synopsis_generated_count += 1
-
-                            # Rate limiting for Claude API
                             time.sleep(CLAUDE_DELAY_SECONDS)
                     except Exception as e:
                         log_error(f"Failed to generate synopsis: {e}")
 
-                publications['articles'][scholar_id] = new_article_entry
+                publications['articles'][paper_id] = new_article_entry
                 new_articles_count += 1
-                log_info(f"Added new article: {bib.get('title', 'Unknown')[:50]}...")
+                log_info(f"Added new article: {paper.get('title', 'Unknown')[:50]}...")
 
         except Exception as e:
             error_count += 1
-            title = article.get('bib', {}).get('title', 'Unknown')
+            title = paper.get('title', 'Unknown')
             error_details.append({
                 'article_title': title,
                 'error': str(e),
                 'timestamp': current_timestamp
             })
             log_error(f"Failed processing '{title}': {e}")
-            continue  # Don't let one failure stop the whole run
+            continue
 
     return {
         'new_articles': new_articles_count,
@@ -565,7 +591,7 @@ def process_publications(publications: dict, scholar_results: list, dry_run: boo
 def parse_args():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(
-        description='Track Google Scholar publications and generate AI synopses'
+        description='Track publications and generate AI synopses'
     )
     parser.add_argument(
         '--dry-run',
@@ -593,10 +619,10 @@ def main():
     start_time = time.time()
     current_timestamp = get_current_timestamp()
 
-    log_info(f"Starting Google Scholar tracker at {current_timestamp}")
+    log_info(f"Starting Publications Tracker at {current_timestamp}")
+    log_info(f"Data source: Semantic Scholar API")
     log_info(f"Mode: {'DRY RUN' if dry_run else 'LIVE'}")
 
-    # Load existing data
     publications = load_json_file(PUBLICATIONS_JSON)
     if not publications:
         publications = initialize_publications_data()
@@ -607,14 +633,12 @@ def main():
         run_history = initialize_run_history()
         log_info("Initialized new run history")
 
-    # Handle regenerate-pages-only mode
     if args.regenerate_pages_only:
-        log_info("Regenerating Hugo pages only (no Scholar fetch)")
+        log_info("Regenerating Hugo pages only (no API fetch)")
         pages = regenerate_all_pages(publications)
         log_info(f"Regenerated {pages} pages")
         return
 
-    # Check for prompt version bump
     stored_version = publications.get('metadata', {}).get('synopsis_prompt_version', 0)
     if stored_version < CURRENT_SYNOPSIS_PROMPT_VERSION:
         log_info(f"Synopsis prompt version bumped: {stored_version} -> {CURRENT_SYNOPSIS_PROMPT_VERSION}")
@@ -623,22 +647,23 @@ def main():
     old_article_count = len(publications.get('articles', {}))
 
     try:
-        # Set up proxy to avoid Google Scholar blocking
-        proxy_success = setup_proxy()
-        if not proxy_success:
-            log_warning("Running without proxy - requests may be blocked by Google Scholar")
+        # Use stored author ID if available, otherwise discover it
+        stored_author_id = publications.get('metadata', {}).get('semantic_scholar_author_id')
 
-        # Fetch from Google Scholar
-        scholar_results = fetch_author_publications()
-        log_info(f"Fetched {len(scholar_results)} publications from Google Scholar")
+        papers, discovered_author_id = fetch_author_publications(stored_author_id)
+        log_info(f"Fetched {len(papers)} publications from Semantic Scholar")
 
-        # Process publications
-        results = process_publications(publications, scholar_results, dry_run)
+        # Store the discovered author ID for future runs
+        if discovered_author_id and discovered_author_id != stored_author_id:
+            publications['metadata']['semantic_scholar_author_id'] = discovered_author_id
+            log_info(f"Stored author ID: {discovered_author_id}")
 
-        # Create run summary
+        results = process_publications(publications, papers, dry_run)
+
         run_summary = {
             'timestamp': current_timestamp,
             'status': 'success' if results['errors'] == 0 else 'partial_failure',
+            'data_source': 'semantic_scholar',
             'new_articles': results['new_articles'],
             'updated_citations': results['updated_citations'],
             'synopsis_generated': results['synopsis_generated'],
@@ -651,14 +676,12 @@ def main():
 
         if not dry_run:
             try:
-                # Validate before saving
                 if validate_data(publications, old_article_count):
-                    # Update metadata
                     publications['metadata']['last_updated'] = current_timestamp
                     publications['metadata']['total_articles'] = len(publications['articles'])
                     publications['metadata']['synopsis_prompt_version'] = CURRENT_SYNOPSIS_PROMPT_VERSION
+                    publications['metadata']['data_source'] = 'semantic_scholar'
 
-                    # Save JSON files
                     save_json_file(PUBLICATIONS_JSON, publications)
                     log_info(f"Saved publications data to {PUBLICATIONS_JSON}")
 
@@ -666,7 +689,6 @@ def main():
                     save_json_file(RUN_HISTORY_JSON, run_history)
                     log_info(f"Saved run history to {RUN_HISTORY_JSON}")
 
-                    # Generate all Hugo pages
                     pages_generated = regenerate_all_pages(publications)
 
                     print(f"\n✓ Run complete!")
@@ -686,21 +708,20 @@ def main():
             print(f"  Would have processed: {results['new_articles']} new, {results['updated_citations']} updated")
             print(f"  Errors: {results['errors']}")
 
-        # Error notification for high error rates
         if results['errors'] > 0:
             total = len(publications.get('articles', {})) or 1
             error_rate = results['errors'] / total
-            if error_rate > 0.2:  # >20% error rate
+            if error_rate > 0.2:
                 print(f"::error::High error rate: {results['errors']} errors ({error_rate:.1%})")
                 sys.exit(1)
 
     except Exception as e:
         log_error(f"Fatal error: {e}")
 
-        # Save error to run history
         run_summary = {
             'timestamp': current_timestamp,
             'status': 'failure',
+            'data_source': 'semantic_scholar',
             'new_articles': 0,
             'updated_citations': 0,
             'synopsis_generated': 0,
