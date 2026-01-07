@@ -47,7 +47,3 @@ This 1997 article examines the BBC's experience implementing an internal compute
 **Citations:** 0 (as of January 2026)
 
 [View Publication](https://openalex.org/W232863662)
-
-## Abstract
-
-Installation de INTRANET a la BBC. Recommandations pour le lancement de INTRANET dans une entreprise ou une administration

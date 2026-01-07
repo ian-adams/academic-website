@@ -43,7 +43,3 @@ No summary available.
 **Citations:** 4 (as of January 2026)
 
 [View Publication](https://doi.org/10.1016/j.jcrimjus.2023.102092)
-
-## Abstract
-
-No abstract available

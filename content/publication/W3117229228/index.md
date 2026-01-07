@@ -62,7 +62,3 @@ Police officers decide when to turn on their body-worn cameras, and this study f
 **Citations:** 30 (as of January 2026)
 
 [View Publication](https://doi.org/10.1111/puar.13339)
-
-## Abstract
-
-Abstract Administrative discretion can range from benign to troubling, and law enforcement officers possess the power to use physical violence in the discharge of their duties. Body‐worn cameras (BWCs) are a workplace surveillance technology intended to monitor officer behavior in the field, but officers exercise discretion over whether or not to activate their cameras. So, what drives officers to activate BWCs? Combining unique survey and administrative data, three competing explanations of BWC activation are compared in one department: Officer demographics, job function, and attitudes. Job function covariates offer robust predictive power of BWC activation frequency. Demographics do not predict BWC activations except rank, which negatively correlates with activation. Though the bulk of attitudinal measures do not predict BWC activations, negative relationships are noted with how officers perceive BWCs to impact their professional discretion, and their belief that cameras expose officers to public outrage and disapproval.

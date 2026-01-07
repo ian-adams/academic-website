@@ -65,7 +65,3 @@ Researchers analyzed emergency calls in seven U.S. cities during COVID-19 and fo
 **Citations:** 33 (as of January 2026)
 
 [View Publication](https://doi.org/10.1111/1745-9133.12564)
-
-## Abstract
-
-Abstract Research Summary : We examine changes in help‐seeking for domestic violence (DV) in seven U.S. cities during the COVID‐19 pandemic. Using Bayesian structural time‐series modeling with daily data to construct a synthetic counterfactual, we test whether calls to police and/or emergency hotlines varied in 2020 as people stayed home due to COVID‐19. Across this sample, we estimate there were approximately 1030 more calls to police and 1671 more calls to emergency hotlines than would have occurred absent the pandemic. Policy Implications : Interagency data sharing and analysis holds great promise for better understanding localized trends in DV in real time. Research‐practitioner partnerships can help DV coordinated community response teams (CCRTs) develop accessible and sustainable dashboards to visualize data and advance community transparency. As calls for drastic changes in policing are realized, prioritization of finite resources will become critical. Data‐driven decision‐making by CCRTs provides an opportunity to work within resource constraints without compromising the safety of DV victims.

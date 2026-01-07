@@ -63,7 +63,3 @@ A new study found that police officers view body camera monitoring as less fair 
 **Citations:** 2 (as of January 2026)
 
 [View Publication](https://doi.org/10.21428/cb6ab371.fddcc91b)
-
-## Abstract
-
-Objectives: Explore officers' perceptions of the fairness of monitoring with systematic variations in activation (manual/automatic) and auditing (on-demand/supervisor random/artificial intelligence) policy regimes for body-worn cameras (BWCs). Methods: This study uses a survey experiment with a national probability sample of officers wearing BWCs (n=258) to assess the perceived fairness of BWC monitoring under varying activation and audit policies. Participants were randomly assigned one of six vignettes, each incorporating one of two BWC activation policies and one of three BWC footage review policies. The analysis involves a 2x3 experimental design to assess main and interaction effects. Results: Automatic BWC activation and artificial intelligence enabled auditing of footage cause declines in perceived fairness of monitoring. Officers perceive the most unfairness in monitoring when they lack control over the initiation of recording and when the resultant footage is outside of their supervisors' immediate control. Conclusions: The findings underscore potential adverse effects on officers' perceptions of monitoring fairness under varying BWC policy conditions. As this technology gains traction, the potential impact of officersâ concerns on program implementation and fidelity should be considered.

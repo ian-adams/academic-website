@@ -61,7 +61,3 @@ While police body cameras are promoted as tools to increase transparency and acc
 **Citations:** 41 (as of January 2026)
 
 [View Publication](https://doi.org/10.1080/10841806.2017.1381482)
-
-## Abstract
-
-The growing use of body-worn cameras (BWCs) in law enforcement poses ethical and privacy threats to be considered by policy makers. Law enforcement adoption of surveillance technology often outpaces the laws and regulations that would ensure their appropriate use, and the negative consequences are rarely anticipated, particularly as they relate to privacy concerns. To date, the BWC policy narrative in the United States frames the technology as a method to increase transparency in police–community interactions and build legitimacy. However, irrespective of how noble the original intent, technologies tend to morph from beneficence to overt control in the absence of countervailing friction. This article critiques the increased transparency brought about by BWCs to broadly explore the impact of increased exposure on victims, and concludes by proposing ethical policy principles to limit the harms the new technology could pose to vulnerable victims of domestic and sexual violence.

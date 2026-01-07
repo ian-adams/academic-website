@@ -63,7 +63,3 @@ Researchers surveyed over 1,300 police chiefs and sheriffs to understand what in
 **Citations:** 2 (as of January 2026)
 
 [View Publication](https://doi.org/10.21428/cb6ab371.30692d51)
-
-## Abstract
-
-The accountability of police to the public is imperative for a functioning democracy. The opinions of police executives---pivotal actors for implementing oversight policies---are an understudied, critical component of successful reform efforts. We use a pre-registered survey experiment administered to all U.S. municipal police chiefs and county sheriffs to assess whether police executivesâ attitudes towards civilian oversight regimes are responsive to 1) state-level public opinion (drawing on an original n=16,840 survey) and 2) prior adoption of civilian review boards in large agencies. Results from over 1,300 police executives reveal that law enforcement leaders are responsive to peer adoption but much less to public opinion, despite overwhelming public support. Elected sheriffs are less likely to support any civilian oversight. Our findings hold implications for reformers: We find that existing civilian oversight regimes are largely popular, and that it is possible to move police executive opinion towards support for civilian oversight.

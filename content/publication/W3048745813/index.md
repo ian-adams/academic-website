@@ -43,7 +43,3 @@ No summary available.
 **Citations:** 95 (as of January 2026)
 
 [View Publication](https://doi.org/10.1016/j.jenvp.2020.101476)
-
-## Abstract
-
-No abstract available

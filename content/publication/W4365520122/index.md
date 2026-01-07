@@ -64,7 +64,3 @@ Researchers tested whether police officers can accurately identify when they hav
 **Citations:** 1 (as of January 2026)
 
 [View Publication](https://doi.org/10.1108/pijpsm-01-2023-0002)
-
-## Abstract
-
-Purpose This study aims to demonstrate the need for further examination of legal judgments and the exercise of discretion in policing. Design/methodology/approach A factorial vignette survey with traffic stop scenarios based on US Court of Appeals decisions was administered to 396 police officers across six states. Officers were asked to indicate their assessment of the presence of reasonable suspicion and the likelihood that they would extend the stop for investigatory purposes. Findings Officers' reasonable suspicion judgments are significantly influenced by the vignette facts and align with court ruling expectations. However, even in the presence of reasonable suspicion, responses indicate a limited use of officer discretion to extend the stop. Originality/value Analyses of officer decision-making often rely on large datasets with easy indicators of location, officer demographics and citizen demographics, but rarely consider the facts of individual cases. This study suggests more experimental research is needed to consider the impact of case facts on officer judgments and discretionary activity.

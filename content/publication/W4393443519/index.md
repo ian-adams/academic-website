@@ -59,7 +59,3 @@ Police officers use profanity like "fuck" for various professional purposes—to
 **Citations:** 7 (as of January 2026)
 
 [View Publication](https://doi.org/10.1177/10986111241241750)
-
-## Abstract
-
-This study focuses on police profanity, with a particular interest developing reasonable policy to regulate the use of the word “fuck.” Officers employ “fuck” as a linguistic tool to accomplish a range of goals, such as establishing authority, fostering solidarity, and diffusing tension. However, “fuck” can also be used derogatorily, and negatively impact public assessments of police actions. Policy in this area is either absent, overly broad, or inappropriate to its intended use. Following brief, unstructured interviews with line and executive officers, I propose a novel policy theory of profanity, deriving target and intent. I test the theory with a pre-registered experiment administered to a national sample of police and human resources executives ( n = 1492), with each respondent evaluating multiple vignettes ( n = 5280 observations). Results support the proposed theory and generate useful recommendations for practitioners interested in strengthening the ability of agencies to constrain professionally inappropriate use of profanity in the police workplace.

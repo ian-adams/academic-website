@@ -60,7 +60,3 @@ Researchers studied how COVID-19 lockdowns and the 2020 George Floyd protests af
 **Citations:** 6 (as of January 2026)
 
 [View Publication](https://doi.org/10.1108/s1521-613620230000028014)
-
-## Abstract
-
-Purpose – We investigate the impact of overlapping crises of COVID-19 and the George Floyd protests on one major US police department, focusing on staffing and officer proactivity.Methodology/Approach – The study investigates the impact of the two crises on operational capacity. Using Bayesian interrupted time-series analysis, the authors investigate if officer proactivity levels were adversely impacted in the short and long terms.Findings – A statewide stay-at-home order (SAHO) was associated with a sharp decline in proactive contacts, but that effect dissipated quickly. However, the Floyd protests were associated with a sharp decline in proactivity, which persisted throughout the study period.Originality/Value – The findings of this study contribute to ongoing research agendas that seek to understand the impact of dual, overlapping crises on US police departments and the communities they serve. The authors demonstrate a methodological approach capable of disentangling both crises' effects on police activity levels.

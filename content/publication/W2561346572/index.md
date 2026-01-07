@@ -40,7 +40,3 @@ No summary available.
 **Citations:** 0 (as of January 2026)
 
 [View Publication](https://openalex.org/W2561346572)
-
-## Abstract
-
-No abstract available

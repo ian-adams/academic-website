@@ -59,7 +59,3 @@ This study surveyed 529 police officers nationwide to understand how they feel a
 **Citations:** 2 (as of January 2026)
 
 [View Publication](https://doi.org/10.31237/osf.io/fnxbg)
-
-## Abstract
-
-Body-worn cameras (BWCs) are a permanent, though not well understood, feature of modern US policing. As a technological solution to the perception that officers use force too often, BWCs have not fared well. This dissertation sidesteps questions of effectiveness, however, and instead investigates how the cameras are perceived by officers, and how variations in BWC policies affect perceptions of monitoring fairness. To do so, I use a national probability sample of officers (n = 529) drawn from a stratified sample of agencies across the United States.Theoretically, I draw primarily from two literatures. First, from the organizational psychology literature, which is where the vast majority of research on the individual-level effects of electronic workplace surveillance has been done. Second, I draw on the organizationaljustice literature, specifically elements related to how criminal justice employees form judgements of fairness regarding their workplace treatment. The results show how policy variation in BWC activation and footage review affect officer perceptions of fairnessboth on their own and interactively.

@@ -56,7 +56,3 @@ Researchers tested whether artificial intelligence tools actually help police of
 **Citations:** 0 (as of January 2026)
 
 [View Publication](https://doi.org/10.22215/apb.v1i1.5231)
-
-## Abstract
-
-The study described in the source article represents the first experimental evaluation of AIassisted police report writing, even as agencies are already adopting these unproven tools. AI-assisted report writing did not significantly reduce police report writing times, contrary to marketing claims. There may be other potential benefits from using AI tools such as improved report quality, consistency, and supervisor efficiency, but those will require further exploration. Agencies considering adoption of AI tools in policing should exercise caution due to limited efficiency gains and potential unintended consequences.

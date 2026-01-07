@@ -63,7 +63,3 @@ Researchers analyzed seven years of police data from Salt Lake City to determine
 **Citations:** 14 (as of January 2026)
 
 [View Publication](https://doi.org/10.1093/police/paae002)
-
-## Abstract
-
-Abstract We examine the factors influencing police response times, with a particular focus on staffing levels, calls for service (CFS), and proactive police work. We estimate Bayesian Holt-Winters state-space models for each CFS priority level. Using a novel dataset that combines data from the Salt Lake City Police Department's staffing and Computer-Aided Dispatch (CAD) systems at the daily level over seven years, we estimate the effects that staffing, overtime, call volume, and the level of proactive work (e.g., traffic stops, pedestrian stops, business checks) have on police response times. Our findings indicate that the impact of staffing on response times is significantly greater than that of other independent variables in the models. Furthermore, improvements in response times for higher-priority (i.e., more serious) CFS have a lower elasticity response to increases in staffing levels. As police agencies face increasingly complex challenges, the empirical evidence presented herein serves as a cornerstone for making informed decisions in the intricate balancing act of resources, officer well-being, and public safety priorities.

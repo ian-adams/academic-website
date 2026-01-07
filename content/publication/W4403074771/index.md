@@ -64,7 +64,3 @@ A rigorous experiment with 85 police officers found that artificial intelligence
 **Citations:** 8 (as of January 2026)
 
 [View Publication](https://doi.org/10.1007/s11292-024-09644-7)
-
-## Abstract
-
-Abstract Objectives This study examines the potential of artificial intelligence (AI) to reduce the time police officers spend writing reports, a task that consumes a significant portion of their workday. Methods In a pre-registered randomized controlled trial, we test this claim within the patrol division of a medium-sized police department ( n = 85) at the individual report level ( n = 755). Analyses utilize mixed-effects regression accounting for the nested structure of report-writing. Results AI assistance did not significantly affect the duration of writing police reports. Alternative specifications beyond those specified in the pre-registration, including a difference-in-differences approach observing report duration over a full year ( n = 6084), confirm the null findings are robust. Conclusions Our findings contradict marketing expectations for the effect of this technology, suggesting no time savings in report-writing can be expected when using AI-assisted report-writing. Several other potential effects remain possible and untested.

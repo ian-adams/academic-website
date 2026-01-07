@@ -64,7 +64,3 @@ Researchers examined whether requiring police to test all sexual assault evidenc
 **Citations:** 15 (as of January 2026)
 
 [View Publication](https://doi.org/10.1080/24751979.2021.1881410)
-
-## Abstract
-
-The present study employs a quasi-experimental design to evaluate the effects of a mandatory sexual assault kit (SAK) testing policy on rape arrests in a large western US jurisdiction. We use a Bayesian structural time-series model and monthly data on arrests for rape from 2010 through 2019. In the post-implementation period, we observed a downward trend in the arrest rate for rape. Based on the results, the most conservative interpretation of our findings is that the policy implementation did not affect rape arrest rates. While mandatory SAK testing policies are often advocated for based on the belief that they will increase arrest rates for sexual assault (among other proposed benefits), we add to growing empirical evidence that policy interventions beyond mandatory SAK testing are needed to increase arrest rates for sexual assault. Jurisdictions that currently use mandatory SAK testing policies are encouraged to assess stakeholders' experiences to proactively address resource allocation, consider other policies that may increase accountability for sexual assault offenders, and utilize victim service providers to support other measures of success with victims in instances where no arrest is made.

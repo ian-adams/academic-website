@@ -62,7 +62,3 @@ Police in a major U.S. city found that rape victims were frequently dropping out
 **Citations:** 0 (as of January 2026)
 
 [View Publication](https://doi.org/10.4018/978-1-7998-6820-0.ch004)
-
-## Abstract
-
-The initial interaction between rape victims and police can affect how these cases progress through the criminal justice system. In one US state capitol, the police agency determined its initial response to rape victims was less effective than desired. Victim retention was low, and officer written reports were found to endorse negative stereotypes about rape victims. A four-hour training highlighting trauma-informed and victim-supportive police response was developed and implemented, and all agency officers were trained (n=~600). Compared to the six months before training, victim retention improved by 32% in the post-training period. Written reports by officers also improved, showcasing victim-supportive language and improving officers' focus on victim services. The increase in victim retention is a positive outcome for a relatively short training intervention. This chapter concludes that intensive, evidence-based training programs that connect victim trauma response to police trauma response may significantly improve police response to rape victims during initial contact.

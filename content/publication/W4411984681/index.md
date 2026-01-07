@@ -64,7 +64,3 @@ Researchers surveyed over 2,400 people to understand how the public views police
 **Citations:** 0 (as of January 2026)
 
 [View Publication](https://doi.org/10.1177/10986111251357508)
-
-## Abstract
-
-Profanity is common in everyday life, yet law enforcement often treats all swear words alike. Building on Adams (2024), we surveyed a large public sample ( n = 2412) who evaluated profanity’s appropriateness, professionalism, impact on trust, and disciplinary deservedness across nine scenarios ( n = 9874) varying in intent (positive, neutral, derogatory) and target (self/situation, colleague, public). Results aligned with prior research: any profanity aimed at the public, especially in a derogatory way, drew the strongest condemnation. Meanwhile, positive or neutral profanity toward oneself or colleagues was generally acceptable, though derogatory profanity at colleagues elicited moderate concern. Across the two studies, it appears police executives are generally more condemnatory of police profanity compared to public expectations. These findings underscore the need for nuanced language policies, rather than blanket bans, to address truly harmful speech without penalizing harmless expressions.

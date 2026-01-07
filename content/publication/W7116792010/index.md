@@ -60,7 +60,3 @@ Researchers tested whether using artificial intelligence to automatically review
 **Citations:** 0 (as of January 2026)
 
 [View Publication](https://doi.org/10.1111/1745-9125.70028)
-
-## Abstract
-
-Abstract Police body‐worn cameras (BWCs) generate extensive video data on officer behavior, yet resource constraints mean that only a fraction of this footage is ever reviewed. Recent advancements in artificial intelligence (AI) present an opportunity to automate these reviews, potentially influencing police conduct. We evaluate the impact of AI‐led auditing in two pre‐registered, randomized controlled trials conducted within two large US police agencies. The findings are mixed but positive: In a department operating under a consent decree, officers exhibited significant reductions in substandard professionalism, whereas in an agency without external oversight, officers increased the frequency of highly professional interactions. These results show that AI auditing of BWC footage can influence officer behavior, with its effects shaped by organizational and institutional contexts.

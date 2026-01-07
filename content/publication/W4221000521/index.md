@@ -62,7 +62,3 @@ This research examined violations in USDA organic food certification and found t
 **Citations:** 1 (as of January 2026)
 
 [View Publication](https://doi.org/10.5304/jafscd.2022.112.020)
-
-## Abstract
-
-Many of the challenges organic producers and pro­cessors experience are caused by how organic standards compliance is monitored and enforced—in particular, the administrative procedures that are mandated to verify that operation practices meet organic certification requirements. In this policy analysis, we examine noncompliance documenta­tion and verification by accredited certifiers under the U.S. Department of Agriculture (USDA). Lev­eraging a novel and unique compilation of “Notice of Noncompliance” letters issued to organic pro­ducers and processors, we find a preponderance of administrative violations, relative to substantive ones. We discuss how the finding may help explain contemporary transformations in the organic mar­ket, as larger agri-food entities’ capacity to absorb the administrative costs that frustrate smaller oper­ations may contribute to organic market “conven­tionalization” and consolidation.

@@ -64,7 +64,3 @@ Police officers and other public servants must constantly manage their emotions 
 **Citations:** 50 (as of January 2026)
 
 [View Publication](https://doi.org/10.1177/0091026018814569)
-
-## Abstract
-
-Emotional labor is the effort to express job-appropriate emotions and/or suppress inappropriate emotions. The effort manifests in interpersonal interactions, whether face to face or voice to voice, and can increase stress and burnout. Most research in emotional labor is based on North American samples. Could public servants in different cultures experience emotional labor differently? We test the provocative hypothesis that emotional labor is less stressful for people in collectivist cultures, due to the predominance of harmony and interdependence in such cultures. Our results confirm that emotional labor via surface acting leads to burnout to a lesser degree for respondents in collectivist cultures compared with individualistic cultures. Emotional labor via deep acting actually lowers burnout in collectivist cultures. We also find that emotional labor theories based on North American studies may be used in Eastern contexts, and that public servants in collectivist cultures are more responsive to display rules compared with those in individualist cultures.

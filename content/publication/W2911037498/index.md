@@ -61,7 +61,3 @@ Police researchers studied what motivates officers to turn on their body-worn ca
 **Citations:** 1 (as of January 2026)
 
 [View Publication](https://doi.org/10.20944/preprints201901.0061.v1)
-
-## Abstract
-
-What drives an individual police officer to activate his body-worn camera (BWC)? Some evidence suggests officer attitudes and resistance to the technology contributes to the equivocal results in studies testing for BWCs effect on use-of-force, complaints, and other outcomes of interest. Leveraging a novel survey and administrative dataset, we investigate the predictors of BWC activation among 147 police officers in a single agency. With a test of three nested models, we find job function covariates offer robust predictive power of how often an officer activates her or his BWC. Neither demographic nor attitudinal measures significantly predict BWC activations, except for a negative relationship with how officers perceive BWC impacts on professional discretion. The study furnishes empirical support for understanding officers as Principled Agents: job function, guided by administrative policy is the most explanatory and parsimonious, while models of attitudes and demographics fail to improve upon the job function model.

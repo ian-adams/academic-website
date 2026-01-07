@@ -54,7 +54,3 @@ Police resignations surged by 279% after the George Floyd protests in 2020, whil
 **Citations:** 0 (as of January 2026)
 
 [View Publication](https://doi.org/10.22215/apb.v1i2.5007)
-
-## Abstract
-
-Police resignations increased by 279% following the George Floyd protests, posing significant challenges for police staffing and operational capacity. Retirements and involuntary separations (e.g., terminations due to misconduct) did not show significant changes, but the elevated resignations are likely to continue. Effective strategies to improve organizational justice (i.e., perceptions of fair treatment of individuals within an organization) and support for officers are crucial to addressing the retention crisis. Follow-up studies support the idea of a policing workforce crisis and its negative effect on agencies’ abilities to serve communities.

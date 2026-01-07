@@ -42,7 +42,3 @@ No summary available.
 **Citations:** 1 (as of January 2026)
 
 [View Publication](https://doi.org/10.1108/pijpsm-09-2024-206)
-
-## Abstract
-
-No abstract available

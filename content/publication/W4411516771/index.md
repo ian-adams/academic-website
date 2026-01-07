@@ -66,7 +66,3 @@ Researchers tested whether police officers who actually used an AI tool to help 
 **Citations:** 3 (as of January 2026)
 
 [View Publication](https://doi.org/10.1007/s11292-025-09679-4)
-
-## Abstract
-
-Abstract Objective This study examines patrol officer and supervisor perceptions of an artificial intelligence (AI) tool to assist with officer report writing. We compare attitudes among patrol officers randomly assigned to use the AI tool against those who were not. Methods Following a randomized controlled trial within a single agency, we conducted a post-intervention survey of patrol officers and supervisors. Results Patrol officers expressed generally favorable perceptions toward AI-assisted report writing, though no significant differences emerged between treatment and control groups in perceived utility, speed improvement, or quality enhancement. Despite these non-significant differences, 48% of treated officers reported time savings. Supervisors perceived noticeable improvements in report quality, completeness, and writing efficiency. Conclusion Officer perceptions of AI-assisted report writing were broadly positive but did not differ significantly by experimental exposure. Agencies adopting similar tools should anticipate mixed officer reactions and prioritize training, realistic expectations, and supervisor support.

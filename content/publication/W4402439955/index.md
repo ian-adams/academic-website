@@ -45,7 +45,3 @@ No summary available.
 **Citations:** 11 (as of January 2026)
 
 [View Publication](https://doi.org/10.21428/cb6ab371.4a6d42e9)
-
-## Abstract
-
-No abstract available

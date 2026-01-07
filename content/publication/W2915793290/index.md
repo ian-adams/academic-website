@@ -66,7 +66,3 @@ If you're looking for a criminology article summary, you may have shared the wro
 **Citations:** 1 (as of January 2026)
 
 [View Publication](https://doi.org/10.1111/ropr.12330)
-
-## Abstract
-
-Abstract Among the more recognizable programs related to natural and sustainable food is the United States Department of Agriculture’s National Organic Program. Although the robustness of the organic food market is difficult to contest, many debate the extent to which U.S. organic policy outcomes adequately serve consumers and the organic agriculture producers they rely on. This paper engages the debate from the perspective of certified organic producers. Drawing on the results of a nationwide survey of USDA‐certified producers, we first provide a snapshot of how producers assess the environmental, consumer, and market impacts of U.S. organic food policy. We then examine the extent to which organic producers’ policy impact perceptions are associated with their alignment with an “organic ethos”—understood as producers’ commitment to core organic principles and the organic movement. The paper highlights producers’ values as perceptual filters and cognitive mechanisms that help shape producers’ policy impacts perceptions, illustrating a contributing factor to the enduring nature of organic policy debates.

@@ -43,7 +43,3 @@ No summary available.
 **Citations:** 4 (as of January 2026)
 
 [View Publication](https://doi.org/10.1037/law0000406)
-
-## Abstract
-
-No abstract available

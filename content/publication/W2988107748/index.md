@@ -42,7 +42,3 @@ No summary available.
 **Citations:** 25 (as of January 2026)
 
 [View Publication](https://doi.org/10.1016/j.ijlcj.2019.100358)
-
-## Abstract
-
-No abstract available

@@ -61,7 +61,3 @@ A study of 271 police officers found that wearing body cameras increases officer
 **Citations:** 111 (as of January 2026)
 
 [View Publication](https://doi.org/10.1177/1098611118783987)
-
-## Abstract
-
-Police departments in the United States are rapidly adopting body-worn cameras (BWCs). To date, no study has investigated the effects of BWCs on police officers themselves, despite evidence suggesting negative effects of electronic performance monitoring on employee well-being. Police officers already experience higher levels of burnout than other professions. We hypothesize that the intense surveillance of BWCs will manifest in how police officers perceive the organizational support of their departments and will increase burnout. We test these hypotheses using data from patrol officers ( n = 271) and structural equation modeling. We find BWCs increase police officer burnout, and this effect is statistically different from zero. We also find that BWCs decrease officers’ perceived organizational support, which mediates the relationship between BWCs and burnout. Greater perceived organizational support can blunt the negative effects of BWCs. Our study is the first to situate effects on officers at the center of BWC literature.

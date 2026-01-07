@@ -64,7 +64,3 @@ Researchers surveyed over 1,300 police chiefs and sheriffs to understand what in
 **Citations:** 6 (as of January 2026)
 
 [View Publication](https://doi.org/10.31235/osf.io/mdu96)
-
-## Abstract
-
-Demand for democratic accountability in policing is accelerating, yet little is understood about how law enforcement executives engage in policy learning around civilian oversight. This paper shares the results of a novel survey experiment administered to all U.S. police chiefs and sheriffs. We assess whether police executives’ attitudes towards civilian oversight are responsive to 1) state-level public opinion (drawing on an n=16,840 survey) and 2) prior adoption of civilian review boards in large agencies. Results from over 1,300 police executives reveal that law enforcement leaders are responsive to peer adoption but much less to public opinion, despite overwhelming support amongst voters. Further, we find that agencies with an established oversight board are highly supportive of their existence, while elected sheriffs are much less likely to support civilian oversight. Our results indicate that policy learning and reform around civilian oversight are possible, though sources of reform are not themselves primarily democratic.

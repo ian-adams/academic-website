@@ -60,7 +60,3 @@ Researchers studied COVID-19 infection rates among nearly 700 police officers ov
 **Citations:** 22 (as of January 2026)
 
 [View Publication](https://doi.org/10.1080/15614263.2021.1894937)
-
-## Abstract
-
-COVID-19 has created tremendous operational difficulties for law enforcement agencies, with substantial portions of their staff quarantined for either exposure or infection. With the rollout of a vaccine beginning in early 2021, there is hoped for relief on the horizon. However, to date, no study has reported the vaccine's effect on infection rates within the law enforcement workforce. We address that gap with a report on a single large agency's experience, using data on officer positivity rates gathered over 341 days. During the immunization period, employees accepted vaccination at over 70% uptake. Results show the vaccine eliminated new cases of COVID-19 among the agency's nearly 700 employees within weeks. As other agencies consider their vaccination programs, they should consider communicating early and often about the impact of the pandemic on operations and the efficacy of vaccination, including the results reported here.

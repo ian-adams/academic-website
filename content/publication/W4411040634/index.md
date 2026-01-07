@@ -65,7 +65,3 @@ Police leaders and researchers surveyed about implementing new policing practice
 **Citations:** 6 (as of January 2026)
 
 [View Publication](https://doi.org/10.1080/15614263.2025.2512806)
-
-## Abstract
-
-This study examined organizational and community-level barriers and facilitators that influence innovation in policing using an implementation science framework. A body of 31 survey items operationalized for implementation in police settings were mapped onto the constructs of the Consolidated Framework for Implementation Research. The resulting instrument was administered to 72 police leaders and researchers. Respondents agreed implementation bore heavily on an innovation's prospects for success independent of its effectiveness. There was agreement that innovations in policing were often more complex than the actions they replaced, not integrated into officers' performance evaluations, and were likely to be mistrusted if they originated from external sources. Officers were unlikely to understand an innovation's comparative value, and likely to seek their own preferred outcomes regardless. Responses illustrate how effective policing practices could nonetheless be deemed infeasible, providing insights into why many of the innovations that seek to improve policing are met with limited success.

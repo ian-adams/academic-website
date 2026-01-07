@@ -61,7 +61,3 @@ This research finds that public employees like police officers can become emotio
 **Citations:** 12 (as of January 2026)
 
 [View Publication](https://doi.org/10.1080/10841806.2018.1485449)
-
-## Abstract
-
-As the face of government, street-level bureaucrats interact with the citizenry and engage in emotional labor. Here we argue that public servants risk becoming alienated due to the unsupported emotional labor demands of their jobs. Alienated public servants can, in turn, alienate citizens from their government via emotional contagion, and because targets of emotional labor can detect inauthentic surface acting, they will distrust encounters with government as a result. Human resource management practices and organizational structures can mitigate or exacerbate this effect. The problem, though, is that public service is rooted in scientific management, which reifies top-down hierarchy, increasing the likelihood of alienation through its commitment to the bureaucratic form. By extending emotional labor theory to self-estrangement and fellow-beings estrangement, our argument incorporates all four of Marx’s dimensions of alienation, including commodity fetishism, where people are things and feelings qua feelings are part of an overall public service delivery package.

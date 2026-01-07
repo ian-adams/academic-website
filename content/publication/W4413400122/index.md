@@ -69,7 +69,3 @@ A new study examining civilian review boards—independent panels that investiga
 **Citations:** 0 (as of January 2026)
 
 [View Publication](https://doi.org/10.1093/pnasnexus/pgaf267)
-
-## Abstract
-
-Abstract Does the implementation of external oversight in policing improve public perceptions of police legitimacy? Civilian review boards (CRBs) are frequently promoted as mechanisms to enhance the legitimacy of police agencies by providing independent oversight. Despite public support for CRBs, their adoption and effectiveness remain limited, raising concerns about their actual impact on procedural fairness and police legitimacy. This study assesses the role of CRBs in shaping public perceptions by examining various decision-making scenarios involving police chiefs and CRBs. Using a survey experiment fielded to 2,503 respondents, we investigate whether CRBs enhance legitimacy when they either coincide with or conflict with police chiefs’ determinations in cases of officer misconduct. Our findings suggest that while CRBs may enhance perceptions of procedural fairness for some, particularly those with negative views of police, their involvement does not generally increase legitimacy. In fact, when CRBs conflict with police chiefs, they may diminish public trust in both policing and civilian oversight and further entrench politically polarized attitudes towards policing. These results provide empirical evidence to support concerns that CRBs might not fulfill their intended role in enhancing police legitimacy, especially in cases of institutional disagreement.

@@ -67,7 +67,3 @@ Researchers studied whether gunshot detection technology - acoustic sensors that
 **Citations:** 0 (as of January 2026)
 
 [View Publication](https://doi.org/10.1186/s40163-025-00259-5)
-
-## Abstract
-
-Abstract Existing evaluations of gunshot-detection technology (GDT) overwhelmingly study large urban departments, leaving its effectiveness for mid-sized agencies unclear. Leveraging weekly panel data from Columbia, South Carolina, we apply two-way fixed-effects difference-in-differences models to estimate GDT’s impact on five outcomes: reported shootings, firearm seizures, shootings that result in a seizure, fatal and non-fatal shootings, and the time required to recover crime guns. After implementation, GDT zones exhibited a marked rise in detected shootings – consistent with improved surveillance rather than increased gunfire – alongside discernible gains in both total firearm seizures and seizures linked to shooting events. Non-fatal shootings declined relative to comparison areas, and crime guns tied to incidents without victims or property damage were recovered appreciably faster. No corresponding change emerged for fatal shootings or for recovery times when a person was struck. Overall, the evidence indicates that GDT broadens police awareness of gun violence, modestly enhances firearm interdiction, and accelerates gun recovery in otherwise under-reported cases, offering practical benefits at the patrol level for similarly sized jurisdictions weighing adoption.

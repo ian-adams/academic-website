@@ -55,7 +55,3 @@ Police officers have legal authority to use force, but research shows we still h
 **Citations:** 1 (as of January 2026)
 
 [View Publication](https://doi.org/10.1093/acrefore/9780190264079.013.845)
-
-## Abstract
-
-Police officers wield the authority to use force in pursuit of lawful objectives, which significantly impacts the public perception of policing legitimacy. Previous research findings continue to document more questions than answers, but the gaps in knowledge are slowly closing. While various actors review the appropriateness of police use of force, the primary sources for the rules of conduct are the courts, specifically the appellate courts and the U.S. Supreme Court. Technological advancements and theoretical developments offer practitioners and researchers innovative avenues to enhance the capacity to examine, forecast, and regulate the application of police force.

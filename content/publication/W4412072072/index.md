@@ -67,7 +67,3 @@ Researchers examined the scientific quality of work produced by the Force Scienc
 **Citations:** 0 (as of January 2026)
 
 [View Publication](https://doi.org/10.1177/10986111251357498)
-
-## Abstract
-
-Courts regularly rely on scientific expert testimony in police use-of-force cases, and the Force Science Institute (FSI)—a private, for-profit entity—has emerged as an important source of purportedly scientific principles shaping police training, policies, and legal outcomes. Its “peer-reviewed” corpus is presented as scientifically authoritative and feeds into “Force Science Analyst” certification and expert consulting. Employing bibliometric analysis and three validated measures of scientific reliability, we assess a recent volume ( Force Science ) representing FSI’s claimed knowledge for scientific reliability. Contrary to FSI’s assertions, our findings show its published materials fail to meet the scientific rigor demanded by the Daubert standard, which governs the admissibility of scientific evidence in U.S. courts. These results highlight the need for caution and critical scrutiny of such evidence, and suggest that reliance on Force Science in legal proceedings, training programs, and policing policies risks introducing unverified concepts into high-stakes decision-making contexts.
