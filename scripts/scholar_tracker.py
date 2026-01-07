@@ -25,6 +25,7 @@ from pyalex import Works, Authors
 # Configuration Constants
 AUTHOR_NAME = "Ian T. Adams"
 OPENALEX_AUTHOR_ID = "A5052998143"  # Ian's OpenAlex Author ID
+MIN_PUBLICATION_YEAR = 2017  # Filter out earlier publications (different author with same name)
 
 # Set email for polite pool (higher rate limits)
 POLITE_POOL_EMAIL = "github-actions@ianadamsresearch.com"
@@ -148,8 +149,17 @@ def fetch_author_publications() -> list:
                 log_warning("Reached 500 works limit, stopping pagination")
                 break
 
-        log_info(f"Total publications fetched: {len(all_works)}")
-        return all_works
+        # Filter out publications before MIN_PUBLICATION_YEAR (different author with same name)
+        filtered_works = [
+            w for w in all_works
+            if (w.get('publication_year') or 0) >= MIN_PUBLICATION_YEAR
+        ]
+        removed_count = len(all_works) - len(filtered_works)
+        if removed_count > 0:
+            log_info(f"Filtered out {removed_count} publications before {MIN_PUBLICATION_YEAR}")
+
+        log_info(f"Total publications after filtering: {len(filtered_works)}")
+        return filtered_works
 
     except Exception as e:
         log_error(f"Failed to fetch publications: {e}")
@@ -380,10 +390,6 @@ def generate_hugo_page(work_id: str, article: dict):
 **Citations:** {article.get('citation_count', 0)} (as of {citation_date})
 
 [View Publication]({view_url})
-
-## Abstract
-
-{article.get('abstract', 'No abstract available.')}
 """
 
     # Use a safe directory name
