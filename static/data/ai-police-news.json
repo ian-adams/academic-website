@@ -1,7 +1,50 @@
 {
-  "updated": "2026-01-06T13:43:35Z",
-  "count": 69,
+  "updated": "2026-01-07T09:29:20Z",
+  "count": 72,
   "stories": [
+    {
+      "id": "4e55967779a32097cb45c08754eb34fe",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQUW1JUmw1M1J6eGt6THRfQUh0cFNJQUg3a0dBWkhCS3BFTVFhWTVfWVVOblBFcWwzOTQxbUJLbGgwODFkckdUR3d5el8zNFd2WGdhdEhlMXlaQXh5UFZFWmRObU1HOGwycFMyUloxbm5udFhkdFM0Mm9vSlZQUlloRkMtU19NNjVyN3dlTU14NXltb1huUWFMQWZYRVJQdk9yOXBkcFFxVnVZTjFZQy12TUZRcEVNemVBcWx2RHlGZGdmbk45SWUxTTdjaHphMjhmZkNnT0dKYk9qNnFmbnhsVkZiVQ?oc=5",
+      "title": "Axon reimagines report writing with Draft One, a first-of-its-kind AI-powered force multiplier for public safety - Axon IR",
+      "source": "Google News",
+      "date": "2026-01-07",
+      "date_discovered": "2026-01-07",
+      "summary": "Axon reimagines report writing with Draft One, a first-of-its-kind AI-powered force multiplier for public safety&nbsp;&nbsp;Axon IR",
+      "story_type": "vendor",
+      "relevance_score": 0.8,
+      "key_entities": "Axon",
+      "tags": ["AI", "Axon", "Draft One"],
+      "needs_review": 0
+    },
+    {
+      "id": "cc0a121cff4aefc45b6a9e318d721b8f",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOWFUtX0psQ2dmZzZjNEEyUnEydk9QZkxpU0loTDhiV1FVdkJ2dW52LTBjZC00M3RsTV9aV1Uxc1ZQbjMwR1Fvb0ZVak1ZV2JiejhmZFJDdEZBbUZNa0hwWE5KeFl0WlV0bkhwNWduUnJrUlNNNUhQX3Y3a1IxcGhqYzZkTnAzRlRoa3lCLUFVUkhTSEFLMlRiaUFFU3ZmOFF3b3phMU9lZzJsdWZldEdkWUgxOXdvclQzU3k0dzZGVGFnRDk5YXkzVDRNd05ubW13dURiZk5EbXNoaEJRZnfSAeYBQVVfeXFMT2tDdGpNV2V5TzBYNWxJY2N5MGlIU1ltNnVYbFRnRjBxOEZ5OXRlTXNOWmUxTE9BZWk4eno5WTBqWlpjdGprd2VwY1BueTdYSU9kWmtja2NYTXpBNUNvcWpBWmpxT25SSWFtRmt6NkYwMVAtZ3FMRFp2WFVrMW1hWHYyRC1COEV2UEg0cDAwVDhXcU5XQzJGTlRrVTVBRUE1cExIeFVidl9xd3VLMV9pdUxqd2l3UndOcXpXMWRYbGdqQ3dQQ1lUdzVwSU5HR0NYVG9LQUJNSWRPUjRVM05wbXNLZkpJVUE?oc=5",
+      "title": "Axon Enterprise CEO describes how the company aims ‘to make the bullet obsolete' - NBC Connecticut",
+      "source": "Google News",
+      "date": "2026-01-07",
+      "date_discovered": "2026-01-07",
+      "summary": "Axon Enterprise CEO describes how the company aims ‘to make the bullet obsolete'&nbsp;&nbsp;NBC Connecticut",
+      "story_type": "vendor",
+      "relevance_score": 0.3,
+      "key_entities": "Axon",
+      "location": "Connecticut",
+      "tags": ["AI", "Axon"],
+      "needs_review": 0
+    },
+    {
+      "id": "655c7650674acdd7f1611c555a210ffe",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdTFzcFVUYzdLRmIycnQxSVJJU2pfRjdNUllIUENyTWNXT3FIWTJ2OE5pRXE5aVpyRTVpeFI5NlZOQ2xNYWItS1o4RW5PUnNkUEFHdThMMTNqRTB2NmdoYWVDOXRpRGM2WmQ0UjdXUVF0cENVZmlFdHlZOC05OWdISkNoeTVEbGwzSlptMk14NHByRlE0SnAwbG9ENVhJUDdNLVgtYQ?oc=5",
+      "title": "Axon reports Q2 2025 revenue of $669 million, up 33% year over year - Aug 4, 2025 - Axon IR",
+      "source": "Google News",
+      "date": "2026-01-07",
+      "date_discovered": "2026-01-07",
+      "summary": "Axon reports Q2 2025 revenue of $669 million, up 33% year over year - Aug 4, 2025&nbsp;&nbsp;Axon IR",
+      "story_type": "vendor",
+      "relevance_score": 0.3,
+      "key_entities": "Axon",
+      "tags": "Axon",
+      "needs_review": 0
+    },
     {
       "id": "3bfb377c74f8b67d69e40b1655bb919f",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOWDV6WHFrNE5DU09GdFF1Q1VERVBWODZzMEZnTXpJREh5NUdnYjl1TU9zZTU4eUs0MExDTU9hN1JadUdrZ19NVi1Xa1ozdW1BQ01ZY240MC1lejBIUEx0WVMzV3RJZV90Q2xveTE5MG51SS1Na1NzWDV6ZHRCZlREZWtuR2wzaG1tS2JvSFVnR2U3VEl5bzFlM3pMcTBIVUxDaVBvTS1NTUIzSC1DcUMyOGdoQmtGSXRPMmFTLVNnWG9FR1lW?oc=5",
