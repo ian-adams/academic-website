@@ -97,6 +97,122 @@ init_database <- function(db_path = here::here("data", "media-mentions", "storie
   return(con)
 }
 
+#' Normalize URL for deduplication
+#'
+#' @param url URL string
+#' @return Normalized URL
+normalize_url <- function(url) {
+  if (is.null(url) || is.na(url) || url == "") return("")
+
+  url <- tolower(url)
+  # Remove trailing slashes
+  url <- sub("/$", "", url)
+  # Remove URL parameters (everything after ?)
+  url <- sub("\\?.*$", "", url)
+  # Remove anchors
+  url <- sub("#.*$", "", url)
+
+  return(url)
+}
+
+#' Seed database from existing JSON file
+#' This ensures historical stories persist even if cache fails
+#' CRITICAL: This is the key to persistent story retention
+#'
+#' @param con Database connection
+#' @param json_path Path to existing JSON file
+#' @param log_file Path to log file
+#' @return Number of stories seeded
+seed_database_from_json <- function(con, json_path = NULL, log_file = NULL) {
+  if (is.null(json_path)) {
+    json_path <- here::here("static", "data", "media-mentions.json")
+  }
+
+  if (!file.exists(json_path)) {
+    log_message("No existing JSON file found to seed database", log_file)
+    return(0)
+  }
+
+  # Check if database already has stories (cache was restored)
+  existing_count <- dbGetQuery(con, "SELECT COUNT(*) as count FROM stories")$count
+  if (existing_count > 0) {
+    log_message(sprintf("Database already has %d stories from cache, skipping seed", existing_count), log_file)
+    return(existing_count)
+  }
+
+  log_message("Seeding database from existing JSON file (ensures story retention)", log_file)
+
+  tryCatch({
+    json_data <- fromJSON(json_path, flatten = TRUE)
+
+    if (is.null(json_data$stories) || length(json_data$stories) == 0) {
+      log_message("JSON file contains no stories", log_file, "WARN")
+      return(0)
+    }
+
+    stories <- as.data.frame(json_data$stories, stringsAsFactors = FALSE)
+
+    # Ensure required columns exist
+    if (!"date_discovered" %in% names(stories)) {
+      stories$date_discovered <- format(Sys.Date(), "%Y-%m-%d")
+    }
+    if (!"id" %in% names(stories)) {
+      stories$id <- sapply(stories$url, generate_story_id)
+    }
+
+    # Handle list columns (convert to comma-separated strings)
+    list_cols <- c("tags", "topics", "key_entities")
+    for (col in list_cols) {
+      if (col %in% names(stories) && is.list(stories[[col]])) {
+        stories[[col]] <- sapply(stories[[col]], function(x) {
+          if (is.null(x) || length(x) == 0) return("")
+          paste(unlist(x), collapse = ", ")
+        })
+      }
+    }
+
+    # Rename date to date_published if needed
+    if ("date" %in% names(stories) && !"date_published" %in% names(stories)) {
+      stories$date_published <- stories$date
+    }
+
+    # Add missing columns with defaults
+    db_columns <- c(
+      "id", "url", "title", "source", "date_published", "date_discovered",
+      "summary", "snippet", "mention_type", "story_type",
+      "relevance_score", "relevance_confidence",
+      "key_entities", "location", "tags", "topics", "full_text",
+      "needs_review", "reviewed", "published_on_site", "featured"
+    )
+
+    for (col in db_columns) {
+      if (!col %in% names(stories)) {
+        stories[[col]] <- NA
+      }
+    }
+
+    # Set defaults for integer columns
+    stories$needs_review[is.na(stories$needs_review)] <- 0
+    stories$reviewed[is.na(stories$reviewed)] <- 0
+    stories$published_on_site[is.na(stories$published_on_site)] <- 1
+    stories$featured[is.na(stories$featured)] <- 0
+
+    # Select only database columns
+    stories <- stories[, db_columns, drop = FALSE]
+
+    # Insert into database
+    dbWriteTable(con, "stories", stories, append = TRUE)
+
+    inserted_count <- nrow(stories)
+    log_message(sprintf("Seeded database with %d historical stories from JSON", inserted_count), log_file)
+
+    return(inserted_count)
+  }, error = function(e) {
+    log_message(sprintf("Error seeding database from JSON: %s", e$message), log_file, "ERROR")
+    return(0)
+  })
+}
+
 #' Generate unique ID for a story based on URL
 #'
 #' @param url Story URL

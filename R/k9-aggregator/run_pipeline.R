@@ -41,6 +41,11 @@ main <- function(config_path = NULL) {
   con <- init_database(db_path)
   log_message(sprintf("Database initialized: %s", db_path), log_file)
 
+  # CRITICAL: Seed database from existing JSON to ensure story retention
+  # This makes the JSON the persistent source of truth, preventing story loss
+  # even if the GitHub Actions cache fails
+  seed_database_from_json(con, log_file = log_file)
+
   # Track statistics
   stats <- list(
     start_time = Sys.time(),
