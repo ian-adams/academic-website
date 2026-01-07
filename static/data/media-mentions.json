@@ -1,7 +1,23 @@
 {
-  "updated": "2026-01-06T22:00:00Z",
-  "count": 3,
+  "updated": "2026-01-07T00:00:00Z",
+  "count": 4,
   "stories": [
+    {
+      "id": "pbs20251126",
+      "url": "https://www.pbs.org/newshour/nation/judges-note-on-immigration-agents-using-ai-raises-accuracy-and-privacy-concerns",
+      "title": "Judge's note on immigration agents using AI raises accuracy and privacy concerns",
+      "source": "PBS NewsHour",
+      "date": "2025-11-26",
+      "date_discovered": "2026-01-07",
+      "summary": "A federal judge called out immigration agents using artificial intelligence to write use-of-force reports, raising concerns about accuracy and public confidence in law enforcement.",
+      "snippet": "Ian Adams, an assistant criminology professor at the University of South Carolina who serves on a task force on artificial intelligence at the Council on Criminal Justice, characterized the situation as \"the worst of all worlds.\"",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": ["AI/Technology", "Use of Force", "Policy/Reform"],
+      "featured": 1
+    },
     {
       "id": "test001",
       "url": "https://example.com/test-article-1",
@@ -15,8 +31,7 @@
       "story_type": "news",
       "relevance_score": 0.85,
       "relevance_confidence": "high",
-      "topics": ["Body Cameras", "Policy/Reform"],
-      "featured": 1
+      "topics": ["Body Cameras", "Policy/Reform"]
     },
     {
       "id": "test002",
