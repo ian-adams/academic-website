@@ -404,6 +404,21 @@ def generate_hugo_page(work_id: str, article: dict):
     return str(filepath)
 
 
+def delete_hugo_page(work_id: str):
+    """Delete Hugo page directory for a removed publication"""
+    import shutil
+    safe_id = work_id.replace('/', '_').replace(':', '_')[:50] if work_id else None
+    if not safe_id:
+        return False
+
+    output_dir = Path(CONTENT_PUBLICATION_DIR) / safe_id
+    if output_dir.exists():
+        shutil.rmtree(output_dir)
+        log_info(f"Deleted Hugo page directory: {output_dir}")
+        return True
+    return False
+
+
 def regenerate_all_pages(publications: dict):
     """Regenerate all Hugo pages from existing data"""
     log_info("Regenerating all Hugo pages...")
@@ -442,9 +457,11 @@ def process_publications(publications: dict, works: list, dry_run: bool = False)
 
     for work_id in articles_to_remove:
         del publications['articles'][work_id]
+        # Also delete the Hugo page directory
+        delete_hugo_page(work_id)
 
     if articles_to_remove:
-        log_info(f"Removed {len(articles_to_remove)} pre-{MIN_PUBLICATION_YEAR} publications from database")
+        log_info(f"Removed {len(articles_to_remove)} pre-{MIN_PUBLICATION_YEAR} publications from database and Hugo pages")
 
     for work in works:
         try:
