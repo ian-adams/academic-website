@@ -9,6 +9,9 @@ rss_feeds:
   - name: "NPR"
     url: "https://feeds.npr.org/1001/rss.xml"
 
+  - name: "PBS NewsHour"
+    url: "https://www.pbs.org/newshour/feeds/rss/headlines"
+
   - name: "New York Times"
     url: "https://rss.nytimes.com/services/xml/rss/nyt/US.xml"
 
@@ -17,6 +20,9 @@ rss_feeds:
 
   - name: "Associated Press"
     url: "https://rsshub.app/apnews/topics/politics"
+
+  - name: "Reuters"
+    url: "https://www.reutersagency.com/feed/"
 
   # Regional South Carolina news
   - name: "The State (SC)"

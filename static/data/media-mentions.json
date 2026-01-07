@@ -1,4 +1,69 @@
 {
+  "updated": "2026-01-07T00:00:00Z",
+  "count": 4,
+  "stories": [
+    {
+      "id": "pbs20251126",
+      "url": "https://www.pbs.org/newshour/nation/judges-note-on-immigration-agents-using-ai-raises-accuracy-and-privacy-concerns",
+      "title": "Judge's note on immigration agents using AI raises accuracy and privacy concerns",
+      "source": "PBS NewsHour",
+      "date": "2025-11-26",
+      "date_discovered": "2026-01-07",
+      "summary": "A federal judge called out immigration agents using artificial intelligence to write use-of-force reports, raising concerns about accuracy and public confidence in law enforcement.",
+      "snippet": "Ian Adams, an assistant criminology professor at the University of South Carolina who serves on a task force on artificial intelligence at the Council on Criminal Justice, characterized the situation as \"the worst of all worlds.\"",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": ["AI/Technology", "Use of Force", "Policy/Reform"],
+      "featured": 1
+    },
+    {
+      "id": "test001",
+      "url": "https://example.com/test-article-1",
+      "title": "Sample Article: Expert Weighs In on Police Body Camera Technology",
+      "source": "Test Source",
+      "date": "2026-01-05",
+      "date_discovered": "2026-01-06",
+      "summary": "Dr. Ian Adams, a criminologist at the University of South Carolina, discussed the impact of body-worn cameras on police accountability...",
+      "snippet": "\"Body cameras have transformed how we study police interactions,\" said Dr. Ian Adams, assistant professor of criminology at USC.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.85,
+      "relevance_confidence": "high",
+      "topics": ["Body Cameras", "Policy/Reform"]
+    },
+    {
+      "id": "test002",
+      "url": "https://example.com/test-article-2",
+      "title": "New Research Examines AI in Police Report Writing",
+      "source": "Academic News",
+      "date": "2026-01-04",
+      "date_discovered": "2026-01-06",
+      "summary": "A study by researchers including Ian Adams explores how artificial intelligence is changing how police officers document incidents.",
+      "snippet": "The study, co-authored by Ian Adams of the University of South Carolina, found significant variations in how AI tools are being deployed...",
+      "mention_type": "cited",
+      "story_type": "research",
+      "relevance_score": 0.72,
+      "relevance_confidence": "high",
+      "topics": ["AI/Technology", "Report Writing"]
+    },
+    {
+      "id": "test003",
+      "url": "https://example.com/test-article-3",
+      "title": "Understanding Use of Force: Expert Analysis",
+      "source": "Local News",
+      "date": "2026-01-03",
+      "date_discovered": "2026-01-06",
+      "summary": "Policing experts weigh in on recent use of force incidents and what data reveals about officer decision-making.",
+      "snippet": "Adams, a policing researcher, noted that the data shows complex patterns in how officers respond to various situations.",
+      "mention_type": "referenced",
+      "story_type": "news",
+      "relevance_score": 0.55,
+      "relevance_confidence": "medium",
+      "topics": ["Use of Force"]
+    }
+  ]
   "updated": "2026-01-06T22:08:45Z",
   "count": 0,
   "stories": []
