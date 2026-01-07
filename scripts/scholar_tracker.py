@@ -17,7 +17,7 @@ from pathlib import Path
 
 import anthropic
 import yaml
-from scholarly import scholarly
+from scholarly import scholarly, ProxyGenerator
 from slugify import slugify
 
 # Configuration Constants
@@ -117,41 +117,104 @@ def initialize_run_history() -> dict:
     return {"runs": []}
 
 
-def fetch_author_publications() -> list:
-    """Fetch all publications for the author from Google Scholar"""
+def setup_proxy(max_retries: int = 3) -> bool:
+    """
+    Set up proxy for Google Scholar requests.
+
+    Prefers ScraperAPI if SCRAPER_API_KEY is set (more reliable).
+    Falls back to free proxies otherwise.
+
+    Returns True if proxy was set up successfully.
+    """
+    pg = ProxyGenerator()
+
+    # Try ScraperAPI first (more reliable, used by scholarly maintainers)
+    scraper_api_key = os.getenv('SCRAPER_API_KEY')
+    if scraper_api_key:
+        log_info("Setting up ScraperAPI proxy...")
+        try:
+            success = pg.ScraperAPI(scraper_api_key)
+            if success:
+                scholarly.use_proxy(pg)
+                log_info("ScraperAPI proxy configured successfully")
+                return True
+            else:
+                log_warning("ScraperAPI setup returned False, falling back to free proxies")
+        except Exception as e:
+            log_warning(f"ScraperAPI setup failed: {e}, falling back to free proxies")
+
+    # Fall back to free proxies
+    log_info("Setting up free proxy (this may take a moment)...")
+    for attempt in range(max_retries):
+        try:
+            success = pg.FreeProxies()
+            if success:
+                scholarly.use_proxy(pg)
+                log_info("Free proxy configured successfully")
+                return True
+            else:
+                log_warning(f"Free proxy attempt {attempt + 1} returned False")
+        except Exception as e:
+            log_warning(f"Free proxy attempt {attempt + 1} failed: {e}")
+
+        if attempt < max_retries - 1:
+            wait_time = 2 ** attempt
+            log_info(f"Retrying proxy setup in {wait_time}s...")
+            time.sleep(wait_time)
+
+    log_warning("All proxy setup attempts failed, proceeding without proxy (may be blocked)")
+    return False
+
+
+def fetch_author_publications(max_retries: int = 3) -> list:
+    """Fetch all publications for the author from Google Scholar with retry logic"""
     log_info(f"Fetching publications for author ID: {AUTHOR_SCHOLAR_ID}")
 
-    try:
-        # Get author by ID
-        author = scholarly.search_author_id(AUTHOR_SCHOLAR_ID)
-        author = scholarly.fill(author)
+    last_error = None
+    for attempt in range(max_retries):
+        try:
+            # Get author by ID
+            author = scholarly.search_author_id(AUTHOR_SCHOLAR_ID)
+            author = scholarly.fill(author)
 
-        log_info(f"Found author: {author.get('name', 'Unknown')}")
-        log_info(f"Total publications listed: {len(author.get('publications', []))}")
+            log_info(f"Found author: {author.get('name', 'Unknown')}")
+            log_info(f"Total publications listed: {len(author.get('publications', []))}")
 
-        publications = []
-        for i, pub in enumerate(author.get('publications', [])):
-            try:
-                log_info(f"Fetching publication {i+1}/{len(author['publications'])}: {pub.get('bib', {}).get('title', 'Unknown')[:50]}...")
+            publications = []
+            for i, pub in enumerate(author.get('publications', [])):
+                try:
+                    log_info(f"Fetching publication {i+1}/{len(author['publications'])}: {pub.get('bib', {}).get('title', 'Unknown')[:50]}...")
 
-                # Fill in complete publication details
-                filled_pub = scholarly.fill(pub)
-                publications.append(filled_pub)
+                    # Fill in complete publication details
+                    filled_pub = scholarly.fill(pub)
+                    publications.append(filled_pub)
 
-                # Rate limiting - be respectful to Google Scholar
-                time.sleep(SCHOLAR_DELAY_SECONDS)
+                    # Rate limiting - be respectful to Google Scholar
+                    time.sleep(SCHOLAR_DELAY_SECONDS)
 
-            except Exception as e:
-                log_error(f"Failed to fetch publication details: {e}")
-                # Still add the partial publication data
-                publications.append(pub)
-                continue
+                except Exception as e:
+                    log_error(f"Failed to fetch publication details: {e}")
+                    # Still add the partial publication data
+                    publications.append(pub)
+                    continue
 
-        return publications
+            return publications
 
-    except Exception as e:
-        log_error(f"Failed to fetch author: {e}")
-        raise
+        except Exception as e:
+            last_error = e
+            log_error(f"Attempt {attempt + 1}/{max_retries} failed to fetch author: {e}")
+
+            if attempt < max_retries - 1:
+                wait_time = 5 * (attempt + 1)  # 5s, 10s, 15s
+                log_info(f"Retrying in {wait_time}s...")
+                time.sleep(wait_time)
+
+                # Try to get a new proxy for the retry
+                log_info("Attempting to refresh proxy...")
+                setup_proxy(max_retries=1)
+
+    log_error(f"Failed to fetch author after {max_retries} attempts")
+    raise last_error
 
 
 def extract_scholar_id(article: dict) -> str:
@@ -560,6 +623,11 @@ def main():
     old_article_count = len(publications.get('articles', {}))
 
     try:
+        # Set up proxy to avoid Google Scholar blocking
+        proxy_success = setup_proxy()
+        if not proxy_success:
+            log_warning("Running without proxy - requests may be blocked by Google Scholar")
+
         # Fetch from Google Scholar
         scholar_results = fetch_author_publications()
         log_info(f"Fetched {len(scholar_results)} publications from Google Scholar")
