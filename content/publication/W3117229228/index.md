@@ -1,0 +1,68 @@
+---
+title: '<scp>High‐Stakes</scp> Administrative Discretion: What Drives <scp>Body‐Worn</scp>
+  Camera Activations?'
+authors:
+- Ian T. Adams
+- Scott M. Mourtgos
+- Sharon H. Mastracci
+date: '2020-01-01'
+publishDate: '2020-01-01'
+publication_types:
+- '2'
+publication: Public Administration Review
+publication_short: ''
+abstract: 'Abstract Administrative discretion can range from benign to troubling,
+  and law enforcement officers possess the power to use physical violence in the discharge
+  of their duties. Body‐worn cameras (BWCs) are a workplace surveillance technology
+  intended to monitor officer behavior in the field, but officers exercise discretion
+  over whether or not to activate their cameras. So, what drives officers to activate
+  BWCs? Combining unique survey and administrative data, three competing explanations
+  of BWC activation are compared in one department: Officer demographics, job function,
+  and attitudes. Job function covariates offer robust predictive power of BWC activation
+  frequency. Demographics do not predict BWC activations except rank, which negatively
+  correlates with activation. Though the bulk of attitudinal measures do not predict
+  BWC activations, negative relationships are noted with how officers perceive BWCs
+  to impact their professional discretion, and their belief that cameras expose officers
+  to public outrage and disapproval.'
+summary: Police officers decide when to turn on their body-worn cameras, and this
+  study found that what officers do on the job (like patrol versus desk work) is the
+  strongest predictor of how often they activate their cameras, while officer demographics
+  and most attitudes don't matter much. However, officers who believe cameras limit
+  their decision-making freedom or expose them to public criticism are less likely
+  to turn them on. This matters because body cameras are meant to increase police
+  accountability, but their effectiveness depends on officers actually using them
+  during important encounters with the public.
+featured: false
+url_pdf: ''
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: https://doi.org/10.1111/puar.13339
+url_video: ''
+projects: []
+tags: []
+categories: []
+links:
+- name: OpenAlex
+  url: https://openalex.org/W3117229228
+- name: DOI
+  url: https://doi.org/10.1111/puar.13339
+---
+
+## Summary
+
+Police officers decide when to turn on their body-worn cameras, and this study found that what officers do on the job (like patrol versus desk work) is the strongest predictor of how often they activate their cameras, while officer demographics and most attitudes don't matter much. However, officers who believe cameras limit their decision-making freedom or expose them to public criticism are less likely to turn them on. This matters because body cameras are meant to increase police accountability, but their effectiveness depends on officers actually using them during important encounters with the public.
+
+*(AI-generated summary, v1, January 2026)*
+
+## Citation Information
+
+**Citations:** 30 (as of January 2026)
+
+[View Publication](https://doi.org/10.1111/puar.13339)
+
+## Abstract
+
+Abstract Administrative discretion can range from benign to troubling, and law enforcement officers possess the power to use physical violence in the discharge of their duties. Body‐worn cameras (BWCs) are a workplace surveillance technology intended to monitor officer behavior in the field, but officers exercise discretion over whether or not to activate their cameras. So, what drives officers to activate BWCs? Combining unique survey and administrative data, three competing explanations of BWC activation are compared in one department: Officer demographics, job function, and attitudes. Job function covariates offer robust predictive power of BWC activation frequency. Demographics do not predict BWC activations except rank, which negatively correlates with activation. Though the bulk of attitudinal measures do not predict BWC activations, negative relationships are noted with how officers perceive BWCs to impact their professional discretion, and their belief that cameras expose officers to public outrage and disapproval.

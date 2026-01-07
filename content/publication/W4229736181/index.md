@@ -1,0 +1,67 @@
+---
+title: 'Emotional labour in non-governmental organisations: narrative analysis and
+  theory expansion'
+authors:
+- Sharon H. Mastracci
+- Ian T. Adams
+date: '2019-01-01'
+publishDate: '2019-01-01'
+publication_types:
+- '2'
+publication: International Journal of Work Organisation and Emotion
+publication_short: ''
+abstract: 'The purpose of this paper is to explore emotional labour in the context
+  of non-governmental organisations (NGOs) using word data from interviews of five
+  NGO directors on their recruitment criteria when hiring staff. We analyse interview
+  transcripts using semiotic clustering. First-order concepts are organised into second-order
+  themes which are summarised as aggregate dimensions to develop a proposition and
+  expand emotional labour theory. We find evidence of emotional labour in NGOs: modelling
+  behaviour for clients, serving as mentors to new staff members, maintaining boundaries
+  between self and clients, suppressing panic in crisis, cognitive reframing, and
+  compartmentalisation. We provide evidence of emotional labour in NGOs, which contributes
+  to emotional labour theory by focusing solely on this important sector of public
+  service. Little research has been done on emotional labour in such organisations,
+  and consistent with prior findings, we find aspects of emotional labour in NGOs
+  can be rewarding and fulfilling as well.'
+summary: This study examined how workers at non-governmental organizations must manage
+  their emotions as part of their job - such as staying calm during crises, maintaining
+  professional boundaries with clients, and mentoring new staff while suppressing
+  their own stress. The research found that this "emotional labor" can be both demanding
+  and rewarding for NGO employees who serve vulnerable populations. Understanding
+  emotional labor in NGOs provides important context for policing research, since
+  officers often work alongside these organizations and face similar challenges of
+  managing emotions while serving people in crisis situations.
+featured: false
+url_pdf: ''
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: https://doi.org/10.1504/ijwoe.2019.101749
+url_video: ''
+projects: []
+tags: []
+categories: []
+links:
+- name: OpenAlex
+  url: https://openalex.org/W4229736181
+- name: DOI
+  url: https://doi.org/10.1504/ijwoe.2019.101749
+---
+
+## Summary
+
+This study examined how workers at non-governmental organizations must manage their emotions as part of their job - such as staying calm during crises, maintaining professional boundaries with clients, and mentoring new staff while suppressing their own stress. The research found that this "emotional labor" can be both demanding and rewarding for NGO employees who serve vulnerable populations. Understanding emotional labor in NGOs provides important context for policing research, since officers often work alongside these organizations and face similar challenges of managing emotions while serving people in crisis situations.
+
+*(AI-generated summary, v1, January 2026)*
+
+## Citation Information
+
+**Citations:** 0 (as of January 2026)
+
+[View Publication](https://doi.org/10.1504/ijwoe.2019.101749)
+
+## Abstract
+
+The purpose of this paper is to explore emotional labour in the context of non-governmental organisations (NGOs) using word data from interviews of five NGO directors on their recruitment criteria when hiring staff. We analyse interview transcripts using semiotic clustering. First-order concepts are organised into second-order themes which are summarised as aggregate dimensions to develop a proposition and expand emotional labour theory. We find evidence of emotional labour in NGOs: modelling behaviour for clients, serving as mentors to new staff members, maintaining boundaries between self and clients, suppressing panic in crisis, cognitive reframing, and compartmentalisation. We provide evidence of emotional labour in NGOs, which contributes to emotional labour theory by focusing solely on this important sector of public service. Little research has been done on emotional labour in such organisations, and consistent with prior findings, we find aspects of emotional labour in NGOs can be rewarding and fulfilling as well.

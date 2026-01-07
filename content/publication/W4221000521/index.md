@@ -1,0 +1,68 @@
+---
+title: 'Appraising the administrative burden of USDA organic certification: A descriptive
+  analysis of Notice of Noncompliance data'
+authors:
+- David Carter
+- Ian T. Adams
+- Seth Wright
+- Tyler A. Scott
+date: '2022-01-01'
+publishDate: '2022-01-01'
+publication_types:
+- '2'
+publication: Journal of Agriculture Food Systems and Community Development
+publication_short: ''
+abstract: Many of the challenges organic producers and pro­cessors experience are
+  caused by how organic standards compliance is monitored and enforced—in particular,
+  the administrative procedures that are mandated to verify that operation practices
+  meet organic certification requirements. In this policy analysis, we examine noncompliance
+  documenta­tion and verification by accredited certifiers under the U.S. Department
+  of Agriculture (USDA). Lev­eraging a novel and unique compilation of “Notice of
+  Noncompliance” letters issued to organic pro­ducers and processors, we find a preponderance
+  of administrative violations, relative to substantive ones. We discuss how the finding
+  may help explain contemporary transformations in the organic mar­ket, as larger
+  agri-food entities’ capacity to absorb the administrative costs that frustrate smaller
+  oper­ations may contribute to organic market “conven­tionalization” and consolidation.
+summary: This research examined violations in USDA organic food certification and
+  found that most penalties were issued for paperwork and administrative errors rather
+  than actual farming practices that violated organic standards. The findings reveal
+  how complex bureaucratic requirements can create enforcement burdens that favor
+  larger operations over smaller ones, since bigger companies can better afford the
+  administrative costs of compliance. This demonstrates how regulatory enforcement
+  systems can unintentionally reshape entire markets by making it harder for smaller
+  players to navigate compliance requirements, even when they're following the substantive
+  rules.
+featured: false
+url_pdf: ''
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: https://doi.org/10.5304/jafscd.2022.112.020
+url_video: ''
+projects: []
+tags: []
+categories: []
+links:
+- name: OpenAlex
+  url: https://openalex.org/W4221000521
+- name: DOI
+  url: https://doi.org/10.5304/jafscd.2022.112.020
+---
+
+## Summary
+
+This research examined violations in USDA organic food certification and found that most penalties were issued for paperwork and administrative errors rather than actual farming practices that violated organic standards. The findings reveal how complex bureaucratic requirements can create enforcement burdens that favor larger operations over smaller ones, since bigger companies can better afford the administrative costs of compliance. This demonstrates how regulatory enforcement systems can unintentionally reshape entire markets by making it harder for smaller players to navigate compliance requirements, even when they're following the substantive rules.
+
+*(AI-generated summary, v1, January 2026)*
+
+## Citation Information
+
+**Citations:** 1 (as of January 2026)
+
+[View Publication](https://doi.org/10.5304/jafscd.2022.112.020)
+
+## Abstract
+
+Many of the challenges organic producers and pro­cessors experience are caused by how organic standards compliance is monitored and enforced—in particular, the administrative procedures that are mandated to verify that operation practices meet organic certification requirements. In this policy analysis, we examine noncompliance documenta­tion and verification by accredited certifiers under the U.S. Department of Agriculture (USDA). Lev­eraging a novel and unique compilation of “Notice of Noncompliance” letters issued to organic pro­ducers and processors, we find a preponderance of administrative violations, relative to substantive ones. We discuss how the finding may help explain contemporary transformations in the organic mar­ket, as larger agri-food entities’ capacity to absorb the administrative costs that frustrate smaller oper­ations may contribute to organic market “conven­tionalization” and consolidation.

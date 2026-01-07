@@ -1,0 +1,50 @@
+---
+title: 'If the face fits: predicting future promotions from police cadets’ facial
+  traits'
+authors:
+- Ian T. Adams
+- Scott M. Mourtgos
+- Christopher A. Simon
+- Nicholas P. Lovrich
+date: '2023-01-01'
+publishDate: '2023-01-01'
+publication_types:
+- '2'
+publication: Journal of Experimental Criminology
+publication_short: ''
+abstract: No abstract available
+summary: ''
+featured: false
+url_pdf: ''
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: https://doi.org/10.1007/s11292-023-09554-0
+url_video: ''
+projects: []
+tags: []
+categories: []
+links:
+- name: OpenAlex
+  url: https://openalex.org/W4319232954
+- name: DOI
+  url: https://doi.org/10.1007/s11292-023-09554-0
+---
+
+## Summary
+
+No summary available.
+
+*(AI-generated summary, v0, Unknown date)*
+
+## Citation Information
+
+**Citations:** 5 (as of January 2026)
+
+[View Publication](https://doi.org/10.1007/s11292-023-09554-0)
+
+## Abstract
+
+No abstract available

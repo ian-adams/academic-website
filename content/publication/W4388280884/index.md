@@ -1,0 +1,49 @@
+---
+title: 'The protective effects of prior military service on burnout in criminal justice
+  professions: A multiagency comparison.'
+authors:
+- Matthew W. Logan
+- Ian T. Adams
+- Sharon H. Mastracci
+date: '2023-01-01'
+publishDate: '2023-01-01'
+publication_types:
+- '2'
+publication: Psychology Public Policy and Law
+publication_short: ''
+abstract: No abstract available
+summary: ''
+featured: false
+url_pdf: ''
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: https://doi.org/10.1037/law0000406
+url_video: ''
+projects: []
+tags: []
+categories: []
+links:
+- name: OpenAlex
+  url: https://openalex.org/W4388280884
+- name: DOI
+  url: https://doi.org/10.1037/law0000406
+---
+
+## Summary
+
+No summary available.
+
+*(AI-generated summary, v0, Unknown date)*
+
+## Citation Information
+
+**Citations:** 4 (as of January 2026)
+
+[View Publication](https://doi.org/10.1037/law0000406)
+
+## Abstract
+
+No abstract available

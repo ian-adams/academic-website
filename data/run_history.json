@@ -1,3 +1,17 @@
 {
-  "runs": []
+  "runs": [
+    {
+      "timestamp": "2026-01-07T21:28:55Z",
+      "status": "success",
+      "data_source": "openalex",
+      "new_articles": 109,
+      "updated_citations": 0,
+      "synopsis_generated": 58,
+      "synopsis_regenerated": 0,
+      "errors": 0,
+      "error_details": [],
+      "dry_run": false,
+      "duration_seconds": 543
+    }
+  ]
 }

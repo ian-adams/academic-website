@@ -1,0 +1,70 @@
+---
+title: 'Fuck: Public Opinion'
+authors:
+- Ian T. Adams
+- Marc Olson
+- Lois James
+- Brandon Tregle
+- Hunter M. Boehme
+date: '2025-01-01'
+publishDate: '2025-01-01'
+publication_types:
+- '2'
+publication: Police Quarterly
+publication_short: ''
+abstract: 'Profanity is common in everyday life, yet law enforcement often treats
+  all swear words alike. Building on Adams (2024), we surveyed a large public sample
+  ( n = 2412) who evaluated profanity’s appropriateness, professionalism, impact on
+  trust, and disciplinary deservedness across nine scenarios ( n = 9874) varying in
+  intent (positive, neutral, derogatory) and target (self/situation, colleague, public).
+  Results aligned with prior research: any profanity aimed at the public, especially
+  in a derogatory way, drew the strongest condemnation. Meanwhile, positive or neutral
+  profanity toward oneself or colleagues was generally acceptable, though derogatory
+  profanity at colleagues elicited moderate concern. Across the two studies, it appears
+  police executives are generally more condemnatory of police profanity compared to
+  public expectations. These findings underscore the need for nuanced language policies,
+  rather than blanket bans, to address truly harmful speech without penalizing harmless
+  expressions.'
+summary: Researchers surveyed over 2,400 people to understand how the public views
+  police officers using profanity in different situations, finding that context matters
+  significantly—while swearing at the public, especially in a mean-spirited way, was
+  widely condemned, casual swearing among officers or about situations was generally
+  seen as acceptable. The study revealed that police leaders tend to be much harsher
+  about officer profanity than the public expects them to be. These findings suggest
+  that police departments might benefit from more flexible language policies that
+  focus on truly harmful speech rather than blanket rules that treat all swearing
+  the same way.
+featured: false
+url_pdf: ''
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: https://doi.org/10.1177/10986111251357508
+url_video: ''
+projects: []
+tags: []
+categories: []
+links:
+- name: OpenAlex
+  url: https://openalex.org/W4411984681
+- name: DOI
+  url: https://doi.org/10.1177/10986111251357508
+---
+
+## Summary
+
+Researchers surveyed over 2,400 people to understand how the public views police officers using profanity in different situations, finding that context matters significantly—while swearing at the public, especially in a mean-spirited way, was widely condemned, casual swearing among officers or about situations was generally seen as acceptable. The study revealed that police leaders tend to be much harsher about officer profanity than the public expects them to be. These findings suggest that police departments might benefit from more flexible language policies that focus on truly harmful speech rather than blanket rules that treat all swearing the same way.
+
+*(AI-generated summary, v1, January 2026)*
+
+## Citation Information
+
+**Citations:** 0 (as of January 2026)
+
+[View Publication](https://doi.org/10.1177/10986111251357508)
+
+## Abstract
+
+Profanity is common in everyday life, yet law enforcement often treats all swear words alike. Building on Adams (2024), we surveyed a large public sample ( n = 2412) who evaluated profanity’s appropriateness, professionalism, impact on trust, and disciplinary deservedness across nine scenarios ( n = 9874) varying in intent (positive, neutral, derogatory) and target (self/situation, colleague, public). Results aligned with prior research: any profanity aimed at the public, especially in a derogatory way, drew the strongest condemnation. Meanwhile, positive or neutral profanity toward oneself or colleagues was generally acceptable, though derogatory profanity at colleagues elicited moderate concern. Across the two studies, it appears police executives are generally more condemnatory of police profanity compared to public expectations. These findings underscore the need for nuanced language policies, rather than blanket bans, to address truly harmful speech without penalizing harmless expressions.
