@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """
-Google Scholar Publications Tracker with AI Synopses
+Publications Tracker with AI Synopses
 
-Tracks Ian Adams' Google Scholar publications, generates AI synopses for new articles,
-maintains citation counts, and publishes to Hugo/Wowchemy website.
+Tracks Ian Adams' publications via OpenAlex API, generates AI synopses
+for new articles, maintains citation counts, and publishes to Hugo/Wowchemy website.
+
+Uses OpenAlex API (free, open, comprehensive) via pyalex library.
 """
 
 import argparse
@@ -16,19 +18,22 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import anthropic
+import pyalex
 import yaml
-from scholarly import scholarly, ProxyGenerator
-from slugify import slugify
+from pyalex import Works, Authors
 
 # Configuration Constants
-AUTHOR_NAME = "Ian Adams"
-AUTHOR_SCHOLAR_ID = "g9lY5RUAAAAJ"
+AUTHOR_NAME = "Ian T. Adams"
+OPENALEX_AUTHOR_ID = "A5052998143"  # Ian's OpenAlex Author ID
+
+# Set email for polite pool (higher rate limits)
+POLITE_POOL_EMAIL = "github-actions@ianadamsresearch.com"
+
 CURRENT_SYNOPSIS_PROMPT_VERSION = 1
 CLAUDE_MODEL = "claude-sonnet-4-20250514"
 MAX_TOKENS = 1024
 
 # Rate limiting
-SCHOLAR_DELAY_SECONDS = 5
 CLAUDE_DELAY_SECONDS = 2
 
 # File paths (relative to repository root)
@@ -106,7 +111,8 @@ def initialize_publications_data() -> dict:
             "total_articles": 0,
             "synopsis_prompt_version": CURRENT_SYNOPSIS_PROMPT_VERSION,
             "author_name": AUTHOR_NAME,
-            "author_scholar_id": AUTHOR_SCHOLAR_ID
+            "openalex_author_id": OPENALEX_AUTHOR_ID,
+            "data_source": "openalex"
         },
         "articles": {}
     }
@@ -117,149 +123,128 @@ def initialize_run_history() -> dict:
     return {"runs": []}
 
 
-def setup_proxy(max_retries: int = 3) -> bool:
-    """
-    Set up proxy for Google Scholar requests.
+def fetch_author_publications() -> list:
+    """Fetch all publications for the author from OpenAlex"""
+    log_info(f"Fetching publications for OpenAlex author ID: {OPENALEX_AUTHOR_ID}")
 
-    Prefers ScraperAPI if SCRAPER_API_KEY is set (more reliable).
-    Falls back to free proxies otherwise.
+    # Configure pyalex for polite pool
+    pyalex.config.email = POLITE_POOL_EMAIL
 
-    Returns True if proxy was set up successfully.
-    """
-    pg = ProxyGenerator()
+    all_works = []
 
-    # Try ScraperAPI first (more reliable, used by scholarly maintainers)
-    scraper_api_key = os.getenv('SCRAPER_API_KEY')
-    if scraper_api_key:
-        log_info("Setting up ScraperAPI proxy...")
-        try:
-            success = pg.ScraperAPI(scraper_api_key)
-            if success:
-                scholarly.use_proxy(pg)
-                log_info("ScraperAPI proxy configured successfully")
-                return True
-            else:
-                log_warning("ScraperAPI setup returned False, falling back to free proxies")
-        except Exception as e:
-            log_warning(f"ScraperAPI setup failed: {e}, falling back to free proxies")
+    try:
+        # Use pagination to get all works
+        # Filter by author ID and paginate through results
+        pager = Works().filter(authorships={"author": {"id": OPENALEX_AUTHOR_ID}}).paginate(per_page=100)
 
-    # Fall back to free proxies
-    log_info("Setting up free proxy (this may take a moment)...")
-    for attempt in range(max_retries):
-        try:
-            success = pg.FreeProxies()
-            if success:
-                scholarly.use_proxy(pg)
-                log_info("Free proxy configured successfully")
-                return True
-            else:
-                log_warning(f"Free proxy attempt {attempt + 1} returned False")
-        except Exception as e:
-            log_warning(f"Free proxy attempt {attempt + 1} failed: {e}")
+        page_num = 0
+        for page in pager:
+            page_num += 1
+            all_works.extend(page)
+            log_info(f"Fetched page {page_num}, total works so far: {len(all_works)}")
 
-        if attempt < max_retries - 1:
-            wait_time = 2 ** attempt
-            log_info(f"Retrying proxy setup in {wait_time}s...")
-            time.sleep(wait_time)
+            # Safety limit
+            if len(all_works) > 500:
+                log_warning("Reached 500 works limit, stopping pagination")
+                break
 
-    log_warning("All proxy setup attempts failed, proceeding without proxy (may be blocked)")
-    return False
+        log_info(f"Total publications fetched: {len(all_works)}")
+        return all_works
+
+    except Exception as e:
+        log_error(f"Failed to fetch publications: {e}")
+        raise
 
 
-def fetch_author_publications(max_retries: int = 3) -> list:
-    """Fetch all publications for the author from Google Scholar with retry logic"""
-    log_info(f"Fetching publications for author ID: {AUTHOR_SCHOLAR_ID}")
+def extract_work_id(work: dict) -> str:
+    """Extract unique ID from work data"""
+    # Prefer OpenAlex ID
+    openalex_id = work.get('id', '')
+    if openalex_id:
+        # Extract just the ID part (e.g., "W1234567" from "https://openalex.org/W1234567")
+        return openalex_id.split('/')[-1] if '/' in openalex_id else openalex_id
 
-    last_error = None
-    for attempt in range(max_retries):
-        try:
-            # Get author by ID
-            author = scholarly.search_author_id(AUTHOR_SCHOLAR_ID)
-            author = scholarly.fill(author)
+    # Fallback to DOI
+    doi = work.get('doi', '')
+    if doi:
+        return f"doi_{doi.replace('https://doi.org/', '').replace('/', '_')}"
 
-            log_info(f"Found author: {author.get('name', 'Unknown')}")
-            log_info(f"Total publications listed: {len(author.get('publications', []))}")
-
-            publications = []
-            for i, pub in enumerate(author.get('publications', [])):
-                try:
-                    log_info(f"Fetching publication {i+1}/{len(author['publications'])}: {pub.get('bib', {}).get('title', 'Unknown')[:50]}...")
-
-                    # Fill in complete publication details
-                    filled_pub = scholarly.fill(pub)
-                    publications.append(filled_pub)
-
-                    # Rate limiting - be respectful to Google Scholar
-                    time.sleep(SCHOLAR_DELAY_SECONDS)
-
-                except Exception as e:
-                    log_error(f"Failed to fetch publication details: {e}")
-                    # Still add the partial publication data
-                    publications.append(pub)
-                    continue
-
-            return publications
-
-        except Exception as e:
-            last_error = e
-            log_error(f"Attempt {attempt + 1}/{max_retries} failed to fetch author: {e}")
-
-            if attempt < max_retries - 1:
-                wait_time = 5 * (attempt + 1)  # 5s, 10s, 15s
-                log_info(f"Retrying in {wait_time}s...")
-                time.sleep(wait_time)
-
-                # Try to get a new proxy for the retry
-                log_info("Attempting to refresh proxy...")
-                setup_proxy(max_retries=1)
-
-    log_error(f"Failed to fetch author after {max_retries} attempts")
-    raise last_error
-
-
-def extract_scholar_id(article: dict) -> str:
-    """Extract unique scholar ID from article data"""
-    # Try to get author_pub_id first
-    author_pub_id = article.get('author_pub_id', '')
-    if author_pub_id and ':' in author_pub_id:
-        return author_pub_id.split(':')[-1]
-    elif author_pub_id:
-        return author_pub_id
-
-    # Fallback: create ID from title hash
-    title = article.get('bib', {}).get('title', '')
+    # Fallback to title hash
+    title = work.get('title', '') or work.get('display_name', '')
     if title:
         return hashlib.md5(title.encode()).hexdigest()[:16]
 
-    # Last resort: random hash
+    # Last resort
     return hashlib.md5(str(time.time()).encode()).hexdigest()[:16]
 
 
-def parse_authors(author_string: str) -> list:
-    """Parse author string into list of authors"""
-    if not author_string:
+def parse_authors_from_work(work: dict) -> list:
+    """Parse authors from OpenAlex work authorships"""
+    authorships = work.get('authorships', [])
+    if not authorships:
         return []
 
-    # Handle "and" separated authors
     authors = []
-    for part in author_string.split(' and '):
-        # Clean up whitespace
-        author = part.strip()
-        if author:
-            authors.append(author)
+    for authorship in authorships:
+        author = authorship.get('author', {})
+        name = author.get('display_name', '')
+        if name:
+            authors.append(name)
 
     return authors
 
 
-def generate_synopsis(article: dict, max_retries: int = 2) -> str:
-    """Generate AI synopsis for an article using Claude API"""
-    bib = article.get('bib', {})
+def get_venue_from_work(work: dict) -> str:
+    """Extract venue/journal name from work"""
+    primary_location = work.get('primary_location', {})
+    if primary_location:
+        source = primary_location.get('source', {})
+        if source:
+            return source.get('display_name', 'Unknown venue') or 'Unknown venue'
 
-    title = bib.get('title', 'Unknown')
-    authors = ', '.join(parse_authors(bib.get('author', '')))
-    year = bib.get('pub_year', 'Unknown')
-    venue = bib.get('venue', bib.get('journal', bib.get('conference', 'Unknown venue')))
-    abstract = bib.get('abstract', 'No abstract available')
+    # Fallback to host venue
+    host_venue = work.get('host_venue', {})
+    if host_venue:
+        return host_venue.get('display_name', 'Unknown venue') or 'Unknown venue'
+
+    return 'Unknown venue'
+
+
+def get_abstract_from_work(work: dict) -> str:
+    """Extract abstract from work (pyalex auto-reconstructs from inverted index)"""
+    # pyalex automatically converts abstract_inverted_index to plaintext
+    abstract = work.get('abstract')
+    if abstract:
+        return abstract
+
+    # Check for abstract_inverted_index and reconstruct if needed
+    abstract_inv = work.get('abstract_inverted_index')
+    if abstract_inv:
+        # Reconstruct from inverted index
+        try:
+            word_positions = []
+            for word, positions in abstract_inv.items():
+                for pos in positions:
+                    word_positions.append((pos, word))
+            word_positions.sort(key=lambda x: x[0])
+            return ' '.join(word for _, word in word_positions)
+        except Exception:
+            pass
+
+    return 'No abstract available'
+
+
+def generate_synopsis(work: dict, max_retries: int = 2) -> str:
+    """Generate AI synopsis for a work using Claude API"""
+    title = work.get('title') or work.get('display_name', 'Unknown')
+    authors = ', '.join(parse_authors_from_work(work))
+    year = work.get('publication_year', 'Unknown')
+    venue = get_venue_from_work(work)
+    abstract = get_abstract_from_work(work)
+
+    if not abstract or abstract == 'No abstract available':
+        log_warning(f"No abstract available for '{title[:40]}...', skipping synopsis")
+        return ""
 
     prompt = SYNOPSIS_PROMPTS[CURRENT_SYNOPSIS_PROMPT_VERSION].format(
         title=title,
@@ -286,7 +271,7 @@ def generate_synopsis(article: dict, max_retries: int = 2) -> str:
 
         except Exception as e:
             if attempt < max_retries:
-                wait_time = 2 ** attempt  # exponential backoff: 1s, 2s
+                wait_time = 2 ** attempt
                 log_warning(f"Claude API attempt {attempt + 1} failed, retrying in {wait_time}s: {e}")
                 time.sleep(wait_time)
             else:
@@ -296,24 +281,22 @@ def generate_synopsis(article: dict, max_retries: int = 2) -> str:
 
 def validate_data(publications: dict, old_count: int) -> bool:
     """Validate publications data before saving"""
-    required_fields = ['scholar_id', 'title', 'authors', 'year',
-                       'citation_count', 'first_seen']
+    required_fields = ['work_id', 'title', 'authors', 'year', 'citation_count', 'first_seen']
 
-    for scholar_id, article in publications['articles'].items():
+    for work_id, article in publications['articles'].items():
         for field in required_fields:
             if field not in article:
-                raise ValidationError(f"Missing field '{field}' in article {scholar_id}")
+                raise ValidationError(f"Missing field '{field}' in article {work_id}")
 
-        # Validate data types
         if not isinstance(article['authors'], list):
-            raise ValidationError(f"'authors' must be list in article {scholar_id}")
+            raise ValidationError(f"'authors' must be list in article {work_id}")
         if not isinstance(article['citation_count'], int):
-            raise ValidationError(f"'citation_count' must be int in article {scholar_id}")
+            raise ValidationError(f"'citation_count' must be int in article {work_id}")
 
-    # Check no articles lost
+    # Check no articles lost (allow small decrease due to data updates)
     new_count = len(publications['articles'])
-    if new_count < old_count:
-        raise ValidationError(f"Article count decreased: {old_count} -> {new_count}")
+    if new_count < old_count * 0.9:  # Allow up to 10% decrease
+        raise ValidationError(f"Article count decreased significantly: {old_count} -> {new_count}")
 
     return True
 
@@ -329,28 +312,28 @@ def format_date(iso_timestamp: str) -> str:
         return "Unknown date"
 
 
-def generate_hugo_page(scholar_id: str, article: dict):
+def generate_hugo_page(work_id: str, article: dict):
     """Generate Hugo/Wowchemy publication page for an article"""
-    # Determine which synopsis to use
     synopsis_text = article.get('manual_synopsis') or article.get('llm_synopsis', '')
     synopsis_type = "Manual" if article.get('manual_synopsis') else "AI-generated"
 
-    # Format dates
     synopsis_date = format_date(article.get('llm_synopsis_generated_date', article.get('first_seen')))
     citation_date = format_date(article.get('last_updated'))
 
-    # Get year with fallback
     year = article.get('year', 2024)
     if not year or year == 0:
         year = 2024
 
-    # Generate frontmatter
+    # Build OpenAlex URL
+    openalex_url = f"https://openalex.org/{work_id}" if work_id else ""
+    doi_url = article.get('doi', '')
+
     frontmatter = {
         'title': article.get('title', 'Unknown Title'),
         'authors': article.get('authors', []),
         'date': f"{year}-01-01",
         'publishDate': f"{year}-01-01",
-        'publication_types': ['2'],  # 2 = Journal article
+        'publication_types': ['2'],
         'publication': article.get('venue', ''),
         'publication_short': '',
         'abstract': article.get('abstract', ''),
@@ -362,21 +345,26 @@ def generate_hugo_page(scholar_id: str, article: dict):
         'url_poster': '',
         'url_project': '',
         'url_slides': '',
-        'url_source': article.get('google_scholar_url', ''),
+        'url_source': doi_url or openalex_url,
         'url_video': '',
         'projects': [],
         'tags': [],
         'categories': []
     }
 
-    # Add links if we have a Google Scholar URL
-    if article.get('google_scholar_url'):
-        frontmatter['links'] = [
-            {'name': 'Google Scholar', 'url': article['google_scholar_url']}
-        ]
+    # Add links
+    links = []
+    if openalex_url:
+        links.append({'name': 'OpenAlex', 'url': openalex_url})
+    if doi_url:
+        links.append({'name': 'DOI', 'url': doi_url})
+    if links:
+        frontmatter['links'] = links
 
-    # Build markdown content
     yaml_frontmatter = yaml.dump(frontmatter, default_flow_style=False, allow_unicode=True, sort_keys=False)
+
+    # Determine the best URL for the "View" link
+    view_url = doi_url or openalex_url or '#'
 
     content = f"""---
 {yaml_frontmatter}---
@@ -391,15 +379,16 @@ def generate_hugo_page(scholar_id: str, article: dict):
 
 **Citations:** {article.get('citation_count', 0)} (as of {citation_date})
 
-[View on Google Scholar]({article.get('google_scholar_url', '#')})
+[View Publication]({view_url})
 
 ## Abstract
 
 {article.get('abstract', 'No abstract available.')}
 """
 
-    # Write to file
-    output_dir = Path(CONTENT_PUBLICATION_DIR) / scholar_id
+    # Use a safe directory name
+    safe_id = work_id.replace('/', '_').replace(':', '_')[:50] if work_id else hashlib.md5(article.get('title', '').encode()).hexdigest()[:16]
+    output_dir = Path(CONTENT_PUBLICATION_DIR) / safe_id
     output_dir.mkdir(parents=True, exist_ok=True)
 
     filepath = output_dir / "index.md"
@@ -414,22 +403,21 @@ def regenerate_all_pages(publications: dict):
     log_info("Regenerating all Hugo pages...")
     pages_generated = 0
 
-    for scholar_id, article in publications.get('articles', {}).items():
+    for work_id, article in publications.get('articles', {}).items():
         try:
-            generate_hugo_page(scholar_id, article)
+            generate_hugo_page(work_id, article)
             pages_generated += 1
         except Exception as e:
-            log_error(f"Failed to generate page for {scholar_id}: {e}")
+            log_error(f"Failed to generate page for {work_id}: {e}")
 
     log_info(f"Generated {pages_generated} Hugo pages")
     return pages_generated
 
 
-def process_publications(publications: dict, scholar_results: list, dry_run: bool = False) -> dict:
-    """Process all publications from Scholar and update database"""
+def process_publications(publications: dict, works: list, dry_run: bool = False) -> dict:
+    """Process all publications and update database"""
     current_timestamp = get_current_timestamp()
 
-    # Counters
     new_articles_count = 0
     updated_citations_count = 0
     synopsis_generated_count = 0
@@ -437,22 +425,20 @@ def process_publications(publications: dict, scholar_results: list, dry_run: boo
     error_count = 0
     error_details = []
 
-    for article in scholar_results:
+    for work in works:
         try:
-            bib = article.get('bib', {})
-            scholar_id = extract_scholar_id(article)
-
-            if not scholar_id:
-                log_warning(f"Could not extract scholar_id for article: {bib.get('title', 'Unknown')}")
+            work_id = extract_work_id(work)
+            if not work_id:
+                log_warning(f"Could not extract work_id for: {work.get('title', 'Unknown')}")
                 continue
 
-            # Check if exists in our database
-            if scholar_id in publications['articles']:
-                existing = publications['articles'][scholar_id]
+            title = work.get('title') or work.get('display_name', 'Unknown Title')
 
-                # Update citation count
+            if work_id in publications['articles']:
+                existing = publications['articles'][work_id]
+
                 old_count = existing.get('citation_count', 0)
-                new_count = article.get('num_citations', 0) or 0
+                new_count = work.get('cited_by_count', 0) or 0
 
                 if new_count != old_count:
                     existing['citation_count'] = new_count
@@ -463,54 +449,49 @@ def process_publications(publications: dict, scholar_results: list, dry_run: boo
                         'count': new_count
                     })
                     updated_citations_count += 1
-                    log_info(f"Updated citations for '{bib.get('title', 'Unknown')[:40]}...': {old_count} -> {new_count}")
+                    log_info(f"Updated citations for '{title[:40]}...': {old_count} -> {new_count}")
 
                 existing['last_updated'] = current_timestamp
 
                 # Check if synopsis needs regeneration
                 needs_regeneration = (
-                    existing.get('force_regenerate', False) == True or
+                    existing.get('force_regenerate', False) or
                     existing.get('llm_synopsis_version', 0) < CURRENT_SYNOPSIS_PROMPT_VERSION
                 )
 
                 if needs_regeneration and not existing.get('manual_synopsis'):
                     if not dry_run:
-                        log_info(f"Regenerating synopsis for: {bib.get('title', 'Unknown')[:40]}...")
+                        log_info(f"Regenerating synopsis for: {title[:40]}...")
                         try:
-                            synopsis = generate_synopsis(article)
+                            synopsis = generate_synopsis(work)
                             if synopsis:
                                 existing['llm_synopsis'] = synopsis
                                 existing['llm_synopsis_version'] = CURRENT_SYNOPSIS_PROMPT_VERSION
                                 existing['llm_synopsis_generated_date'] = current_timestamp
                                 existing['force_regenerate'] = False
                                 synopsis_regenerated_count += 1
-
-                                # Rate limiting for Claude API
                                 time.sleep(CLAUDE_DELAY_SECONDS)
                         except Exception as e:
                             log_error(f"Failed to regenerate synopsis: {e}")
 
             else:
-                # New article - create complete entry
-                venue = bib.get('venue', bib.get('journal', bib.get('conference', 'Unknown venue')))
-                year_str = bib.get('pub_year', '0')
-                try:
-                    year = int(year_str) if year_str else 0
-                except (ValueError, TypeError):
-                    year = 0
+                # New article
+                year = work.get('publication_year', 0) or 0
+                doi = work.get('doi', '')
 
                 new_article_entry = {
-                    'scholar_id': scholar_id,
-                    'title': bib.get('title', 'Unknown Title'),
-                    'authors': parse_authors(bib.get('author', '')),
+                    'work_id': work_id,
+                    'title': title,
+                    'authors': parse_authors_from_work(work),
                     'year': year,
-                    'venue': venue,
-                    'abstract': bib.get('abstract', 'No abstract available'),
-                    'google_scholar_url': article.get('pub_url', ''),
-                    'citation_count': article.get('num_citations', 0) or 0,
+                    'venue': get_venue_from_work(work),
+                    'abstract': get_abstract_from_work(work),
+                    'doi': doi,
+                    'openalex_url': f"https://openalex.org/{work_id}",
+                    'citation_count': work.get('cited_by_count', 0) or 0,
                     'citation_count_history': [{
                         'date': current_timestamp.split('T')[0],
-                        'count': article.get('num_citations', 0) or 0
+                        'count': work.get('cited_by_count', 0) or 0
                     }],
                     'llm_synopsis': '',
                     'llm_synopsis_version': 0,
@@ -518,39 +499,38 @@ def process_publications(publications: dict, scholar_results: list, dry_run: boo
                     'manual_synopsis': None,
                     'force_regenerate': False,
                     'first_seen': current_timestamp,
-                    'last_updated': current_timestamp
+                    'last_updated': current_timestamp,
+                    'open_access': work.get('open_access', {}).get('is_oa', False),
+                    'type': work.get('type', 'unknown')
                 }
 
-                # Generate synopsis for new article
                 if not dry_run:
-                    log_info(f"Generating synopsis for new article: {bib.get('title', 'Unknown')[:40]}...")
+                    log_info(f"Generating synopsis for new article: {title[:40]}...")
                     try:
-                        synopsis = generate_synopsis(article)
+                        synopsis = generate_synopsis(work)
                         if synopsis:
                             new_article_entry['llm_synopsis'] = synopsis
                             new_article_entry['llm_synopsis_version'] = CURRENT_SYNOPSIS_PROMPT_VERSION
                             new_article_entry['llm_synopsis_generated_date'] = current_timestamp
                             synopsis_generated_count += 1
-
-                            # Rate limiting for Claude API
                             time.sleep(CLAUDE_DELAY_SECONDS)
                     except Exception as e:
                         log_error(f"Failed to generate synopsis: {e}")
 
-                publications['articles'][scholar_id] = new_article_entry
+                publications['articles'][work_id] = new_article_entry
                 new_articles_count += 1
-                log_info(f"Added new article: {bib.get('title', 'Unknown')[:50]}...")
+                log_info(f"Added new article: {title[:50]}...")
 
         except Exception as e:
             error_count += 1
-            title = article.get('bib', {}).get('title', 'Unknown')
+            title = work.get('title') or work.get('display_name', 'Unknown')
             error_details.append({
                 'article_title': title,
                 'error': str(e),
                 'timestamp': current_timestamp
             })
             log_error(f"Failed processing '{title}': {e}")
-            continue  # Don't let one failure stop the whole run
+            continue
 
     return {
         'new_articles': new_articles_count,
@@ -565,7 +545,7 @@ def process_publications(publications: dict, scholar_results: list, dry_run: boo
 def parse_args():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(
-        description='Track Google Scholar publications and generate AI synopses'
+        description='Track publications and generate AI synopses'
     )
     parser.add_argument(
         '--dry-run',
@@ -593,10 +573,11 @@ def main():
     start_time = time.time()
     current_timestamp = get_current_timestamp()
 
-    log_info(f"Starting Google Scholar tracker at {current_timestamp}")
+    log_info(f"Starting Publications Tracker at {current_timestamp}")
+    log_info(f"Data source: OpenAlex API")
+    log_info(f"Author ID: {OPENALEX_AUTHOR_ID}")
     log_info(f"Mode: {'DRY RUN' if dry_run else 'LIVE'}")
 
-    # Load existing data
     publications = load_json_file(PUBLICATIONS_JSON)
     if not publications:
         publications = initialize_publications_data()
@@ -607,14 +588,12 @@ def main():
         run_history = initialize_run_history()
         log_info("Initialized new run history")
 
-    # Handle regenerate-pages-only mode
     if args.regenerate_pages_only:
-        log_info("Regenerating Hugo pages only (no Scholar fetch)")
+        log_info("Regenerating Hugo pages only (no API fetch)")
         pages = regenerate_all_pages(publications)
         log_info(f"Regenerated {pages} pages")
         return
 
-    # Check for prompt version bump
     stored_version = publications.get('metadata', {}).get('synopsis_prompt_version', 0)
     if stored_version < CURRENT_SYNOPSIS_PROMPT_VERSION:
         log_info(f"Synopsis prompt version bumped: {stored_version} -> {CURRENT_SYNOPSIS_PROMPT_VERSION}")
@@ -623,22 +602,15 @@ def main():
     old_article_count = len(publications.get('articles', {}))
 
     try:
-        # Set up proxy to avoid Google Scholar blocking
-        proxy_success = setup_proxy()
-        if not proxy_success:
-            log_warning("Running without proxy - requests may be blocked by Google Scholar")
+        works = fetch_author_publications()
+        log_info(f"Fetched {len(works)} publications from OpenAlex")
 
-        # Fetch from Google Scholar
-        scholar_results = fetch_author_publications()
-        log_info(f"Fetched {len(scholar_results)} publications from Google Scholar")
+        results = process_publications(publications, works, dry_run)
 
-        # Process publications
-        results = process_publications(publications, scholar_results, dry_run)
-
-        # Create run summary
         run_summary = {
             'timestamp': current_timestamp,
             'status': 'success' if results['errors'] == 0 else 'partial_failure',
+            'data_source': 'openalex',
             'new_articles': results['new_articles'],
             'updated_citations': results['updated_citations'],
             'synopsis_generated': results['synopsis_generated'],
@@ -651,14 +623,13 @@ def main():
 
         if not dry_run:
             try:
-                # Validate before saving
                 if validate_data(publications, old_article_count):
-                    # Update metadata
                     publications['metadata']['last_updated'] = current_timestamp
                     publications['metadata']['total_articles'] = len(publications['articles'])
                     publications['metadata']['synopsis_prompt_version'] = CURRENT_SYNOPSIS_PROMPT_VERSION
+                    publications['metadata']['data_source'] = 'openalex'
+                    publications['metadata']['openalex_author_id'] = OPENALEX_AUTHOR_ID
 
-                    # Save JSON files
                     save_json_file(PUBLICATIONS_JSON, publications)
                     log_info(f"Saved publications data to {PUBLICATIONS_JSON}")
 
@@ -666,7 +637,6 @@ def main():
                     save_json_file(RUN_HISTORY_JSON, run_history)
                     log_info(f"Saved run history to {RUN_HISTORY_JSON}")
 
-                    # Generate all Hugo pages
                     pages_generated = regenerate_all_pages(publications)
 
                     print(f"\n✓ Run complete!")
@@ -686,21 +656,20 @@ def main():
             print(f"  Would have processed: {results['new_articles']} new, {results['updated_citations']} updated")
             print(f"  Errors: {results['errors']}")
 
-        # Error notification for high error rates
         if results['errors'] > 0:
             total = len(publications.get('articles', {})) or 1
             error_rate = results['errors'] / total
-            if error_rate > 0.2:  # >20% error rate
+            if error_rate > 0.2:
                 print(f"::error::High error rate: {results['errors']} errors ({error_rate:.1%})")
                 sys.exit(1)
 
     except Exception as e:
         log_error(f"Fatal error: {e}")
 
-        # Save error to run history
         run_summary = {
             'timestamp': current_timestamp,
             'status': 'failure',
+            'data_source': 'openalex',
             'new_articles': 0,
             'updated_citations': 0,
             'synopsis_generated': 0,

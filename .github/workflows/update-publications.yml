@@ -39,13 +39,9 @@ jobs:
     - name: Create data directory
       run: mkdir -p data
 
-    - name: Run scholar tracker
+    - name: Run publications tracker
       env:
         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        # Optional: SCRAPER_API_KEY provides more reliable Google Scholar access
-        # Get a key at https://www.scraperapi.com/ (has free tier)
-        # Without it, falls back to free proxies which may be less reliable
-        SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
       run: |
         if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
           python scripts/scholar_tracker.py --dry-run
