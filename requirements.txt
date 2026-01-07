@@ -2,3 +2,4 @@ scholarly
 anthropic
 python-slugify
 pyyaml
+free-proxy
