@@ -430,12 +430,33 @@ def process_publications(publications: dict, works: list, dry_run: bool = False)
     synopsis_regenerated_count = 0
     error_count = 0
     error_details = []
+    skipped_old_count = 0
+
+    # First, clean up any existing pre-2017 entries in the database
+    articles_to_remove = []
+    for work_id, article in publications.get('articles', {}).items():
+        year = article.get('year', 0) or 0
+        if year < MIN_PUBLICATION_YEAR and year > 0:
+            articles_to_remove.append(work_id)
+            log_info(f"Removing pre-{MIN_PUBLICATION_YEAR} publication: {article.get('title', 'Unknown')[:50]}...")
+
+    for work_id in articles_to_remove:
+        del publications['articles'][work_id]
+
+    if articles_to_remove:
+        log_info(f"Removed {len(articles_to_remove)} pre-{MIN_PUBLICATION_YEAR} publications from database")
 
     for work in works:
         try:
             work_id = extract_work_id(work)
             if not work_id:
                 log_warning(f"Could not extract work_id for: {work.get('title', 'Unknown')}")
+                continue
+
+            # Skip pre-2017 publications (different author with same name)
+            year = work.get('publication_year', 0) or 0
+            if year < MIN_PUBLICATION_YEAR and year > 0:
+                skipped_old_count += 1
                 continue
 
             title = work.get('title') or work.get('display_name', 'Unknown Title')
@@ -538,11 +559,16 @@ def process_publications(publications: dict, works: list, dry_run: bool = False)
             log_error(f"Failed processing '{title}': {e}")
             continue
 
+    if skipped_old_count > 0:
+        log_info(f"Skipped {skipped_old_count} pre-{MIN_PUBLICATION_YEAR} publications during processing")
+
     return {
         'new_articles': new_articles_count,
         'updated_citations': updated_citations_count,
         'synopsis_generated': synopsis_generated_count,
         'synopsis_regenerated': synopsis_regenerated_count,
+        'skipped_old': skipped_old_count,
+        'removed_old': len(articles_to_remove),
         'errors': error_count,
         'error_details': error_details
     }
