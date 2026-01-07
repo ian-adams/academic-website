@@ -87,6 +87,8 @@ This automated feed tracks news, legal proceedings, and developments related to 
 
 ---
 
+<link rel="stylesheet" href="/css/news-feed.css">
+
 <div id="force-science-feed" class="news-feed-container">
   <div class="news-loading">
     <p>Loading latest stories...</p>
@@ -411,157 +413,38 @@ This automated feed tracks news, legal proceedings, and developments related to 
 }
 </style>
 
+<script src="/js/news-feed.js"></script>
 <script>
-// Force Science News Feed - Card Grid with Pagination
+// Force Science News Feed Configuration
 (function() {
-  var CARDS_PER_PAGE = 12;
-  var allStories = [];
-  var filteredStories = [];
-  var currentFilter = 'all';
-  var currentPage = 1;
+  function renderFSCard(story, isFeatured) {
+    var storyType = story.story_type || 'general';
+    var sourceInitial = (story.source || 'N')[0].toUpperCase();
+    var confidence = story.relevance_confidence || 'unknown';
 
-  // Fetch news data
-  fetch('/data/force-science-news.json')
-    .then(function(response) {
-      if (!response.ok) throw new Error('Failed to load: ' + response.status);
-      return response.json();
-    })
-    .then(function(data) {
-      allStories = data.stories || [];
-      filteredStories = allStories;
-      renderFeed();
-    })
-    .catch(function(error) {
-      console.error('Error loading news:', error);
-      document.getElementById('force-science-feed').innerHTML =
-        '<div class="no-stories"><p>Unable to load news feed. Please try again later.</p></div>';
-    });
+    var html = '<article class="news-card" role="listitem" tabindex="0" ' +
+      'onclick="window.open(\'' + escapeHtml(story.url) + '\', \'_blank\', \'noopener\')" ' +
+      'onkeydown="if(event.key===\'Enter\')window.open(\'' + escapeHtml(story.url) + '\', \'_blank\', \'noopener\')" ' +
+      'aria-label="' + escapeHtml(story.title) + '">' +
+      '<div class="card-header">' +
+      '<div class="card-source">' +
+      '<span class="source-icon" aria-hidden="true">' + sourceInitial + '</span>' +
+      '<span>' + escapeHtml(story.source || 'Unknown') + '</span>' +
+      '</div>' +
+      '<span class="confidence-badge confidence-' + confidence + '">' + confidence + '</span>' +
+      '</div>' +
+      '<div class="card-body">' +
+      '<h3 class="card-title">' + escapeHtml(story.title) + '</h3>' +
+      '<p class="card-summary">' + escapeHtml(stripHtml(story.summary || '')) + '</p>' +
+      '</div>' +
+      '<div class="card-footer">' +
+      '<span class="card-date">' + formatDate(story.date || story.date_discovered) + '</span>' +
+      '<span class="story-type-badge story-type-' + storyType + '">' + capitalize(storyType) + '</span>' +
+      '</div>' +
+      '</article>';
 
-  function renderFeed() {
-    var container = document.getElementById('force-science-feed');
-
-    if (filteredStories.length === 0) {
-      container.innerHTML = '<div class="no-stories"><p>No stories found' +
-        (currentFilter !== 'all' ? ' for this filter' : '') + '.</p></div>';
-      return;
-    }
-
-    // Calculate pagination
-    var totalPages = Math.ceil(filteredStories.length / CARDS_PER_PAGE);
-    currentPage = Math.min(currentPage, totalPages);
-    var startIdx = (currentPage - 1) * CARDS_PER_PAGE;
-    var endIdx = startIdx + CARDS_PER_PAGE;
-    var pageStories = filteredStories.slice(startIdx, endIdx);
-
-    // Get story type counts
-    var typeCounts = {};
-    allStories.forEach(function(story) {
-      var type = story.story_type || 'general';
-      typeCounts[type] = (typeCounts[type] || 0) + 1;
-    });
-
-    // Build controls HTML
-    var controlsHTML = '<div class="news-controls">' +
-      '<div class="news-stats"><strong>' + filteredStories.length + '</strong> stories found</div>' +
-      '<div class="news-filters">' +
-      '<button class="filter-btn ' + (currentFilter === 'all' ? 'active' : '') +
-      '" onclick="fsFilterStories(\'all\')" aria-pressed="' + (currentFilter === 'all') + '">All (' + allStories.length + ')</button>';
-
-    var types = ['legal', 'daubert', 'academic', 'policy', 'investigative', 'prosecutorial', 'international', 'opinion'];
-    types.forEach(function(type) {
-      if (typeCounts[type]) {
-        controlsHTML += '<button class="filter-btn ' + (currentFilter === type ? 'active' : '') +
-          '" onclick="fsFilterStories(\'' + type + '\')" aria-pressed="' + (currentFilter === type) + '">' +
-          capitalize(type) + ' (' + typeCounts[type] + ')</button>';
-      }
-    });
-    controlsHTML += '</div></div>';
-
-    // Build card grid HTML
-    var gridHTML = '<div class="news-grid" role="list">';
-    pageStories.forEach(function(story) {
-      var storyType = story.story_type || 'general';
-      var sourceInitial = (story.source || 'N')[0].toUpperCase();
-      var confidence = story.relevance_confidence || 'unknown';
-
-      gridHTML += '<article class="news-card" role="listitem" tabindex="0" ' +
-        'onclick="window.open(\'' + escapeHtml(story.url) + '\', \'_blank\', \'noopener\')" ' +
-        'onkeydown="if(event.key===\'Enter\')window.open(\'' + escapeHtml(story.url) + '\', \'_blank\', \'noopener\')" ' +
-        'aria-label="' + escapeHtml(story.title) + '">' +
-        '<div class="card-header">' +
-        '<div class="card-source">' +
-        '<span class="source-icon" aria-hidden="true">' + sourceInitial + '</span>' +
-        '<span>' + escapeHtml(story.source || 'Unknown') + '</span>' +
-        '</div>' +
-        '<span class="confidence-badge confidence-' + confidence + '">' + confidence + '</span>' +
-        '</div>' +
-        '<div class="card-body">' +
-        '<h3 class="card-title">' + escapeHtml(story.title) + '</h3>' +
-        '<p class="card-summary">' + escapeHtml(stripHtml(story.summary || '')) + '</p>' +
-        '</div>' +
-        '<div class="card-footer">' +
-        '<span class="card-date">' + formatDate(story.date || story.date_discovered) + '</span>' +
-        '<span class="story-type-badge story-type-' + storyType + '">' + capitalize(storyType) + '</span>' +
-        '</div>' +
-        '</article>';
-    });
-    gridHTML += '</div>';
-
-    // Build pagination HTML
-    var paginationHTML = '';
-    if (totalPages > 1) {
-      paginationHTML = '<nav class="pagination" aria-label="News pagination">' +
-        '<button class="pagination-btn" onclick="fsGoToPage(' + (currentPage - 1) + ')" ' +
-        (currentPage === 1 ? 'disabled' : '') + ' aria-label="Previous page">&laquo; Prev</button>';
-
-      // Page numbers
-      var startPage = Math.max(1, currentPage - 2);
-      var endPage = Math.min(totalPages, startPage + 4);
-      startPage = Math.max(1, endPage - 4);
-
-      if (startPage > 1) {
-        paginationHTML += '<button class="pagination-btn" onclick="fsGoToPage(1)">1</button>';
-        if (startPage > 2) paginationHTML += '<span class="pagination-info">...</span>';
-      }
-
-      for (var i = startPage; i <= endPage; i++) {
-        paginationHTML += '<button class="pagination-btn ' + (i === currentPage ? 'active' : '') +
-          '" onclick="fsGoToPage(' + i + ')" aria-current="' + (i === currentPage ? 'page' : 'false') + '">' + i + '</button>';
-      }
-
-      if (endPage < totalPages) {
-        if (endPage < totalPages - 1) paginationHTML += '<span class="pagination-info">...</span>';
-        paginationHTML += '<button class="pagination-btn" onclick="fsGoToPage(' + totalPages + ')">' + totalPages + '</button>';
-      }
-
-      paginationHTML += '<button class="pagination-btn" onclick="fsGoToPage(' + (currentPage + 1) + ')" ' +
-        (currentPage === totalPages ? 'disabled' : '') + ' aria-label="Next page">Next &raquo;</button>' +
-        '</nav>';
-    }
-
-    container.innerHTML = controlsHTML + gridHTML + paginationHTML;
+    return html;
   }
-
-  // Global functions for event handlers
-  window.fsFilterStories = function(type) {
-    currentFilter = type;
-    currentPage = 1;
-    if (type === 'all') {
-      filteredStories = allStories;
-    } else {
-      filteredStories = allStories.filter(function(story) { return story.story_type === type; });
-    }
-    renderFeed();
-    document.getElementById('force-science-feed').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
-  window.fsGoToPage = function(page) {
-    var totalPages = Math.ceil(filteredStories.length / CARDS_PER_PAGE);
-    if (page < 1 || page > totalPages) return;
-    currentPage = page;
-    renderFeed();
-    document.getElementById('force-science-feed').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
 
   // Helper functions
   function capitalize(str) {
@@ -599,5 +482,18 @@ This automated feed tracks news, legal proceedings, and developments related to 
       day: 'numeric'
     });
   }
+
+  // Initialize the feed
+  new NewsFeed({
+    containerId: 'force-science-feed',
+    jsonPath: '/data/force-science-news.json',
+    cardsPerPage: 12,
+    filterField: 'story_type',
+    filterTypes: ['legal', 'daubert', 'academic', 'policy', 'investigative', 'prosecutorial', 'international', 'opinion'],
+    dateField: 'date',
+    prefix: 'fs',
+    renderCard: renderFSCard,
+    hasFeatured: false
+  });
 })();
 </script>

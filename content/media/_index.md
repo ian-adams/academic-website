@@ -23,6 +23,8 @@ This page automatically tracks media coverage, interviews, and mentions of my re
 
 ---
 
+<link rel="stylesheet" href="/css/news-feed.css">
+
 <div id="media-feed" class="news-feed-container">
   <div class="news-loading">
     <p>Loading media coverage...</p>
@@ -426,131 +428,11 @@ This page automatically tracks media coverage, interviews, and mentions of my re
 }
 </style>
 
+<script src="/js/news-feed.js"></script>
 <script>
-// Media Mentions Feed - Card Grid with Pagination
+// Media Mentions Feed Configuration
 (function() {
-  var CARDS_PER_PAGE = 12;
-  var allStories = [];
-  var filteredStories = [];
-  var currentFilter = 'all';
-  var currentPage = 1;
-
-  // Fetch news data
-  fetch('/data/media-mentions.json')
-    .then(function(response) {
-      if (!response.ok) throw new Error('Failed to load: ' + response.status);
-      return response.json();
-    })
-    .then(function(data) {
-      allStories = data.stories || [];
-      filteredStories = allStories;
-      renderFeed();
-    })
-    .catch(function(error) {
-      console.error('Error loading media mentions:', error);
-      document.getElementById('media-feed').innerHTML =
-        '<div class="no-stories"><p>Unable to load media coverage. Please try again later.</p></div>';
-    });
-
-  function renderFeed() {
-    var container = document.getElementById('media-feed');
-
-    if (filteredStories.length === 0) {
-      container.innerHTML = '<div class="no-stories"><p>No media coverage found' +
-        (currentFilter !== 'all' ? ' for this filter' : '') + '.</p></div>';
-      return;
-    }
-
-    // Separate featured stories
-    var featuredStories = filteredStories.filter(function(s) { return s.featured === 1; });
-    var regularStories = filteredStories.filter(function(s) { return s.featured !== 1; });
-
-    // Calculate pagination for regular stories
-    var totalPages = Math.ceil(regularStories.length / CARDS_PER_PAGE);
-    currentPage = Math.min(currentPage, Math.max(totalPages, 1));
-    var startIdx = (currentPage - 1) * CARDS_PER_PAGE;
-    var endIdx = startIdx + CARDS_PER_PAGE;
-    var pageStories = regularStories.slice(startIdx, endIdx);
-
-    // Get mention type counts
-    var mentionCounts = {};
-    allStories.forEach(function(story) {
-      var type = story.mention_type || 'referenced';
-      mentionCounts[type] = (mentionCounts[type] || 0) + 1;
-    });
-
-    // Build controls HTML
-    var controlsHTML = '<div class="news-controls">' +
-      '<div class="news-stats"><strong>' + filteredStories.length + '</strong> media mentions</div>' +
-      '<div class="news-filters">' +
-      '<button class="filter-btn ' + (currentFilter === 'all' ? 'active' : '') +
-      '" onclick="mediaFilterStories(\'all\')" aria-pressed="' + (currentFilter === 'all') + '">All (' + allStories.length + ')</button>';
-
-    var mentionTypes = ['quoted', 'cited', 'referenced', 'byline'];
-    mentionTypes.forEach(function(type) {
-      if (mentionCounts[type]) {
-        controlsHTML += '<button class="filter-btn ' + (currentFilter === type ? 'active' : '') +
-          '" onclick="mediaFilterStories(\'' + type + '\')" aria-pressed="' + (currentFilter === type) + '">' +
-          capitalize(type) + ' (' + mentionCounts[type] + ')</button>';
-      }
-    });
-    controlsHTML += '</div></div>';
-
-    // Build featured section HTML (if any featured stories)
-    var featuredHTML = '';
-    if (featuredStories.length > 0 && currentFilter === 'all' && currentPage === 1) {
-      featuredHTML = '<div class="featured-section">' +
-        '<div class="featured-header"><span class="featured-icon">&#9733;</span><h3>Featured Coverage</h3></div>' +
-        '<div class="news-grid" role="list">';
-      featuredStories.forEach(function(story) {
-        featuredHTML += buildCardHTML(story, true);
-      });
-      featuredHTML += '</div></div>';
-    }
-
-    // Build card grid HTML
-    var gridHTML = '<div class="news-grid" role="list">';
-    pageStories.forEach(function(story) {
-      gridHTML += buildCardHTML(story, false);
-    });
-    gridHTML += '</div>';
-
-    // Build pagination HTML
-    var paginationHTML = '';
-    if (totalPages > 1) {
-      paginationHTML = '<nav class="pagination" aria-label="Media coverage pagination">' +
-        '<button class="pagination-btn" onclick="mediaGoToPage(' + (currentPage - 1) + ')" ' +
-        (currentPage === 1 ? 'disabled' : '') + ' aria-label="Previous page">&laquo; Prev</button>';
-
-      // Page numbers
-      var startPage = Math.max(1, currentPage - 2);
-      var endPage = Math.min(totalPages, startPage + 4);
-      startPage = Math.max(1, endPage - 4);
-
-      if (startPage > 1) {
-        paginationHTML += '<button class="pagination-btn" onclick="mediaGoToPage(1)">1</button>';
-        if (startPage > 2) paginationHTML += '<span class="pagination-info">...</span>';
-      }
-
-      for (var i = startPage; i <= endPage; i++) {
-        paginationHTML += '<button class="pagination-btn ' + (i === currentPage ? 'active' : '') +
-          '" onclick="mediaGoToPage(' + i + ')" aria-current="' + (i === currentPage ? 'page' : 'false') + '">' + i + '</button>';
-      }
-
-      if (endPage < totalPages) {
-        if (endPage < totalPages - 1) paginationHTML += '<span class="pagination-info">...</span>';
-        paginationHTML += '<button class="pagination-btn" onclick="mediaGoToPage(' + totalPages + ')">' + totalPages + '</button>';
-      }
-
-      paginationHTML += '<button class="pagination-btn" onclick="mediaGoToPage(' + (currentPage + 1) + ')" ' +
-        (currentPage === totalPages ? 'disabled' : '') + ' aria-label="Next page">Next &raquo;</button>' +
-        '</nav>';
-    }
-
-    container.innerHTML = controlsHTML + featuredHTML + gridHTML + paginationHTML;
-  }
-
-  function buildCardHTML(story, isFeatured) {
+  function renderMediaCard(story, isFeatured) {
     var mentionType = story.mention_type || 'referenced';
     var sourceInitial = (story.source || 'N')[0].toUpperCase();
     var confidence = story.relevance_confidence || 'unknown';
@@ -599,28 +481,6 @@ This page automatically tracks media coverage, interviews, and mentions of my re
     return html;
   }
 
-  // Global functions for event handlers
-  window.mediaFilterStories = function(type) {
-    currentFilter = type;
-    currentPage = 1;
-    if (type === 'all') {
-      filteredStories = allStories;
-    } else {
-      filteredStories = allStories.filter(function(story) { return story.mention_type === type; });
-    }
-    renderFeed();
-    document.getElementById('media-feed').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
-  window.mediaGoToPage = function(page) {
-    var regularStories = filteredStories.filter(function(s) { return s.featured !== 1; });
-    var totalPages = Math.ceil(regularStories.length / CARDS_PER_PAGE);
-    if (page < 1 || page > totalPages) return;
-    currentPage = page;
-    renderFeed();
-    document.getElementById('media-feed').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
   // Helper functions
   function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
@@ -657,5 +517,18 @@ This page automatically tracks media coverage, interviews, and mentions of my re
       day: 'numeric'
     });
   }
+
+  // Initialize the feed
+  new NewsFeed({
+    containerId: 'media-feed',
+    jsonPath: '/data/media-mentions.json',
+    cardsPerPage: 12,
+    filterField: 'mention_type',
+    filterTypes: ['quoted', 'cited', 'referenced', 'byline'],
+    dateField: 'date',
+    prefix: 'media',
+    renderCard: renderMediaCard,
+    hasFeatured: true
+  });
 })();
 </script>
