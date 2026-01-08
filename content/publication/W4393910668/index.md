@@ -5,7 +5,7 @@ authors:
 date: '2024-01-01'
 publishDate: '2024-01-01'
 publication_types:
-- '2'
+- '3'
 publication: CrimRxiv
 publication_short: ''
 abstract: This study focuses on police profanity, with a particular interest developing

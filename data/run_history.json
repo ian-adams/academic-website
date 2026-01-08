@@ -51,6 +51,19 @@
       "error_details": [],
       "dry_run": false,
       "duration_seconds": 0
+    },
+    {
+      "timestamp": "2026-01-08T02:00:19Z",
+      "status": "success",
+      "data_source": "openalex",
+      "new_articles": 0,
+      "updated_citations": 0,
+      "synopsis_generated": 0,
+      "synopsis_regenerated": 0,
+      "errors": 0,
+      "error_details": [],
+      "dry_run": false,
+      "duration_seconds": 1
     }
   ]
 }

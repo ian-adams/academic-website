@@ -9,7 +9,7 @@ authors:
 date: '2021-01-01'
 publishDate: '2021-01-01'
 publication_types:
-- '2'
+- '3'
 publication: CrimRxiv
 publication_short: ''
 abstract: No abstract available

@@ -9,7 +9,7 @@ authors:
 date: '2024-01-01'
 publishDate: '2024-01-01'
 publication_types:
-- '2'
+- '3'
 publication: CrimRxiv
 publication_short: ''
 abstract: "This analysis reproduces Bor, et al.â\x80\x99s (2018) seminal study of\
