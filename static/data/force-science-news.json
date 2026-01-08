@@ -1,23 +1,7 @@
 {
-  "updated": "2026-01-07T14:00:00Z",
-  "count": 18,
+  "updated": "2026-01-08T11:25:19Z",
+  "count": 17,
   "stories": [
-    {
-      "id": "kcur20251212",
-      "url": "https://www.kcur.org/news/2025-12-12/force-science-law-enforcement-training-research-lenexa-police-discredited",
-      "title": "Why are Lenexa Police so closely tied to this controversial officer training company?",
-      "source": "KCUR (NPR)",
-      "date": "2025-12-12",
-      "date_discovered": "2026-01-07",
-      "summary": "Investigation into Lenexa Police Department's longstanding relationship with Force Science, an organization whose research has been criticized by academics and the Department of Justice.",
-      "story_type": "investigative",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "key_entities": ["Force Science", "Lenexa Police Department"],
-      "location": "Kansas",
-      "tags": ["Force Science", "training", "policy", "investigative journalism"],
-      "needs_review": 0
-    },
     {
       "id": "53f183c305ff8c5857b4604fa1057aad",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSm9ZX0VfWlNpT2ZHLUhYWlFaZnRZNU5lNXRFcGI5RGtLeklVbkFfZGN6dVdsVEcyOEJUY29kS0plVk55OWwzZDlibHFRa0JqbXlqNlp5LWtLSWJpbUV2bmRqVVFGT0lsOEhVZkE0ek9TLTJHSVJiM0JIUTFYeERubW9HNTFXU28?oc=5",
