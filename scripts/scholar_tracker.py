@@ -338,13 +338,18 @@ def generate_hugo_page(work_id: str, article: dict):
     openalex_url = f"https://openalex.org/{work_id}" if work_id else ""
     doi_url = article.get('doi', '')
 
+    # Determine publication type: CrimRxiv = preprint (3), otherwise journal article (2)
+    venue = article.get('venue', '')
+    is_preprint = 'crimrxiv' in venue.lower() if venue else False
+    publication_type = ['3'] if is_preprint else ['2']
+
     frontmatter = {
         'title': article.get('title', 'Unknown Title'),
         'authors': article.get('authors', []),
         'date': f"{year}-01-01",
         'publishDate': f"{year}-01-01",
-        'publication_types': ['2'],
-        'publication': article.get('venue', ''),
+        'publication_types': publication_type,
+        'publication': venue,
         'publication_short': '',
         'abstract': article.get('abstract', ''),
         'summary': synopsis_text,
@@ -419,11 +424,43 @@ def delete_hugo_page(work_id: str):
     return False
 
 
+def cleanup_orphaned_hugo_pages(publications: dict):
+    """Remove Hugo page directories that don't correspond to valid publications"""
+    import shutil
+
+    content_dir = Path(CONTENT_PUBLICATION_DIR)
+    if not content_dir.exists():
+        return 0
+
+    # Build set of valid directory names from current publications
+    valid_dirs = set()
+    for work_id, article in publications.get('articles', {}).items():
+        safe_id = work_id.replace('/', '_').replace(':', '_')[:50] if work_id else None
+        if safe_id:
+            valid_dirs.add(safe_id)
+
+    # Scan existing directories and remove orphans
+    removed_count = 0
+    for item in content_dir.iterdir():
+        if item.is_dir() and item.name not in valid_dirs and item.name != '_index.md':
+            shutil.rmtree(item)
+            log_info(f"Removed orphaned Hugo page: {item.name}")
+            removed_count += 1
+
+    if removed_count > 0:
+        log_info(f"Cleaned up {removed_count} orphaned Hugo page directories")
+
+    return removed_count
+
+
 def regenerate_all_pages(publications: dict):
     """Regenerate all Hugo pages from existing data"""
     log_info("Regenerating all Hugo pages...")
-    pages_generated = 0
 
+    # First, clean up any orphaned page directories
+    cleanup_orphaned_hugo_pages(publications)
+
+    pages_generated = 0
     for work_id, article in publications.get('articles', {}).items():
         try:
             generate_hugo_page(work_id, article)
