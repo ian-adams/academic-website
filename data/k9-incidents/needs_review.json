@@ -1,7 +1,77 @@
 {
-  "generated": "2026-01-08T10:39:38Z",
-  "count": 104,
+  "generated": "2026-01-09T10:37:08Z",
+  "count": 111,
   "stories": [
+    {
+      "id": "7b52fbf3f50517f0e1997793373e849a",
+      "title": "A police dog attacked a Black trucker on his knees. An Ohio city is dealing with the aftermath - EL PAÍS English",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQZ1hnX1hldE9qN09MRWItcmdVNUEzV0I1M1VZdHN2YzlZMlluTGhLSVZCMlo3TTdoNGNlRFhrNzV2M0x4VUsycDhlLU1MUE9uZS1JWTNyb09FVGVKUHdZbEFJX0JRWGVfM016MHl6dTBtYmdjVGJBZlNJM1RFOF9XNnh0VXFZT0sxNk9DUHROZ21MVlZfYndoMjgtdjJkbkg0Mk9BaUVPUGg5OS1pdm5YRF9aM1haOTFLSVhCTXVpVnhhMmRmanVSRWhjbGotX0N4UlpJYjdEWdIB6wFBVV95cUxPOVQtdEd1MXZwX2hqQ0RqSjZ5cWlZMVR4RkFDdDA3LTczM1hweHhIRWo4cFBOSHA4X0VFby11QVV2MjZJRmc5M1B5RHNoX25rZ0ZDdDBseU54ZjhXRktWQW5SUUx2eEs4bHRNUEx1T0VkYXdNTHF5TFd2eThrVTZfdHFPblJaUXBwY09CUUVOVzZ4ZXBPaUQ4bURZTzNyeEhrUUlWOFMwQTEzaGNLSWNWNmVaXzJLZHRnd0NkQUl0RzlGTVctaXdVTHFDR0FxN0xEMFgxd2t1SnFOdUw3NTlpanV2R3FpeWRudnBF?oc=5",
+      "source": "Google News",
+      "date_published": null,
+      "relevance_score": 0.65,
+      "story_type": "incident",
+      "summary": "A police dog attacked a Black trucker on his knees. An Ohio city is dealing with the aftermath&nbsp;&nbsp;EL PAÍS English"
+    },
+    {
+      "id": "c32f8e24e9d6fae99369b34dc61d24d1",
+      "title": "No criminal charges for Hawaii Island police officer in the death of K-9 police dog - Hawaii News Now",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPelFEOXViQ3FNdnhNeF8xNWh5dWpyRXlQYjYzdmlXZVliS053QU5hQVdvMEJQMVVHdldtdWpKLVZFSjA3Q3N1MFFEZFQ0N2ZUcVlfV09pakNIMXZ6em5EcmdWTjY2by13N1N6dW9sUmQ1V292bGQ3QUU0b2NTZ051MVNtN3k0LXJmbzljU2RMSXFyR2V1b0FxdTRqaTRHNUZsQm42NklZSUZPRTdjQ01qX0FOZDA5NjFp?oc=5",
+      "source": "Google News",
+      "date_published": null,
+      "relevance_score": 0.5,
+      "story_type": "general",
+      "summary": "No criminal charges for Hawaii Island police officer in the death of K-9 police dog&nbsp;&nbsp;Hawaii News Now"
+    },
+    {
+      "id": "f8cfb25f8797ce656d790c604e830d89",
+      "title": "Jury: Bite by police dog did not violate civil rights - Connecticut Post",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYTZweVN2VzM1UnBHbHVjYlJ6NW1oY3RkSDVaLVRtd1dEa24ydUNYUFJ1MmUxYUVoLWk3cUhtWkVDX0Utc2pfZS0zRHdWaGV0eU1Ca2Z4bi1LOGdqRGl5MWs4WU8zeF9mRm9nTWw0RW12ZGs3emNtWHJXUFdWY3NGX0haTnJWZw?oc=5",
+      "source": "Google News",
+      "date_published": null,
+      "relevance_score": 0.45,
+      "story_type": "legal",
+      "summary": "Jury: Bite by police dog did not violate civil rights&nbsp;&nbsp;Connecticut Post"
+    },
+    {
+      "id": "30ef7be24eb70615fb476d96e32087aa",
+      "title": "Canine Unit - Kingston Police",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE15RUZwX0ZnU0kwcV91bUt2Tk1PQ3RhY29TeVZNcUU2MnN4QWdOQmJzbF9rd3NXRnFJdmhNNWlzbmdXM1RVOEJRYXJCUk10VTE5TXdHQkphbEtEakc4QWwyTklOX3dVdWVOSUN4clBSSGdOYnZrYzR5eHpB?oc=5",
+      "source": "Google News",
+      "date_published": null,
+      "relevance_score": 0.4,
+      "story_type": "general",
+      "summary": "Canine Unit&nbsp;&nbsp;Kingston Police"
+    },
+    {
+      "id": "8b6c9274ae4a6301a9677b2c9fb3d791",
+      "title": "Louisiana K-9 Dies of Heat Injury While Chasing Suspect - Police Magazine",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNOWNtbXh2d1pIcDNaeDIwZWpJMlRFd2lHMzFQUmxoYXZvSU9MYlN3NHRQQmhtVW5YcXA2NkFQWU1BcWJ4WnhTeHphYmdpNnk5VndxOGl1bnU5R1FYaG04cWRhWXdjanpwVDg5UG1PLXhLQ3VIVzE4N0xNT3VtWHBhNDB5Y3d1WTVOUEtNV1ZUdw?oc=5",
+      "source": "Google News",
+      "date_published": null,
+      "relevance_score": 0.4,
+      "story_type": "legal",
+      "summary": "Louisiana K-9 Dies of Heat Injury While Chasing Suspect&nbsp;&nbsp;Police Magazine"
+    },
+    {
+      "id": "4668d0901635f11345e18a05b1829ab4",
+      "title": "Meet K-9 Yoda, police dog that helped capture convicted killer who escaped prison - National News Desk",
+      "url": "https://news.google.com/rss/articles/CBMi_AJBVV95cUxOZ05zZkstVnNIRmo2OVpyWkczbC1ITlEybVBCX3JYQWllVXc3b05rb0MwRUZWVjEzQjdxNFQ1U2xEMnE2UDVjTlhyR29mdnhKU1h4NktHSWx2czlzcUZtMjNoS0tuTW9xLXlYY1J1aXl1WUZnWmwtRjdaTUZRU2M4VS1HcVlWb0xPVjN3NUJsSEJacEF1eWhwVFhFYV94WlNKVExhaHVxaHo4YzdHMlJwdlZmUnpNQy1tYTBSbFF4UFFxOHI4Y0RtcTl1ZHhUZTNPcEtVbVhid1pjVEFwb3hFRFY5Z2dIR1dJLTA4QWc4cFQxNVFCMnNWUHBQSGtxNEROOWltZXNwYkFISjJRQzAyWG8tYnlwRzhJYnE5SWp4R3pfa2JENEY4b3ltbGVsLVRud3c2MFFheXMwR2FaU2tWZ0lRV1FiNko5T0tLYlhXSVU4MFZzU3g0ZURFZmFXM2lhMTU1NzBHN2t1VFVDd3lYVTZjVVE3dUFsd0xReQ?oc=5",
+      "source": "Google News",
+      "date_published": null,
+      "relevance_score": 0.4,
+      "story_type": "capture",
+      "summary": "Meet K-9 Yoda, police dog that helped capture convicted killer who escaped prison&nbsp;&nbsp;National News Desk"
+    },
+    {
+      "id": "52601dc1dca969c1d8472d8e7f7f260c",
+      "title": "South Simcoe police canine unit adds more bark with addition of Nash - BarrieToday.com",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNTmVSTl9QalFEU3QzdEVPekNZcHJNMjlXdmdPNFZXS3EybnUwalhzRHNNX1dYQlk4LUZ2d2ZTdGUxQmNzbkh0MUxzcl9QRDRwWVBDWXVIY0V0QUFjWXFPNkJCVGtPbmk2T0ZHWUhZam9FYjI3Zlp3SjZXU0xxMFg3a2M3R3B1S3ZGdVh4YmJ4RjNUMkZsUFY0TklFZjNxbk03SXlyY3hNT2NJbElRbHZDY2pzaWlZdzdX?oc=5",
+      "source": "Google News",
+      "date_published": null,
+      "relevance_score": 0.4,
+      "story_type": "general",
+      "summary": "South Simcoe police canine unit adds more bark with addition of Nash&nbsp;&nbsp;BarrieToday.com"
+    },
     {
       "id": "0046640680dc2ae7517a376edd8589bc",
       "title": "HPD officer whose police dog died in overheated car won’t be prosecuted - Hawaii Tribune-Herald",
