@@ -1,7 +1,37 @@
 {
-  "generated": "2026-01-09T09:28:32Z",
-  "count": 24,
+  "generated": "2026-01-10T09:21:05Z",
+  "count": 27,
   "stories": [
+    {
+      "id": "e35fd9714e03ba3c1325d0a8dc5dd7b9",
+      "title": "Utah PD testing AI report writing software shares comical error caused by 'The Princess and the Frog' - gov1.com",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdG1YZEF5MW5UeEo1ajJORVY4NGpvanlyUEhEQW0wOERPYjZLNHBjaHNOZFlUbWNqVzFvbkc3MXJKMFpkd3FxSnlIc2RRMzR2bzlqQzNGLTg3TGZ0RzhuV0lHOU9qWkhnWEJlS2cwNjMwcndoalFLeDJZLVFZQmMwMFVJVWFNMmZ6ckZ2MzFFTlRlcWp6SXNmd195MTA0M0pXTFl6V2NsRExhbm5Dekc1bVVnUEt6LU50ejZIRGl5ai1yRkp6bngzM3QxTQ?oc=5",
+      "source": "Google News",
+      "date_published": null,
+      "relevance_score": 0.55,
+      "story_type": "vendor",
+      "summary": "Utah PD testing AI report writing software shares comical error caused by 'The Princess and the Frog'&nbsp;&nbsp;gov1.com"
+    },
+    {
+      "id": "fc80540e0c9ede387b9a17f9b821c637",
+      "title": "That time when an AI police report hallucinated an officer turning into a frog - TechSpot",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPNWpFb19ObTBhc2Z3UWlMb3BTaWtTd0hNNDkxb2VISVhobFhpczZtclpyVS1Ici1kUDZITUdXSDg3RUVVYkl2bjdjZElydV9BZFk1RTY0Q3hJUzhVWTlwdUp5cXV6YVRXS2ZTRmRmQ0lwOVdSMlA0dmN0MTJRdmo1VGdpQ0ZJZXlFbm4wV1FCaEYyQ0hKUEc5cXhSTFJmdw?oc=5",
+      "source": "Google News",
+      "date_published": null,
+      "relevance_score": 0.5,
+      "story_type": "incident",
+      "summary": "That time when an AI police report hallucinated an officer turning into a frog&nbsp;&nbsp;TechSpot"
+    },
+    {
+      "id": "8a90398109627ff8fddf1b72fc66ea2d",
+      "title": "Owatonna PD to implement new body cams, AI police report generator - southernminn.com",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOQ1lPcWNkMnpWWTJjTTR5MHR0aGJvN2tBUEtOOWlxUXc3anRHNHA4ZGxNSlduUVlpZUJrazgwT19PZUk4WmRCOUlfdHJzR2VQdDJRMWh6WVJRdVEtTlAyVkN2ZFVnRXN3M3ZPQldYWVViOXM2eDA2bUMxWGxveHZ6Z29tQS1KOVFFNzlEb2YyZmdUR2k4ODNmb1dhdmdUSkRVQzhJdmgzTTNaYkt3LWxWRXVCdGJ5U1FrWlZvZUhpbXNuTDJKWXV1OTFzeU40VjhHWk95M1FqZzRrcWQ4NUlhTUh0UjNhbHFIZC1idVA0ZEhraUVneF9UWTlRUm1HZTVKZHc?oc=5",
+      "source": "Google News",
+      "date_published": null,
+      "relevance_score": 0.4,
+      "story_type": "general",
+      "summary": "Owatonna PD to implement new body cams, AI police report generator&nbsp;&nbsp;southernminn.com"
+    },
     {
       "id": "fe7aa66f8327ccb3e478bdc155eebc29",
       "title": "Axon's AI police report generator designed to help cops avoid \"disclosure headaches\" - Boing Boing",
