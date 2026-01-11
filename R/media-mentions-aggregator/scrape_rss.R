@@ -149,32 +149,64 @@ scrape_all_rss_feeds <- function(config, log_file = NULL) {
 search_google_news_rss <- function(search_terms, log_file = NULL) {
   log_message("Searching Google News RSS", log_file)
 
-  all_articles <- map_dfr(search_terms, function(term) {
-    # Rate limiting
-    Sys.sleep(2)
+  total_attempts <- 0
+  successful_searches <- 0
 
-    # Google News RSS URL
+  all_articles <- map_dfr(search_terms, function(term) {
+    total_attempts <<- total_attempts + 1
+
+    # Rate limiting - slightly longer delay to avoid rate limits
+    Sys.sleep(3)
+
+    # Google News RSS URL - try multiple URL formats for better reliability
     encoded_term <- URLencode(term)
+
+    # Primary URL format
     feed_url <- sprintf("https://news.google.com/rss/search?q=%s&hl=en-US&gl=US&ceid=US:en", encoded_term)
 
     log_message(sprintf("  Searching for: '%s'", term), log_file)
 
-    tryCatch(
+    result <- tryCatch(
       {
         articles <- scrape_single_rss(feed_url, "Google News", log_file)
 
         if (nrow(articles) > 0) {
           articles$search_term <- term
+          successful_searches <<- successful_searches + 1
+          log_message(sprintf("    Found %d articles for '%s'", nrow(articles), term), log_file)
+        } else {
+          log_message(sprintf("    No articles found for '%s'", term), log_file, "WARN")
         }
 
         return(articles)
       },
       error = function(e) {
         log_message(sprintf("  Error searching Google News for '%s': %s", term, e$message), log_file, "ERROR")
-        return(data.frame())
+
+        # Try alternate URL format on error
+        alt_url <- sprintf("https://news.google.com/rss/search?q=%s&when=30d", encoded_term)
+        Sys.sleep(2)
+
+        tryCatch({
+          articles <- scrape_single_rss(alt_url, "Google News (alt)", log_file)
+          if (nrow(articles) > 0) {
+            articles$search_term <- term
+            successful_searches <<- successful_searches + 1
+          }
+          return(articles)
+        }, error = function(e2) {
+          log_message(sprintf("  Alternate search also failed for '%s': %s", term, e2$message), log_file, "ERROR")
+          return(data.frame())
+        })
       }
     )
+
+    return(result)
   })
+
+  # Log search statistics
+  log_message(sprintf("Google News search complete: %d/%d searches returned results",
+                      successful_searches, total_attempts), log_file)
 
   # Remove duplicates from multiple search terms
   if (nrow(all_articles) > 0) {
@@ -182,6 +214,8 @@ search_google_news_rss <- function(search_terms, log_file = NULL) {
       distinct(url, .keep_all = TRUE)
 
     log_message(sprintf("Total unique articles from Google News: %d", nrow(all_articles)), log_file)
+  } else {
+    log_message("WARNING: Google News returned 0 total articles. This may indicate rate limiting or connectivity issues.", log_file, "WARN")
   }
 
   return(all_articles)
