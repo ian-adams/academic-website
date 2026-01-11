@@ -5,7 +5,7 @@
     <link>https://ianadamsresearch.com/author/justin-nix/</link>
       <atom:link href="https://ianadamsresearch.com/author/justin-nix/index.xml" rel="self" type="application/rss+xml" />
     <description>Justin Nix</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2025`</copyright><lastBuildDate>Tue, 06 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©`2026`</copyright><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ianadamsresearch.com/media/android-chrome-512x512.png</url>
       <title>Justin Nix</title>
@@ -13,220 +13,240 @@
     </image>
     
     <item>
-      <title>Elevated Police Turnover following the Summer of George Floyd Protests: A Synthetic Control Study</title>
-      <link>https://ianadamsresearch.com/publication/2021-07-06-elevated-police-turnover/</link>
-      <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>https://ianadamsresearch.com/publication/2021-07-06-elevated-police-turnover/</guid>
-      <description>
-&lt;script src=&#34;https://ianadamsresearch.com/publication/2021-07-06-elevated-police-turnover/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;important-links&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Important links&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Forthcoming at &lt;a href=&#34;https://onlinelibrary.wiley.com/journal/17459133&#34;&gt;&lt;em&gt;Criminology &amp;amp; Public Policy&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Short write-up at &lt;a href=&#34;https://jnix.netlify.app/publication/42-cpp-turnover/&#34;&gt;Justin Nix’s blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ianadamsresearch.com/pdfs/officer-turnover-floyd.pdf&#34;&gt;Download pre-print here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+      <title>99 Problems but a Clean IV Ain’t One: Measuring and Studying Officer-Involved Shootings</title>
+      <link>https://ianadamsresearch.com/publication/w4409236548/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4409236548/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;No summary available.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v0, Unknown date)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 0 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.21428/cb6ab371.8b17fd57&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Mandatory Sexual Assault Kit Testing Policies and Arrest Trends a Natural Experiment</title>
-      <link>https://ianadamsresearch.com/publication/2021-01-11-mandatory-sexual-assault-kit-testing-policies-and-arrest-trends-a-natural-experiment/</link>
-      <pubDate>Mon, 11 Jan 2021 16:00:37 -0700</pubDate>
-      <guid>https://ianadamsresearch.com/publication/2021-01-11-mandatory-sexual-assault-kit-testing-policies-and-arrest-trends-a-natural-experiment/</guid>
-      <description>&lt;p&gt;Authors:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://smourtgos.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scott M. Mourtgos&lt;/a&gt;, University of Utah&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ianadamsresearch.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ian T. Adams&lt;/a&gt;, University of Utah&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://jnix.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Justin Nix&lt;/a&gt;, University of Nebraska Omaha&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://scholar.google.com/citations?user=VZ_LDHQAAAAJ&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tara Richards&lt;/a&gt;, University of Nebraska Omaha&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Untested sexual assault kits (SAKs) represent a critical public policy gap in addressing sexual assault, with estimates suggesting that as many as 400,000 SAKs remain untested in police storage across the country (Office of the Press Secretary, 2015). Indeed, despite the evidentiary usefulness of SAKs (Valentine et al., 2019), large numbers of SAKs are ‘shelved’ and never submitted to crime laboratories for analysis (Campbell et al., 2015; Hendrix et al., 2019; Lovell et al., 2018; Lovrich et al., 2004; Wells, 2016). The fact that many SAKs remain untested has resulted in pointed critiques of police investigatory practices in sexual assault cases (Campbell et al., 2019; Campbell &amp;amp; Fehler-Cabral, 2019; Goodman-Williams &amp;amp; Campbell, 2019; Valentine et al., 2019) and has served as a catalyst for mandatory SAK testing policies at both the state and municipal levels over the past decade (Davis et al., 2020).
-Prior research has suggested many potential reasons to implement mandatory SAK testing policies. These include: identification of serial rapists, increased reporting of sexual assaults, populating the Combined DNA Index System (CODIS) with offender profiles, and removing bias from the decision-making process for whether to submit a particular SAK (Campbell et al., 2019; Davis et al., 2020; Goodman-Williams &amp;amp; Campbell, 2019; Hendrix et al., 2019; Lovell et al., 2019; Valentine et al., 2019). An additional proposed benefit to mandating SAK testing, which we focus on in this study, is higher rates of arrest for sexual assault (Davis et al., 2020). An increased arrest rate for sexual assault—as a means of holding more offenders accountable and restoring justice to more victims—is a shared goal among police, advocates, researchers, and policymakers. Sexual assault continues to be the most under-reported violent crime in the US (Langton et al., 2012; Lonsway &amp;amp; Archambault, 2012), and criminal justice system attrition among cases that are reported is high (Richards et al., 2019). For example, according to the FBI, in 2018, just 18 percent of rapes reported to law enforcement resulted in an arrest (FBI, 2019), and at least one study suggests that only between 3 and 26 percent of reported sexual assault cases result in a conviction (Lonsway &amp;amp; Archambault, 2012).&lt;/p&gt;
-&lt;p&gt;While there is a need for scientific evidence in the formulation of crime policy (Gies et al., 2020), surprisingly little attention has been directed at whether mandatory SAK testing policies do in fact increase arrest rates for sexual assault (Hendrix et al., 2019; Strom &amp;amp; Hickman, 2016). If a primary goal of an improved criminal justice response to sexual assault is to provide justice to more victims and hold more offenders accountable, an increase in the sexual assault arrest rate is necessary. Arrests are an important marker of sexual assault investigations (Alderden &amp;amp; Ullman, 2012; Ylang &amp;amp; Holtfreter, 2019) and a required prerequisite to an improved criminal justice response to sexual assault investigations. If mandatory SAK testing policies do not provide a demonstrable improvement in the rate of arrest for sexual assaults, it could result in lost legitimacy for the police, which might in turn decrease victims&#39; propensity to come forward (Murphy &amp;amp; Barkworth, 2014; Sunshine &amp;amp; Tyler, 2003; Tankebe, 2013). Accordingly, research assessing the efficacy of mandatory SAK testing policies is sorely needed.&lt;/p&gt;
-&lt;p&gt;In the current study, we examine the effects of a mandatory SAK testing policy on sexual assault arrests in a large jurisdiction in the western US. We accomplish this by utilizing a novel technique known as Bayesian structural time-series modeling, a type of time-series quasi-experimental method (Brodersen et al., 2015b). Our findings show no effect on the arrest rate for sexual assault and raise significant concerns about the efficacy of mandatory SAK testing policies to increase arrests. Further, they highlight the need to ensure appropriate resources are provided to investigating agencies and crime laboratories when such policies are considered (Wells, 2016), as well as to consider other causes of low sexual assault arrest rates.&lt;/p&gt;
-&lt;h1 id=&#34;sexual-assault-kits-saks&#34;&gt;Sexual Assault Kits (SAKs)&lt;/h1&gt;
-&lt;p&gt;The collection of medical forensic evidence in sexual assault investigations became common practice in the 1980s (Goodman-Williams &amp;amp; Campbell, 2019). It is now routine for law enforcement to encourage sexual assault victims to undergo a forensic interview including a SAK upon reporting an incident. Typically performed by sexual assault nurse examiners (SANEs), SAK examinations include collecting biological evidence, such as semen and saliva, which may be present on victims&#39; bodies post-sexual assault. After collection, SANEs supply the SAK to law enforcement for use in the investigatory process (Valentine et al., 2019). With the availability of the CODIS database, deoxyribonucleic acid (DNA) profiles collected during SAK examinations can be compared against DNA profiles of arrestees, convicted offenders, and other SAK evidence and crime scenes from across the United States (Butler, 2005; Jobling &amp;amp; Gill, 2004; Wells et al., 2019).&lt;/p&gt;
-&lt;p&gt;The ability to identify and evaluate DNA profiles obtained during sexual assault investigations holds significant investigatory power. For example, unknown perpetrators can be identified if their DNA profile is already housed in CODIS. Investigators may also identify serial offenders by linking a specific DNA profile to multiple sexual assault cases and victims (Goodman-Williams &amp;amp; Campbell, 2019; Lovell et al., 2019). The benefits are not just realized in CODIS utilization, however. While a substantial proportion of sexual assault cases hinge on issues of consent, simply being able to confirm that biological evidence collected during a SAK examination belongs to a specific suspect who denies any sexual contact with the victim can be potent evidence of guilt.&lt;/p&gt;
-&lt;p&gt;Yet, even with these clear evidentiary benefits, there have been multiple reports over the last decade, from all across the United States, describing how large quantities of SAKs have been left untested in police evidence warehouses (Valentine et al., 2019). For example, in 2002, it was reported that approximately 13,000 SAKs collected in Los Angeles County were never submitted for testing. In 2009, more than 11,000 unsubmitted SAKs were located in a Detroit Police Department evidence warehouse (Hendrix et al., 2019). Similarly, thousands of untested SAKs were found in Cuyahoga County, Ohio (Campbell &amp;amp; Fehler-Cabral, 2019). Of course, the exact number is unknown, as many jurisdictions report being unaware of precisely how many untested SAKs they possess (Keteyian, 2009).&lt;/p&gt;
-&lt;p&gt;Considering the advantages above, why might so many SAKs go untested? Until the recent exposure of large numbers of untested SAKs, the decision to submit SAKs to a crime laboratory for DNA processing was left to individual police investigators&#39; discretion. Paralleling how they pursue investigations for other crimes (Brandl &amp;amp; Frank, 1994; Eck, 1983, 1992; Lum et al., 2018; Scott et al., 2019; Wellford &amp;amp; Cronin, 1999), there are several reasons why investigators might choose not to submit a SAK for testing. First, a non-trivial number of victims do not proceed with investigations once the initial allegation is made (Campbell et al., 2015; Richards et al., 2019; Wells, 2016), thus curtailing the ability to investigate or prosecute the case. Processing SAKs in cases that will not lead to any criminal proceedings/charges is arguably an inefficient use of limited resources (Davis et al., 2020). Second, in most sexual assault cases, the offender is known (Richards et al., 2019), and investigators may conclude that processing SAKs will not yield any probative value to those cases. Third, in some cases, offenders admit to the sexual assault. In cases where a confession is already obtained, the need for DNA evidence may be seen as unnecessary (Davis et al., 2020; Strom &amp;amp; Hickman, 2016). Fourth, investigators become accustomed to factors within cases that determine whether prosecutors will file charges. If the circumstances of a particular case do not meet those standards (i.e., a &amp;lsquo;trial sufficiency&amp;rsquo; standard), investigators may not submit a SAK in order to conserve agency resources. This is referred to as &amp;lsquo;downstream orientation&amp;rsquo; (Alderden &amp;amp; Ullman, 2012; Frohmann, 1991; Pattavina et al., 2016; Spohn &amp;amp; Tellis, 2019; Ylang &amp;amp; Holtfreter, 2019). Finally, investigators may not submit a SAK because they do not think the complainant is credible (Campbell et al., 2015; Davis et al., 2020; Hendrix et al., 2019).&lt;/p&gt;
-&lt;p&gt;There are, however, many theorized advantages to police investigators submitting all SAKs. First, by removing discretion for the submission of SAKs, the presence of extra-legal factors associated with stereotypes about &amp;lsquo;real rape&amp;rsquo; (Estrich, 1987; e.g., victim drug or alcohol use, sex worker status, and antecedent victim &amp;ldquo;risk-taking&amp;rdquo; behavior) that may bias investigators&#39; decision-making are mitigated (Davis et al., 2020). A recent study identified these extra-legal characteristics as the primary influencers of investigator decisions to submit SAKs for testing, which the authors deem &amp;ldquo;justice denied for&amp;hellip;sexual assault victims whose fully collected SAKs were never submitted for analysis&amp;rdquo; (Valentine et al., 2019, p. 3565). Second, any obtained DNA evidence helps corroborate victims&#39; statements, even if the suspect is already known or has confessed (Campbell et al., 2019; Campbell &amp;amp; Fehler-Cabral, 2019). Third, retrieval of DNA profiles from all sexual assault cases will result in the identification and (hopefully) arrest and prosecution of serial offenders (Campbell et al., 2019; Davis et al., 2020; Lovell et al., 2019). Finally, advocates of mandatory SAK testing policies argue arrests, prosecutions, and convictions of sex offenders in general will increase (Davis et al., 2020). This final argument found some empirical support after an additional 600 indictments and 400 convictions were associated with testing SAKs that had previously been backlogged in Cuyahoga County, Ohio (Lovell et al., 2018). What remains unclear is whether these same expectations hold for mandatory testing of new SAKs, a discussion we return to later.&lt;/p&gt;
-&lt;p&gt;There are convincing normative arguments for the viewpoints described above. However, the past decade has seen those advocating for mandatory testing policies gaining ground in the policy sphere. According to &lt;a href=&#34;endthebacklog.org&#34;&gt;endthebacklog.org&lt;/a&gt; (2020), a program of the national nonprofit organization Joyful Heart Foundation, in 2019 alone, 103 bills were introduced in 35 states and Washington DC explicitly addressing concerns about the handling of SAKs. Further, 12 states have passed comprehensive SAK reform, including (1) inventorying and testing of all untested SAKs, and (2) timely testing of newly obtained SAKs.&lt;/p&gt;
-&lt;h2 id=&#34;outcome-evidence-from-texas&#34;&gt;Outcome Evidence from Texas&lt;/h2&gt;
-&lt;p&gt;Given the evidence above, the question remains: do prospective mandatory testing policies achieve the desired outcomes? With the exception of identifying serial offenders (Campbell et al., 2019; Lovell et al., 2019), little work has been conducted to test these policies&#39; outcomes. To our knowledge, only one other empirical test of prospective mandatory SAK testing policies has been undertaken. Davis et al. (2020) examined the policy outcomes of a compulsory statewide SAK testing law in Texas, otherwise known as Senate Bill 1636 (SB 1636). Texas was one of the first states to enact state legislation requiring the testing of all SAKs. In 2011, SB 1636 was passed, mandating that law enforcement agencies submit SAKs to a crime laboratory within 30 days of receipt. Advocates for the bill anticipated that it would lead to an increase in sexual assault reporting, as well as an increase in sexual assault arrests, prosecutions, and convictions.&lt;/p&gt;
-&lt;p&gt;Contrary to their hypotheses, Davis et al. (2020) did not find support for increased sexual assault reporting, sexual assault arrests, or sexual assault court filings and convictions across a 4-year pre- and post-policy implementation period. Davis et al. report that &amp;ldquo;[u]niversal testing of DNA in sexual assault cases, by itself, may be insufficient to promote meaningful changes in reporting and criminal justice system indicators that some may have expected&amp;rdquo; (p. 433). They identify inadequate crime laboratory funding as one primary possible reason for their null findings, as the crime laboratory was overwhelmed with the substantial increase in SAK submissions, resulting in lengthy turnaround times for analyses.&lt;/p&gt;
-&lt;p&gt;Another possible reason for Davis et al.&amp;rsquo;s (2020) null findings is that their study tests the effects of SB 1636 on the crimes of &amp;ldquo;sexual assault&amp;rdquo; and &amp;ldquo;aggravated sexual assault.&amp;rdquo; It is unclear from their study which specific crimes these terms encompass. Clear operationalization is vital when assessing the possible effects of mandatory testing policies because the term sexual assault can be ambiguous. That is, sexual assault encompasses not only rape but also other illegal behaviors, such as unwanted touching or sexual harassment in the workplace. When examining the effect of a mandatory SAK testing policy, specificity is critical. In the interest of greater specificity, we closely examine the effects of a mandatory testing policy on arrests for rape. Throughout this manuscript, we may reference &amp;ldquo;sexual assault&amp;rdquo; when discussing sexual violence in general, but when discussing the mandatory testing policy&amp;rsquo;s effects, we are explicitly referring to rape. Finally, Davis et al.&amp;rsquo;s (2020) study examined the effect of a mandatory SAK testing policy across an entire state, which may have masked important variation across jurisdictions therein. Our research examines one jurisdiction&amp;rsquo;s experience with mandatory SAK testing.&lt;/p&gt;
-&lt;h1 id=&#34;the-current-study&#34;&gt;The Current Study&lt;/h1&gt;
-&lt;p&gt;In the current study, we focus on arrests for rape. While there are conflicting findings in the limited research literature examining whether analysis of previously untested SAKs leads to an increase in positive case outcomes (Campbell &amp;amp; Fehler-Cabral, 2019; Peterson et al., 2012), we examine the effects of requiring testing of all SAKs at the time they enter the criminal justice system. The only study that we are aware of that tested whether prospective mandatory SAK submission policies increase sexual assault arrests found that they do not (Davis et al., 2020).&lt;/p&gt;
-&lt;p&gt;There is some indication that SAK testing by crime laboratories enhances criminal justice processing of sexual assault cases (Valentine et al., 2019). However, it is unclear if improved case outcomes are because of the tested SAK itself, or if cases with tested SAKs are already more likely than other cases to result in positive case outcomes due to legal or extra-legal factors. Further, Davis et al. (2020) found a non-significant decreasing trend in sexual assault arrest rates in their study following implementation of a mandatory testing policy. Davis and colleagues indicated that this was possibly due to a failure to provide adequate resources for the entire investigatory system following the mandatory SAK testing policy (specifically crime laboratory resources). The jurisdiction we studied experienced a similar inadequacy of secondary resourcing upon policy implementation. With this in mind, we developed the following research hypothesis regarding the policy effect on the arrest rate for rape:&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Hypothesis: Mandatory testing of SAKs will not lead to an increase in the proportion of rape reports that result in an arrest.&lt;/em&gt;&lt;/p&gt;
-&lt;h1 id=&#34;data-and-method&#34;&gt;Data and Method&lt;/h1&gt;
-&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
-&lt;p&gt;We utilize reported crime and arrest data from an anonymous municipal police department that serves a capital city in the western United States (hereafter referred to as &amp;ldquo;Westland&amp;rdquo;). The Westland Police Department (WPD) provides full-spectrum policing services to a mixed urban core and suburban service area with an estimated nighttime population of 200,000 residents and a metropolitan population of over one million. The department employs approximately 600 sworn officers and has a specified unit within its investigation division responsible for investigating all sexual assault allegations (a special victims unit).&lt;/p&gt;
-&lt;p&gt;In 2014, WPD came under public criticism regarding past non-testing of SAKs for sexual assault investigations. From 2004 through 2013, approximately 77% of all SAKs received by WPD were never submitted to a crime laboratory for processing. As a result, and despite agency leadership arguing for a more limited policy, a city ordinance was passed, requiring all SAKs received by WPD be submitted to a crime laboratory for analysis within 30 days of receipt. The policy was implemented on November 1, 2014, and was effective immediately. This sharp implementation is a critical aspect of our research design, as it allows us to leverage the power of a natural experiment to analyze trends during the pre- and post-implementation periods. With immediate effect, every SAK that came into WPD&amp;rsquo;s special victims unit on or after November 1, 2014, was submitted to the state crime laboratory for testing. When a series of measures is broken up by the introduction of an intervention that occurs at a specific point in time, time-series analysis is appropriate (Davis et al., 2020; Shadish et al., 2002). The enactment of the mandatory SAK testing policy in Westland provides an opportunity for a time-series quasi-experiment to ascertain the impact (if any) of the policy on arrest rates for rape.&lt;/p&gt;
-&lt;h2 id=&#34;measures&#34;&gt;Measures&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Rape arrest rates&lt;/strong&gt;. Our measure of rape arrest rates is constructed from agency-level data. By policy, at WPD a SAK is obtained whenever possible in all reported incidents of rape. This policy is because, unlike some forms of sexual assault, there is a high likelihood of obtaining biological evidence containing DNA after a rape is committed. When taking a sexual assault complaint, officers in Westland have to designate the type of crime being reported in the agency&amp;rsquo;s report writing system using a National Crime Information Center (NCIC) code. There are many designated codes related to crimes of sexual assault. For example, there are several sexual assault codes for child molestation, sexual assaults not involving penetration, rape, and more. By creating our measure with these codes at the agency level, we restrict our study to the crime of rape, as defined in the studied jurisdiction. The state in which Westland is located defines rape as &amp;ldquo;sexual intercourse with another person without the victim&amp;rsquo;s consent.&amp;rdquo; We documented the total number of rapes reported to WPD, along with the total number of arrests for rape, from 2010 through 2019, providing 120 monthly time-series measures. We defined an arrest as any instance in which a person was arrested, summoned to court, or had a warrant issued for their arrest. The arrest rate was calculated by dividing the number of arrests for rape in each month by the total number of rapes reported each month. &lt;strong&gt;Figure 1&lt;/strong&gt; displays the time-series data for rape arrests and reports in Westland.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/figure1.jpg&#34; alt=&#34;Arrest and Report Data for Westland PD, 2010&amp;ndash;2019&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;model-description&#34;&gt;Model Description&lt;/h2&gt;
-&lt;p&gt;A Bayesian structural time-series model (BSTS) is a state-space time-series model that includes one component of state as a linear regression on the predictors. While we summarize the method below, a much more technical explanation of BSTS modeling is provided by Brodersen et al. (2015b), the developers of the method.&lt;/p&gt;
-&lt;p&gt;Concisely, BSTS is best described as an observation equation, which links the observed data with an observed latent state and transition equation. The transition equation describes the development of the latent state over time. The observation equation is defined as $$y_t = Z_t^T α_t + ε_t$$&lt;/p&gt;
-&lt;p&gt;where $y_t$ is a scalar observation (i.e., arrest rate), $Z_t$ is an output vector, and $α_t$ is the unobserved latent state; $ε_t ~ N(0, σ_t^2)$ is independent of all other unknowns and is a scalar observation error with variance $σ_t$.&lt;/p&gt;
-&lt;p&gt;The transition equation is defined as $$α_(t+1)  = T_t α_t+ R_t η_t$$&lt;/p&gt;
-&lt;p&gt;where $α_t$ is the unobserved latent state, $T_t$ is the transition matrix, and $R_t$ is the control matrix; $η_t \sim N(0, Q_t)$ is independent of all other unknowns and describes the system error with a state-diffusion matrix $Q_t$. $R_t η_t$ allows the inclusion of seasonality in the analysis.&lt;/p&gt;
-&lt;p&gt;BSTS models infer causal impact by predicting the counterfactual treatment response in a synthetic control that would have occurred if no intervention had taken place. That is, rather than comparing the experimental group to a nonequivalent control group, BSTS models use a synthetic control to construct the counterfactual to estimate the treatment effect. This synthetic control is constructed by using the time-series behavior of the experimental group prior to and after the intervention, as well as combining control variables that are predictive of the target series prior to the intervention. As long as the control variables did not receive the intervention, it is reasonable to assume the relationship between the treatment and the control variables that existed prior to the intervention would continue if the treatment had no effect. As such, a plausible estimate of the counterfactual time-series can be estimated up to the point where the relationship between treatment and controls are no longer stationary because of the treatment (Brodersen et al., 2015c; de Vocht et al., 2017; Liu &amp;amp; Fabbri, 2016; Ratcliffe et al., 2017).&lt;/p&gt;
-&lt;p&gt;Use of BSTS models are ideal for social science (Brodersen et al., 2015b), and have been used successfully in other criminological studies to estimate violence reduction as a result of gang arrests (Ratcliffe et al., 2017); the deterrence effect of unarmed private patrols (Liu &amp;amp; Fabbri, 2016); and the effect alcohol licensing policies have on crime (de Vocht et al., 2017). Further, BSTS models are preferred to Auto Regressive Integrated Moving Average (ARIMA) models when examining crime data because crime data is low-volume count data, which may be inappropriate for ARIMA modeling (Ratcliffe et al., 2017).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Counterfactual predictor.&lt;/strong&gt; A key component of utilizing BSTS modeling is the identification of appropriate predictors. Predictors are linearly regressed onto the observed values, creating the composite synthetic control series (Brodersen et al., 2015b; Ratcliffe et al., 2017). To build the synthetic control for the time-series, we turn to other violent crimes. It is well established that violent crimes tend to track with each other across time (Latzer, 2016; Lonsway &amp;amp; Archambault, 2012; Yung, 2013). To ascertain whether arrest rates for rape are associated with arrest rates for other violent crimes in Westland, we examined the arrest rates for aggravated assault, domestic violence aggravated assault, simple assault, robbery, and homicide. We found that the arrest rates for aggravated assault and domestic violence aggravated assault most closely mirrored the arrest rate for rape from January 2010 through October 2014 (the pre-intervention time-period). We plot the arrest rate for rape with the arrest rates for aggravated assault and domestic violence aggravated assault in Westland in &lt;strong&gt;Figure 2&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/figure2.jpg&#34; alt=&#34;Arrest Rates for Rape and Other Violent Crimes in Westland, Jan 2010 through Oct 2014&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Based on the above analysis, the arrest rates for aggravated assault and domestic violence aggravated assault in Westland are utilized to construct the synthetic control. Importantly, the arrest rate for aggravated assault and domestic violence aggravated assault would not plausibly be affected by the mandatory SAK testing policy. Moreover, as mentioned previously, WPD employs a specialized detective unit to investigate all sexual assaults. As such, detectives investigating aggravated assaults (investigated by a violent crimes unit at WPD) and domestic violence aggravated assault (investigated by a domestic violence unit at WPD) would not be affected by this policy. Thus, any change in the rate of arrests for rape that is not also observed in the rate of arrests for either of the aggravated assault categories may reasonably be attributed to the mandatory submission policy.&lt;/p&gt;
-&lt;h1 id=&#34;analysis-and-results&#34;&gt;Analysis and Results&lt;/h1&gt;
-&lt;p&gt;We used the R package &lt;code&gt;CausalImpact&lt;/code&gt; (Brodersen et al., 2015a) to conduct the analysis. The model uses a response variable comprised of the monthly arrest rate for rape, and the predictor variables: the arrest rates for aggravated assault and domestic violence aggravated assault. The BSTS model was structured to allow for a seasonal parameter to reflect any yearly cyclical behavior on the arrest rate for rape (Mcdowall et al., 2012; Mcdowall &amp;amp; Curtis, 2015).&lt;/p&gt;
-&lt;p&gt;The pre-intervention time series began in January 2010 and ended in October 2014, as the mandatory SAK testing policy was enacted on November 1, 2014. The post-intervention time-series began in November 2014 and continued through December of 2019. Accordingly, the pre-intervention series is 58 data points in length, with a post-intervention length of 62 months. Ten thousand Markov chain Monte Carlo (MCMC) samples were drawn for the analysis in each model. Ninety-five percent Bayesian posterior distribution credible intervals were generated. Results for the model assessing change in the arrest rate for rape are presented in &lt;strong&gt;Figure 3&lt;/strong&gt;.&lt;/p&gt;
-&lt;aside&gt;
-&lt;p&gt;The frequentist analog to a credible interval is a confidence interval, yet the two concepts are statistically different. In a frequentist paradigm, confidence intervals are based on repeated sampling theory. A 95% confidence interval indicates that 95 out of 100 replications of exactly the same experiment will capture the fixed, but unknown, regression coefficient. A credible interval can be interpreted as the probability that the population parameter is between the upper and lower bounds of the credible interval, based on the available information (Van de Schoot &amp;amp; Depaoli, 2014).&lt;/p&gt;
-&lt;/aside&gt;
-&lt;p&gt;&lt;img src=&#34;images/figure3.jpg&#34; alt=&#34;Effect of Mandatory SAK Submission Policy on Rape Arrest Rate, Monthly Data 2010 through 2019&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Figure 3&lt;/strong&gt; contains three panels. The panel labeled &amp;ldquo;original&amp;rdquo; shows the data and a counterfactual prediction for the post-treatment period. The counterfactual prediction is the horizontal dashed line, with a corresponding 95% credible interval surrounding it. The solid line represents the observed data. The panel labeled &amp;ldquo;pointwise&amp;rdquo; represents the pointwise causal effect, as estimated by the model. That is, it shows the difference between observed data and counterfactual predictions. The panel labeled &amp;ldquo;cumulative&amp;rdquo; visualizes the cumulative effect of the intervention post-treatment by summing the pointwise contributions from the second panel. The dashed vertical line represents the intervention date (i.e., November 2014).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Table 1: Causal Impact Posterior Inference&lt;/strong&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;em&gt;Average&lt;/em&gt;&lt;/th&gt;
-&lt;th&gt;&lt;em&gt;SD&lt;/em&gt;&lt;/th&gt;
-&lt;th&gt;&lt;em&gt;95% CI&lt;/em&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;Actual Arrest Rate&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;0.097&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;Predicted Arrest Rate&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;0.120&lt;/td&gt;
-&lt;td&gt;0.045&lt;/td&gt;
-&lt;td&gt;[0.029, 0.200]&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;Absolute Effect&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;-0.018&lt;/td&gt;
-&lt;td&gt;0.045&lt;/td&gt;
-&lt;td&gt;[-0.110, 0.069]&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;Relative Effect&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;-16%&lt;/td&gt;
-&lt;td&gt;39%&lt;/td&gt;
-&lt;td&gt;[-92%, 59%]&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;As indicated in &lt;strong&gt;Table 1&lt;/strong&gt;, the enactment of the mandatory SAK submission policy at WPD was associated with a decrease in the arrest rate for rape. During the post-intervention period, the arrest rate for rape had an average value of .097. By contrast, in the absence of an intervention, we would have expected a counterfactual average of .120. The 95% credible interval of the counterfactual prediction is [0.029, 0.200]. Subtracting this prediction from the observed response yields an estimate of the absolute causal effect the intervention had on the arrest rate for rape (-.018), resulting in a 16% relative decrease. The posterior probability of the observed negative effect is .66. In other words, although it appears the intervention may have exerted a negative effect on the arrest rate for rape, the effect is not statistically significant by conventional standards (i.e., the probability of obtaining this effect by chance is .34). In sum, we observed a downward trend that departs from the counterfactual we estimated. However, we cannot say with a considerable probability that the observed negative trend was a result of the policy implementation. The most conservative interpretation is that, consistent with our hypothesis, the policy implementation did not have an effect on rape arrest rates.&lt;/p&gt;
-&lt;h1 id=&#34;discussion&#34;&gt;Discussion&lt;/h1&gt;
-&lt;p&gt;There have been calls within academic, advocacy, and policy circles over the past several years to increase accountability for those who commit sexual violence (Sacco &amp;amp; James, 2015; Valentine et al., 2019; Watkins, 2019). One proposed policy intervention to meet these appeals is that of mandatory SAK testing policies. It has been theorized that requiring all SAKs to be submitted to crime labs for DNA analysis will increase the ability to identify and hold offenders accountable (Campbell et al., 2019; Campbell &amp;amp; Fehler-Cabral, 2019; Davis et al., 2020; Lovell et al., 2019; Valentine et al., 2019).&lt;/p&gt;
-&lt;p&gt;In search of these desirable outcomes, as of 2019, 12 states have passed comprehensive SAK reform, which includes mandatory testing of newly obtained SAKs (Endthebacklog.org, 2020). Methodologically rigorous evaluations of these policies are scant (Hendrix et al., 2019; Strom &amp;amp; Hickman, 2016), but absolutely critical. If mandatory testing policies are not producing the desired results, further investigation is necessary to understand if and how policies could be amended or supplemented to better achieve the desired results. That is, if arrest rates for sexual assault are not increasing, there must be other determinative factors at play that should be addressed.&lt;/p&gt;
-&lt;p&gt;In this study, we examined the above question. We tested the effect of a mandatory SAK testing policy on the arrest rate for rapes in one jurisdiction after a mandatory SAK testing policy was implemented. We accomplished this by using a Bayesian structural time-series model with 120 longitudinal data points. As hypothesized, our model found that the mandatory SAK testing policy did not lead to an increase in the arrest rate for rape, but instead had a null, or possibly a negative, effect (probability = .66).&lt;/p&gt;
-&lt;p&gt;It appears then, at least in Westland, a mandatory SAK testing policy did not have the effect of increasing the arrest rate for rapes&amp;mdash;an often-stated goal of those who advocate for such policies (Davis et al., 2020). The implementation of mandatory testing policies &amp;ldquo;is not merely to test rape kits, but to investigate and prosecute the reported sexual assaults associated with these kits&amp;rdquo; (Campbell &amp;amp; Fehler-Cabral, 2019, p. 2). We agree. We call attention to several other studies, as well as anecdotal evidence obtained from conversations with the investigators at WPD, to help explain these findings.&lt;/p&gt;
-&lt;p&gt;The only other similar study we are aware of examines the effect of a statewide mandatory submission policy in Texas. Davis et al. (2020) found that implementing a statewide mandatory SAK submission policy did not increase sexual assault arrests or convictions, but did increase the workload for investigators and crime laboratories.&lt;/p&gt;
-&lt;aside&gt;
-&lt;p&gt;While not statistically significant, much like our analysis Davis et al. (2020) finds a general decrease in the sexual assault arrest rate after the mandatory testing policy implementation.&lt;/p&gt;
-&lt;/aside&gt;
-&lt;p&gt;The large influx of SAKs for testing created a backlog for incoming cases (not to be confused with previously untested kits). Through interviews with sexual assault investigators and crime lab personnel, Davis and colleagues found that after implementation of the mandatory testing policy, completion of analysis for newly incoming SAKs was taking 10-11 months. Investigators stated that having to wait up to a year for SAK analysis results commonly prompted victims to drop out of the criminal justice process. Davis et al. warn that mandated testing may be insufficient to promote meaningful changes without sufficient additional funding directed to the affected agencies.&lt;/p&gt;
-&lt;p&gt;Davis et al.&amp;rsquo;s (2020) description of underfunded crime laboratory resources following a mandatory SAK testing policy is mirrored in the state where Westland is located. In 2017, the state legislature passed a new state law, mandating submission of all SAKs throughout the state, effective immediately (much like the municipal SAK policy implemented solely in Westland in 2014). During the 2018 legislative session, news stories reported that the state crime laboratory could not keep up with testing demand. In response, the state legislature gave law enforcement agencies slightly expanded time frames to come into compliance. In 2020, the state crime laboratory requested millions in additional funding due to a 535% increase in SAK submissions between 2012 and 2019.&lt;/p&gt;
-&lt;p&gt;Hendrix et al. (2019) also call attention to a lack of resources for SAK testing. While they did not test the implementation of a mandatory testing policy specifically, their findings are instructive. Hendrix et al. found that a lack of resources primarily drives non-submission of SAKs by agencies without mandatory testing policies. The researchers found that the most important resource input, when attempting to increase the use of SAKs, is increasing the number of detectives assigned to investigating sexual assault cases. In their study, SAK submission increased 24% for every 100% increase in detectives.&lt;/p&gt;
-&lt;p&gt;Additionally, a common explanation for not submitting a SAK was the inability of crime labs to produce timely results. This limitation is relevant to our findings for the following reasons. Based on Hendrix et al.&amp;rsquo;s findings, voluntary investigative submission of SAKs rises with increased investigatory resources. However, a continuing reason to not submit SAKs is the inability of crime laboratories to provide timely turnaround on analyses, a concern echoed elsewhere (e.g., Strom &amp;amp; Hickman, 2016). Policies may be implemented that require all SAKs to be submitted, but without an adequate increase in resources for investigators and the crime laboratories responsible for analyzing the submitted SAKs, mandatory policies may harm victims in the sense that both investigating agencies and crime labs are logistically overwhelmed. This logjam may increase turnaround time on SAK analyses, and thus increase turnaround time on the entire investigation. The lengthy timeline between victim reporting and law enforcement action may lead to frustration from victims, and ultimately their withdrawal from the justice process (Kääriäinen &amp;amp; Sirén, 2011; Tarling &amp;amp; Morris, 2010).&lt;/p&gt;
-&lt;p&gt;Anecdotal evidence from interviews with investigators at WPD lends credence to this possibility. Before mandatory SAK submission policy implementation, investigators were already waiting extended periods for SAK DNA analysis results, ranging from six months to one year. Following the policy implementation, the average turnaround time for SAK DNA analyses increased to between eighteen months to two years. Investigators reported victim withdrawal due to these ever-growing wait times for SAK testing. The increased delay overlapped with a substantial increase in investigatory resources. From the policy implementation to 2018, the detective unit responsible for investigating sexual assaults increased by a third&amp;mdash;from six detectives to eight detectives. Three additional detectives have been added since 2018, indicating WPD is still attempting to balance its investigative resources. At the least, the nearly doubling of detectives in the special victims unit since policy implementation suggests that whatever mechanism drives the stagnant (or decreasing) arrest rate is not related to a decrease in the number of investigators.&lt;/p&gt;
-&lt;p&gt;It must be considered that perhaps submission of all SAKs simply does not provide the additional evidence needed to increase accountability for sexual assault offenders. While several studies indicate that testing SAKs is associated with positive case outcomes (Valentine et al., 2019), it must be remembered that the vast majority of sexual assault cases involve known perpetrators (Richards et al., 2019). If the hope is that DNA analysis from SAKs will increase arrest and prosecution for sexual assaults, expectations may need to be tempered. That is, DNA evidence is not especially helpful when prosecutors are trying to prove a lack of consent (Spohn &amp;amp; Tellis, 2014). While an increase in DNA profiles in CODIS will likely assist in identifying serial rapists, DNA evidence from non-serial sexual assaults where the suspect is known and claims consent may not provide the benefit desired by proponents of mandatory SAK submission policies.&lt;/p&gt;
-&lt;p&gt;Finally, it should also be considered that investigator discretion was interpreting the &amp;lsquo;downstream orientation&amp;rsquo; of prosecuting entities correctly in the majority of sexual assault cases (Alderden &amp;amp; Ullman, 2012; Frohmann, 1991; Richards et al., 2019; Spohn &amp;amp; Tellis, 2014, 2019). Prosecutorial discretion is a major source of influence in the handling of criminal cases (Mourtgos &amp;amp; Adams, 2019; Pfaff, 2017). While calls for improved sexual assault investigatory practices (Campbell et al., 2019; Campbell &amp;amp; Fehler-Cabral, 2019; Goodman-Williams &amp;amp; Campbell, 2019; Valentine et al., 2019) are warranted, perhaps additional attention should be paid to prosecutorial handling of sexual assault cases. So, while SAK testing may be mandated, and investigatory resources may be expanded and improved, increased accountability for sexual assault perpetrators remains dampened if sexual assault cases are not charged and prosecuted.&lt;/p&gt;
-&lt;p&gt;Policymakers, victims, and the public should continue to demand that sexual assault investigations receive full and proper treatment. SAK testing policies are a necessary component, but as our results show, mandating SAK testing is not sufficient on its own. We join Davis et al. (2020) in their emphasis on recommending elevated funding of the system around sexual assault investigations. If adequate funding and resources are not provided to the investigating agencies and crime laboratories concurrently with these policies, increased offender accountability is unlikely to occur, as outlined in our study, as well as other empirical research (Davis et al., 2020). Also, resources must be invested in other &amp;lsquo;victim-facing&amp;rsquo; services, particularly victim advocates who serve as liaisons between victims and the criminal justice system (Rich &amp;amp; Seffrin, 2013). Research demonstrates that victim advocates are associated with positive victim outcomes, including victim engagement with law enforcement and prosecutors (Patterson &amp;amp; Campbell, 2010).&lt;/p&gt;
-&lt;p&gt;Given that mandatory SAK testing is likely associated with increased wait times, victim advocates may be critical to keeping victims informed, and thus engaged in the process. Other potential components of a holistic approach to SAKs include online tracking systems that allow victims to follow the progress of their SAK in real-time without having to work through law enforcement officers or victim services (Carlisle, 2019). Again, given the historical undertesting of SAKs, increased criminal justice system transparency is likely critical to building and sustaining trust from victims of sexual assault.&lt;/p&gt;
-&lt;h1 id=&#34;limitations-and-future-research&#34;&gt;Limitations and Future Research&lt;/h1&gt;
-&lt;p&gt;We contribute important findings to this nascent body of knowledge, but this research is not without limitations. First, this study looks at a single jurisdiction. WPD is a large agency with approximately 600 sworn officers, with jurisdiction of a major metropolitan capital city in the Western US, and with a dedicated special victims unit. Though our results build on similar findings (Davis et al., 2020), that study also took place in a Western US state. To the degree that there may be regional differences, it is not clear how our findings will generalize to other parts of the US, or to smaller, exurban, suburban, and rural communities. We suspect that given the more considerable resources available to large metropolitan police forces, and the greater specialization of investigators found there, non-metropolitan jurisdictions may see negative effects of even greater magnitude and certainty than found in our study. However, that question must be answered in future research.&lt;/p&gt;
-&lt;p&gt;A second limitation is related to the scope of our research. We do not propose or pursue a full accounting of the costs, benefits, outputs, and outcomes of the mandatory SAK testing policy, but restrict our analysis to the primary indicator of clearance by arrest of rape cases. There are likely other benefits and costs incurred by the policy, and we encourage a fuller accounting in future work. Related to both generalizability and scope concerns, our single jurisdiction is located in a state that only recently passed a law mandating SAK testing across the state. While we are not able to analyze the results of that statewide law, we encourage other researchers to pursue similar research and build the empirical foundation for understanding the effect of mandatory SAK testing policies and laws. For a host of ethical and logistical reasons, it is not likely that a true randomized control trial will be available. As demonstrated here, Bayesian structural time-series provides an accessible and relatively easy method to leverage the implementation of those policies with natural experimental designs.&lt;/p&gt;
-&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
-&lt;p&gt;Mandatory testing of SAKs has been rapidly adopted in criminal justice investigations, but to date, the empirical record for understanding the effects of those policies has been extremely limited. Our findings suggest that following implementation of such a policy, the arrest rate in cases most likely to result in a SAK being performed showed, at best, no change, and a substantial probability of a decrease. These outcomes should give policy makers and police administrators pause. They suggest that going forward, a substantial increase in resources is necessary across the investigative and victim service systems before the desired change in criminal justice system outcomes are realized. Further, reforms and policy changes other than mandatory SAK testing policies are likely required to increase accountability for sexual assault offenders.&lt;/p&gt;
-&lt;p&gt;\newpage&lt;/p&gt;
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-&lt;p&gt;Alderden, M. A., &amp;amp; Ullman, S. E. (2012). Creating a more complete and current picture: Examining police and prosecutor decision-making when processing sexual assault cases. &lt;em&gt;Violence Against Women&lt;/em&gt;, 18(5), 525&amp;ndash;551. &lt;a href=&#34;https://doi.org/10.1177/1077801212453867&#34;&gt;https://doi.org/10.1177/1077801212453867&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Brandl, S. G., &amp;amp; Frank, J. (1994). The relationship between evidence, detective effort, and the disposition of burglary and robbery investigations. &lt;em&gt;American Journal of Police&lt;/em&gt;, 13(3), 149&amp;ndash;168.&lt;/p&gt;
-&lt;p&gt;Brodersen, K. H., Gallusser, F., Koehler, J., Remy, N., &amp;amp; Scott, S. L. (2015a). &lt;code&gt;CausalImpact&lt;/code&gt;. &lt;a href=&#34;http://google.github.io/CausalImpact/&#34;&gt;http://google.github.io/CausalImpact/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Brodersen, K. H., Gallusser, F., Koehler, J., Remy, N., &amp;amp; Scott, S. L. (2015b). Inferring causal impact using bayesian structural time-series models. &lt;em&gt;Annals of Applied Statistics&lt;/em&gt;, 9(1), 247&amp;ndash;274. &lt;a href=&#34;https://doi.org/10.1214/14-AOAS788&#34;&gt;https://doi.org/10.1214/14-AOAS788&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Brodersen, K. H., Gallusser, F., Koehler, J., Remy, N., &amp;amp; Scott, S. L. (2015c). Inferring causal impact using bayesian structural time-series models. &lt;em&gt;Annals of Applied Statistics&lt;/em&gt;, 9(1), 247&amp;ndash;274. &lt;a href=&#34;https://doi.org/10.1214/14-AOAS788&#34;&gt;https://doi.org/10.1214/14-AOAS788&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Butler, J. M. (2005). &lt;em&gt;Forensic DNA typing: Biology, technology, and genetics of STR markers&lt;/em&gt; (2nd ed.). Elsevier Academic Press.&lt;/p&gt;
-&lt;p&gt;Campbell, R., Feeney, H., Goodman-Williams, R., Sharma, D. B., &amp;amp; Pierce, S. J. (2019). Connecting the dots: Identifying suspected serial sexual offenders through forensic DNA evidence. &lt;em&gt;Psychology of Violence&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1037/vio0000243&#34;&gt;https://doi.org/10.1037/vio0000243&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Campbell, R., &amp;amp; Fehler-Cabral, G. (2019). The best way out is always through: Addressing the problem of untested sexual assault kits (SAKs) through multidisciplinary collaboration. &lt;em&gt;Victims &amp;amp; Offenders&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1080/15564886.2019.1679309&#34;&gt;https://doi.org/10.1080/15564886.2019.1679309&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Campbell, R., Fehler-Cabral, G., Pierce, S. J., Sharma, D. B., Bybee, D., Shaw, J., Horsford, S., &amp;amp; Feeney, H. (2015). The Detroit sexual assault kit (SAK) action research project (ARP), final report.&lt;/p&gt;
-&lt;p&gt;Carlisle, M. (2019). A new system to ensure that sexual assault cases aren&amp;rsquo;t forgotten. &lt;em&gt;The Atlantic&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Davis, R. C., Auchter, B., Wells, W., Camp, T., &amp;amp; Howley, S. (2020). The effects of legislation mandating DNA testing in sexual assault cases: Results in Texas. &lt;em&gt;Violence Against Women&lt;/em&gt;, 26(5), 417&amp;ndash;437. &lt;a href=&#34;https://doi.org/10.1177/1077801219838330&#34;&gt;https://doi.org/10.1177/1077801219838330&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;de Vocht, F., Tilling, K., Pliakas, T., Angus, C., Egan, M., Brennan, A., Campbell, R., &amp;amp; Hickman, M. (2017). The intervention effect of local alcohol licensing policies on hospital admission and crime: A natural experiment using a novel Bayesian synthetic time-series method. &lt;em&gt;Journal of Epidemiology &amp;amp; Community Health&lt;/em&gt;, 71(9), 912&amp;ndash;918. &lt;a href=&#34;https://doi.org/10.1136/jech-2017-208931&#34;&gt;https://doi.org/10.1136/jech-2017-208931&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Eck, J. E. (1983). &lt;em&gt;Solving crimes: The investigation of burglary and robbery&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Eck, J. E. (1992). &lt;em&gt;Solving crimes: The investigation of burglary and robbery&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Endthebacklog.org. (2020). &lt;a href=&#34;http://www.endthebacklog.org/&#34;&gt;http://www.endthebacklog.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Estrich, S. (1987). &lt;em&gt;Real rape&lt;/em&gt;. Harvard University Press.&lt;/p&gt;
-&lt;p&gt;FBI. (2019). Crime in the U.S. &lt;a href=&#34;https://ucr.fbi.gov/crime-in-the-u.s&#34;&gt;https://ucr.fbi.gov/crime-in-the-u.s&lt;/a&gt; Frohmann, L. (1991). Discrediting victims&#39; allegations of sexual assault: Prosecutorial accounts of case rejections. &lt;em&gt;Social Problems&lt;/em&gt;, 38(2), 213&amp;ndash;226.&lt;/p&gt;
-&lt;p&gt;Gies, S. V., Healy, E., &amp;amp; Stephenson, R. (2020). The evidence of effectiveness: Beyond the methodological standards. &lt;em&gt;Justice Evaluation Journal&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1080/24751979.2020.1727296&#34;&gt;https://doi.org/10.1080/24751979.2020.1727296&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Goodman-Williams, R., &amp;amp; Campbell, R. (2019). How to right a wrong: Empirically evaluating whether victim, offender, and assault characteristics can inform rape kit testing policies. &lt;em&gt;Journal of Trauma &amp;amp; Dissociation&lt;/em&gt;, 20(3), 388&amp;ndash;303. &lt;a href=&#34;https://doi.org/10.1080/15299732.2019.1592645&#34;&gt;https://doi.org/10.1080/15299732.2019.1592645&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Hendrix, J. A., Strom, K. J., Parish, W. J., Melton, P. A., &amp;amp; Young, A. R. (2019). An examination of sexual assault kit submission efficiencies among a nationally representative sample of law enforcement agencies. &lt;em&gt;Criminal Justice Policy Review&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1177/0887403419884730&#34;&gt;https://doi.org/10.1177/0887403419884730&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Jobling, M. A., &amp;amp; Gill, P. (2004). Encoded evidence: DNA in forensic analysis. &lt;em&gt;Nature Reviews Genetics&lt;/em&gt;, 5(10), 739&amp;ndash;751. &lt;a href=&#34;https://doi.org/10.1038/nrg1455&#34;&gt;https://doi.org/10.1038/nrg1455&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Kääriäinen, J., &amp;amp; Sirén, R. (2011). Trust in the police, generalized trust and reporting crime. &lt;em&gt;European Journal of Criminology&lt;/em&gt;, 8(1), 65&amp;ndash;81. &lt;a href=&#34;https://doi.org/10.1177/1477370810376562&#34;&gt;https://doi.org/10.1177/1477370810376562&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Keteyian, A. (2009). Exclusive: Rape in America: Justice denied. In CBS News. &lt;a href=&#34;https://www.cbsnews.com/news/exclusive-rape-in-america-justice-denied/&#34;&gt;https://www.cbsnews.com/news/exclusive-rape-in-america-justice-denied/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Langton, L., Berzofsky, M., Krebs, C., &amp;amp; Smiley-McDonald, H. (2012). BJS Special Report.&lt;/p&gt;
-&lt;p&gt;Latzer, B. (2016). &lt;em&gt;The rise and fall of violent crime in America&lt;/em&gt;. Encounter Books.&lt;/p&gt;
-&lt;p&gt;Liu, P., &amp;amp; Fabbri, M. (2016). More eyes, (no guns,) less crime: Estimating the effects of unarmed private patrols on crime using a Bayesian structural time-series model.&lt;/p&gt;
-&lt;p&gt;Lonsway, K. A., &amp;amp; Archambault, J. (2012). The &amp;ldquo;justicegGap&amp;rdquo; for sexual assault cases: Future directions for research and reform. &lt;em&gt;Violence Against Women&lt;/em&gt;, 18(2), 145&amp;ndash;168. &lt;a href=&#34;https://doi.org/10.1177/1077801212440017&#34;&gt;https://doi.org/10.1177/1077801212440017&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Lovell, R., Huang, W., Overman, L., Flannery, D., &amp;amp; Klingenstein, J. (2019). Offending histories and typologies of suspected sexual offenders identified via untested sexual assault kits. &lt;em&gt;Criminal Justice and Behavior&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1177/0093854819896385&#34;&gt;https://doi.org/10.1177/0093854819896385&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Lovell, R., Luminais, M., Flannery, D. J., Bell, R., &amp;amp; Kyker, B. (2018). Describing the process and quantifying the outcomes of the Cuyahoga County sexual assault kit initiative. &lt;em&gt;Journal of Criminal Justice&lt;/em&gt;, 57, 106&amp;ndash;115. &lt;a href=&#34;https://doi.org/10.1016/j.jcrimjus.2018.05.012&#34;&gt;https://doi.org/10.1016/j.jcrimjus.2018.05.012&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Lovrich, N. P., Pratt, T. C., Gaffney, M., Johnson, C., Asplen, C., Hurst, L., &amp;amp; Schellberg, T. (2004). National forensic DNA study report, final report.&lt;/p&gt;
-&lt;p&gt;Lum, C., Wellford, C. F., Scott, T., Vovak, H., &amp;amp; Scherer, J. A. (2018). Identifying effective investigative practices: A national study using trajectory analysis, case studies, and investigative data.&lt;/p&gt;
-&lt;p&gt;Mcdowall, D., &amp;amp; Curtis, K. M. (2015). Seasonal variation in homicide and assault across large U.S. cities. &lt;em&gt;Homicide Studies&lt;/em&gt;, 19(4), 303&amp;ndash;325. &lt;a href=&#34;https://doi.org/10.1177/1088767914536985&#34;&gt;https://doi.org/10.1177/1088767914536985&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Mcdowall, D., Loftin, C., &amp;amp; Pate, M. (2012). Seasonal cycles in crime. &lt;em&gt;Journal of Quantitative Criminology&lt;/em&gt;, 28(3), 389&amp;ndash;410. &lt;a href=&#34;https://doi.org/10.1007/s&#34;&gt;https://doi.org/10.1007/s&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Mourtgos, S. M., &amp;amp; Adams, I. T. (2019). The effect of prosecutorial actions on deterrence: A county-level analysis. &lt;em&gt;Criminal Justice Policy Review&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1177/0887403419829201&#34;&gt;https://doi.org/10.1177/0887403419829201&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Murphy, K., &amp;amp; Barkworth, J. (2014). Victim willingness to report crime to police: Does procedural justice or outcome matter most? &lt;em&gt;Victims &amp;amp; Offenders&lt;/em&gt;, 9(2), 178&amp;ndash;204. &lt;a href=&#34;https://doi.org/10.1080/15564886.2013.872744&#34;&gt;https://doi.org/10.1080/15564886.2013.872744&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Office of the Press Secretary. (2015). Fact sheet: Investments to reduce the national rape kit backlog and combat violence against women. &lt;a href=&#34;https://obamawhitehouse.archives.gov/the-press-office/2015/03/16/fact-sheet-investments-reduce-national-rape-kit-backlog-and-combat-viole&#34;&gt;https://obamawhitehouse.archives.gov/the-press-office/2015/03/16/fact-sheet-investments-reduce-national-rape-kit-backlog-and-combat-viole&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Pattavina, A., Morabito, M., &amp;amp; Williams, L. M. (2016). Examining connections between the police and prosecution in sexual assault case processing: Does the use of exceptional clearance facilitate a downstream orientation? &lt;em&gt;Victims &amp;amp; Offenders&lt;/em&gt;, 11(2), 315&amp;ndash;334. &lt;a href=&#34;https://doi.org/10.1080/15564886.2015.1046622&#34;&gt;https://doi.org/10.1080/15564886.2015.1046622&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Patterson, D., &amp;amp; Campbell, R. (2010). Why rape survivors participate in the criminal justice system. &lt;em&gt;Journal of Community Psychology&lt;/em&gt;, 38(2), 191&amp;ndash;205. &lt;a href=&#34;https://doi.org/10.1002/jcop.20359&#34;&gt;https://doi.org/10.1002/jcop.20359&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Peterson, J., Johnson, D., Herz, D., Graziano, L., &amp;amp; Oehler, T. (2012). Sexual assault kit backlog study.&lt;/p&gt;
-&lt;p&gt;Pfaff, J. F. (2017). &lt;em&gt;Locked in: The true causes of mass incarceration and how to achieve real reform&lt;/em&gt;. Basic Books.&lt;/p&gt;
-&lt;p&gt;Ratcliffe, J. H., Perenzin, A., &amp;amp; Sorg, E. T. (2017). Operation Thumbs Down A quasi-experimental evaluation of an FBI gang takedown in South Central Los Angeles. &lt;em&gt;Policing: An International Journal of Police Stategies &amp;amp; Management&lt;/em&gt;, 40(2), 442&amp;ndash;458. &lt;a href=&#34;https://doi.org/10.1108/PIJPSM-01-2016-0004&#34;&gt;https://doi.org/10.1108/PIJPSM-01-2016-0004&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Rich, K., &amp;amp; Seffrin, P. (2013). Police officers&#39; collaboration with rape victim advocates: Barriers and facilitators. &lt;em&gt;Violence and Victims&lt;/em&gt;, 28(4), 687&amp;ndash;696.&lt;/p&gt;
-&lt;p&gt;Richards, T. N., Skubak, M. S., &amp;amp; Wright, E. M. (2019). When victims refuse and prosecutors decline: Examining exceptional clearance in sexual assault cases. &lt;em&gt;Crime &amp;amp; Delinquency&lt;/em&gt;, 65(4), 474&amp;ndash;498. &lt;a href=&#34;https://doi.org/10.1177/0011128719828351&#34;&gt;https://doi.org/10.1177/0011128719828351&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Sacco, L. N., &amp;amp; James, N. (2015). Backlog of sexual assault evidence: In brief.&lt;/p&gt;
-&lt;p&gt;Scott, T. L., Wellford, C., Lum, C., &amp;amp; Vovak, H. (2019). Variability of crime clearance among police agencies. &lt;em&gt;Police Quarterly&lt;/em&gt;, 22(1), 82&amp;ndash;111. &lt;a href=&#34;https://doi.org/10.1177/1098611118796597&#34;&gt;https://doi.org/10.1177/1098611118796597&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Shadish, W. R., Cook, T. D., &amp;amp; Campbell, D. T. (2002). Quasi-experiments: Interrupted time-series designs. Experimental and quasi-experimental designs for generalized causal inference.&lt;/p&gt;
-&lt;p&gt;Spohn, C., &amp;amp; Tellis, K. (2014). &lt;em&gt;Policing and prosecuting sexual assault: Inside the criminal justice system&lt;/em&gt;. Lynne Reinner Publishers, Inc. &lt;a href=&#34;https://doi.org/10.1145/1242421.1242427&#34;&gt;https://doi.org/10.1145/1242421.1242427&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Spohn, C., &amp;amp; Tellis, K. (2019). Sexual assault case outcomes: Disentangling the overlapping decisions of police and prosecutors. &lt;em&gt;Justice Quarterly&lt;/em&gt;, 36(3), 383&amp;ndash;411. &lt;a href=&#34;https://doi.org/10.1080/07418825.2018.1429645&#34;&gt;https://doi.org/10.1080/07418825.2018.1429645&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Strom, K. J., &amp;amp; Hickman, M. J. (2016). Untested sexual assault kits: Searching for an empirical foundation to guide forensic case processing decisions. &lt;em&gt;Criminology &amp;amp; Public Policy&lt;/em&gt;, 15(2), 593&amp;ndash;601. &lt;a href=&#34;https://doi.org/10.1111/1745-9133.12213&#34;&gt;https://doi.org/10.1111/1745-9133.12213&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Sunshine, J., &amp;amp; Tyler, T. R. (2003). The Role of Procedural Justice and Legitimacy in Shaping Public Support for Policing. &lt;em&gt;Law &amp;amp; Society Review&lt;/em&gt;, 37(3), 513&amp;ndash;548.&lt;/p&gt;
-&lt;p&gt;Tankebe, J. (2013). Viewing Things Differently: The Dimensions of Public Perceptions of Police Legitimacy. &lt;em&gt;Criminology&lt;/em&gt;, 51(1), 103&amp;ndash;135. &lt;a href=&#34;https://doi.org/10.1111/j.1745-9125.2012.00291.x&#34;&gt;https://doi.org/10.1111/j.1745-9125.2012.00291.x&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Tarling, R., &amp;amp; Morris, K. (2010). Reporting crime to the police. &lt;em&gt;The British Journal of Criminology&lt;/em&gt;, 50(3), 474&amp;ndash;490. &lt;a href=&#34;https://doi.org/10.1093/bjc/azqO&#34;&gt;https://doi.org/10.1093/bjc/azqO&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Valentine, J. L., Sekula, L. K., Cook, L. J., Campbell, R., Colbert, A., &amp;amp; Weedn, V. W. (2019). Justice Denied: Low Submission Rates of Sexual Assault Kits and the Predicting Variables. &lt;em&gt;Journal of Interpersonal Violence&lt;/em&gt;, 34(17), 3547&amp;ndash;3573. &lt;a href=&#34;https://doi.org/10.1177/0886260516681881&#34;&gt;https://doi.org/10.1177/0886260516681881&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Van de Schoot, R., &amp;amp; Depaoli, S. (2014). Bayesian analyses: Where to start and what to report. &lt;em&gt;The European Health Psychologist&lt;/em&gt;, 16(2), 75&amp;ndash;84.&lt;/p&gt;
-&lt;p&gt;Watkins, A. (2019). Old rape kits finally got tested. 64 attackers were convicted. In &lt;em&gt;The New York Times&lt;/em&gt;. &lt;a href=&#34;https://www.nytimes.com/2019/03/12/nyregion/rape-kit-tests.html&#34;&gt;https://www.nytimes.com/2019/03/12/nyregion/rape-kit-tests.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Wellford, C., &amp;amp; Cronin, J. (1999). An analysis of variables affecting the clearance of homicides: A multistate study. &lt;em&gt;Justice Research and Statistics Association&lt;/em&gt;. &lt;a href=&#34;http://jrsainfo.org/pubs/reports/homicides_report.pdf&#34;&gt;http://jrsainfo.org/pubs/reports/homicides_report.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Wells, W. (2016). Some considerations when making decisions about prioritizing sexual assault kits for forensic testing. &lt;em&gt;Criminology and Public Policy&lt;/em&gt;, 15(2), 585&amp;ndash;592. &lt;a href=&#34;https://doi.org/10.1111/1745-9133.12206&#34;&gt;https://doi.org/10.1111/1745-9133.12206&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Wells, W., Fansher, A. K., &amp;amp; Campbell, B. A. (2019). The results of CODIS-hit investigations in a sample of cases with unsubmitted sexual assault kits. &lt;em&gt;Crime &amp;amp; Delinquency&lt;/em&gt;, 65(1), 122&amp;ndash;148. &lt;a href=&#34;https://doi.org/10.1177/0011128717732506&#34;&gt;https://doi.org/10.1177/0011128717732506&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Ylang, N., &amp;amp; Holtfreter, K. (2019). The Decision to arrest in sexual assault case processing: A test of Black&amp;rsquo;s theory of the behavior of law. &lt;em&gt;Violence Against Women&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1177/1077801219862632&#34;&gt;https://doi.org/10.1177/1077801219862632&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Yung, C. R. (2013). How to lie with rape statistics: America&amp;rsquo;s hidden rape crisis. &lt;em&gt;Iowa Law Review&lt;/em&gt;, 99, 1197&amp;ndash;1256.&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;Corresponding author: Scott M. Mourtgos, University of Utah, scott.mourtgos@utah.edu &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;
+      <title>The Unintended Consequences of State-Level Drug Decriminalization Laws: Implications for Arrest and Crime Rates</title>
+      <link>https://ianadamsresearch.com/publication/w4412756797/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4412756797/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;No summary available.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v0, Unknown date)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 1 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.21428/cb6ab371.396c1be3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Elevated Police Turnover Following the Summer of George Floyd Protests</title>
+      <link>https://ianadamsresearch.com/publication/w4404787712/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4404787712/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Police resignations surged by 279% after the George Floyd protests in 2020, while retirements and firings remained steady, creating a staffing crisis that continues today. This massive wave of voluntary departures is undermining police departments&#39; ability to serve their communities effectively. The findings suggest that improving how officers are treated within their organizations and providing better support could help address this ongoing retention problem.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v1, January 2026)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 0 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.22215/apb.v1i2.5007&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Reconsidering a prominent finding on the spillover effects of police killings of unarmed Black Americans</title>
+      <link>https://ianadamsresearch.com/publication/w4391163440/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4391163440/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;A 2018 study claimed that police killings of unarmed Black Americans harm the mental health of Black people living in the same state, but a new analysis found this conclusion was based on flawed statistical methods. When researchers corrected these problems and removed the influence of a tiny number of unusual survey responses (less than 1% of the data), the original finding disappeared entirely. This matters because it challenges a widely-cited piece of evidence about how police violence affects Black communities and highlights how sensitive some research conclusions can be to statistical choices.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v1, January 2026)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 0 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.21428/cb6ab371.a9cf5738&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Staffing Levels are the Most Important Factor Influencing Police Response Times</title>
+      <link>https://ianadamsresearch.com/publication/w4391970905/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4391970905/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Researchers analyzed seven years of data from Salt Lake City police to understand what factors most affect how quickly officers respond to emergency calls. They found that having adequate police staffing levels matters far more than other factors like call volume or the amount of proactive police work being done. This finding provides important evidence for police departments trying to balance their budgets and staffing decisions while maintaining effective emergency response times for the public.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v1, January 2026)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 0 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.21428/cb6ab371.893efeb7&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Staffing levels are the most important factor influencing police response times</title>
+      <link>https://ianadamsresearch.com/publication/w4391919703/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4391919703/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Researchers analyzed seven years of police data from Salt Lake City to determine what factors most affect how quickly officers respond to emergency calls, finding that having enough officers on duty matters far more than other factors like call volume or proactive policing activities. The study reveals that while adding more officers improves response times across all types of calls, the biggest improvements occur for lower-priority incidents rather than the most serious emergencies. This evidence provides police departments with concrete data to support staffing decisions and helps explain why understaffed departments struggle to maintain quick response times even when they reduce other activities.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v1, January 2026)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 15 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1093/police/paae002&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An experimental look at reasonable suspicion and police discretion</title>
+      <link>https://ianadamsresearch.com/publication/w4365520122/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4365520122/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Researchers tested whether police officers can accurately identify when they have legal grounds to extend a traffic stop for further investigation by presenting 396 officers with hypothetical scenarios based on real court cases. While officers generally made correct legal judgments about when &amp;ldquo;reasonable suspicion&amp;rdquo; existed, they showed restraint in actually using their authority to extend stops even when legally justified to do so. This suggests that understanding police behavior requires looking beyond demographics and locations to examine how officers interpret the specific facts of each situation they encounter.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v1, January 2026)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 1 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1108/pijpsm-01-2023-0002&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An experimental look at reasonable suspicion and police discretion</title>
+      <link>https://ianadamsresearch.com/publication/w4386174366/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4386174366/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;No summary available.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v0, Unknown date)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 0 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.21428/cb6ab371.10a3cf17&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Memphis police numbers dropped by nearly a quarter in recent years – were staffing shortages a factor in the killing of Tyre Nichols?</title>
+      <link>https://ianadamsresearch.com/publication/w4413500408/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4413500408/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;No summary available.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v0, Unknown date)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 0 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.64628/aai.ysmjmfrcj&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Turnover in Large US Police Agencies Following the George Floyd Protests</title>
+      <link>https://ianadamsresearch.com/publication/w4322773339/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4322773339/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Researchers analyzed staffing data from 14 large police agencies to see if officer departures increased after the 2020 George Floyd protests and found that 11 of the 14 agencies experienced significantly higher resignation and retirement rates - with some losing up to 16% more officers than expected. These findings show that public criticism and protests following high-profile police incidents can lead to substantial workforce losses in police departments. Understanding these staffing changes is important because officer shortages can affect how police departments operate and serve their communities.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v1, January 2026)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 2 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.31219/osf.io/r9mjf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Turnover in Large US Policing Agencies Following the George Floyd Protests</title>
+      <link>https://ianadamsresearch.com/publication/w4385803195/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4385803195/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This study found that most large police departments across the US experienced significant increases in officer resignations and retirements in the two years following the 2020 protests over George Floyd&amp;rsquo;s murder, with eleven of fourteen agencies losing between 2% and 16% more personnel than would normally be expected. These staffing losses matter because they can affect police departments&#39; ability to respond to calls, maintain community relationships, and carry out daily operations. The research helps quantify how nationwide protests and criticism of policing have translated into real workforce changes within police agencies.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v1, January 2026)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 5 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.21428/cb6ab371.4a588631&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Turnover in large US policing agencies following the George Floyd protests</title>
+      <link>https://ianadamsresearch.com/publication/w4385824818/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4385824818/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;No summary available.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v0, Unknown date)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 61 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1016/j.jcrimjus.2023.102105&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comparing 911 and Emergency Hotline Calls for Domestic Violence in Seven Cities: What Happened When People Started Staying Home Due to COVID-19?</title>
+      <link>https://ianadamsresearch.com/publication/w3205435950/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w3205435950/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Researchers analyzed emergency calls in seven U.S. cities and found that domestic violence calls to both police (about 1,030 more calls) and emergency hotlines (about 1,671 more calls) increased significantly during 2020 when COVID-19 stay-at-home orders kept people confined to their homes. This finding matters for police departments because it shows how external crises can suddenly change the types and volume of calls officers must respond to, requiring departments to adjust their resources and response strategies. The study also demonstrates how police can work more effectively with domestic violence organizations by sharing data to better track and respond to these crimes in their communities.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v1, January 2026)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 6 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.21428/cb6ab371.cdec20ab&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comparing 911 and emergency hotline calls for domestic violence in seven cities: What happened when people started staying home due to COVID‐19?</title>
+      <link>https://ianadamsresearch.com/publication/w3210807659/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w3210807659/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Researchers analyzed emergency calls in seven U.S. cities during COVID-19 and found that domestic violence calls to both police (about 1,030 more calls) and emergency hotlines (about 1,671 more calls) increased significantly as people stayed home during the pandemic. This finding matters for police departments because it shows how external crises can create predictable spikes in certain types of emergency calls, helping them better prepare and allocate resources during future emergencies. The study also demonstrates that tracking data from multiple sources in real-time can help police and community organizations work together more effectively to respond to domestic violence.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v1, January 2026)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 33 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1111/1745-9133.12564&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Elevated police turnover following the summer of George Floyd protests: A synthetic control study</title>
+      <link>https://ianadamsresearch.com/publication/w3197019956/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w3197019956/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Police officers quit their jobs at nearly three times the normal rate following the widespread protests after George Floyd&amp;rsquo;s death in 2020, according to a study that tracked employment data from a large police department over five years. While retirements and firings remained steady, voluntary resignations spiked by 279% and are predicted to stay high, creating a staffing crisis that could affect departments&#39; ability to respond to crime and serve communities. This finding suggests that periods of intense public scrutiny and criticism can trigger significant workforce losses in policing, forcing police leaders to find new ways to retain officers and maintain public safety operations.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v1, January 2026)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 137 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1111/1745-9133.12556&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mandatory Sexual Assault Kit Testing Policies and Arrest Trends: A Natural Experiment</title>
+      <link>https://ianadamsresearch.com/publication/w3133316921/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w3133316921/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Researchers examined whether requiring police to test all sexual assault evidence kits would lead to more arrests for rape, but found that arrest rates actually declined or stayed the same after the policy was implemented in one large city. This challenges the common assumption that mandatory testing of rape kits automatically translates into more offenders being caught and arrested. The findings suggest that police departments need additional reforms beyond just testing requirements to effectively investigate sexual assault cases and hold perpetrators accountable.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v1, January 2026)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 15 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1080/24751979.2021.1881410&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mandatory Sexual Assault Kit Testing Policies and Arrest Trends: A Natural Experiment</title>
+      <link>https://ianadamsresearch.com/publication/w4240058952/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://ianadamsresearch.com/publication/w4240058952/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;No summary available.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(AI-generated summary, v0, Unknown date)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation-information&#34;&gt;Citation Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Citations:&lt;/strong&gt; 0 (as of January 2026)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.21428/cb6ab371.52b3ebe3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View Publication&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
