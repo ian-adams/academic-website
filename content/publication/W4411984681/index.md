@@ -61,6 +61,6 @@ Researchers surveyed over 2,400 people to understand how the public views police
 
 ## Citation Information
 
-**Citations:** 0 (as of January 2026)
+**Citations:** 1 (as of January 2026)
 
 [View Publication](https://doi.org/10.1177/10986111251357508)

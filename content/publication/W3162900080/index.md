@@ -40,6 +40,6 @@ No summary available.
 
 ## Citation Information
 
-**Citations:** 30 (as of January 2026)
+**Citations:** 31 (as of January 2026)
 
 [View Publication](https://doi.org/10.1016/j.jcrimjus.2021.101818)

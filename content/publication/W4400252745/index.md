@@ -62,6 +62,6 @@ Researchers surveyed over 1,300 police chiefs and sheriffs across the U.S. to un
 
 ## Citation Information
 
-**Citations:** 8 (as of January 2026)
+**Citations:** 9 (as of January 2026)
 
 [View Publication](https://doi.org/10.1002/pam.22620)

@@ -64,6 +64,6 @@ Researchers studied whether gunshot detection technology - acoustic sensors that
 
 ## Citation Information
 
-**Citations:** 0 (as of January 2026)
+**Citations:** 1 (as of January 2026)
 
 [View Publication](https://doi.org/10.1186/s40163-025-00259-5)

@@ -63,6 +63,6 @@ A survey of 4,200 people found that Americans are more supportive of local polic
 
 ## Citation Information
 
-**Citations:** 31 (as of January 2026)
+**Citations:** 33 (as of January 2026)
 
 [View Publication](https://doi.org/10.1111/puar.13754)

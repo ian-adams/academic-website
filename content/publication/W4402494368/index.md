@@ -16,7 +16,15 @@ publication_types:
 publication: Journal of Experimental Criminology
 publication_short: ''
 abstract: No abstract available
-summary: ''
+summary: This study critiques a prominent scholar's claim that randomized controlled
+  trials (RCTs) - the gold standard research method - don't work in criminal justice
+  and should be abandoned in favor of less rigorous approaches. The authors argue
+  this conclusion is flawed because it inappropriately combines results from vastly
+  different studies with different designs, populations, and outcomes - like mixing
+  apples and oranges to draw broad conclusions. Instead of abandoning rigorous research
+  methods, police departments and criminal justice agencies should use more comprehensive
+  study designs borrowed from medicine that can better account for the complex, real-world
+  factors that affect whether reforms actually work and last over time.
 featured: false
 url_pdf: ''
 url_code: ''
@@ -38,9 +46,9 @@ links:
 
 ## Summary
 
-No summary available.
+This study critiques a prominent scholar's claim that randomized controlled trials (RCTs) - the gold standard research method - don't work in criminal justice and should be abandoned in favor of less rigorous approaches. The authors argue this conclusion is flawed because it inappropriately combines results from vastly different studies with different designs, populations, and outcomes - like mixing apples and oranges to draw broad conclusions. Instead of abandoning rigorous research methods, police departments and criminal justice agencies should use more comprehensive study designs borrowed from medicine that can better account for the complex, real-world factors that affect whether reforms actually work and last over time.
 
-*(AI-generated summary, v0, Unknown date)*
+*(AI-generated summary, v1, January 2026)*
 
 ## Citation Information
 

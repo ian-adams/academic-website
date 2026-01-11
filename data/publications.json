@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-01-08T02:00:19Z",
+    "last_updated": "2026-01-11T04:10:51Z",
     "total_articles": 104,
     "synopsis_prompt_version": 1,
     "author_name": "Ian Adams",
@@ -35,7 +35,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -51,11 +51,15 @@
       "abstract": "Police departments in the United States are rapidly adopting body-worn cameras (BWCs). To date, no study has investigated the effects of BWCs on police officers themselves, despite evidence suggesting negative effects of electronic performance monitoring on employee well-being. Police officers already experience higher levels of burnout than other professions. We hypothesize that the intense surveillance of BWCs will manifest in how police officers perceive the organizational support of their departments and will increase burnout. We test these hypotheses using data from patrol officers ( n = 271) and structural equation modeling. We find BWCs increase police officer burnout, and this effect is statistically different from zero. We also find that BWCs decrease officers’ perceived organizational support, which mediates the relationship between BWCs and burnout. Greater perceived organizational support can blunt the negative effects of BWCs. Our study is the first to situate effects on officers at the center of BWC literature.",
       "doi": "https://doi.org/10.1177/1098611118783987",
       "openalex_url": "https://openalex.org/W2857679761",
-      "citation_count": 111,
+      "citation_count": 112,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 111
+        },
+        {
+          "date": "2026-01-11",
+          "count": 112
         }
       ],
       "llm_synopsis": "A study of 271 police officers found that wearing body cameras increases officer burnout and makes them feel less supported by their departments, likely because the cameras create a sense of constant surveillance at work. However, when police departments actively work to support their officers, this can reduce the negative effects of body camera programs. This research is important because it shows that body cameras don't just affect police interactions with the public—they also impact officer well-being, which departments need to consider when implementing these technologies.",
@@ -64,7 +68,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -81,11 +85,15 @@
       "abstract": "No abstract available",
       "doi": "https://doi.org/10.1016/j.jenvp.2020.101476",
       "openalex_url": "https://openalex.org/W3048745813",
-      "citation_count": 95,
+      "citation_count": 97,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 95
+        },
+        {
+          "date": "2026-01-11",
+          "count": 97
         }
       ],
       "llm_synopsis": "",
@@ -94,7 +102,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -110,11 +118,15 @@
       "abstract": "How do public expectations of police use-of-force align with the strict professional and legal guidelines under which police officers train and operate? This is a largely unexamined but salient question in the use-of-force literature and is important given the ongoing public discourse regarding police use-of-force, community standards, and perceived gaps between the two. This study focuses on two main research questions: Are substantial portions of the public predisposed to disapprove of legally reasonable police use-of-force? If so, what are the principal correlates of those disapproving attitudes? We analyze responses (n = 20,781) to General Social Survey (GSS) questions from 1990 through 2018 entailing police use-of-force scenarios that are prima facie legally reasonable. We find a substantial proportion of GSS respondents have expressed their disapproval of legally reasonable, justifiable police uses-of-force over the entire period, and such disapproval has increased over time. Causes and policy implications of this misalignment are discussed.",
       "doi": "https://doi.org/10.1080/07418825.2019.1679864",
       "openalex_url": "https://openalex.org/W2982191876",
-      "citation_count": 68,
+      "citation_count": 70,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 68
+        },
+        {
+          "date": "2026-01-11",
+          "count": 70
         }
       ],
       "llm_synopsis": "A large-scale study of public opinion found that many Americans disapprove of police force even when it's legally justified, and this disapproval has grown over nearly three decades from 1990 to 2018. This research reveals a significant gap between what the law considers reasonable police conduct and what the public finds acceptable. Understanding this disconnect is crucial for police departments and policymakers because it helps explain why police-community tensions persist even in cases where officers follow proper legal procedures.",
@@ -123,7 +135,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -153,7 +165,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -172,11 +184,15 @@
       "abstract": "Abstract Law enforcement agencies are increasingly adopting artificial intelligence (AI)‐powered tools. While prior work emphasizes the technological features driving public opinion, we investigate how public trust and support for AI in government vary with the institutional context. We administer a pre‐registered survey experiment to 4200 respondents about AI use cases in policing to measure responsiveness to three key institutional factors: bureaucratic proximity (i.e., local sheriff versus national Federal Bureau of Investigation), algorithmic targets (i.e., public targets via predictive policing versus detecting officer misconduct through automated case review), and agency capacity (i.e., necessary resources and expertise). We find that the public clearly prefers local over national law enforcement use of AI, while reactions to different algorithmic targets are more limited and politicized. However, we find no responsiveness to agency capacity or lack thereof. The findings suggest the need for greater scholarly, practitioner, and public attention to organizational, not only technical, prerequisites for successful government implementation of AI.",
       "doi": "https://doi.org/10.1111/puar.13754",
       "openalex_url": "https://openalex.org/W4387487008",
-      "citation_count": 31,
+      "citation_count": 33,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 31
+        },
+        {
+          "date": "2026-01-11",
+          "count": 33
         }
       ],
       "llm_synopsis": "A survey of 4,200 people found that Americans are more supportive of local police departments using artificial intelligence tools than federal agencies like the FBI, but they show little concern about whether agencies have the necessary resources and expertise to use AI properly. The research reveals that public opinion about AI in policing depends heavily on which agency is using the technology rather than what the technology actually does or how well-prepared the agency is to implement it. This matters because it suggests police departments need to focus on building community trust and demonstrating local accountability when introducing AI tools, rather than just proving the technology works.",
@@ -185,7 +201,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -213,7 +229,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -242,7 +258,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -258,11 +274,15 @@
       "abstract": "No abstract available",
       "doi": "https://doi.org/10.1016/j.jcrimjus.2019.101627",
       "openalex_url": "https://openalex.org/W2970817416",
-      "citation_count": 50,
+      "citation_count": 52,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 50
+        },
+        {
+          "date": "2026-01-11",
+          "count": 52
         }
       ],
       "llm_synopsis": "",
@@ -271,7 +291,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -300,7 +320,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -331,7 +351,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -347,11 +367,15 @@
       "abstract": "Purpose This study introduces emotional labor into an analysis of multiple dimensions of burnout in sworn and civilian employees across three law enforcement agencies. Design/methodology/approach Using data from a survey of law enforcement employees in a metropolitan police department, a full-service sheriff's department, and a state corrections agency located in the western United States ( n = 1,921), we test the explanatory power of an emotional labor-based model of burnout. Findings Results partially confirm the lone prior study to examine civilian and sworn personnel. Sworn and civilian employees experience variant levels of emotional exhaustion and depersonalization, though the underlying emotional labor correlates are significantly related to burnout for both groups. Further, we extend prior results by capturing multiple facets of burnout as well as contributing an emotional labor explanation for burnout, while controlling for individual demographic characteristics and agency type. Research limitations/implications Law enforcement agencies rely upon non-sworn employees to support their missions. The experience of non-sworn law enforcement personnel is under-researched in both the emotional labor and law enforcement organizational literature. Burnout is a phenomenon that has high costs for both employees and organizations, particularly in the law enforcement context. Investigating the emotional labor experience of employees is critical for practitioners who are tasked with effectively managing both groups. Originality/value One previous study has investigated the emotional labor of civilians in law enforcement and used community-level predictions for burnout. This study builds on those findings by capturing two facets of burnout rather than the lone gauge of burnout used in the previous study. Furthermore, we use an emotional labor model to investigate emotional exhaustion and depersonalization reported by sworn and civilian personnel.",
       "doi": "https://doi.org/10.1108/pijpsm-06-2019-0094",
       "openalex_url": "https://openalex.org/W3012287516",
-      "citation_count": 32,
+      "citation_count": 33,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 32
+        },
+        {
+          "date": "2026-01-11",
+          "count": 33
         }
       ],
       "llm_synopsis": "This study examined how managing emotions on the job contributes to burnout among both sworn police officers and civilian employees across police departments, sheriff's offices, and corrections agencies. The research found that while officers and civilian staff experience different levels of emotional exhaustion and feeling disconnected from their work, the emotional demands of the job significantly increase burnout risk for both groups. These findings matter because law enforcement agencies increasingly rely on civilian employees to support their operations, yet little research has explored how the emotional stress of police work affects non-sworn personnel who interact with the public and support critical functions.",
@@ -360,7 +384,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -390,7 +414,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -407,11 +431,15 @@
       "abstract": "No abstract available",
       "doi": "https://doi.org/10.1016/j.jcrimjus.2021.101818",
       "openalex_url": "https://openalex.org/W3162900080",
-      "citation_count": 30,
+      "citation_count": 31,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 30
+        },
+        {
+          "date": "2026-01-11",
+          "count": 31
         }
       ],
       "llm_synopsis": "",
@@ -420,7 +448,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -449,7 +477,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -465,11 +493,15 @@
       "abstract": "No abstract available",
       "doi": "https://doi.org/10.1016/j.ijlcj.2019.100358",
       "openalex_url": "https://openalex.org/W2988107748",
-      "citation_count": 25,
+      "citation_count": 27,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 25
+        },
+        {
+          "date": "2026-01-11",
+          "count": 27
         }
       ],
       "llm_synopsis": "",
@@ -478,7 +510,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -494,11 +526,15 @@
       "abstract": "COVID-19 has created tremendous operational difficulties for law enforcement agencies, with substantial portions of their staff quarantined for either exposure or infection. With the rollout of a vaccine beginning in early 2021, there is hoped for relief on the horizon. However, to date, no study has reported the vaccine's effect on infection rates within the law enforcement workforce. We address that gap with a report on a single large agency's experience, using data on officer positivity rates gathered over 341 days. During the immunization period, employees accepted vaccination at over 70% uptake. Results show the vaccine eliminated new cases of COVID-19 among the agency's nearly 700 employees within weeks. As other agencies consider their vaccination programs, they should consider communicating early and often about the impact of the pandemic on operations and the efficacy of vaccination, including the results reported here.",
       "doi": "https://doi.org/10.1080/15614263.2021.1894937",
       "openalex_url": "https://openalex.org/W3131117914",
-      "citation_count": 22,
+      "citation_count": 23,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 22
+        },
+        {
+          "date": "2026-01-11",
+          "count": 23
         }
       ],
       "llm_synopsis": "Researchers studied COVID-19 infection rates among nearly 700 police officers over almost a year and found that vaccination essentially eliminated new infections within weeks of the agency's immunization program, which achieved over 70% employee participation. This finding is significant because COVID-19 had severely disrupted police operations by forcing large numbers of officers into quarantine due to infections and exposures. The results demonstrate that vaccination programs can effectively restore police departments to full operational capacity by protecting their workforce from the virus.",
@@ -507,7 +543,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -526,11 +562,15 @@
       "abstract": "Abstract Research summary This study investigates the impact of scientific research findings on public views of policing topics. Specifically, we conducted an original survey experiment to determine whether research information treatments influence respondents’ views on the effectiveness of the police in reducing crime, defunding and refunding police budgets, and use of body‐worn cameras. Our results indicated that presenting confirmatory research information had a significant positive impact on perceptions of police effectiveness in reducing crime and use of body‐worn cameras compared to comparison groups. Conversely, presenting “negative” research information had a significant negative effect on these perceptions. Interestingly, neither positive nor negative research information treatments related to defunding versus refunding the police had a statistically significant impact on respondents compared to comparison groups, suggesting that research findings have limited effects on more ideologically complex policing topics. Policy implications Scientific research can effectively shape public perceptions of police effectiveness in reducing crime and the use of body‐worn cameras, but it has limited effects on politically charged issues, such as defunding and refunding the police. To enhance the impact of evidence‐based policing, we suggest that police administrators collaborate with researchers to evaluate new policies and disseminate these findings widely to the public. Additionally, researchers should strive to make their research more accessible to the general public, beyond academic journals, scientific conferences, and paywalls. We recommend using open‐access platforms, social media, and other media outlets to disseminate unbiased, evidence‐based research on policing that is digestible to the public.",
       "doi": "https://doi.org/10.1111/1745-9133.12644",
       "openalex_url": "https://openalex.org/W4387023588",
-      "citation_count": 14,
+      "citation_count": 15,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 14
+        },
+        {
+          "date": "2026-01-11",
+          "count": 15
         }
       ],
       "llm_synopsis": "Researchers tested whether showing people scientific studies about policing could change their opinions on police effectiveness, body cameras, and police funding. They found that research evidence successfully shifted public views on police effectiveness and body cameras, but had no impact on the more politically charged topic of police funding. This suggests that while scientific research can influence public opinion on some policing issues, deeply political topics may be resistant to evidence-based persuasion.",
@@ -539,7 +579,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -556,11 +596,15 @@
       "abstract": "Abstract We examine the factors influencing police response times, with a particular focus on staffing levels, calls for service (CFS), and proactive police work. We estimate Bayesian Holt-Winters state-space models for each CFS priority level. Using a novel dataset that combines data from the Salt Lake City Police Department's staffing and Computer-Aided Dispatch (CAD) systems at the daily level over seven years, we estimate the effects that staffing, overtime, call volume, and the level of proactive work (e.g., traffic stops, pedestrian stops, business checks) have on police response times. Our findings indicate that the impact of staffing on response times is significantly greater than that of other independent variables in the models. Furthermore, improvements in response times for higher-priority (i.e., more serious) CFS have a lower elasticity response to increases in staffing levels. As police agencies face increasingly complex challenges, the empirical evidence presented herein serves as a cornerstone for making informed decisions in the intricate balancing act of resources, officer well-being, and public safety priorities.",
       "doi": "https://doi.org/10.1093/police/paae002",
       "openalex_url": "https://openalex.org/W4391919703",
-      "citation_count": 14,
+      "citation_count": 15,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 14
+        },
+        {
+          "date": "2026-01-11",
+          "count": 15
         }
       ],
       "llm_synopsis": "Researchers analyzed seven years of police data from Salt Lake City to determine what factors most affect how quickly officers respond to emergency calls, finding that having enough officers on duty matters far more than other factors like call volume or proactive policing activities. The study reveals that while adding more officers improves response times across all types of calls, the biggest improvements occur for lower-priority incidents rather than the most serious emergencies. This evidence provides police departments with concrete data to support staffing decisions and helps explain why understaffed departments struggle to maintain quick response times even when they reduce other activities.",
@@ -569,7 +613,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -601,7 +645,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -632,7 +676,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -651,11 +695,15 @@
       "abstract": "Abstract The accountability of police to the public is imperative for a functioning democracy. The opinions of police executives—pivotal actors for implementing oversight policies—are an understudied, critical component of successful reform efforts. We use a pre‐registered survey experiment administered to all U.S. municipal police chiefs and county sheriffs to assess whether police executives’ attitudes towards civilian oversight are responsive to 1) state‐level public opinion (drawing on an original n = 16,840 survey) and 2) prior adoption of civilian review boards in large agencies. Results from over 1,300 police executives reveal that law enforcement leaders are responsive to elite peer adoption but much less to public opinion, despite overwhelming public support. Compared to appointed municipal police chiefs, elected sheriffs are less likely to support any civilian oversight. Our findings hold implications for reformers: we find that existing civilian oversight regimes are largely popular, and that it is possible to move police executive opinion towards support for civilian oversight.",
       "doi": "https://doi.org/10.1002/pam.22620",
       "openalex_url": "https://openalex.org/W4400252745",
-      "citation_count": 8,
+      "citation_count": 9,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 8
+        },
+        {
+          "date": "2026-01-11",
+          "count": 9
         }
       ],
       "llm_synopsis": "Researchers surveyed over 1,300 police chiefs and sheriffs across the U.S. to understand when law enforcement leaders support civilian oversight of their departments. They found that police executives are much more likely to support oversight when other major police departments have already adopted it, but they largely ignore public opinion—even though the vast majority of Americans favor civilian review of police. This suggests that police reform may spread more effectively through professional networks among law enforcement leaders rather than through public pressure alone.",
@@ -664,7 +712,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -696,7 +744,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -728,7 +776,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -761,7 +809,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -792,7 +840,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -807,11 +855,15 @@
       "abstract": "This study focuses on police profanity, with a particular interest developing reasonable policy to regulate the use of the word “fuck.” Officers employ “fuck” as a linguistic tool to accomplish a range of goals, such as establishing authority, fostering solidarity, and diffusing tension. However, “fuck” can also be used derogatorily, and negatively impact public assessments of police actions. Policy in this area is either absent, overly broad, or inappropriate to its intended use. Following brief, unstructured interviews with line and executive officers, I propose a novel policy theory of profanity, deriving target and intent. I test the theory with a pre-registered experiment administered to a national sample of police and human resources executives ( n = 1492), with each respondent evaluating multiple vignettes ( n = 5280 observations). Results support the proposed theory and generate useful recommendations for practitioners interested in strengthening the ability of agencies to constrain professionally inappropriate use of profanity in the police workplace.",
       "doi": "https://doi.org/10.1177/10986111241241750",
       "openalex_url": "https://openalex.org/W4393443519",
-      "citation_count": 7,
+      "citation_count": 8,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 7
+        },
+        {
+          "date": "2026-01-11",
+          "count": 8
         }
       ],
       "llm_synopsis": "Police officers use profanity like \"fuck\" for various professional purposes—to establish authority, build camaraderie, or reduce tension—but current department policies either don't exist or are too vague to effectively regulate inappropriate use. A survey of nearly 1,500 police and human resources executives found that context matters significantly: who the profanity is directed at and why it's being used should determine whether it violates professional standards. This research provides a framework for police departments to create more precise policies that distinguish between acceptable and unacceptable use of strong language on the job.",
@@ -820,7 +872,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -850,7 +902,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -882,7 +934,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -910,7 +962,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -939,7 +991,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -955,11 +1007,15 @@
       "abstract": "As the face of government, street-level bureaucrats interact with the citizenry and engage in emotional labor. Here we argue that public servants risk becoming alienated due to the unsupported emotional labor demands of their jobs. Alienated public servants can, in turn, alienate citizens from their government via emotional contagion, and because targets of emotional labor can detect inauthentic surface acting, they will distrust encounters with government as a result. Human resource management practices and organizational structures can mitigate or exacerbate this effect. The problem, though, is that public service is rooted in scientific management, which reifies top-down hierarchy, increasing the likelihood of alienation through its commitment to the bureaucratic form. By extending emotional labor theory to self-estrangement and fellow-beings estrangement, our argument incorporates all four of Marx’s dimensions of alienation, including commodity fetishism, where people are things and feelings qua feelings are part of an overall public service delivery package.",
       "doi": "https://doi.org/10.1080/10841806.2018.1485449",
       "openalex_url": "https://openalex.org/W2892116713",
-      "citation_count": 12,
+      "citation_count": 13,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 12
+        },
+        {
+          "date": "2026-01-11",
+          "count": 13
         }
       ],
       "llm_synopsis": "This research finds that public employees like police officers can become emotionally burned out when they're required to manage their feelings and interactions with the public without adequate organizational support. When officers become alienated from their work, they may unconsciously transmit negative emotions to community members, who can sense when interactions feel fake or forced, leading to greater distrust of police. This matters for policing because it suggests that police departments need better support systems for officers' emotional wellbeing to prevent a cycle where officer burnout damages police-community relationships.",
@@ -968,7 +1024,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -998,7 +1054,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -1029,7 +1085,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -1058,7 +1114,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "book-chapter"
     },
@@ -1088,7 +1144,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -1118,7 +1174,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -1135,11 +1191,15 @@
       "abstract": "No abstract available",
       "doi": "https://doi.org/10.1037/law0000406",
       "openalex_url": "https://openalex.org/W4388280884",
-      "citation_count": 4,
+      "citation_count": 5,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 4
+        },
+        {
+          "date": "2026-01-11",
+          "count": 5
         }
       ],
       "llm_synopsis": "",
@@ -1148,7 +1208,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -1180,7 +1240,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -1199,11 +1259,15 @@
       "abstract": "Abstract Objective This study examines patrol officer and supervisor perceptions of an artificial intelligence (AI) tool to assist with officer report writing. We compare attitudes among patrol officers randomly assigned to use the AI tool against those who were not. Methods Following a randomized controlled trial within a single agency, we conducted a post-intervention survey of patrol officers and supervisors. Results Patrol officers expressed generally favorable perceptions toward AI-assisted report writing, though no significant differences emerged between treatment and control groups in perceived utility, speed improvement, or quality enhancement. Despite these non-significant differences, 48% of treated officers reported time savings. Supervisors perceived noticeable improvements in report quality, completeness, and writing efficiency. Conclusion Officer perceptions of AI-assisted report writing were broadly positive but did not differ significantly by experimental exposure. Agencies adopting similar tools should anticipate mixed officer reactions and prioritize training, realistic expectations, and supervisor support.",
       "doi": "https://doi.org/10.1007/s11292-025-09679-4",
       "openalex_url": "https://openalex.org/W4411516771",
-      "citation_count": 3,
+      "citation_count": 5,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 3
+        },
+        {
+          "date": "2026-01-11",
+          "count": 5
         }
       ],
       "llm_synopsis": "Researchers tested whether police officers who actually used an AI tool to help write reports had different opinions about the technology compared to officers who didn't use it, finding that both groups had similarly positive views regardless of hands-on experience. While officers who used the AI tool didn't report significantly better outcomes than those who didn't, supervisors noticed improvements in report quality and efficiency when officers used the technology. This suggests that police departments considering AI writing tools should focus on proper training and managing expectations, since officer attitudes may be shaped more by general perceptions of the technology than by direct experience with it.",
@@ -1212,7 +1276,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -1243,7 +1307,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -1272,7 +1336,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "book-chapter"
     },
@@ -1300,13 +1364,13 @@
           "count": 3
         }
       ],
-      "llm_synopsis": "",
-      "llm_synopsis_version": 0,
-      "llm_synopsis_generated_date": null,
+      "llm_synopsis": "This study critiques a prominent scholar's claim that randomized controlled trials (RCTs) - the gold standard research method - don't work in criminal justice and should be abandoned in favor of less rigorous approaches. The authors argue this conclusion is flawed because it inappropriately combines results from vastly different studies with different designs, populations, and outcomes - like mixing apples and oranges to draw broad conclusions. Instead of abandoning rigorous research methods, police departments and criminal justice agencies should use more comprehensive study designs borrowed from medicine that can better account for the complex, real-world factors that affect whether reforms actually work and last over time.",
+      "llm_synopsis_version": 1,
+      "llm_synopsis_generated_date": "2026-01-11T04:10:52Z",
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -1335,7 +1399,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -1363,7 +1427,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -1393,7 +1457,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -1425,7 +1489,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -1453,7 +1517,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -1486,7 +1550,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -1515,7 +1579,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "book-chapter"
     },
@@ -1543,7 +1607,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -1571,7 +1635,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -1601,7 +1665,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "editorial"
     },
@@ -1633,7 +1697,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -1663,7 +1727,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -1693,7 +1757,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -1722,7 +1786,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -1753,7 +1817,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -1785,7 +1849,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -1813,7 +1877,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -1842,7 +1906,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "reference-entry"
     },
@@ -1870,7 +1934,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -1899,7 +1963,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "book-chapter"
     },
@@ -1929,7 +1993,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "book-chapter"
     },
@@ -1958,7 +2022,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -1988,7 +2052,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "book-chapter"
     },
@@ -2019,7 +2083,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -2050,7 +2114,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -2079,7 +2143,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -2110,7 +2174,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -2139,7 +2203,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2170,7 +2234,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2202,7 +2266,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -2233,7 +2297,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2263,7 +2327,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -2297,7 +2361,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2327,7 +2391,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2356,7 +2420,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "book-chapter"
     },
@@ -2388,7 +2452,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -2420,7 +2484,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2450,7 +2514,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -2479,7 +2543,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -2498,11 +2562,15 @@
       "abstract": "Profanity is common in everyday life, yet law enforcement often treats all swear words alike. Building on Adams (2024), we surveyed a large public sample ( n = 2412) who evaluated profanity’s appropriateness, professionalism, impact on trust, and disciplinary deservedness across nine scenarios ( n = 9874) varying in intent (positive, neutral, derogatory) and target (self/situation, colleague, public). Results aligned with prior research: any profanity aimed at the public, especially in a derogatory way, drew the strongest condemnation. Meanwhile, positive or neutral profanity toward oneself or colleagues was generally acceptable, though derogatory profanity at colleagues elicited moderate concern. Across the two studies, it appears police executives are generally more condemnatory of police profanity compared to public expectations. These findings underscore the need for nuanced language policies, rather than blanket bans, to address truly harmful speech without penalizing harmless expressions.",
       "doi": "https://doi.org/10.1177/10986111251357508",
       "openalex_url": "https://openalex.org/W4411984681",
-      "citation_count": 0,
+      "citation_count": 1,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 0
+        },
+        {
+          "date": "2026-01-11",
+          "count": 1
         }
       ],
       "llm_synopsis": "Researchers surveyed over 2,400 people to understand how the public views police officers using profanity in different situations, finding that context matters significantly—while swearing at the public, especially in a mean-spirited way, was widely condemned, casual swearing among officers or about situations was generally seen as acceptable. The study revealed that police leaders tend to be much harsher about officer profanity than the public expects them to be. These findings suggest that police departments might benefit from more flexible language policies that focus on truly harmful speech rather than blanket rules that treat all swearing the same way.",
@@ -2511,7 +2579,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2544,7 +2612,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2577,7 +2645,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2606,7 +2674,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -2637,7 +2705,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2670,7 +2738,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2700,7 +2768,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2732,7 +2800,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2760,7 +2828,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "preprint"
     },
@@ -2790,7 +2858,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "book-chapter"
     },
@@ -2821,7 +2889,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": false,
       "type": "article"
     },
@@ -2839,11 +2907,15 @@
       "abstract": "Abstract Existing evaluations of gunshot-detection technology (GDT) overwhelmingly study large urban departments, leaving its effectiveness for mid-sized agencies unclear. Leveraging weekly panel data from Columbia, South Carolina, we apply two-way fixed-effects difference-in-differences models to estimate GDT’s impact on five outcomes: reported shootings, firearm seizures, shootings that result in a seizure, fatal and non-fatal shootings, and the time required to recover crime guns. After implementation, GDT zones exhibited a marked rise in detected shootings – consistent with improved surveillance rather than increased gunfire – alongside discernible gains in both total firearm seizures and seizures linked to shooting events. Non-fatal shootings declined relative to comparison areas, and crime guns tied to incidents without victims or property damage were recovered appreciably faster. No corresponding change emerged for fatal shootings or for recovery times when a person was struck. Overall, the evidence indicates that GDT broadens police awareness of gun violence, modestly enhances firearm interdiction, and accelerates gun recovery in otherwise under-reported cases, offering practical benefits at the patrol level for similarly sized jurisdictions weighing adoption.",
       "doi": "https://doi.org/10.1186/s40163-025-00259-5",
       "openalex_url": "https://openalex.org/W4414658552",
-      "citation_count": 0,
+      "citation_count": 1,
       "citation_count_history": [
         {
           "date": "2026-01-07",
           "count": 0
+        },
+        {
+          "date": "2026-01-11",
+          "count": 1
         }
       ],
       "llm_synopsis": "Researchers studied whether gunshot detection technology - acoustic sensors that automatically alert police to gunfire - actually improves police effectiveness in a mid-sized city, finding that it helped officers discover more shootings, seize more guns, and respond faster to incidents without victims. The technology appeared to reduce non-fatal shootings but had no effect on fatal shootings, suggesting it works best for lower-level gun violence that might otherwise go unreported to police. This matters because most previous studies focused on large cities, leaving smaller police departments uncertain whether this expensive technology would benefit their communities.",
@@ -2852,7 +2924,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2883,7 +2955,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2914,7 +2986,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2946,7 +3018,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -2974,7 +3046,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -3007,7 +3079,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -3038,7 +3110,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -3070,7 +3142,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -3099,7 +3171,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -3129,7 +3201,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     },
@@ -3160,7 +3232,7 @@
       "manual_synopsis": null,
       "force_regenerate": false,
       "first_seen": "2026-01-07T21:28:55Z",
-      "last_updated": "2026-01-08T02:00:20Z",
+      "last_updated": "2026-01-11T04:10:52Z",
       "open_access": true,
       "type": "article"
     }

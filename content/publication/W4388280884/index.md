@@ -40,6 +40,6 @@ No summary available.
 
 ## Citation Information
 
-**Citations:** 4 (as of January 2026)
+**Citations:** 5 (as of January 2026)
 
 [View Publication](https://doi.org/10.1037/law0000406)

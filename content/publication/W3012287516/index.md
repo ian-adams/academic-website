@@ -70,6 +70,6 @@ This study examined how managing emotions on the job contributes to burnout amon
 
 ## Citation Information
 
-**Citations:** 32 (as of January 2026)
+**Citations:** 33 (as of January 2026)
 
 [View Publication](https://doi.org/10.1108/pijpsm-06-2019-0094)
