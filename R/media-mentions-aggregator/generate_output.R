@@ -50,10 +50,19 @@ generate_json_output <- function(con, output_path = NULL, max_stories = 200, log
         date = ifelse(!is.na(date_published) & date_published != "",
                      date_published,
                      date_discovered),
-        # Convert comma-separated strings to arrays
-        tags = lapply(strsplit(tags, ",\\s*"), function(x) if (length(x) == 0 || x[1] == "") NULL else x),
-        topics = lapply(strsplit(topics, ",\\s*"), function(x) if (length(x) == 0 || x[1] == "") NULL else x),
-        key_entities = lapply(strsplit(key_entities, ",\\s*"), function(x) if (length(x) == 0 || x[1] == "") NULL else x)
+        # Convert comma-separated strings to arrays (handle NA values safely)
+        tags = lapply(tags, function(t) {
+          if (is.na(t) || is.null(t) || t == "") return(NULL)
+          strsplit(t, ",\\s*")[[1]]
+        }),
+        topics = lapply(topics, function(t) {
+          if (is.na(t) || is.null(t) || t == "") return(NULL)
+          strsplit(t, ",\\s*")[[1]]
+        }),
+        key_entities = lapply(key_entities, function(t) {
+          if (is.na(t) || is.null(t) || t == "") return(NULL)
+          strsplit(t, ",\\s*")[[1]]
+        })
       ) %>%
       select(
         id, url, title, source, date, date_discovered,
