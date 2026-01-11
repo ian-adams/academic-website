@@ -5,6 +5,13 @@
 # RSS Feeds from relevant sources
 # These are news sources that frequently cover policing topics
 rss_feeds:
+  # University of South Carolina news (highest priority - direct source)
+  - name: "USC News"
+    url: "https://www.sc.edu/uofsc/rss/news.xml"
+
+  - name: "USC Arts and Sciences News"
+    url: "https://www.sc.edu/study/colleges_schools/artsandsciences/about/news/rss.xml"
+
   # Major national news
   - name: "NPR"
     url: "https://feeds.npr.org/1001/rss.xml"
@@ -24,12 +31,18 @@ rss_feeds:
   - name: "Reuters"
     url: "https://www.reutersagency.com/feed/"
 
-  # Regional South Carolina news
+  # Regional South Carolina news (high priority - local coverage)
   - name: "The State (SC)"
     url: "https://www.thestate.com/news/local/crime/rss/"
 
   - name: "Post and Courier"
     url: "https://www.postandcourier.com/search/?f=rss&t=article&c=news/crime_courts&l=50&s=start_time&sd=desc"
+
+  - name: "WIS TV Columbia"
+    url: "https://www.wistv.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc"
+
+  - name: "WLTX Columbia"
+    url: "https://www.wltx.com/feeds/syndication/rss/news"
 
   # Criminal Justice focused outlets
   - name: "The Marshall Project"
@@ -214,8 +227,8 @@ exclusions:
 
 # NewsAPI configuration
 newsapi:
-  enabled: false  # Set to true once API key is configured
-  days_back: 14   # How many days back to search
+  enabled: true  # Enable NewsAPI for more reliable story discovery
+  days_back: 30   # How many days back to search (extended for better coverage)
 
 # Filtering settings
 filtering:

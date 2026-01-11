@@ -62,26 +62,39 @@ main <- function(config_path = NULL) {
       log_message("--- Step 1: Scraping RSS Feeds ---", log_file)
       rss_articles <- scrape_all_rss_feeds(config, log_file)
       stats$total_fetched <- stats$total_fetched + nrow(rss_articles)
+      log_message(sprintf("RSS feeds returned %d total articles", nrow(rss_articles)), log_file)
 
       # Step 2: Search Google News RSS
       log_message("--- Step 2: Searching Google News ---", log_file)
       google_articles <- data.frame()
       if (!is.null(config$search_terms) && length(config$search_terms) > 0) {
+        log_message(sprintf("Searching %d configured search terms", length(config$search_terms)), log_file)
         google_articles <- search_google_news_rss(config$search_terms, log_file)
         stats$total_fetched <- stats$total_fetched + nrow(google_articles)
+        log_message(sprintf("Google News returned %d total articles", nrow(google_articles)), log_file)
+      } else {
+        log_message("No search terms configured - skipping Google News search", log_file, "WARN")
       }
 
       # Step 3: Search NewsAPI (if enabled)
       log_message("--- Step 3: Searching NewsAPI ---", log_file)
       newsapi_articles <- data.frame()
       if (config$newsapi$enabled %||% FALSE) {
-        newsapi_articles <- search_newsapi_multiple(
-          config$search_terms,
-          api_key = Sys.getenv("NEWSAPI_KEY"),
-          from_date = format(Sys.Date() - (config$newsapi$days_back %||% 14), "%Y-%m-%d"),
-          log_file = log_file
-        )
-        stats$total_fetched <- stats$total_fetched + nrow(newsapi_articles)
+        api_key <- Sys.getenv("NEWSAPI_KEY")
+        if (is.null(api_key) || api_key == "") {
+          log_message("NewsAPI is enabled but NEWSAPI_KEY environment variable is not set", log_file, "WARN")
+          log_message("To enable NewsAPI: add NEWSAPI_KEY secret in GitHub repository settings", log_file, "WARN")
+        } else {
+          log_message(sprintf("Searching NewsAPI for last %d days", config$newsapi$days_back %||% 30), log_file)
+          newsapi_articles <- search_newsapi_multiple(
+            config$search_terms,
+            api_key = api_key,
+            from_date = format(Sys.Date() - (config$newsapi$days_back %||% 30), "%Y-%m-%d"),
+            log_file = log_file
+          )
+          stats$total_fetched <- stats$total_fetched + nrow(newsapi_articles)
+          log_message(sprintf("NewsAPI returned %d total articles", nrow(newsapi_articles)), log_file)
+        }
       } else {
         log_message("NewsAPI disabled in configuration", log_file)
       }
@@ -179,6 +192,22 @@ main <- function(config_path = NULL) {
       log_message(sprintf("Featured stories: %d", featured_stories), log_file)
       log_message(sprintf("Stories needing review: %d", stories_needing_review), log_file)
       log_message(sprintf("Pipeline duration: %.2f seconds", as.numeric(stats$duration)), log_file)
+
+      # Diagnostic summary for troubleshooting
+      if (stats$new_stories == 0 && stats$total_fetched > 0) {
+        log_message("=== DIAGNOSTIC INFO ===", log_file, "WARN")
+        log_message("No new stories added despite fetching articles. Possible causes:", log_file, "WARN")
+        log_message("  1. All fetched articles were duplicates of existing stories", log_file, "WARN")
+        log_message("  2. No fetched articles contained 'Ian Adams' mentions", log_file, "WARN")
+        log_message("  3. Articles with 'Ian Adams' were filtered as wrong person (sports/entertainment context)", log_file, "WARN")
+      } else if (stats$total_fetched == 0) {
+        log_message("=== DIAGNOSTIC INFO ===", log_file, "WARN")
+        log_message("No articles fetched from any source. Possible causes:", log_file, "WARN")
+        log_message("  1. Google News RSS may be rate-limiting requests", log_file, "WARN")
+        log_message("  2. RSS feeds may be temporarily unavailable", log_file, "WARN")
+        log_message("  3. NewsAPI key may not be configured (check NEWSAPI_KEY secret)", log_file, "WARN")
+        log_message("  Recommendation: Check GitHub Actions logs and consider manual trigger", log_file, "WARN")
+      }
 
       log_message("=== Pipeline Completed Successfully ===", log_file)
     },
