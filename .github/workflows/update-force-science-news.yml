@@ -16,77 +16,43 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup R
-        uses: r-lib/actions/setup-r@v2
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          r-version: '4.3.2'
+          python-version: '3.11'
 
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libcurl4-openssl-dev \
-            libssl-dev \
-            libxml2-dev \
-            libsqlite3-dev
-
-      - name: Cache R packages
+      - name: Cache Python dependencies
         uses: actions/cache@v4
         with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-4.3-packages
-          restore-keys: ${{ runner.os }}-r-4.3-
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('scripts/news_scraper/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
-      - name: Install R dependencies
+      - name: Install dependencies
         run: |
-          install.packages(c(
-            'here',
-            'yaml',
-            'dplyr',
-            'tidyr',
-            'stringr',
-            'purrr',
-            'lubridate',
-            'httr2',
-            'jsonlite',
-            'xml2',
-            'tidyRSS',
-            'DBI',
-            'RSQLite',
-            'digest'
-          ), repos = 'https://cloud.r-project.org')
-        shell: Rscript {0}
+          python -m pip install --upgrade pip
+          pip install -r scripts/news_scraper/requirements.txt
 
       - name: Create data directories
         run: |
-          mkdir -p data/force-science/logs
+          mkdir -p assets/db
           mkdir -p static/data
+          mkdir -p data/force-science-news/logs
 
-      - name: Restore database from previous run
-        id: restore-db
-        uses: actions/cache/restore@v4
-        with:
-          path: data/force-science/stories.sqlite
-          key: force-science-db-${{ github.run_id }}
-          restore-keys: |
-            force-science-db-
-
-      - name: Run news aggregator pipeline
+      - name: Run news scraper
         env:
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          Rscript R/force-science-aggregator/run_pipeline.R
-        continue-on-error: false
+          cd $GITHUB_WORKSPACE
+          python -m scripts.news_scraper.scraper --topic force-science 2>&1 | tee data/force-science-news/logs/run-$(date +'%Y%m%d-%H%M%S').log
 
       - name: Check for changes
         id: check-changes
         run: |
-          if [ -f static/data/force-science-news.json ]; then
-            if git diff --quiet static/data/force-science-news.json; then
-              echo "changes=false" >> $GITHUB_OUTPUT
-            else
-              echo "changes=true" >> $GITHUB_OUTPUT
-            fi
+          if git diff --quiet static/data/force-science-news.json assets/db/force_science_archive.db 2>/dev/null; then
+            echo "changes=false" >> $GITHUB_OUTPUT
           else
             echo "changes=true" >> $GITHUB_OUTPUT
           fi
@@ -98,43 +64,36 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add static/data/force-science-news.json
           git add static/data/force-science-news.xml
-          git add data/force-science/needs_review.json
+          git add assets/db/force_science_archive.db
           git diff --quiet && git diff --staged --quiet || git commit -m "Update Force Science news feed - $(date +'%Y-%m-%d')"
           git push
-
-      - name: Save database for next run
-        uses: actions/cache/save@v4
-        if: always()
-        with:
-          path: data/force-science/stories.sqlite
-          key: force-science-db-${{ github.run_id }}
 
       - name: Upload logs as artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: force-science-aggregator-logs
-          path: data/force-science/logs/
+          name: force-science-scraper-logs
+          path: data/force-science-news/logs/
           retention-days: 7
 
       - name: Report summary
         if: always()
         run: |
-          echo "## Force Science News Aggregator Run Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## Force Science News Scraper Run Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Run Date:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
-          if ls data/force-science/logs/*.log 1> /dev/null 2>&1; then
-            LATEST_LOG=$(ls -t data/force-science/logs/*.log | head -1)
+          if ls data/force-science-news/logs/*.log 1> /dev/null 2>&1; then
+            LATEST_LOG=$(ls -t data/force-science-news/logs/*.log | head -1)
             echo "**Latest Log:**" >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
-            tail -30 "$LATEST_LOG" >> $GITHUB_STEP_SUMMARY
+            tail -50 "$LATEST_LOG" >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           fi
 
-          if [ -f data/force-science/needs_review.json ]; then
-            REVIEW_COUNT=$(jq '.count' data/force-science/needs_review.json)
+          if [ -f static/data/force-science-news.json ]; then
+            STORY_COUNT=$(jq '.count' static/data/force-science-news.json)
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "**Stories needing review:** $REVIEW_COUNT" >> $GITHUB_STEP_SUMMARY
+            echo "**Total stories in feed:** $STORY_COUNT" >> $GITHUB_STEP_SUMMARY
           fi
