@@ -31,7 +31,7 @@ def run_scraper(
     db_path: str | Path | None = None,
     output_json: str | Path | None = None,
     output_rss: str | Path | None = None,
-    skip_classification: bool = False,
+    use_llm: bool = False,
     dry_run: bool = False
 ) -> dict:
     """
@@ -42,7 +42,7 @@ def run_scraper(
         db_path: Path to SQLite database (optional)
         output_json: Path to output JSON (optional)
         output_rss: Path to output RSS (optional)
-        skip_classification: Skip LLM classification step
+        use_llm: Use Claude API for classification (default: keyword-based)
         dry_run: Don't write to database or files
 
     Returns:
@@ -118,18 +118,17 @@ def run_scraper(
         stats['finished_at'] = datetime.utcnow().isoformat() + 'Z'
         return stats
 
-    # Initialize classifier
-    classifier = ArticleClassifier()
+    # Initialize classifier (with or without LLM)
+    classifier = ArticleClassifier(api_key=None if not use_llm else None)  # Pass None to disable LLM
+
+    logger.info(f"Classification mode: {'LLM (Claude API)' if use_llm else 'keyword-based'}")
 
     # Process and store new articles
     for article in new_articles:
         url_hash = NewsDatabase.hash_url(article.url)
 
-        # Classify relevance
-        is_relevant = None
-        model_used = None
-
-        if not skip_classification:
+        # Classify relevance (keyword-based by default, LLM if use_llm=True)
+        if use_llm:
             try:
                 is_relevant_bool, model_used = classifier.classify_relevance(
                     article.title,
@@ -141,7 +140,17 @@ def run_scraper(
                 if is_relevant:
                     stats['articles_relevant'] += 1
             except Exception as e:
-                logger.warning(f"Classification failed for '{article.title[:50]}': {e}")
+                logger.warning(f"LLM classification failed for '{article.title[:50]}': {e}")
+                # Fallback to keyword-based
+                is_relevant = 1 if classifier._keyword_relevance(article.title, article.snippet) else 0
+                model_used = None
+        else:
+            # Keyword-based classification (fast, no API calls)
+            is_relevant = 1 if classifier._keyword_relevance(article.title, article.snippet) else 0
+            model_used = None
+            stats['articles_classified'] += 1
+            if is_relevant:
+                stats['articles_relevant'] += 1
 
         # Classify story type
         story_type = classifier.classify_story_type(article.title, article.snippet)
@@ -226,9 +235,9 @@ def main():
         help='Path to output RSS file'
     )
     parser.add_argument(
-        '--skip-classification',
+        '--use-llm',
         action='store_true',
-        help='Skip LLM classification (just fetch and store)'
+        help='Use Claude API for relevance classification (default: keyword-based)'
     )
     parser.add_argument(
         '--dry-run',
@@ -251,7 +260,7 @@ def main():
         db_path=args.db,
         output_json=args.output_json,
         output_rss=args.output_rss,
-        skip_classification=args.skip_classification,
+        use_llm=args.use_llm,
         dry_run=args.dry_run
     )
 
