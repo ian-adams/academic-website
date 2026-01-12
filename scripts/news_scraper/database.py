@@ -32,6 +32,14 @@ class ArticleRecord:
     key_entities: Optional[str]
     location: Optional[str]
     tags: Optional[str]
+    # New fields for Force Science multi-label classification
+    article_label: Optional[str] = None  # DIRECT, PROXY, ADJACENT, NO
+    label_confidence: Optional[float] = None  # 0.0 to 1.0
+    label_relevance: Optional[int] = None  # 0 to 100
+    signals: Optional[str] = None  # JSON array of matched signals
+    entities_extracted: Optional[str] = None  # JSON array of entities
+    rationale: Optional[str] = None  # One-sentence explanation
+    stage1_diagnostics: Optional[str] = None  # JSON object with Stage 1 audit info
 
 
 class NewsDatabase:
@@ -61,6 +69,15 @@ class NewsDatabase:
         location TEXT,
         tags TEXT,
 
+        -- Force Science multi-label classification fields
+        article_label TEXT,
+        label_confidence REAL,
+        label_relevance INTEGER,
+        signals TEXT,
+        entities_extracted TEXT,
+        rationale TEXT,
+        stage1_diagnostics TEXT,
+
         created_at TEXT DEFAULT CURRENT_TIMESTAMP,
         updated_at TEXT DEFAULT CURRENT_TIMESTAMP
     );
@@ -70,6 +87,19 @@ class NewsDatabase:
     CREATE INDEX IF NOT EXISTS idx_is_relevant ON articles(is_relevant);
     CREATE INDEX IF NOT EXISTS idx_date_scraped ON articles(date_scraped DESC);
     CREATE INDEX IF NOT EXISTS idx_source_type ON articles(source_type);
+    CREATE INDEX IF NOT EXISTS idx_article_label ON articles(article_label);
+    CREATE INDEX IF NOT EXISTS idx_label_relevance ON articles(label_relevance DESC);
+    """
+
+    # Migration for existing databases
+    MIGRATION_ADD_LABEL_COLUMNS = """
+    ALTER TABLE articles ADD COLUMN article_label TEXT;
+    ALTER TABLE articles ADD COLUMN label_confidence REAL;
+    ALTER TABLE articles ADD COLUMN label_relevance INTEGER;
+    ALTER TABLE articles ADD COLUMN signals TEXT;
+    ALTER TABLE articles ADD COLUMN entities_extracted TEXT;
+    ALTER TABLE articles ADD COLUMN rationale TEXT;
+    ALTER TABLE articles ADD COLUMN stage1_diagnostics TEXT;
     """
 
     def __init__(self, db_path: str | Path):
@@ -84,6 +114,34 @@ class NewsDatabase:
         """Create tables and indices if they don't exist."""
         self.conn.executescript(self.SCHEMA)
         self.conn.commit()
+        # Apply migrations for existing databases
+        self._apply_migrations()
+
+    def _apply_migrations(self):
+        """Apply schema migrations for existing databases."""
+        # Check if article_label column exists
+        cursor = self.conn.execute("PRAGMA table_info(articles)")
+        columns = {row[1] for row in cursor.fetchall()}
+
+        if 'article_label' not in columns:
+            # Apply migration to add new columns
+            for stmt in self.MIGRATION_ADD_LABEL_COLUMNS.strip().split(';'):
+                stmt = stmt.strip()
+                if stmt:
+                    try:
+                        self.conn.execute(stmt)
+                    except sqlite3.OperationalError:
+                        # Column might already exist
+                        pass
+            self.conn.commit()
+
+            # Create new indices
+            try:
+                self.conn.execute("CREATE INDEX IF NOT EXISTS idx_article_label ON articles(article_label)")
+                self.conn.execute("CREATE INDEX IF NOT EXISTS idx_label_relevance ON articles(label_relevance DESC)")
+                self.conn.commit()
+            except sqlite3.OperationalError:
+                pass
 
     @staticmethod
     def hash_url(url: str) -> str:
@@ -117,8 +175,10 @@ class NewsDatabase:
                     url_hash, url, title, source, date_published, date_scraped,
                     snippet, is_relevant, relevance_reason, classification_model,
                     classification_date, source_type, search_query, story_type,
-                    relevance_score, key_entities, location, tags
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    relevance_score, key_entities, location, tags,
+                    article_label, label_confidence, label_relevance, signals,
+                    entities_extracted, rationale, stage1_diagnostics
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 article.url_hash, article.url, article.title, article.source,
                 article.date_published, article.date_scraped, article.snippet,
@@ -126,7 +186,9 @@ class NewsDatabase:
                 article.classification_model, article.classification_date,
                 article.source_type, article.search_query, article.story_type,
                 article.relevance_score, article.key_entities, article.location,
-                article.tags
+                article.tags, article.article_label, article.label_confidence,
+                article.label_relevance, article.signals, article.entities_extracted,
+                article.rationale, article.stage1_diagnostics
             ))
             self.conn.commit()
             return True
@@ -215,11 +277,102 @@ class NewsDatabase:
                 COUNT(*) as total,
                 SUM(CASE WHEN is_relevant = 1 THEN 1 ELSE 0 END) as relevant,
                 SUM(CASE WHEN is_relevant = 0 THEN 1 ELSE 0 END) as irrelevant,
-                SUM(CASE WHEN is_relevant IS NULL THEN 1 ELSE 0 END) as unclassified
+                SUM(CASE WHEN is_relevant IS NULL THEN 1 ELSE 0 END) as unclassified,
+                SUM(CASE WHEN article_label = 'DIRECT' THEN 1 ELSE 0 END) as label_direct,
+                SUM(CASE WHEN article_label = 'PROXY' THEN 1 ELSE 0 END) as label_proxy,
+                SUM(CASE WHEN article_label = 'ADJACENT' THEN 1 ELSE 0 END) as label_adjacent,
+                SUM(CASE WHEN article_label = 'NO' THEN 1 ELSE 0 END) as label_no
             FROM articles
         """)
         row = cursor.fetchone()
         return dict(row)
+
+    def get_articles_by_label(
+        self,
+        labels: list[str],
+        limit: int | None = None,
+        min_confidence: float = 0.0,
+        min_relevance: int = 0
+    ) -> list[dict]:
+        """
+        Get articles by label(s) for export.
+
+        Args:
+            labels: List of labels to include (e.g., ['DIRECT', 'PROXY'])
+            limit: Maximum number of articles
+            min_confidence: Minimum confidence threshold
+            min_relevance: Minimum relevance score threshold
+
+        Returns:
+            List of article dicts sorted by label_relevance desc, then date
+        """
+        placeholders = ','.join('?' * len(labels))
+        query = f"""
+            SELECT *
+            FROM articles
+            WHERE article_label IN ({placeholders})
+              AND (label_confidence IS NULL OR label_confidence >= ?)
+              AND (label_relevance IS NULL OR label_relevance >= ?)
+            ORDER BY label_relevance DESC, date_published DESC, date_scraped DESC
+        """
+        params = list(labels) + [min_confidence, min_relevance]
+
+        if limit:
+            query += " LIMIT ?"
+            params.append(limit)
+
+        cursor = self.conn.execute(query, params)
+        return [dict(row) for row in cursor.fetchall()]
+
+    def get_primary_feed_articles(self, limit: int | None = None) -> list[dict]:
+        """
+        Get DIRECT + PROXY articles for primary feed.
+        Sorted by label_relevance desc, then recency.
+        """
+        return self.get_articles_by_label(['DIRECT', 'PROXY'], limit=limit)
+
+    def get_adjacent_feed_articles(self, limit: int | None = None) -> list[dict]:
+        """
+        Get ADJACENT articles for secondary feed.
+        Sorted by label_relevance desc, then recency.
+        """
+        return self.get_articles_by_label(['ADJACENT'], limit=limit)
+
+    def get_alertable_articles(
+        self,
+        direct_proxy_threshold: float = 0.60,
+        adjacent_threshold: float = 0.80,
+        adjacent_relevance_min: int = 60
+    ) -> dict:
+        """
+        Get articles that should trigger alerts.
+
+        Returns:
+            Dict with 'immediate' (DIRECT/PROXY above threshold) and
+            'digest' (ADJACENT above thresholds) article lists.
+        """
+        # Immediate alerts: DIRECT/PROXY with confidence >= threshold
+        cursor = self.conn.execute("""
+            SELECT *
+            FROM articles
+            WHERE article_label IN ('DIRECT', 'PROXY')
+              AND label_confidence >= ?
+            ORDER BY label_relevance DESC, date_published DESC
+        """, (direct_proxy_threshold,))
+        immediate = [dict(row) for row in cursor.fetchall()]
+
+        # Digest alerts: ADJACENT with high confidence and relevance
+        cursor = self.conn.execute("""
+            SELECT *
+            FROM articles
+            WHERE article_label = 'ADJACENT'
+              AND label_confidence >= ?
+              AND label_relevance >= ?
+            ORDER BY label_relevance DESC, date_published DESC
+        """, (adjacent_threshold, adjacent_relevance_min))
+        digest = [dict(row) for row in cursor.fetchall()]
+
+        return {'immediate': immediate, 'digest': digest}
 
     def close(self):
         """Close database connection."""
