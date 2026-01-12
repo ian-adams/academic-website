@@ -45,7 +45,8 @@ class ArticleRecord:
 class NewsDatabase:
     """SQLite database for storing news articles."""
 
-    SCHEMA = """
+    # Base schema for new databases (without label columns - those are added via migration)
+    SCHEMA_BASE = """
     CREATE TABLE IF NOT EXISTS articles (
         url_hash TEXT PRIMARY KEY,
         url TEXT UNIQUE NOT NULL,
@@ -69,15 +70,6 @@ class NewsDatabase:
         location TEXT,
         tags TEXT,
 
-        -- Force Science multi-label classification fields
-        article_label TEXT,
-        label_confidence REAL,
-        label_relevance INTEGER,
-        signals TEXT,
-        entities_extracted TEXT,
-        rationale TEXT,
-        stage1_diagnostics TEXT,
-
         created_at TEXT DEFAULT CURRENT_TIMESTAMP,
         updated_at TEXT DEFAULT CURRENT_TIMESTAMP
     );
@@ -87,20 +79,18 @@ class NewsDatabase:
     CREATE INDEX IF NOT EXISTS idx_is_relevant ON articles(is_relevant);
     CREATE INDEX IF NOT EXISTS idx_date_scraped ON articles(date_scraped DESC);
     CREATE INDEX IF NOT EXISTS idx_source_type ON articles(source_type);
-    CREATE INDEX IF NOT EXISTS idx_article_label ON articles(article_label);
-    CREATE INDEX IF NOT EXISTS idx_label_relevance ON articles(label_relevance DESC);
     """
 
-    # Migration for existing databases
-    MIGRATION_ADD_LABEL_COLUMNS = """
-    ALTER TABLE articles ADD COLUMN article_label TEXT;
-    ALTER TABLE articles ADD COLUMN label_confidence REAL;
-    ALTER TABLE articles ADD COLUMN label_relevance INTEGER;
-    ALTER TABLE articles ADD COLUMN signals TEXT;
-    ALTER TABLE articles ADD COLUMN entities_extracted TEXT;
-    ALTER TABLE articles ADD COLUMN rationale TEXT;
-    ALTER TABLE articles ADD COLUMN stage1_diagnostics TEXT;
-    """
+    # Columns to add for Force Science multi-label classification
+    LABEL_COLUMNS = [
+        ("article_label", "TEXT"),
+        ("label_confidence", "REAL"),
+        ("label_relevance", "INTEGER"),
+        ("signals", "TEXT"),
+        ("entities_extracted", "TEXT"),
+        ("rationale", "TEXT"),
+        ("stage1_diagnostics", "TEXT"),
+    ]
 
     def __init__(self, db_path: str | Path):
         """Initialize database connection."""
@@ -112,36 +102,42 @@ class NewsDatabase:
 
     def _init_schema(self):
         """Create tables and indices if they don't exist."""
-        self.conn.executescript(self.SCHEMA)
+        # First create base table structure
+        self.conn.executescript(self.SCHEMA_BASE)
         self.conn.commit()
-        # Apply migrations for existing databases
+
+        # Then apply migrations to add label columns (for existing databases)
         self._apply_migrations()
+
+        # Finally create indices for label columns (after columns exist)
+        self._create_label_indices()
 
     def _apply_migrations(self):
         """Apply schema migrations for existing databases."""
-        # Check if article_label column exists
+        # Check which columns exist
         cursor = self.conn.execute("PRAGMA table_info(articles)")
-        columns = {row[1] for row in cursor.fetchall()}
+        existing_columns = {row[1] for row in cursor.fetchall()}
 
-        if 'article_label' not in columns:
-            # Apply migration to add new columns
-            for stmt in self.MIGRATION_ADD_LABEL_COLUMNS.strip().split(';'):
-                stmt = stmt.strip()
-                if stmt:
-                    try:
-                        self.conn.execute(stmt)
-                    except sqlite3.OperationalError:
-                        # Column might already exist
-                        pass
+        # Add any missing label columns
+        for col_name, col_type in self.LABEL_COLUMNS:
+            if col_name not in existing_columns:
+                try:
+                    self.conn.execute(f"ALTER TABLE articles ADD COLUMN {col_name} {col_type}")
+                except sqlite3.OperationalError as e:
+                    # Column might already exist (race condition)
+                    if "duplicate column" not in str(e).lower():
+                        raise
+        self.conn.commit()
+
+    def _create_label_indices(self):
+        """Create indices for label columns (called after columns exist)."""
+        try:
+            self.conn.execute("CREATE INDEX IF NOT EXISTS idx_article_label ON articles(article_label)")
+            self.conn.execute("CREATE INDEX IF NOT EXISTS idx_label_relevance ON articles(label_relevance DESC)")
             self.conn.commit()
-
-            # Create new indices
-            try:
-                self.conn.execute("CREATE INDEX IF NOT EXISTS idx_article_label ON articles(article_label)")
-                self.conn.execute("CREATE INDEX IF NOT EXISTS idx_label_relevance ON articles(label_relevance DESC)")
-                self.conn.commit()
-            except sqlite3.OperationalError:
-                pass
+        except sqlite3.OperationalError:
+            # Index creation might fail if columns don't exist - that's ok
+            pass
 
     @staticmethod
     def hash_url(url: str) -> str:
