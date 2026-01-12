@@ -29,3 +29,6 @@ data/k9-incidents/*.db
 data/force-science/logs/
 data/force-science/stories/
 data/force-science/*.db
+.venv/
+__pycache__/
+*.pyc
