@@ -45,8 +45,25 @@ def export_force_science_feeds(
     classifier = ArticleClassifier()
     total_exported = 0
 
+    # Check if database has label columns (migration may not have run yet)
+    try:
+        cursor = db.conn.execute("PRAGMA table_info(articles)")
+        columns = {row[1] for row in cursor.fetchall()}
+        has_label_columns = 'article_label' in columns
+    except Exception as e:
+        logger.warning(f"Could not check database schema: {e}")
+        has_label_columns = False
+
+    if not has_label_columns:
+        logger.warning("Database does not have label columns - falling back to standard export")
+        raise ValueError("Database schema not migrated - missing article_label column")
+
     # Primary feed: DIRECT + PROXY
-    primary_articles = db.get_primary_feed_articles(limit=max_stories if max_stories > 0 else None)
+    try:
+        primary_articles = db.get_primary_feed_articles(limit=max_stories if max_stories > 0 else None)
+    except Exception as e:
+        logger.error(f"Failed to get primary feed articles: {e}")
+        raise
     primary_stories = []
     for article in primary_articles:
         story = transform_force_science_article(article, classifier)
@@ -68,7 +85,11 @@ def export_force_science_feeds(
 
     # Adjacent feed: ADJACENT only
     adjacent_json = output_json.with_name(output_json.stem + '-adjacent.json')
-    adjacent_articles = db.get_adjacent_feed_articles(limit=max_stories if max_stories > 0 else None)
+    try:
+        adjacent_articles = db.get_adjacent_feed_articles(limit=max_stories if max_stories > 0 else None)
+    except Exception as e:
+        logger.error(f"Failed to get adjacent feed articles: {e}")
+        adjacent_articles = []
     adjacent_stories = []
     for article in adjacent_articles:
         story = transform_force_science_article(article, classifier)
