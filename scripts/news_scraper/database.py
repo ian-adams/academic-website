@@ -323,9 +323,24 @@ class NewsDatabase:
     def get_primary_feed_articles(self, limit: int | None = None) -> list[dict]:
         """
         Get DIRECT + PROXY articles for primary feed.
+        Also includes legacy articles (is_relevant=1 with NULL label) for backwards compatibility.
         Sorted by label_relevance desc, then recency.
         """
-        return self.get_articles_by_label(['DIRECT', 'PROXY'], limit=limit)
+        query = """
+            SELECT *
+            FROM articles
+            WHERE (article_label IN ('DIRECT', 'PROXY'))
+               OR (is_relevant = 1 AND article_label IS NULL)
+            ORDER BY
+                CASE WHEN article_label IS NOT NULL THEN label_relevance ELSE 85 END DESC,
+                date_published DESC,
+                date_scraped DESC
+        """
+        if limit:
+            query += f" LIMIT {limit}"
+
+        cursor = self.conn.execute(query)
+        return [dict(row) for row in cursor.fetchall()]
 
     def get_adjacent_feed_articles(self, limit: int | None = None) -> list[dict]:
         """
