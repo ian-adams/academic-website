@@ -92,15 +92,17 @@ class ArticleClassifier:
         ]
     }
 
-    def __init__(self, api_key: Optional[str] = None):
+    def __init__(self, api_key: Optional[str] = None, custom_prompt: Optional[str] = None):
         """
         Initialize classifier.
 
         Args:
             api_key: Anthropic API key (defaults to ANTHROPIC_API_KEY env var)
+            custom_prompt: Custom relevance classification prompt (uses default if None)
         """
         self.api_key = api_key or os.environ.get('ANTHROPIC_API_KEY')
         self.client = None
+        self.custom_prompt = custom_prompt
 
         if self.api_key:
             self.client = anthropic.Anthropic(api_key=self.api_key)
@@ -123,7 +125,9 @@ class ArticleClassifier:
             # Fallback to keyword matching if no API key
             return self._keyword_relevance(title, snippet), None
 
-        prompt = RELEVANCE_PROMPT.format(
+        # Use custom prompt if provided, otherwise use default
+        prompt_template = self.custom_prompt or RELEVANCE_PROMPT
+        prompt = prompt_template.format(
             title=title,
             snippet=snippet or "(no summary available)",
             source=source

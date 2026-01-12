@@ -1,6 +1,7 @@
 """
 Main scraper orchestration.
 Coordinates fetching, deduplication, classification, and export.
+Supports multiple topics: ai-policing, k9, force-science
 """
 
 import argparse
@@ -10,11 +11,14 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-from .config import ScraperConfig, get_db_path, get_output_json_path, get_output_rss_path
+import yaml
+
+from .config import ScraperConfig, get_project_root
 from .database import NewsDatabase, ArticleRecord
 from .sources import GoogleNewsSource, NewsAPISource, Article
 from .classifier import ArticleClassifier
 from .export import export_to_json, generate_rss
+from .topics import get_topic, keyword_prefilter, TOPICS
 
 # Configure logging
 logging.basicConfig(
@@ -28,47 +32,44 @@ logger = logging.getLogger(__name__)
 
 
 def run_scraper(
-    config_path: str | Path | None = None,
-    db_path: str | Path | None = None,
-    output_json: str | Path | None = None,
-    output_rss: str | Path | None = None,
+    topic: str = 'ai-policing',
     dry_run: bool = False
 ) -> dict:
     """
-    Run the full scraper pipeline.
+    Run the full scraper pipeline for a specific topic.
 
     Uses keyword pre-filtering then Claude API for final relevance classification.
 
     Args:
-        config_path: Path to config file (optional)
-        db_path: Path to SQLite database (optional)
-        output_json: Path to output JSON (optional)
-        output_rss: Path to output RSS (optional)
+        topic: Topic name (ai-policing, k9, force-science)
         dry_run: Don't write to database or files
 
     Returns:
         Dict with statistics about the run
     """
-    # Load configuration
-    config = ScraperConfig(None if config_path is None else None)
-    if config_path:
-        import yaml
-        with open(config_path) as f:
-            config = ScraperConfig(yaml.safe_load(f))
+    # Get topic configuration
+    topic_config = get_topic(topic)
+    project_root = get_project_root()
+
+    # Load YAML config for this topic
+    config_path = project_root / topic_config.config_file
+    with open(config_path) as f:
+        config = ScraperConfig(yaml.safe_load(f))
 
     # Set logging level from config
     logging.getLogger().setLevel(getattr(logging, config.log_level, logging.INFO))
 
     # Resolve paths
-    db_path = Path(db_path) if db_path else get_db_path()
-    output_json = Path(output_json) if output_json else get_output_json_path()
-    output_rss = Path(output_rss) if output_rss else get_output_rss_path()
+    db_path = project_root / 'assets' / 'db' / topic_config.db_name
+    output_json = project_root / topic_config.json_output
+    output_rss = project_root / topic_config.rss_output
 
-    logger.info(f"Starting scraper run at {datetime.utcnow().isoformat()}Z")
+    logger.info(f"Starting {topic_config.name} scraper run at {datetime.utcnow().isoformat()}Z")
     logger.info(f"Database: {db_path}")
     logger.info(f"Output JSON: {output_json}")
 
     stats = {
+        'topic': topic,
         'started_at': datetime.utcnow().isoformat() + 'Z',
         'articles_fetched': 0,
         'articles_new': 0,
@@ -119,14 +120,14 @@ def run_scraper(
         stats['finished_at'] = datetime.utcnow().isoformat() + 'Z'
         return stats
 
-    # Initialize classifier
-    classifier = ArticleClassifier()
+    # Initialize classifier with topic-specific prompt
+    classifier = ArticleClassifier(custom_prompt=topic_config.llm_prompt)
 
     # Pre-filter with keywords first to reduce LLM calls
     keyword_matches = []
     keyword_rejects = []
     for article in new_articles:
-        if classifier._keyword_relevance(article.title, article.snippet):
+        if keyword_prefilter(article.title, article.snippet, topic_config):
             keyword_matches.append(article)
         else:
             keyword_rejects.append(article)
@@ -147,7 +148,7 @@ def run_scraper(
             date_scraped=datetime.utcnow().strftime('%Y-%m-%d'),
             snippet=article.snippet,
             is_relevant=0,  # Rejected by keyword filter
-            relevance_reason='No law enforcement + AI keywords',
+            relevance_reason='Failed keyword pre-filter',
             classification_model=None,
             classification_date=datetime.utcnow().isoformat() + 'Z',
             source_type=article.source_type,
@@ -251,27 +252,14 @@ def run_scraper(
 def main():
     """CLI entry point."""
     parser = argparse.ArgumentParser(
-        description='AI Policing News Scraper'
+        description='Multi-topic News Scraper (AI Policing, K9, Force Science)'
     )
     parser.add_argument(
-        '--config', '-c',
+        '--topic', '-t',
         type=str,
-        help='Path to config YAML file'
-    )
-    parser.add_argument(
-        '--db', '-d',
-        type=str,
-        help='Path to SQLite database'
-    )
-    parser.add_argument(
-        '--output-json', '-o',
-        type=str,
-        help='Path to output JSON file'
-    )
-    parser.add_argument(
-        '--output-rss', '-r',
-        type=str,
-        help='Path to output RSS file'
+        default='ai-policing',
+        choices=list(TOPICS.keys()),
+        help=f"Topic to scrape: {', '.join(TOPICS.keys())}"
     )
     parser.add_argument(
         '--dry-run',
@@ -290,15 +278,12 @@ def main():
         logging.getLogger().setLevel(logging.DEBUG)
 
     stats = run_scraper(
-        config_path=args.config,
-        db_path=args.db,
-        output_json=args.output_json,
-        output_rss=args.output_rss,
+        topic=args.topic,
         dry_run=args.dry_run
     )
 
     # Print summary
-    print("\n=== Scraper Run Summary ===")
+    print(f"\n=== {stats['topic'].upper()} Scraper Run Summary ===")
     print(f"Articles fetched: {stats['articles_fetched']}")
     print(f"New articles: {stats['articles_new']}")
     print(f"Classified: {stats['articles_classified']}")
