@@ -1,0 +1,16 @@
+# AI Policing News Scraper - Python Dependencies
+
+# RSS/feed parsing
+feedparser>=6.0.10
+
+# HTTP client
+requests>=2.31.0
+
+# Claude API for relevance classification
+anthropic>=0.18.0
+
+# Config file parsing
+pyyaml>=6.0.1
+
+# Date parsing
+python-dateutil>=2.8.2

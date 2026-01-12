@@ -1,5 +1,5 @@
 {
-  "updated": "2026-01-12T09:32:58Z",
+  "updated": "2026-01-12T12:01:48Z",
   "count": 85,
   "stories": [
     {
@@ -13,7 +13,11 @@
       "story_type": "vendor",
       "relevance_score": 0.35,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -27,7 +31,13 @@
       "story_type": "vendor",
       "relevance_score": 0.35,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -41,7 +51,11 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -56,7 +70,10 @@
       "relevance_score": 0.55,
       "key_entities": "Utah PD",
       "location": "Utah",
-      "tags": ["AI", "error"],
+      "tags": [
+        "AI",
+        "error"
+      ],
       "needs_review": 1
     },
     {
@@ -69,7 +86,15 @@
       "summary": "That time when an AI police report hallucinated an officer turning into a frog&nbsp;&nbsp;TechSpot",
       "story_type": "incident",
       "relevance_score": 0.5,
-      "tags": ["AI", "police report", "officer", "police", "ICE"],
+      "key_entities": "ICE",
+      "location": "",
+      "tags": [
+        "AI",
+        "police report",
+        "officer",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -83,7 +108,13 @@
       "story_type": "general",
       "relevance_score": 0.4,
       "key_entities": "Owatonna PD",
-      "tags": ["AI", "police report", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -97,7 +128,14 @@
       "story_type": "vendor",
       "relevance_score": 0.65,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "police report", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -110,9 +148,16 @@
       "summary": "ICE has been invading U.S. cities, targeting, surveilling, harassing, assaulting, detaining, and torturing people who are undocumented immigrants. They also have targeted people with work permits, asylum seekers, permanent residents (people holding “green cards”), naturalized citizens, and even citizens by birth. ICE has spent hundreds of millions of dollars on surveillance technology to spy on anyone—and potentially everyone—in the United States. It can be hard to imagine how to defend oneself against such an overwhelming force. But a few enterprising hackers have started projects to do counter surveillance against ICE, and hopefully protect their communities through clever use of technology. Let’s start with Flock, the company behind a number of automated license plate reader (ALPR) and other camera technologies. You might be surprised at how many Flock cameras there are in your community. Many large and small municipalities around the country have signed deals with Flock for license plate readers to track the movement of all cars in their city. Even though these deals are signed by local police departments, oftentimes ICE also gains access. Because of their ubiquity, people are interested in finding out where and how many Flock cameras are in their community. One project that can help with this is the OUI-SPY, a small piece of open source hardware. The OUI-SPY runs on a cheap Arduino compatible chip called an ESP-32. There are multiple programs available for loading on the chip, such as “Flock You,” which allows people to detect Flock cameras and “Sky-Spy” to detect overhead drones. There’s also “BLE Detect,” which detects various Bluetooth signals including ones from Axon, Meta’s Ray-Bans that secretly record you, and more. It also has a mode commonly known as “fox hunting” to track down a specific device. Activists and researchers can use this tool to map out different technologies and quantify the spread of surveillance. There’s also the open source Wigle app which is primarily designed for mapping out Wi-Fi, but also has the ability to make an audio alert when a specific Wi-Fi or Bluetooth identifier is detected. This means you can set it up to get a notification when it detects products from Flock, Axon, or other nasties in their vicinity. One enterprising YouTuber, Benn Jordan, figured out a way to fool Flock cameras into not recording his license plate simply by painting some minor visual noise on his license plate. This is innocuous enough that any human will still be able to read his license plate, but it completely prevented Flock devices from recognizing his license plate as a license plate at the time. Some states have outlawed drivers obscuring their license plates, so taking such action is not recommended. Jordan later went on to discover hundreds of misconfigured Flock cameras that were exposing their administrator interface without a password on the public internet. This would allow anyone with an internet connection to view a live surveillance feed, download 30 days of video, view logs, and more. The cameras pointed at parks, public trails, busy intersections, and even a playground. This was a massive breach of public trust and a huge mistake for a company that claims to be working for public safety.Other hackers have taken on the task of open-source intelligence and community reporting. One interesting example is deflock.me and alpr.watch, which are crowdsourced maps of ALPR cameras. Much like the OUI-SPY project, this allows activists to map out and expose Flock surveillance cameras in their community. There have also been several ICE reporting apps released, including apps to report ICE sightings in your area such Stop ICE Alerts, ICEOUT.org, and ICE Block. ICEBlock was delisted by Apple at the request of Attorney General Pam Bondi, a fact we are suing over. There is also Eyes Up, an app to securely record and archive ICE raids, which was taken down by Apple earlier this year. Another interesting project documenting ICE and creating a trove of open-source intelligence is ICE List Wiki which contains info on companies that have contracts with ICE, incidents and encounters with ICE, and vehicles ICE uses. People without programming knowledge can also get involved. In Chicago, people used whistles to warn their neighbors that ICE was present or in the area. Many people 3D-printed whistles along with instructional booklets to hand out to their communities, allowing a wider distribution of whistles and consequently earlier warnings for their neighbors. Many hackers have started hosting digital security trainings for their communities or building web sites with security advice, including how to remove your data from the watchful eyes of the surveillance industry. To reach a broader community, trainers have even started hosting trainings on how to defend their communities and what to do in an ICE raid in video games, such as Fortnight. There is also EFF’s own Rayhunter project for detecting cell-site simulators, about which we have written extensively. Rayhunter runs on a cheap mobile hotspot and doesn’t require deep technical knowledge to use.It’s important to remember that we are not powerless. Even in the face of a domestic law enforcement presence with massive surveillance capabilities and military-esque technologies, there are still ways to engage in surveillance self-defense. We cannot give into nihilism and fear. We must continue to find small ways to protect ourselves and our communities, and when we can, fight back. EFF is not affiliated with any of these projects (other than Rayhunter) and does not endorse them. We don’t make any statements about the legality of using any of these projects. Please consult with an attorney to determine what risks there may be. Related Cases:&nbsp;EFF v. DOJ, DHS (ICE tracking apps)",
       "story_type": "policy",
       "relevance_score": 0.45,
-      "key_entities": ["ICE", "Axon"],
+      "key_entities": "ICE,Axon",
       "location": "Axon, Meta",
-      "tags": ["AI", "Axon", "automated", "police", "law enforcement", "ICE"],
+      "tags": [
+        "AI",
+        "Axon",
+        "automated",
+        "police",
+        "law enforcement",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -126,7 +171,13 @@
       "story_type": "vendor",
       "relevance_score": 0.35,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -140,7 +191,12 @@
       "story_type": "vendor",
       "relevance_score": 0.35,
       "key_entities": "Axon",
-      "tags": ["Axon", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "Axon",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -153,8 +209,15 @@
       "summary": "Pima County Sheriff’s Department won't be using Axon AI tools to help write police reports&nbsp;&nbsp;KJZZ",
       "story_type": "policy",
       "relevance_score": 0.35,
-      "key_entities": ["Pima County Sheriff", "Axon"],
-      "tags": ["AI", "Axon", "police report", "police", "ICE"],
+      "key_entities": "Pima County Sheriff,Axon",
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -168,7 +231,11 @@
       "story_type": "vendor",
       "relevance_score": 0.35,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -181,9 +248,18 @@
       "summary": "U.S. Immigration and Customs Enforcement (ICE) has a new budget under the current administration, and they are going on a surveillance tech shopping spree. Standing at $28.7 billion dollars for the year 2025 (nearly triple their 2024 budget) and at least another $56.25 billion over the next three years, ICE's budget would be the envy of many national militaries around the world. Indeed, this budget would put ICE as the 14th most well-funded military in the world, right between Ukraine and Israel. There are many different agencies under U.S. Department of Homeland Security (DHS) that deal with immigration, as well as non-immigration related agencies such as Cybersecurity and Infrastructure Security Agency (CISA) and Federal Emergency Management Agency (FEMA). ICE is specifically the enforcement arm of the U.S. immigration apparatus. Their stated mission is to “[p]rotect America through criminal investigations and enforcing immigration laws to preserve national security and public safety.” Of course, ICE doesn’t just end up targeting, surveilling, harassing, assaulting, detaining, and torturing people who are undocumented immigrants. They have targeted people on work permits, asylum seekers, permanent residents (people holding “green cards”), naturalized citizens, and even citizens by birth. While the NSA and FBI might be the first agencies that come to mind when thinking about surveillance in the U.S., ICE should not be discounted. ICE has always engaged in surveillance and intelligence-gathering as part of their mission. A 2022 report by Georgetown Law’s Center for Privacy and Technology found the following:ICE had scanned the driver’s license photos of 1 in 3 adults.ICE had access to the driver’s license data of 3 in 4 adults.ICE was tracking the movements of drivers in cities home to 3 in 4 adults.ICE could locate 3 in 4 adults through their utility records.ICE built its surveillance dragnet by tapping data from private companies and state and local bureaucracies.ICE spent approximately $2.8 billion between 2008 and 2021 on new surveillance, data collection and data-sharing programs. With a budget for 2025 that is 10 times the size of the agency’s total surveillance spending over the last 13 years, ICE is going on a shopping spree, creating one of the largest, most comprehensive domestic surveillance machines in history. How We Got HereThe entire surveillance industry has been allowed to grow and flourish under both Democratic and Republican regimes. For example, President Obama dramatically expanded ICE from its more limited origins, while at the same time narrowing its focus to undocumented people accused of crimes. Under the first and second Trump administrations, ICE ramped up its operations significantly, increasing raids in major cities far from the southern border and casting a much wider net on potential targets. ICE has most recently expanded its partnerships with sheriffs across the U.S., and deported more than 1.5 million people cumulatively under the Trump administrations (600,000 of those were just during the first year of Trump’s second term according to DHS statistics), not including the 1.6 million people DHS claims have “self-deported.” More horrifying is that in just the last year of the current administration, 4,250 people detained by ICE have gone missing, and 31 have died in custody or while being detained. In contrast, 24 people died in ICE custody during the entirety of the Biden administration.ICE also has openly stated that they plan to spy on the American public, looking for any signs of left-wing dissent against their domestic military-like presence. Acting ICE Director Todd Lyons said in a recent interview that his agency “was dedicated to the mission of going after” Antifa and left-wing gun clubs. On a long enough timeline, any surveillance tool you build will eventually be used by people you don’t like for reasons that you disagree with.On a long enough timeline, any surveillance tool you build will eventually be used by people you don’t like for reasons that you disagree with. A surveillance-industrial complex and a democratic society are fundamentally incompatible, regardless of your political party. EFF recently published a guide to using government databases to dig up homeland security spending and compiled our own dataset of companies selling tech to DHS components. In 2025, ICE entered new contracts with several private companies for location surveillance, social media surveillance, face surveillance, spyware, and phone surveillance. Let’s dig into each.Phone Surveillance Tools One common surveillance tactic of immigration officials is to get physical access to a person’s phone, either while the person is detained at a border crossing, or while they are under arrest. ICE renewed an $11 million contract with a company called Cellebrite, which helps ICE unlock phones and then can take a complete image of all the data on the phone, including apps, location history, photos, notes, call records, text messages, and even Signal and WhatsApp messages. ICE also signed a $3 million contract with Cellebrite’s main competitor Magnet Forensics, makers of the Graykey device for unlocking phones. DHS has had contracts with Cellebrite since 2008, but the number of phones they search has risen dramatically each year, reaching a new high of 14,899 devices searched by ICE’s sister agency U.S. Customs and Border Protection (CBP) between April and June of 2025. If ICE can’t get physical access to your phone, that won’t stop them from trying to gain access to your data. They have also resumed a $2 million contract with the spyware manufacturer, Paragon. Paragon makes the Graphite spyware, which made headlines in 2025 for being found on the phones of several dozen members of Italian civil society. Graphite is able to harvest messages from multiple different encrypted chat apps such as Signal and WhatsApp without the user ever knowing. Our concern with ICE buying this software is the likelihood that it will be used against undocumented people and immigrants who are here legally, as well as U.S. citizens who have spoken up against ICE or who work with immigrant communities. Malware such as Graphite can be used to read encrypted messages as they are sent, other forms of spyware can also download files, photos, location history, record phone calls, and even discretely turn on your microphone to record you. How to Protect Yourself The most effective way to protect yourself from smartphone surveillance would be to not have a phone. But that’s not realistic advice in modern society. Fortunately, for most people there are other ways you can make it harder for ICE to spy on your digital life. The first and easiest step is to keep your phone up to date. Installing security updates makes it harder to use malware against you and makes it less likely for Cellebrite to break into your phone. Likewise, both iPhone (Lockdown Mode) and Android (Advanced Protection) offer special modes that lock your phone down and can help protect against some malware.The first and easiest step is to keep your phone up to date. Having your phone’s software up to date and locked with a strong alphanumeric password will offer some protection against Cellebrite, depending on your model of phone. However, the strongest protection is simply to keep your phone turned off, which puts it in “before first unlock” mode and has been typically harder for law enforcement to bypass. This is good to do if you are at a protest and expect to be arrested, if you are crossing a border, or if you are expecting to encounter ICE. Keeping your phone on airplane mode should be enough to protect against cell-site simulators, but turning your phone off will offer extra protection against cell-site simulators and Cellebrite devices. If you aren’t able to turn your phone off, it’s a good idea to at least turn off face/fingerprint unlock to make it harder for police to force you to unlock your phone. While EFF continues to fight to strengthen our legal protections against compelling people to decrypt their devices, there is currently less protection against compelled face and fingerprint unlocking than there is against compelled password disclosure.Internet Surveillance ICE has also spent $5 million to acquire at least two location and social media surveillance tools: Webloc and Tangles, from a company called Pen Link, an established player in the open source intelligence space. Webloc gathers the locations of millions of phones by gathering data from mobile data brokers and linking it together with other information about users. Tangles is a social media surveillance tool which combines web scraping with access to social media application programming interfaces. These tools are able to build a dossier on anyone who has a public social media account. Tangles is able to link together a person’s posting history, posts, and comments containing keywords, location history, tags, social graph, and photos with those of their friends and family. Penlink then sells this information to law enforcement, allowing law enforcement to avoid the need for a warrant. This means ICE can look up historic and current locations of many people all across the U.S. without ever having to get a warrant.These tools are able to build a dossier on anyone who has a public social media account.ICE also has established contracts with other social media scanning and AI analysis companies, such as a $4.2 million contract with a company called Fivecast for the social media surveillance and AI analysis tool ONYX. According to Fivecast, ONYX can conduct “automated, continuous and targeted collection of multimedia data” from all major “news streams, search engines, social media, marketplaces, the dark web, etc.” ONYX can build what it calls “digital footprints” from biographical data and curated datasets spanning numerous platforms, and “track shifts in sentiment and emotion” and identify the level of risk associated with an individual. Another contract is with ShadowDragon for their product Social Net, which is able to monitor publicly available data from over 200 websites. In an acquisition document from 2022, ICE confirmed that ShadowDragon allowed the agency to search “100+ social networking sites,” noting that “[p]ersistent access to Facebook and Twitter provided by ShadowDragon SocialNet is of the utmost importance as they are the most prominent social media platforms.”ICE has also indicated that they intend to spend between 20 and 50 million dollars on building and staffing a 24/7 social media monitoring office with at least 30 full time agents to comb every major social media website for leads that could generate enforcement raids. How to protect yourself For U.S. citizens, making your account private on social media is a good place to start. You might also consider having accounts under a pseudonym, or deleting your social media accounts altogether. For more information, check out our guide to protecting yourself on social media. Unfortunately, people immigrating to the U.S. might be subject to greater scrutiny, including mandatory social media checks, and should consult with an immigration attorney before taking any action. For people traveling to the U.S., new rules will soon likely require them to reveal five years of social media history and 10 years of past email addresses to immigration officials. Street-Level Surveillance But it’s not just your digital habits ICE wants to surveil; they also want to spy on you in the physical world. ICE has contracts with multiple automated license plate reader (ALPR) companies and is able to follow the driving habits of a large percentage of Americans. ICE uses this data to track down specific people anywhere in the country. ICE has a $6 million contract through a Thomson Reuters subsidiary to access ALPR data from Motorola Solutions. ICE has also persuaded local law enforcement officers to run searches on their behalf through Flock Safety's massive network of ALPR data. CBP, including Border Patrol, also operates a network of covert ALPR systems in many areas. ICE has also invested in biometric surveillance tools, such as face recognition software called Mobile Fortify to scan the faces of people they stop to determine if they are here legally. Mobile Fortify checks the pictures it takes against a database of 200 million photos for a match (the source of the photos is unknown). Additionally, ICE has a $10 million contract with Clearview AI for face recognition. ICE has also contracted with iris scanning company BI2 technologies for even more invasive biometric surveillance. ICE agents have also been spotted wearing Meta’s Ray-Ban video recording sunglasses. ICE has acquired trucks equipped with cell-site simulators (AKA Stingrays) from a company called TechOps Specialty Vehicles (likely the cell-site simulators were manufactured by another company). This is not the first time ICE has bought this technology. According to documents obtained by the American Civil Liberties Union, ICE deployed cell-site simulators at least 466 times between 2017 and 2019, and ICE more than 1,885 times between 2013 and 2017, according to documents obtained by BuzzFeed News. Cell-site simulators can be used to track down a specific person in real time, with more granularity than a phone company or tools like Webloc can provide, though Webloc has the distinct advantage of being used without a warrant and not requiring agents to be in the vicinity of the person being tracked. How to protect yourself Taking public transit or bicycling is a great way to keep yourself off ALPR databases, but an even better way is to go to your local city council meetings and demand the city cancels contracts with ALPR companies, like people have done in Flagstaff, Arizona; Eugene, Oregon; and Denver, Colorado, among others. If you are at a protest, putting your phone on airplane mode could help protect you from cell-site simulators and from apps on your phone disclosing your location, but might leave you vulnerable to advanced targeted attacks. For more advanced protection, turning your phone completely off protects against all radio based attacks, and also makes it harder for tools like Cellebrite to break into your phone as discussed above. But each individual will need to weigh their need for security from advanced radio based attacks against their need to document potential abuses through photo or video. For more information about protecting yourself at a protest, head over to SSD.There is nothing you can do to change your face, which is why we need more stringent privacy laws such as Illinois’ Biometric Information Privacy Act.Tying All the Data Together Last but not least, ICE uses tools to combine and search all this data along with the data on Americans they have acquired from private companies, the IRS, TSA, and other government databases. To search all this data, ICE uses ImmigrationOS, a system that came from a $30-million contract with Palantir. What Palantir does is hard to explain, even for people who work there, but essentially they are plumbers. Palantir makes it so that ICE has all the data they have acquired in one place so it’s easy to search through. Palantir links data from different databases, like IRS data, immigration records, and private databases, and enables ICE to view all of this data about a specific person in one place. Palantir makes it so that ICE has all the data they have acquired in one place so it’s easy to search through. The true civil liberties nightmare of Palantir is that they enable governments to link data that should have never been linked. There are good civil liberties reasons why IRS data was never linked with immigration data and was never linked with social media data, but Palantir breaks those firewalls. Palantir has labeled themselves as a progressive, human rights centric company historically, but their recent actions have given them away as just another tech company enabling surveillance nightmares.Threat Modeling When ICE Is Your Adversary Understanding the capabilities and limits of ICE and how to threat model helps you and your community fight back, remain powerful, and protect yourself.One of the most important things you can do is to not spread rumors and misinformation. Rumors like “ICE has malware so now everyone's phones are compromised” or “Palantir knows what you are doing all the time” or “Signal is broken” don’t help your community. It’s more useful to spread facts, ways to protect yourself, and ways to fight back. For information about how to create a security plan for yourself or your community, and other tips to protect yourself, read our Surveillance Self-Defense guides.How EFF Is Fighting BackOne way to fight back against ICE is in the courts. EFF currently has a lawsuit against ICE over their pressure on Apple and Google to take down ICE spotting apps, like ICEBlock. We also represent multiple labor unions suing ICE over their social media surveillance practices. We have also demanded the San Francisco Police Department stop sharing data illegally with ICE, and issued a statement condemning the collaboration between ICE and the malware provider Paragon. We also continue to maintain our Rayhunter project for detecting cell-site simulators. Other civil liberties organizations are also suing ICE. ACLU has sued ICE over a subpoena to Meta attempting to identify the owner of an account providing advice to protestors, and another coalition of groups has thus far successfully sued the IRS to stop sharing taxpayer data with ICE. We need to have a hard look at the surveillance industry. It is a key enabler of vast and untold violations of human rights and civil liberties, and it continues to be used by aspiring autocrats to threaten our very democracy. As long as it exists, the surveillance industry, and the data it generates, will be an irresistible tool for anti-democratic forces.Related Cases:&nbsp;EFF v. DOJ, DHS (ICE tracking apps)",
       "story_type": "policy",
       "relevance_score": 0.3,
-      "key_entities": ["San Francisco Police Department", "ICE", "FBI", "CBP", "Border Patrol", "Homeland Security", "Motorola", "Google"],
+      "key_entities": "San Francisco Police Department,ICE,FBI,CBP,Border Patrol,Homeland Security,Motorola,Google",
       "location": "Fivecast, ON",
-      "tags": ["AI", "automated", "officer", "police", "law enforcement", "ICE", "agency", "trial"],
+      "tags": [
+        "AI",
+        "automated",
+        "officer",
+        "police",
+        "law enforcement",
+        "ICE",
+        "agency",
+        "trial"
+      ],
       "needs_review": 0
     },
     {
@@ -197,7 +273,12 @@
       "story_type": "vendor",
       "relevance_score": 0.8,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "Draft One"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "Draft One"
+      ],
       "needs_review": 0
     },
     {
@@ -212,7 +293,10 @@
       "relevance_score": 0.3,
       "key_entities": "Axon",
       "location": "Connecticut",
-      "tags": ["AI", "Axon"],
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -226,7 +310,10 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": "Axon",
+      "location": "",
+      "tags": [
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -240,7 +327,13 @@
       "story_type": "vendor",
       "relevance_score": 0.35,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -254,7 +347,12 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["Axon", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "Axon",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -268,7 +366,12 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["Axon", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "Axon",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -281,8 +384,14 @@
       "summary": "Veritone Cozies Up to Axon and Milestone in Police Tech Race&nbsp;&nbsp;GovTech",
       "story_type": "vendor",
       "relevance_score": 0.3,
-      "key_entities": ["Axon", "Veritone"],
-      "tags": ["Axon", "Veritone", "police", "ICE"],
+      "key_entities": "Axon,Veritone",
+      "location": "",
+      "tags": [
+        "Axon",
+        "Veritone",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -294,10 +403,21 @@
       "date_discovered": "2026-01-05",
       "summary": "In 2024, EFF wrote our initial blog about what could go wrong when police let AI write police reports. Since then, the technology has proliferated at a disturbing rate. Why? The most popular generative AI tool for writing police reports is Axon’s Draft One, and Axon also happens to be the largest provider of body-worn cameras to police departments in the United States. As we’ve written, companies are increasingly bundling their products to make it easier for police to buy more technology than they may need or that the public feels comfortable with. We have good news and bad news. Here’s the bad news: AI written police reports are still unproven, untransparent, and downright irresponsible–especially when the criminal justice system, informed by police reports, is deciding people’s freedom. The King County prosecuting attorney’s office in Washington state barred police from using AI to write police reports. As their memo read, “We do not fear advances in technology – but we do have legitimate concerns about some of the products on the market now... AI continues to develop and we are hopeful that we will reach a point in the near future where these reports can be relied on. For now, our office has made the decision not to accept any police narratives that were produced with the assistance of AI.” In July of this year, EFF published a two-part report on how Axon designed Draft One to defy transparency. Police upload their body-worn camera’s audio into the system, the system generates a report that the officer is expected to edit, and then the officer exports the report. But when they do that, Draft One erases the initial draft, and with it any evidence of what portions of the report were written by AI and what portions were written by an officer. That means that if an officer is caught lying on the stand – as shown by a contradiction between their courtroom testimony and their earlier police report – they could point to the contradictory parts of their report and say, “the AI wrote that.” Draft One is designed to make it hard to disprove that. In this video of a roundtable discussion about Draft One, Axon’s senior principal product manager for generative AI is asked (at the 49:47 mark) whether or not it’s possible to see after-the-fact which parts of the report were suggested by the AI and which were edited by the officer. His response (bold and definition of RMS added): “So we don’t store the original draft and that’s by design and that’s really because the last thing we want to do is create more disclosure headaches for our customers and our attorney’s offices—so basically the officer generates that draft, they make their edits, if they submit it into our Axon records system then that’s the only place we store it, if they copy and paste it into their third-party RMS [records management system] system as soon as they’re done with that and close their browser tab, it’s gone. It’s actually never stored in the cloud at all so you don’t have to worry about extra copies floating around.”Yikes! All of this obfuscation also makes it incredibly hard for people outside police departments to figure out if their city’s officers are using AI to write reports–and even harder to use public records requests to audit just those reports. That’s why this year EFF also put out a comprehensive guide to help the public make their records requests as tailored as possible to learn about AI-generated reports. Ok, now here’s the good news: People who believe AI-written police reports are irresponsible and potentially harmful to the public are fighting back. This year, two states have passed bills that are an important first step in reigning in AI police reports. Utah’s SB 180 mandates that police reports created in whole or in part by generative AI have a disclaimer that the report contains content generated by AI. It also requires officers to certify that they checked the report for accuracy. California’s SB 524 went even further. It requires police to disclose, on the report, if it was used to fully or in part author a police report. Further, it bans vendors from selling or sharing the information a police agency provided to the AI. The bill also requires departments to retain the first draft of the report so that judges, defense attorneys, or auditors could readily see which portions of the final report were written by the officer and which portions were written by the computer.In the coming year, anticipate many more states joining California and Utah in regulating, or perhaps even banning, police from using AI to write their reports. This article is part of our Year in Review series. Read other articles about the fight for digital rights in 2025.",
       "story_type": "policy",
-      "relevance_score": 1,
+      "relevance_score": 1.0,
       "key_entities": "Axon",
       "location": "Draft One, Axon",
-      "tags": ["AI", "Axon", "Draft One", "police report", "officer", "police", "ICE", "agency", "accuracy", "audit"],
+      "tags": [
+        "AI",
+        "Axon",
+        "Draft One",
+        "police report",
+        "officer",
+        "police",
+        "ICE",
+        "agency",
+        "accuracy",
+        "audit"
+      ],
       "needs_review": 0
     },
     {
@@ -311,7 +431,14 @@
       "story_type": "vendor",
       "relevance_score": 0.9,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "Draft One", "officer", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "Draft One",
+        "officer",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -325,7 +452,12 @@
       "story_type": "vendor",
       "relevance_score": 0.8,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "Draft One"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "Draft One"
+      ],
       "needs_review": 0
     },
     {
@@ -339,7 +471,15 @@
       "story_type": "vendor",
       "relevance_score": 0.8,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "Draft One", "police report", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "Draft One",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -353,7 +493,14 @@
       "story_type": "vendor",
       "relevance_score": 0.8,
       "key_entities": "Axon",
-      "tags": ["Axon", "Draft One", "police report", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "Axon",
+        "Draft One",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -367,7 +514,14 @@
       "story_type": "vendor",
       "relevance_score": 0.65,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "police report", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -380,9 +534,16 @@
       "summary": "Axon Introduces AI-Powered, Automated Police Reporting Tool&nbsp;&nbsp;Police Magazine",
       "story_type": "vendor",
       "relevance_score": 0.65,
-      "key_entities": ["Automated Police", "Axon"],
+      "key_entities": "Automated Police,Axon",
       "location": "Powered, Automated",
-      "tags": ["AI", "Axon", "police report", "automated", "police", "ICE"],
+      "tags": [
+        "AI",
+        "Axon",
+        "police report",
+        "automated",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -395,8 +556,13 @@
       "summary": "Axon enhances public safety and cuts report-writing time in half using Draft One, an AI-powered solution built on Microsoft Azure&nbsp;&nbsp;Microsoft",
       "story_type": "vendor",
       "relevance_score": 0.65,
-      "key_entities": ["Axon", "Microsoft"],
-      "tags": ["AI", "Axon", "Draft One"],
+      "key_entities": "Axon,Microsoft",
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "Draft One"
+      ],
       "needs_review": 1
     },
     {
@@ -410,7 +576,14 @@
       "story_type": "vendor",
       "relevance_score": 0.65,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "police report", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -425,7 +598,13 @@
       "relevance_score": 0.65,
       "key_entities": "Axon",
       "location": "Draft One, AI",
-      "tags": ["AI", "Axon", "Draft One", "police", "ICE"],
+      "tags": [
+        "AI",
+        "Axon",
+        "Draft One",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -438,8 +617,16 @@
       "summary": "EFF's Guide to Getting Records About Axon's Draft One AI-Generated Police Reports&nbsp;&nbsp;Electronic Frontier Foundation",
       "story_type": "vendor",
       "relevance_score": 0.65,
-      "key_entities": ["Generated Police", "Axon"],
-      "tags": ["AI", "Axon", "Draft One", "police report", "police", "ICE"],
+      "key_entities": "Generated Police,Axon",
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "Draft One",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -453,7 +640,12 @@
       "story_type": "vendor",
       "relevance_score": 0.6,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "Draft One"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "Draft One"
+      ],
       "needs_review": 1
     },
     {
@@ -466,7 +658,14 @@
       "summary": "AI police report writing ahead: Proceed with caution&nbsp;&nbsp;Police1",
       "story_type": "general",
       "relevance_score": 0.55,
-      "tags": ["AI", "police report", "police", "ICE"],
+      "key_entities": "ICE",
+      "location": "",
+      "tags": [
+        "AI",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -480,7 +679,11 @@
       "story_type": "vendor",
       "relevance_score": 0.55,
       "key_entities": "Axon",
-      "tags": ["Axon", "Draft One"],
+      "location": "",
+      "tags": [
+        "Axon",
+        "Draft One"
+      ],
       "needs_review": 1
     },
     {
@@ -493,7 +696,13 @@
       "summary": "Calif. passes transparency requirements for police use of generative AI report writing&nbsp;&nbsp;Police1",
       "story_type": "general",
       "relevance_score": 0.55,
-      "tags": ["AI", "police", "ICE"],
+      "key_entities": "ICE",
+      "location": "",
+      "tags": [
+        "AI",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -508,7 +717,12 @@
       "relevance_score": 0.55,
       "key_entities": "Utah PD",
       "location": "Utah",
-      "tags": ["AI", "error", "police", "ICE"],
+      "tags": [
+        "AI",
+        "error",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -522,7 +736,12 @@
       "story_type": "vendor",
       "relevance_score": 0.5,
       "key_entities": "Axon",
-      "tags": ["AI", "bodycam", "Axon"],
+      "location": "",
+      "tags": [
+        "AI",
+        "bodycam",
+        "Axon"
+      ],
       "needs_review": 1
     },
     {
@@ -535,9 +754,20 @@
       "summary": "Drone as first responder (DFR) adoption really took off in 2025. Though the concept has been around since 2018, this year saw more normalization of the technology, its integration into more real-time crime center structures, and the implementation of automated deployment of drones.A DFR program features a fleet of camera-equipped drones, which can range from just a couple to dozens or more. These are deployed from a launch pad in response to 911 calls and other calls for service, sometimes operated by a drone pilot or, increasingly, autonomously directed to the call location. The appeal is the promise of increased “situational awareness” for officers headed to a call. This video offers a short explanation of DFR, and for a list of all of the cities we know use drones, including DFR programs, check out EFF’s Atlas of Surveillance. Major Moves from the FAA and Forthcoming Federal IssuesIn order to deploy a drone beyond where it can be seen, operators need to receive a waiver from the Federal Aviation Administration (FAA), and all DFR programs require this. Police departments and technology vendors have complained that the process takes too long, and in May, FAA finalized reworked requirements, leading to a flood of waiver requests. An FAA spokesperson reported that in the first two months of the new waiver process, it had approved 410 such waivers, already accounting for almost a third of the approximately 1,400 DFR waivers that had ever been granted.The federal government made other major moves on the drone front this year. A month after the new waivers went to effect, President Trump issued an Executive Order with aspirations for advancing the country’s drone industry. And at the end of the year, one of the largest drone manufacturers in the world and one of the biggest purveyors of law enforcement drones, DJI, will be banned from launching new products in the U.S. unless the federal government conducts a security audit that was mandated by the National Defense Authorization Act. However, at the moment, it doesn’t seem like that audit will happen, and if it doesn’t, it won’t be surprising to see other drone manufacturers leveraging the ban to boost their own products. Automated Drone Deployment and Tech IntegrationsEarly iterations of drone use required a human operator, but this year, police drone companies began releasing automated flying machines that don’t require much human intervention at all. New models can rely on AI and automated directions to launch and direct a drone. This article is part of our Year in Review series. Read other articles about the fight for digital rights in 2025.This was the year we saw DFR integrated with other tools and tech companies teamed up to bring even more powerful surveillance. Flock Safety added automated license plate readers (ALPR) to their drones. Axon and Skydio built on the partnership they launched in 2024. Drone manufacturer Brinc teamed up with Motorola Solutions on a DFR program. Drone company Paladin teamed up with a company called SkyeBrowse to add 3-D mapping of the environment to their list of features. DFR also is increasingly part of the police plans for real-time crime centers, meaning that the footage being captured by these flying cameras is being integrated into other streams and analyzed in ways that we’re still learning about. Transparency Around DFR DeploymentsTransparency around adoption, use, and oversight is always crucial, particularly when it comes to police surveillance, and EFF has been tracking the growth of DFR programs across the country. We encourage you to use your local public records laws to investigate them further. Examples of the kinds of requests and the responsive documents people have already received — including flight logs, policies, and other information — can be found on MuckRock. The Problem with DronesFlying cameras are bad enough. They can see and record footage from a special vantage point, capturing video of your home, your backyard, and your movements that should require clear policies around retention, audits, and use, including when the cameras shouldn’t be recording. We’re also seeing that additional camera analysis and other physical features that can be added (so-called “payloads”) — like thermal cameras and even tear gas — can make drones even more powerful and that police technology companies are encouraging DFR as part of surveillance packages. It's important that next year we all advocate for, and enforce, standards in adopting and using these DFRs. Check the Atlas to see if they are used where you live and learn more about drones and other surveillance tools on EFF’s Street-Level Surveillance Hub.This article is part of our Year in Review series. Read other articles about the fight for digital rights in 2025.",
       "story_type": "policy",
       "relevance_score": 0.45,
-      "key_entities": ["Axon", "Motorola"],
+      "key_entities": "Axon,Motorola",
       "location": "May, FA",
-      "tags": ["AI", "Axon", "automated", "officer", "police", "law enforcement", "ICE", "adoption", "pilot", "audit"],
+      "tags": [
+        "AI",
+        "Axon",
+        "automated",
+        "officer",
+        "police",
+        "law enforcement",
+        "ICE",
+        "adoption",
+        "pilot",
+        "audit"
+      ],
       "needs_review": 1
     },
     {
@@ -551,7 +781,14 @@
       "story_type": "vendor",
       "relevance_score": 0.45,
       "key_entities": "OpenAI",
-      "tags": ["AI", "Truleo", "officer", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Truleo",
+        "officer",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -564,7 +801,14 @@
       "summary": "AI Police Reports: Year In Review&nbsp;&nbsp;Electronic Frontier Foundation",
       "story_type": "general",
       "relevance_score": 0.4,
-      "tags": ["AI", "police report", "police", "ICE"],
+      "key_entities": "ICE",
+      "location": "",
+      "tags": [
+        "AI",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -577,7 +821,13 @@
       "summary": "Automated report writing: Benefits and risks for police&nbsp;&nbsp;Police1",
       "story_type": "general",
       "relevance_score": 0.4,
-      "tags": ["automated", "police", "ICE"],
+      "key_entities": "ICE",
+      "location": "",
+      "tags": [
+        "automated",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -590,8 +840,14 @@
       "summary": "California, Tell Governor Newsom: Regulate AI Police Reports and Sign S.B. 524&nbsp;&nbsp;Electronic Frontier Foundation",
       "story_type": "general",
       "relevance_score": 0.4,
+      "key_entities": "ICE",
       "location": "California, Tell",
-      "tags": ["AI", "police report", "police", "ICE"],
+      "tags": [
+        "AI",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -604,8 +860,14 @@
       "summary": "Fort Collins Police Use Draft One AI To Cut Report Time&nbsp;&nbsp;Dataconomy",
       "story_type": "general",
       "relevance_score": 0.4,
-      "key_entities": ["Fort Collins Police", "Dataconomy Fort Collins Police"],
-      "tags": ["AI", "Draft One", "police", "ICE"],
+      "key_entities": "Fort Collins Police,Dataconomy Fort Collins Police",
+      "location": "",
+      "tags": [
+        "AI",
+        "Draft One",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -618,7 +880,15 @@
       "summary": "RoboCop on Patrol: Metro Law Enforcement Adopting AI Police Report Technology&nbsp;&nbsp;Westword",
       "story_type": "policy",
       "relevance_score": 0.4,
-      "tags": ["AI", "police report", "police", "law enforcement", "ICE"],
+      "key_entities": "ICE",
+      "location": "",
+      "tags": [
+        "AI",
+        "police report",
+        "police",
+        "law enforcement",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -631,7 +901,12 @@
       "summary": "Tyler Technologies’ Report Writing Tool: Transforming police documentation for the modern era&nbsp;&nbsp;Police1",
       "story_type": "general",
       "relevance_score": 0.4,
-      "tags": ["police", "ICE"],
+      "key_entities": "ICE",
+      "location": "",
+      "tags": [
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -644,8 +919,14 @@
       "summary": "Victory! California Requires Transparency for AI Police Reports&nbsp;&nbsp;Electronic Frontier Foundation",
       "story_type": "general",
       "relevance_score": 0.4,
+      "key_entities": "ICE",
       "location": "California",
-      "tags": ["AI", "police report", "police", "ICE"],
+      "tags": [
+        "AI",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 1
     },
     {
@@ -658,8 +939,15 @@
       "summary": "AI Impact Awards 2025: Axon is Saving Police Officers Time and Headaches&nbsp;&nbsp;Newsweek",
       "story_type": "vendor",
       "relevance_score": 0.35,
-      "key_entities": ["Saving Police", "Axon"],
-      "tags": ["AI", "Axon", "officer", "police", "ICE"],
+      "key_entities": "Saving Police,Axon",
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "officer",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -672,8 +960,14 @@
       "summary": "Arizona DPS partners with Arizona State University and TRULEO to complete field study of artificial intelligence for body cam review&nbsp;&nbsp;Police1",
       "story_type": "vendor",
       "relevance_score": 0.35,
+      "key_entities": "Truleo, ICE",
       "location": "Arizona",
-      "tags": ["artificial intelligence", "Truleo", "police", "ICE"],
+      "tags": [
+        "artificial intelligence",
+        "Truleo",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -688,7 +982,13 @@
       "relevance_score": 0.35,
       "key_entities": "Axon",
       "location": "Arizona",
-      "tags": ["AI", "bodycam", "Axon", "police", "ICE"],
+      "tags": [
+        "AI",
+        "bodycam",
+        "Axon",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -702,7 +1002,14 @@
       "story_type": "vendor",
       "relevance_score": 0.35,
       "key_entities": "Truleo",
-      "tags": ["AI", "bodycam", "Truleo", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "bodycam",
+        "Truleo",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -715,8 +1022,14 @@
       "summary": "How AI turned a police officer into a frog: Report writing gone wrong in Utah&nbsp;&nbsp;Diario AS",
       "story_type": "incident",
       "relevance_score": 0.35,
+      "key_entities": "ICE",
       "location": "Utah",
-      "tags": ["AI", "officer", "police", "ICE"],
+      "tags": [
+        "AI",
+        "officer",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -730,7 +1043,10 @@
       "story_type": "policy",
       "relevance_score": 0.35,
       "key_entities": "Motorola",
-      "tags": "AI",
+      "location": "",
+      "tags": [
+        "AI"
+      ],
       "needs_review": 0
     },
     {
@@ -744,7 +1060,14 @@
       "story_type": "vendor",
       "relevance_score": 0.35,
       "key_entities": "Truleo",
-      "tags": ["AI", "bodycam", "Truleo", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "bodycam",
+        "Truleo",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -758,7 +1081,13 @@
       "story_type": "vendor",
       "relevance_score": 0.35,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -772,7 +1101,14 @@
       "story_type": "vendor",
       "relevance_score": 0.35,
       "key_entities": "Powered Police",
-      "tags": ["AI", "Truleo", "police report", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Truleo",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -785,7 +1121,15 @@
       "summary": "TRULEO introduces AI generated police reports powered by Amazon Bedrock&nbsp;&nbsp;Police1",
       "story_type": "vendor",
       "relevance_score": 0.35,
-      "tags": ["AI", "Truleo", "police report", "police", "ICE"],
+      "key_entities": "Truleo, Amazon, ICE",
+      "location": "",
+      "tags": [
+        "AI",
+        "Truleo",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -798,7 +1142,14 @@
       "summary": "TRULEO releases AI Analyst: A virtual assistant for police chiefs&nbsp;&nbsp;Police1",
       "story_type": "vendor",
       "relevance_score": 0.35,
-      "tags": ["AI", "Truleo", "police", "ICE"],
+      "key_entities": "Truleo, ICE",
+      "location": "",
+      "tags": [
+        "AI",
+        "Truleo",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -811,7 +1162,15 @@
       "summary": "TRULEO releases AI-powered witness capability for law enforcement&nbsp;&nbsp;Police1",
       "story_type": "vendor",
       "relevance_score": 0.35,
-      "tags": ["AI", "Truleo", "police", "law enforcement", "ICE"],
+      "key_entities": "Truleo, ICE",
+      "location": "",
+      "tags": [
+        "AI",
+        "Truleo",
+        "police",
+        "law enforcement",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -824,8 +1183,15 @@
       "summary": "Taser Company Axon Is Selling AI That Turns Body Cam Audio Into Police Reports&nbsp;&nbsp;Forbes",
       "story_type": "vendor",
       "relevance_score": 0.35,
-      "key_entities": ["That Turns Body Cam Audio Into Police", "Axon"],
-      "tags": ["AI", "Axon", "police report", "police", "ICE"],
+      "key_entities": "That Turns Body Cam Audio Into Police,Axon",
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "police report",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -839,7 +1205,15 @@
       "story_type": "vendor",
       "relevance_score": 0.35,
       "key_entities": "Truleo",
-      "tags": ["AI", "Truleo", "police report", "police", "ICE", "policy"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Truleo",
+        "police report",
+        "police",
+        "ICE",
+        "policy"
+      ],
       "needs_review": 0
     },
     {
@@ -853,7 +1227,13 @@
       "story_type": "vendor",
       "relevance_score": 0.35,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -868,7 +1248,10 @@
       "relevance_score": 0.35,
       "key_entities": "Axon",
       "location": "Axon Enterprise, Inc",
-      "tags": ["AI", "Axon"],
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -881,7 +1264,14 @@
       "summary": "TRULEO offers jail call intelligence to Sheriffs at no cost&nbsp;&nbsp;Police1",
       "story_type": "vendor",
       "relevance_score": 0.35,
-      "tags": ["AI", "Truleo", "police", "ICE"],
+      "key_entities": "Truleo, ICE",
+      "location": "",
+      "tags": [
+        "AI",
+        "Truleo",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -895,7 +1285,11 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -909,7 +1303,11 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -923,7 +1321,11 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -937,7 +1339,11 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -952,7 +1358,11 @@
       "relevance_score": 0.3,
       "key_entities": "Axon",
       "location": "Price, Forecasts",
-      "tags": ["AI", "Axon", "ICE"],
+      "tags": [
+        "AI",
+        "Axon",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -966,7 +1376,12 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -980,7 +1395,11 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -994,7 +1413,12 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["Axon", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "Axon",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -1009,7 +1433,10 @@
       "relevance_score": 0.3,
       "key_entities": "Axon",
       "location": "Movie Audio, Claims",
-      "tags": ["AI", "Axon"],
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -1024,7 +1451,12 @@
       "relevance_score": 0.3,
       "key_entities": "Truleo",
       "location": "Ohio",
-      "tags": ["body camera", "Truleo", "police", "ICE"],
+      "tags": [
+        "body camera",
+        "Truleo",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -1037,8 +1469,13 @@
       "summary": "Former Major Cities Police Chief Art Acevedo Joins Truleo as a Strategic Advisor&nbsp;&nbsp;PR Newswire",
       "story_type": "vendor",
       "relevance_score": 0.3,
-      "key_entities": ["Former Major Cities Police", "Newswire Former Major Cities Police", "Truleo"],
-      "tags": ["Truleo", "police", "ICE"],
+      "key_entities": "Former Major Cities Police,Newswire Former Major Cities Police,Truleo",
+      "location": "",
+      "tags": [
+        "Truleo",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -1052,7 +1489,12 @@
       "story_type": "incident",
       "relevance_score": 0.3,
       "key_entities": "Motorola",
-      "tags": ["AI", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "AI",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -1066,7 +1508,12 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["Axon", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "Axon",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -1080,7 +1527,10 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": "Axon",
+      "location": "",
+      "tags": [
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -1093,7 +1543,13 @@
       "summary": "TRULEO unveils TruEnough&nbsp;&nbsp;Police1",
       "story_type": "vendor",
       "relevance_score": 0.3,
-      "tags": ["Truleo", "police", "ICE"],
+      "key_entities": "Truleo, ICE",
+      "location": "",
+      "tags": [
+        "Truleo",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -1107,7 +1563,12 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Truleo",
-      "tags": ["Truleo", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "Truleo",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -1121,7 +1582,13 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Truleo",
-      "tags": ["body camera", "Truleo", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "body camera",
+        "Truleo",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -1135,7 +1602,13 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Truleo",
-      "tags": ["Truleo", "transcript", "police", "ICE"],
+      "location": "",
+      "tags": [
+        "Truleo",
+        "transcript",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -1149,7 +1622,11 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -1162,8 +1639,13 @@
       "summary": "What is 'Truleo?' And how the Burlington Police Department say its helping its bottom line&nbsp;&nbsp;WXII",
       "story_type": "vendor",
       "relevance_score": 0.3,
-      "key_entities": ["Burlington Police Department", "Truleo"],
-      "tags": ["Truleo", "police", "ICE"],
+      "key_entities": "Burlington Police Department,Truleo",
+      "location": "",
+      "tags": [
+        "Truleo",
+        "police",
+        "ICE"
+      ],
       "needs_review": 0
     },
     {
@@ -1177,7 +1659,11 @@
       "story_type": "vendor",
       "relevance_score": 0.3,
       "key_entities": "Axon",
-      "tags": ["AI", "Axon"],
+      "location": "",
+      "tags": [
+        "AI",
+        "Axon"
+      ],
       "needs_review": 0
     },
     {
@@ -1190,8 +1676,19 @@
       "summary": "Axon Enterprise Inc. is working with a Canadian police department to test the addition of face recognition technology (FRT) to its body-worn cameras (BWCs). This is an alarming development in government surveillance that should put communities everywhere on alert. As many as 50 officers from the Edmonton Police Department (EPD) will begin using these FRT-enabled BWCs today as part of a proof-of-concept experiment. EPD is the first police department in the world to use these Axon devices, according to a report from the Edmonton Journal. This kind of technology could give officers instant identification of any person that crosses their path. During the current trial period, the Edmonton officers will not be notified in the field of an individual’s identity but will review identifications generated by the BWCs later on. “This Proof of Concept will test the technology’s ability to work with our database to make officers aware of individuals with safety flags and cautions from previous interactions,” as well as “individuals who have outstanding warrants for serious crime,” Edmonton Police described in a press release, suggesting that individuals will be placed on a watchlist of sorts.FRT brings a rash of problems. It relies on extensive surveillance and collecting images on individuals, law-abiding or otherwise. Misidentifications can cause horrendous consequences for individuals, including prolonged and difficult fights for innocence and unfair incarceration for crimes never committed. In a world where police are using real-time face recognition, law-abiding individuals or those participating in legal, protected activity that police may find objectionable — like protest — could be quickly identified. With the increasing connections being made between disparate data sources about nearly every person, BWCs enabled with FRT can easily connect a person minding their own business, who happens to come within view of a police officer, with a whole slew of other personal information. Axon had previously claimed it would pause the addition of face recognition to its tools due to concerns raised in 2019 by the company’s AI and Policing Technology Ethics Board. However, since then, the company has continued to research and consider the addition of FRT to its products. This BWC-FRT integration signals possible other FRT integrations in the future. Axon is building an entire arsenal of cameras and surveillance devices for law enforcement, and the company grows the reach of its police surveillance apparatus, in part, by leveraging relationships with its thousands of customers, including those using its flagship product, the Taser. This so-called “ecosystem” of surveillance technologyq includes the Fusus system, a platform for connecting surveillance cameras to facilitate real-time viewing of video footage. It also involves expanding the use of surveillance tools like BWCs and the flying cameras of “drone as first responder” (DFR) programs.Face recognition undermines individual privacy, and it is too dangerous when deployed by police. Communities everywhere must move to protect themselves and safeguard their civil liberties, insisting on transparency, clear policies, public accountability, and audit mechanisms. Ideally, communities should ban police use of the technology altogether. At a minimum, police must not add FRT to BWCs.",
       "story_type": "policy",
       "relevance_score": 0.45,
-      "key_entities": ["Edmonton Police Department", "Edmonton Police", "Axon"],
-      "tags": ["AI", "BWC", "Axon", "officer", "police", "law enforcement", "ICE", "trial", "audit"],
+      "key_entities": "Edmonton Police Department,Edmonton Police,Axon",
+      "location": "",
+      "tags": [
+        "AI",
+        "BWC",
+        "Axon",
+        "officer",
+        "police",
+        "law enforcement",
+        "ICE",
+        "trial",
+        "audit"
+      ],
       "needs_review": 1
     }
   ]
