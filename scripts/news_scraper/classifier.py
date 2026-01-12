@@ -12,33 +12,38 @@ import anthropic
 
 logger = logging.getLogger(__name__)
 
-# Classification prompt for Claude API
-RELEVANCE_PROMPT = """You are classifying news articles for an academic researcher studying AI and automated technology in US law enforcement.
+# Classification prompt for Claude API - strict focus on US police + AI
+RELEVANCE_PROMPT = """You are a strict classifier for an academic researcher studying AI technology deployed by US police departments.
 
 Article Title: {title}
 Article Summary: {snippet}
 Source: {source}
 
-Is this article primarily about artificial intelligence, machine learning, or automated technology being used by US law enforcement agencies (police, sheriff, federal agencies)?
+ONLY answer YES if the article is SPECIFICALLY about:
+- US police/sheriff departments USING or ADOPTING AI technology
+- AI tools for police report writing (Axon Draft One, Truleo)
+- Police facial recognition deployments
+- Police body camera AI/analytics
+- Police use of ShotSpotter/gunshot detection
+- Police predictive policing software
+- Police license plate readers (ALPR, Flock Safety)
+- Police drones with AI capabilities
+- Real-time crime centers with AI
+- Police department AI policy/oversight/regulation
+- Incidents or errors involving police AI systems
 
-Relevant topics include:
-- AI report writing tools (Axon Draft One, Truleo)
-- Predictive policing software
-- Facial recognition by police
-- Automated license plate readers (ALPR)
-- Gunshot detection (ShotSpotter, SoundThinking)
-- Body camera AI analytics
-- Police use of ChatGPT or LLMs
-- AI surveillance by law enforcement
-- Police drones with AI
-- Real-time crime centers
+Answer NO for:
+- General AI/tech news that merely mentions police in passing
+- Axon/vendor stock prices or earnings (unless about specific police contracts)
+- Crime news that doesn't discuss AI technology
+- Non-US law enforcement (UK, EU, etc.)
+- Military or intelligence agency AI (FBI, CIA, NSA)
+- Cybersecurity or hacking stories
+- AI ethics discussions without specific police focus
+- Surveillance technology not used by police
+- General "future of policing" opinion pieces without concrete AI focus
 
-NOT relevant:
-- General AI news without law enforcement connection
-- Crime stories that don't discuss technology
-- AI in non-US law enforcement only
-- General cybersecurity without police context
-- Military AI (unless domestic law enforcement)
+Be STRICT. When in doubt, answer NO.
 
 Reply with exactly one word: YES or NO"""
 

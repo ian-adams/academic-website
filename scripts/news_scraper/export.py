@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 def export_to_json(
     db: NewsDatabase,
     output_path: str | Path,
-    max_stories: int = 150
+    max_stories: int = 0
 ) -> int:
     """
     Export relevant articles to Hugo-compatible JSON.
@@ -25,7 +25,7 @@ def export_to_json(
     Args:
         db: NewsDatabase instance
         output_path: Path to output JSON file
-        max_stories: Maximum number of stories to include
+        max_stories: Maximum number of stories (0 = no limit)
 
     Returns:
         Number of stories exported
@@ -33,8 +33,9 @@ def export_to_json(
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # Get relevant articles from database
-    articles = db.get_relevant_articles(limit=max_stories)
+    # Get relevant articles from database (0 = no limit)
+    limit = max_stories if max_stories > 0 else None
+    articles = db.get_relevant_articles(limit=limit)
 
     # Transform to Hugo format
     stories = []

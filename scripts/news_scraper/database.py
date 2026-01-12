@@ -181,15 +181,23 @@ class NewsDatabase:
         """, (limit,))
         return [dict(row) for row in cursor.fetchall()]
 
-    def get_relevant_articles(self, limit: int = 150) -> list[dict]:
+    def get_relevant_articles(self, limit: int | None = None) -> list[dict]:
         """Get relevant articles for JSON export."""
-        cursor = self.conn.execute("""
-            SELECT *
-            FROM articles
-            WHERE is_relevant = 1
-            ORDER BY date_published DESC, date_scraped DESC
-            LIMIT ?
-        """, (limit,))
+        if limit:
+            cursor = self.conn.execute("""
+                SELECT *
+                FROM articles
+                WHERE is_relevant = 1
+                ORDER BY date_published DESC, date_scraped DESC
+                LIMIT ?
+            """, (limit,))
+        else:
+            cursor = self.conn.execute("""
+                SELECT *
+                FROM articles
+                WHERE is_relevant = 1
+                ORDER BY date_published DESC, date_scraped DESC
+            """)
         return [dict(row) for row in cursor.fetchall()]
 
     def get_all_articles(self) -> list[dict]:
