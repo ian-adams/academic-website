@@ -1,7 +1,34 @@
 {
-  "updated": "2026-01-12T21:17:00Z",
+  "updated": "2026-01-12T21:59:18Z",
   "feed_type": "adjacent",
   "description": "Expert testimony ecosystem - police use-of-force litigation",
-  "count": 0,
-  "stories": []
+  "count": 1,
+  "stories": [
+    {
+      "id": "2e17f5aa73631df8aa76075420c8cee1",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZnF3MW5LS3JmT0lJdzVSVmlKaXFjRkhPd0FvM1RhTUQ1WU81M1Z4ZDQxTG9rZ1BjT0czbXNKZ2Q1dElPYS1DdjlSOUUyVTFjb210dVNOekkwSDBPY1haZXFDMkN4RzMzNkJXd0U4d1Fob0NPYXcxeWRwYkJIaHVRSXc1bUs5NU9UczFBNUt0d2E1WDRnbGF3QzRkUjlEOXpuU0dCY2dlLUM3R3dPd3lHQ1lxajBNOVZoaldXZG5GQjl0Zw?oc=5",
+      "title": "In Session: Prosecutors try to exclude expert testimony in trial of former Savannah Police officer",
+      "source": "Savannah Morning News",
+      "date": "2024-05-06",
+      "date_discovered": "2026-01-12",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZnF3MW5LS3JmT0lJdzVSVmlKaXFjRkhPd0FvM1RhTUQ1WU81M1Z4ZDQxTG9rZ1BjT0czbXNKZ2Q1dElPYS1DdjlSOUUyVTFjb210dVNOekkwSDBPY1haZXFDMkN4RzMzNkJXd0U4d1Fob0NPYXcxeWRwYkJIaHVRSXc1bUs5NU9UczFBNUt0d2E1WDRnbGF3QzRkUjlEOXpuU0dCY2dlLUM3R3dPd3lHQ1lxajBNOVZoaldXZG5GQjl0Zw?oc=5\" target=\"_blank\">In Session: Prosecutors try to exclude expert testimony in trial of former Savannah Police officer</a> <font color=\"#6f6f6f\">Savannah Morning News</font>",
+      "story_type": "general",
+      "label": "ADJACENT",
+      "confidence": 0.8,
+      "relevance": 60,
+      "relevance_score": 0.6,
+      "signals": [
+        "prosecutors try to exclude expert testimony",
+        "trial of former Savannah Police officer"
+      ],
+      "entities": [
+        "Savannah Police"
+      ],
+      "rationale": "The article discusses the exclusion of expert testimony in a use-of-force related trial, which is indicative of the broader police use-of-force expert testimony ecosystem, but does not mention Force Science directly or by proxy.",
+      "key_entities": "Savannah Police",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    }
+  ]
 }
