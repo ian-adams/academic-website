@@ -168,6 +168,11 @@ def transform_force_science_article(article: dict, classifier: ArticleClassifier
     if confidence and confidence < 0.6:
         needs_review = 1
 
+    # Handle legacy articles (is_relevant=1 but no label)
+    label = article.get('article_label')
+    if label is None and article.get('is_relevant') == 1:
+        label = 'LEGACY'  # Mark as legacy for tracking
+
     return {
         "id": article['url_hash'],
         "url": article['url'],
@@ -178,13 +183,13 @@ def transform_force_science_article(article: dict, classifier: ArticleClassifier
         "summary": article.get('snippet', ''),
         "story_type": article.get('story_type', 'general'),
         # Force Science specific fields
-        "label": article.get('article_label', 'NO'),
-        "confidence": round(article.get('label_confidence', 0.0), 2),
-        "relevance": article.get('label_relevance', 0),
-        "relevance_score": round(relevance_score, 2) if relevance_score else 0.0,
+        "label": label or 'NO',
+        "confidence": round(article.get('label_confidence') or 0.85, 2),  # Default 0.85 for legacy
+        "relevance": article.get('label_relevance') or 85,  # Default 85 for legacy
+        "relevance_score": round(relevance_score, 2) if relevance_score else 0.85,
         "signals": signals,
         "entities": entities,
-        "rationale": article.get('rationale', ''),
+        "rationale": article.get('rationale') or '',
         "key_entities": key_entities,
         "location": article.get('location', ''),
         "tags": tags,

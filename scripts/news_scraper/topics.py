@@ -216,6 +216,12 @@ FORCE_SCIENCE_KEYWORDS = {
 
     # Police use-of-force context
     'police_force_context': [
+        'police',
+        'officer',
+        'cop',
+        'deputy',
+        'sheriff',
+        'law enforcement',
         'use of force',
         'excessive force',
         'officer-involved shooting',
@@ -228,7 +234,10 @@ FORCE_SCIENCE_KEYWORDS = {
         'wrongful death',
         'qualified immunity',
         'deadly force',
-        'lethal force'
+        'lethal force',
+        'shooting',
+        'taser',
+        'chokehold'
     ],
 
     # Court context
@@ -243,7 +252,14 @@ FORCE_SCIENCE_KEYWORDS = {
         'appeal',
         'court',
         'lawsuit',
-        'litigation'
+        'litigation',
+        'motion',
+        'case',
+        'verdict',
+        'ruling',
+        'settlement',
+        'plaintiff',
+        'defendant'
     ],
 
     # FSI-affiliated concepts (secondary signals, need context)
@@ -450,11 +466,16 @@ def force_science_keyword_prefilter(text: str, patterns: dict) -> dict:
             result['trigger_reason'] = 'critic_name_with_context'
             return result
 
-    # ADJACENT bundle check:
-    # expert-mechanics >= 2 AND police-force >= 1 AND court >= 1
-    if (result['expert_mechanics_count'] >= 2 and
-        result['police_force_count'] >= 1 and
-        result['court_context_count'] >= 1):
+    # ADJACENT bundle check (relaxed to be more inclusive):
+    # Option 1: expert-mechanics >= 1 AND police-force >= 1 (core combination)
+    # Option 2: expert-mechanics >= 2 (strong expert testimony signal even without explicit police)
+    # Option 3: expert-mechanics >= 1 AND court >= 1 (legal context with expert)
+    has_adjacent = (
+        (result['expert_mechanics_count'] >= 1 and result['police_force_count'] >= 1) or
+        (result['expert_mechanics_count'] >= 2) or
+        (result['expert_mechanics_count'] >= 1 and result['court_context_count'] >= 1)
+    )
+    if has_adjacent:
         result['should_call_llm'] = True
         result['trigger_reason'] = 'adjacent_bundle'
         return result
