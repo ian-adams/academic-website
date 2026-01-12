@@ -46,7 +46,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           cd $GITHUB_WORKSPACE
-          python -m scripts.news_scraper.scraper --verbose 2>&1 | tee data/ai-police-news/logs/run-$(date +'%Y%m%d-%H%M%S').log
+          python -m scripts.news_scraper.scraper 2>&1 | tee data/ai-police-news/logs/run-$(date +'%Y%m%d-%H%M%S').log
 
       - name: Check for changes
         id: check-changes

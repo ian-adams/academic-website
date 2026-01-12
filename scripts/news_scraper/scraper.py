@@ -6,6 +6,7 @@ Coordinates fetching, deduplication, classification, and export.
 import argparse
 import logging
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -31,18 +32,18 @@ def run_scraper(
     db_path: str | Path | None = None,
     output_json: str | Path | None = None,
     output_rss: str | Path | None = None,
-    skip_classification: bool = False,
     dry_run: bool = False
 ) -> dict:
     """
     Run the full scraper pipeline.
+
+    Uses keyword pre-filtering then Claude API for final relevance classification.
 
     Args:
         config_path: Path to config file (optional)
         db_path: Path to SQLite database (optional)
         output_json: Path to output JSON (optional)
         output_rss: Path to output RSS (optional)
-        skip_classification: Skip LLM classification step
         dry_run: Don't write to database or files
 
     Returns:
@@ -121,27 +122,74 @@ def run_scraper(
     # Initialize classifier
     classifier = ArticleClassifier()
 
-    # Process and store new articles
+    # Pre-filter with keywords first to reduce LLM calls
+    keyword_matches = []
+    keyword_rejects = []
     for article in new_articles:
+        if classifier._keyword_relevance(article.title, article.snippet):
+            keyword_matches.append(article)
+        else:
+            keyword_rejects.append(article)
+
+    logger.info(f"Keyword pre-filter: {len(keyword_matches)} potential matches, {len(keyword_rejects)} rejected")
+
+    # Process keyword rejects (store as not relevant, no LLM call needed)
+    for article in keyword_rejects:
+        url_hash = NewsDatabase.hash_url(article.url)
+        story_type = classifier.classify_story_type(article.title, article.snippet)
+
+        record = ArticleRecord(
+            url_hash=url_hash,
+            url=article.url,
+            title=article.title,
+            source=article.source,
+            date_published=article.date_published,
+            date_scraped=datetime.utcnow().strftime('%Y-%m-%d'),
+            snippet=article.snippet,
+            is_relevant=0,  # Rejected by keyword filter
+            relevance_reason='No law enforcement + AI keywords',
+            classification_model=None,
+            classification_date=datetime.utcnow().isoformat() + 'Z',
+            source_type=article.source_type,
+            search_query=article.search_query,
+            story_type=story_type,
+            relevance_score=0.1,
+            key_entities=None,
+            location=None,
+            tags=None
+        )
+        db.insert_article(record)
+
+    # Process keyword matches with LLM classification
+    logger.info(f"Running LLM classification on {len(keyword_matches)} keyword-matched articles...")
+
+    for i, article in enumerate(keyword_matches):
         url_hash = NewsDatabase.hash_url(article.url)
 
-        # Classify relevance
-        is_relevant = None
-        model_used = None
+        # LLM classification
+        try:
+            is_relevant_bool, model_used = classifier.classify_relevance(
+                article.title,
+                article.snippet,
+                article.source
+            )
+            is_relevant = 1 if is_relevant_bool else 0
+            stats['articles_classified'] += 1
+            if is_relevant:
+                stats['articles_relevant'] += 1
+        except Exception as e:
+            logger.warning(f"LLM classification failed for '{article.title[:50]}': {e}")
+            # On error, assume relevant (keyword matched)
+            is_relevant = 1
+            model_used = None
+            stats['articles_relevant'] += 1
 
-        if not skip_classification:
-            try:
-                is_relevant_bool, model_used = classifier.classify_relevance(
-                    article.title,
-                    article.snippet,
-                    article.source
-                )
-                is_relevant = 1 if is_relevant_bool else 0
-                stats['articles_classified'] += 1
-                if is_relevant:
-                    stats['articles_relevant'] += 1
-            except Exception as e:
-                logger.warning(f"Classification failed for '{article.title[:50]}': {e}")
+        # Rate limiting - 0.5s delay between LLM calls
+        time.sleep(0.5)
+
+        # Progress logging
+        if (i + 1) % 25 == 0:
+            logger.info(f"Classified {i + 1}/{len(keyword_matches)} articles")
 
         # Classify story type
         story_type = classifier.classify_story_type(article.title, article.snippet)
@@ -226,11 +274,6 @@ def main():
         help='Path to output RSS file'
     )
     parser.add_argument(
-        '--skip-classification',
-        action='store_true',
-        help='Skip LLM classification (just fetch and store)'
-    )
-    parser.add_argument(
         '--dry-run',
         action='store_true',
         help='Fetch articles but do not write to database'
@@ -251,7 +294,6 @@ def main():
         db_path=args.db,
         output_json=args.output_json,
         output_rss=args.output_rss,
-        skip_classification=args.skip_classification,
         dry_run=args.dry_run
     )
 
