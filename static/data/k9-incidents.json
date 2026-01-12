@@ -1,7 +1,33 @@
 {
-  "updated": "2026-01-11T10:34:36Z",
+  "updated": "2026-01-12T10:39:26Z",
   "count": 100,
   "stories": [
+    {
+      "id": "9c5590e8d932ec1f00b53843528bc77a",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOZkgyeVE4ZXpjcUY5LU0xcTdLQmdPVHgyS1ZFVWlZX2ZQdm1nVXdQcW5uLTNESHdTS1lsOFg1RWxSano1NmR5V3NtVzhPckFtdUJFRHNfMFA4QW9NTloxSnprR2FRQWtUM253QTJwNXcxWlF2X2g5NjJWYXlBZ0NsVlYwbElpU0FmUlVZUkMxVklYNEx1X0tzNTlsbDVfRGNTclVmZng2MGt5eHVVZE41eVBnUUYyZG1vSDZqQUJjdkFTMXpwTTJac0JlVGVXdVIwcl85ZkNyZk1HdjB3QnBMWWRR?oc=5",
+      "title": "Detective in Muskingum County 'violated multiple polices' leading to K9 officer's death - WSYX",
+      "source": "Google News",
+      "date": "2026-01-12",
+      "date_discovered": "2026-01-12",
+      "summary": "Detective in Muskingum County 'violated multiple polices' leading to K9 officer's death&nbsp;&nbsp;WSYX",
+      "story_type": "death",
+      "relevance_score": 0.35,
+      "tags": ["K9", "officer"],
+      "needs_review": 0
+    },
+    {
+      "id": "7e6a3aca814a35b3cc622b4d9176adc2",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPbTJDa1ZhTlFwY0twS3BacGZlMkZqYXZzQ21YQnJwOGZrbDZGaEM1ZVZvMVZyV3hBbFduTF9oZUVULVoyUEUxRFk0TnZwSFBjekVtLXBIcWEwSDFkbmNDN2w2MmRuU3RRU3FISmQ0MTU0c0taZkYzUVk3bTAxNUNnOFVPOVRPU19PVWhBUks2TVNWZlVKSGVxTmhMX2JIWE5sY0ZNbUJmNktxMmY5MUQ1a3NsYUtDTGpnYzNPRHJJWmh0U2FPY3hPWQ?oc=5",
+      "title": "Man who shot daughter’s boyfriend, killed Toronto police dog Bingo gets 14 years in prison - CTV News",
+      "source": "Google News",
+      "date": "2026-01-12",
+      "date_discovered": "2026-01-12",
+      "summary": "Man who shot daughter’s boyfriend, killed Toronto police dog Bingo gets 14 years in prison&nbsp;&nbsp;CTV News",
+      "story_type": "general",
+      "relevance_score": 0.35,
+      "tags": ["police dog", "killed"],
+      "needs_review": 0
+    },
     {
       "id": "dd1a0882d5af1f6e7f28acaf268cf5ba",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOdll4WFRialZ5LVBzbUJjc3Zsa0k1b2RxOG11TVNaa2NhRTdpSUFvcXNhT3ROeHRKZS1meExvYVpITEhDeEtuMlh1LU01anZ0S255RC1TcjRhVi1sVi1tMnE4Z05JWFloSTJoQzAtWnJYeGRpWG1zb05FZTFtUnJIbExLaUw?oc=5",
@@ -1321,33 +1347,6 @@
       "story_type": "incident",
       "relevance_score": 0.65,
       "tags": ["police dog", "attack", "officer"],
-      "needs_review": 1
-    },
-    {
-      "id": "fe5762d9926ec05a677dba6296da94b6",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNVWZtb2gtRVdoZl9SdTBacG5aMUw3WXQzYmxOaEhYYllzVS1uX0g1OHBCUlhhNHNMOUlPeVczMzZrXzFxZ3gtLU84T0VkOG1aeWR1YUgxc2VYTk8xT3lselhKUVdmOW9jeEJLNzVxTmJFbjJkTU5nb282QkhfNXVyd25zWmVGb01NRG1EdGkyNEh3OEt5Q3pjOFFHdGs5Vm1hYmQtZ2oySnhhQlVCUEHSAbMBQVVfeXFMUC13MktDMXpOZ3dGT0xtSzZBaE5kQUNZQUZOZ2pMeFdvR2ROMmczNDZ6WkV4VnNneV9MSFNLT2JGMDVwM091SnJHLXU2M0R4YXcySmpnNkpzZUo4MnFsemNqMUxmVGNQNXUyUm95RXZtUmppUS1fc1pSd2dGVzhXRl8zU0xldWNkOFNiSFpJcENCMjZWa2hEMlhzZDJ4TGRKZ1N4U2RLUjVYSG1sN1hfX0gtMzA?oc=5",
-      "title": "Ohio officer fired after letting his police dog attack a surrendering truck driver - WHYY",
-      "source": "Google News",
-      "date": "2026-01-06",
-      "date_discovered": "2026-01-06",
-      "summary": "Ohio officer fired after letting his police dog attack a surrendering truck driver&nbsp;&nbsp;WHYY",
-      "story_type": "incident",
-      "relevance_score": 0.65,
-      "location": "Ohio",
-      "tags": ["police dog", "attack", "officer"],
-      "needs_review": 1
-    },
-    {
-      "id": "afe2d511845f1081385ac6061fb5a24b",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWkNMSmQ1cE1MMTNMR0F6R04xa3J1eHdPWllhQW5yOE8zbkloT25XcDE4aWROd0JiLTduRzYwVVE3OE1CQ0ZSaktWLTl6OEZuOHo0RjJqMTRDalNIbFF0QVF0YUlNSjJxSXFVeDJpazlZejlvNFp6Rk80WmNNQ0szXzRNdlJ4c18xSmt2blJRanpQRmJsUWlLb3JMVzRuWGM?oc=5",
-      "title": "Palo Alto owes $135K to victim of police dog attack - Palo Alto Online",
-      "source": "Google News",
-      "date": "2026-01-06",
-      "date_discovered": "2026-01-06",
-      "summary": "Palo Alto owes $135K to victim of police dog attack&nbsp;&nbsp;Palo Alto Online",
-      "story_type": "incident",
-      "relevance_score": 0.65,
-      "tags": ["police dog", "attack"],
       "needs_review": 1
     }
   ]
