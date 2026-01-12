@@ -5,6 +5,7 @@ Article classifier using Claude API for relevance and keywords for story type.
 import os
 import re
 import logging
+import time
 from typing import Optional
 
 import anthropic
@@ -238,21 +239,24 @@ class ArticleClassifier:
 
 def classify_batch(
     classifier: ArticleClassifier,
-    articles: list[dict]
+    articles: list[dict],
+    delay: float = 0.5
 ) -> list[tuple[str, bool, Optional[str], str]]:
     """
-    Classify a batch of articles.
+    Classify a batch of articles with rate limiting.
 
     Args:
         classifier: ArticleClassifier instance
         articles: List of article dicts with url_hash, title, snippet, source
+        delay: Seconds to wait between API calls (default 0.5s = 120 req/min)
 
     Returns:
         List of tuples: (url_hash, is_relevant, model, story_type)
     """
     results = []
+    total = len(articles)
 
-    for article in articles:
+    for i, article in enumerate(articles):
         is_relevant, model = classifier.classify_relevance(
             article['title'],
             article.get('snippet'),
@@ -270,5 +274,13 @@ def classify_batch(
             model,
             story_type
         ))
+
+        # Rate limiting - add delay between API calls
+        if model and i < total - 1:  # Only delay if we made an API call and not last item
+            time.sleep(delay)
+
+        # Progress logging every 10 articles
+        if (i + 1) % 10 == 0:
+            logger.info(f"Classified {i + 1}/{total} articles")
 
     return results
