@@ -1,16 +1,48 @@
 """
 Article classifier using Claude API for relevance and keywords for story type.
+Supports both binary YES/NO classification and multi-label JSON classification for Force Science.
 """
 
 import os
 import re
+import json
 import logging
 import time
 from typing import Optional
+from dataclasses import dataclass
 
 import anthropic
 
 logger = logging.getLogger(__name__)
+
+
+@dataclass
+class ForceScienceClassification:
+    """Result of Force Science multi-label classification."""
+    label: str  # DIRECT, PROXY, ADJACENT, NO
+    confidence: float  # 0.0 to 1.0
+    relevance: int  # 0 to 100
+    signals: list[str]  # Matched textual triggers
+    entities: list[str]  # Extracted named entities
+    rationale: str  # One-sentence explanation
+    raw_response: Optional[str] = None  # For debugging
+    parse_error: Optional[str] = None  # If parsing failed
+
+    def is_relevant(self) -> bool:
+        """Check if article should be stored (not NO)."""
+        return self.label in ('DIRECT', 'PROXY', 'ADJACENT')
+
+    def to_is_relevant_int(self) -> int:
+        """Convert to legacy is_relevant integer."""
+        return 1 if self.is_relevant() else 0
+
+    def signals_json(self) -> str:
+        """Return signals as JSON string for storage."""
+        return json.dumps(self.signals)
+
+    def entities_json(self) -> str:
+        """Return entities as JSON string for storage."""
+        return json.dumps(self.entities)
 
 # Classification prompt for Claude API - strict focus on US police + AI
 RELEVANCE_PROMPT = """You are a strict classifier for an academic researcher studying AI technology deployed by US police departments.
@@ -173,6 +205,146 @@ class ArticleClassifier:
         ])
 
         return law_enforcement and ai_tech
+
+    def classify_force_science(
+        self,
+        title: str,
+        snippet: Optional[str],
+        source: str,
+        prompt_template: str
+    ) -> ForceScienceClassification:
+        """
+        Classify article for Force Science using multi-label JSON output.
+
+        Args:
+            title: Article title
+            snippet: Article snippet/summary
+            source: Article source
+            prompt_template: The Force Science LLM prompt template
+
+        Returns:
+            ForceScienceClassification with label, confidence, relevance, etc.
+        """
+        if not self.client:
+            # Fallback to NO if no API key
+            return ForceScienceClassification(
+                label='NO',
+                confidence=0.0,
+                relevance=0,
+                signals=[],
+                entities=[],
+                rationale='No API key available for classification',
+                parse_error='no_api_key'
+            )
+
+        prompt = prompt_template.format(
+            title=title,
+            snippet=snippet or "(no summary available)",
+            source=source
+        )
+
+        try:
+            response = self.client.messages.create(
+                model="claude-3-haiku-20240307",
+                max_tokens=500,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            )
+
+            raw_response = response.content[0].text.strip()
+            return self._parse_force_science_response(raw_response)
+
+        except Exception as e:
+            logger.error(f"Claude API error for Force Science classification: {e}")
+            return ForceScienceClassification(
+                label='NO',
+                confidence=0.0,
+                relevance=0,
+                signals=[],
+                entities=[],
+                rationale=f'API error: {str(e)}',
+                parse_error=str(e)
+            )
+
+    def _parse_force_science_response(self, raw_response: str) -> ForceScienceClassification:
+        """
+        Parse and validate Force Science JSON response.
+
+        Validates:
+        - JSON parse success
+        - label in allowed set
+        - confidence numeric 0-1
+        - relevance integer 0-100
+
+        Falls back to NO with logged error on parse failure.
+        """
+        try:
+            # Try to extract JSON from response (handle potential markdown wrapping)
+            json_str = raw_response
+            if '```json' in raw_response:
+                json_str = raw_response.split('```json')[1].split('```')[0].strip()
+            elif '```' in raw_response:
+                json_str = raw_response.split('```')[1].split('```')[0].strip()
+
+            data = json.loads(json_str)
+
+            # Validate required fields
+            label = str(data.get('label', 'NO')).upper()
+            if label not in ('DIRECT', 'PROXY', 'ADJACENT', 'NO'):
+                logger.warning(f"Invalid label '{label}', defaulting to NO")
+                label = 'NO'
+
+            # Validate confidence
+            confidence = float(data.get('confidence', 0.0))
+            if not 0.0 <= confidence <= 1.0:
+                logger.warning(f"Invalid confidence {confidence}, clamping to [0,1]")
+                confidence = max(0.0, min(1.0, confidence))
+
+            # Validate relevance
+            relevance = int(data.get('relevance', 0))
+            if not 0 <= relevance <= 100:
+                logger.warning(f"Invalid relevance {relevance}, clamping to [0,100]")
+                relevance = max(0, min(100, relevance))
+
+            # Extract signals (list of strings)
+            signals = data.get('signals', [])
+            if isinstance(signals, str):
+                signals = [signals]
+            signals = [str(s) for s in signals if s]
+
+            # Extract entities (list of strings)
+            entities = data.get('entities', [])
+            if isinstance(entities, str):
+                entities = [entities]
+            entities = [str(e) for e in entities if e]
+
+            # Extract rationale
+            rationale = str(data.get('rationale', ''))
+
+            return ForceScienceClassification(
+                label=label,
+                confidence=confidence,
+                relevance=relevance,
+                signals=signals,
+                entities=entities,
+                rationale=rationale,
+                raw_response=raw_response
+            )
+
+        except (json.JSONDecodeError, ValueError, KeyError, TypeError) as e:
+            logger.error(f"Failed to parse Force Science response: {e}")
+            logger.debug(f"Raw response: {raw_response}")
+            return ForceScienceClassification(
+                label='NO',
+                confidence=0.0,
+                relevance=0,
+                signals=[],
+                entities=[],
+                rationale='Parse error - treating as not relevant',
+                raw_response=raw_response,
+                parse_error=str(e)
+            )
 
     def classify_story_type(
         self,
