@@ -1,9 +1,36 @@
 {
-  "updated": "2026-01-12T22:10:06Z",
+  "updated": "2026-01-13T11:20:24Z",
   "feed_type": "primary",
   "description": "Force Science direct and proxy mentions",
-  "count": 12,
+  "count": 13,
   "stories": [
+    {
+      "id": "8406f793bc421675da2fe43683f96f4e",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNZXd6TXRFWkhEV0ZvWWl1cEhRUDZjZnpOVXZLdWtwbUFzdTZnZEpBNFlhVmk3aFREaTg4OFNmXzFEWWt5SmR5WW5iODdUcjEtanNSRktMSVlQSEVQM3B3cy11TENtajlJLVcyMmM0aVhMWURrYWZzQzhSYzRBRGpLa2k0Q3dzMlhNa2toSzF6d0NxX1RaZUNIY2lqY1E4bHFNZjVZYVk3WFVnT0pMaXhSTjl0SjZ3OW9pR2ZGV3N6UDBxd0tJTVlSbzFSWmx4R0xXdGRkM0Q2dVE1NkUwQlZleHJXVnpic0U?oc=5",
+      "title": "Lewinski: Education not enough for use of force skills",
+      "source": "Mankato Free Press",
+      "date": "2026-01-13",
+      "date_discovered": "2026-01-13",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi5wFBVV95cUxNZXd6TXRFWkhEV0ZvWWl1cEhRUDZjZnpOVXZLdWtwbUFzdTZnZEpBNFlhVmk3aFREaTg4OFNmXzFEWWt5SmR5WW5iODdUcjEtanNSRktMSVlQSEVQM3B3cy11TENtajlJLVcyMmM0aVhMWURrYWZzQzhSYzRBRGpLa2k0Q3dzMlhNa2toSzF6d0NxX1RaZUNIY2lqY1E4bHFNZjVZYVk3WFVnT0pMaXhSTjl0SjZ3OW9pR2ZGV3N6UDBxd0tJTVlSbzFSWmx4R0xXdGRkM0Q2dVE1NkUwQlZleHJXVnpic0U?oc=5\" target=\"_blank\">Lewinski: Education not enough for use of force skills</a> <font color=\"#6f6f6f\">Mankato Free Press</font>",
+      "story_type": "general",
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 95,
+      "relevance_score": 0.95,
+      "signals": [
+        "Lewinski",
+        "Force Science"
+      ],
+      "entities": [
+        "Bill Lewinski",
+        "Force Science Institute"
+      ],
+      "rationale": "The article explicitly mentions 'Lewinski' and 'Force Science', indicating it is directly related to the Force Science organization and expert Bill Lewinski.",
+      "key_entities": "Bill Lewinski, Force Science Institute",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
     {
       "id": "3590cd7add0b9e6fc684bcea58c650da",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPUEpVRFJhVjBpT2pockxnNTZ5cGlxWktpQWtvSnlUdWlqY1Itdmhzd1d1OHNRQ1NCUk1sN2o3ZUQxS3pZRm55LUprRkV6Q3J2WXZINjNhRUVEMWs5V1N0alFDeG15TXBaS0s1WmJOd3lvR0xuYW1wNE1uNVp6dFpTVVlJRkZSOFI0cUlvREtnZU92eTk1dkxEWTdYbjA5UDZHaXpYMGw5N1ZCel9QeXBfWWVpaDdkcVJKQlU5X2pyeVNOSVJ4VHFkTFd5RGxpT0lPVG9BaGZZM2ZmS1FuVXdJZg?oc=5",
