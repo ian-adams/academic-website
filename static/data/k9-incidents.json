@@ -1,6 +1,6 @@
 {
-  "updated": "2026-01-13T10:34:27Z",
-  "count": 426,
+  "updated": "2026-01-14T10:35:16Z",
+  "count": 443,
   "stories": [
     {
       "id": "b0c25d7f33c96975c42f0f4481076322",
@@ -848,6 +848,21 @@
       "needs_review": 0
     },
     {
+      "id": "2a00c28bb1dc7b27a8079250ad22cf04",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONVR5S05zSzVRSkRDdUpqVllXZmU2U3RVRzhsV1JFYXppeDM2WmlNWTdaLVFYUDJ2azlBN3Z4ZVh3eFVad0RkazVKTWE4S3VlZDhsaTVVYlZtNlJfR0x1bUJxLTlxak5PcVF1Umh5MWJkZ2NTRjEydVBaYzIwaWVBV2dWc1U4bFEyQnVjTkRDazFGcUpqNk50OU1td2lUMnROZ2tuSUgyQmpmS3V2bVBKT1hqejBwRV9GZEx3?oc=5",
+      "title": "Suspect in SWAT stand-off that led to death of Chattanooga Police K9 now in custody",
+      "source": "WTVC",
+      "date": "2025-10-11",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxONVR5S05zSzVRSkRDdUpqVllXZmU2U3RVRzhsV1JFYXppeDM2WmlNWTdaLVFYUDJ2azlBN3Z4ZVh3eFVad0RkazVKTWE4S3VlZDhsaTVVYlZtNlJfR0x1bUJxLTlxak5PcVF1Umh5MWJkZ2NTRjEydVBaYzIwaWVBV2dWc1U4bFEyQnVjTkRDazFGcUpqNk50OU1td2lUMnROZ2tuSUgyQmpmS3V2bVBKT1hqejBwRV9GZEx3?oc=5\" target=\"_blank\">Suspect in SWAT stand-off that led to death of Chattanooga Police K9 now in custody</a> <font color=\"#6f6f6f\">WTVC</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE, DHS",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "bd8a265fa913e370ebb55fd4f142a2b4",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOUElfU25JR0lXaFpNOGVVVmR1ZS04cVNCbF8zSVdmbXV2Mi1mV3J3dUJId1lxNmY5eFlEMkxRQUVDNXBlU2xuZ3VpZjA3N2xGTjJPc2w2aC1KbVYtTllzTU1WYXd4R29tS2tsbW1xRmZ0NDFsc0VIbWJtZUNQdHdHLXZn?oc=5",
       "title": "‘Think We Have the Wrong Guy’: Innocent Black Florida Man Attacked by Cops and Mauled by K9 After ‘Matching the Description,’ Files Lawsuit",
@@ -925,6 +940,24 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "badbaa40b226151a364cd905e6006b1c",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPV0tXYlhNWEMtekViMS1KUVFBWUVlM1dnR0hMbVZhQUtZRTI5cktNdlBaSTZaT3hvejN6MEV6X0Nmc09Nd1pDZXlXbWRrY3h2eEs2V2pzeDJLTW1IMkNvUFl6NnI5WVBNTm54OENoVkgyWVg1OVFDeUZZWFBwZXVNNDFPaWZBS3NCelVIYk1lWnlzVkZfaDJzX3hTVmQ0RUZLTTdqVw?oc=5",
+      "title": "K-9 Lawsuit in Vegas Raises Alarm Over Police Power and Oversight",
+      "source": "Nevada Globe",
+      "date": "2025-10-04",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPV0tXYlhNWEMtekViMS1KUVFBWUVlM1dnR0hMbVZhQUtZRTI5cktNdlBaSTZaT3hvejN6MEV6X0Nmc09Nd1pDZXlXbWRrY3h2eEs2V2pzeDJLTW1IMkNvUFl6NnI5WVBNTm54OENoVkgyWVg1OVFDeUZZWFBwZXVNNDFPaWZBS3NCelVIYk1lWnlzVkZfaDJzX3hTVmQ0RUZLTTdqVw?oc=5\" target=\"_blank\">K-9 Lawsuit in Vegas Raises Alarm Over Police Power and Oversight</a> <font color=\"#6f6f6f\">Nevada Globe</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "policy"
       ],
       "needs_review": 0
     },
@@ -1020,6 +1053,23 @@
       "key_entities": "Google, ICE",
       "location": null,
       "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "e96beb6385e5a827fda10a3d39110122",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxObFlqNUxmMjY4MndqS1NyMVU5Q1psNE9CZ242R2VGRlZMWnY1TDdpZ1A3alBnOS1JTzZCUFlYRGdOOTZmSEFZaGZ6enVrZHd0OTd3R0pWRU12U1BoUzhGTzZXMFpwLVpqZ2ZOdi1NTUVhMF9LalowQV9nSzhVT0JYV3FPN25nQml6d0luem5wZTZUYXVlV1pWNTJyOVBUR3NxclQ4bG1nUXRweERwb0plNWFlZ0xCVnh6S0oydFhuN2w3NkFLNUEzVnJadnoxVTJ4NkNWRzI1SU1QTFczVlRFekEtYzRMSHFKc1V6VmJn?oc=5",
+      "title": "‘Ain’t him’: Man taken down by JSO officers, attacked by K-9 while leaving doctor was misidentified, lawsuit claims",
+      "source": "News4JAX",
+      "date": "2025-09-30",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxObFlqNUxmMjY4MndqS1NyMVU5Q1psNE9CZ242R2VGRlZMWnY1TDdpZ1A3alBnOS1JTzZCUFlYRGdOOTZmSEFZaGZ6enVrZHd0OTd3R0pWRU12U1BoUzhGTzZXMFpwLVpqZ2ZOdi1NTUVhMF9LalowQV9nSzhVT0JYV3FPN25nQml6d0luem5wZTZUYXVlV1pWNTJyOVBUR3NxclQ4bG1nUXRweERwb0plNWFlZ0xCVnh6S0oydFhuN2w3NkFLNUEzVnJadnoxVTJ4NkNWRzI1SU1QTFczVlRFekEtYzRMSHFKc1V6VmJn?oc=5\" target=\"_blank\">‘Ain’t him’: Man taken down by JSO officers, attacked by K-9 while leaving doctor was misidentified, lawsuit claims</a> <font color=\"#6f6f6f\">News4JAX</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
       "needs_review": 0
     },
     {
@@ -1159,6 +1209,23 @@
       "key_entities": "Google, ICE",
       "location": null,
       "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "907f72282c3b5e9090505ead28f36ee9",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNb1BRaUVOcUt1Rm9NYWZKNUY4cmhrR1N0TE15ejdyLVRwQjlPMFp5YVFrc1AxM3hIdXZuLVJYeXpQQjc0LWZNS0ktTGw3SkhReHNVT3N6SlVZOUtWVmtPUUNndUp5T3V6UlE3aU1Ma05iMVBBaDhUUWdJUWhOMHBmanFMNnh0WHZQRHZsLXgyUklDcFo2M1lzb1hneEhoekpQSVUxUUlzX0taZDFaTVF4bUZlcU5VdUFBamR5ZTZTbC1jOEVGNEd1alV3bEJVdUNhZEktdjNXOA?oc=5",
+      "title": "RCMP paid nearly $1M in settlements related to injuries caused by police dogs",
+      "source": "KamloopsBCNow",
+      "date": "2025-09-08",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxNb1BRaUVOcUt1Rm9NYWZKNUY4cmhrR1N0TE15ejdyLVRwQjlPMFp5YVFrc1AxM3hIdXZuLVJYeXpQQjc0LWZNS0ktTGw3SkhReHNVT3N6SlVZOUtWVmtPUUNndUp5T3V6UlE3aU1Ma05iMVBBaDhUUWdJUWhOMHBmanFMNnh0WHZQRHZsLXgyUklDcFo2M1lzb1hneEhoekpQSVUxUUlzX0taZDFaTVF4bUZlcU5VdUFBamR5ZTZTbC1jOEVGNEd1alV3bEJVdUNhZEktdjNXOA?oc=5\" target=\"_blank\">RCMP paid nearly $1M in settlements related to injuries caused by police dogs</a> <font color=\"#6f6f6f\">KamloopsBCNow</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
       "needs_review": 0
     },
     {
@@ -1882,6 +1949,21 @@
       "needs_review": 0
     },
     {
+      "id": "14d17af11e97f60af4b092d73468acda",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOMktYSWpDMFFSLWktRjlUdmNDR3lWY3NZckp6eTNMMUlSNU5XZlZ6WkRiMDU5UHFxZEtNNkd0NmdZZEYwcjB3WnNRc2JuYTlkUmJJQmFmeHpteDFMd3d1MVNwb2hJOTdVbzZIVDJoYzdiUU5oNjY0a1BZV3RHY3JNcElMdUR1LWM5ek5xUzZaa25lV1JqaGFiNzNfU29XS2MyNENIaDBGRjJTSUM5bEE4WFBvQWZpMF9vNVJURmt3a3RjMVJ4U21naUpUV1BPSF9nVTFfd19kUGZha2VS?oc=5",
+      "title": "'It's scarred me': Lynchburg Police K9 bites bystander at James Crossing Apartments",
+      "source": "WSET",
+      "date": "2025-06-19",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxOMktYSWpDMFFSLWktRjlUdmNDR3lWY3NZckp6eTNMMUlSNU5XZlZ6WkRiMDU5UHFxZEtNNkd0NmdZZEYwcjB3WnNRc2JuYTlkUmJJQmFmeHpteDFMd3d1MVNwb2hJOTdVbzZIVDJoYzdiUU5oNjY0a1BZV3RHY3JNcElMdUR1LWM5ek5xUzZaa25lV1JqaGFiNzNfU29XS2MyNENIaDBGRjJTSUM5bEE4WFBvQWZpMF9vNVJURmt3a3RjMVJ4U21naUpUV1BPSF9nVTFfd19kUGZha2VS?oc=5\" target=\"_blank\">'It's scarred me': Lynchburg Police K9 bites bystander at James Crossing Apartments</a> <font color=\"#6f6f6f\">WSET</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "14273bbebd8e5cc874ffcf64becdae71",
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOVUs5Zl9qRnFFcXdIYTg0UXJ5QzF3V1VYaTFZWHFMQV82Q2NzUjFyWUZzazhYRFBidHNXMVlqWnJUZG9ad3Y2c1VaWVpKNHBEQVFDZE9pU3VhMzJOUk1OMm9ZT2hjS2U2bnBPemx0d0pLR19wNTltd3JHRmpFRDdRdVBERHAzMFlDbE1SZEZmRDc1RnpDQnVsRVRURkxPc3lwWVpGRlh3cXprTXoxQXg0UmwwNUNIZHM5ejdxTU83WU9oOTdzcmx5Slp6RmJva01Ha1RCS1FrSGZrOXJ0?oc=5",
       "title": "'It's scarred me': Lynchburg Police K9 bites bystander at James Crossing Apartments",
@@ -2051,6 +2133,21 @@
       "needs_review": 0
     },
     {
+      "id": "6ac6dcde76e9e5339e8c2549a890ca31",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNXzhOLWZnZ0JvWUpneWdfQlA3clFCR3RqY2RUSGcyVTMxU1hjQUkzX0FwclZvQ1hUbDJmbDhubzllU2JlZ2RRYmcwb0JtZWFucVpZeXZFU0FCbXhVajRzZnA2ck5aMmVST3JXenFKbWxMZzh5Y09aZHpZQ2ZQUlFXSDNlZ3A1Yi1RSTBfOWQ2ellFdnVtb1lvWklMX3p6Z2E2YWNuMmhUNmlnZW95dHdWVHdOR2pXQXJlcDJ0SHR4cDBFQmhHTF9ObW91M2lZdHpkMlMwZnBPUmFybURqcUtxVzRuTnBoaEpmbFZzeDVjdnpBQjA?oc=5",
+      "title": "Calhoun County incident leads to charges of attempted murder and K9 injury",
+      "source": "WLTX",
+      "date": "2025-05-30",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi8wFBVV95cUxNXzhOLWZnZ0JvWUpneWdfQlA3clFCR3RqY2RUSGcyVTMxU1hjQUkzX0FwclZvQ1hUbDJmbDhubzllU2JlZ2RRYmcwb0JtZWFucVpZeXZFU0FCbXhVajRzZnA2ck5aMmVST3JXenFKbWxMZzh5Y09aZHpZQ2ZQUlFXSDNlZ3A1Yi1RSTBfOWQ2ellFdnVtb1lvWklMX3p6Z2E2YWNuMmhUNmlnZW95dHdWVHdOR2pXQXJlcDJ0SHR4cDBFQmhHTF9ObW91M2lZdHpkMlMwZnBPUmFybURqcUtxVzRuTnBoaEpmbFZzeDVjdnpBQjA?oc=5\" target=\"_blank\">Calhoun County incident leads to charges of attempted murder and K9 injury</a> <font color=\"#6f6f6f\">WLTX</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "f8b3b9398f5b15dc8bceae723519df3d",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOX2dWU3MxRWlRVkctX2xfYXdQTUhfemF4blF0Q3RKcE43akxGaUpDNnFxcDZESV9adVdfdjFYWWlsenphLXc2aTVLbmNaZUtPMUNBYVNuU2tXMmh2VTd1bFBKWGM0R2VjLTZoUXFyaEZBZzhkME53RVpSNFF6WHNKUjQ1X1Y4VmM?oc=5",
       "title": "K-9 killed in fatal N.M. police shootout with suspect",
@@ -2088,6 +2185,21 @@
       "date": "2025-05-29",
       "date_discovered": "2026-01-12",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPOXZXUjhsUmgwRnBnYXE3YTRUVGhidzVVZ0Zyd1Utb3V3OFNKUjgxdnBsbWQwVVpBNmluTzF3LXNTTWIxSExjWDBBbHB4a3IwVm1ubFhPOG1YY0NNQUxNMHR2aGt3NlpnWEdsREtuV0lKckNTbExKV2RwbG1DeTRlWl9ZWGlqNkxMMF8tc0VnSUV1Q1RuZ0xEUEI1V3VOVzZIYm10TXItRm5CdkI0M1U4OEN6YUc3cDZ4U2RHWFRXUmV0dw?oc=5\" target=\"_blank\">APD Fatally Shoots Armed Felon Responsible for Death of Beloved Police K9, Eluded Capture Day Before</a> <font color=\"#6f6f6f\">ABQ RAW</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "4133adb10769e4a5d16131123049e8c0",
+      "url": "https://news.google.com/rss/articles/CBMi9AJBVV95cUxQN3A5V2cxeHhDVzRvdGQtRUdVdnZ0OEh0Njc5S1d2RjJGVkxhZ0tHTlhvbkU4NXpoNF9fTjlvNmZ3OGtDNmdEN0NqVzRiWnRQZU14VUVOaTdiMkd0Y1l6QVdnQzh4cy12V2lJZUYyZmtNX0FZQVNIOVBTUEt5bmhYdmFQRGszeUt2eUg5dFlVT3hmR19DLTVCWm5ueEZsZ0k0eXpJZDFTMHVuM0RPYndveXNjN1BKS3BFREJYOHdBY0hhV2hRN3hiZm1QZ0RaRzFFa1hCcHZ5dDY3dTdFcXZVQ00yN19lZzBHNGlvWHhVNEpBblVVQ1hqWXd4ekt0ZXVjbnA2RDBXRVFGLU5XV2o5ZlNSeFlZX3Z5dFNJNzQyYWtkVXRGVEJVMVhlR1hTbzV2bFVEbFdpSXB1NEI0ejRLd2oyR0ZLcmhvcUNXOFpSVWlKcG5MS1BQYkJobXZ1ZmYwR01CWEhyS3U5SWpBMXNhNWxEYWs?oc=5",
+      "title": "DA rules out criminal charges in K-9 officer's death, highlights need for better equipment",
+      "source": "KOKH",
+      "date": "2025-05-28",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi9AJBVV95cUxQN3A5V2cxeHhDVzRvdGQtRUdVdnZ0OEh0Njc5S1d2RjJGVkxhZ0tHTlhvbkU4NXpoNF9fTjlvNmZ3OGtDNmdEN0NqVzRiWnRQZU14VUVOaTdiMkd0Y1l6QVdnQzh4cy12V2lJZUYyZmtNX0FZQVNIOVBTUEt5bmhYdmFQRGszeUt2eUg5dFlVT3hmR19DLTVCWm5ueEZsZ0k0eXpJZDFTMHVuM0RPYndveXNjN1BKS3BFREJYOHdBY0hhV2hRN3hiZm1QZ0RaRzFFa1hCcHZ5dDY3dTdFcXZVQ00yN19lZzBHNGlvWHhVNEpBblVVQ1hqWXd4ekt0ZXVjbnA2RDBXRVFGLU5XV2o5ZlNSeFlZX3Z5dFNJNzQyYWtkVXRGVEJVMVhlR1hTbzV2bFVEbFdpSXB1NEI0ejRLd2oyR0ZLcmhvcUNXOFpSVWlKcG5MS1BQYkJobXZ1ZmYwR01CWEhyS3U5SWpBMXNhNWxEYWs?oc=5\" target=\"_blank\">DA rules out criminal charges in K-9 officer's death, highlights need for better equipment</a> <font color=\"#6f6f6f\">KOKH</font>",
       "story_type": "incident",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
@@ -2172,6 +2284,21 @@
       "tags": [
         "AI"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "63449c3cfdaa9fa1783a0f139436b4da",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxORG0xRS1QVWVMSFc0OFFqQVB1X1MyT3N0M1hFVzBRZk52azdkclg1cVJDdGFJb3lDLXB0WHlPSjFoVlY2OERLSjNFdmVJbFprUGgyXzBCbnJBajB2Zk1wMlpjSDExVHhKVzJCTDJxaHdmTWVjUzBPSGZjZEpDWFV4X1h2R0tQRWlBSml2dEx6M2dqZXFkM2FJaG9DbmJMcnFDeXloOGkxSWhNMmJRcjdvbWRhZksxZU5ITkJKbHBJMkbSAcYBQVVfeXFMUGwtMXhLMnlZX0NDYnJlRS1nRERUazJncWxzM1dTTkVBWVhGMTZxZzRXTW9nVV9BYkV6SFRrVEJfS2dnQWYtZ0hiUnFTbFNlXzlyWWhlNVJMamUyUTNPa3RFUU5vNWxrSG1lS3FWdDdTSi1McnRuUW1UdEVhckdfZFQ5aUhTbnV0Y0ZCQ0pDZWNrV21weVAzTkJ3TUt0VE1sZzBpQVpZTEtHb0FTME9JRTBUQkRXaDdONWNld0NlM3N0VEtocU1n?oc=5",
+      "title": "Greenfield Police Department K-9 killed during encounter with off-duty New Palestine police officer",
+      "source": "Fox 59",
+      "date": "2025-05-13",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxORG0xRS1QVWVMSFc0OFFqQVB1X1MyT3N0M1hFVzBRZk52azdkclg1cVJDdGFJb3lDLXB0WHlPSjFoVlY2OERLSjNFdmVJbFprUGgyXzBCbnJBajB2Zk1wMlpjSDExVHhKVzJCTDJxaHdmTWVjUzBPSGZjZEpDWFV4X1h2R0tQRWlBSml2dEx6M2dqZXFkM2FJaG9DbmJMcnFDeXloOGkxSWhNMmJRcjdvbWRhZksxZU5ITkJKbHBJMkbSAcYBQVVfeXFMUGwtMXhLMnlZX0NDYnJlRS1nRERUazJncWxzM1dTTkVBWVhGMTZxZzRXTW9nVV9BYkV6SFRrVEJfS2dnQWYtZ0hiUnFTbFNlXzlyWWhlNVJMamUyUTNPa3RFUU5vNWxrSG1lS3FWdDdTSi1McnRuUW1UdEVhckdfZFQ5aUhTbnV0Y0ZCQ0pDZWNrV21weVAzTkJ3TUt0VE1sZzBpQVpZTEtHb0FTME9JRTBUQkRXaDdONWNld0NlM3N0VEtocU1n?oc=5\" target=\"_blank\">Greenfield Police Department K-9 killed during encounter with off-duty New Palestine police officer</a> <font color=\"#6f6f6f\">Fox 59</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Ring, Google, ICE",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
@@ -2518,6 +2645,21 @@
       "date": "2025-04-09",
       "date_discovered": "2026-01-12",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxPOEg0WUVwZlZqZXA2M3R1cmpSMlgtQ0toamh3dmw0VGNBMUtoY2hhbDdpQkw5TDNFdWZmYmdDLTZqM0EzaXFKUW9kNk5VZlhJY0NISDMzdTNYOVhqbWlwY2d3M0pLSGk4Q19aenR3VXUzdy1JVWtWdUFlSFFjdUdlbG0xcnVTck1YbkhLaGdGVExUbVJoQmRwUTdhQ1Y1S2xzVkw5ZXRQY3pTZTVFUDVfV2kzNk5Ea2Q3T1BweUlyWDFzcHBZREl1bDBqbFpObmVBeHZNQk80OXJqdw?oc=5\" target=\"_blank\">I was attacked by a Richland Co. police dog, and now I understand why we still use them</a> <font color=\"#6f6f6f\">Post and Courier</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "ae05f98bfd1f73fd4ce8da932be5f723",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQd1dySkJsVjNxWHhwS2FZVmJ4WWdTdW1jSVRyZTJJamtqeHpHZnNKdmI1NUhfSG5WeGVROF9rYTdIeEhiN3ZYaUlRYjE0S01FUmhxZDhESi1oUk1ZVVBnZWJSRnlUWTVWNVVwRk5mNXhqQlcyY25hY2pEZEpZdF9LaXZKZzJOWnRyTXg0OFdOZWZ3X2ExT0xWZmdBRXUtUVNfbV9XVWJkZE9EMVNKdzU1eDJoRmhGRFhYc2lvQTB3REVTUFBtaU9PNXBMOV9ReVVLcGE0cTF30gHqAUFVX3lxTFB2NF9PUDJWVWJaRzI3bzVLc2xFeS11R3Ixd3N1eEJ5V1NhQThGbUhuZzB1NmNWYVdYR2lsU0I5TzI2bE5RdFNIbEs4OUlXOUFfM0NZV1F3YVVSUG1Mak9WcDZOelc5Z1M3ZGFqUlQyR09WZTN2Q0lhRzRQN1BZYkJJZm01T0VKOXZJeGlZRUNFM3lHekUxTjY2T043WjI5UUNXd2pwRy13ckxsZ0FmNXBuNzh6dTFvOV9YWUVYRkg2U3NRX1ZSYVprMFFUVTFRVGZuODE4aVZEbXdOVW1QYnJpN3hYWXhCSTl1QQ?oc=5",
+      "title": "K-9 killed in Wadesboro removed from service due to aggression, Virginia State Police say",
+      "source": "WSOC TV",
+      "date": "2025-04-08",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxQd1dySkJsVjNxWHhwS2FZVmJ4WWdTdW1jSVRyZTJJamtqeHpHZnNKdmI1NUhfSG5WeGVROF9rYTdIeEhiN3ZYaUlRYjE0S01FUmhxZDhESi1oUk1ZVVBnZWJSRnlUWTVWNVVwRk5mNXhqQlcyY25hY2pEZEpZdF9LaXZKZzJOWnRyTXg0OFdOZWZ3X2ExT0xWZmdBRXUtUVNfbV9XVWJkZE9EMVNKdzU1eDJoRmhGRFhYc2lvQTB3REVTUFBtaU9PNXBMOV9ReVVLcGE0cTF30gHqAUFVX3lxTFB2NF9PUDJWVWJaRzI3bzVLc2xFeS11R3Ixd3N1eEJ5V1NhQThGbUhuZzB1NmNWYVdYR2lsU0I5TzI2bE5RdFNIbEs4OUlXOUFfM0NZV1F3YVVSUG1Mak9WcDZOelc5Z1M3ZGFqUlQyR09WZTN2Q0lhRzRQN1BZYkJJZm01T0VKOXZJeGlZRUNFM3lHekUxTjY2T043WjI5UUNXd2pwRy13ckxsZ0FmNXBuNzh6dTFvOV9YWUVYRkg2U3NRX1ZSYVprMFFUVTFRVGZuODE4aVZEbXdOVW1QYnJpN3hYWXhCSTl1QQ?oc=5\" target=\"_blank\">K-9 killed in Wadesboro removed from service due to aggression, Virginia State Police say</a> <font color=\"#6f6f6f\">WSOC TV</font>",
       "story_type": "incident",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
@@ -2941,6 +3083,23 @@
       "needs_review": 0
     },
     {
+      "id": "c48bfbec629b22a8d203917e2965f0fa",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQThYbWNxc3JMN0M1N1BDZ18yQU84MUZRcmRod3d6UUJHbTZ4MjI5anQ4bjNVNXUwVUtlUWVPaGRMal9NODdHY1NaeWE2TVhncnRiQWp5SWlOc1lWVExEWUpGQnZIQ2p4cjJHZUg5TUZCMHNKWHFWbk1VYWxqa2t5ZVFtcllpRXRUTVBoaHpoTXY1czZTOWF0enJILVRnYWM5WVMzSDBsd29rUEJiRjdkMzVUUHZINEdWTXZXOTdVb0QwUGp3Y1ZVNno0RlFNS2JYUFVEVXVIbk5URGY1amRnWTJTa1QwUQ?oc=5",
+      "title": "Winston-Salem K9 unit under scrutiny after police dog bites suspect",
+      "source": "wfmynews2.com",
+      "date": "2025-02-13",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQThYbWNxc3JMN0M1N1BDZ18yQU84MUZRcmRod3d6UUJHbTZ4MjI5anQ4bjNVNXUwVUtlUWVPaGRMal9NODdHY1NaeWE2TVhncnRiQWp5SWlOc1lWVExEWUpGQnZIQ2p4cjJHZUg5TUZCMHNKWHFWbk1VYWxqa2t5ZVFtcllpRXRUTVBoaHpoTXY1czZTOWF0enJILVRnYWM5WVMzSDBsd29rUEJiRjdkMzVUUHZINEdWTXZXOTdVb0QwUGp3Y1ZVNno0RlFNS2JYUFVEVXVIbk5URGY1amRnWTJTa1QwUQ?oc=5\" target=\"_blank\">Winston-Salem K9 unit under scrutiny after police dog bites suspect</a> <font color=\"#6f6f6f\">wfmynews2.com</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "e5cd6b9c237905317a2aa620de6134e6",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcFgzQ0twaTVINHZlSmRmRFZTZUNwS183MnJGWGpINWRiSjFJbGdUZDhtRUg0VDNuaDB2dS1iY2dfV3NMVlBTQ0M0YkYyU0JTX1J2NUhhaUthRWdLZC1VS3BGSWxTZXRHZnpXY0JiWU5Gc2pSSFZFM09VSnpGUkVyZjVtalhFYjhyYzIxempIRXJ1Yi03MkxieDBEdkMydzlTTElkQjRXdl9qTDlB?oc=5",
       "title": "'Excessive force' claims arise after video shows suspect being bitten by Winston-Salem K-9 officer",
@@ -3268,6 +3427,23 @@
       "key_entities": "Google",
       "location": null,
       "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "db605ab7f3af98d99c9c0ede50956bda",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbkQyal9OekF2cVFwdXZNS1lCN0lDek9ONHlGYmtuTThEeHB0aXAxVFM5MU5XdUJ1UHlVcktBbzdCeU9OMjlyZWJRMGhRMEl2QTkwWDQwYTE3NXdPbkNYSGloMGdiZEtidzlnZDlwRV9fTXNYVXl1NXgtX2xsWkZwMEp3VjQ1aFR4a0VTaV9YaWtCajhzY1FSNk03eEUxaEh4eW1obHh6QdIBrAFBVV95cUxQSGh6LU9aZWpOQ0JTYkh1Ymx3UkdnM0lFanZLZjREbk5CQjhmUHZWbEpwRHBBTy0yY3Rhc1dmdzZpbXJXYzFsOHZMTTNTaWdGUGpsWnhwSnN4dlhXVUhtUUZBbXdLNmcwVXVfZFBHSkt6eGpyMl9jenRNNWR2RXh1allRd29HYWpsRlAtbkRzUUhpZ2RBYkF1WXpvWGh5X0x5cnFkS3B4S0VneHRk?oc=5",
+      "title": "Shoplifter gets huge settlement after police K9 ripped her scalp off and mauled her for several minutes",
+      "source": "Daily Mail",
+      "date": "2024-11-19",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNbkQyal9OekF2cVFwdXZNS1lCN0lDek9ONHlGYmtuTThEeHB0aXAxVFM5MU5XdUJ1UHlVcktBbzdCeU9OMjlyZWJRMGhRMEl2QTkwWDQwYTE3NXdPbkNYSGloMGdiZEtidzlnZDlwRV9fTXNYVXl1NXgtX2xsWkZwMEp3VjQ1aFR4a0VTaV9YaWtCajhzY1FSNk03eEUxaEh4eW1obHh6QdIBrAFBVV95cUxQSGh6LU9aZWpOQ0JTYkh1Ymx3UkdnM0lFanZLZjREbk5CQjhmUHZWbEpwRHBBTy0yY3Rhc1dmdzZpbXJXYzFsOHZMTTNTaWdGUGpsWnhwSnN4dlhXVUhtUUZBbXdLNmcwVXVfZFBHSkt6eGpyMl9jenRNNWR2RXh1allRd29HYWpsRlAtbkRzUUhpZ2RBYkF1WXpvWGh5X0x5cnFkS3B4S0VneHRk?oc=5\" target=\"_blank\">Shoplifter gets huge settlement after police K9 ripped her scalp off and mauled her for several minutes</a> <font color=\"#6f6f6f\">Daily Mail</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
       "needs_review": 0
     },
     {
@@ -3730,6 +3906,21 @@
       "date_discovered": "2026-01-12",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE9vWUptXzZLMnZoU3VocWJWX1BIS2VST3dGY2RySk9LUks0WUZQWjZwblVMbTR5UDF2THpzVHQtVmpCVnpKUzhTYm0tRk1WOTd6dE1NVENzWlRsLW5HcU0tbzhmNzJRamxYSGfSAWpBVV95cUxNcDg5aW5CMzlUY01WYzdMN3dCdFZUeDdCdlJydVFMeEFLY21XcmJjUUhkYU5xYzRWUDhCUU0wMmVXOUNmbGZidlpPbDMzWnhLWFpHS05uREI5ZWEtbThONThBTjVxNzk1SG1n?oc=5\" target=\"_blank\">Human rights group sues for police K-9 bite records. ‘People of Fresno deserve to know’</a> <font color=\"#6f6f6f\">Fresno Bee</font>",
       "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "531dcee261337cd197241add9ff3e07d",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB6VXFCeXlNWE5MT3I5VWFZZ1dCaEcxR3FMeUpfdmdNM2YtLXU4SFA5bm1zSHQySkFNUmtPVmxLRDJqbkc4YnZMc0FZVUVRMkZqWmJ1XzFETDdlMGdGTlR4NnhlbVMwaURDdlE?oc=5",
+      "title": "Innocent Californians have been mauled by police dogs. Weak legislation doesn’t fix issue | Opinion",
+      "source": "Sacramento Bee",
+      "date": "2024-05-05",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTFB6VXFCeXlNWE5MT3I5VWFZZ1dCaEcxR3FMeUpfdmdNM2YtLXU4SFA5bm1zSHQySkFNUmtPVmxLRDJqbkc4YnZMc0FZVUVRMkZqWmJ1XzFETDdlMGdGTlR4NnhlbVMwaURDdlE?oc=5\" target=\"_blank\">Innocent Californians have been mauled by police dogs. Weak legislation doesn’t fix issue | Opinion</a> <font color=\"#6f6f6f\">Sacramento Bee</font>",
+      "story_type": "policy",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
       "location": null,
@@ -4795,6 +4986,23 @@
       "story_type": "incident",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "9015dca814969658e42cbf0f6c704afc",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdXJncEl0UUZJSmJmTVh2OTZwRmViMElSRnBCeENKY2I3TGJBcVExbUY0YndaWGxOdTRrRVZldFhQYktWc2JIVkZlbzZpLUMtbEpLNVpjT2lIQTdIQk5qTWpRbVVSekhDS1FKTFkwclh1WmNNVHF2WUR6Q2dhZlFUS1gtcHhGYWhENUZkdm9zTnFsLUg2LXBvVjlVcTlsNVBUSDlCX2JIZGctUGR2ODhsUG85U1ZfYmZyWXNmT1NEbmdwdw?oc=5",
+      "title": "Man files lawsuit against Lower Paxton Township over police dog bites",
+      "source": "fox43.com",
+      "date": "2022-06-24",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdXJncEl0UUZJSmJmTVh2OTZwRmViMElSRnBCeENKY2I3TGJBcVExbUY0YndaWGxOdTRrRVZldFhQYktWc2JIVkZlbzZpLUMtbEpLNVpjT2lIQTdIQk5qTWpRbVVSekhDS1FKTFkwclh1WmNNVHF2WUR6Q2dhZlFUS1gtcHhGYWhENUZkdm9zTnFsLUg2LXBvVjlVcTlsNVBUSDlCX2JIZGctUGR2ODhsUG85U1ZfYmZyWXNmT1NEbmdwdw?oc=5\" target=\"_blank\">Man files lawsuit against Lower Paxton Township over police dog bites</a> <font color=\"#6f6f6f\">fox43.com</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE, DHS",
       "location": null,
       "tags": [
         "AI"
@@ -5925,6 +6133,21 @@
       "needs_review": 0
     },
     {
+      "id": "fe9ab4ef12d990d1693c72ad9fbe387c",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWWlzN0xaU0VXSXNNLVZHU2ZFWVhPT19XNmRMR2tZcEphakFDdERjN1VBN0d2WWtwLWFBZHNCTXFqVjRveXdwbXZ5SkxtSHJsZ081N2dJT25LR2tnZUFZeFpUNThQb2szM1FfeGdSdS1nUU1NREFjQ282OUpmMlAwVkhmblpxTHNqeWszclpXeF9HMmdjaWtXT3FKQmhLWHRFU080T3d3R0MyQnNCWnQ4dlAtb1YwV3VrVGRyVnVpZkc5LS1zaEJHbnJVYw?oc=5",
+      "title": "Greenville County man bitten by K-9 during arrest reaches settlement of $230,000, records show",
+      "source": "WYFF News 4",
+      "date": "2019-09-17",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxOWWlzN0xaU0VXSXNNLVZHU2ZFWVhPT19XNmRMR2tZcEphakFDdERjN1VBN0d2WWtwLWFBZHNCTXFqVjRveXdwbXZ5SkxtSHJsZ081N2dJT25LR2tnZUFZeFpUNThQb2szM1FfeGdSdS1nUU1NREFjQ282OUpmMlAwVkhmblpxTHNqeWszclpXeF9HMmdjaWtXT3FKQmhLWHRFU080T3d3R0MyQnNCWnQ4dlAtb1YwV3VrVGRyVnVpZkc5LS1zaEJHbnJVYw?oc=5\" target=\"_blank\">Greenville County man bitten by K-9 during arrest reaches settlement of $230,000, records show</a> <font color=\"#6f6f6f\">WYFF News 4</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Ring, Google",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "74a132055192a2fefd89adc08d57cd88",
       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxObGFHZEpYcXBUTzNZdGRCMXliWEpUR2xqTVdFNlZJcWxrbmhWWVhTbEFsN0ZKdGxUYl9xLWdkTnQ1Y0I0V2Fhb1dNemVweHhmc0tzZ21NME9uTThncDFWNmhrMDFXdHRFVnJKVUh1Q29LNmh5VmVlQUhyd2JiaFEwcGZIWVVMYm1odC1uYnZWVk41VE5WLWwtR3BvMU9xZmcxQk9vaThKcEhxWDBsVVctdjBvcEp2SHltQkhpRHNWNXVKMFMtcWJmaThxemd3OF9sSWllLU85NXp0RUlDQk85a3d6Z0pkNHViMkY1ZF9YSQ?oc=5",
       "title": "After accidental bites and a year of review, St. Paul’s K-9 unit revamped to focus on tracking for the most violent crimes",
@@ -5942,6 +6165,21 @@
       "needs_review": 0
     },
     {
+      "id": "0736f417afa3f66a95c582d73642f5ef",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQll0Y1poZ05uaklEcHZaUHB1S2g0cm1xUzE5OGotUDdJVC1TM2ZVelZvajMya3lQdU9rQ2FYdFM0UG9aODVxMFYtaEwtNXR6QXk0NjJlVkszMDYwLXFJTUlaUkR4ZnpkWTdNNmRSRDRnS2NiN2FBRmZzdk0xaWt1aXFWejJDVmpPaERRTzdiVVZ1RE1NSkVv0gGcAUFVX3lxTE5ycUpiYWRfRXdZaXZydHlvZ0F3Wk5jUzdacWNKUEhEOXZta2JMMUNoWUxjQkoyTEVWZEZYbGtIdFI5TE9aOTVGTHBRLUU4azZHdEtRV0l3eS1PZlE3c2xtcHQ3Wk5hNDlnWGF0dV9ZRkwxZG05NWxfZ2hDVFhVSVNLY3B5UmZ4TkhhQjk3eEdKWVBPZmtDN3RFLURzNg?oc=5",
+      "title": "New Mexico Police K-9 attacks unarmed man during welfare check, officer under investigation",
+      "source": "ABC30 Fresno",
+      "date": "2019-05-24",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQQll0Y1poZ05uaklEcHZaUHB1S2g0cm1xUzE5OGotUDdJVC1TM2ZVelZvajMya3lQdU9rQ2FYdFM0UG9aODVxMFYtaEwtNXR6QXk0NjJlVkszMDYwLXFJTUlaUkR4ZnpkWTdNNmRSRDRnS2NiN2FBRmZzdk0xaWt1aXFWejJDVmpPaERRTzdiVVZ1RE1NSkVv0gGcAUFVX3lxTE5ycUpiYWRfRXdZaXZydHlvZ0F3Wk5jUzdacWNKUEhEOXZta2JMMUNoWUxjQkoyTEVWZEZYbGtIdFI5TE9aOTVGTHBRLUU4azZHdEtRV0l3eS1PZlE3c2xtcHQ3Wk5hNDlnWGF0dV9ZRkwxZG05NWxfZ2hDVFhVSVNLY3B5UmZ4TkhhQjk3eEdKWVBPZmtDN3RFLURzNg?oc=5\" target=\"_blank\">New Mexico Police K-9 attacks unarmed man during welfare check, officer under investigation</a> <font color=\"#6f6f6f\">ABC30 Fresno</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Ring, Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "d1414cb2d1aabacf7423513598c1ef70",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPams3clZfaVMzQTJ5R2tnSU1Jb0Qya3Z1ZDVKeUxFRXkyUHVtVDRoYng2aktVYzlmWTBDdkJvejluU0luUEllNWs1b2Z5RmRlbEtjdVdvRFdXU2pxNkZ2MHhYN0RzYU9lVHFPZE9VNDd6RVBhU2ZzY3VWRW9jeEhucmRHRkxwZVk2SllVWlh3a3JWSURPcGdKYkVyZUhLRG14QmFZ?oc=5",
       "title": "Troy police dog bite case on trial in excessive force lawsuit",
@@ -5949,6 +6187,21 @@
       "date": "2019-05-10",
       "date_discovered": "2026-01-13",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxPams3clZfaVMzQTJ5R2tnSU1Jb0Qya3Z1ZDVKeUxFRXkyUHVtVDRoYng2aktVYzlmWTBDdkJvejluU0luUEllNWs1b2Z5RmRlbEtjdVdvRFdXU2pxNkZ2MHhYN0RzYU9lVHFPZE9VNDd6RVBhU2ZzY3VWRW9jeEhucmRHRkxwZVk2SllVWlh3a3JWSURPcGdKYkVyZUhLRG14QmFZ?oc=5\" target=\"_blank\">Troy police dog bite case on trial in excessive force lawsuit</a> <font color=\"#6f6f6f\">Times Union</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "6700a8409f484b1f3a4c91619b664735",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQkhkeDBIbTdPRXhXMnBsdkcyRTR4QXRZTEptLTFHbnBUU3pja0EyNkpzUG8yRl8wUUdMT010Tld5bXliWVFoeVNFVHJOV0FYbG5TNFFhcGVfb3NPOUZrVW40UUNKYmhmR0d3Uy10MXFmeFNqVC1RbXZCRy1uRVY1QjhpOHRpTkI2cmxfUkh0aDlkTFpwMHJkU3R4SENCNHIwdW9WeEFjYl9uczlscnpkdkwwRGk?oc=5",
+      "title": "Justin Cherry police dog attack trial",
+      "source": "Asbury Park Press",
+      "date": "2019-04-30",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOQkhkeDBIbTdPRXhXMnBsdkcyRTR4QXRZTEptLTFHbnBUU3pja0EyNkpzUG8yRl8wUUdMT010Tld5bXliWVFoeVNFVHJOV0FYbG5TNFFhcGVfb3NPOUZrVW40UUNKYmhmR0d3Uy10MXFmeFNqVC1RbXZCRy1uRVY1QjhpOHRpTkI2cmxfUkh0aDlkTFpwMHJkU3R4SENCNHIwdW9WeEFjYl9uczlscnpkdkwwRGk?oc=5\" target=\"_blank\">Justin Cherry police dog attack trial</a> <font color=\"#6f6f6f\">Asbury Park Press</font>",
       "story_type": "incident",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
@@ -6384,6 +6637,21 @@
       "tags": [
         "AI"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "34a6fb85b6336a609776b10d20fbaaa5",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9ldV82UTlCd2xIRWVxYWpHQlpyVF9QZFNsaWN5Zzd0aDVuOW5MVFJoOHh5UWt4SExmazdPLUpRRWlfdWthNTJmWDNmc3E3TnBMd05kVkQybGZQU3BHZEQ4TlN1ZHl1OXZqUVNBcWNDUjdMTVVMcnFaMXl1ZDU?oc=5",
+      "title": "After death of corrections K9, handler & supervisor reassigned",
+      "source": "PennLive.com",
+      "date": "2016-07-28",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE9ldV82UTlCd2xIRWVxYWpHQlpyVF9QZFNsaWN5Zzd0aDVuOW5MVFJoOHh5UWt4SExmazdPLUpRRWlfdWthNTJmWDNmc3E3TnBMd05kVkQybGZQU3BHZEQ4TlN1ZHl1OXZqUVNBcWNDUjdMTVVMcnFaMXl1ZDU?oc=5\" target=\"_blank\">After death of corrections K9, handler & supervisor reassigned</a> <font color=\"#6f6f6f\">PennLive.com</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
