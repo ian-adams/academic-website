@@ -1,8 +1,8 @@
 {
-  "updated": "2026-01-13T11:20:24Z",
+  "updated": "2026-01-14T11:21:34Z",
   "feed_type": "adjacent",
   "description": "Expert testimony ecosystem - police use-of-force litigation",
-  "count": 1,
+  "count": 2,
   "stories": [
     {
       "id": "2e17f5aa73631df8aa76075420c8cee1",
@@ -26,6 +26,32 @@
       ],
       "rationale": "The article discusses the exclusion of expert testimony in a use-of-force related trial, which is indicative of the broader police use-of-force expert testimony ecosystem, but does not mention Force Science directly or by proxy.",
       "key_entities": "Savannah Police",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "08819058ef852ed14d2baaef9ebdb314",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVlk3eGVPMUFiR0FhOGJGdjlkQ3lPV0NDeVpIVkhkb0luZTB6bmlCeXNWSWxRM1ZHTkdVaHJzTWZmcVFrZGJwOC1uX09LUk1JdU5PSmkzbEFrQ1NZVkliM2pGQkFhZ19RNzd4Sk9TeGNpV0hwNVRtUWlCWlBJaEdVUVBEQnF0aUlwVDAtRFdLQnd0ejhUcVNBNFk5ODRVRzBkQXJEdDctWjJ3LUU3N0pjcg?oc=5",
+      "title": "Illinois Supreme Court weighs admissibility of ‘reenactment’ in murder case",
+      "source": "Capitol News Illinois",
+      "date": "2024-01-10",
+      "date_discovered": "2026-01-14",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPVlk3eGVPMUFiR0FhOGJGdjlkQ3lPV0NDeVpIVkhkb0luZTB6bmlCeXNWSWxRM1ZHTkdVaHJzTWZmcVFrZGJwOC1uX09LUk1JdU5PSmkzbEFrQ1NZVkliM2pGQkFhZ19RNzd4Sk9TeGNpV0hwNVRtUWlCWlBJaEdVUVBEQnF0aUlwVDAtRFdLQnd0ejhUcVNBNFk5ODRVRzBkQXJEdDctWjJ3LUU3N0pjcg?oc=5\" target=\"_blank\">Illinois Supreme Court weighs admissibility of ‘reenactment’ in murder case</a> <font color=\"#6f6f6f\">Capitol News Illinois</font>",
+      "story_type": "general",
+      "label": "ADJACENT",
+      "confidence": 0.8,
+      "relevance": 60,
+      "relevance_score": 0.6,
+      "signals": [
+        "admissibility of 'reenactment'",
+        "murder case"
+      ],
+      "entities": [
+        "Illinois Supreme Court"
+      ],
+      "rationale": "The article discusses the admissibility of a reenactment in a murder case, which is related to the broader topic of police use-of-force expert testimony, but does not mention Force Science or any of its proxies.",
+      "key_entities": "Illinois Supreme Court",
       "location": null,
       "tags": [],
       "needs_review": 0
