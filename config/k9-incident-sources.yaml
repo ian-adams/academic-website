@@ -147,8 +147,8 @@ filtering:
 
 # Output settings
 output:
-  max_stories_json: 150      # Max stories in JSON output
-  max_stories_rss: 50        # Max stories in RSS feed
+  max_stories_json: 0        # 0 = no limit, export all relevant stories
+  max_stories_rss: 100       # Max stories in RSS feed
   json_path: "static/data/k9-incidents.json"
   rss_path: "static/data/k9-incidents.xml"
 
