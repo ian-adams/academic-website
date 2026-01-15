@@ -1,8 +1,8 @@
 {
-  "updated": "2026-01-14T11:21:34Z",
+  "updated": "2026-01-15T11:20:13Z",
   "feed_type": "adjacent",
   "description": "Expert testimony ecosystem - police use-of-force litigation",
-  "count": 2,
+  "count": 3,
   "stories": [
     {
       "id": "2e17f5aa73631df8aa76075420c8cee1",
@@ -52,6 +52,32 @@
       ],
       "rationale": "The article discusses the admissibility of a reenactment in a murder case, which is related to the broader topic of police use-of-force expert testimony, but does not mention Force Science or any of its proxies.",
       "key_entities": "Illinois Supreme Court",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "c9e90f1b97c258f0bf0ab94df164c5df",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQNFhzMmNzaDZfVkNLNllVNFBYM19RZndnOU8wYm9yeTZQcUhyU1NuejFGZk5lLVlJZ0J4eDVPNzJsSkx4MEVqTklGSHFuNE1IZTk5LTZhYlo2UFFqelNWRkM5NkxuSUpHQWJYNGtzbzROU1RtaEJuMUc3Q2pfTWMyOUlhSm04aTJFMlBYUVI5T0hXZDZkczlnMzVOVzdncHA5end1ajFhNjJsQVZYcGFHZE1VYkpudmctZmtzQmJadnRLU0pxYi1nbXJnU2pVaGpq?oc=5",
+      "title": "Adam Coy in court to determine if the former Columbus cop should get new trial over expert witness",
+      "source": "WOSU Public Media",
+      "date": "2025-04-14",
+      "date_discovered": "2026-01-15",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxQNFhzMmNzaDZfVkNLNllVNFBYM19RZndnOU8wYm9yeTZQcUhyU1NuejFGZk5lLVlJZ0J4eDVPNzJsSkx4MEVqTklGSHFuNE1IZTk5LTZhYlo2UFFqelNWRkM5NkxuSUpHQWJYNGtzbzROU1RtaEJuMUc3Q2pfTWMyOUlhSm04aTJFMlBYUVI5T0hXZDZkczlnMzVOVzdncHA5end1ajFhNjJsQVZYcGFHZE1VYkpudmctZmtzQmJadnRLU0pxYi1nbXJnU2pVaGpq?oc=5\" target=\"_blank\">Adam Coy in court to determine if the former Columbus cop should get new trial over expert witness</a> <font color=\"#6f6f6f\">WOSU Public Media</font>",
+      "story_type": "opinion",
+      "label": "ADJACENT",
+      "confidence": 0.8,
+      "relevance": 55,
+      "relevance_score": 0.55,
+      "signals": [
+        "new trial over expert witness"
+      ],
+      "entities": [
+        "Adam Coy",
+        "Columbus"
+      ],
+      "rationale": "The article discusses a court case involving the admissibility of an expert witness, which is relevant to the broader police use-of-force expert testimony ecosystem, but does not mention Force Science directly or by proxy.",
+      "key_entities": "Adam Coy, Columbus",
       "location": null,
       "tags": [],
       "needs_review": 0
