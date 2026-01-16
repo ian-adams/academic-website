@@ -1,7 +1,144 @@
 {
-  "updated": "2026-01-15T09:26:30Z",
-  "count": 1356,
+  "updated": "2026-01-16T09:24:52Z",
+  "count": 1385,
   "stories": [
+    {
+      "id": "e45236525f0be21776557e66dba80636",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQ3c5REtVMkJEWXdYdEZtWXBqSmdPWm9JUC0wMW53OUZ6UXlwcUtwZXREUEJJOFlrRENUVVZvczJ6TUNjUENTUHdNZDZ0R2oxRUJUamRlaFVrcUJaZ25zRnMyMVlBOWpQZVRoZWdGOUtkWWJROVZDVmUtejNfZHFKb3pJYjJQeElDdVJhS1dFcWJsTzlEM0xXeV9Nby1EQkhXLUNIVVp1NUNlcGxuZHRUTEx1ZE13eEV0ZlBZ0gHAAUFVX3lxTFBVR3BGazJCYnJjQWNNaXRvOENHMjRuY2pLSFktN3ZuVi1OQlZza3Q5Q2h5VlZKZ2VkSlJXZ3ZLMlN5OWcwb2JwdDliRGRNcUNkb21XWkpDZXRDQklMYkpLSDJjQTdqeFVSU0VSV3ljMDdDc1k2dXFTOGhiRnlReU1NVVdzZmM4ZG1tNG9yVXVKNjMtNTNENnNJV0x5bHJfUHhYRHJEMTNSWHlFM3dFRTBQLVRjbWF5LVBpdm5seENCVA?oc=5",
+      "title": "﻿League City Police Department to review policies after altering theft suspect's mugshot using AI",
+      "source": "ABC13 Houston",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQ3c5REtVMkJEWXdYdEZtWXBqSmdPWm9JUC0wMW53OUZ6UXlwcUtwZXREUEJJOFlrRENUVVZvczJ6TUNjUENTUHdNZDZ0R2oxRUJUamRlaFVrcUJaZ25zRnMyMVlBOWpQZVRoZWdGOUtkWWJROVZDVmUtejNfZHFKb3pJYjJQeElDdVJhS1dFcWJsTzlEM0xXeV9Nby1EQkhXLUNIVVp1NUNlcGxuZHRUTEx1ZE13eEV0ZlBZ0gHAAUFVX3lxTFBVR3BGazJCYnJjQWNNaXRvOENHMjRuY2pLSFktN3ZuVi1OQlZza3Q5Q2h5VlZKZ2VkSlJXZ3ZLMlN5OWcwb2JwdDliRGRNcUNkb21XWkpDZXRDQklMYkpLSDJjQTdqeFVSU0VSV3ljMDdDc1k2dXFTOGhiRnlReU1NVVdzZmM4ZG1tNG9yVXVKNjMtNTNENnNJV0x5bHJfUHhYRHJEMTNSWHlFM3dFRTBQLVRjbWF5LVBpdm5seENCVA?oc=5\" target=\"_blank\">﻿League City Police Department to review policies after altering theft suspect's mugshot using AI</a> <font color=\"#6f6f6f\">ABC13 Houston</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Ring, Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "81652ceedc7a318f6def03dcae0c125b",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNeDdmamhfZEpCUUU5TVRpNzdiUnRDenF5SUdVZzFIRTJGSVpkVmlybURLaHNEVkVxMmdRN21rQ3o3WlVETEJLZWhTZXpfV01ZWV9SdTFrMkJkel92VWNMaThKNTI2R2dzWGFXYzkxeFd2dVhXdThRNFl1VFVWYmRmSDFoQWltTHB6cGlfTklZdEp2UlRNNEpSOW03Y1ZFd3pkblJNSVhoYzRGYlNIWUHSAbMBQVVfeXFMUGtFY3ExYlBjV3BtVDh5Q3FfSi1mOXZlTndWeVlLXzlPcXVKNWxMZGY1YUlLdHZ1Skg3OGQzTjdUZHYzdHFhYzkySHNUejBLT3MzNHloVW1PQXRCTE9NRE83cVRFeFUwUlNPOVdOaE1vaEtrWHJpNkpLbDBvVU5NeC1XemQxX0xIeDhkR01RMU96Z19fRWJlUmdZbmlpS0pvN21QdWh6UTRvaTB6WWV5dGxQdHc?oc=5",
+      "title": "Berkeley police hear concerns as they consider expanding Flock Safety cameras, adding drones",
+      "source": "KTVU",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNeDdmamhfZEpCUUU5TVRpNzdiUnRDenF5SUdVZzFIRTJGSVpkVmlybURLaHNEVkVxMmdRN21rQ3o3WlVETEJLZWhTZXpfV01ZWV9SdTFrMkJkel92VWNMaThKNTI2R2dzWGFXYzkxeFd2dVhXdThRNFl1VFVWYmRmSDFoQWltTHB6cGlfTklZdEp2UlRNNEpSOW03Y1ZFd3pkblJNSVhoYzRGYlNIWUHSAbMBQVVfeXFMUGtFY3ExYlBjV3BtVDh5Q3FfSi1mOXZlTndWeVlLXzlPcXVKNWxMZGY1YUlLdHZ1Skg3OGQzTjdUZHYzdHFhYzkySHNUejBLT3MzNHloVW1PQXRCTE9NRE83cVRFeFUwUlNPOVdOaE1vaEtrWHJpNkpLbDBvVU5NeC1XemQxX0xIeDhkR01RMU96Z19fRWJlUmdZbmlpS0pvN21QdWh6UTRvaTB6WWV5dGxQdHc?oc=5\" target=\"_blank\">Berkeley police hear concerns as they consider expanding Flock Safety cameras, adding drones</a> <font color=\"#6f6f6f\">KTVU</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Flock Safety, Google, ICE",
+      "location": null,
+      "tags": [
+        "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "26bbcaf372ca71e9797509d8b6874943",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5WVTJETWdjTFpEXzAyR2pwc0djOXp3c1A0VllyNlp1ODJpOXBZXzYtNzI1Um9rNXZ1UkRhTlZPbjZXdFAxU0VBNXJfNW9wSnBKRnJfUExTeHgxVHfSAWBBVV95cUxPdXRvWjd1ZVg3Wjl1VGU0N0ZJUnJjWFFBWG90ZUU5cmRjLTdjeVNEeTc0Rzdmb0lySGV3anZKVDM3a1FiblFlZTNFMnh4NnE0ampPaEJ2YmxFSnAzYUdlemQ?oc=5",
+      "title": "Berkeley police hear concerns as department considers expanding Flock Safety cameras",
+      "source": "KTVU",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE5WVTJETWdjTFpEXzAyR2pwc0djOXp3c1A0VllyNlp1ODJpOXBZXzYtNzI1Um9rNXZ1UkRhTlZPbjZXdFAxU0VBNXJfNW9wSnBKRnJfUExTeHgxVHfSAWBBVV95cUxPdXRvWjd1ZVg3Wjl1VGU0N0ZJUnJjWFFBWG90ZUU5cmRjLTdjeVNEeTc0Rzdmb0lySGV3anZKVDM3a1FiblFlZTNFMnh4NnE0ampPaEJ2YmxFSnAzYUdlemQ?oc=5\" target=\"_blank\">Berkeley police hear concerns as department considers expanding Flock Safety cameras</a> <font color=\"#6f6f6f\">KTVU</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Flock Safety, Google, ICE",
+      "location": null,
+      "tags": [
+        "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "975aa718f9883d46f6a3fcfd09212da4",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNW9ib1c2Q0UtTC0wX3BjamNkOHg5a0lIcE1qOWw5cFV3UXYtR2hTcDkyWUkyTTMxZ3NRVlhTZXZNWFU4YkJoMjJIMERZMlowUHByWm1zVkxrQ2pMNF9rXzdBcUY0SXpwYko4YjBscURIWW1iRDVIcXlpbHROdkZmbW1HWlVHVDlUYWZB?oc=5",
+      "title": "York-Poquoson Sheriff’s Office now using ‘Flock Transparency Portal’ to increase transparency around Flock camera usage",
+      "source": "Yahoo",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNW9ib1c2Q0UtTC0wX3BjamNkOHg5a0lIcE1qOWw5cFV3UXYtR2hTcDkyWUkyTTMxZ3NRVlhTZXZNWFU4YkJoMjJIMERZMlowUHByWm1zVkxrQ2pMNF9rXzdBcUY0SXpwYko4YjBscURIWW1iRDVIcXlpbHROdkZmbW1HWlVHVDlUYWZB?oc=5\" target=\"_blank\">York-Poquoson Sheriff’s Office now using ‘Flock Transparency Portal’ to increase transparency around Flock camera usage</a> <font color=\"#6f6f6f\">Yahoo</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "290b6ec4d82d2c74ce899c998a40c762",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRmpXZjN2cFNEUjBUdkhvMkRvV3hXQzV0eWpHVUlhY1dTeUZMN2ZjZ21RX2pITzdFRUw5eXcxS0NqQTVGWWFMTkRSbEFsLTFUQVdaUWNIUmNkeTNoN3Z4MWcwSXpjSWxkUUNwcDYwbE93aDk4alQxRlE1UnBiSWY1ME5MOA?oc=5",
+      "title": "'Facial recognition vans 100% accurate' - police",
+      "source": "Yahoo News Canada",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPRmpXZjN2cFNEUjBUdkhvMkRvV3hXQzV0eWpHVUlhY1dTeUZMN2ZjZ21RX2pITzdFRUw5eXcxS0NqQTVGWWFMTkRSbEFsLTFUQVdaUWNIUmNkeTNoN3Z4MWcwSXpjSWxkUUNwcDYwbE93aDk4alQxRlE1UnBiSWY1ME5MOA?oc=5\" target=\"_blank\">'Facial recognition vans 100% accurate' - police</a> <font color=\"#6f6f6f\">Yahoo News Canada</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "facial recognition"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "e2636a92e9756834d4ad8a79fb874694",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRnNYQW1hTDVIWEloS002YTdmSTY1Q3lxNDhFMllZOHRFblZaOUpnamNVTkd0Q0puN180RlRRNkhCajRDR3lhUU1jYjhwcHN1d0tlTmR2aUJ4QWFiaDZTZC1oV1pCQl9YdkNpT3hfcmU1THRueXFxWG1pQldOTmx6dGs4MDg5WGQ1R0RXWGpjLUhsbWswVFE?oc=5",
+      "title": "Will Bridgeport City Council revive rejected Flock contract for police drones?",
+      "source": "Connecticut Post",
+      "date": "2026-01-15",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxPRnNYQW1hTDVIWEloS002YTdmSTY1Q3lxNDhFMllZOHRFblZaOUpnamNVTkd0Q0puN180RlRRNkhCajRDR3lhUU1jYjhwcHN1d0tlTmR2aUJ4QWFiaDZTZC1oV1pCQl9YdkNpT3hfcmU1THRueXFxWG1pQldOTmx6dGs4MDg5WGQ1R0RXWGpjLUhsbWswVFE?oc=5\" target=\"_blank\">Will Bridgeport City Council revive rejected Flock contract for police drones?</a> <font color=\"#6f6f6f\">Connecticut Post</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "71066967a6aa89c89cdea1992988ce77",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUEREOS12OTd0Wmd4RExyaV9laThJNXJaNFdmNkJBTjI2M1lUOFFUeHBoUzRfQmFia3FLODBCc282Q0hVN1FOU000VHB4SDhhSFpWVTNQRzJ5eExCamRzbzlONWVUS0szc3JmeGZvNjdfQVN0c3VRVXR4Z0xRU0lUWlZ4WEZWdVJFVkpXd3FzUFhHTUlhbFd4X3ptakxUdkFUbElFWmRIbUtrblBMT3NORUxjNHBqeDQ?oc=5",
+      "title": "Okaloosa Sheriff’s Office addresses Flock camera questions, releases case data since 2022",
+      "source": "Get The Coast",
+      "date": "2026-01-15",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxNUEREOS12OTd0Wmd4RExyaV9laThJNXJaNFdmNkJBTjI2M1lUOFFUeHBoUzRfQmFia3FLODBCc282Q0hVN1FOU000VHB4SDhhSFpWVTNQRzJ5eExCamRzbzlONWVUS0szc3JmeGZvNjdfQVN0c3VRVXR4Z0xRU0lUWlZ4WEZWdVJFVkpXd3FzUFhHTUlhbFd4X3ptakxUdkFUbElFWmRIbUtrblBMT3NORUxjNHBqeDQ?oc=5\" target=\"_blank\">Okaloosa Sheriff’s Office addresses Flock camera questions, releases case data since 2022</a> <font color=\"#6f6f6f\">Get The Coast</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "7c3bdcd801a6fa5b45c0072d6087d9cb",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQZTBtYkxEZjhVWHJBeHoteGpkRURNdWRtbGllZmkwRXE5bC14c0hMcElCNDMyRW1fUUlHLU5iWkNSUkFPdEFEalpjMEhDWkFWZ19fY2ZQYmRwdFZtRmRxa1dnTFBNdGFSN0dPOVhwTW9Hd0JXbzFrQUlDSy1Od0ZCNVZQMWdMRFo2OXVwUnJGOTd0NUdPa042Q0l3ZmpGOHdSbDE4Q09Vb19jU09fa1Bja3IxbWZaZ0VGdzE1N0haT0ZhbTBGR0lBT3BB?oc=5",
+      "title": "AI screening error led to ICE hires being deployed while undertrained, LE sources allege",
+      "source": "Police1",
+      "date": "2026-01-15",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxQZTBtYkxEZjhVWHJBeHoteGpkRURNdWRtbGllZmkwRXE5bC14c0hMcElCNDMyRW1fUUlHLU5iWkNSUkFPdEFEalpjMEhDWkFWZ19fY2ZQYmRwdFZtRmRxa1dnTFBNdGFSN0dPOVhwTW9Hd0JXbzFrQUlDSy1Od0ZCNVZQMWdMRFo2OXVwUnJGOTd0NUdPa042Q0l3ZmpGOHdSbDE4Q09Vb19jU09fa1Bja3IxbWZaZ0VGdzE1N0haT0ZhbTBGR0lBT3BB?oc=5\" target=\"_blank\">AI screening error led to ICE hires being deployed while undertrained, LE sources allege</a> <font color=\"#6f6f6f\">Police1</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "error"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "4ee03af336183369599e110f4b451efa",
       "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPWC1rM2VzUlJ5eS1lNGN5bVZnaEtPR2dzV3RZOG5xUndRcjVKeVpTcFZaRnkzNlZ1M0xEZ2kya0xTa1YxLXhGTzZ1TzIteHNzcm5QaVQtVUdLSkhNdVI1cFg2cExnNVhCSk1DdTA5blR4QWZOMEI0UU9IdXBzbjItUnZTb1VYWkVSWDNuUTY4bEsxMGkxNjFEaUI3SjlPY1BJbGJJX1hfaDdneFh3Q1plc1pTQ1V6ZGdoa0g0SGhnMGhwRnhnTWRzU21UVXlPS1hFaXFBdXo5Q0txSUlBZFhOeXR6ZnBqMm5MN2lweA?oc=5",
@@ -298,6 +435,23 @@
       "location": null,
       "tags": [
         "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "ea01e01360ff1ae31f43d17a41d0ae8e",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQMUVsTXMzUi05MjV1cF9vMEJCZ1E2My1MM2hEM3N2RjJkY05rR1JreXVvX0c1N0VxRGNXWVh1SE9ySzlGcDB0WjdieEdFNmhta3ZIMGJMakRSRU5BVk5MZWZ2OG9kYk95M3dpOTlCeVlDRmZqREhsUDFrb0hUNXRxOEhhYVpHbWUyTWpyN2tneVVZQ0t4bE5vNzNBTHV6NEw0OU5qOTRpVDR0QVRxdms4NjktTm9nQWpDZkpuMVNRbVpoTUJ2TTlYTG1Ib2FKdF83dGRtUjBnZ21qVklxdDVia2Q2YmpGZVE5QlBHQUhHMFNvQzQ?oc=5",
+      "title": "Police department uses AI to write reports, only to have it claim one of the officers was turned into a frog",
+      "source": "MSN",
+      "date": "2026-01-11",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi8wFBVV95cUxQMUVsTXMzUi05MjV1cF9vMEJCZ1E2My1MM2hEM3N2RjJkY05rR1JreXVvX0c1N0VxRGNXWVh1SE9ySzlGcDB0WjdieEdFNmhta3ZIMGJMakRSRU5BVk5MZWZ2OG9kYk95M3dpOTlCeVlDRmZqREhsUDFrb0hUNXRxOEhhYVpHbWUyTWpyN2tneVVZQ0t4bE5vNzNBTHV6NEw0OU5qOTRpVDR0QVRxdms4NjktTm9nQWpDZkpuMVNRbVpoTUJ2TTlYTG1Ib2FKdF83dGRtUjBnZ21qVklxdDVia2Q2YmpGZVE5QlBHQUhHMFNvQzQ?oc=5\" target=\"_blank\">Police department uses AI to write reports, only to have it claim one of the officers was turned into a frog</a> <font color=\"#6f6f6f\">MSN</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
       ],
       "needs_review": 0
     },
@@ -5941,6 +6095,24 @@
       "needs_review": 0
     },
     {
+      "id": "588c3fff22f0c589d53aaf235c6dc3d2",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNbEZNWHgwWDE4SkVncjZ1YjJvc0N6a290VzlrcnpkaDRHZmpYai1VR2c3VldacWI0WGNrNkp6c01NZEhQT0dwcVNTQzhhQTJ3V0hWdVYyTEFucUg0ZVJ4Xzk4MWRWUm1iaURCcC1WbERydGM2OEtTcExrTnRYV3ZxVWdYTDdCM1NNWmE5QjdhbXFQc05RbWhqOVJUd25RM0x4YVNSdUxoeGU0WlY1d3pZ?oc=5",
+      "title": "Georgia police chief charged with using license plate readers to stalk and harass people",
+      "source": "WABE",
+      "date": "2025-11-20",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNbEZNWHgwWDE4SkVncjZ1YjJvc0N6a290VzlrcnpkaDRHZmpYai1VR2c3VldacWI0WGNrNkp6c01NZEhQT0dwcVNTQzhhQTJ3V0hWdVYyTEFucUg0ZVJ4Xzk4MWRWUm1iaURCcC1WbERydGM2OEtTcExrTnRYV3ZxVWdYTDdCM1NNWmE5QjdhbXFQc05RbWhqOVJUd25RM0x4YVNSdUxoeGU0WlY1d3pZ?oc=5\" target=\"_blank\">Georgia police chief charged with using license plate readers to stalk and harass people</a> <font color=\"#6f6f6f\">WABE</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "d10eb61149b229a648d2634b145f14d0",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWXBhYnNUbnQtQjVWSWdBSVVnYTFiLU80elBqLUtfUzhUSkNZNU1hOTc0ek5tMTFhQ2gxeG84Qzd1d0JyeHBIdHFZT21idkllTWlZaXloTUpJQ1hzM2ZPMkpBYk41YUlUOEh2QVk0eWpxU1B3S0FfY0tzaWRiQUh3c004OFJMcXlxaUI0RXh1QklPM0diaGxTczNTU3dDQjhnZklaQlRRQkhVRGQ2b094cnVKU2RvMUE?oc=5",
       "title": "How Cops Are Using Flock Safety's ALPR Network to Surveil Protesters and Activists",
@@ -6774,6 +6946,24 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "9b46998653d06ec03e2d1bd51bcb90e1",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPWGxrbC1fNm5QQlVGT2NFaWRELTh3MG40ODIzRjRnZjBCTG1OYk5hVlAzby1RSnNmQ0FodWE2YlBycjBpREZLc0pPdW5yQmNMWXNBTXF3UmFCeGNIUVZCbE5zWkkwT1NzZ2ExMmlqUEc1YWRzZWsySjRub1JXQlROMTNjNjN2TXd5b2h3NDU3amRfd1hHQVBhUU0zTFpOQkF4Q0stTmEyaXRlZmJrQTRsdWN0N1lrQmpZby1HTDNZSjZRS1BvdkpRdWcyZEU5c3li0gHkAUFVX3lxTE5hMUJpUm9kQlJrX1FoUGd1RWdORGJwbmVsbzNjRGItOExCM3VocFdYMy1wMHQ0end5eGVvWjVwX3hYcFNRTGY3SmdkN29FdlRfbG82dWo1d0tMcmtieTlGU0tLWHRaSXFBOE9NUDRsZi1HOVRpaGlRc25CQmJQNVhfLXEwNkRXS21vMHZ5cG5IRjN4ODZoTEtIQXBwSmtaZTR2UTRmcGV3OFhqS3QxSUdyelk1ZWJXVDFiWHphZ2hGZU1pcTJ5SkdDczVrLWZGcnBiRnplem40SXV5ZlBXMWZHMTdNZw?oc=5",
+      "title": "Seattle’s OPA urges SPD to create policy after officer admits to using AI on reports",
+      "source": "KIRO 7 News Seattle",
+      "date": "2025-11-05",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxPWGxrbC1fNm5QQlVGT2NFaWRELTh3MG40ODIzRjRnZjBCTG1OYk5hVlAzby1RSnNmQ0FodWE2YlBycjBpREZLc0pPdW5yQmNMWXNBTXF3UmFCeGNIUVZCbE5zWkkwT1NzZ2ExMmlqUEc1YWRzZWsySjRub1JXQlROMTNjNjN2TXd5b2h3NDU3amRfd1hHQVBhUU0zTFpOQkF4Q0stTmEyaXRlZmJrQTRsdWN0N1lrQmpZby1HTDNZSjZRS1BvdkpRdWcyZEU5c3li0gHkAUFVX3lxTE5hMUJpUm9kQlJrX1FoUGd1RWdORGJwbmVsbzNjRGItOExCM3VocFdYMy1wMHQ0end5eGVvWjVwX3hYcFNRTGY3SmdkN29FdlRfbG82dWo1d0tMcmtieTlGU0tLWHRaSXFBOE9NUDRsZi1HOVRpaGlRc25CQmJQNVhfLXEwNkRXS21vMHZ5cG5IRjN4ODZoTEtIQXBwSmtaZTR2UTRmcGV3OFhqS3QxSUdyelk1ZWJXVDFiWHphZ2hGZU1pcTJ5SkdDczVrLWZGcnBiRnplem40SXV5ZlBXMWZHMTdNZw?oc=5\" target=\"_blank\">Seattle’s OPA urges SPD to create policy after officer admits to using AI on reports</a> <font color=\"#6f6f6f\">KIRO 7 News Seattle</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "policy"
       ],
       "needs_review": 0
     },
@@ -8264,6 +8454,23 @@
       "needs_review": 0
     },
     {
+      "id": "912392d10c8750a36dce53c9adb3db88",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPS2RxWTZNbUJxQjNwN2RENXpmSjJVTFFYSVAwVHRzdkF6Smk1amhZZnBZakpjUFNTOXhUVXRGM1RmeTI3V3NWaVFMZURrS1lUVTA5RlNOazF5Skk3MGwwcWZDa2g0VXdzcFRpZlpCdzRMdzlybDVLaVAtQm1Pams5UXZxS2VVeHNpSldJQ0pHZ19PTGd4ZGtKZmJiOGJncFpjeXBLSzhQZUFzUHBEZWc?oc=5",
+      "title": "How is AI used in Houston law enforcement? Sheriff's office, prosecutor weigh in",
+      "source": "Houston Chronicle",
+      "date": "2025-10-19",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPS2RxWTZNbUJxQjNwN2RENXpmSjJVTFFYSVAwVHRzdkF6Smk1amhZZnBZakpjUFNTOXhUVXRGM1RmeTI3V3NWaVFMZURrS1lUVTA5RlNOazF5Skk3MGwwcWZDa2g0VXdzcFRpZlpCdzRMdzlybDVLaVAtQm1Pams5UXZxS2VVeHNpSldJQ0pHZ19PTGd4ZGtKZmJiOGJncFpjeXBLSzhQZUFzUHBEZWc?oc=5\" target=\"_blank\">How is AI used in Houston law enforcement? Sheriff's office, prosecutor weigh in</a> <font color=\"#6f6f6f\">Houston Chronicle</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "cdb85ae2cc33a9c52c6b3c5dc2a25a1d",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPbGwzcVRQWHlXSF8yOGJGWkFPZ1Y2Y254cmhMREx4TlE1al9nX3VuTzUtdzdaeC1wSmtmZ3hGeVV2dmhzSFlrLUZJbGVVYVBQcnVqaHBWTlktOGFiOVFrRFNpTUNLb2tyU3RUQ01tRnZ5Vjk2ZDQ1QnhwY255dE9nN2YyMVpaRG55djJPYVVLZTdGeWhVWTBrNEthekZpTkZ2Wk8tQy0zUW5YMFFiMDZBTtIBtgFBVV95cUxPVVp6R214VjczZFBHMHdqcmNmQ1MxOWxvSVRDSW9qTG1KWHlZbHlHcE80d2YzV2FRWm5wWW1HZ2JiOE5qSVhLS2o3Z3RFcER1VktSazV2bWF1U0l0NGQ0TXh1Yms4b0M1a3EtMl80MUtuRnZYcWJGU2E3VHczOGk5THZSNU9UY2JuZ3QxbzJXZmdLYkEzN3RoQlQwclFuc2ozM0VvV0p4VV8xOWlPeWYyQnBObGl0dw?oc=5",
       "title": "AI to assist in city police services",
@@ -8519,6 +8726,21 @@
       "tags": [
         "AI"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "0342af4e6f1efcdbca8e1d2c34f72b4c",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNb2twUnltM0l1OVliZjV1TVhkT211aXlYZXktdkRWamd0Q0R4MkVfemdZUEJTOXlwbGdaNmRheWx5ajg1UEwxZ0x5M2QzQ256TUxkam50UlFRWnQzREpNcFIxTXRCbDJkTjNFM3luMHpTSGttV29TMDg2dVZYRU9iX201UlJNNzJMeDRHanFBWlpxRlBXRTdkVmx4RkRCaG1xWDlPTW9lZnM0TnlPSTVVMUlwTTJCREZxOXUydWpDSHpsaWxZNVBfbjF6NGstZkQ5U21IMA?oc=5",
+      "title": "Motorola Solutions brings drone dispatch to APX NEXT radios, advancing officer safety",
+      "source": "Police1",
+      "date": "2025-10-16",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxNb2twUnltM0l1OVliZjV1TVhkT211aXlYZXktdkRWamd0Q0R4MkVfemdZUEJTOXlwbGdaNmRheWx5ajg1UEwxZ0x5M2QzQ256TUxkam50UlFRWnQzREpNcFIxTXRCbDJkTjNFM3luMHpTSGttV29TMDg2dVZYRU9iX201UlJNNzJMeDRHanFBWlpxRlBXRTdkVmx4RkRCaG1xWDlPTW9lZnM0TnlPSTVVMUlwTTJCREZxOXUydWpDSHpsaWxZNVBfbjF6NGstZkQ5U21IMA?oc=5\" target=\"_blank\">Motorola Solutions brings drone dispatch to APX NEXT radios, advancing officer safety</a> <font color=\"#6f6f6f\">Police1</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Motorola, Ring, Google, ICE",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
@@ -10731,6 +10953,23 @@
       "needs_review": 0
     },
     {
+      "id": "3ed6f06c89f8bacecb5505d615492f46",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQMmJsNWZLcWlpaC1FNjliQnVtN1c2bWRnaFlMNHhFWVA5VXNIMVpISWpWM1hTY1U0WlVFbVhSOE1iM3JidnhfakEtQmJnQVd5eGpDRGVlMXEyMnFWQ0NydHF2YXgzM0JIZWR5SHJjMFQ5VF9TY1RJdG8xbng5LTZXR1dLMXF0Y2h6VXR5bEw4R1h2WS1BZDllX05B?oc=5",
+      "title": "With no federal facial recognition law, states rush to fill void",
+      "source": "Texas Public Radio | TPR",
+      "date": "2025-08-28",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQMmJsNWZLcWlpaC1FNjliQnVtN1c2bWRnaFlMNHhFWVA5VXNIMVpISWpWM1hTY1U0WlVFbVhSOE1iM3JidnhfakEtQmJnQVd5eGpDRGVlMXEyMnFWQ0NydHF2YXgzM0JIZWR5SHJjMFQ5VF9TY1RJdG8xbng5LTZXR1dLMXF0Y2h6VXR5bEw4R1h2WS1BZDllX05B?oc=5\" target=\"_blank\">With no federal facial recognition law, states rush to fill void</a> <font color=\"#6f6f6f\">Texas Public Radio | TPR</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [
+        "facial recognition"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "ec0457477f575c9095480b1be70ac3a0",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNX0RnVFpOMVJKM2NJVFNDRGlHUy1SWmtuaHdvRjMxLVZMRUJFSVVRekdkeXloOEh6S3p2djBxMW5aamkwajRqaElGak9QM2NvQkZOZF9pRTVxWnZfckE0Z2UyVW52dnNLbE1ZYnZQb2c1Ulg0T05PRFFLalIyWTB2a2szaWZpYmtwaU5KOUZIRlQySmJsN1FSSVZVb2ZlY1VFdTlRS3ZQa1Q0RGhRMFJKMm5PbFZMS2tidGNxaGE3ZVFwcWpn?oc=5",
       "title": "OpenAI Says It's Scanning Users' ChatGPT Conversations and Reporting Content to the Police",
@@ -11316,6 +11555,23 @@
       "date": "2025-08-14",
       "date_discovered": "2026-01-12",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNY1hBTklCdmFWaU90Ukh5UXA2enZZd1VJRzFEa1Jmc0lGQWtDUzhPd19kRHhvZEpmM3FEc1JhaHdQbDdqQ1VfUXR0bTk0N2FySlJZaERtVG9IWXNHTjBfZWVvd2JWdTg0MUJOamJxeDhFMkFkOVRoekFqOEg1anh0dFlYYVl6My0xQ1VhbzVGbVloT0ZPX3FBbmtYYzVSbmh1cGxGeXZZU3B2dG9peW1KM3pMZ0h0Y05iT052Ug?oc=5\" target=\"_blank\">How agentic AI enhances crime prevention, streamlines evidence collection</a> <font color=\"#6f6f6f\">Police1</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "aa381495b7232f4be8c1aef659c52e82",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNYnBTQkl0VjYxV0QtR3dheVJFZWQ3S1pHWXcyY05ib0I4UWxPTGJ3anZoU3BYLTZXbHZDTDZxUVdHVVVOMWViRW5SX0I3Z1J1dUw4bzhHaUdKaG92c2tZampuUFRoNWtBam9lM0JCbHd3OFdRQWtFeE8zZ1dFYzZhRFlabUV6ZkM1dWM0XzgwYWd0QnRKaVQxaG5EeEVUTUdHWUtBN2NCSQ?oc=5",
+      "title": "Phoenix police to use AI to answer non-emergency calls. Is that good?",
+      "source": "Phoenix New Times",
+      "date": "2025-08-13",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNYnBTQkl0VjYxV0QtR3dheVJFZWQ3S1pHWXcyY05ib0I4UWxPTGJ3anZoU3BYLTZXbHZDTDZxUVdHVVVOMWViRW5SX0I3Z1J1dUw4bzhHaUdKaG92c2tZampuUFRoNWtBam9lM0JCbHd3OFdRQWtFeE8zZ1dFYzZhRFlabUV6ZkM1dWM0XzgwYWd0QnRKaVQxaG5EeEVUTUdHWUtBN2NCSQ?oc=5\" target=\"_blank\">Phoenix police to use AI to answer non-emergency calls. Is that good?</a> <font color=\"#6f6f6f\">Phoenix New Times</font>",
       "story_type": "general",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
@@ -16690,6 +16946,23 @@
       "needs_review": 0
     },
     {
+      "id": "81bcf7bed9f2bbe6f1761921d9740028",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUG00MV80d3pBd2Q5am5saEZuR1hxT2lMaXdsR1VXeEVobzZZVFBDendobFlJQXJyWktFQzZYdDlUZ01HbWdvcjBabU1OU0hWMDZQeWp4ZzdTLURVQ1hPcG9QRG5JcmwtZzUzbVBhc0RVV0o3QTQ0Q0NzUzJRV0J0ZnQ0RkY?oc=5",
+      "title": "St. Louis Police Authoritarian AI Program Leads to Innocent Black Man Caged for 17 Months",
+      "source": "The Kansas City Defender",
+      "date": "2025-02-08",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxNUG00MV80d3pBd2Q5am5saEZuR1hxT2lMaXdsR1VXeEVobzZZVFBDendobFlJQXJyWktFQzZYdDlUZ01HbWdvcjBabU1OU0hWMDZQeWp4ZzdTLURVQ1hPcG9QRG5JcmwtZzUzbVBhc0RVV0o3QTQ0Q0NzUzJRV0J0ZnQ0RkY?oc=5\" target=\"_blank\">St. Louis Police Authoritarian AI Program Leads to Innocent Black Man Caged for 17 Months</a> <font color=\"#6f6f6f\">The Kansas City Defender</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "81b3201bd4d3d45c39b10669140ca8a9",
       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOOWM5U0Uzc3Y4NW1rSFBCMDBZcWQ4T05BdzBpODhUTW1WMllMTVAxemF0b2pCVjhVTWZ5dVVVMmEzSHA1ZjFHeTJyOUZCdlgyS0VqQUtEU216a0h3ZUIwZGZmRzFGanBkMzcxeHc4a0UtRndkQzBocmJhaVFsSVFIdXlyWjhDdVZ2MC1jZjJJTHd4d2tLTHVkd1pXQms3X3hUbnpjNlB5MlMtcjZCQms2Q0FDM3VERDNHMk9aR0M3LTFjWkFZMUlWbmpSdlZiLXBZWlF5bVQ4RU5COTNLNHE3OEVHRlZfVTZreGV0endtNA?oc=5",
       "title": "AI-assisted approach to reviewing bodycam footage catches on in another Arizona police department",
@@ -17321,6 +17594,24 @@
       "needs_review": 0
     },
     {
+      "id": "b3019c477d69aec8f17cc8321a5b3204",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNQ2x2R0puQVA4bGRDMXVEZkJCSHdZSHlTMzFHd3FjT05zTXFtU3hwQjY5bnRNV09HUEs0dHEtVlJadWNGSHlqREtHSG1zOFBXUjVfazJRQV9Id1o1UllDX3lRc3F1ZU8yUDlGNU16VDhXMUh5Rjg5UUtaM3Q1b2c4MGc5aURwWTFpWVhXcWdCVG42VVF2YmMxYVJMWTBULUFtNWJ2WTVJSklHd3FiOHcwci1iNW9MamtudE1KMmJKMWZDdFVNc1MyQURuTVdWNDlGUk5mSzZSNi12Tk1sT2trTEU0dDVaUlBfRW1rX3FmZ1N0QWxMRzl6bWp1TmhrS3ZLRUtGN01rWFR5X1ph?oc=5",
+      "title": "Little Rock Police Department policies allow facial recognition in certain cases, contradicting previous statements from city officials",
+      "source": "Arkansas Times",
+      "date": "2024-12-19",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijAJBVV95cUxNQ2x2R0puQVA4bGRDMXVEZkJCSHdZSHlTMzFHd3FjT05zTXFtU3hwQjY5bnRNV09HUEs0dHEtVlJadWNGSHlqREtHSG1zOFBXUjVfazJRQV9Id1o1UllDX3lRc3F1ZU8yUDlGNU16VDhXMUh5Rjg5UUtaM3Q1b2c4MGc5aURwWTFpWVhXcWdCVG42VVF2YmMxYVJMWTBULUFtNWJ2WTVJSklHd3FiOHcwci1iNW9MamtudE1KMmJKMWZDdFVNc1MyQURuTVdWNDlGUk5mSzZSNi12Tk1sT2trTEU0dDVaUlBfRW1rX3FmZ1N0QWxMRzl6bWp1TmhrS3ZLRUtGN01rWFR5X1ph?oc=5\" target=\"_blank\">Little Rock Police Department policies allow facial recognition in certain cases, contradicting previous statements from city officials</a> <font color=\"#6f6f6f\">Arkansas Times</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "facial recognition"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "4080056ae815ac54cd2d2035b124c9a5",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9FUE4ySmdYX2lfY3RRaWM5Q1B5Y3RUOFdsaXBFZXBINk5lMmszX2Y5MVRTVHcwWllfX2hzU3V4aW9ZN0tyRllzYmUtVU1hdl9aM1JvS2N0dDRQY3pOSmd5YVRSSF8zTGRoVVlsc2JKTnI?oc=5",
       "title": "US Homeland Security chief warns EU over effort to police AI",
@@ -17531,6 +17822,23 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "363613fbb56327cf6e0ddc03e74ee37e",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTG5QZFlvdzEzM1VST3JxOFpPRUpzSTBMODl5WVdqUERzakk1d1FNYUEweWRETWl4d0NTSG45OEFlNjBZQkxjOGRYWHV4bXB3Q3pTQjRoSFI2LWNBSDhWSERCRERMdzFaZkFmZlkzRGw1R0JkTGVxN0M1Wm5oS1ItVWQ0SVdvV2IxNXVaalRZb2h5emVZSGxrNlpQRnNGTndHSDZqUVVNVkM3eHRBWFBNRldqSzNDYVBnMTFXNEd3TQ?oc=5",
+      "title": "Pasco County Sheriff Will End Predictive Policing Program to Settle Lawsuit Over Harassment",
+      "source": "Reason Magazine",
+      "date": "2024-12-04",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxOTG5QZFlvdzEzM1VST3JxOFpPRUpzSTBMODl5WVdqUERzakk1d1FNYUEweWRETWl4d0NTSG45OEFlNjBZQkxjOGRYWHV4bXB3Q3pTQjRoSFI2LWNBSDhWSERCRERMdzFaZkFmZlkzRGw1R0JkTGVxN0M1Wm5oS1ItVWQ0SVdvV2IxNXVaalRZb2h5emVZSGxrNlpQRnNGTndHSDZqUVVNVkM3eHRBWFBNRldqSzNDYVBnMTFXNEd3TQ?oc=5\" target=\"_blank\">Pasco County Sheriff Will End Predictive Policing Program to Settle Lawsuit Over Harassment</a> <font color=\"#6f6f6f\">Reason Magazine</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, DHS",
+      "location": null,
+      "tags": [
+        "predictive policing"
       ],
       "needs_review": 0
     },
@@ -17911,6 +18219,23 @@
       "tags": [
         "AI",
         "body camera"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "f140dd47063ecc2f8c358665d9010840",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPWDU0czVmSG9NalVQTHZfR1I2MlE5c0wyN1FtOXF4S2xHLVNVUW1iNkx6UE9SanUwZWgyT3dxRzlOSXExWmZRYnRwTVk3alh4TnE1OTVsdWtiOUM0V2kwSldXbm1oTFFXclFQTkdnTVVLN2Z1eHowTXpCSFVUZlpwb1daQnVscnJiOHhpS1NtR0NwUGFBZnlmX3JPWmFtd0F6ZWp4QWFYRXFUNnlqZjc3aEtjbERFUmk2N3gzdUhWR0tFQTFFa0xseGtn0gHeAUFVX3lxTE95M0RVS05jTERSQlBINGE1czZsN0pvQUZ5N0cxanktdUlXejd1RXNrbWhEbzRmODBQamQxZGUyVkwxcW1Vamg3d2stSGJMWE5rZzB3LVRiVDZoMC12ZHZZVTAycFBsSEhYeFNzSVF0TWhIeXc2eDhhV2l5NjBVSFBUejYtN3Z6U2JsNWprcHJpWDlaQmFzOUszZVhRNmo2OElHcDFwSU90cThwOXZob0I4ZUlJR3FuWTFfd3BpSVJKNGVmY0ZmcFBvTEZQWWh5UC15eGhzejYzUGxuaVl1QQ?oc=5",
+      "title": "Crime crackdown: Memphis mayor working with MPD to blanket city with AI-powered camera network",
+      "source": "Action News 5",
+      "date": "2024-10-22",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPWDU0czVmSG9NalVQTHZfR1I2MlE5c0wyN1FtOXF4S2xHLVNVUW1iNkx6UE9SanUwZWgyT3dxRzlOSXExWmZRYnRwTVk3alh4TnE1OTVsdWtiOUM0V2kwSldXbm1oTFFXclFQTkdnTVVLN2Z1eHowTXpCSFVUZlpwb1daQnVscnJiOHhpS1NtR0NwUGFBZnlmX3JPWmFtd0F6ZWp4QWFYRXFUNnlqZjc3aEtjbERFUmk2N3gzdUhWR0tFQTFFa0xseGtn0gHeAUFVX3lxTE95M0RVS05jTERSQlBINGE1czZsN0pvQUZ5N0cxanktdUlXejd1RXNrbWhEbzRmODBQamQxZGUyVkwxcW1Vamg3d2stSGJMWE5rZzB3LVRiVDZoMC12ZHZZVTAycFBsSEhYeFNzSVF0TWhIeXc2eDhhV2l5NjBVSFBUejYtN3Z6U2JsNWprcHJpWDlaQmFzOUszZVhRNmo2OElHcDFwSU90cThwOXZob0I4ZUlJR3FuWTFfd3BpSVJKNGVmY0ZmcFBvTEZQWWh5UC15eGhzejYzUGxuaVl1QQ?oc=5\" target=\"_blank\">Crime crackdown: Memphis mayor working with MPD to blanket city with AI-powered camera network</a> <font color=\"#6f6f6f\">Action News 5</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [
+        "AI"
       ],
       "needs_review": 0
     },
@@ -18334,6 +18659,23 @@
       "needs_review": 0
     },
     {
+      "id": "169594bb8e4fb1f54501042ba452b36a",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWDNiQkVpd0pCZlJ2aG8tWmtmMlpvY25ESUpnenhaT1V4YTNkM1RXenBNcG5OWFdTb1VQZ0UyNjJlZUdWNVl0TjZ0Z2VkaUx1bmVSZ2RudDdPZ0diWGFraXotMUw0Ui1XNkF3YThhY2N0MXNvYTF2c0szNE1oM3VTMWJCLVl3bGFV?oc=5",
+      "title": "ShotSpotter gets another shot in Fayetteville",
+      "source": "CityView NC",
+      "date": "2024-09-24",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWDNiQkVpd0pCZlJ2aG8tWmtmMlpvY25ESUpnenhaT1V4YTNkM1RXenBNcG5OWFdTb1VQZ0UyNjJlZUdWNVl0TjZ0Z2VkaUx1bmVSZ2RudDdPZ0diWGFraXotMUw0Ui1XNkF3YThhY2N0MXNvYTF2c0szNE1oM3VTMWJCLVl3bGFV?oc=5\" target=\"_blank\">ShotSpotter gets another shot in Fayetteville</a> <font color=\"#6f6f6f\">CityView NC</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "ShotSpotter, Google",
+      "location": null,
+      "tags": [
+        "gunshot detection"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "7caa9f09507a59f43908075cfce55249",
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPR0NzcUFYSTRXTVNKRkpTSnJ2bG5OWDdhTUtCNG9UYnhxTUJ2U3d5N1pJRGtYdWl0N3NqanBvT0lMQlRScFZBR1lweXhWcDJuNUQ1b084VmdrOE1ZcDh3dnVHRTBVV0FLc2dCWVpUdGV2QTdnVlh4a1RuY3BycDFhNUs5WDZCNHZ5VFV4R1NiNFVoN3hnajdYcXpRMmdmeGkzNUktSk5qeTREQktMYnNLZ2N3TllaNk1ZcTVrRU9KZ1pwaEZLR0VfRGJtTS0?oc=5",
       "title": "Boulder Police Department is using AI to write its crime reports, while some urge caution",
@@ -18365,6 +18707,23 @@
       "tags": [
         "AI",
         "body camera"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "6d2961e18cb0a73b1426d0222b0b78c2",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQR1BaSlFQM3VObkYtcDNlcTNfTlEtZW5JdmI3Qm5SMDJkak9USUJ6MWNnX21LTmtWbzdRY0pCNFBDMUpmbU41TWNYUmVuVWd4d0hNSElYYWFTRklEeU5hbFloWU9BbzktRXFaTzhpaF9IakZSZm9xeG5iYUhPT1JJNmE5LVktaDlSX3JPdDhleW9QeTRPVEpuRFJOR0pVaWpJQmVHcVhuQUxVZDVfcHpielFxdmVlakFMeGhSbUhtcnZYTlI2NFlBeWp3Z19NaEtSaFpQZkdFRmQ?oc=5",
+      "title": "Police use of AI more responsible with an independent data ethics advisory committee",
+      "source": "Northumbria University",
+      "date": "2024-09-23",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2AFBVV95cUxQR1BaSlFQM3VObkYtcDNlcTNfTlEtZW5JdmI3Qm5SMDJkak9USUJ6MWNnX21LTmtWbzdRY0pCNFBDMUpmbU41TWNYUmVuVWd4d0hNSElYYWFTRklEeU5hbFloWU9BbzktRXFaTzhpaF9IakZSZm9xeG5iYUhPT1JJNmE5LVktaDlSX3JPdDhleW9QeTRPVEpuRFJOR0pVaWpJQmVHcVhuQUxVZDVfcHpielFxdmVlakFMeGhSbUhtcnZYTlI2NFlBeWp3Z19NaEtSaFpQZkdFRmQ?oc=5\" target=\"_blank\">Police use of AI more responsible with an independent data ethics advisory committee</a> <font color=\"#6f6f6f\">Northumbria University</font>",
+      "story_type": "research",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
       ],
       "needs_review": 0
     },
@@ -19333,6 +19692,23 @@
       "needs_review": 0
     },
     {
+      "id": "328cc700e62cec853ddea21b468c14d4",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRG9XUV9GbnVELXdDTDRoYy1FcDZ0MEUtbjdVLXpmSnNBN1JjbGxYcGxFNUwzdkZzT24wX2FESlE2WkxXZVphcmZ4WGh6eEdLV1BKZnYxajRQWkZvU0ExX1RLU2dIZmE0c09YdmZxZzV3NEFGY1A1TlFmY3NkY2Y3YnhlUzI3RTA1bFVmaHl1R3hFRkpWSEE?oc=5",
+      "title": "Do Public Safety Benefits Outweigh Risks of Police AI?",
+      "source": "GovTech",
+      "date": "2024-05-21",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxPRG9XUV9GbnVELXdDTDRoYy1FcDZ0MEUtbjdVLXpmSnNBN1JjbGxYcGxFNUwzdkZzT24wX2FESlE2WkxXZVphcmZ4WGh6eEdLV1BKZnYxajRQWkZvU0ExX1RLU2dIZmE0c09YdmZxZzV3NEFGY1A1TlFmY3NkY2Y3YnhlUzI3RTA1bFVmaHl1R3hFRkpWSEE?oc=5\" target=\"_blank\">Do Public Safety Benefits Outweigh Risks of Police AI?</a> <font color=\"#6f6f6f\">GovTech</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "3a061905f8d74e608e8e8cf4a601fdd4",
       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOdVZ2Q3A0N2NRSE9OTVNaWi04MXhPSm96QUphNm1rZk55Sk4zTTFkWXc2SFVKM0RuQWJ2SThLbU1pQ1JLczFhcktoMkN5UzkzVXQ4Z0lLcXNBYnVOeEtVb0Q5N3ozWkhuSjktTXk0NWJJa3NpY0tlWU5JUldqdGRMcU8tWlVJWVJlZmhhcmRPdFBObWZORlE3WTA5Sml5TzNGUE9tLU1YU0ZwajVibS13Z0llQVEtMm5RTDUzWkg1THBZX3NXd3BZZElPU2lmOWt1VlVfWTRlUDVTNWJkeG04ZjVNSDQwUHNaT1BHX3lBQmtndEU1SUJuMA?oc=5",
       "title": "Do potential public safety benefits of police using AI outweigh possible risks?",
@@ -19842,6 +20218,23 @@
       "needs_review": 0
     },
     {
+      "id": "fd8e5436bf5b2cd20b6170706ff5aa6c",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5UU295d1dhck1RaTBBSUkyTnl2bC0yUXZuUF81OG5uaFJTckxNVnh6MVpuRXdTOExZZ0RWM21JX3V4QXJJbkVva0ZUQ3Vhd0ZTcmtfTWE4eWktdmxTYjlkZExQUnNaQ2ZpNS1pREN3?oc=5",
+      "title": "NYPD to test AI-powered gun-detection scanners in subway system",
+      "source": "StateScoop",
+      "date": "2024-03-28",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE5UU295d1dhck1RaTBBSUkyTnl2bC0yUXZuUF81OG5uaFJTckxNVnh6MVpuRXdTOExZZ0RWM21JX3V4QXJJbkVva0ZUQ3Vhd0ZTcmtfTWE4eWktdmxTYjlkZExQUnNaQ2ZpNS1pREN3?oc=5\" target=\"_blank\">NYPD to test AI-powered gun-detection scanners in subway system</a> <font color=\"#6f6f6f\">StateScoop</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, NYPD",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "278628c386854ad65e4bb09433d62637",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNLURrbndac1ZDZEUxRUJXOUtCX3JLU1VlRUFOdlVBbDFVNllCYl9tX3FDZGNFb2ExYTJpU0ZPa2dxa0VDT3Z0M21xN25rSXk2MnFyUjh2a0JZWXR1TV9JX3Zqb0RjcHlyd3pNUnhncFd0MmhrbmU5Q01NWWtGUmtFbEpoLU9uZkxCb29Nck1lcS1DY2pDZXlfdENQSDlQUQ?oc=5",
       "title": "NPCC welcomes first ever lead for Artificial Intelligence (AI)",
@@ -20228,6 +20621,23 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "3fda1759533f13d3cceb5a25167e6d56",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNM01oekc2ZTI1VTVwT0F3a1dvNGZnU3RLVG1FVTlGZmk0QmdkU0pkaFRIeFRNVzBrOHdEcUJnNWczMkNFQzNlaFdnTzJCcHUydS1XNGFoYnV0QVZ6WGt3NVFuTDUtd3B2RUNmcnZsSWRSTnVlN0pHRVBubjNOS0doX3BReERKVnZyRGpVbi11T1phenVWdnhEQU5kUDVXSmxaMHZ3bHA4Z1dDZXdKT1BlSDJUVjA?oc=5",
+      "title": "CPD Reported Hundreds of Missed Shootings to ShotSpotter",
+      "source": "South Side Weekly",
+      "date": "2024-01-29",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNM01oekc2ZTI1VTVwT0F3a1dvNGZnU3RLVG1FVTlGZmk0QmdkU0pkaFRIeFRNVzBrOHdEcUJnNWczMkNFQzNlaFdnTzJCcHUydS1XNGFoYnV0QVZ6WGt3NVFuTDUtd3B2RUNmcnZsSWRSTnVlN0pHRVBubjNOS0doX3BReERKVnZyRGpVbi11T1phenVWdnhEQU5kUDVXSmxaMHZ3bHA4Z1dDZXdKT1BlSDJUVjA?oc=5\" target=\"_blank\">CPD Reported Hundreds of Missed Shootings to ShotSpotter</a> <font color=\"#6f6f6f\">South Side Weekly</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "ShotSpotter, Google",
+      "location": null,
+      "tags": [
+        "gunshot detection"
       ],
       "needs_review": 0
     },
@@ -20945,6 +21355,24 @@
       "tags": [
         "AI",
         "body camera"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "28908a46393f80c14b8d569a37bebf5c",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBLYk1oMUVrb1V3VUIyLXFNbUFoTExGSGNHVnN5eWp1aWc1TWlNdkdkZlo2LTF2T3pORy1rOXBoRU9EWDV4d1NoaUpDY3M2WjRXUXc?oc=5",
+      "title": "Why Dayton Quit ShotSpotter, a Surveillance Tool Many Cities Still Embrace",
+      "source": "boltsmag.org",
+      "date": "2023-07-13",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFBLYk1oMUVrb1V3VUIyLXFNbUFoTExGSGNHVnN5eWp1aWc1TWlNdkdkZlo2LTF2T3pORy1rOXBoRU9EWDV4d1NoaUpDY3M2WjRXUXc?oc=5\" target=\"_blank\">Why Dayton Quit ShotSpotter, a Surveillance Tool Many Cities Still Embrace</a> <font color=\"#6f6f6f\">boltsmag.org</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "ShotSpotter, Google",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "gunshot detection"
       ],
       "needs_review": 0
     },
@@ -23230,6 +23658,40 @@
       "needs_review": 0
     },
     {
+      "id": "a6b3185d22056b36f9f9d42569e375ba",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWWFfT05pMDR2bkxGWVV3TzdocGhWY3pSXzc1N0RJbkExNm4yaURZY0t1Sl9pbkJlVkNBNUVLYTlyVl9RMWRIcE5PUHczRkYtRmQyX0ViX3ZkZU5CZ1ZjQmsxcTB5X19lX0l3b1FrWnNhZTVFOFJIXzF0aW1USnhZWQ?oc=5",
+      "title": "Police are using artificial intelligence to spot written lies",
+      "source": "qz.com",
+      "date": "2018-10-28",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxNWWFfT05pMDR2bkxGWVV3TzdocGhWY3pSXzc1N0RJbkExNm4yaURZY0t1Sl9pbkJlVkNBNUVLYTlyVl9RMWRIcE5PUHczRkYtRmQyX0ViX3ZkZU5CZ1ZjQmsxcTB5X19lX0l3b1FrWnNhZTVFOFJIXzF0aW1USnhZWQ?oc=5\" target=\"_blank\">Police are using artificial intelligence to spot written lies</a> <font color=\"#6f6f6f\">qz.com</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "19980ff92e93f2548229700fbec23148",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPRG9zaFV1LTBiY3d5SVRyalZreFRpWWowcFJNTjhqbGkwYnBhX1ZoTk1hR21xcDQzRjExSUNUdjZBR2NLTG9MWkJCM3hTX3UxTkhTdE8xUzU3TW9uOGR0dm1Memp2Tnk4NHJZeXlERjVvUlA5U3dTM1VSQjc0cFpDcllCYU1Jdi1BR3EtQkJUYmczWjdEX29PeVVWV3RnMVVnM19ZMGprU3ZGQQ?oc=5",
+      "title": "AI in policing is controversial but delivers results",
+      "source": "TechTarget",
+      "date": "2018-10-01",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPRG9zaFV1LTBiY3d5SVRyalZreFRpWWowcFJNTjhqbGkwYnBhX1ZoTk1hR21xcDQzRjExSUNUdjZBR2NLTG9MWkJCM3hTX3UxTkhTdE8xUzU3TW9uOGR0dm1Memp2Tnk4NHJZeXlERjVvUlA5U3dTM1VSQjc0cFpDcllCYU1Jdi1BR3EtQkJUYmczWjdEX29PeVVWV3RnMVVnM19ZMGprU3ZGQQ?oc=5\" target=\"_blank\">AI in policing is controversial but delivers results</a> <font color=\"#6f6f6f\">TechTarget</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "a445c084b5c775f5587101d126cd48fb",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcURQSThGVW52bWhfcVVvOGpTMEgzSmZZSnNRVG5iOXU4MFJJbEU4czFGZVZYWnJmOWNtZFZsb0lrVDJQNmNldUdkcFBJUS1sQ3hZMTlXN2tjWEE4clhKcmt1OHlaMi1YcWFSX1I1UVRkN2ZFYUtyeklsdlRUVmc4NmR5RmZab01YSXFXcFRsMDNPZUs0VW9uRXhKeFM5Y09ZNUNxWHZPTUNmT3FVN1lrNGlNSXU?oc=5",
       "title": "Police departments sued over predictive policing programs",
@@ -23642,6 +24104,23 @@
       "needs_review": 0
     },
     {
+      "id": "d9e94cbb9ddb3b483fe010f37c37e73b",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPNXpnQ1dBVGxtZlRRbXIxTnJLWDhfcDJKbWFnVEYxWHZZcmExNmpuRVBDb1pKTlJza3ZUZnh0NFdYc3hzSXJjdTFVb1MtcHpoekFsMFVLLVA1TUM1bm5JWnZvSlpXTk1DX0dsTDZ2anVDaGx6V0x6UWl2XzhPdUtCTzJhVFVnQkd0Tk1IcmoyaEo3aEtEMzFfcVZYM21MUm5sek1sTkVFbWF6ZEdJWk53Y1NLVGJIdzJoR0JySzYzMlJxQQ?oc=5",
+      "title": "Cops using artificial intelligence to stop crimes BEFORE they happen, researchers warn",
+      "source": "The Sun",
+      "date": "2016-09-12",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPNXpnQ1dBVGxtZlRRbXIxTnJLWDhfcDJKbWFnVEYxWHZZcmExNmpuRVBDb1pKTlJza3ZUZnh0NFdYc3hzSXJjdTFVb1MtcHpoekFsMFVLLVA1TUM1bm5JWnZvSlpXTk1DX0dsTDZ2anVDaGx6V0x6UWl2XzhPdUtCTzJhVFVnQkd0Tk1IcmoyaEo3aEtEMzFfcVZYM21MUm5sek1sTkVFbWF6ZEdJWk53Y1NLVGJIdzJoR0JySzYzMlJxQQ?oc=5\" target=\"_blank\">Cops using artificial intelligence to stop crimes BEFORE they happen, researchers warn</a> <font color=\"#6f6f6f\">The Sun</font>",
+      "story_type": "research",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "49940c5309913ee6226229c7ed34f256",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNT1FRdnh3R2RHNmJhTkw5QVVKUXUzWHJLX05SMk5qZjRhSUxJRXo4YWdSNERBZ0Y1dWM4VEVuY0N2SnRqSlRrSldCaFIzZEtVcHh4MmpkTjZXZEZfYWItTHdINkJIcXcyM3p4cmtaVW0xU3NENmIwdDVsWTBJTUpzRjVFekpoUS16ZVJxY0xkZktXclFNWUhrZmtwSEFkWUhlMjdTWTNB?oc=5",
       "title": "US police use machine learning to curb their own violence",
@@ -23669,6 +24148,23 @@
       "story_type": "vendor",
       "relevance_score": 0.85,
       "key_entities": "Google, EFF, ICE",
+      "location": null,
+      "tags": [
+        "predictive policing"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "aae0cfec7988ac90e5fc943b8476852d",
+      "url": "https://news.google.com/rss/articles/CBMiqwNBVV95cUxOVmZnaGNibnlNUUNBSGdBTm43R0hXNWRDOEMwOXdia1cxV1dxZ0ZxM1J0YkduMDRzanlHZDZlTVYyekdZVkhldG9DS1pnWk50cmE1aUhJbGFXdXlsV29tOVNzWXgzdjdYa0JBZXpDTlR1RkFKTUpXQ1RGdmlxV3dvbkRWRzZLbHdoZklTbTQtazI5SjVKMmZaa095ekI4VnVWMWhpMFJhVllneXRuOXVETElMaUxLRkNKLUMwV0ZFWDVNOUZXb0NpSkJNaDFRTmVqM0w3eU80NVhsQlBydk9KLUJoMXZYVFdRTkc2SUVKY0lxUldoNkpYdkRGTHNMQlZJS3BSblZZYm52aEwxb0xEVXBYSENxQ3lyZVdHUWUwR21Hc2s1TFBZYUhleER0MXF6TVVBTFEwVWJKWk9YaGdxb1pZcEx5UkdOYUlDZm9XQ2tRejZ2Y0hlVGFRcy1HLTNpdUVoRnRzdjhqdzhzeFRwZ2NJTXdFMktvZWdnVTRGMDZqRmREZzZmY0txZC1CLWQ0N0dtYWRJNmN3dVFfY05QV09hVVZBeGkxNEVB?oc=5",
+      "title": "Is Predictive Policing the Law-Enforcement Tactic of the Future?",
+      "source": "The Wall Street Journal",
+      "date": "2016-04-24",
+      "date_discovered": "2026-01-16",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqwNBVV95cUxOVmZnaGNibnlNUUNBSGdBTm43R0hXNWRDOEMwOXdia1cxV1dxZ0ZxM1J0YkduMDRzanlHZDZlTVYyekdZVkhldG9DS1pnWk50cmE1aUhJbGFXdXlsV29tOVNzWXgzdjdYa0JBZXpDTlR1RkFKTUpXQ1RGdmlxV3dvbkRWRzZLbHdoZklTbTQtazI5SjVKMmZaa095ekI4VnVWMWhpMFJhVllneXRuOXVETElMaUxLRkNKLUMwV0ZFWDVNOUZXb0NpSkJNaDFRTmVqM0w3eU80NVhsQlBydk9KLUJoMXZYVFdRTkc2SUVKY0lxUldoNkpYdkRGTHNMQlZJS3BSblZZYm52aEwxb0xEVXBYSENxQ3lyZVdHUWUwR21Hc2s1TFBZYUhleER0MXF6TVVBTFEwVWJKWk9YaGdxb1pZcEx5UkdOYUlDZm9XQ2tRejZ2Y0hlVGFRcy1HLTNpdUVoRnRzdjhqdzhzeFRwZ2NJTXdFMktvZWdnVTRGMDZqRmREZzZmY0txZC1CLWQ0N0dtYWRJNmN3dVFfY05QV09hVVZBeGkxNEVB?oc=5\" target=\"_blank\">Is Predictive Policing the Law-Enforcement Tactic of the Future?</a> <font color=\"#6f6f6f\">The Wall Street Journal</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
       "location": null,
       "tags": [
         "predictive policing"
