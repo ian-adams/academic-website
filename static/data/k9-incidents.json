@@ -1,6 +1,6 @@
 {
-  "updated": "2026-01-16T10:34:19Z",
-  "count": 476,
+  "updated": "2026-01-17T10:29:14Z",
+  "count": 489,
   "stories": [
     {
       "id": "cceee37af7c2404c5bfd1e4c4902d8cc",
@@ -880,6 +880,21 @@
       "needs_review": 0
     },
     {
+      "id": "5e9a8482711f2fcc158668dc89d99771",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNcGxpMldtSzlDdkFlZWxORUVTektfSGoxR2pqNEtWQ0RuOW9OMktMOE53UGRUcFpva0dENkxldnJpM1hlSW0tdlhJNmdwZVJEMWdWdU1mZ0xLOUtqaGZVaElKM1hLN1VFQWxHajBvT3dGQUZBSU03cDVZNlB4ME9mYlVTc252LUNmMUEtRnJLZjY1bVpoZHpMVmZGdEJtMUZKMDk4dXljX1FaVndpRm9Kag?oc=5",
+      "title": "NY State Police Dog Accidentally Killed by Trooper Shooting at Attacking \"Pitbull\"",
+      "source": "Police Magazine",
+      "date": "2025-10-16",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNcGxpMldtSzlDdkFlZWxORUVTektfSGoxR2pqNEtWQ0RuOW9OMktMOE53UGRUcFpva0dENkxldnJpM1hlSW0tdlhJNmdwZVJEMWdWdU1mZ0xLOUtqaGZVaElKM1hLN1VFQWxHajBvT3dGQUZBSU03cDVZNlB4ME9mYlVTc252LUNmMUEtRnJLZjY1bVpoZHpMVmZGdEJtMUZKMDk4dXljX1FaVndpRm9Kag?oc=5\" target=\"_blank\">NY State Police Dog Accidentally Killed by Trooper Shooting at Attacking \"Pitbull\"</a> <font color=\"#6f6f6f\">Police Magazine</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "847a70f2f034f9a9f48d4a33cd6fb6a3",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdjVqZmhvbkpTYXB0QUJ6ZDRFdVdwN2xwMmpZUFlOSWdnSGVoTEJUazI4ZjQ1REdFTG4wOWwzMTZoT1dYbVJDV0k0amNJaVRGQW8tbEZUQU4zVGN1d2RyWVY3SWEwT1ZZUEFIckRpMWlrRGYwNXBaa25aRHUxYWFUSFAzaDF2UFdDLXU0LQ?oc=5",
       "title": "Long Beach, CA, K-9 Killed in Officer-Involved Shooting",
@@ -1224,6 +1239,23 @@
       "key_entities": "Google",
       "location": null,
       "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "a61d158d9f467ed711d00580a64bb6c8",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNMVhHQ3BuTjNzWnRGWWRpN2x1RmpTOWVMN2JtYXJ6bWlfUEtfY0xpOTNucGw3SmhmTDU3X0g3aFBmaThTXzdnTjNxU1FpRzA5aGFBaHdva0VMT19VWThweTYzdW5KdGJHUmYyQmJ1STZzOHE2aUNfelhmdE5SQ25mOWVrb0xDbXJNc3FTNVc5dEZ0T29JZzFUb25lZDVmX0Q5aEVlMVYzT2JTbE9CUnlnYzlxNV9nVmI4VGk5Uk5zSTFvTjBXaGRjbVhHY0JoeWkxQkFlVTVnMm16cW9lcTJrTjBR?oc=5",
+      "title": "Hawaii Island police investigating death of narcotics K9 left in vehicle",
+      "source": "KITV",
+      "date": "2025-09-10",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi4gFBVV95cUxNMVhHQ3BuTjNzWnRGWWRpN2x1RmpTOWVMN2JtYXJ6bWlfUEtfY0xpOTNucGw3SmhmTDU3X0g3aFBmaThTXzdnTjNxU1FpRzA5aGFBaHdva0VMT19VWThweTYzdW5KdGJHUmYyQmJ1STZzOHE2aUNfelhmdE5SQ25mOWVrb0xDbXJNc3FTNVc5dEZ0T29JZzFUb25lZDVmX0Q5aEVlMVYzT2JTbE9CUnlnYzlxNV9nVmI4VGk5Uk5zSTFvTjBXaGRjbVhHY0JoeWkxQkFlVTVnMm16cW9lcTJrTjBR?oc=5\" target=\"_blank\">Hawaii Island police investigating death of narcotics K9 left in vehicle</a> <font color=\"#6f6f6f\">KITV</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
       "needs_review": 0
     },
     {
@@ -1645,6 +1677,21 @@
       "tags": [
         "AI"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "873fb94492241f87cbfa516a8a57c8ea",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQ1NTR2h2V29mZDRCOWtNNDNaRVhmaGh1eTM0Ul9pNTlxOU5SOFFvTzh6RllOakpmZ3FWTG5JMzZKVGZ6V0Zhbk4xVlNoTDZFTFZ3NDV2b2Z6ZnZibUpVdGdfQTF0M05FWXcwbE1fZWViX29VazF0QjI1TnFPbFJiRXVkZ0JyZXFoV1lITDRwRWhNdUNQY216LWljd1c2VUZ2X2huUC0xb0thSWNtWUpyU0JWd3FPekpDZjBZ?oc=5",
+      "title": "Colorado police chief’s 3-year-old daughter killed in dog attack involving former K9",
+      "source": "WTVM.com",
+      "date": "2025-08-11",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQ1NTR2h2V29mZDRCOWtNNDNaRVhmaGh1eTM0Ul9pNTlxOU5SOFFvTzh6RllOakpmZ3FWTG5JMzZKVGZ6V0Zhbk4xVlNoTDZFTFZ3NDV2b2Z6ZnZibUpVdGdfQTF0M05FWXcwbE1fZWViX29VazF0QjI1TnFPbFJiRXVkZ0JyZXFoV1lITDRwRWhNdUNQY216LWljd1c2VUZ2X2huUC0xb0thSWNtWUpyU0JWd3FPekpDZjBZ?oc=5\" target=\"_blank\">Colorado police chief’s 3-year-old daughter killed in dog attack involving former K9</a> <font color=\"#6f6f6f\">WTVM.com</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
@@ -3416,6 +3463,21 @@
       "needs_review": 0
     },
     {
+      "id": "c51724e8c4fca9227e7aca0abf891cc7",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNckhzNGlyN0FlNWxWbVdZR1NvSGx4ekVQeTY3T2gzQk1vcDJJM3JKc1VQNVdPOGVTQXh5VkdzR3pvWVBQLUNVUDQ1cXBJemNBU3hKVUpWNFZ2bUs4YXBka0tBa2FsUXA2MEVJVThVbl9kUVhRRk9lQllxSTVKX0JiemdTYU9GM25MQzFjdFVGa0lHYk5QVm5ObG1iaFBqX203ZTFwa01sdFdMbHBlOTFvbDRxTjNoelI0OUFXZWxTWk5PZFJScm1FUHdwZXRhLTVOcnBBdkVxOThZV3ZPa0ZpWNIB9AFBVV95cUxNNnpFVDVfd2pJUS1lc19pMGJkbVp1Wm44UURTNTdCTEJldjlnSHFhYWE0eDhwdjVNRm9FZHNJVjVxNjB2UklmQ3E0ck81YkJLTGt0bEp2WXR1TXh4SzBCaEx3Rk1KZU5tZWVrOG5NbHZ1TU9vdVRnalZqTFY4Z2xnTXE1WkhVX0t2dVA2OHNidS1vUldDWGNhXzhPNFYyNmx3U2tjSXRUUF9ET1BLaEJpVm12VWR4SEY5dG9oclZUSlRhb2ZFR3FVMy1nLWdEbWZ3VEtDUFZlbm16NWFoaTBWWlJZSWtpV1NQZk5TQUthV2t1eUkt?oc=5",
+      "title": "Man suing Jacksonville sheriff, three officers for alleged 2023 police dog attack",
+      "source": "Action News Jax",
+      "date": "2025-02-03",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxNckhzNGlyN0FlNWxWbVdZR1NvSGx4ekVQeTY3T2gzQk1vcDJJM3JKc1VQNVdPOGVTQXh5VkdzR3pvWVBQLUNVUDQ1cXBJemNBU3hKVUpWNFZ2bUs4YXBka0tBa2FsUXA2MEVJVThVbl9kUVhRRk9lQllxSTVKX0JiemdTYU9GM25MQzFjdFVGa0lHYk5QVm5ObG1iaFBqX203ZTFwa01sdFdMbHBlOTFvbDRxTjNoelI0OUFXZWxTWk5PZFJScm1FUHdwZXRhLTVOcnBBdkVxOThZV3ZPa0ZpWNIB9AFBVV95cUxNNnpFVDVfd2pJUS1lc19pMGJkbVp1Wm44UURTNTdCTEJldjlnSHFhYWE0eDhwdjVNRm9FZHNJVjVxNjB2UklmQ3E0ck81YkJLTGt0bEp2WXR1TXh4SzBCaEx3Rk1KZU5tZWVrOG5NbHZ1TU9vdVRnalZqTFY4Z2xnTXE1WkhVX0t2dVA2OHNidS1vUldDWGNhXzhPNFYyNmx3U2tjSXRUUF9ET1BLaEJpVm12VWR4SEY5dG9oclZUSlRhb2ZFR3FVMy1nLWdEbWZ3VEtDUFZlbm16NWFoaTBWWlJZSWtpV1NQZk5TQUthV2t1eUkt?oc=5\" target=\"_blank\">Man suing Jacksonville sheriff, three officers for alleged 2023 police dog attack</a> <font color=\"#6f6f6f\">Action News Jax</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "ab98ca84340a7a299ee8f39d7d009f7b",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQUHRxRHlPN1VmdGZIX0xJV0Q5bDJTU2R5OWttd29jSnFkSDNJT05pclJkbGxsVWlMVnByYXlPRDcxRmVvZ2dvSzkxQ0owdl9udktWODYza3BXeWdfUjdPcC1YQ2o5Qk9DZnBCQ1dlNWtmUFlkR2FkRzJQaDNsaWVzRE02MzhGbzJaZFBFaVpkUUVxUFlLMHpr?oc=5",
       "title": "JSO officers sic K9 on unarmed man, prompting federal lawsuit",
@@ -4207,6 +4269,23 @@
       "needs_review": 0
     },
     {
+      "id": "3fed76638f0cb83a9074f95a8f4038f5",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxONXlQc2VIN1JHWTAxeE4yWGV4cFFCR0JtY0F4V1c1OC1TaTRBZlRkZ0xNNFJfVllhQnduRDh6cVVrejVuOE5BMEFtalhQeHFqY0J1cnh3SzR1TUYyU1JjekIydmFVNVVwaFlwdi1KNkZFMzlZeU5fdW1oR29pWFlfTjBodGh1bHVWa2JoYm1FNzI1emlEV1U3V3dpUlUxN3BtMmpuMGVMbi1zRmhTTTRJbWVJeEdtUnhiOGZUekpFX0x4bWc?oc=5",
+      "title": "Siccing K-9 for long duration constitutes excessive force, judge rules in Brentwood police bite case",
+      "source": "KTVU",
+      "date": "2024-05-01",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxONXlQc2VIN1JHWTAxeE4yWGV4cFFCR0JtY0F4V1c1OC1TaTRBZlRkZ0xNNFJfVllhQnduRDh6cVVrejVuOE5BMEFtalhQeHFqY0J1cnh3SzR1TUYyU1JjekIydmFVNVVwaFlwdi1KNkZFMzlZeU5fdW1oR29pWFlfTjBodGh1bHVWa2JoYm1FNzI1emlEV1U3V3dpUlUxN3BtMmpuMGVMbi1zRmhTTTRJbWVJeEdtUnhiOGZUekpFX0x4bWc?oc=5\" target=\"_blank\">Siccing K-9 for long duration constitutes excessive force, judge rules in Brentwood police bite case</a> <font color=\"#6f6f6f\">KTVU</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "body camera"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "6c17c0d90187c6f92009c9487c5a286f",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxONXlQc2VIN1JHWTAxeE4yWGV4cFFCR0JtY0F4V1c1OC1TaTRBZlRkZ0xNNFJfVllhQnduRDh6cVVrejVuOE5BMEFtalhQeHFqY0J1cnh3SzR1TUYyU1JjekIydmFVNVVwaFlwdi1KNkZFMzlZeU5fdW1oR29pWFlfTjBodGh1bHVWa2JoYm1FNzI1emlEV1U3V3dpUlUxN3BtMmpuMGVMbi1zRmhTTTRJbWVJeEdtUnhiOGZUekpFX0x4bWfSAcgBQVVfeXFMTWRhSGtCVXNBOGZYdW55WDdwajVIaWZqbWlwcUsxSXEzQ2lyUkcycmliRk03Ykp2SzNycDVwbzhVT0dBYmxRdG5CSGxpRGxjRFdEUkVGQ2tYOXk0Ymh2Q3hZekZGcVNtelFBVFJubTg4cUJrM0EtcDFETmRfdTFVbTFUV0w4U1J4czNhVWRXSEZ5bGY0WU5rcnNJa19TVDJiOFBMSG9xT3dBV3JVQXlFZWwySFo4YjhHQUxIMWdONUhvX1dENmhXQUQ?oc=5",
       "title": "Siccing K-9 for long duration constitutes excessive force, judge rules in Brentwood police bite case",
@@ -4728,6 +4807,21 @@
       "needs_review": 0
     },
     {
+      "id": "9f40761de0e2b46521cb43a0f4331352",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQTFV1V0Z1Z0EzbU1idnZlSWZZMTllZlBOa0YtWS1UMVFzelpKUUtsUUstNmlaN0YxTkhkQlJwWUJ4LTFWSmVuMUk3eVhBUmRxOGtrYUdXZGZ1dm9SWS1YaWVEWF9OY25adzdzMnhfZTRIWHB0VFVfbUFHdEdXQktraWxFUDMyOHp5SEhrQ2Y5LUFHajBVZGRoeHhFY3Q0bnJEWG000gGoAUFVX3lxTE9oWjRVRGoxenBsdG1lZzFWVkE3bWVIR0ZJdFh6cUwyZG1TQ2Q5Q0VvajBqZ3RRUnJWd1BoSGVzSm9HQjhmOVZaY3dkbGg0TVRtcDNreXdwUHJ5TERhUjNyME90ZUNOaEEwLVJhSFU3bDUzNTU4Ym02ZGJoakp5QzJIbk10cmhqWmZRMUNBNlVDa3ppU0l4WnB4dG1TY2c1bTV1b05ZQkp5Tw?oc=5",
+      "title": "Investigation launched after video shows Ohio police dog attacking suspect with his hands up",
+      "source": "ABC News",
+      "date": "2023-07-23",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQTFV1V0Z1Z0EzbU1idnZlSWZZMTllZlBOa0YtWS1UMVFzelpKUUtsUUstNmlaN0YxTkhkQlJwWUJ4LTFWSmVuMUk3eVhBUmRxOGtrYUdXZGZ1dm9SWS1YaWVEWF9OY25adzdzMnhfZTRIWHB0VFVfbUFHdEdXQktraWxFUDMyOHp5SEhrQ2Y5LUFHajBVZGRoeHhFY3Q0bnJEWG000gGoAUFVX3lxTE9oWjRVRGoxenBsdG1lZzFWVkE3bWVIR0ZJdFh6cUwyZG1TQ2Q5Q0VvajBqZ3RRUnJWd1BoSGVzSm9HQjhmOVZaY3dkbGg0TVRtcDNreXdwUHJ5TERhUjNyME90ZUNOaEEwLVJhSFU3bDUzNTU4Ym02ZGJoakp5QzJIbk10cmhqWmZRMUNBNlVDa3ppU0l4WnB4dG1TY2c1bTV1b05ZQkp5Tw?oc=5\" target=\"_blank\">Investigation launched after video shows Ohio police dog attacking suspect with his hands up</a> <font color=\"#6f6f6f\">ABC News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "c4f71f0e22f77a144ffc6c5f1db1f68d",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNM0JITGJHMlNRU1BWWUlpSlVKUHVFVUN3bTJjQnJqVnBRTmpVbGZsblVCWnJWZTY0UGN6XzlZYXRQZ05DbGplVW91a2VJUVBzMEdsV0c2Z21vTWZpaTRMMmVqNnZ1LTh3YkJUdU5vcUFGUGxSWnlDTTQ3OXA3ai1Jem1pWXBrRHRLMG14Vnlzal85TE5wWUxxdEM5S1dsRnJD0gFmQVVfeXFMTmhiUUFjWUZNRXhRdGZRYnhBOTNsN1V1bWI4a2RQZEc5eVZmRVZLbWdXdUZfbnNJSHY4QU90UG9Gd0hSNmNtdkEzUHYwNTlvOFc1bzFWQW5xTENWbzktLURqUklQYW13?oc=5",
       "title": "Bodycam captures police dog attacking Black truck driver",
@@ -4773,6 +4867,23 @@
       "key_entities": "Google, ICE",
       "location": null,
       "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "8b5618b73d5465e02a2d3db722de1a9e",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSUg5RnhoNE02OWVSWG85ZEIzUUJ3V1dDY2dBb21nU3lpalJYa1pqTHJpVVVUNjlHbHdQX0h3TUgtWEVvWVZXWmowZHBibHFTV0RZRTBGX0JfUld2YUQzRkFMeEtOWG85VDRGWEIxZjlFS3V6NjU5clB3emZHMDFQR04tM3BBMGl6TFU3SVRUMDNhTEJnNjlFZDNfcGVmZlIydmJJZjVwVnJhODhEM1NNbQ?oc=5",
+      "title": "Lawsuit: Sheffield man sues officers who he claims attacked him with police dog",
+      "source": "WAFF",
+      "date": "2023-06-27",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOSUg5RnhoNE02OWVSWG85ZEIzUUJ3V1dDY2dBb21nU3lpalJYa1pqTHJpVVVUNjlHbHdQX0h3TUgtWEVvWVZXWmowZHBibHFTV0RZRTBGX0JfUld2YUQzRkFMeEtOWG85VDRGWEIxZjlFS3V6NjU5clB3emZHMDFQR04tM3BBMGl6TFU3SVRUMDNhTEJnNjlFZDNfcGVmZlIydmJJZjVwVnJhODhEM1NNbQ?oc=5\" target=\"_blank\">Lawsuit: Sheffield man sues officers who he claims attacked him with police dog</a> <font color=\"#6f6f6f\">WAFF</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, EFF, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
       "needs_review": 0
     },
     {
@@ -5789,6 +5900,21 @@
       "needs_review": 0
     },
     {
+      "id": "b4f912ffaa69b6766002e8bfaf7a1835",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPZlR4d3dVWk9QNWw2MU5kZVF2TkV1NzRFNzZZeW1PdlZEN0pkeXlzQnZabnJpV1ZSdFYyRVJadFNPSm9nNUxWNW5QMUxtNzVaa0ZVV1lDUFVTTjExa21wRi0wS25GWmhLRjlmeHVzUG11Zll4bEFOeGhleHdFRjZscERJeU82TmFDdlFCUnYwZGIxTU1xS1EzRkZMclRHSC0wbUktcW1qd21xZzJteGJaUWRXa1pGLXVBWXFOT3Qtb2U1RXpLTVJCMk5sc3dVYzAxZFRudXRaVXNsNW5EWUxTTEtuTQ?oc=5",
+      "title": "FBI investigating Woodson Terrace cops who let dog bite Black man",
+      "source": "KSDK",
+      "date": "2021-09-26",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxPZlR4d3dVWk9QNWw2MU5kZVF2TkV1NzRFNzZZeW1PdlZEN0pkeXlzQnZabnJpV1ZSdFYyRVJadFNPSm9nNUxWNW5QMUxtNzVaa0ZVV1lDUFVTTjExa21wRi0wS25GWmhLRjlmeHVzUG11Zll4bEFOeGhleHdFRjZscERJeU82TmFDdlFCUnYwZGIxTU1xS1EzRkZMclRHSC0wbUktcW1qd21xZzJteGJaUWRXa1pGLXVBWXFOT3Qtb2U1RXpLTVJCMk5sc3dVYzAxZFRudXRaVXNsNW5EWUxTTEtuTQ?oc=5\" target=\"_blank\">FBI investigating Woodson Terrace cops who let dog bite Black man</a> <font color=\"#6f6f6f\">KSDK</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, FBI",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "9a0fc7f2409add0842dafc56b28b2b55",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbWJMaUdEbWtlOGlkRlR5dktETUNUX0FjWk9OZEZmbTZyOG9QLXRUS2ZfSEVWbFR2Y3ZRVFNSa1ZGbnN6bHJMR1djZWFRT213LTZhUGRLR2hxTmgtNlUxWkJodzN3S0pzSHlKX1FZN0dJblpPVVhxLVRzdG9IUDBldFdsSDlyZmJ3Q0J3eGhrcDhQYkJLX2VHcW1XMmFHSkVmd21SUTRCVUtCZm5hcFpMVmxDYTdyUQ?oc=5",
       "title": "Why one Riviera councilman doesn't like the $55,000 police dog biting case settlement",
@@ -5799,6 +5925,21 @@
       "story_type": "incident",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "c240bcfc26cc140292f3406712b70fe9",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNTlMxSmxKaUVDVjBhS19jOHppYjk2RWJHRWF6a3hTQjBXajlLc05aRVJ2YjNIanhPdnhhTWZWcmphMWcwYXNYYXRJc0wtclY3QmlrQVBRWUF0akM3dDJCREVSbVNkd3B3Rm9pSGNLYTB6YW5DcUtLVnA4VUlZbHdvejJsMl9lUjZuLU9faXF0NFVtTE9CMUg2TDZxU2J6SXZUbGhsWXJobG9KRVNvRHZOR2VZTndFSVUtV3REdU40emJ0OV9J?oc=5",
+      "title": "Global K9 Protection Group OT $425K Class Action Settlement",
+      "source": "Class Action Lawsuits",
+      "date": "2021-08-20",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxNTlMxSmxKaUVDVjBhS19jOHppYjk2RWJHRWF6a3hTQjBXajlLc05aRVJ2YjNIanhPdnhhTWZWcmphMWcwYXNYYXRJc0wtclY3QmlrQVBRWUF0akM3dDJCREVSbVNkd3B3Rm9pSGNLYTB6YW5DcUtLVnA4VUlZbHdvejJsMl9lUjZuLU9faXF0NFVtTE9CMUg2TDZxU2J6SXZUbGhsWXJobG9KRVNvRHZOR2VZTndFSVUtV3REdU40emJ0OV9J?oc=5\" target=\"_blank\">Global K9 Protection Group OT $425K Class Action Settlement</a> <font color=\"#6f6f6f\">Class Action Lawsuits</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
       "location": null,
       "tags": [],
       "needs_review": 0
@@ -6191,6 +6332,21 @@
       "tags": [
         "surveillance"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "5592b4279128417c72d7e1f29bd209a5",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSi1lU3VEaDVyYzRQaGNzbWxkMXEwbnZIc3FGRWJ6Sk1TS2R5Q1BlT2dfS0VVX085dnZXUUVzWG41WnJLa09vTXgtTFBaekIyeXUzUVJIREFKR0U0bGxqbzg2RUppNkQ1R2I0Zy1YVEF1cnFRdF9BQzM2TDE5X09oblJnZFZJTEs2d05BYXlwZExtYklFLXNibE1B?oc=5",
+      "title": "GOP Utah Senator Apologizes Over Controversial Police Dog Bite Comments",
+      "source": "Newsweek",
+      "date": "2020-10-21",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxOSi1lU3VEaDVyYzRQaGNzbWxkMXEwbnZIc3FGRWJ6Sk1TS2R5Q1BlT2dfS0VVX085dnZXUUVzWG41WnJLa09vTXgtTFBaekIyeXUzUVJIREFKR0U0bGxqbzg2RUppNkQ1R2I0Zy1YVEF1cnFRdF9BQzM2TDE5X09oblJnZFZJTEs2d05BYXlwZExtYklFLXNibE1B?oc=5\" target=\"_blank\">GOP Utah Senator Apologizes Over Controversial Police Dog Bite Comments</a> <font color=\"#6f6f6f\">Newsweek</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
@@ -6615,6 +6771,23 @@
       "needs_review": 0
     },
     {
+      "id": "3d932af96982d3007680e9bd3e9cb19f",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOSFZuai16TEhaeDB1cmlLekVmb1NReDJVQjdkUTRvVlA3ZUFFV0JWTE54ZkpkcnZlcE9jQ3Rhazg5MFp2UG5DcnRUNWVsM1htbVp5MmtxYXkzdFkyZm10N1BUZXJMUGJJdkZzZnlmX2JuY0NvcGdQNFZid1I3ZUxOTnkxOVZ3a1BUamsxYkt4X1NZTi1oUHhJcWRtU1FSWlE?oc=5",
+      "title": "Troy police dog bite case on trial in excessive force lawsuit",
+      "source": "Norwalk Hour",
+      "date": "2019-05-10",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxOSFZuai16TEhaeDB1cmlLekVmb1NReDJVQjdkUTRvVlA3ZUFFV0JWTE54ZkpkcnZlcE9jQ3Rhazg5MFp2UG5DcnRUNWVsM1htbVp5MmtxYXkzdFkyZm10N1BUZXJMUGJJdkZzZnlmX2JuY0NvcGdQNFZid1I3ZUxOTnkxOVZ3a1BUamsxYkt4X1NZTi1oUHhJcWRtU1FSWlE?oc=5\" target=\"_blank\">Troy police dog bite case on trial in excessive force lawsuit</a> <font color=\"#6f6f6f\">Norwalk Hour</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "d1414cb2d1aabacf7423513598c1ef70",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPams3clZfaVMzQTJ5R2tnSU1Jb0Qya3Z1ZDVKeUxFRXkyUHVtVDRoYng2aktVYzlmWTBDdkJvejluU0luUEllNWs1b2Z5RmRlbEtjdVdvRFdXU2pxNkZ2MHhYN0RzYU9lVHFPZE9VNDd6RVBhU2ZzY3VWRW9jeEhucmRHRkxwZVk2SllVWlh3a3JWSURPcGdKYkVyZUhLRG14QmFZ?oc=5",
       "title": "Troy police dog bite case on trial in excessive force lawsuit",
@@ -6758,6 +6931,21 @@
       "needs_review": 0
     },
     {
+      "id": "3209b9c48ef9b5e37f8142f2246f9345",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOaEJMcFIyalZnYzdXd1JyVXJncHV1QlV3dGQ4a2QxazdlU0ZMcnFrNGtTOUlPQVpVQnlNZ3lDYzF1azRvdjNTazQ5QTBpeGFqaUlETTg5VFQ2TzYyMlhBcmhoMUJib0tSeHduS0w3cklqdFFPc1QzZkI3TGlVRXR0T255VmZFQktZSXg5eTNzeVNQOGJaanAyNVdMVnI5TzF4TVI2dUtFWG02QmxjNW9UMVhid05rSjlPX2h6cGp4MHdob21Rc1JqS3hGbk5ERTlV?oc=5",
+      "title": "K9 who captured suspect in Central Texas trooper's death up for national hero award",
+      "source": "KWTX",
+      "date": "2018-03-09",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxOaEJMcFIyalZnYzdXd1JyVXJncHV1QlV3dGQ4a2QxazdlU0ZMcnFrNGtTOUlPQVpVQnlNZ3lDYzF1azRvdjNTazQ5QTBpeGFqaUlETTg5VFQ2TzYyMlhBcmhoMUJib0tSeHduS0w3cklqdFFPc1QzZkI3TGlVRXR0T255VmZFQktZSXg5eTNzeVNQOGJaanAyNVdMVnI5TzF4TVI2dUtFWG02QmxjNW9UMVhid05rSjlPX2h6cGp4MHdob21Rc1JqS3hGbk5ERTlV?oc=5\" target=\"_blank\">K9 who captured suspect in Central Texas trooper's death up for national hero award</a> <font color=\"#6f6f6f\">KWTX</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "7fb657098e1c5819661d7ee004690712",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxORzBfeV90RjdzQy1zTzV5c1ctWWhUS1FvYWx3TVNCaWJ2S2lHcWNQNC04RGI2Ukc5ZFJ0TlhoMzRoZ0ttVEE0bDJPWVhmRzV5NFpoYW8xT2o5MHhkUW4yYlVDR1llbF9hYUMxc3ZoZjVQT3oyU3hBb0NuSDdsQUg5ZjFUaUtXaUVjVVlCRVlnVzZSMXBjdXhBYk43dzNLckhpTHFObnVIaXh5UDZKd3NmMzVnVmVqa3Q2d1UySFlfektpWUNHTW9jSkM0T2NQSERhUXNZWmNR?oc=5",
       "title": "Body cam captures police dog attacking innocent woman taking out her garbage",
@@ -6880,6 +7068,21 @@
         "AI",
         "error"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "769925a10899e6ceabf0efc17d2975e6",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNZVpnZTZYUXhsYkpkdGdjZU9kVmpRV0pQbm8yQ01LSjM2bjJDQVNiVUtUR2lEZ2JzLTRsakV0eFZKaF92LTlyb3ZkcWdRSUhLeG8taUstQUlwaVJaaGxvMDZ1SlNyRERwVmM1Yl9jUWtwY1BzZVNWdENNSm1MdlNoYWI3Z0lmNzNBbENvdUQxMlNfZ9IBmgFBVV95cUxOcGotN3Exa3JQUFJ2OEVENnR0UkxZenVBVlBaODRlN21yLXgzc0lmdEZqeU9uUlVzWTQ5YlJvdVJXS0Q1OWxmd0dNd2dCa3VqNmdzelp6T1ZoRXF5cmREd3BTdW1SNHBXWW1UOXlSRWRSY1F0cjJmTUJVWTN2SExKX255VlpIQnkwR0JRbTFhTXh3RVlGR1Rzd2tB?oc=5",
+      "title": "Use of SDPD K-9 in Man's Arrest Prompts Excessive Force Debate",
+      "source": "NBC 7 San Diego",
+      "date": "2017-07-12",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNZVpnZTZYUXhsYkpkdGdjZU9kVmpRV0pQbm8yQ01LSjM2bjJDQVNiVUtUR2lEZ2JzLTRsakV0eFZKaF92LTlyb3ZkcWdRSUhLeG8taUstQUlwaVJaaGxvMDZ1SlNyRERwVmM1Yl9jUWtwY1BzZVNWdENNSm1MdlNoYWI3Z0lmNzNBbENvdUQxMlNfZ9IBmgFBVV95cUxOcGotN3Exa3JQUFJ2OEVENnR0UkxZenVBVlBaODRlN21yLXgzc0lmdEZqeU9uUlVzWTQ5YlJvdVJXS0Q1OWxmd0dNd2dCa3VqNmdzelp6T1ZoRXF5cmREd3BTdW1SNHBXWW1UOXlSRWRSY1F0cjJmTUJVWTN2SExKX255VlpIQnkwR0JRbTFhTXh3RVlGR1Rzd2tB?oc=5\" target=\"_blank\">Use of SDPD K-9 in Man's Arrest Prompts Excessive Force Debate</a> <font color=\"#6f6f6f\">NBC 7 San Diego</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
