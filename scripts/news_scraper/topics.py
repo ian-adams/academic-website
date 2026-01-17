@@ -194,6 +194,7 @@ FORCE_SCIENCE_KEYWORDS = {
     ],
 
     # Expert-testimony mechanics (for ADJACENT gatekeeping detection)
+    # Includes basic terms that appear in article titles about expert testimony
     'expert_mechanics': [
         'rule 702',
         'daubert',
@@ -211,7 +212,15 @@ FORCE_SCIENCE_KEYWORDS = {
         'expert deposition',
         'affidavit',
         'expert witness',
-        'expert testimony'
+        'expert testimony',
+        'expert',
+        'testify',
+        'testified',
+        'testifies',
+        'forensic',
+        'scientific',
+        'credibility',
+        'witness'
     ],
 
     # Police use-of-force context
@@ -466,18 +475,33 @@ def force_science_keyword_prefilter(text: str, patterns: dict) -> dict:
             result['trigger_reason'] = 'critic_name_with_context'
             return result
 
-    # ADJACENT bundle check (relaxed to be more inclusive):
+    # ADJACENT bundle check (very permissive to let LLM do fine-grained filtering):
+    # The search queries already pre-filter articles, so Stage 1 should be inclusive.
     # Option 1: expert-mechanics >= 1 AND police-force >= 1 (core combination)
-    # Option 2: expert-mechanics >= 2 (strong expert testimony signal even without explicit police)
-    # Option 3: expert-mechanics >= 1 AND court >= 1 (legal context with expert)
+    # Option 2: expert-mechanics >= 1 AND court >= 1 (legal context with expert)
+    # Option 3: expert-mechanics >= 2 (strong expert testimony signal)
+    # Option 4: police-force >= 1 AND court >= 2 (strong legal context about police)
+    # Option 5: police-force >= 2 AND court >= 1 (strong police context in legal setting)
+    # Option 6: expert-mechanics >= 1 (any expert testimony term - let LLM decide)
     has_adjacent = (
         (result['expert_mechanics_count'] >= 1 and result['police_force_count'] >= 1) or
+        (result['expert_mechanics_count'] >= 1 and result['court_context_count'] >= 1) or
         (result['expert_mechanics_count'] >= 2) or
-        (result['expert_mechanics_count'] >= 1 and result['court_context_count'] >= 1)
+        (result['police_force_count'] >= 1 and result['court_context_count'] >= 2) or
+        (result['police_force_count'] >= 2 and result['court_context_count'] >= 1) or
+        (result['expert_mechanics_count'] >= 1)  # Any expert term - permissive fallback
     )
     if has_adjacent:
         result['should_call_llm'] = True
         result['trigger_reason'] = 'adjacent_bundle'
+        return result
+
+    # Final fallback: Any police + court context combination
+    # This catches articles about police litigation that don't use "expert" language
+    # The LLM will filter out truly irrelevant ones
+    if result['police_force_count'] >= 1 and result['court_context_count'] >= 1:
+        result['should_call_llm'] = True
+        result['trigger_reason'] = 'police_court_context'
         return result
 
     return result
