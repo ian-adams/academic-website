@@ -1,7 +1,133 @@
 {
-  "updated": "2026-01-16T09:24:52Z",
-  "count": 1385,
+  "updated": "2026-01-17T09:18:24Z",
+  "count": 1405,
   "stories": [
+    {
+      "id": "9391a67ebdea011093ae1fdc61f79bba",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOejF0VnR0OEFCZWlLMVRlN0FyekVJZERraUZGZ1JZZTNzbnFNZDlGUGVoeUY0b00tMTlsbU1RZUx5b3RDdmhtUlVxS1VzY2Rkc3VMLWEwRzBpSktEek5DeTVOUy1ZekhEVXJuR1JqY2NJRFJLN3N0VV9od0FfSGxFZFlHOGNCc2I0T1g2Y0c0Zk1aejJMd1FJV2F3?oc=5",
+      "title": "How AI-assisted workflows are unlocking California police records",
+      "source": "current.org",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxOejF0VnR0OEFCZWlLMVRlN0FyekVJZERraUZGZ1JZZTNzbnFNZDlGUGVoeUY0b00tMTlsbU1RZUx5b3RDdmhtUlVxS1VzY2Rkc3VMLWEwRzBpSktEek5DeTVOUy1ZekhEVXJuR1JqY2NJRFJLN3N0VV9od0FfSGxFZFlHOGNCc2I0T1g2Y0c0Zk1aejJMd1FJV2F3?oc=5\" target=\"_blank\">How AI-assisted workflows are unlocking California police records</a> <font color=\"#6f6f6f\">current.org</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "b69b26600c964283a5a262ac640b9b14",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQdlluaUcwdzVyMlloeWYzbTdXVFN1UTlSVllfaE9kb3RQYjRyTV9FWjMxX0V6NjdKdUc5THpPOU9WMXBvbnNBQWlRU0ZwbVhTZDJQSEoyMWRsZk05VnRaMHRQc21IUWJGWGRPcllxUjVaY1QxQWhpbEZDeDhHa3RPX05hX1M0Z1dWaUxlLUVJcUd5S2hvU2V1TGJybFJ1STNaTlZ4aEZaN25XdmFYeFpmczRWWWc0dGFiLXJtN0dOQ3cydWItZGRlVVEzRm9KZ3owQjVn?oc=5",
+      "title": "Knoxville Police Department wants to use automated drones for 911 calls",
+      "source": "Knoxville News Sentinel",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxQdlluaUcwdzVyMlloeWYzbTdXVFN1UTlSVllfaE9kb3RQYjRyTV9FWjMxX0V6NjdKdUc5THpPOU9WMXBvbnNBQWlRU0ZwbVhTZDJQSEoyMWRsZk05VnRaMHRQc21IUWJGWGRPcllxUjVaY1QxQWhpbEZDeDhHa3RPX05hX1M0Z1dWaUxlLUVJcUd5S2hvU2V1TGJybFJ1STNaTlZ4aEZaN25XdmFYeFpmczRWWWc0dGFiLXJtN0dOQ3cydWItZGRlVVEzRm9KZ3owQjVn?oc=5\" target=\"_blank\">Knoxville Police Department wants to use automated drones for 911 calls</a> <font color=\"#6f6f6f\">Knoxville News Sentinel</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "9d01989c9d0b5fbfbc6aea4d9862d7d1",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQV09ZazlLeGVTWEFyT1ppZWIzeE91VHpRZ3RDTmtOMTBFN0puTnBsbVJ1REpabmJibnRraW1VVGdycTZ3Nlc0QnRUQlZkazJ4MnQxYU1jRXZQTk1PN3d5WEk2WHZvWVRUSVBodTU0UGljZVplYUVSVzZMcGZsQWRUQ21uMzYyQXh1bVZXZUNJZTZPMy0ydWtLVnZxNjBUMzJ3WXB3SDhMUdIBrAFBVV95cUxPNWwxdVAtZE1KQUpSMnh1cHF4YVZqR1dETjFqVl9OUjRaTmM5cldTTXZKMXZDcVVFRnV2OFhRcFlsdnFPZTREOFV5c25VVGpoX1RnNE5UTko3MG16amdIRDIwZVhjWllsRERPNkZpdDQ5MEI1U2t0V2ZTQTNTX0p4ZW9JM2M0ZU9HMzlqaHBzTFU4QXhnbmhoMjZKMHJ5eG9qUXhtaFpMQ1ZmUURQ?oc=5",
+      "title": "Police reveal new AI technology in Shreveport and Bossier City",
+      "source": "WNTZ-TV FOX 48",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQV09ZazlLeGVTWEFyT1ppZWIzeE91VHpRZ3RDTmtOMTBFN0puTnBsbVJ1REpabmJibnRraW1VVGdycTZ3Nlc0QnRUQlZkazJ4MnQxYU1jRXZQTk1PN3d5WEk2WHZvWVRUSVBodTU0UGljZVplYUVSVzZMcGZsQWRUQ21uMzYyQXh1bVZXZUNJZTZPMy0ydWtLVnZxNjBUMzJ3WXB3SDhMUdIBrAFBVV95cUxPNWwxdVAtZE1KQUpSMnh1cHF4YVZqR1dETjFqVl9OUjRaTmM5cldTTXZKMXZDcVVFRnV2OFhRcFlsdnFPZTREOFV5c25VVGpoX1RnNE5UTko3MG16amdIRDIwZVhjWllsRERPNkZpdDQ5MEI1U2t0V2ZTQTNTX0p4ZW9JM2M0ZU9HMzlqaHBzTFU4QXhnbmhoMjZKMHJ5eG9qUXhtaFpMQ1ZmUURQ?oc=5\" target=\"_blank\">Police reveal new AI technology in Shreveport and Bossier City</a> <font color=\"#6f6f6f\">WNTZ-TV FOX 48</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "cbdc30eae1e28ebabf27513f0e261586",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZ1NXLXRJMWFKbkpHdTJtZ29wbmh6TjFXemplb1FhaVhCSHZYcURaNmN3bGJDUmxLTk0wZ3BRTS1VczBUZlBoX2xRRjkwUjBVLTRYMnBjWVZVV292Nm5hQUVTdDZYNlp0Z1Z4YVZDNGVjakpUdjIzUkR2TVVQeWc0em5FWGFyTlBKQU1YQS1QUkdJVG1YbHI1d1NYM1dhWnVSMzBDVFhiUnphUHEyYUcycmlBalJfYm41VkJYcFRUTktxQVFUM2d1N1dCNTliRTVTdzFXQQ?oc=5",
+      "title": "ShotSpotter leads police to central Toledo gunshot victim",
+      "source": "WTOL",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZ1NXLXRJMWFKbkpHdTJtZ29wbmh6TjFXemplb1FhaVhCSHZYcURaNmN3bGJDUmxLTk0wZ3BRTS1VczBUZlBoX2xRRjkwUjBVLTRYMnBjWVZVV292Nm5hQUVTdDZYNlp0Z1Z4YVZDNGVjakpUdjIzUkR2TVVQeWc0em5FWGFyTlBKQU1YQS1QUkdJVG1YbHI1d1NYM1dhWnVSMzBDVFhiUnphUHEyYUcycmlBalJfYm41VkJYcFRUTktxQVFUM2d1N1dCNTliRTVTdzFXQQ?oc=5\" target=\"_blank\">ShotSpotter leads police to central Toledo gunshot victim</a> <font color=\"#6f6f6f\">WTOL</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "ShotSpotter, Google, ICE",
+      "location": null,
+      "tags": [
+        "gunshot detection"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "8d715c0f395e061d518917a5f44c86ac",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVkNHbEhhMjNxRFRBWkcyUGJFbTJxZWFsZFB1akNKTWwwUVlYeGxGUV9maHRKQ1R2OHlHQm9xVGxQdFZvemVRck0tckNuV0FJaGJ6VWppbXFsODhaZ2F2cUZDaEVselVDaWlsTUxpQVNyNm5OLWNrLUw4bkRsemQ3VVVXZzZUajFweHdBWENyTzdXU0ZDdG1xRHI5aGtDdlI2amdhY3llbkY5Q3ktcDdUVg?oc=5",
+      "title": "Texas police review AI use after edited mugshot draws scrutiny",
+      "source": "Police1",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQVkNHbEhhMjNxRFRBWkcyUGJFbTJxZWFsZFB1akNKTWwwUVlYeGxGUV9maHRKQ1R2OHlHQm9xVGxQdFZvemVRck0tckNuV0FJaGJ6VWppbXFsODhaZ2F2cUZDaEVselVDaWlsTUxpQVNyNm5OLWNrLUw4bkRsemQ3VVVXZzZUajFweHdBWENyTzdXU0ZDdG1xRHI5aGtDdlI2amdhY3llbkY5Q3ktcDdUVg?oc=5\" target=\"_blank\">Texas police review AI use after edited mugshot draws scrutiny</a> <font color=\"#6f6f6f\">Police1</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "5db0471435761ee664c623bf9c1b6733",
+      "url": "https://www.aclu.org/news/privacy-technology/flock-ceo-goes-ballistic",
+      "title": "Flock CEO Goes Ballistic on Critics as More Americans Question Mass Driver Surveillance",
+      "source": "ACLU",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-17",
+      "summary": "<p><a href=\"https://action.aclu.org/signup/free-future-newsletter\"><strong><em>Subscribe to the Free Future Newsletter</em></strong></a><br /> <em><a href=\"http://www.aclu.org/freefuture\">Free Future home</a></em></p> <p><em>Pictured above: city council members in Oak Park Village, Illinois debating license plate readers (photo by Paul Goyette)</em></p> <p>The company Flock, which sells participation in a nationwide license plate reader network as well as <a href=\"https://www.aclu.org/news/privacy-technology/flock-roundup\">other surveillance </a>technology, has been under a lot of pressure lately as increasing numbers of Americans <a href=\"https://www.aclu.org/news/privacy-technology/flock-pushback\">realize</a> they don’t like the mass surveillance the company sells or its use in the Trump Administration’s war on immigrants. That pressure seems to be resulting in demagogic attacks on the motives of its critics, with the CEO saying they want to “normalize lawlessness” and “weaken public safety.”</p> <p>As we have been <a href=\"https://www.aclu.org/publications/protecting-privacy-aerial-surveillance-recommendations-government-use-drone-aircraft\">saying</a> for <a href=\"https://www.aclu.org/wp-content/uploads/publications/flock_1.pdf\">years</a>, the creation of a giant automated infrastructure for the surveillance of drivers’ comings and goings raises a lot of profound issues — about the balance of power between government and the governed, how much power we should grant the government to investigate and prevent crime, how much privacy we should allow people to have in their public movements over time and space, the psychological, practical, and political effects of a diminishment of such privacy — and ultimately, what will best give people in this country a shot at living happy and fulfilling lives free of domination by others.</p> <p>Americans disagree about how to weigh those values, with some concluding that they want license plate scanning technology in the hands of the police agencies that are supposed to serve them. That kind of disagreement is inevitable in a democratic society.</p> <p>Flock, however, apparently doesn’t credit its critics with good faith or rational desires.</p> <p>In a December <a href=\"https://www.ci.staunton.va.us/home/showpublisheddocument/13448/639017375545785368\">email</a> <a href=\"https://cvillerightnow.com/news/208802-flock-ceo-includes-charlottesville-staunton-in-email-blaming-activists-for-cities-dropping-the-companys-services/\">reportedly</a> sent to all its law enforcement clients, CEO Garrett Langley claimed that attacks on Flock were attacks on law enforcement. “Let's call this what it is,” he wrote. “Flock, and the law enforcement agencies we partner with, are under coordinated attack.” Langley then portrays Flock’s critics as motivated not by legitimate disagreement over the relative importance of different values and the role of mass surveillance in a brutal mass deportation effort, but as some kind of nihilists who wish to destroy society:</p> <blockquote><p>The attacks aren't new. You've been dealing with this for forever, and we've been dealing with this since our founding, from the same activist groups who want to defund the police, weaken public safety, and normalize lawlessness. Now, they're producing YouTube videos with misleading headlines.</p></blockquote> <p>Langley also told police departments that “activist groups” are also “trying to turn a public records process into a weapon against you and against us.” In a democratic society where sovereignty rests with the people, transparency into what the government is doing is vital. In an era where powerful new technologies promise to give the government expansive new powers never before seen in human history, transparency becomes even more urgent.</p> <p>Last week, responding to <a href=\"https://www.404media.co/police-unmask-millions-of-surveillance-targets-because-of-flock-redaction-error/\">critical coverage</a> of the release of data on millions of police surveillance targets by reporters at 404Media, Flock <a href=\"https://www.404media.co/police-unmask-millions-of-surveillance-targets-because-of-flock-redaction-error/#:~:text=activists%20trying%20to%20let%20murderers%20go%20free\">charged</a> that behind the criticism lay “activists trying to let murderers go free.”</p> <p>C’mon, Flock — seriously? Are you really saying that a desire to “see murderers go free” and “normalize lawlessness” is what’s motivating privacy advocates, residents, city council members, and people exercising their First Amendment rights who are dealing with <a href=\"https://www.aclu.org/news/free-speech/photographer-retaliation-foia\">retaliation</a> by federal agents, including those <a href=\"https://www.mprnews.org/story/2026/01/13/ice-using-private-data-to-intimidate-observers-and-activists-advocates-say\">abusing license plate databases for non-law enforcement purposes</a> by tapping into them to drive to observers’ homes in order to intimidate them?</p> <p>Ironically, if there is anyone who does want those things right now, it is those participating in Trump’s deportation drive, which has come closer to “normalizing lawlessness” than anything we have seen in this nation in a long time. Langley might be better off aiming his criticism toward some of his financial backers like Mark Andreessen, whose venture capital firm A16Z has been an <a href=\"https://ipvm.com/reports/flock-150-a16z\">early</a> and <a href=\"https://techstartups.com/2025/03/13/flock-safety-raises-275m-from-andreessen-horowitz-to-expand-drone-manufacturing-and-crime-fighting-tech/\">significant</a> investor in Flock and other surveillance companies — and who has also been a supporter of the man pushing the federal lawlessness we’re seeing on the streets of American cities today: President Trump.</p> <p>To their credit, at least some recipients of Flock’s letter responded with consummate professionalism. Staunton, Virginia police chief Jim Williams, who released the Flock email, wrote back to <a href=\"https://www.ci.staunton.va.us/home/showpublisheddocument/13448/639017375545785368\">rebuke</a> Langley:</p> <blockquote><p>As far as your assertion that we are currently under attack, I do not believe that this is so…. What we are seeing here is a group of local citizens who are raising concerns that we could be potentially surveilling private citizens, residents and visitors and using the data for nefarious purposes. These citizens have been exercising their rights to receive answers from me, my staff, and city officials, to include our elected leaders. ln short, it is democracy in action.</p></blockquote> <p>In Charlottesville, VA, the police chief <a href=\"https://cvillerightnow.com/news/208802-flock-ceo-includes-charlottesville-staunton-in-email-blaming-activists-for-cities-dropping-the-companys-services/\">reacted similarly</a>, telling a local news outlet that “people have a right to disagree and have issues with things,” and that “at the end of the day communities get to have a say on how they want to be policed.”</p> <p>In its earlier years Flock implicitly accepted the importance of privacy, emphasizing (though <a href=\"https://www.aclu.org/wp-content/uploads/publications/flock_1.pdf\">exaggerating</a>) certain privacy-protective limits in its license plate recognition product. Now, apparently, the company has adopted the attitude that, in essence, if you are concerned at all about mass surveillance and limiting the power of law enforcement, you support criminals. It is a simplistic, juvenile, and ultimately authoritarian stance.</p>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Ring, ACLU, EFF, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "surveillance",
+        "ALPR",
+        "civil rights",
+        "error"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "d8010db62b34f9b115f8cb35ce194a47",
+      "url": "https://www.eff.org/deeplinks/2026/01/baton-rouge-acquires-straight-military-surveillance-drone",
+      "title": "Baton Rouge Acquires a Straight-Up Military Surveillance Drone",
+      "source": "Electronic Frontier Foundation",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-17",
+      "summary": "<div class=\"field field--name-body field--type-text-with-summary field--label-hidden\"><div class=\"field__items\"><div class=\"field__item even\"><p><span>The Baton Rouge Police Department announced this week that it will begin using </span><a href=\"https://sls.eff.org/technologies/drones-and-robots\"><span>a drone</span></a><span> designed by military equipment manufacturer Lockheed Martin and Edge Autonomy, making it one of the first local police departments to use an unmanned aerial vehicle (UAV) with a history of primary use in foreign war zones. Baton Rouge is now one of the first local police departments in the United States to deploy an unmanned aerial vehicle (UAV) with such extensive surveillance capabilities — a dangerous escalation in the militarization of local law enforcement.</span></p> <p><span>This is a troubling development in an already long history of local law enforcement acquiring and utilizing military-grade surveillance equipment. It should be a cautionary tale that prods communities across the country to be proactive in ensuring that drones can only be acquired and used in ways that are well-documented, transparent, and subject to public feedback. </span></p> <p><span>Baton Rouge bought the </span><a href=\"https://www.lockheedmartin.com/content/dam/lockheed-martin/aero/documents/Stalker/StalkerVXE30ProductCard.pdf\"><span>Stalker VXE30</span></a><span> from Edge Autonomy, which partners with </span><a href=\"https://www.lockheedmartin.com/en-us/products/stalker.html\"><span>Lockheed Martin</span></a> <span>and began </span><a href=\"https://rdw.com/newsroom/redwire-announces-sunsetting-of-edge-autonomy-brand-and-new-organizational-structure-to-align-with-market-opportunities-for-accelerated-growth/\"><span>operating under the brand Redwire this week</span></a><span>. According to reporting from </span><a href=\"https://www.wbrz.com/news/baton-rouge-police-department-says-it-s-the-first-department-in-country-to-use-new-type-of-drone\"><span>WBRZ ABC2 in Louisiana</span></a><span>, the drone, training, and batteries, cost about $1 million. </span></p> <p><span><div class=\"media media-element-container media-default\"><div class=\"file file-image file-image-jpeg\" id=\"file-58990\"> <h2 class=\"element-invisible\"><a href=\"https://www.eff.org/file/brpdcrewwithdronejpg\">Baton Rouge Police Department with Stalker VXE30 drone</a></h2> <div class=\"content\"> <img alt=\"Members of the Baton Rouge Police Department pose with a military-grade Stalker VXE30 drone\" class=\"media-element file-default\" height=\"570\" src=\"https://www.eff.org/files/brpd_crew_with_drone.jpg\" title=\"Baton Rouge Police Department with Stalker VXE30 drone\" width=\"1163\" /> </div> </div> </div><div class=\"caption caption-center\"><div class=\"caption-width-container\"><div class=\"caption-inner\"> Baton Rouge Police Department officers stand with the Stalker VXE30 drone in a <a href=\"https://www.facebook.com/photo?fbid=1157296556537067&set=pcb.1157297396536983\"><span>photo shared by the BRPD via Facebook</span></a><span>. </span></div></div></div></span></p> <p><span>All of the </span><a href=\"https://sls.eff.org/technologies/drones-and-robots\"><span>regular concerns surrounding drones</span></a><span> apply to this new one in use by Baton Rouge:</span></p> <ul> <li><span>Drones can access and view spaces that are otherwise off-limits to law enforcement, including backyards, decks, and other areas of personal property.</span></li> <li><span>Footage captured by camera-enabled drones may be stored and shared in ways that go far beyond the initial flight.</span></li> <li><span>Additional camera-based surveillance can be installed on the drone, including </span><a href=\"https://sls.eff.org/technologies/automated-license-plate-readers-alprs\"><span>automated license plate readers</span></a><span> and the retroactive application of biometric analysis, such as </span><a href=\"https://sls.eff.org/technologies/face-recognition\"><span>face recognition</span></a><span>.</span></li> </ul> <p><span>However, the use of a military-grade drone hypercharges these concerns. Stalker VXE30's surveillance capabilities extend for dozens of miles, and it can fly faster and longer than standard police drones already in use. </span></p> <p><span>“It can be miles away, but we can still have a camera looking at your face, so we can use it for surveillance operations,\" BRPD Police Chief TJ Morse </span><a href=\"https://www.wbrz.com/news/baton-rouge-police-department-says-it-s-the-first-department-in-country-to-use-new-type-of-drone\"><span>told reporters</span></a><span>.</span></p> <p><span>Drone models similar to the Stalker VXE30 have been used in </span><a href=\"https://rdw.com/newsroom/edge-autonomy-expands-u-s-navy-marine-corps-small-tactical-unmanned-aircraft-systems-long-range-long-endurance-support/\"><span>military operations around the world</span></a><span> and are currently being used by the U.S. Army and other branches for </span><a href=\"https://www.army-technology.com/news/avcoe-vxe30-uas-training/\"><span>long-range reconnaissance</span></a><span>. Typically, police departments deploy drone models similar to those commercially available from companies like DJI, which </span><a href=\"https://www.reuters.com/world/china/us-commerce-department-drops-plan-impose-restrictions-chinese-made-drones-2026-01-09/\"><span>until recently was the subject of a proposed Federal Communications Commission (FCC) ban</span></a><span>, or devices provided by police technology companies like </span><a href=\"https://www.skydio.com/x10\"><span>Skydio</span></a><span>, </span><a href=\"https://www.skydio.com/solutions/dfr/axon-integration\"><span>in partnership with Axon</span></a><span> and </span><a href=\"https://www.flocksafety.com/products/flock-dfr\"><span>Flock Safety</span></a><span>. </span></p> <p>Additionally troubling is the capacity to add additional equipment to these drones: so-called “payloads” that could include other types of surveillance equipment and even weapons. </p> <p><span>The Baton Rouge community must put policies in place that restrict and provide oversight of any possible uses of this drone, as well as any potential additions law enforcement might make. </span><br /><a href=\"https://www.muckrock.com/foi/baton-rouge-east-baton-rouge-16213/baton-rouge-police-department-materials-on-stalker-vxe30-drone-202651/\"><span></span></a></p> <p><a href=\"https://www.muckrock.com/foi/baton-rouge-east-baton-rouge-16213/baton-rouge-police-department-materials-on-stalker-vxe30-drone-202651/\"><span>EFF has filed a public records request</span></a><span> to learn more about the conditions of this acquisition and gaps in oversight policies. </span><span>We've been tracking the expansion of police drone surveillance for years, and this acquisition represents a dangerous new frontier. We'll continue investigating and supporting communities fighting back against the militarization of local police and mass surveillance. To learn more about the surveillance technologies being used in your city, please check out </span><a href=\"https://www.atlasofsurveillance.org/\"><span>the Atlas of Surveillance</span></a><span>.</span></p> </div></div></div>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Axon, Flock Safety, Ring, EFF, FBI, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "facial recognition",
+        "surveillance",
+        "ALPR",
+        "Axon",
+        "policy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "e45236525f0be21776557e66dba80636",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQ3c5REtVMkJEWXdYdEZtWXBqSmdPWm9JUC0wMW53OUZ6UXlwcUtwZXREUEJJOFlrRENUVVZvczJ6TUNjUENTUHdNZDZ0R2oxRUJUamRlaFVrcUJaZ25zRnMyMVlBOWpQZVRoZWdGOUtkWWJROVZDVmUtejNfZHFKb3pJYjJQeElDdVJhS1dFcWJsTzlEM0xXeV9Nby1EQkhXLUNIVVp1NUNlcGxuZHRUTEx1ZE13eEV0ZlBZ0gHAAUFVX3lxTFBVR3BGazJCYnJjQWNNaXRvOENHMjRuY2pLSFktN3ZuVi1OQlZza3Q5Q2h5VlZKZ2VkSlJXZ3ZLMlN5OWcwb2JwdDliRGRNcUNkb21XWkpDZXRDQklMYkpLSDJjQTdqeFVSU0VSV3ljMDdDc1k2dXFTOGhiRnlReU1NVVdzZmM4ZG1tNG9yVXVKNjMtNTNENnNJV0x5bHJfUHhYRHJEMTNSWHlFM3dFRTBQLVRjbWF5LVBpdm5seENCVA?oc=5",
@@ -3272,6 +3398,23 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "54411da9c9e31dca45b8e270c0e4c3c6",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOQW5ONF9yRDhiOXROTDhxQ2hKRjkwQ1l1LXNSdUVnZHJCX2IyT2ZrZEpYSXA5dnd3cjV5NF94Zzh2R19HRG11WHFTMXV3TFdRMno3N3lFbjExRlRvak1IOTJPTERkdmNVTHNMa05sOTFlYXdSTVlveWRwaWVDMHdFSmhtMHBXOXlsTWtMWUVvbE9CUVU?oc=5",
+      "title": "Glendale Police to use ShotSpotter tech to track New Year’s Eve gunfire",
+      "source": "Yahoo",
+      "date": "2025-12-31",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxOQW5ONF9yRDhiOXROTDhxQ2hKRjkwQ1l1LXNSdUVnZHJCX2IyT2ZrZEpYSXA5dnd3cjV5NF94Zzh2R19HRG11WHFTMXV3TFdRMno3N3lFbjExRlRvak1IOTJPTERkdmNVTHNMa05sOTFlYXdSTVlveWRwaWVDMHdFSmhtMHBXOXlsTWtMWUVvbE9CUVU?oc=5\" target=\"_blank\">Glendale Police to use ShotSpotter tech to track New Year’s Eve gunfire</a> <font color=\"#6f6f6f\">Yahoo</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "ShotSpotter, Google, ICE",
+      "location": null,
+      "tags": [
+        "gunshot detection"
       ],
       "needs_review": 0
     },
@@ -7825,6 +7968,23 @@
       "needs_review": 0
     },
     {
+      "id": "67579953dd58b3fbbb29d77f71773781",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPRHFYc3NHUVNDU2UtN25jQ3d4ekFnM0kwVkFNaWYxMURYU1FOaFg4ZU91bDBBUlMxOUdEbmdDUzR4RHZWbDBUYVZzemhtWjdhWG85UERtTXpkTFZHYWVwN1V1TFJ5bGFIUXBaYVhZYVVmeDg2ZFBNZnJVLVBhVFhNcHBkMG5oZHBCNW9FYVMxY0t6UFR4Q2dKdjl3NzZKeVNEQnJ6d3NxaHQ0bFluT3FGNzVYVm1vUkxELXRCTms2MFF6bWdycklXckx1TQ?oc=5",
+      "title": "A new AI tool is helping Isle of Palms officers craft incident reports. Here’s how it works",
+      "source": "WCBD News 2",
+      "date": "2025-10-24",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxPRHFYc3NHUVNDU2UtN25jQ3d4ekFnM0kwVkFNaWYxMURYU1FOaFg4ZU91bDBBUlMxOUdEbmdDUzR4RHZWbDBUYVZzemhtWjdhWG85UERtTXpkTFZHYWVwN1V1TFJ5bGFIUXBaYVhZYVVmeDg2ZFBNZnJVLVBhVFhNcHBkMG5oZHBCNW9FYVMxY0t6UFR4Q2dKdjl3NzZKeVNEQnJ6d3NxaHQ0bFluT3FGNzVYVm1vUkxELXRCTms2MFF6bWdycklXckx1TQ?oc=5\" target=\"_blank\">A new AI tool is helping Isle of Palms officers craft incident reports. Here’s how it works</a> <font color=\"#6f6f6f\">WCBD News 2</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "79726b6211386f0effbdc903d8557b0f",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPRHFYc3NHUVNDU2UtN25jQ3d4ekFnM0kwVkFNaWYxMURYU1FOaFg4ZU91bDBBUlMxOUdEbmdDUzR4RHZWbDBUYVZzemhtWjdhWG85UERtTXpkTFZHYWVwN1V1TFJ5bGFIUXBaYVhZYVVmeDg2ZFBNZnJVLVBhVFhNcHBkMG5oZHBCNW9FYVMxY0t6UFR4Q2dKdjl3NzZKeVNEQnJ6d3NxaHQ0bFluT3FGNzVYVm1vUkxELXRCTms2MFF6bWdycklXckx1TdIB0AFBVV95cUxPTnFIV1duS0NuZDMtaFBMem1jMEIyTkdlblNqcG9qM1BkTmw0VFZfdFVENER1UzUyZVFtRC1pSnFvQmthMHBWOFBRYkk1UnFlS3RQSlNRbXZHMWRpb0VHa21lZDlUdUs0SjUxeWJZUmZMRnJYOXhTUEp0bUJOaGxPRnZLU0IxSk5oaHpyOEZSTmVDcGVYaTBPcU5RY0hYYlloRVIzTW1QMFlHdmtoRlJrUXJEMUxQMXFWUnNBQ3FOMnpNRFpVdXZNaU56UHBxTWtT?oc=5",
       "title": "A new AI tool is helping Isle of Palms officers craft incident reports. Here’s how it works",
@@ -7997,6 +8157,23 @@
       "tags": [
         "AI",
         "error"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "ed1a2b2c49e29bbfbead168097d1957d",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZGI0TzZmNUNNUVl3TV9kOXhQTzNaelNaQlM0RnpBczVva2ZNXzg2V2FoVmZla3BqdkFKal84Tnp0OU1BMVZKRXB2aHRzMHJSMjFvZ05vM3lPY09nRndwZjhXUEp1MmNZX3ZfTzlHM2QyOTVVU25pZHl5T2k1RlV4ZkJKM21YWlR4UXlsOGhDWnY0QzJnY01mTjB4QmxqRnM5OW15OTVCVTFuZ0XSAb8BQVVfeXFMTUhUeHAtM3ZFdFdqd2dJVWlkTi1ncE8zQ2lnMHFoY0VTeHpJS29ld21jd1lOQXo1a014R1BOVTdyUy1pQTh4YS1kOXRRUWxlUTJiUnEwWmRHdWNQVVNvaUJhbFJkQnVnZUdJczVwN3Byb2xUUlNlRUlHa1hPTDFndGtXWWpNOFd0Y0lKSk1IeFpBcVFIQnZtUWlrT2xhYmFZdnVlQk9SbE51QjBsV0ZfR1drUy05czNSaDd2dVQ2SHM?oc=5",
+      "title": "Police swarmed student after AI system mistook bag of chips for gun, officials say",
+      "source": "WLOX",
+      "date": "2025-10-23",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZGI0TzZmNUNNUVl3TV9kOXhQTzNaelNaQlM0RnpBczVva2ZNXzg2V2FoVmZla3BqdkFKal84Tnp0OU1BMVZKRXB2aHRzMHJSMjFvZ05vM3lPY09nRndwZjhXUEp1MmNZX3ZfTzlHM2QyOTVVU25pZHl5T2k1RlV4ZkJKM21YWlR4UXlsOGhDWnY0QzJnY01mTjB4QmxqRnM5OW15OTVCVTFuZ0XSAb8BQVVfeXFMTUhUeHAtM3ZFdFdqd2dJVWlkTi1ncE8zQ2lnMHFoY0VTeHpJS29ld21jd1lOQXo1a014R1BOVTdyUy1pQTh4YS1kOXRRUWxlUTJiUnEwWmRHdWNQVVNvaUJhbFJkQnVnZUdJczVwN3Byb2xUUlNlRUlHa1hPTDFndGtXWWpNOFd0Y0lKSk1IeFpBcVFIQnZtUWlrT2xhYmFZdnVlQk9SbE51QjBsV0ZfR1drUy05czNSaDd2dVQ2SHM?oc=5\" target=\"_blank\">Police swarmed student after AI system mistook bag of chips for gun, officials say</a> <font color=\"#6f6f6f\">WLOX</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
       ],
       "needs_review": 0
     },
@@ -8725,6 +8902,23 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "a884b7fdf8bf1c4fa434b320fd953a0d",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcGh3bkdyM0lTd3NyQ2pYZUt6dmJzWTZkYXdHN081RWg4cFBxbkEyTTZmN3BsNmNKREhYRHJoclJ4cmRObzM2TWN4dUFjWVJoTUZ0ZlFsSjZER3NPMlZPQTNPUDEtNEdrSkE0R25DbzBXd2tXQ25KVVBJc2xWV05Wb29XNGxXNnJPRFJ3WW5pU0NsNkl6LW1uNUd4VmwtRUo0SVE?oc=5",
+      "title": "Texas Sheriff’s Agency Approved to Acquire Facial Recognition Software",
+      "source": "Police Magazine",
+      "date": "2025-10-16",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPcGh3bkdyM0lTd3NyQ2pYZUt6dmJzWTZkYXdHN081RWg4cFBxbkEyTTZmN3BsNmNKREhYRHJoclJ4cmRObzM2TWN4dUFjWVJoTUZ0ZlFsSjZER3NPMlZPQTNPUDEtNEdrSkE0R25DbzBXd2tXQ25KVVBJc2xWV05Wb29XNGxXNnJPRFJ3WW5pU0NsNkl6LW1uNUd4VmwtRUo0SVE?oc=5\" target=\"_blank\">Texas Sheriff’s Agency Approved to Acquire Facial Recognition Software</a> <font color=\"#6f6f6f\">Police Magazine</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "facial recognition"
       ],
       "needs_review": 0
     },
@@ -9788,6 +9982,24 @@
       "needs_review": 0
     },
     {
+      "id": "82ac1c58e94d498db6cfca19f535da8d",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQMkxyeXdVT1E0NWhiRFRyZHkyUEhsRGJPYUJBYVZYSWhOZGxMZEFYM29Ecmt0QXlnMmlubUxMRjdOak1LSmtWZWcxYXhkWmNXcFg4OXgyaUFnRUxkZTZYcVdfMHVJQkZwVm9ZRlJaMUlEalRJVmFwMnR3N0dZMWhQWm5SdFdiQkJUbl96czQ1UWJCVGJKU2p4bFNmeVFzRlF2WGJvWU9tNkNGa2JIbEVudE5iS3pSdERFNXRKdkZNWm9MczZfSGZF?oc=5",
+      "title": "Washington County Sheriff’s Department kicks off AI pilot project for report writing",
+      "source": "Beaverton Valley Times",
+      "date": "2025-10-01",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxQMkxyeXdVT1E0NWhiRFRyZHkyUEhsRGJPYUJBYVZYSWhOZGxMZEFYM29Ecmt0QXlnMmlubUxMRjdOak1LSmtWZWcxYXhkWmNXcFg4OXgyaUFnRUxkZTZYcVdfMHVJQkZwVm9ZRlJaMUlEalRJVmFwMnR3N0dZMWhQWm5SdFdiQkJUbl96czQ1UWJCVGJKU2p4bFNmeVFzRlF2WGJvWU9tNkNGa2JIbEVudE5iS3pSdERFNXRKdkZNWm9MczZfSGZF?oc=5\" target=\"_blank\">Washington County Sheriff’s Department kicks off AI pilot project for report writing</a> <font color=\"#6f6f6f\">Beaverton Valley Times</font>",
+      "story_type": "research",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [
+        "AI",
+        "police report"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "23002406b8acabe667e4adb03cf4a4c6",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNVkRSMGlURFUyM2Q5cUlGdHBiSWJGSW5fLTBGMHFYcklpTk9xcDM5akVWcXU4SXByRHFWd1NuSDBIWHBsLUVkYzRzY21UTVFNcUxiRmx4cGZyYnJhS0xJR3cybmxnaE53ck5yM0VQejFkZnB1c19CSWVCY3NUS2lVdnhPNTN6NmZlYnNtRkg4dzRjUEx1V0VsM20yTDdmbHRjcEI2WUZuSFFpd0ptNWxhRTdObXBsa2hxRGVGRDUtSWVaNThfck1z?oc=5",
       "title": "Washington County Sheriff’s Department kicks off AI pilot project for report writing",
@@ -10100,6 +10312,24 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "2ff044866a43abb20200ca0fde942156",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPYlFHMW5lS0NfY1pDRUJBSWdielNhZl9pV0dQcmoyeXZGUmlhVVNsRFBvc3hSc24wWHo1NmFPeUdNWXdWUGx3SkUtVzFXTml3dGRvRzVHN2JPT3dvRGlIbFBDb3JZWFJCNlI5cTAzaEY3VGM5cm1tMENVdlhEUHRpcERQWQ?oc=5",
+      "title": "Lawsuit Dismissed Against Detroit Police in Facial Recognition Arrest",
+      "source": "Insurance Journal",
+      "date": "2025-09-22",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPYlFHMW5lS0NfY1pDRUJBSWdielNhZl9pV0dQcmoyeXZGUmlhVVNsRFBvc3hSc24wWHo1NmFPeUdNWXdWUGx3SkUtVzFXTml3dGRvRzVHN2JPT3dvRGlIbFBDb3JZWFJCNlI5cTAzaEY3VGM5cm1tMENVdlhEUHRpcERQWQ?oc=5\" target=\"_blank\">Lawsuit Dismissed Against Detroit Police in Facial Recognition Arrest</a> <font color=\"#6f6f6f\">Insurance Journal</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "facial recognition"
       ],
       "needs_review": 0
     },
@@ -13399,6 +13629,23 @@
       "needs_review": 0
     },
     {
+      "id": "014e248b8d6d96baede1f7b667f195e7",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPVjZwa3lZWDFYWDdfOHpjNHRmRExFTkNja0RkWmhQUHVnNVotcXV1SUdONEVwQ0ZUNnVLcDhQeW55d04tR3NHZVZPMmFfUUViT20wd202Z05xbTVaOGV3RUU1alUzamExeldoelJqWmJyX1QwM0U4UGRpWUVzbFM4RmNLd21tb0NoMzlPTG11QnhTZENwU3Nvc2VrQ1c3YTNndHl1M2RYbDl4VlRtSEpXUUFoTENmX2xKX2RrVENmekJTQ2VqOXN6WEswd0d1Y1JuY3lwdkRDTHNMM3VZNThXWndDblR0NjdkcTZfckhwcUg0V2pMVmlra21GY0xURzRua0VkbWlURTlNNDdBVmg0d1YwdFA?oc=5",
+      "title": "Westbrook Police Department answers public outcry over AI-altered photo",
+      "source": "newscentermaine.com",
+      "date": "2025-07-01",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilAJBVV95cUxPVjZwa3lZWDFYWDdfOHpjNHRmRExFTkNja0RkWmhQUHVnNVotcXV1SUdONEVwQ0ZUNnVLcDhQeW55d04tR3NHZVZPMmFfUUViT20wd202Z05xbTVaOGV3RUU1alUzamExeldoelJqWmJyX1QwM0U4UGRpWUVzbFM4RmNLd21tb0NoMzlPTG11QnhTZENwU3Nvc2VrQ1c3YTNndHl1M2RYbDl4VlRtSEpXUUFoTENmX2xKX2RrVENmekJTQ2VqOXN6WEswd0d1Y1JuY3lwdkRDTHNMM3VZNThXWndDblR0NjdkcTZfckhwcUg0V2pMVmlra21GY0xURzRua0VkbWlURTlNNDdBVmg0d1YwdFA?oc=5\" target=\"_blank\">Westbrook Police Department answers public outcry over AI-altered photo</a> <font color=\"#6f6f6f\">newscentermaine.com</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "2c92137858585a7dbeeba322863faa32",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUnJueE1ZMTlxLWdaaUt1dGpmX1NsZF94N1R3VnE0WFA1dGt6SmVPbWZFSmlqOHFaaWljUWFDa2czQTl2bEhTY3BlVERORkNtYzB1ZzNjOWF5SmxlME5VOGtZcjU0WWt3aTF6QTE2X3ZMeTI1bk11ajV4RG1VR2hfc0x4aGdwMVBqX1E?oc=5",
       "title": "AI-powered police body cameras are renewing privacy and bias concerns",
@@ -14594,6 +14841,23 @@
       "location": null,
       "tags": [
         "AI",
+        "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "9307c69d4dd7a29aedd95994db494a88",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNc01LTlRrOGhBM2g1U0lwR1Y2R0xqcHFJd3Fzc3hmLUVicnpuU1lTWkw4OWtJMTYzMmdOZVkybHRpUEZ6YWVsaVJSbTNZVVNfOTBLMW5xa0tmS3oyVE04WTZmSHZKcGNYWnhWYUY2X1hNSElhVGNKLW91SEQtSTBHZE5EWQ?oc=5",
+      "title": "Flock’s Newest Police Tool Sparks Data Controversy",
+      "source": "GovTech",
+      "date": "2025-05-27",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxNc01LTlRrOGhBM2g1U0lwR1Y2R0xqcHFJd3Fzc3hmLUVicnpuU1lTWkw4OWtJMTYzMmdOZVkybHRpUEZ6YWVsaVJSbTNZVVNfOTBLMW5xa0tmS3oyVE04WTZmSHZKcGNYWnhWYUY2X1hNSElhVGNKLW91SEQtSTBHZE5EWQ?oc=5\" target=\"_blank\">Flock’s Newest Police Tool Sparks Data Controversy</a> <font color=\"#6f6f6f\">GovTech</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
         "ALPR"
       ],
       "needs_review": 0
@@ -18223,6 +18487,21 @@
       "needs_review": 0
     },
     {
+      "id": "808a75a4bc5989b8049fcf33a348cf25",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNOXEzbFVBd19Qa2xWcXZ0UkxOeExNZWJnQVFhS1lEUE1jWVRUWkJqU2tpclYxYW5FZmJGdXJsZlFGM3BQUE9xMHRnUXFsYjNaZ28yMzNpYTA1SzlINzl4cGJCLVJrbkNEd0lpcktpRHFjdmlVUGRoTkhyNWxUVXFrV0NBUnU1dVMzR2dXXzI3aEdDZF92d0RpZU5iTDl3ZDZGbVJsZzRVMExaaVF3TzJJYjN1dHJROXN3NVZhUXdsT0d2VDVtbkVvTWtyblE1bmltOVpLdk5tbw?oc=5",
+      "title": "Real-time crime center helps Glendale (Ariz.) police ‘do more with less,’ chief says",
+      "source": "Urgent Communications",
+      "date": "2024-10-22",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxNOXEzbFVBd19Qa2xWcXZ0UkxOeExNZWJnQVFhS1lEUE1jWVRUWkJqU2tpclYxYW5FZmJGdXJsZlFGM3BQUE9xMHRnUXFsYjNaZ28yMzNpYTA1SzlINzl4cGJCLVJrbkNEd0lpcktpRHFjdmlVUGRoTkhyNWxUVXFrV0NBUnU1dVMzR2dXXzI3aEdDZF92d0RpZU5iTDl3ZDZGbVJsZzRVMExaaVF3TzJJYjN1dHJROXN3NVZhUXdsT0d2VDVtbkVvTWtyblE1bmltOVpLdk5tbw?oc=5\" target=\"_blank\">Real-time crime center helps Glendale (Ariz.) police ‘do more with less,’ chief says</a> <font color=\"#6f6f6f\">Urgent Communications</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "f140dd47063ecc2f8c358665d9010840",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPWDU0czVmSG9NalVQTHZfR1I2MlE5c0wyN1FtOXF4S2xHLVNVUW1iNkx6UE9SanUwZWgyT3dxRzlOSXExWmZRYnRwTVk3alh4TnE1OTVsdWtiOUM0V2kwSldXbm1oTFFXclFQTkdnTVVLN2Z1eHowTXpCSFVUZlpwb1daQnVscnJiOHhpS1NtR0NwUGFBZnlmX3JPWmFtd0F6ZWp4QWFYRXFUNnlqZjc3aEtjbERFUmk2N3gzdUhWR0tFQTFFa0xseGtn0gHeAUFVX3lxTE95M0RVS05jTERSQlBINGE1czZsN0pvQUZ5N0cxanktdUlXejd1RXNrbWhEbzRmODBQamQxZGUyVkwxcW1Vamg3d2stSGJMWE5rZzB3LVRiVDZoMC12ZHZZVTAycFBsSEhYeFNzSVF0TWhIeXc2eDhhV2l5NjBVSFBUejYtN3Z6U2JsNWprcHJpWDlaQmFzOUszZVhRNmo2OElHcDFwSU90cThwOXZob0I4ZUlJR3FuWTFfd3BpSVJKNGVmY0ZmcFBvTEZQWWh5UC15eGhzejYzUGxuaVl1QQ?oc=5",
       "title": "Crime crackdown: Memphis mayor working with MPD to blanket city with AI-powered camera network",
@@ -20132,6 +20411,24 @@
       "needs_review": 0
     },
     {
+      "id": "80da5b5a901f0191089bddbd14ed6a72",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWWZWc2JFZmc5eGg5Y0xDeFgxemJPQXYyTTk5dUFYbG14bHF3dXU0WndvQkdxWHhtYUdHWmJrdHJ3YkhUZ21VZ2pqSzFHX1lOMTkzODhxM0JmZF9uOHBQcWp6YkZaSXgtbVlzVU9rOHQwekFhb0FEVFE3NFFzQ2Vick5XSUFPQ1dpM3lvMlJZLW00U1dsei1SQzV1blF4aVJGZUR4aGExdUJBYnMzTDl2Rg?oc=5",
+      "title": "NYCLU Statement on Buzzfeed Investigation Revealing Clearview AI Use by NY Police Departments",
+      "source": "NYCLU",
+      "date": "2024-04-17",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQWWZWc2JFZmc5eGg5Y0xDeFgxemJPQXYyTTk5dUFYbG14bHF3dXU0WndvQkdxWHhtYUdHWmJrdHJ3YkhUZ21VZ2pqSzFHX1lOMTkzODhxM0JmZF9uOHBQcWp6YkZaSXgtbVlzVU9rOHQwekFhb0FEVFE3NFFzQ2Vick5XSUFPQ1dpM3lvMlJZLW00U1dsei1SQzV1blF4aVJGZUR4aGExdUJBYnMzTDl2Rg?oc=5\" target=\"_blank\">NYCLU Statement on Buzzfeed Investigation Revealing Clearview AI Use by NY Police Departments</a> <font color=\"#6f6f6f\">NYCLU</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Clearview AI, Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "facial recognition"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "4b40e3af40c19608d64bde236c9be914",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMU9CeHlJME5mOU80X3UtbWlzSGJycjEzOGcySlJMNzhWb3hUTzRNc01iZ1ZxOHgtRE9rdVp1OXBrMnhjN1JfaWlQR1l6QzVhX0Q5UGRmTUNqNG5qU2hrNzdGdFpzbUpNSjNHMFVpQWpwdVpSQTJRTXd5cXgyMVlia0RwaUJTNVVjN1JtRktnclMxanZJ0gGaAUFVX3lxTE1WcUUwLTNNRUs2bWhtMUsyZWFUR1R4SjY2MzBLQnhnb09iR3ZrWExleFdFbnVJeHVscTNUU2lNeVZ6aU5MWlphTWtUT1FtWW00TDF4VWtrc3ZtV2JCUVV4NnhxR2RsTUF4Y2doS2RPeEowV1N2R0lxb24xVzF4eU13LXpHQ1hra3JuUDR3M1kwOFdQMGVpZ3NRWkE?oc=5",
       "title": "AI was supposed to make police bodycams better. What happened?",
@@ -20873,6 +21170,21 @@
       "needs_review": 0
     },
     {
+      "id": "19b0b685c8b13b99908384206c2668de",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMEtHWEJ6cXlHZnpjVVJYaWdrLVd2UHhIY1lqdDR0MFRIOHRUMW5oWDNYemE0MVd3cXhITkZ3amc1ZDNJdjd0Um9DMkVEMllKM2xORFBvQ1AwYnJUeDZUNFVYZHdGa01NTzJoRGplT1JwQUw5UlF6Nm5wZWJaSGRwSWM4UDBnbS12TUVublVPcnN0ZFZ1czMyQUx5S2p4VjIycXZHYWNnWjZSeURwQ044dmhjaDNkSnBVVkFLb3RkNGVoYTRqUmQyaHdn?oc=5",
+      "title": "Arizona Police Department Launches Real-Time Crime Center",
+      "source": "Security Today",
+      "date": "2023-10-27",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNMEtHWEJ6cXlHZnpjVVJYaWdrLVd2UHhIY1lqdDR0MFRIOHRUMW5oWDNYemE0MVd3cXhITkZ3amc1ZDNJdjd0Um9DMkVEMllKM2xORFBvQ1AwYnJUeDZUNFVYZHdGa01NTzJoRGplT1JwQUw5UlF6Nm5wZWJaSGRwSWM4UDBnbS12TUVublVPcnN0ZFZ1czMyQUx5S2p4VjIycXZHYWNnWjZSeURwQ044dmhjaDNkSnBVVkFLb3RkNGVoYTRqUmQyaHdn?oc=5\" target=\"_blank\">Arizona Police Department Launches Real-Time Crime Center</a> <font color=\"#6f6f6f\">Security Today</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "b8671e25a75f445b016bb6573409bf94",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPbzVyTEVSOXRNUXZEV2ZtVjFSRUZjNlBhb0NkNkhadlpaZjVyV2o1UW1vSU8tYnBoOUFDVl9uVzRqWnhxOXZxTnhnYzVyQXkyRE4tVlZBemNzRjNBMFh5bHc3SS14eThGUjZlQXFDNDA1ZlhfcDlHZGlWNEdJMEs4enZCZENrd0w0bG13S29JaTY?oc=5",
       "title": "Police adviser publishes principles for use of AI",
@@ -21603,6 +21915,24 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "5764d9eb5dfd8f38a2bc0e5204aa4b84",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZUQ3UVZXRlFGUm5xbVlRZ3AtUnBYWkxTdjJPcGhZb2k2Rm5zNlZCam1yTUk5cFBCWm43ZGNsQjc2YkljY0F0OGFIa1N1eWtETTRxa0N0MFdtekpUelpRUUNVMFVEY3JSdmVtUmYxX3JZZnMzZWdIT0ZpUElidnM3azg3UmdBNmx5QXZKYWI3Q29MRllNUzE5ZGk5aE44RjV0OWkwX1ljaWVkRjNpSmo2bjY3bldaTmNrVmMtZWtB?oc=5",
+      "title": "Kustom Signals Introduces Argus Body Worn Camera with the Power of Artificial Intelligence",
+      "source": "Police Magazine",
+      "date": "2023-04-05",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQZUQ3UVZXRlFGUm5xbVlRZ3AtUnBYWkxTdjJPcGhZb2k2Rm5zNlZCam1yTUk5cFBCWm43ZGNsQjc2YkljY0F0OGFIa1N1eWtETTRxa0N0MFdtekpUelpRUUNVMFVEY3JSdmVtUmYxX3JZZnMzZWdIT0ZpUElidnM3azg3UmdBNmx5QXZKYWI3Q29MRllNUzE5ZGk5aE44RjV0OWkwX1ljaWVkRjNpSmo2bjY3bldaTmNrVmMtZWtB?oc=5\" target=\"_blank\">Kustom Signals Introduces Argus Body Worn Camera with the Power of Artificial Intelligence</a> <font color=\"#6f6f6f\">Police Magazine</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "ALPR"
       ],
       "needs_review": 0
     },
@@ -24148,6 +24478,23 @@
       "story_type": "vendor",
       "relevance_score": 0.85,
       "key_entities": "Google, EFF, ICE",
+      "location": null,
+      "tags": [
+        "predictive policing"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "72862b7bb80ed513ecea8eb6e6da1733",
+      "url": "https://news.google.com/rss/articles/CBMiqwNBVV95cUxOVE0yUTdZOHpGRHN2b3dHSHhZdlhxekV1aTJoZldrSENqN1Y0Q3A1cjVNcGlBUjZySFFvSkhXMzBTWG0xR3NaaXZpTlNNdEt2R0xad0YxM0ZkeFZCeTE5dWdsV0xUMUg5a0s3YkdfU1ZLY0pFQ2dTYzJuZ2k2Sl9ObnFpQ1RyUlFhT2hlbEZZTVhzenpDYTY1MUJ5TGhYX3AtUkZFNTFJWkZRdjZ4S0p2MVlPTlFCZUJreVVZRC1JSjBRcEpaRWdfNXJDTkFrRWJNaHEwSlVhMnl6YXpjdFNMaHNDeF9jSEY0Vkl1NFZYNjNFbzlCMFh6cEJid1BCTm83SmM4eTlwZHoxbmdDYldUa05jZmNpVVNtUzFOUVdBT0JEOS1xQTEzSzBsMG9sM1RIWTgwc1RyQzJ4RTZ4NEJXLURCNE5jbEpVUUZNSmRINW4wX3A5LXBGSWpoazZKV2t4dF8zY285SEl1NlFFeVRsMXczUDQ0bDFyaHVYOVhESk5yZVZpZUJPTWM1dDVGeTNYM3Zua2tObXltVnNsWUtYMUNZMUxwUm5vTzVZ?oc=5",
+      "title": "Is Predictive Policing the Law-Enforcement Tactic of the Future?",
+      "source": "The Wall Street Journal",
+      "date": "2016-04-24",
+      "date_discovered": "2026-01-17",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqwNBVV95cUxOVE0yUTdZOHpGRHN2b3dHSHhZdlhxekV1aTJoZldrSENqN1Y0Q3A1cjVNcGlBUjZySFFvSkhXMzBTWG0xR3NaaXZpTlNNdEt2R0xad0YxM0ZkeFZCeTE5dWdsV0xUMUg5a0s3YkdfU1ZLY0pFQ2dTYzJuZ2k2Sl9ObnFpQ1RyUlFhT2hlbEZZTVhzenpDYTY1MUJ5TGhYX3AtUkZFNTFJWkZRdjZ4S0p2MVlPTlFCZUJreVVZRC1JSjBRcEpaRWdfNXJDTkFrRWJNaHEwSlVhMnl6YXpjdFNMaHNDeF9jSEY0Vkl1NFZYNjNFbzlCMFh6cEJid1BCTm83SmM4eTlwZHoxbmdDYldUa05jZmNpVVNtUzFOUVdBT0JEOS1xQTEzSzBsMG9sM1RIWTgwc1RyQzJ4RTZ4NEJXLURCNE5jbEpVUUZNSmRINW4wX3A5LXBGSWpoazZKV2t4dF8zY285SEl1NlFFeVRsMXczUDQ0bDFyaHVYOVhESk5yZVZpZUJPTWM1dDVGeTNYM3Zua2tObXltVnNsWUtYMUNZMUxwUm5vTzVZ?oc=5\" target=\"_blank\">Is Predictive Policing the Law-Enforcement Tactic of the Future?</a> <font color=\"#6f6f6f\">The Wall Street Journal</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Google, DHS",
       "location": null,
       "tags": [
         "predictive policing"
