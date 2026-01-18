@@ -111,10 +111,27 @@ K9_KEYWORDS = {
         'k9', 'k-9', 'canine', 'police dog', 'drug dog', 'detection dog',
         'police canine', 'k9 unit', 'canine unit', 'handler'
     ],
-    'incident_terms': [
-        'bite', 'attack', 'injury', 'mauled', 'lawsuit', 'settlement',
-        'death', 'died', 'killed', 'false alert', 'false positive',
-        'excessive force', 'civil rights', 'fourth amendment', 'search'
+    'context_terms': [
+        # Incidents and injuries
+        'bite', 'attack', 'injury', 'mauled', 'injured', 'bit',
+        # Deaths
+        'death', 'died', 'killed', 'fatal',
+        # Legal
+        'lawsuit', 'settlement', 'verdict', 'ruling', 'court', 'judge',
+        'excessive force', 'civil rights', 'fourth amendment', 'probable cause',
+        # Detection issues
+        'false alert', 'false positive', 'reliability', 'accuracy', 'error',
+        # Policy and reform
+        'policy', 'reform', 'regulation', 'guideline', 'standard', 'rule',
+        # Program changes
+        'disbanded', 'ended', 'discontinued', 'suspended', 'removed', 'terminated',
+        # Training and certification
+        'training', 'certification', 'certified', 'decertified', 'qualified',
+        # Research and data
+        'study', 'research', 'report', 'statistics', 'data', 'review',
+        # Operations
+        'apprehension', 'capture', 'tracked', 'located', 'found', 'search',
+        'deployment', 'deployed'
     ]
 }
 
@@ -333,11 +350,11 @@ def keyword_prefilter(title: str, snippet: str, topic: TopicConfig) -> bool:
         has_ai = any(kw in text for kw in patterns.get('ai_tech', []))
         return has_law and has_ai
 
-    # For K9: need K9 terms AND incident/legal terms
+    # For K9: need K9 terms AND context terms (incidents, policy, training, etc.)
     elif topic.name == 'K9 Incidents':
         has_k9 = any(kw in text for kw in patterns.get('k9_terms', []))
-        has_incident = any(kw in text for kw in patterns.get('incident_terms', []))
-        return has_k9 and has_incident
+        has_context = any(kw in text for kw in patterns.get('context_terms', []))
+        return has_k9 and has_context
 
     # For Force Science: comprehensive Stage 1 decision rules
     elif topic.name == 'Force Science':

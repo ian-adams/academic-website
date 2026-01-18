@@ -11,7 +11,7 @@ rss_feeds:
     url: "https://www.govtech.com/public-safety.rss"
 
   - name: "Law Enforcement Today"
-    url: "lawenforcementtoday.com/index.rss"
+    url: "https://lawenforcementtoday.com/index.rss"
 
   # Criminal Justice & Civil Liberties
   - name: "ACLU"
