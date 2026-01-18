@@ -99,10 +99,24 @@ search_terms:
   - "\"Force Science\" peer review"
   - "Lewinski research criticism"
 
-  # Broader searches for legal context
+  # Broader searches for ADJACENT content (expert testimony ecosystem)
+  # These find articles about police use-of-force litigation without requiring Force Science mention
   - "police shooting expert witness testimony"
   - "use of force expert Daubert"
   - "officer-involved shooting expert challenged"
+  - "police expert witness excluded"
+  - "use of force expert testimony trial"
+  - "Daubert motion police shooting"
+  - "Daubert hearing officer involved"
+  - "expert witness police excessive force"
+  - "Rule 702 police shooting"
+  - "motion to exclude police expert"
+  - "police shooting expert credibility"
+  - "use of force expert reliability"
+  - "police trainer expert testimony"
+  - "law enforcement expert witness lawsuit"
+  - "qualified immunity expert testimony"
+  - "Section 1983 expert witness"
 
 # NewsAPI configuration
 newsapi:
