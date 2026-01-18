@@ -1,6 +1,6 @@
 {
-  "updated": "2026-01-18T10:29:51Z",
-  "count": 492,
+  "updated": "2026-01-18T22:43:47Z",
+  "count": 505,
   "stories": [
     {
       "id": "cceee37af7c2404c5bfd1e4c4902d8cc",
@@ -499,6 +499,24 @@
       "needs_review": 0
     },
     {
+      "id": "d66ef50daccc0be2a8bba6171cb5c47d",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVTZGdm5HemYzTi1LbHFJOEJOMmMwMkdlVzJ0ODhtWkJYbWxWZ3o4T1FoNW9Ta2Nrd052LTNsdkpITW9fQnFkMWM5ZjN4c2xWYzdlRmIzU2xxMk1mLUZzdmlTNkROSVJaTG80b21zcDREekZ3N0NXOU5EM2o4cG1NUUhYZ3NVLTl2THV4MThrUTEtbTFCejdSRzJPV0V4dnJaYWZpcllLYWJabHZLcDJzQQ?oc=5",
+      "title": "Police K-9 Spike dies after being shot in Burbank; Fleeing suspect also killed",
+      "source": "Daily Breeze",
+      "date": "2025-11-23",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQVTZGdm5HemYzTi1LbHFJOEJOMmMwMkdlVzJ0ODhtWkJYbWxWZ3o4T1FoNW9Ta2Nrd052LTNsdkpITW9fQnFkMWM5ZjN4c2xWYzdlRmIzU2xxMk1mLUZzdmlTNkROSVJaTG80b21zcDREekZ3N0NXOU5EM2o4cG1NUUhYZ3NVLTl2THV4MThrUTEtbTFCejdSRzJPV0V4dnJaYWZpcllLYWJabHZLcDJzQQ?oc=5\" target=\"_blank\">Police K-9 Spike dies after being shot in Burbank; Fleeing suspect also killed</a> <font color=\"#6f6f6f\">Daily Breeze</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "0496d7d43a962cd2e8e3656552394062",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQQ0h5T000TXZ5N2NVRjlVU1lEaUpOR0FWY3IyQVM1YlVSekdKZzZPYkJyUlNRbHpTQUhzTTlNR3B2ZWdxZUN3c180b29FUjVaU3dhVHRoNHp3OXBLY0Z3VVdYRkg3WjI5bnFwcEgwTkhqQU5YeFB2c2NXdFNnUkVCbXNWX0pMR1NfQkVHZ3RGMFhkVEd5bVVZbnA5ONIBoAFBVV95cUxOLXlyQnFLMkNtZGR2V1UzQ3FUNU1HcFVhNXZRR1BSYmFfZzE5di02UE5KWksxb2M3bkNTWU9ha3EyRVZaV2NYVHZfcnJsdUJJd1Y2TTUybzNoOGxwMlNpeHYtSlhzTFZsMzc2QWFmQ0t3eHU2V0ZIVHRyS3kxY0J1OEdSQmNQeWwxdTkxcU5qZVFpUWpOdFRvdF9yNklSbEVj?oc=5",
       "title": "Burbank Police Department K9 shot, killed on 5 Freeway",
@@ -865,6 +883,36 @@
       "needs_review": 0
     },
     {
+      "id": "72c7187fc965b018923a6afa64ebfdcc",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQZzFmWGNFN2k4dEF3U1otdXJuVlZ4NGFseUJBU0I2cGptZzJPRi1tbzZuVkVBSlVBeDdLdGY1LW9xRjJINllQVXRGX2RBTTM3TTZzdEpvUkJudXFNRy1PUlc4Tmdwc3lhM21fU21DUXZOeURCR21fRXFXdUk0dng5c2JKZlpxRjRGdkM0ZGt1eWZlUVpBLXJybkZKN0RFVldQd0NiRFV5Q2xDVWktcE45Yl9aV255MmZMMEF4RlpnbjVkdG1kNEJFVlRDUVRMcjk5ZkFEMkRYeVVhWVppMWVUNV9rTXJwOV9WRjI1WFVyQlpqZw?oc=5",
+      "title": "K9 critically injured in stabbing; police say additional charges pending",
+      "source": "ABC10",
+      "date": "2025-10-17",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi8gFBVV95cUxQZzFmWGNFN2k4dEF3U1otdXJuVlZ4NGFseUJBU0I2cGptZzJPRi1tbzZuVkVBSlVBeDdLdGY1LW9xRjJINllQVXRGX2RBTTM3TTZzdEpvUkJudXFNRy1PUlc4Tmdwc3lhM21fU21DUXZOeURCR21fRXFXdUk0dng5c2JKZlpxRjRGdkM0ZGt1eWZlUVpBLXJybkZKN0RFVldQd0NiRFV5Q2xDVWktcE45Yl9aV255MmZMMEF4RlpnbjVkdG1kNEJFVlRDUVRMcjk5ZkFEMkRYeVVhWVppMWVUNV9rTXJwOV9WRjI1WFVyQlpqZw?oc=5\" target=\"_blank\">K9 critically injured in stabbing; police say additional charges pending</a> <font color=\"#6f6f6f\">ABC10</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "b483cb47aaa7f46da73be4457a0894c4",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1sczZyRzZwMUFsMnplNVhKNjhBYTFQeXZzUTAzZXJVSWxrMXByVFJkcUpia1M4ZldVR1pTVWtqZ1lWQXl6ZFUzczVkaVVTUkxSSGc1SGhMNkVHQ0RjZHFHSTB4N2F5bnJtenZET2hMeTZhR0NTYjNRZC13?oc=5",
+      "title": "N.Y. Sheriff's K-9 Dies In Building Search",
+      "source": "Police Magazine",
+      "date": "2025-10-17",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE1sczZyRzZwMUFsMnplNVhKNjhBYTFQeXZzUTAzZXJVSWxrMXByVFJkcUpia1M4ZldVR1pTVWtqZ1lWQXl6ZFUzczVkaVVTUkxSSGc1SGhMNkVHQ0RjZHFHSTB4N2F5bnJtenZET2hMeTZhR0NTYjNRZC13?oc=5\" target=\"_blank\">N.Y. Sheriff's K-9 Dies In Building Search</a> <font color=\"#6f6f6f\">Police Magazine</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "b569aba8897066985ed2c1ae6df350f9",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE41OW85Q0JsR3JqeW10NHRjQXA1R2l3WTBsNjFZTDU4UkFJUHBmZ3pBZGNmejd4Unl2WnlJZXdNV3Z6dHQwX0xqelhucUF4M25ia1REbHU1eU95RTh6SDBES1RWYXRFdlVpcXpj?oc=5",
       "title": "Colorado Police K9 Loses Leg After Being Attacked and Stabbed Multiple Times",
@@ -918,6 +966,21 @@
       "date_discovered": "2026-01-12",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxOQkJ3RUpqR0Noa0paMmVueWQ4c082MFBQcDdpT3YzUURaUUdtX0FlMzF2ZVd6ZUVGczB1U3hoeUpXZUNyajM3cVJyeVlicGdQLUpMaFZEc1NVQmZITU40bi1GdlBGTGkwT1JxRDZsRG5pWFVYUVFkbUVVVXg3aWhROTFuOEExdUNTRnFNekowOUQ?oc=5\" target=\"_blank\">Meme Mocked Officer Suing Police Department for K-9 Attack</a> <font color=\"#6f6f6f\">Newsweek</font>",
       "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "9789951b80667dd02efb3d1a2d114b44",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNSmJUaFpKTEFyQXkyTUk5NnJMYWNPb1hKd2RSamxBVXlQQkZfZy01ZTVaTGV2dFplV1lBNXlmenhpZHVxR01yVGxFb281Y04wN1BiZnZsUnpaeUdzMnVTcDZYQ2ppWnJFOFBDQnhtSTQ0MVZ5b1hUSHNydFk5cXlfMTNXTUVvcWpoanF1Z01xaVFmOXA1cXVr?oc=5",
+      "title": "Five things I learnt being mauled by a police dog - and yes, it hurt",
+      "source": "The Argus",
+      "date": "2025-10-12",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNSmJUaFpKTEFyQXkyTUk5NnJMYWNPb1hKd2RSamxBVXlQQkZfZy01ZTVaTGV2dFplV1lBNXlmenhpZHVxR01yVGxFb281Y04wN1BiZnZsUnpaeUdzMnVTcDZYQ2ppWnJFOFBDQnhtSTQ0MVZ5b1hUSHNydFk5cXlfMTNXTUVvcWpoanF1Z01xaVFmOXA1cXVr?oc=5\" target=\"_blank\">Five things I learnt being mauled by a police dog - and yes, it hurt</a> <font color=\"#6f6f6f\">The Argus</font>",
+      "story_type": "general",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
       "location": null,
@@ -1789,6 +1852,23 @@
       "needs_review": 0
     },
     {
+      "id": "aeabaab81ba130c54ac6cd3c8b7e5ddb",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOb2NUd0FfaHNPVmdVbm4zdHdkWVRTOXlZbHZIdENaNGE4RDA4Y1gyYm9zSkVxLUloVER1NWtqUUdqVWJaT21CRGpwSUdkNUVWek1idlVtV1RDVkNYdEtYWW5CODI3YVNMN3BYOHFKbC1XWmxoNkwzMjltRTE1Z1hWQ0g0RGstY1ZGWjFFbkhuQmxrZy1oQ1FmNHpPQ2F5cUktVFJvMA?oc=5",
+      "title": "Questions remain after police K9 killed in line of duty in North County",
+      "source": "KMOV",
+      "date": "2025-08-01",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOb2NUd0FfaHNPVmdVbm4zdHdkWVRTOXlZbHZIdENaNGE4RDA4Y1gyYm9zSkVxLUloVER1NWtqUUdqVWJaT21CRGpwSUdkNUVWek1idlVtV1RDVkNYdEtYWW5CODI3YVNMN3BYOHFKbC1XWmxoNkwzMjltRTE1Z1hWQ0g0RGstY1ZGWjFFbkhuQmxrZy1oQ1FmNHpPQ2F5cUktVFJvMA?oc=5\" target=\"_blank\">Questions remain after police K9 killed in line of duty in North County</a> <font color=\"#6f6f6f\">KMOV</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "eba07eac24805b241009a69fbb047e53",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPaVEzamlVZkQtZ1I4VDk3N3lqMkZRVmpvNUM2RzBTTjlMbU9OZk56Zm1NNm92eXNHSGZlU1NhOUFhZlVWUFU4bTN4TVF3MC1GQXhUN0RiSDE5dmlQc3BBUFRhYlVMWVdyMF90UkFGeTZBcjNudHdoZXl0Rm1LQ3ljN0hSeVZZMDd3ZlhnY1drdjAyWHRfbmtOMmxENng4VTF3T0RSSGM2YmdHRk1JaFlRZVNoamQ?oc=5",
       "title": "Jefferson County deputy acquitted in 2024 police K9 attack of toddler",
@@ -1966,6 +2046,21 @@
       "needs_review": 0
     },
     {
+      "id": "a66b22276c3fd672d8d568f09e73d33a",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQ0ltbFg4SGZPSk9vd0lFLW1BMHNPNGNuSXdjYWRROHRoOUJJajZPdlk0Q1poV3ozUkNIMXp3WWlsb1N1Ym5CYnZzLUIwMjBXWFY1OElVTm5jc3VXclIxZktRREkyUElpT2trMzQ1VlM1YTYtb2EyWEhfM3JZVkRpT2FEdGZxQlUwd2l2R1g3OGRlY0Z5NDhRR1RfeVFuUC1zTXpKdUEyVjRvVXBqa0RUdThUQVQ0enNscV9KS1VINXMtVG8?oc=5",
+      "title": "VIDEO: Dog injured after North Charleston Police stop man they believed was wanted",
+      "source": "Live 5 News",
+      "date": "2025-07-09",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQ0ltbFg4SGZPSk9vd0lFLW1BMHNPNGNuSXdjYWRROHRoOUJJajZPdlk0Q1poV3ozUkNIMXp3WWlsb1N1Ym5CYnZzLUIwMjBXWFY1OElVTm5jc3VXclIxZktRREkyUElpT2trMzQ1VlM1YTYtb2EyWEhfM3JZVkRpT2FEdGZxQlUwd2l2R1g3OGRlY0Z5NDhRR1RfeVFuUC1zTXpKdUEyVjRvVXBqa0RUdThUQVQ0enNscV9KS1VINXMtVG8?oc=5\" target=\"_blank\">VIDEO: Dog injured after North Charleston Police stop man they believed was wanted</a> <font color=\"#6f6f6f\">Live 5 News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "a444ba9d4ebed1d267ab1f6cca707a0d",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPRllRTVNrZTV0czlIUTlDQ0Z0VzRvWmZVcTZ3RTF6eG1VRDVfXzExclktemwzSUxjem14d3NsQjkyVkdHUDI2T1dqNktReGJJdUN5WkdfMmhBSDBpVUhwZ1VmdVRTYlRpQUktVHM1ZjFiZldrQUZ0RUZnY2s4bjJHU2FDN3dhOHNaYXVoUVgyM1Z0cnd3MG1oMEtHSkpuRWprSFkyT25rcUU1RFlka09LcG5SSEZrMjZtcFMtcXB4eC1Ed3loaDRiREFjSG1BQTNoT0o0?oc=5",
       "title": "Federal lawsuits allege Canton violated civil rights over police dog bites during arrests",
@@ -2072,6 +2167,23 @@
       "key_entities": "Google, ICE",
       "location": null,
       "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "abefe1335bc38e4bcf679f54e25d0167",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZmg4NWdIRFVHaFB5amhodGhZZG10Z1k0RlNPVlhSdGVHbHphMmFSc3RwaUhsb1hLY1dXLXNqN3FOR1lYdU1rcWtfU0dWdEZfWHdaWXh3dzNfUjItdW03Qm5SRHdLclJmYUQ1bXYyaWlJRXlfVmRzZkx4M3AxYXY5dEJQQTktSnRHU0NuRWNBa9IBlAFBVV95cUxNSzR0aHgxd2tyZ3dkcEtDa3k1a0g0bTdaTloyVnIzVFliNTVSNUY2YUlsMDc5elJOTmJJRzVfejRNZ1BVNTVhaElncW9BYWxzNk1yQUFoYk9VdXo5dWFtZVFkcVAzT09JNmFXai1OMElHSHRWU182Mml1aU9aYmRuTEZCX2tVS3RMVlh6UUIxdXBOa2hn?oc=5",
+      "title": "Police dog bites member of the public while chasing suspect on Notts estate",
+      "source": "Nottinghamshire Live",
+      "date": "2025-06-25",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPZmg4NWdIRFVHaFB5amhodGhZZG10Z1k0RlNPVlhSdGVHbHphMmFSc3RwaUhsb1hLY1dXLXNqN3FOR1lYdU1rcWtfU0dWdEZfWHdaWXh3dzNfUjItdW03Qm5SRHdLclJmYUQ1bXYyaWlJRXlfVmRzZkx4M3AxYXY5dEJQQTktSnRHU0NuRWNBa9IBlAFBVV95cUxNSzR0aHgxd2tyZ3dkcEtDa3k1a0g0bTdaTloyVnIzVFliNTVSNUY2YUlsMDc5elJOTmJJRzVfejRNZ1BVNTVhaElncW9BYWxzNk1yQUFoYk9VdXo5dWFtZVFkcVAzT09JNmFXai1OMElHSHRWU182Mml1aU9aYmRuTEZCX2tVS3RMVlh6UUIxdXBOa2hn?oc=5\" target=\"_blank\">Police dog bites member of the public while chasing suspect on Notts estate</a> <font color=\"#6f6f6f\">Nottinghamshire Live</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
       "needs_review": 0
     },
     {
@@ -2677,6 +2789,23 @@
       "key_entities": "Ring, Google, ICE",
       "location": null,
       "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "8247cf40922f9b0ef8bff2c464157787",
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQOC12QnhIak1hMDNRVTc2dG51bG5LM05DUmQ2N21MZjFaeUVVYU50a1A3YVM3S0ZHSFY3RUp3S3BpYm9CVTJSQWlJME5IWDZXaWkzaDhiR25vc3FXQlo1dzhkYlU5MkMyS3N6bVZ3VUpaSW9UVmx1bW0wSXhSTEx6c2pwbDR1R3ZfZktJWVZTcEtIbnVDTzdadldLUnE1d00yNEE3eHIzWWFZX0lfOEs1TV9sNm1UaHFuSmk3eXByai00X0NCSzg5bkVSUDRFMlJIZzJ0aUpEejdlMTZWZHdYOXhJdHdqMXRPcjAzaC0wZnc5bURyUkxkejNxSHJPeWFB?oc=5",
+      "title": "K9 accidentally bites Greensboro police officer's arm during altercation with suspect",
+      "source": "wfmynews2.com",
+      "date": "2025-04-16",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMigAJBVV95cUxQOC12QnhIak1hMDNRVTc2dG51bG5LM05DUmQ2N21MZjFaeUVVYU50a1A3YVM3S0ZHSFY3RUp3S3BpYm9CVTJSQWlJME5IWDZXaWkzaDhiR25vc3FXQlo1dzhkYlU5MkMyS3N6bVZ3VUpaSW9UVmx1bW0wSXhSTEx6c2pwbDR1R3ZfZktJWVZTcEtIbnVDTzdadldLUnE1d00yNEE3eHIzWWFZX0lfOEs1TV9sNm1UaHFuSmk3eXByai00X0NCSzg5bkVSUDRFMlJIZzJ0aUpEejdlMTZWZHdYOXhJdHdqMXRPcjAzaC0wZnc5bURyUkxkejNxSHJPeWFB?oc=5\" target=\"_blank\">K9 accidentally bites Greensboro police officer's arm during altercation with suspect</a> <font color=\"#6f6f6f\">wfmynews2.com</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Ring, Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
       "needs_review": 0
     },
     {
@@ -4022,6 +4151,23 @@
       "key_entities": "Google, ICE",
       "location": null,
       "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "71df326313f690ee5bdb973e69a7f79b",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQakVoRkdYS2tQeEVEUW5nNGUwd2hTZ0F5U1loZnBiMWhCVGFDSDNUeUFDekRzNV9ydFpMTXlva0JnQkg5MDNOOERVeDA1b2x0aWQzVHBJSHRtQzBUWnhrRlh2dklXRkFNVzdVQ1p6bXp2ZDVJdVpta3pYQmJoRVQ4VHpXUUp4OUFzeDl2M3RVOGdFZzNaTmp2Y1NTZ0xodnlnZFBPcE1heE56a29UeklpN3B3?oc=5",
+      "title": "TPD releases new K9 policy following community outrage over April traffic stop",
+      "source": "WTVG",
+      "date": "2024-08-30",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQakVoRkdYS2tQeEVEUW5nNGUwd2hTZ0F5U1loZnBiMWhCVGFDSDNUeUFDekRzNV9ydFpMTXlva0JnQkg5MDNOOERVeDA1b2x0aWQzVHBJSHRtQzBUWnhrRlh2dklXRkFNVzdVQ1p6bXp2ZDVJdVpta3pYQmJoRVQ4VHpXUUp4OUFzeDl2M3RVOGdFZzNaTmp2Y1NTZ0xodnlnZFBPcE1heE56a29UeklpN3B3?oc=5\" target=\"_blank\">TPD releases new K9 policy following community outrage over April traffic stop</a> <font color=\"#6f6f6f\">WTVG</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [
+        "policy"
+      ],
       "needs_review": 0
     },
     {
@@ -6759,6 +6905,40 @@
       "needs_review": 0
     },
     {
+      "id": "761af88d93f94f930bcf483a9a409742",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPSkhSWm1tU08yMWdjbzFjRGxhWE5yV05kTVJnbnRnOGs5Z0JtUC1KdnF4SVV6YmthTFdRVXphNlByMzE4VGd5Z2RHUlJicW1hSTBlM1lSblFsR0Z3VkN3T3V5NFlERHhIRkREeW56Mk5oMnFyU1lRc0x4OVVRUnltenY2YWkwdkxkbVkyc3l1cVJUeWdtZll5RzRFR1ZVWk1rTllPREVXR19VRkVMVTZoMkhKb2FEbkJXcExsVHdTcXRXZkdzN2J5cENoWXlSaVlUSUltRUNGMnAyeW8?oc=5",
+      "title": "Man seeks $2M after he says officer let police dog attack him",
+      "source": "azcentral.com and The Arizona Republic",
+      "date": "2019-10-23",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxPSkhSWm1tU08yMWdjbzFjRGxhWE5yV05kTVJnbnRnOGs5Z0JtUC1KdnF4SVV6YmthTFdRVXphNlByMzE4VGd5Z2RHUlJicW1hSTBlM1lSblFsR0Z3VkN3T3V5NFlERHhIRkREeW56Mk5oMnFyU1lRc0x4OVVRUnltenY2YWkwdkxkbVkyc3l1cVJUeWdtZll5RzRFR1ZVWk1rTllPREVXR19VRkVMVTZoMkhKb2FEbkJXcExsVHdTcXRXZkdzN2J5cENoWXlSaVlUSUltRUNGMnAyeW8?oc=5\" target=\"_blank\">Man seeks $2M after he says officer let police dog attack him</a> <font color=\"#6f6f6f\">azcentral.com and The Arizona Republic</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "0296b863927fb293169c63f3d8533906",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8wckdLVEdqaWNnQ21RbVFkQnc5dV8tRGxScVd1YkhpU2stNmZiVGtHVllVc21WU0lBZ3RiaDBMNXlMOVpNS2tHb05iLUZMUHdfZHgzak1iZl83VF8tUk5FNGk5cVNEdzlMRjNSLWdQTEhkWjlXSEotOE5sV28?oc=5",
+      "title": "Man will get $99,000 after officer deployed K-9 unit",
+      "source": "Santa Monica Daily Press",
+      "date": "2019-10-21",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE8wckdLVEdqaWNnQ21RbVFkQnc5dV8tRGxScVd1YkhpU2stNmZiVGtHVllVc21WU0lBZ3RiaDBMNXlMOVpNS2tHb05iLUZMUHdfZHgzak1iZl83VF8tUk5FNGk5cVNEdzlMRjNSLWdQTEhkWjlXSEotOE5sV28?oc=5\" target=\"_blank\">Man will get $99,000 after officer deployed K-9 unit</a> <font color=\"#6f6f6f\">Santa Monica Daily Press</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "fe9ab4ef12d990d1693c72ad9fbe387c",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWWlzN0xaU0VXSXNNLVZHU2ZFWVhPT19XNmRMR2tZcEphakFDdERjN1VBN0d2WWtwLWFBZHNCTXFqVjRveXdwbXZ5SkxtSHJsZ081N2dJT25LR2tnZUFZeFpUNThQb2szM1FfeGdSdS1nUU1NREFjQ282OUpmMlAwVkhmblpxTHNqeWszclpXeF9HMmdjaWtXT3FKQmhLWHRFU080T3d3R0MyQnNCWnQ4dlAtb1YwV3VrVGRyVnVpZkc5LS1zaEJHbnJVYw?oc=5",
       "title": "Greenville County man bitten by K-9 during arrest reaches settlement of $230,000, records show",
@@ -7592,6 +7772,21 @@
       "needs_review": 0
     },
     {
+      "id": "6e5dfcfe40097de34145d7bf4133f106",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOX005ZFMwbnZpczJBUHBjb0FGLXlBOXlJM0pYcS1tazhuS0tQWm5pTzY4Ym1VbmpfT0hGSkF1RUZkVXJGSVZfZHp1ajZPWFphYUZ4ZURPcHZUQ09zeUNlYk1rOGFLcXJnNTQxd0s1am5QU3FOMVJ5SEt1aEpKYmZsbGZXVHhTcG9GX0hvSDRMbzZvbC10M1RKdTF1aDFmMzR0WU5mYlRTeFRnNTJoYWlOeFlKNGJrNVhMMzFQVnFKVzA?oc=5",
+      "title": "'Racist' LA police dogs only bite Latinos and African-Americans",
+      "source": "The Independent",
+      "date": "2013-10-11",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOX005ZFMwbnZpczJBUHBjb0FGLXlBOXlJM0pYcS1tazhuS0tQWm5pTzY4Ym1VbmpfT0hGSkF1RUZkVXJGSVZfZHp1ajZPWFphYUZ4ZURPcHZUQ09zeUNlYk1rOGFLcXJnNTQxd0s1am5QU3FOMVJ5SEt1aEpKYmZsbGZXVHhTcG9GX0hvSDRMbzZvbC10M1RKdTF1aDFmMzR0WU5mYlRTeFRnNTJoYWlOeFlKNGJrNVhMMzFQVnFKVzA?oc=5\" target=\"_blank\">'Racist' LA police dogs only bite Latinos and African-Americans</a> <font color=\"#6f6f6f\">The Independent</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "a454beed013abdbdd38d11aa802ad305",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZ0Q3QkVsTlZ6M3BKYW84X003Q3ZQaEdBZEhIVkpZZ0xYTHNEZTN1dW9oVjFoaENSTk1CVW45a1A1NGxHUnB4ejlfekw5S3BJWWVnckNBRGZBLTlwRExnbldXMTdUeWN6YW5xMnB2d0pqN2lMRHdWYmFmbl9tYW9VUWNlZ1lRcGVjcVlRU2thdkFwMWZqTjU5S3QtUlBiX2ZJNF9OWHhkTThrems?oc=5",
       "title": "Supreme Court: Drug dog sniff is unconstitutional search",
@@ -7634,6 +7829,21 @@
       "story_type": "incident",
       "relevance_score": 0.85,
       "key_entities": "Google",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "bdf6bfd66b49bb244cfc60ff93a07bad",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNT296b0dRMl8ybEJHV0FULTVwY2ZnaFpxdThKOGxqbUstRXc5bEx0ejRfX1RPcG84TUVJVGtQSEZxNWJNRjhDeXVnZU96X3YwajhIZWI0MUtYZnJCT3pSUVdNNzRTVFM1Vl85dUFFUTh6d2xsdWRzYWYtMktrTFJYRzlzUHdjQzRjcHk4VnZ5RjRLUHlHLUZTRUF6Sno3dS1zT1lodUYtTlA1VG5QQnRyb2I3MC1SMWF0VHpmWm9LbzRLN1BmUU9yUXo5TmZ2ZGt3R3dRVF9LemZaMl9tYlZMaC1obWdpTjIzVkZadHg1T3ptbE1Rek1kZVhIR1JPSDA?oc=5",
+      "title": "Penis injury from Gretna police dog attack was unjustified, man alleges in lawsuit",
+      "source": "NOLA.com",
+      "date": "2011-08-10",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi_wFBVV95cUxNT296b0dRMl8ybEJHV0FULTVwY2ZnaFpxdThKOGxqbUstRXc5bEx0ejRfX1RPcG84TUVJVGtQSEZxNWJNRjhDeXVnZU96X3YwajhIZWI0MUtYZnJCT3pSUVdNNzRTVFM1Vl85dUFFUTh6d2xsdWRzYWYtMktrTFJYRzlzUHdjQzRjcHk4VnZ5RjRLUHlHLUZTRUF6Sno3dS1zT1lodUYtTlA1VG5QQnRyb2I3MC1SMWF0VHpmWm9LbzRLN1BmUU9yUXo5TmZ2ZGt3R3dRVF9LemZaMl9tYlZMaC1obWdpTjIzVkZadHg1T3ptbE1Rek1kZVhIR1JPSDA?oc=5\" target=\"_blank\">Penis injury from Gretna police dog attack was unjustified, man alleges in lawsuit</a> <font color=\"#6f6f6f\">NOLA.com</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
       "location": null,
       "tags": [],
       "needs_review": 0
