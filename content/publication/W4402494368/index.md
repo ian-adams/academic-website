@@ -52,6 +52,6 @@ This study critiques a prominent scholar's claim that randomized controlled tria
 
 ## Citation Information
 
-**Citations:** 3 (as of January 2026)
+**Citations:** 5 (as of January 2026)
 
 [View Publication](https://doi.org/10.1007/s11292-024-09636-7)

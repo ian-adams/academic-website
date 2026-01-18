@@ -77,6 +77,19 @@
       "error_details": [],
       "dry_run": false,
       "duration_seconds": 8
+    },
+    {
+      "timestamp": "2026-01-18T04:07:06Z",
+      "status": "success",
+      "data_source": "openalex",
+      "new_articles": 1,
+      "updated_citations": 1,
+      "synopsis_generated": 0,
+      "synopsis_regenerated": 0,
+      "errors": 0,
+      "error_details": [],
+      "dry_run": false,
+      "duration_seconds": 1
     }
   ]
 }
