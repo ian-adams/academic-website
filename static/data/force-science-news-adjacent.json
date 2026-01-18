@@ -1,9 +1,35 @@
 {
-  "updated": "2026-01-18T11:17:12Z",
+  "updated": "2026-01-18T23:13:05Z",
   "feed_type": "adjacent",
   "description": "Expert testimony ecosystem - police use-of-force litigation",
   "count": 3,
   "stories": [
+    {
+      "id": "c9e90f1b97c258f0bf0ab94df164c5df",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQNFhzMmNzaDZfVkNLNllVNFBYM19RZndnOU8wYm9yeTZQcUhyU1NuejFGZk5lLVlJZ0J4eDVPNzJsSkx4MEVqTklGSHFuNE1IZTk5LTZhYlo2UFFqelNWRkM5NkxuSUpHQWJYNGtzbzROU1RtaEJuMUc3Q2pfTWMyOUlhSm04aTJFMlBYUVI5T0hXZDZkczlnMzVOVzdncHA5end1ajFhNjJsQVZYcGFHZE1VYkpudmctZmtzQmJadnRLU0pxYi1nbXJnU2pVaGpq?oc=5",
+      "title": "Adam Coy in court to determine if the former Columbus cop should get new trial over expert witness",
+      "source": "WOSU Public Media",
+      "date": "2025-04-14",
+      "date_discovered": "2026-01-15",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxQNFhzMmNzaDZfVkNLNllVNFBYM19RZndnOU8wYm9yeTZQcUhyU1NuejFGZk5lLVlJZ0J4eDVPNzJsSkx4MEVqTklGSHFuNE1IZTk5LTZhYlo2UFFqelNWRkM5NkxuSUpHQWJYNGtzbzROU1RtaEJuMUc3Q2pfTWMyOUlhSm04aTJFMlBYUVI5T0hXZDZkczlnMzVOVzdncHA5end1ajFhNjJsQVZYcGFHZE1VYkpudmctZmtzQmJadnRLU0pxYi1nbXJnU2pVaGpq?oc=5\" target=\"_blank\">Adam Coy in court to determine if the former Columbus cop should get new trial over expert witness</a> <font color=\"#6f6f6f\">WOSU Public Media</font>",
+      "story_type": "opinion",
+      "label": "ADJACENT",
+      "confidence": 0.8,
+      "relevance": 55,
+      "relevance_score": 0.55,
+      "signals": [
+        "new trial over expert witness"
+      ],
+      "entities": [
+        "Adam Coy",
+        "Columbus"
+      ],
+      "rationale": "The article discusses a court case involving the admissibility of an expert witness, which is relevant to the broader police use-of-force expert testimony ecosystem, but does not mention Force Science directly or by proxy.",
+      "key_entities": "Adam Coy, Columbus",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
     {
       "id": "2e17f5aa73631df8aa76075420c8cee1",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZnF3MW5LS3JmT0lJdzVSVmlKaXFjRkhPd0FvM1RhTUQ1WU81M1Z4ZDQxTG9rZ1BjT0czbXNKZ2Q1dElPYS1DdjlSOUUyVTFjb210dVNOekkwSDBPY1haZXFDMkN4RzMzNkJXd0U4d1Fob0NPYXcxeWRwYkJIaHVRSXc1bUs5NU9UczFBNUt0d2E1WDRnbGF3QzRkUjlEOXpuU0dCY2dlLUM3R3dPd3lHQ1lxajBNOVZoaldXZG5GQjl0Zw?oc=5",
@@ -33,11 +59,11 @@
     {
       "id": "08819058ef852ed14d2baaef9ebdb314",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVlk3eGVPMUFiR0FhOGJGdjlkQ3lPV0NDeVpIVkhkb0luZTB6bmlCeXNWSWxRM1ZHTkdVaHJzTWZmcVFrZGJwOC1uX09LUk1JdU5PSmkzbEFrQ1NZVkliM2pGQkFhZ19RNzd4Sk9TeGNpV0hwNVRtUWlCWlBJaEdVUVBEQnF0aUlwVDAtRFdLQnd0ejhUcVNBNFk5ODRVRzBkQXJEdDctWjJ3LUU3N0pjcg?oc=5",
-      "title": "Illinois Supreme Court weighs admissibility of ‘reenactment’ in murder case",
+      "title": "Illinois Supreme Court weighs admissibility of \u2018reenactment\u2019 in murder case",
       "source": "Capitol News Illinois",
       "date": "2024-01-10",
       "date_discovered": "2026-01-14",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPVlk3eGVPMUFiR0FhOGJGdjlkQ3lPV0NDeVpIVkhkb0luZTB6bmlCeXNWSWxRM1ZHTkdVaHJzTWZmcVFrZGJwOC1uX09LUk1JdU5PSmkzbEFrQ1NZVkliM2pGQkFhZ19RNzd4Sk9TeGNpV0hwNVRtUWlCWlBJaEdVUVBEQnF0aUlwVDAtRFdLQnd0ejhUcVNBNFk5ODRVRzBkQXJEdDctWjJ3LUU3N0pjcg?oc=5\" target=\"_blank\">Illinois Supreme Court weighs admissibility of ‘reenactment’ in murder case</a> <font color=\"#6f6f6f\">Capitol News Illinois</font>",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPVlk3eGVPMUFiR0FhOGJGdjlkQ3lPV0NDeVpIVkhkb0luZTB6bmlCeXNWSWxRM1ZHTkdVaHJzTWZmcVFrZGJwOC1uX09LUk1JdU5PSmkzbEFrQ1NZVkliM2pGQkFhZ19RNzd4Sk9TeGNpV0hwNVRtUWlCWlBJaEdVUVBEQnF0aUlwVDAtRFdLQnd0ejhUcVNBNFk5ODRVRzBkQXJEdDctWjJ3LUU3N0pjcg?oc=5\" target=\"_blank\">Illinois Supreme Court weighs admissibility of \u2018reenactment\u2019 in murder case</a> <font color=\"#6f6f6f\">Capitol News Illinois</font>",
       "story_type": "general",
       "label": "ADJACENT",
       "confidence": 0.8,
@@ -52,32 +78,6 @@
       ],
       "rationale": "The article discusses the admissibility of a reenactment in a murder case, which is related to the broader topic of police use-of-force expert testimony, but does not mention Force Science or any of its proxies.",
       "key_entities": "Illinois Supreme Court",
-      "location": null,
-      "tags": [],
-      "needs_review": 0
-    },
-    {
-      "id": "c9e90f1b97c258f0bf0ab94df164c5df",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQNFhzMmNzaDZfVkNLNllVNFBYM19RZndnOU8wYm9yeTZQcUhyU1NuejFGZk5lLVlJZ0J4eDVPNzJsSkx4MEVqTklGSHFuNE1IZTk5LTZhYlo2UFFqelNWRkM5NkxuSUpHQWJYNGtzbzROU1RtaEJuMUc3Q2pfTWMyOUlhSm04aTJFMlBYUVI5T0hXZDZkczlnMzVOVzdncHA5end1ajFhNjJsQVZYcGFHZE1VYkpudmctZmtzQmJadnRLU0pxYi1nbXJnU2pVaGpq?oc=5",
-      "title": "Adam Coy in court to determine if the former Columbus cop should get new trial over expert witness",
-      "source": "WOSU Public Media",
-      "date": "2025-04-14",
-      "date_discovered": "2026-01-15",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxQNFhzMmNzaDZfVkNLNllVNFBYM19RZndnOU8wYm9yeTZQcUhyU1NuejFGZk5lLVlJZ0J4eDVPNzJsSkx4MEVqTklGSHFuNE1IZTk5LTZhYlo2UFFqelNWRkM5NkxuSUpHQWJYNGtzbzROU1RtaEJuMUc3Q2pfTWMyOUlhSm04aTJFMlBYUVI5T0hXZDZkczlnMzVOVzdncHA5end1ajFhNjJsQVZYcGFHZE1VYkpudmctZmtzQmJadnRLU0pxYi1nbXJnU2pVaGpq?oc=5\" target=\"_blank\">Adam Coy in court to determine if the former Columbus cop should get new trial over expert witness</a> <font color=\"#6f6f6f\">WOSU Public Media</font>",
-      "story_type": "opinion",
-      "label": "ADJACENT",
-      "confidence": 0.8,
-      "relevance": 55,
-      "relevance_score": 0.55,
-      "signals": [
-        "new trial over expert witness"
-      ],
-      "entities": [
-        "Adam Coy",
-        "Columbus"
-      ],
-      "rationale": "The article discusses a court case involving the admissibility of an expert witness, which is relevant to the broader police use-of-force expert testimony ecosystem, but does not mention Force Science directly or by proxy.",
-      "key_entities": "Adam Coy, Columbus",
       "location": null,
       "tags": [],
       "needs_review": 0

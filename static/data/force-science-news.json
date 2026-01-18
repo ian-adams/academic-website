@@ -1,8 +1,8 @@
 {
-  "updated": "2026-01-18T11:17:12Z",
+  "updated": "2026-01-18T23:13:05Z",
   "feed_type": "primary",
   "description": "Force Science direct and proxy mentions",
-  "count": 13,
+  "count": 18,
   "stories": [
     {
       "id": "8406f793bc421675da2fe43683f96f4e",
@@ -32,6 +32,167 @@
       "needs_review": 0
     },
     {
+      "id": "b43f715614a8964571b6931b864ce2c0",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPNVBMTVl0MWhreTBEM0hMUGZDY2NZazktakJyckp0dEVsRDlFb0NSZjVDZjV6WGRDX3Z0VjNzYk5YTlJ4azlDR1BDcjZEY1k3RDUzaVFZUnc1MWstMFpjMDdmM1FqSDV3d1l6RVFiYzJEZ3BlekJuYjNMTUpwZ0FXNUtqTEtDVnZmQ1k1bUtsOTB6TW5GVm5hUFdUcTZ0azh3a2pWbGJZSkxJeXNHWUdaMmRPSnluNUpwR3YzYXd4QWtTUk5Ec05GSG5jNzdCS2FHcWVYOU0xX0I2a2pDNUFSdHBKdVRhNEdS0gH8AUFVX3lxTE9fbFN3dk1ZZFRzZE5paXdvZWt1Uzd1aW9Pamdudnd3ZTVidUVMazdlRldmRmYzbHNkMjlwU3dhOVVYaml1VTBkUFhVaVdKbXVPVGJRQmlNeVB5bE9TcTZrdy1vWDFQaC1Ra1dMZ3pCRHpKd1RHVHBtQmhVZTZHdFVza2M1SkpXUGFqM013VW5tajJiWURqb2txM2tuN1JKOXJITkEtV24tWnRmOFdvUjliZmRVblZmQ0c5WkpDZGdqNmw3R2VKSDFYZGxCanpLRUwzM3M2YzhCOHdhYVZFTlBlRjRTLWYybnBvRldYWVEydVh5TWczMDRhVUxDTw?oc=5",
+      "title": "Portland Police Bureau\u2019s contract with Minnesota-based Force Science to train instructors draws concerns",
+      "source": "OregonLive.com",
+      "date": "2023-08-16",
+      "date_discovered": "2026-01-12",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi6AFBVV95cUxPNVBMTVl0MWhreTBEM0hMUGZDY2NZazktakJyckp0dEVsRDlFb0NSZjVDZjV6WGRDX3Z0VjNzYk5YTlJ4azlDR1BDcjZEY1k3RDUzaVFZUnc1MWstMFpjMDdmM1FqSDV3d1l6RVFiYzJEZ3BlekJuYjNMTUpwZ0FXNUtqTEtDVnZmQ1k1bUtsOTB6TW5GVm5hUFdUcTZ0azh3a2pWbGJZSkxJeXNHWUdaMmRPSnluNUpwR3YzYXd4QWtTUk5Ec05GSG5jNzdCS2FHcWVYOU0xX0I2a2pDNUFSdHBKdVRhNEdS0gH8AUFVX3lxTE9fbFN3dk1ZZFRzZE5paXdvZWt1Uzd1aW9Pamdudnd3ZTVidUVMazdlRldmRmYzbHNkMjlwU3dhOVVYaml1VTBkUFhVaVdKbXVPVGJRQmlNeVB5bE9TcTZrdy1vWDFQaC1Ra1dMZ3pCRHpKd1RHVHBtQmhVZTZHdFVza2M1SkpXUGFqM013VW5tajJiWURqb2txM2tuN1JKOXJITkEtV24tWnRmOFdvUjliZmRVblZmQ0c5WkpDZGdqNmw3R2VKSDFYZGxCanpLRUwzM3M2YzhCOHdhYVZFTlBlRjRTLWYybnBvRldYWVEydVh5TWczMDRhVUxDTw?oc=5\" target=\"_blank\">Portland Police Bureau\u2019s contract with Minnesota-based Force Science to train instructors draws concerns</a> <font color=\"#6f6f6f\">OregonLive.com</font>",
+      "story_type": "vendor",
+      "label": "LEGACY",
+      "confidence": 0.85,
+      "relevance": 85,
+      "relevance_score": 0.85,
+      "signals": [],
+      "entities": [],
+      "rationale": "",
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "45ef1e6cb62356960b8c76747fd78fb4",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTy1uR1NYclVSSENQQUtheWotR1FndW1YRHd1ODZTTVN2YnM2bE4ydmpqUlRpWVRkbk9nS0xIZFZUeE5IdUo5WEM4ZzF3elBZSzBCS0czUHFLdzFIczRSN0lpXzZlZlI0R0c4Rkp1Z3BQR3RVZ1VLY0NkckJtVHFLSExnTjNGNzVtVk9rR1FyM2YxRmlNREhycE5GdUhmcXplalhpa0hZTUdvYUJHRnJyYVBJdU9OWjBKTEFCTFcyVEdVUUNaNnctNkMyc1hIMDJJ?oc=5",
+      "title": "'Force Science Institute' hosts controversial use of force training in Westlake for police across Ohio",
+      "source": "News 5 Cleveland WEWS",
+      "date": "2022-04-26",
+      "date_discovered": "2026-01-12",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTy1uR1NYclVSSENQQUtheWotR1FndW1YRHd1ODZTTVN2YnM2bE4ydmpqUlRpWVRkbk9nS0xIZFZUeE5IdUo5WEM4ZzF3elBZSzBCS0czUHFLdzFIczRSN0lpXzZlZlI0R0c4Rkp1Z3BQR3RVZ1VLY0NkckJtVHFLSExnTjNGNzVtVk9rR1FyM2YxRmlNREhycE5GdUhmcXplalhpa0hZTUdvYUJHRnJyYVBJdU9OWjBKTEFCTFcyVEdVUUNaNnctNkMyc1hIMDJJ?oc=5\" target=\"_blank\">'Force Science Institute' hosts controversial use of force training in Westlake for police across Ohio</a> <font color=\"#6f6f6f\">News 5 Cleveland WEWS</font>",
+      "story_type": "general",
+      "label": "LEGACY",
+      "confidence": 0.85,
+      "relevance": 85,
+      "relevance_score": 0.85,
+      "signals": [],
+      "entities": [],
+      "rationale": "",
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "76faae978ff24ce354ccb896bc65cd62",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPX2l0bzNOWTY4cUl2MFdfWnRhNzgwcmVoS3M1dzhfQ0NRRmlSUERtUWZYSEx6ZHY4MzVJQ1dqNXZ6QXRfNDU5TWVONTlBNGZoNDd3TEV6eXNvYUNmS1FLWVZNQ2Y0X2txUENicndlWGhiN3dWZkwzYmVrbmNucWptWkVKdHRHWmNTWFpvRGZUcFg5RUJxa1NXRnBTdWM5dXVFQXdOZ3doSFJMT2tlMnhKa25LOVM1S2VBUGZUOEh6ZkZMX2JGVUpIMHp5ZGNsNzU3amtERXNtQlU?oc=5",
+      "title": "Judge rejects El Paso police trainer as expert witness in deadly force lawsuit, cites \u2018flawed methodology\u2019",
+      "source": "El Paso Matters",
+      "date": "2021-09-29",
+      "date_discovered": "2026-01-12",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2AFBVV95cUxPX2l0bzNOWTY4cUl2MFdfWnRhNzgwcmVoS3M1dzhfQ0NRRmlSUERtUWZYSEx6ZHY4MzVJQ1dqNXZ6QXRfNDU5TWVONTlBNGZoNDd3TEV6eXNvYUNmS1FLWVZNQ2Y0X2txUENicndlWGhiN3dWZkwzYmVrbmNucWptWkVKdHRHWmNTWFpvRGZUcFg5RUJxa1NXRnBTdWM5dXVFQXdOZ3doSFJMT2tlMnhKa25LOVM1S2VBUGZUOEh6ZkZMX2JGVUpIMHp5ZGNsNzU3amtERXNtQlU?oc=5\" target=\"_blank\">Judge rejects El Paso police trainer as expert witness in deadly force lawsuit, cites \u2018flawed methodology\u2019</a> <font color=\"#6f6f6f\">El Paso Matters</font>",
+      "story_type": "incident",
+      "label": "LEGACY",
+      "confidence": 0.85,
+      "relevance": 85,
+      "relevance_score": 0.85,
+      "signals": [],
+      "entities": [],
+      "rationale": "",
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "0150e05ea8ef98d01645efaf9644b734",
+      "url": "https://www.fox9.com/news/minnesota-police-trainer-is-critic-and-target",
+      "title": "Minnesota police trainer is critic\u2014And target",
+      "source": "FOX 9",
+      "date": "2020-08-02",
+      "date_discovered": "2026-01-18",
+      "summary": "Bill Lewinski, founder of Force Science Institute based in Minnesota, is both a prominent police trainer and target of critics who question his methodology.",
+      "story_type": "general",
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 95,
+      "relevance_score": 0.95,
+      "signals": [
+        "Bill Lewinski",
+        "Force Science Institute",
+        "Minnesota",
+        "police trainer"
+      ],
+      "entities": [
+        "Bill Lewinski",
+        "Force Science Institute"
+      ],
+      "rationale": "Local Minnesota coverage of Bill Lewinski and Force Science Institute controversy.",
+      "key_entities": "[\"Bill Lewinski\", \"Force Science Institute\"]",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "35127da73d7a3087fd4c244d92d7f9dd",
+      "url": "https://www.businessinsider.com/police-training-programs-have-a-pseudoscience-problem-experts-say-2020-6",
+      "title": "Police training programs have a pseudoscience problem",
+      "source": "Business Insider",
+      "date": "2020-06-17",
+      "date_discovered": "2026-01-18",
+      "summary": "Experts say police training programs rely on pseudoscience, including Force Science Institute's controversial claims about officer perception and reaction time.",
+      "story_type": "research",
+      "label": "DIRECT",
+      "confidence": 0.95,
+      "relevance": 90,
+      "relevance_score": 0.9,
+      "signals": [
+        "Force Science Institute",
+        "pseudoscience",
+        "police training"
+      ],
+      "entities": [
+        "Force Science Institute"
+      ],
+      "rationale": "Business Insider investigation into pseudoscience in police training including Force Science.",
+      "key_entities": "[\"Force Science Institute\"]",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "fda81ecd53a7c6b9ad813b88841abd77",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOdWFUQklGRWg5UnZkWE1UaWg3YlJMUGNRbk9xaWEyWmg3VlFUVFpGX3JLemZtcDlRMHBGRzkxYnBuUjYzZVZIeEtSbVRudDU4bS1BV0Y1U3NzR2NFbjVDclBjMmNGVjhqUEkya1BzR3lwRVpvc1ZDT1FCdFpaY0NjUk5yMXVfVGJkVFF6b3pHUC14RDJvbU5PRUU0bjJhOTh5aVk5U2ItekFGZWl0?oc=5",
+      "title": "Ohio State Cancels Police 'Force Science' Training Session After Backlash",
+      "source": "WOSU Public Media",
+      "date": "2020-02-25",
+      "date_discovered": "2026-01-12",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxOdWFUQklGRWg5UnZkWE1UaWg3YlJMUGNRbk9xaWEyWmg3VlFUVFpGX3JLemZtcDlRMHBGRzkxYnBuUjYzZVZIeEtSbVRudDU4bS1BV0Y1U3NzR2NFbjVDclBjMmNGVjhqUEkya1BzR3lwRVpvc1ZDT1FCdFpaY0NjUk5yMXVfVGJkVFF6b3pHUC14RDJvbU5PRUU0bjJhOTh5aVk5U2ItekFGZWl0?oc=5\" target=\"_blank\">Ohio State Cancels Police 'Force Science' Training Session After Backlash</a> <font color=\"#6f6f6f\">WOSU Public Media</font>",
+      "story_type": "general",
+      "label": "LEGACY",
+      "confidence": 0.85,
+      "relevance": 85,
+      "relevance_score": 0.85,
+      "signals": [],
+      "entities": [],
+      "rationale": "",
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "3e203c23619f97ae6c5cf59bf0acc946",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOYmQtTDBKbHYzUFY4eXRoUWw1STZ5N21DZE9kaDNXYlk0YnFVVWZDWTdqUDM5NXRHdkZSallsR3duZkl1UVFfcWgzc0ZkVUhoUzREX0hKNDJDTHRNS3c0Mkdjckk4M1JsY3R5eW9ybW0tckE4SXRRQVpzSE4wMUx5NXN3YjdqTFljWGcxNTVuNkFkNldKNElKZFBfLXlMaVo2dGhFbmFnai1GR0ZLcFJNT2VaV0NNTEl0aUQtZmhPaFdqWkpTcDloQUN3?oc=5",
+      "title": "5 tips from Force Science on de-escalation tactics",
+      "source": "Police1",
+      "date": "2017-11-08",
+      "date_discovered": "2026-01-12",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxOYmQtTDBKbHYzUFY4eXRoUWw1STZ5N21DZE9kaDNXYlk0YnFVVWZDWTdqUDM5NXRHdkZSallsR3duZkl1UVFfcWgzc0ZkVUhoUzREX0hKNDJDTHRNS3c0Mkdjckk4M1JsY3R5eW9ybW0tckE4SXRRQVpzSE4wMUx5NXN3YjdqTFljWGcxNTVuNkFkNldKNElKZFBfLXlMaVo2dGhFbmFnai1GR0ZLcFJNT2VaV0NNTEl0aUQtZmhPaFdqWkpTcDloQUN3?oc=5\" target=\"_blank\">5 tips from Force Science on de-escalation tactics</a> <font color=\"#6f6f6f\">Police1</font>",
+      "story_type": "general",
+      "label": "LEGACY",
+      "confidence": 0.85,
+      "relevance": 85,
+      "relevance_score": 0.85,
+      "signals": [],
+      "entities": [],
+      "rationale": "",
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "3590cd7add0b9e6fc684bcea58c650da",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPUEpVRFJhVjBpT2pockxnNTZ5cGlxWktpQWtvSnlUdWlqY1Itdmhzd1d1OHNRQ1NCUk1sN2o3ZUQxS3pZRm55LUprRkV6Q3J2WXZINjNhRUVEMWs5V1N0alFDeG15TXBaS0s1WmJOd3lvR0xuYW1wNE1uNVp6dFpTVVlJRkZSOFI0cUlvREtnZU92eTk1dkxEWTdYbjA5UDZHaXpYMGw5N1ZCel9QeXBfWWVpaDdkcVJKQlU5X2pyeVNOSVJ4VHFkTFd5RGxpT0lPVG9BaGZZM2ZmS1FuVXdJZg?oc=5",
       "title": "Rochester Police backpedal on controversial William Lewinski training",
@@ -55,124 +216,67 @@
       "rationale": "The article explicitly mentions 'William Lewinski' and 'Force Science', indicating a direct connection to the Force Science organization and its leadership.",
       "key_entities": "William Lewinski, Force Science",
       "location": null,
-      "tags": [
-        "AI"
-      ],
+      "tags": [],
       "needs_review": 0
     },
     {
-      "id": "b43f715614a8964571b6931b864ce2c0",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPNVBMTVl0MWhreTBEM0hMUGZDY2NZazktakJyckp0dEVsRDlFb0NSZjVDZjV6WGRDX3Z0VjNzYk5YTlJ4azlDR1BDcjZEY1k3RDUzaVFZUnc1MWstMFpjMDdmM1FqSDV3d1l6RVFiYzJEZ3BlekJuYjNMTUpwZ0FXNUtqTEtDVnZmQ1k1bUtsOTB6TW5GVm5hUFdUcTZ0azh3a2pWbGJZSkxJeXNHWUdaMmRPSnluNUpwR3YzYXd4QWtTUk5Ec05GSG5jNzdCS2FHcWVYOU0xX0I2a2pDNUFSdHBKdVRhNEdS0gH8AUFVX3lxTE9fbFN3dk1ZZFRzZE5paXdvZWt1Uzd1aW9Pamdudnd3ZTVidUVMazdlRldmRmYzbHNkMjlwU3dhOVVYaml1VTBkUFhVaVdKbXVPVGJRQmlNeVB5bE9TcTZrdy1vWDFQaC1Ra1dMZ3pCRHpKd1RHVHBtQmhVZTZHdFVza2M1SkpXUGFqM013VW5tajJiWURqb2txM2tuN1JKOXJITkEtV24tWnRmOFdvUjliZmRVblZmQ0c5WkpDZGdqNmw3R2VKSDFYZGxCanpLRUwzM3M2YzhCOHdhYVZFTlBlRjRTLWYybnBvRldYWVEydVh5TWczMDRhVUxDTw?oc=5",
-      "title": "Portland Police Bureau’s contract with Minnesota-based Force Science to train instructors draws concerns",
-      "source": "OregonLive.com",
-      "date": "2023-08-16",
-      "date_discovered": "2026-01-12",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi6AFBVV95cUxPNVBMTVl0MWhreTBEM0hMUGZDY2NZazktakJyckp0dEVsRDlFb0NSZjVDZjV6WGRDX3Z0VjNzYk5YTlJ4azlDR1BDcjZEY1k3RDUzaVFZUnc1MWstMFpjMDdmM1FqSDV3d1l6RVFiYzJEZ3BlekJuYjNMTUpwZ0FXNUtqTEtDVnZmQ1k1bUtsOTB6TW5GVm5hUFdUcTZ0azh3a2pWbGJZSkxJeXNHWUdaMmRPSnluNUpwR3YzYXd4QWtTUk5Ec05GSG5jNzdCS2FHcWVYOU0xX0I2a2pDNUFSdHBKdVRhNEdS0gH8AUFVX3lxTE9fbFN3dk1ZZFRzZE5paXdvZWt1Uzd1aW9Pamdudnd3ZTVidUVMazdlRldmRmYzbHNkMjlwU3dhOVVYaml1VTBkUFhVaVdKbXVPVGJRQmlNeVB5bE9TcTZrdy1vWDFQaC1Ra1dMZ3pCRHpKd1RHVHBtQmhVZTZHdFVza2M1SkpXUGFqM013VW5tajJiWURqb2txM2tuN1JKOXJITkEtV24tWnRmOFdvUjliZmRVblZmQ0c5WkpDZGdqNmw3R2VKSDFYZGxCanpLRUwzM3M2YzhCOHdhYVZFTlBlRjRTLWYybnBvRldYWVEydVh5TWczMDRhVUxDTw?oc=5\" target=\"_blank\">Portland Police Bureau’s contract with Minnesota-based Force Science to train instructors draws concerns</a> <font color=\"#6f6f6f\">OregonLive.com</font>",
-      "story_type": "vendor",
-      "label": "LEGACY",
-      "confidence": 0.85,
-      "relevance": 85,
-      "relevance_score": 0.85,
-      "signals": [],
-      "entities": [],
-      "rationale": "",
-      "key_entities": "Google, ICE",
-      "location": null,
-      "tags": [
-        "AI"
-      ],
-      "needs_review": 0
-    },
-    {
-      "id": "45ef1e6cb62356960b8c76747fd78fb4",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTy1uR1NYclVSSENQQUtheWotR1FndW1YRHd1ODZTTVN2YnM2bE4ydmpqUlRpWVRkbk9nS0xIZFZUeE5IdUo5WEM4ZzF3elBZSzBCS0czUHFLdzFIczRSN0lpXzZlZlI0R0c4Rkp1Z3BQR3RVZ1VLY0NkckJtVHFLSExnTjNGNzVtVk9rR1FyM2YxRmlNREhycE5GdUhmcXplalhpa0hZTUdvYUJHRnJyYVBJdU9OWjBKTEFCTFcyVEdVUUNaNnctNkMyc1hIMDJJ?oc=5",
-      "title": "'Force Science Institute' hosts controversial use of force training in Westlake for police across Ohio",
-      "source": "News 5 Cleveland WEWS",
-      "date": "2022-04-26",
-      "date_discovered": "2026-01-12",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTy1uR1NYclVSSENQQUtheWotR1FndW1YRHd1ODZTTVN2YnM2bE4ydmpqUlRpWVRkbk9nS0xIZFZUeE5IdUo5WEM4ZzF3elBZSzBCS0czUHFLdzFIczRSN0lpXzZlZlI0R0c4Rkp1Z3BQR3RVZ1VLY0NkckJtVHFLSExnTjNGNzVtVk9rR1FyM2YxRmlNREhycE5GdUhmcXplalhpa0hZTUdvYUJHRnJyYVBJdU9OWjBKTEFCTFcyVEdVUUNaNnctNkMyc1hIMDJJ?oc=5\" target=\"_blank\">'Force Science Institute' hosts controversial use of force training in Westlake for police across Ohio</a> <font color=\"#6f6f6f\">News 5 Cleveland WEWS</font>",
-      "story_type": "general",
-      "label": "LEGACY",
-      "confidence": 0.85,
-      "relevance": 85,
-      "relevance_score": 0.85,
-      "signals": [],
-      "entities": [],
-      "rationale": "",
-      "key_entities": "Google, ICE",
-      "location": null,
-      "tags": [
-        "AI"
-      ],
-      "needs_review": 0
-    },
-    {
-      "id": "76faae978ff24ce354ccb896bc65cd62",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPX2l0bzNOWTY4cUl2MFdfWnRhNzgwcmVoS3M1dzhfQ0NRRmlSUERtUWZYSEx6ZHY4MzVJQ1dqNXZ6QXRfNDU5TWVONTlBNGZoNDd3TEV6eXNvYUNmS1FLWVZNQ2Y0X2txUENicndlWGhiN3dWZkwzYmVrbmNucWptWkVKdHRHWmNTWFpvRGZUcFg5RUJxa1NXRnBTdWM5dXVFQXdOZ3doSFJMT2tlMnhKa25LOVM1S2VBUGZUOEh6ZkZMX2JGVUpIMHp5ZGNsNzU3amtERXNtQlU?oc=5",
-      "title": "Judge rejects El Paso police trainer as expert witness in deadly force lawsuit, cites ‘flawed methodology’",
-      "source": "El Paso Matters",
-      "date": "2021-09-29",
-      "date_discovered": "2026-01-12",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2AFBVV95cUxPX2l0bzNOWTY4cUl2MFdfWnRhNzgwcmVoS3M1dzhfQ0NRRmlSUERtUWZYSEx6ZHY4MzVJQ1dqNXZ6QXRfNDU5TWVONTlBNGZoNDd3TEV6eXNvYUNmS1FLWVZNQ2Y0X2txUENicndlWGhiN3dWZkwzYmVrbmNucWptWkVKdHRHWmNTWFpvRGZUcFg5RUJxa1NXRnBTdWM5dXVFQXdOZ3doSFJMT2tlMnhKa25LOVM1S2VBUGZUOEh6ZkZMX2JGVUpIMHp5ZGNsNzU3amtERXNtQlU?oc=5\" target=\"_blank\">Judge rejects El Paso police trainer as expert witness in deadly force lawsuit, cites ‘flawed methodology’</a> <font color=\"#6f6f6f\">El Paso Matters</font>",
+      "id": "90ebe8c5cd2194ed785c38ea4bf3c00e",
+      "url": "https://www.cbc.ca/news/canada/calgary/anthony-heffernan-asirt-use-force-expert-chris-lawrence-force-science-1.3736083",
+      "title": "Anthony Heffernan's family 'outraged' to learn use of force expert connected to controversial institute",
+      "source": "CBC News",
+      "date": "2016-08-26",
+      "date_discovered": "2026-01-18",
+      "summary": "Family of man shot by Calgary police outraged after learning the use-of-force expert reviewing the case trained at Force Science Institute.",
       "story_type": "incident",
-      "label": "LEGACY",
-      "confidence": 0.85,
-      "relevance": 85,
-      "relevance_score": 0.85,
-      "signals": [],
-      "entities": [],
-      "rationale": "",
-      "key_entities": "Google, ICE",
-      "location": null,
-      "tags": [
-        "AI"
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 95,
+      "relevance_score": 0.95,
+      "signals": [
+        "Force Science Institute",
+        "use of force expert",
+        "Chris Lawrence"
       ],
+      "entities": [
+        "Anthony Heffernan",
+        "Chris Lawrence",
+        "Force Science Institute",
+        "Calgary Police"
+      ],
+      "rationale": "Canadian case highlighting concerns about Force Science-trained experts reviewing police shootings.",
+      "key_entities": "[\"Anthony Heffernan\", \"Chris Lawrence\", \"Force Science Institute\", \"Calgary Police\"]",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
-      "id": "fda81ecd53a7c6b9ad813b88841abd77",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOdWFUQklGRWg5UnZkWE1UaWg3YlJMUGNRbk9xaWEyWmg3VlFUVFpGX3JLemZtcDlRMHBGRzkxYnBuUjYzZVZIeEtSbVRudDU4bS1BV0Y1U3NzR2NFbjVDclBjMmNGVjhqUEkya1BzR3lwRVpvc1ZDT1FCdFpaY0NjUk5yMXVfVGJkVFF6b3pHUC14RDJvbU5PRUU0bjJhOTh5aVk5U2ItekFGZWl0?oc=5",
-      "title": "Ohio State Cancels Police 'Force Science' Training Session After Backlash",
-      "source": "WOSU Public Media",
-      "date": "2020-02-25",
-      "date_discovered": "2026-01-12",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxOdWFUQklGRWg5UnZkWE1UaWg3YlJMUGNRbk9xaWEyWmg3VlFUVFpGX3JLemZtcDlRMHBGRzkxYnBuUjYzZVZIeEtSbVRudDU4bS1BV0Y1U3NzR2NFbjVDclBjMmNGVjhqUEkya1BzR3lwRVpvc1ZDT1FCdFpaY0NjUk5yMXVfVGJkVFF6b3pHUC14RDJvbU5PRUU0bjJhOTh5aVk5U2ItekFGZWl0?oc=5\" target=\"_blank\">Ohio State Cancels Police 'Force Science' Training Session After Backlash</a> <font color=\"#6f6f6f\">WOSU Public Media</font>",
-      "story_type": "general",
-      "label": "LEGACY",
-      "confidence": 0.85,
-      "relevance": 85,
-      "relevance_score": 0.85,
-      "signals": [],
-      "entities": [],
-      "rationale": "",
-      "key_entities": "Google, ICE",
-      "location": null,
-      "tags": [
-        "AI"
+      "id": "c71d5d7d30cd41a48cfa448f83a09630",
+      "url": "https://www.nytimes.com/2015/08/02/us/training-officers-to-shoot-first-and-he-will-answer-questions-later.html",
+      "title": "Training Officers to Shoot First, and He Will Answer Questions Later",
+      "source": "The New York Times",
+      "date": "2015-08-02",
+      "date_discovered": "2026-01-18",
+      "summary": "A prominent expert helps policeeli defend shootings; his methods face challenges in court. The New York Times investigation into Bill Lewinski and the Force Science Institute.",
+      "story_type": "research",
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 100,
+      "relevance_score": 1.0,
+      "signals": [
+        "Bill Lewinski",
+        "Force Science Institute",
+        "police shootings",
+        "expert testimony"
       ],
-      "needs_review": 0
-    },
-    {
-      "id": "3e203c23619f97ae6c5cf59bf0acc946",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOYmQtTDBKbHYzUFY4eXRoUWw1STZ5N21DZE9kaDNXYlk0YnFVVWZDWTdqUDM5NXRHdkZSallsR3duZkl1UVFfcWgzc0ZkVUhoUzREX0hKNDJDTHRNS3c0Mkdjckk4M1JsY3R5eW9ybW0tckE4SXRRQVpzSE4wMUx5NXN3YjdqTFljWGcxNTVuNkFkNldKNElKZFBfLXlMaVo2dGhFbmFnai1GR0ZLcFJNT2VaV0NNTEl0aUQtZmhPaFdqWkpTcDloQUN3?oc=5",
-      "title": "5 tips from Force Science on de-escalation tactics",
-      "source": "Police1",
-      "date": "2017-11-08",
-      "date_discovered": "2026-01-12",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxOYmQtTDBKbHYzUFY4eXRoUWw1STZ5N21DZE9kaDNXYlk0YnFVVWZDWTdqUDM5NXRHdkZSallsR3duZkl1UVFfcWgzc0ZkVUhoUzREX0hKNDJDTHRNS3c0Mkdjckk4M1JsY3R5eW9ybW0tckE4SXRRQVpzSE4wMUx5NXN3YjdqTFljWGcxNTVuNkFkNldKNElKZFBfLXlMaVo2dGhFbmFnai1GR0ZLcFJNT2VaV0NNTEl0aUQtZmhPaFdqWkpTcDloQUN3?oc=5\" target=\"_blank\">5 tips from Force Science on de-escalation tactics</a> <font color=\"#6f6f6f\">Police1</font>",
-      "story_type": "general",
-      "label": "LEGACY",
-      "confidence": 0.85,
-      "relevance": 85,
-      "relevance_score": 0.85,
-      "signals": [],
-      "entities": [],
-      "rationale": "",
-      "key_entities": "Google, ICE",
-      "location": null,
-      "tags": [
-        "AI"
+      "entities": [
+        "Bill Lewinski",
+        "Force Science Institute",
+        "New York Times"
       ],
+      "rationale": "Landmark NYT investigation into Bill Lewinski and Force Science Institute methodology.",
+      "key_entities": "[\"Bill Lewinski\", \"Force Science Institute\", \"New York Times\"]",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
@@ -193,9 +297,7 @@
       "rationale": "",
       "key_entities": "Google, ICE",
       "location": null,
-      "tags": [
-        "policy"
-      ],
+      "tags": [],
       "needs_review": 0
     },
     {
@@ -237,10 +339,37 @@
       "rationale": "",
       "key_entities": "Google, ICE",
       "location": null,
-      "tags": [
-        "AI",
-        "policy"
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "b1287dde5c0f056230a09379fe6ded1a",
+      "url": "https://www.cbc.ca/news/canada/edmonton/canada-warned-about-controversial-police-shooting-expert-1.1374682",
+      "title": "Canada Warned About Controversial Police Shooting Expert",
+      "source": "CBC News",
+      "date": "2013-04-04",
+      "date_discovered": "2026-01-18",
+      "summary": "Canadian authorities warned about Bill Lewinski, the controversial police shooting expert from Force Science Institute, whose testimony has been challenged in U.S. courts.",
+      "story_type": "policy",
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 95,
+      "relevance_score": 0.95,
+      "signals": [
+        "Bill Lewinski",
+        "Force Science Institute",
+        "police shooting expert",
+        "Canada"
       ],
+      "entities": [
+        "Bill Lewinski",
+        "Force Science Institute",
+        "Canada"
+      ],
+      "rationale": "Early Canadian media coverage warning about Bill Lewinski and Force Science methodology.",
+      "key_entities": "[\"Bill Lewinski\", \"Force Science Institute\", \"Canada\"]",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
@@ -303,10 +432,7 @@
       "rationale": "",
       "key_entities": "Google, ICE",
       "location": null,
-      "tags": [
-        "AI",
-        "error"
-      ],
+      "tags": [],
       "needs_review": 0
     }
   ]
