@@ -1,6 +1,6 @@
 {
-  "updated": "2026-01-17T10:29:14Z",
-  "count": 489,
+  "updated": "2026-01-18T10:29:51Z",
+  "count": 492,
   "stories": [
     {
       "id": "cceee37af7c2404c5bfd1e4c4902d8cc",
@@ -3349,6 +3349,23 @@
       "needs_review": 0
     },
     {
+      "id": "d7d6e0c1e402d1353b334517bd5480e4",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQ3d3ZlNaSXJxR0hjWFFwMEFFUGRVb2h4SGVDUmtCRTRqT2xPYlVpalZvYWNVRno3YzZNRUhfSWplWGdhRUk2WlgyNHNvbmVVT1hkajI1UUJaaW9uUWYzcFlKRWlLNEtzb1lOa3ZVUkpfWnRucll2UHZwZWNHajFGaVQxMDZHN3QycG9EaFFzVWU3QTNaUVY0U1FSa21BdWtaOWkyaHdkUQ?oc=5",
+      "title": "‘Bite Him! Bite Him!’: Black Man Mauled By Police Dog As He Stood Outside His Own Home Observing Arrest Finally Has Charges Dismissed As Cop Remains on Force",
+      "source": "Atlanta Black Star",
+      "date": "2025-02-13",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQQ3d3ZlNaSXJxR0hjWFFwMEFFUGRVb2h4SGVDUmtCRTRqT2xPYlVpalZvYWNVRno3YzZNRUhfSWplWGdhRUk2WlgyNHNvbmVVT1hkajI1UUJaaW9uUWYzcFlKRWlLNEtzb1lOa3ZVUkpfWnRucll2UHZwZWNHajFGaVQxMDZHN3QycG9EaFFzVWU3QTNaUVY0U1FSa21BdWtaOWkyaHdkUQ?oc=5\" target=\"_blank\">‘Bite Him! Bite Him!’: Black Man Mauled By Police Dog As He Stood Outside His Own Home Observing Arrest Finally Has Charges Dismissed As Cop Remains on Force</a> <font color=\"#6f6f6f\">Atlanta Black Star</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, EFF, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "c48bfbec629b22a8d203917e2965f0fa",
       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQThYbWNxc3JMN0M1N1BDZ18yQU84MUZRcmRod3d6UUJHbTZ4MjI5anQ4bjNVNXUwVUtlUWVPaGRMal9NODdHY1NaeWE2TVhncnRiQWp5SWlOc1lWVExEWUpGQnZIQ2p4cjJHZUg5TUZCMHNKWHFWbk1VYWxqa2t5ZVFtcllpRXRUTVBoaHpoTXY1czZTOWF0enJILVRnYWM5WVMzSDBsd29rUEJiRjdkMzVUUHZINEdWTXZXOTdVb0QwUGp3Y1ZVNno0RlFNS2JYUFVEVXVIbk5URGY1amRnWTJTa1QwUQ?oc=5",
       "title": "Winston-Salem K9 unit under scrutiny after police dog bites suspect",
@@ -4471,6 +4488,24 @@
       "key_entities": "Google",
       "location": null,
       "tags": [
+        "civil rights"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "fe616a009d188b025cf598a38a688c19",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOak5nMXlUTEkwX3VQMkVBSi13N3BsRl8xMWVYcmlMb19BWnJwOXFzakNfajljNUtpb0lLMWF2S1hSUFhqZ29NUENIel8xUERMRW8wYV9ZMzBfVHgwRVQwRzI0aXZVeDVXWVU5OFZkMkt3b0hLaXJTTDJKVU03dVFXX0ZUanJTdw?oc=5",
+      "title": "Settlement would end civil rights complaint related to North Port Police dog bite",
+      "source": "Yahoo",
+      "date": "2023-10-23",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxOak5nMXlUTEkwX3VQMkVBSi13N3BsRl8xMWVYcmlMb19BWnJwOXFzakNfajljNUtpb0lLMWF2S1hSUFhqZ29NUENIel8xUERMRW8wYV9ZMzBfVHgwRVQwRzI0aXZVeDVXWVU5OFZkMkt3b0hLaXJTTDJKVU03dVFXX0ZUanJTdw?oc=5\" target=\"_blank\">Settlement would end civil rights complaint related to North Port Police dog bite</a> <font color=\"#6f6f6f\">Yahoo</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
         "civil rights"
       ],
       "needs_review": 0
@@ -5897,6 +5932,23 @@
       "key_entities": "Google",
       "location": null,
       "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "e00e44dd3f988226e0a9f4d414c527ea",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQbkdoVGZTOWpyZXRtNjlDdktJRmxMaE5fRkdhU3JGbTFUZ2I0QkQ1Y21lSXJ6TU1zVXNmdVpFd1VyaHhIU28tSDJ1UWZoamI5bmN1ak9xUC03dDdVb0dfdTZiU0NUb2VfVTBIR0swZWhNb2kyM1F2Q2ZkaFI0NFJiY1Zyc0ZBbHY1a0tTbm9WRHIwVm8wUGh6Zjk3VQ?oc=5",
+      "title": "FBI Investigating Missouri Police Officers Who Let Dog Attack Detained Black Man",
+      "source": "Baller Alert",
+      "date": "2021-09-27",
+      "date_discovered": "2026-01-18",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQbkdoVGZTOWpyZXRtNjlDdktJRmxMaE5fRkdhU3JGbTFUZ2I0QkQ1Y21lSXJ6TU1zVXNmdVpFd1VyaHhIU28tSDJ1UWZoamI5bmN1ak9xUC03dDdVb0dfdTZiU0NUb2VfVTBIR0swZWhNb2kyM1F2Q2ZkaFI0NFJiY1Zyc0ZBbHY1a0tTbm9WRHIwVm8wUGh6Zjk3VQ?oc=5\" target=\"_blank\">FBI Investigating Missouri Police Officers Who Let Dog Attack Detained Black Man</a> <font color=\"#6f6f6f\">Baller Alert</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, FBI, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
       "needs_review": 0
     },
     {
