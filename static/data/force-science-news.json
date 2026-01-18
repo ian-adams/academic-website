@@ -1,8 +1,8 @@
 {
-  "updated": "2026-01-18T23:13:05Z",
+  "updated": "2026-01-18T23:42:25Z",
   "feed_type": "primary",
   "description": "Force Science direct and proxy mentions",
-  "count": 18,
+  "count": 25,
   "stories": [
     {
       "id": "8406f793bc421675da2fe43683f96f4e",
@@ -27,6 +27,36 @@
       ],
       "rationale": "The article explicitly mentions 'Lewinski' and 'Force Science', indicating it is directly related to the Force Science organization and expert Bill Lewinski.",
       "key_entities": "Bill Lewinski, Force Science Institute",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "07f4ed8e941ee3d22e965bc6ff3be882",
+      "url": "https://www.readfrontier.org/stories/controversial-use-of-force-expert-may-testify-in-tulsa-reserve-deputy-case/",
+      "title": "Controversial 'use of force' expert may testify in Tulsa reserve deputy case",
+      "source": "The Frontier",
+      "date": "2025-03-14",
+      "date_discovered": "2026-01-18",
+      "summary": "Bill Lewinski, controversial use-of-force expert from Force Science Institute, may testify in Tulsa reserve deputy shooting case.",
+      "story_type": "incident",
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 95,
+      "relevance_score": 0.95,
+      "signals": [
+        "Bill Lewinski",
+        "Force Science",
+        "use of force expert",
+        "Tulsa"
+      ],
+      "entities": [
+        "Bill Lewinski",
+        "Force Science Institute",
+        "Tulsa"
+      ],
+      "rationale": "Recent coverage of Lewinski potentially testifying in Tulsa deputy case.",
+      "key_entities": "[\"Bill Lewinski\", \"Force Science Institute\", \"Tulsa\"]",
       "location": null,
       "tags": [],
       "needs_review": 0
@@ -124,6 +154,34 @@
       "needs_review": 0
     },
     {
+      "id": "33e3f8624e25da975ab21f9a644c358c",
+      "url": "https://www.minnpost.com/glean/2020/06/minnesota-company-target-of-police-training-criticism/",
+      "title": "Minnesota company target of police-training criticism",
+      "source": "MinnPost",
+      "date": "2020-06-22",
+      "date_discovered": "2026-01-18",
+      "summary": "Force Science Institute, a Minnesota-based company, faces criticism for its police training programs following George Floyd protests.",
+      "story_type": "general",
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 90,
+      "relevance_score": 0.9,
+      "signals": [
+        "Force Science Institute",
+        "Minnesota",
+        "police training criticism"
+      ],
+      "entities": [
+        "Force Science Institute",
+        "Minnesota"
+      ],
+      "rationale": "Minnesota local coverage of Force Science facing criticism during 2020 protests.",
+      "key_entities": "[\"Force Science Institute\", \"Minnesota\"]",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "35127da73d7a3087fd4c244d92d7f9dd",
       "url": "https://www.businessinsider.com/police-training-programs-have-a-pseudoscience-problem-experts-say-2020-6",
       "title": "Police training programs have a pseudoscience problem",
@@ -167,6 +225,35 @@
       "entities": [],
       "rationale": "",
       "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "33817269c09562e4243fcca36dc9633d",
+      "url": "https://www.thelantern.com/2020/02/ohio-state-cancels-force-science-training-after-community-criticism/",
+      "title": "Ohio State cancels 'force science' training after community criticism",
+      "source": "The Lantern",
+      "date": "2020-02-25",
+      "date_discovered": "2026-01-18",
+      "summary": "Ohio State University cancelled a Force Science training session for police after community criticism of the controversial institute's methodology.",
+      "story_type": "policy",
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 90,
+      "relevance_score": 0.9,
+      "signals": [
+        "Force Science",
+        "Ohio State",
+        "training cancelled",
+        "community criticism"
+      ],
+      "entities": [
+        "Force Science Institute",
+        "Ohio State University"
+      ],
+      "rationale": "Student newspaper coverage of Ohio State cancelling Force Science training.",
+      "key_entities": "[\"Force Science Institute\", \"Ohio State University\"]",
       "location": null,
       "tags": [],
       "needs_review": 0
@@ -250,6 +337,63 @@
       "needs_review": 0
     },
     {
+      "id": "d21887712c7b6eedb37583c42cf40c47",
+      "url": "https://www.news.com.au/lifestyle/real-life/news-life/psychology-professor-william-lewinski-under-fire-over-pseudoscience/news-story/df914ee370a6408c05a4617432baac67",
+      "title": "Psychology professor William Lewinski under fire over 'pseudoscience'",
+      "source": "News.com.au",
+      "date": "2015-08-04",
+      "date_discovered": "2026-01-18",
+      "summary": "William Lewinski, founder of Force Science Institute, faces criticism from scientists who call his methodology pseudoscience used to defend police shootings.",
+      "story_type": "research",
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 95,
+      "relevance_score": 0.95,
+      "signals": [
+        "William Lewinski",
+        "Force Science Institute",
+        "pseudoscience"
+      ],
+      "entities": [
+        "William Lewinski",
+        "Force Science Institute"
+      ],
+      "rationale": "International coverage of Lewinski pseudoscience criticism following NYT investigation.",
+      "key_entities": "[\"William Lewinski\", \"Force Science Institute\"]",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "90689d5bb1645456ef4bbb8d55c0b3c9",
+      "url": "https://reason.com/2015/08/03/meet-the-man-helping-police-officers-get/",
+      "title": "Meet the Man Helping Police Officers Get Away with Shootings",
+      "source": "Reason",
+      "date": "2015-08-03",
+      "date_discovered": "2026-01-18",
+      "summary": "Bill Lewinski and his Force Science Institute provide expert testimony that helps police officers avoid accountability for shootings.",
+      "story_type": "opinion",
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 95,
+      "relevance_score": 0.95,
+      "signals": [
+        "Bill Lewinski",
+        "Force Science Institute",
+        "police shootings",
+        "expert testimony"
+      ],
+      "entities": [
+        "Bill Lewinski",
+        "Force Science Institute"
+      ],
+      "rationale": "Libertarian magazine coverage of Lewinski helping police avoid shooting accountability.",
+      "key_entities": "[\"Bill Lewinski\", \"Force Science Institute\"]",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "c71d5d7d30cd41a48cfa448f83a09630",
       "url": "https://www.nytimes.com/2015/08/02/us/training-officers-to-shoot-first-and-he-will-answer-questions-later.html",
       "title": "Training Officers to Shoot First, and He Will Answer Questions Later",
@@ -280,6 +424,34 @@
       "needs_review": 0
     },
     {
+      "id": "228bd0d808ae6ff47070d8076ac4e0d3",
+      "url": "https://enewspaper.latimes.com/infinity/article_share.aspx?guid=06ba65cc-b364-438a-bf2f-0cb9dd35fc3d",
+      "title": "Officer training by institute fosters fear, critics say",
+      "source": "Los Angeles Times",
+      "date": "2015-08-02",
+      "date_discovered": "2026-01-18",
+      "summary": "Critics say Force Science Institute's officer training programs foster fear and provide scientific cover for police shootings.",
+      "story_type": "research",
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 95,
+      "relevance_score": 0.95,
+      "signals": [
+        "Force Science Institute",
+        "officer training",
+        "police shootings"
+      ],
+      "entities": [
+        "Force Science Institute",
+        "Los Angeles Times"
+      ],
+      "rationale": "LA Times coverage of Force Science training methodology criticism.",
+      "key_entities": "[\"Force Science Institute\", \"Los Angeles Times\"]",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "c12e463cd4b2881fb741854c2fbd2ee0",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPejJaUmZNSEtLenh4bFBuU3ZZTThkRnhPZFBwTmhFVGV6NzFnV2dQV3M2SXhJVTdKMjJLbmEwTGpacEh0V0Zod2RZbExfQklMd2YwS1J3alZFUXlRaWhORm01ckx0NXJnektOM3luRW9LNzlfWnFPcUNPSDFQZEh1bm5IZGVIS0h1cEpEOFNnRmlHQXgxUzRYVnFfOFJOZGp6SkRlUjNKeThQRmhyRlJiMGpLMXBudHVzd2lrSTI3dDY4bk1M?oc=5",
       "title": "Getting civilian oversight? Get them Force Science Certified",
@@ -296,6 +468,36 @@
       "entities": [],
       "rationale": "",
       "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "60c7eda4c3781b635e080b5bbb59fc58",
+      "url": "https://www.cbsnews.com/sanfrancisco/news/defense-witness-in-oscar-grant-killing-contacted-by-tulsa-deputys-lawyers-in-shooting-death-caught-on-camera/",
+      "title": "Defense Witness In Oscar Grant Killing Contacted By Tulsa Deputy's Lawyers In Shooting Death Caught On Camera",
+      "source": "CBS News SF",
+      "date": "2015-04-14",
+      "date_discovered": "2026-01-18",
+      "summary": "Bill Lewinski, who testified as an expert witness in the Oscar Grant killing case, was contacted by lawyers defending the Tulsa deputy in a shooting death caught on camera.",
+      "story_type": "incident",
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 95,
+      "relevance_score": 0.95,
+      "signals": [
+        "Bill Lewinski",
+        "Oscar Grant",
+        "expert witness",
+        "Tulsa deputy"
+      ],
+      "entities": [
+        "Bill Lewinski",
+        "Oscar Grant",
+        "Johannes Mehserle"
+      ],
+      "rationale": "Coverage of Lewinski's involvement in high-profile police shooting cases including Oscar Grant.",
+      "key_entities": "[\"Bill Lewinski\", \"Oscar Grant\", \"Johannes Mehserle\"]",
       "location": null,
       "tags": [],
       "needs_review": 0
