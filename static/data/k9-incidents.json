@@ -1,6 +1,6 @@
 {
-  "updated": "2026-01-18T22:43:47Z",
-  "count": 505,
+  "updated": "2026-01-19T10:38:54Z",
+  "count": 513,
   "stories": [
     {
       "id": "cceee37af7c2404c5bfd1e4c4902d8cc",
@@ -883,6 +883,21 @@
       "needs_review": 0
     },
     {
+      "id": "3e52c7714282bfd6c65176d68053a54d",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUmhyZFF4REdhR1dNVHkyZjZlUmdub2JjdlROLWkyVWpHd2ZrTGF1WDU5b0lRNFZLS0N6SkpQNWhMb1RZU29VYWJFaTZwaUFSMFZWQTd0RVBlVlY5Nl9mcE96VDhvNXQzeTh6alZuNDdDcklfY2JzMG9UcE5pNWVrTTNieEtHWm9FT09VSmpfbw?oc=5",
+      "title": "SC Deputy Shot in Head, K9 Killed, Suspect Killed by SWAT",
+      "source": "Police Magazine",
+      "date": "2025-10-17",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxQUmhyZFF4REdhR1dNVHkyZjZlUmdub2JjdlROLWkyVWpHd2ZrTGF1WDU5b0lRNFZLS0N6SkpQNWhMb1RZU29VYWJFaTZwaUFSMFZWQTd0RVBlVlY5Nl9mcE96VDhvNXQzeTh6alZuNDdDcklfY2JzMG9UcE5pNWVrTTNieEtHWm9FT09VSmpfbw?oc=5\" target=\"_blank\">SC Deputy Shot in Head, K9 Killed, Suspect Killed by SWAT</a> <font color=\"#6f6f6f\">Police Magazine</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "72c7187fc965b018923a6afa64ebfdcc",
       "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQZzFmWGNFN2k4dEF3U1otdXJuVlZ4NGFseUJBU0I2cGptZzJPRi1tbzZuVkVBSlVBeDdLdGY1LW9xRjJINllQVXRGX2RBTTM3TTZzdEpvUkJudXFNRy1PUlc4Tmdwc3lhM21fU21DUXZOeURCR21fRXFXdUk0dng5c2JKZlpxRjRGdkM0ZGt1eWZlUVpBLXJybkZKN0RFVldQd0NiRFV5Q2xDVWktcE45Yl9aV255MmZMMEF4RlpnbjVkdG1kNEJFVlRDUVRMcjk5ZkFEMkRYeVVhWVppMWVUNV9rTXJwOV9WRjI1WFVyQlpqZw?oc=5",
       "title": "K9 critically injured in stabbing; police say additional charges pending",
@@ -1432,6 +1447,21 @@
       "tags": [
         "AI"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "6168f499ca68b32930a5fa6da23abaae",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE8td3RiNHp5ZzlUeFNCbDRQNHhDWGkxQTl1U3pfS0lqRTdUTEZkS21ZWFRfT25GRk41V1RfSUZEcG42N25TcHBnb3piaEs4NlZsOVBoLVBRTkQzSEMySXpnaTRKUFFFYmRPV3JvVzl6ZU80dGNKRmNFb3hTbw?oc=5",
+      "title": "Shawnee K9, injured by suspect in a stabbing, returns to work",
+      "source": "KCTV",
+      "date": "2025-09-02",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE8td3RiNHp5ZzlUeFNCbDRQNHhDWGkxQTl1U3pfS0lqRTdUTEZkS21ZWFRfT25GRk41V1RfSUZEcG42N25TcHBnb3piaEs4NlZsOVBoLVBRTkQzSEMySXpnaTRKUFFFYmRPV3JvVzl6ZU80dGNKRmNFb3hTbw?oc=5\" target=\"_blank\">Shawnee K9, injured by suspect in a stabbing, returns to work</a> <font color=\"#6f6f6f\">KCTV</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
@@ -3148,6 +3178,23 @@
       "needs_review": 0
     },
     {
+      "id": "48b989cb4dfe8913c2eed88f546fb092",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQbU5xM1JFZy00cnNqeWpsRjMyRVhTSndxQnVVTV9vLS1JWVFWRjhQUXFLTTVHaUdPdnlMM1lZR01KZU9PRV9lcXozbE04dy1DS2RuY1JfQ3dpRG1SdlFpVXNxMEhaQWgxX1lRRFQ1b19PdUg0NGtZdjFTVWhQejNFMjY4NmFoZGQxOEtsc0tsSGJMR01YbGpZdlZwUnNfdFZWSFBqTDRnSXRfRjI2OGFMdEw2OE5PU0ZPS1Q2Yw?oc=5",
+      "title": "Expert says video of K9 bite at Mayfair Mall in Wauwatosa should spark questions about training",
+      "source": "TMJ4 News",
+      "date": "2025-04-01",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQbU5xM1JFZy00cnNqeWpsRjMyRVhTSndxQnVVTV9vLS1JWVFWRjhQUXFLTTVHaUdPdnlMM1lZR01KZU9PRV9lcXozbE04dy1DS2RuY1JfQ3dpRG1SdlFpVXNxMEhaQWgxX1lRRFQ1b19PdUg0NGtZdjFTVWhQejNFMjY4NmFoZGQxOEtsc0tsSGJMR01YbGpZdlZwUnNfdFZWSFBqTDRnSXRfRjI2OGFMdEw2OE5PU0ZPS1Q2Yw?oc=5\" target=\"_blank\">Expert says video of K9 bite at Mayfair Mall in Wauwatosa should spark questions about training</a> <font color=\"#6f6f6f\">TMJ4 News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "6b8f6fc5d5e8afd6afe40972c6d5dfbd",
       "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQbWJnRGZBNVZZa1VSOGtZYXd5RzNjN1hva0hkRVN3c0liVC1vRG5HWVppTy1ZcnJmQi1KRjFDeEZ5TnF1SDdYXzloSW44UGVLeWp3YTFDd3lVdjRKaDNMeEpHS3J5UWo1Nkgxd0lwQWd6TnMtS3dLLUZLVE9LQmtwZ2lyZ2VoRl9qcU9NaUl4LUFSX0IxcUktT2V3eFg2eGs3eHJLeHVQVmg4T3M5eXpjZ1QyNW5pN05vLVI2VXV1RjFtc1RRZlFId01kWEtnTVFQZzllSHJ4N2NUeW9iRmN5U295Yk01VllWeGtlSFpNVktRdw?oc=5",
       "title": "Cedar Rapids settles police dog bite lawsuit for $50K, says it 'stands behind' K9 handler",
@@ -3207,6 +3254,21 @@
       "tags": [
         "ALPR"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "8483d1747f4afb92599ce6af2135a1d4",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNYmVDOUs1eEVYNndaZXFzUnRpdjlCTUZlZERodWpXVUo0dVlGZjZoR0ZIbFVQdmNlWFhUS0t1SE1TWkE4YWlRa1BpZ2dlT2pHb1FNSU1tMnR1ZGdfRFBOa1BRZEVaWHNFYnhfMHV2NlU2SFVZeUFicTBtWFhLcVl5REFjNjVpbjV4XzAzTDg5VFRVbGRVSHVqOFl3?oc=5",
+      "title": "Jury rules in favor of K9 officer in dog bite case",
+      "source": "Barron News-Shield",
+      "date": "2025-03-26",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNYmVDOUs1eEVYNndaZXFzUnRpdjlCTUZlZERodWpXVUo0dVlGZjZoR0ZIbFVQdmNlWFhUS0t1SE1TWkE4YWlRa1BpZ2dlT2pHb1FNSU1tMnR1ZGdfRFBOa1BRZEVaWHNFYnhfMHV2NlU2SFVZeUFicTBtWFhLcVl5REFjNjVpbjV4XzAzTDg5VFRVbGRVSHVqOFl3?oc=5\" target=\"_blank\">Jury rules in favor of K9 officer in dog bite case</a> <font color=\"#6f6f6f\">Barron News-Shield</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
@@ -5250,6 +5312,23 @@
       "needs_review": 0
     },
     {
+      "id": "2fa59ca9838e72eac7d9a0d24af2f521",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOclJyOFVuQ192b2JBX2xoX0ZkWVU1V1FMQ3dNVnVDbGtPNmxtbWl0am4tRHZEelRNbGlEOXhlZnY0WmZ0MlB0aU1kVTdwNk9EUGNRTzJXVUNkR3JqSHNoSlFONHZxTGo1dkloV2FIRWxma0xkeVFweEZpWmZLdEJkczBoUldLZ1RNSUtybU10WVBOeGdFUl9nZWVOUWFObk1Ia0tCeU5kaVpTTVdmZE9kTzdKQnhOMXpUR2hKbXF30gHSAUFVX3lxTE9GRlVtTDgxbjFrbV9RcVFxbVRzcUc0dHRnTF9MS042cGVpOWZCSjVUSFNnQk9Fb3NaTklZNzZnNkxJcmdmd1ZvSmVUbTVYMU5YV29tWWE2Ykd2WUFZcmJMOW1kU21uYklyVUlTa3VsSTcxd2lOU0NONVhmMHdRY1l1MVJ5a0NicTJNbzRfWE85bWgySGpnMl9TR180LVozeWZJNTJpZDQ1YXN5MmZxbDRXX0JBMWNUN3FXZmNCeFR3YXFkUzhjaEFfeThHc0xFNVhoUQ?oc=5",
+      "title": "JSO releases body cam video of K9 officer bite incident",
+      "source": "Action News Jax",
+      "date": "2023-04-20",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxOclJyOFVuQ192b2JBX2xoX0ZkWVU1V1FMQ3dNVnVDbGtPNmxtbWl0am4tRHZEelRNbGlEOXhlZnY0WmZ0MlB0aU1kVTdwNk9EUGNRTzJXVUNkR3JqSHNoSlFONHZxTGo1dkloV2FIRWxma0xkeVFweEZpWmZLdEJkczBoUldLZ1RNSUtybU10WVBOeGdFUl9nZWVOUWFObk1Ia0tCeU5kaVpTTVdmZE9kTzdKQnhOMXpUR2hKbXF30gHSAUFVX3lxTE9GRlVtTDgxbjFrbV9RcVFxbVRzcUc0dHRnTF9MS042cGVpOWZCSjVUSFNnQk9Fb3NaTklZNzZnNkxJcmdmd1ZvSmVUbTVYMU5YV29tWWE2Ykd2WUFZcmJMOW1kU21uYklyVUlTa3VsSTcxd2lOU0NONVhmMHdRY1l1MVJ5a0NicTJNbzRfWE85bWgySGpnMl9TR180LVozeWZJNTJpZDQ1YXN5MmZxbDRXX0JBMWNUN3FXZmNCeFR3YXFkUzhjaEFfeThHc0xFNVhoUQ?oc=5\" target=\"_blank\">JSO releases body cam video of K9 officer bite incident</a> <font color=\"#6f6f6f\">Action News Jax</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, EFF, ICE",
+      "location": null,
+      "tags": [
+        "body camera"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "2e9bec89fc511f3f8980e7a1facb14b5",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOGhvbzVPcnpKWlYwd3N6VUhfQlBMem5tU0dxNE0weWU0bk9HckRKTDJOcWQ2ZEVnRDVMMUktRmloRGl6bVJnRmdrYjlFTjI0NS1kZHAxbGNpdC1BbnNsUU9XTkRsUm1QdWtuZDJTUGk4V2owX0E1bVNmRWVrRWw1dEhSVHY5VlJWLXB2RnA1a2xSQVJFcUNFWkMyUXNqNWE0cGpVQmpZLThkVVdnY0g4b2s1UQ?oc=5",
       "title": "Colorado Springs settles lawsuit after police K-9 attacks bystander, pays $175,000",
@@ -7099,6 +7178,21 @@
       "needs_review": 0
     },
     {
+      "id": "b8089d1470dd623c2924e7bbad035bc9",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQOXRPaHpoMDlGQ09uTGFrNl9VN0RTWXQ3VjlIRGRsR0h4X1JJV2R4dTUzQlhPUUZIVVNpc2lPa3dqUVlhb252UUkxWkNCY3BVajRoNS1BX3dzVG11LWs3Z0c4X3d3TDVCQXlTaS1VLV9vTDU5RDdEcGFfSG1jcDY1THlJX3FCejdOVDd6OGFZWWVxVXl0X0lQcWRPcXRSSDd1SmY4SHM1UVVKQ2ZmeG5zM2xtMDN0X0hGLXRUR0RNWnNyS0dHcjhkQ0Niak00Z1lp?oc=5",
+      "title": "District court judge says 2015 police K-9 attack did not violate pregnant woman's rights",
+      "source": "IndyStar",
+      "date": "2018-10-02",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxQOXRPaHpoMDlGQ09uTGFrNl9VN0RTWXQ3VjlIRGRsR0h4X1JJV2R4dTUzQlhPUUZIVVNpc2lPa3dqUVlhb252UUkxWkNCY3BVajRoNS1BX3dzVG11LWs3Z0c4X3d3TDVCQXlTaS1VLV9vTDU5RDdEcGFfSG1jcDY1THlJX3FCejdOVDd6OGFZWWVxVXl0X0lQcWRPcXRSSDd1SmY4SHM1UVVKQ2ZmeG5zM2xtMDN0X0hGLXRUR0RNWnNyS0dHcjhkQ0Niak00Z1lp?oc=5\" target=\"_blank\">District court judge says 2015 police K-9 attack did not violate pregnant woman's rights</a> <font color=\"#6f6f6f\">IndyStar</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "7aab2f1f7ca3f1422e3c7e73d0f9e406",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPOEJLRTRZeHljVFZKSUJyMWVFMHFPUXh1b0dTRVF3SjRnaW56dDFDSlBaWkNxOHJCRVZMbjc4SzlzXzBjaGxyY0dVLTFzR3QwX29QQ1hNdkt1SHdNZklvcm5ONVBOc2J1WDl2TVBRZ1lBUEtjYTlmSTJvdGNwa25OeTE0a01BR0gxUEI0NEdXdUlNX20zTE9vb1NyTVc?oc=5",
       "title": "St. Paul to pay $520,000 to bystander attacked by police dog",
@@ -7173,6 +7267,21 @@
       "story_type": "incident",
       "relevance_score": 0.85,
       "key_entities": "Google",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "7f4b5146225e2e020a7ee7291eadd3fc",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQcnlpenFpYWx6cFhhckhrck05TFBLX1JObjVRZi1UeW9Idm9hRU5GTl95Rk92bktWQnBmTDdkS2RUMktPSTBTLVZrWHJJTmJNUzcxV19mOFljem9yTWRxTXJhZzBLdEhrRXUwTlFlN3FNVDhqTzRYOFRGN29xZXNINkZralY4M2kzc1dHMVhNWGk2Ny1ZNy15VmExQXBIUGg2aVJWTFNVZExUenVoYi1MRXFsX01hLTVaaGFpdnZhd3BITjByNmpCU043X29qdndl?oc=5",
+      "title": "Number of Vancouver police dog bites has escalated in last two years",
+      "source": "Vancouver Is Awesome",
+      "date": "2018-02-14",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxQcnlpenFpYWx6cFhhckhrck05TFBLX1JObjVRZi1UeW9Idm9hRU5GTl95Rk92bktWQnBmTDdkS2RUMktPSTBTLVZrWHJJTmJNUzcxV19mOFljem9yTWRxTXJhZzBLdEhrRXUwTlFlN3FNVDhqTzRYOFRGN29xZXNINkZralY4M2kzc1dHMVhNWGk2Ny1ZNy15VmExQXBIUGg2aVJWTFNVZExUenVoYi1MRXFsX01hLTVaaGFpdnZhd3BITjByNmpCU043X29qdndl?oc=5\" target=\"_blank\">Number of Vancouver police dog bites has escalated in last two years</a> <font color=\"#6f6f6f\">Vancouver Is Awesome</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
       "location": null,
       "tags": [],
       "needs_review": 0
@@ -7599,6 +7708,21 @@
       "tags": [
         "AI"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "f7e886f76078aa037dc8f22b089995de",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQY1FtSlVvNmF3Q3d2RUM4WmZnWlFYanNVR0dnNFh2SC0wLURHbmFRcjdzS3ZoTjVORFhrODMzVDBIdjNuQng3LW10eUNLWlNhRWFXT2stak9PUmR2aktDQUpfSzJKZlZJMnA4aGNfTzhNR2VpUy1RYnhDTFNhUkVac05VNnI4MlBuS3R4dGVibWJFMjA?oc=5",
+      "title": "Parents of boy bitten by police dog plan legal action",
+      "source": "CBC",
+      "date": "2016-04-04",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQY1FtSlVvNmF3Q3d2RUM4WmZnWlFYanNVR0dnNFh2SC0wLURHbmFRcjdzS3ZoTjVORFhrODMzVDBIdjNuQng3LW10eUNLWlNhRWFXT2stak9PUmR2aktDQUpfSzJKZlZJMnA4aGNfTzhNR2VpUy1RYnhDTFNhUkVac05VNnI4MlBuS3R4dGVibWJFMjA?oc=5\" target=\"_blank\">Parents of boy bitten by police dog plan legal action</a> <font color=\"#6f6f6f\">CBC</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
