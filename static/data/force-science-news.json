@@ -1,9 +1,34 @@
 {
-  "updated": "2026-01-18T23:53:29Z",
+  "updated": "2026-01-19T11:23:11Z",
   "feed_type": "primary",
   "description": "Force Science direct and proxy mentions",
-  "count": 26,
+  "count": 27,
   "stories": [
+    {
+      "id": "89619950132667ea3a5d4072afdcfd29",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVUhWSTVXZDlhZjU5RnJoaXk4Q0VVcldEaHZ5SW5sN0hrdzdtMTlpbnM5clY0aEJ3cWFucENPaFdHOXR2UTJ5Tzl2Qmc4R2RYRmJsZ1c2cXJSbUUzdzBudzFVYVVyLVV0eVNsYm5paEJoN3lLOXI1bUxxdXNhSEN6bXk5RnpFSTQ5Uk9taUdTOWszaUxMTDduU1d3MWY2OXZtSEpGZ1BZZ0ticXpQZ29xUHZmbw?oc=5",
+      "title": "Force expert: Rittenhouse decisions to shoot were reasonable",
+      "source": "AP News",
+      "date": "2021-10-05",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxOVUhWSTVXZDlhZjU5RnJoaXk4Q0VVcldEaHZ5SW5sN0hrdzdtMTlpbnM5clY0aEJ3cWFucENPaFdHOXR2UTJ5Tzl2Qmc4R2RYRmJsZ1c2cXJSbUUzdzBudzFVYVVyLVV0eVNsYm5paEJoN3lLOXI1bUxxdXNhSEN6bXk5RnpFSTQ5Uk9taUdTOWszaUxMTDduU1d3MWY2OXZtSEpGZ1BZZ0ticXpQZ29xUHZmbw?oc=5\" target=\"_blank\">Force expert: Rittenhouse decisions to shoot were reasonable</a> <font color=\"#6f6f6f\">AP News</font>",
+      "story_type": "incident",
+      "label": "DIRECT",
+      "confidence": 1.0,
+      "relevance": 100,
+      "relevance_score": 1.0,
+      "signals": [
+        "Force expert"
+      ],
+      "entities": [
+        "Rittenhouse"
+      ],
+      "rationale": "The article directly mentions a 'Force expert' which is an unambiguous reference to the Force Science organization or its affiliates.",
+      "key_entities": "Rittenhouse",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
     {
       "id": "c71d5d7d30cd41a48cfa448f83a09630",
       "url": "https://www.nytimes.com/2015/08/02/us/training-officers-to-shoot-first-and-he-will-answer-questions-later.html",
