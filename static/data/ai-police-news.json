@@ -1,7 +1,58 @@
 {
-  "updated": "2026-01-18T09:18:01Z",
-  "count": 1439,
+  "updated": "2026-01-19T09:32:25Z",
+  "count": 1452,
   "stories": [
+    {
+      "id": "1d05c515b07423532d55085223146e3d",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPQlM5d1BMVktGZGdvejNqNUVCU1NnVjFsS1l5WGE0TFpZNDhqeFd2QUg4YndMVTRrdW9uckRrNUE0SDFIWUNKR093NVlHdE1qaXRUYUp0ZVpZYVkyRkxtM2U2TVV1MDB2T2JKN1Q2b0dEQXhvQmxURGpBSUVtcElibVJXTnNjWTA2YjJVTGRvWjM3ZW5aMlM5ekhQSk5Cdw?oc=5",
+      "title": "Police say facial recognition pilot is success amid watchdog concerns",
+      "source": "Colchester Gazette",
+      "date": "2026-01-19",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPQlM5d1BMVktGZGdvejNqNUVCU1NnVjFsS1l5WGE0TFpZNDhqeFd2QUg4YndMVTRrdW9uckRrNUE0SDFIWUNKR093NVlHdE1qaXRUYUp0ZVpZYVkyRkxtM2U2TVV1MDB2T2JKN1Q2b0dEQXhvQmxURGpBSUVtcElibVJXTnNjWTA2YjJVTGRvWjM3ZW5aMlM5ekhQSk5Cdw?oc=5\" target=\"_blank\">Police say facial recognition pilot is success amid watchdog concerns</a> <font color=\"#6f6f6f\">Colchester Gazette</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "facial recognition"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "c43b44b1e553feb0a4203d2188edd491",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQaU96dzk4cUttRnNlVDdSUS15TTlpUGNYT0ZPSHFWQWt4MHZ5TmhNNGtfaWp2NXNiYzdCeFVNNTJ3TnZGNDdYOVV3a29rZl9ZcXJvOXVJN1UyRFppdjdUVW1BNzh4b3M2dC02T0hKOE8zQ05vVmtfeHlyQWc0TkVPeHlEb0ZSQVViZWR1Mw?oc=5",
+      "title": "Cops arrest HUNDRED suspects including 'kidnapper' using facial recognition tech",
+      "source": "The Sun",
+      "date": "2026-01-19",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQaU96dzk4cUttRnNlVDdSUS15TTlpUGNYT0ZPSHFWQWt4MHZ5TmhNNGtfaWp2NXNiYzdCeFVNNTJ3TnZGNDdYOVV3a29rZl9ZcXJvOXVJN1UyRFppdjdUVW1BNzh4b3M2dC02T0hKOE8zQ05vVmtfeHlyQWc0TkVPeHlEb0ZSQVViZWR1Mw?oc=5\" target=\"_blank\">Cops arrest HUNDRED suspects including 'kidnapper' using facial recognition tech</a> <font color=\"#6f6f6f\">The Sun</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [
+        "facial recognition"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "be9b4d62558bf8760d47f0fc014e3ae7",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWFB4QllaMHpkcndQYlJjcE9wMG9LOXpwMGFjNV93SG42NjA4dEhiemJQQ0ZySGl4MVJaSlhoUmlRYWtZcmdnUExpcGtuZVU0S29Vdzl6eXZGbEpfLXpDMlZFU2p2cmRFM1pndTNZdkJlby1BNHVBMWFlOWlzb2lqZS02dUZhZkNJcVdiTm5kNENvYmFLOXY3bFJCV0dOMV9MS3VQTkt0V2NYNFFNVUE?oc=5",
+      "title": "Police say facial recognition pilot is success amid watchdog concerns",
+      "source": "Maldon & Burnham Standard",
+      "date": "2026-01-19",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNWFB4QllaMHpkcndQYlJjcE9wMG9LOXpwMGFjNV93SG42NjA4dEhiemJQQ0ZySGl4MVJaSlhoUmlRYWtZcmdnUExpcGtuZVU0S29Vdzl6eXZGbEpfLXpDMlZFU2p2cmRFM1pndTNZdkJlby1BNHVBMWFlOWlzb2lqZS02dUZhZkNJcVdiTm5kNENvYmFLOXY3bFJCV0dOMV9MS3VQTkt0V2NYNFFNVUE?oc=5\" target=\"_blank\">Police say facial recognition pilot is success amid watchdog concerns</a> <font color=\"#6f6f6f\">Maldon & Burnham Standard</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "facial recognition"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "c002860921225532bb75641d77d7f58c",
       "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOaTJXcWJJckNCQnJ6elVWNVM1SUpmQy1mNHZsSnp4M3NBckx0RHo4dnBSTHJZQnNhekNWUUljQnp2cF9JYWIxRGw1cHlqOVZRa251TGlQUFpBNlVUTjhQdlVOb2N4TzQ0Q2MwT3FYZDl2SlJqXzdqbjk4c1RveWYwcl9Ha3pBWmdQVzhFQVNONWczT1Rzd1JSQ3FfWVJ1ZThFX25yNlZ3RVRiM1JERUowYkNiR1d5dERWaFVjNzRyOF9HVVVFWlYtZE9BSjJpcUJCaXNXaVNaWE1pbmo0bFppWkNrbFlWZmxIQkt6WFAxSXp0c3pBQnVnQlNQcGU0TGhXcmc?oc=5",
@@ -541,6 +592,24 @@
       "needs_review": 0
     },
     {
+      "id": "4e6bc0972d484bbbe4723a38710b30ac",
+      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPR20wWDUwX2NRYllqbU1lX3I3VU1CUmIwOHFJQy1MZm16amM1aUtoMEZLZDdhT2ZLZ2k3V1BkMmZNWFVnTm5iOWVaQlY4RGFvU0JfNE1HSnRya2l3eEltZVFFOU0yYk9OTFI0Y1FfNzlFR1B1RWEyeUxuYlI0U3hKX3ltY2hUM0NZc3dMcXhraEdwUlZmaGRjbmU4YXdGQ3ZzLUs0WG1qMGRhWGpfUGtaYl9jQmQ1NVRmcHZFMWxudzF1ME4tRG15aXZwdVBqNHoySDFyQWxjUnhkTXdHaTk2NFowSUpER2p5bFZFYXhkNUVac0hZTXBLMDdnR3hOaURUSUVHdw?oc=5",
+      "title": "Meridian Police propose Axon AI bundle and 'drone-first responder' program; city to consider budget amendment",
+      "source": "Citizen Portal AI",
+      "date": "2026-01-14",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMihAJBVV95cUxPR20wWDUwX2NRYllqbU1lX3I3VU1CUmIwOHFJQy1MZm16amM1aUtoMEZLZDdhT2ZLZ2k3V1BkMmZNWFVnTm5iOWVaQlY4RGFvU0JfNE1HSnRya2l3eEltZVFFOU0yYk9OTFI0Y1FfNzlFR1B1RWEyeUxuYlI0U3hKX3ltY2hUM0NZc3dMcXhraEdwUlZmaGRjbmU4YXdGQ3ZzLUs0WG1qMGRhWGpfUGtaYl9jQmQ1NVRmcHZFMWxudzF1ME4tRG15aXZwdVBqNHoySDFyQWxjUnhkTXdHaTk2NFowSUpER2p5bFZFYXhkNUVac0hZTXBLMDdnR3hOaURUSUVHdw?oc=5\" target=\"_blank\">Meridian Police propose Axon AI bundle and 'drone-first responder' program; city to consider budget amendment</a> <font color=\"#6f6f6f\">Citizen Portal AI</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Axon, Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "Axon"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "44da12dac877c5dad3a42ccc281c1a8b",
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNc0RjeFhUeU50N181SGJqNDhxeEpGelJkRktQLWp0UmU2X2lXZXhEZlR3RlRrQ21qUHNGN0gtVVFBX085TFlWb1BxX0RobE5heHp0eFFaNXhkX05BWk03dWd2OHEtX0FwVFNYYkJIWENaRGg3RS1Lc3U4aENRRkFrRHpBUWFMWWhOYTZKSm5WWEg2N2ZZQkpCb0NINkJqRGIxSm9oUUg0dHFsRFdQalFqODd2Q1lqREtOUHhMa0RMdDNBT19sUGNNXzE4ekrSAdIBQVVfeXFMTnhZcWw0OVVDcXk4Wi1wa21UVE56SE9kM2dvRDFDWHczUlZxTW05MVJYaEpnWkNxY01rVXFtc3VwSEkxMXNwdng0N3p4QzZiV3lvUWN5Y1ppWFVDS3pTUUUzejZxbmc0LVFpSEhDS3hET3BvZDhOcEM0ei1PYXdjVFhBTEtFSGloWUdYRXh5X0I0bHRsb0tZVERSQXRxRWh0TVQ0cURobVlhSXZiaDlYN2Jra3FXT1pKZ1k0bndVYTRxMDQ1MEZIVm9HRERyamlZZDFB?oc=5",
       "title": "Okaloosa County Sheriff’s Office explains Flock Safety Cameras and their uses",
@@ -716,6 +785,23 @@
         "AI",
         "ALPR",
         "civil rights"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "bff5d70849f49d46eb4190b2db887491",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQc1BLQXB5cEZJZ0FEMGdGdXBFNi00OW5iS0pnOFJ0UTRhVVpUT1lOM3ppQ1lHRHpqWU4tZGI0eFBtd3BFM3k1LThoeEtHTHRDd01pZjdMRGFyRkJVU05SdzhBb0JaVHQwWUhiZjVhaWVHM3NkbU01X3RMaVYtLXRvODktRzNweEV5enZXLWlScUZyRzBSRHcyYkZ6UDRQMHU1cElqcNIBuwFBVV95cUxOc3JsNHBHZzBNZWxQUEk0WGdIVEtMSWZBbXpzVGNnNzVucGV1TkdqdUVJbDBxdWJOUlEtbmE0MEZOVzB1d0xBdm1uTEdIWW5DTkZvZkNRVFVUTWdVRnZGWUNtNnlCWGlBSG5vSkNhcmhIRnRvUVFfcmRKZGE3dDVsUnpCSnNsQ2NYbE14NmNjRDVVM1o2U25CM0V4aHpKMllJcDRUOExXY2hVYWJuWEdmMWRRVnVYZjhiTEZV?oc=5",
+      "title": "Wilton Police Launch Transparency Portal For License Plate Reader Use",
+      "source": "Patch",
+      "date": "2026-01-12",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQc1BLQXB5cEZJZ0FEMGdGdXBFNi00OW5iS0pnOFJ0UTRhVVpUT1lOM3ppQ1lHRHpqWU4tZGI0eFBtd3BFM3k1LThoeEtHTHRDd01pZjdMRGFyRkJVU05SdzhBb0JaVHQwWUhiZjVhaWVHM3NkbU01X3RMaVYtLXRvODktRzNweEV5enZXLWlScUZyRzBSRHcyYkZ6UDRQMHU1cElqcNIBuwFBVV95cUxOc3JsNHBHZzBNZWxQUEk0WGdIVEtMSWZBbXpzVGNnNzVucGV1TkdqdUVJbDBxdWJOUlEtbmE0MEZOVzB1d0xBdm1uTEdIWW5DTkZvZkNRVFVUTWdVRnZGWUNtNnlCWGlBSG5vSkNhcmhIRnRvUVFfcmRKZGE3dDVsUnpCSnNsQ2NYbE14NmNjRDVVM1o2U25CM0V4aHpKMllJcDRUOExXY2hVYWJuWEdmMWRRVnVYZjhiTEZV?oc=5\" target=\"_blank\">Wilton Police Launch Transparency Portal For License Plate Reader Use</a> <font color=\"#6f6f6f\">Patch</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "ALPR"
       ],
       "needs_review": 0
     },
@@ -9254,6 +9340,23 @@
       "needs_review": 0
     },
     {
+      "id": "962b24cb3981a718721a8f01b536a8de",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZWw5Ty1BQkIxTUZaREFtZldGazZFTXlESFMzMVJTWndhOUwyOWlLMUdINkJscVN2QU1tbHZKTktHMWcxQnR1WXZ1WWNqTndtd1RNM1hQMF9SSTB4bTNDaGJuRkZRUXlmVUtocllIRWdtN2trVjFIejF1TkgzN2JCZnJuR2FGQUt0TmszR3hBRE96dG1VbVJ6a3F2VkV5eVk?oc=5",
+      "title": "Proposed Legislation Would Require Utah Agencies to Disclose AI Use",
+      "source": "Police Magazine",
+      "date": "2025-10-16",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxOZWw5Ty1BQkIxTUZaREFtZldGazZFTXlESFMzMVJTWndhOUwyOWlLMUdINkJscVN2QU1tbHZKTktHMWcxQnR1WXZ1WWNqTndtd1RNM1hQMF9SSTB4bTNDaGJuRkZRUXlmVUtocllIRWdtN2trVjFIejF1TkgzN2JCZnJuR2FGQUt0TmszR3hBRE96dG1VbVJ6a3F2VkV5eVk?oc=5\" target=\"_blank\">Proposed Legislation Would Require Utah Agencies to Disclose AI Use</a> <font color=\"#6f6f6f\">Police Magazine</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "e063f25c4580d40c60fdfe999891487c",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQTE4tZUxvWHlmTDZfRG1lYUdBeVN3UW5HUnl1SFJmUGtnVkFEVWE4NzRzOGVPZXhTNE8zSjlnMTdsazkzX2VRQW9GU0trYjdUeHNrMnJFZlZrZ2l1aFVISVZSc3RlMHdKWWZOTzd5WFN5T2hYd1JRN0hSTXRHR25lTW9kS0ozM2NK?oc=5",
       "title": "NYPD Develops AI Analytics Tool for Fighting Crime",
@@ -10642,6 +10745,23 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "33a32101bc8266fb4c542b56d2d4737f",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVFA0MkRJMjdHa01hRkhyRExpUkpXVGRxUnlTYlF5UTVPb0ZLY0k4WnJYdFkyS2l1LUdzYldrVWNpSlVOVXl3TGhhc1RLMDRJcWhGMW81WlpDUVFtY3NkYWNlYkpNakxCYkRvTU4zaWpaWmRFR2MzWURzZFcwWC1LYThOaEJ3Y2tWR0x2WHJYemZkczgwVHdzb21FNDJNbDdINzBDSWMwdF9EVDNpUjFKbFVuOHgyS2tDOUNaTQ?oc=5",
+      "title": "Fed Hill residents react to what they say is a new ShotSpotter installed in the area",
+      "source": "WBFF",
+      "date": "2025-09-23",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxOVFA0MkRJMjdHa01hRkhyRExpUkpXVGRxUnlTYlF5UTVPb0ZLY0k4WnJYdFkyS2l1LUdzYldrVWNpSlVOVXl3TGhhc1RLMDRJcWhGMW81WlpDUVFtY3NkYWNlYkpNakxCYkRvTU4zaWpaWmRFR2MzWURzZFcwWC1LYThOaEJ3Y2tWR0x2WHJYemZkczgwVHdzb21FNDJNbDdINzBDSWMwdF9EVDNpUjFKbFVuOHgyS2tDOUNaTQ?oc=5\" target=\"_blank\">Fed Hill residents react to what they say is a new ShotSpotter installed in the area</a> <font color=\"#6f6f6f\">WBFF</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "ShotSpotter, Google",
+      "location": null,
+      "tags": [
+        "gunshot detection"
       ],
       "needs_review": 0
     },
@@ -14013,6 +14133,23 @@
       "needs_review": 0
     },
     {
+      "id": "6e7636f1dccde6f1a0b35c14fbbb8699",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBxeTRDUlhuNWZxNTBKU0M3X3RTRDJhNWFSaGNHZmQtd3FiWlFEbVcwVVdYLWVkN3JsWEFFTFRxVTFzNGd1U1doNXdzQVVGRXRydUZ5R29fTlRNSXo2OVRfczV2c2xVNk0yRWdjZTFXd3FwQQ?oc=5",
+      "title": "How Police Use LPR Cameras for Real-Time Crime Solving",
+      "source": "Flock Safety",
+      "date": "2025-07-04",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTFBxeTRDUlhuNWZxNTBKU0M3X3RTRDJhNWFSaGNHZmQtd3FiWlFEbVcwVVdYLWVkN3JsWEFFTFRxVTFzNGd1U1doNXdzQVVGRXRydUZ5R29fTlRNSXo2OVRfczV2c2xVNk0yRWdjZTFXd3FwQQ?oc=5\" target=\"_blank\">How Police Use LPR Cameras for Real-Time Crime Solving</a> <font color=\"#6f6f6f\">Flock Safety</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Flock Safety, Google, EFF, ICE",
+      "location": null,
+      "tags": [
+        "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "23a6781919bdfb2183cfe88e12beb242",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdFdETjRxTF9nTjZBRmxRUVhqYjZiZzVBa09lcUViWHpRWkF1YVctRm1rTEdGU0hxdmtYUi1DWjREdzNVMmJpRjRMWEdVUkFaNHB4bDR6aC1Td1JKM1N6ZmJxQzA1YmJrck5Hb29jLUtGT3FSOHpEMHM1dzB6cy1aVWdpSkk0OUp1UHl0d1Zwa2lRdE5uTHk2X2pZOFkzd1FlQXNubVdFajh3bnNmd0JGQWwxRE1CLVQ2?oc=5",
       "title": "Cops, not keyboards: South Texas PD puts AI on the beat",
@@ -16812,6 +16949,25 @@
       "needs_review": 0
     },
     {
+      "id": "323401ed72c194e62ba941d19e81c83c",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOY3J2bWhlcWlhbVpaTDhpNjhFa2toSnl4UTZwbTgwVXlxM0JOQ0VzcGdhdFd2aDlocmtJZXhKZlNPbUlsWVdpRVRfam9RR0pyQVlrWUtfNzhpc0dXM0FLQWxreElEeU56UmJOTUV1Rmh2SmJJQ09kQ0dpM2pLMWFzX2N0QVdmMWJLLWhYWHhqRTI3eTVRYmk3MmU2UGEybWE3NlREcGJPbnVpdHRKSU8xLW9nT3oxb2NkU1ozcTRCY0Z3VTZs?oc=5",
+      "title": "'More of a Band-Aid': US cities canceling ShotSpotter due to cost, efficacy questions",
+      "source": "College Sports Wire",
+      "date": "2025-03-28",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOY3J2bWhlcWlhbVpaTDhpNjhFa2toSnl4UTZwbTgwVXlxM0JOQ0VzcGdhdFd2aDlocmtJZXhKZlNPbUlsWVdpRVRfam9RR0pyQVlrWUtfNzhpc0dXM0FLQWxreElEeU56UmJOTUV1Rmh2SmJJQ09kQ0dpM2pLMWFzX2N0QVdmMWJLLWhYWHhqRTI3eTVRYmk3MmU2UGEybWE3NlREcGJPbnVpdHRKSU8xLW9nT3oxb2NkU1ozcTRCY0Z3VTZs?oc=5\" target=\"_blank\">'More of a Band-Aid': US cities canceling ShotSpotter due to cost, efficacy questions</a> <font color=\"#6f6f6f\">College Sports Wire</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "ShotSpotter, Google, EFF",
+      "location": null,
+      "tags": [
+        "AI",
+        "gunshot detection",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "5546d079cf48b9e01720bc1e3e0b6960",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNzV2NnJwcmFGR1RKU0lpWmlPSDhHVVlISThSV2t2TmtDMExDd1E3WC01VGVIbGtOOXpxRDBkU1N5aHJNd0h0QVRfaEtEOTRwSmhsbHFSbm91SWtjNDBuYXF1T045X01uRnA1MVlpbjBlWnlNZExlZmNIZEZtcXBpY0xLazNFcWxBNlU2WjJ2Ri1VS2s1c1c4dkg3N3lxSHczdVNQcXlpdW9fbVllQmFjNy13?oc=5",
       "title": "'More of a Band-Aid': US cities canceling ShotSpotter due to cost, efficacy questions",
@@ -17173,6 +17329,23 @@
       "tags": [
         "AI",
         "predictive policing"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "258645d9a36af008cb25b12b7abd3000",
+      "url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxQMVp5aFhsZ2lRUVNmQW1MeDB6QmZOcFRheFNWMnhlR0RLUkxTeU5oRHZ3M3h2N2xoRGt0TFFqeXlacy1tQlUxYy1tOHlCTDBNa25Id2Yyc1VMTHVyMVVmT0Q0RHB4bFZwOUJEd2g3VFBzVTVPNDE3cFpwc3pHbmZTY19ZS3JybXU0c00tank3QlVMWFAyd0k4SjNUTEltMzhXNmhiTjhZQi1kV2FObUJ0TTFwc1VaRWhhQS1KWC1fN1NvV0dCNVRQNGVFSWhSTFVZOS1SVER4R0lxbGtpUG40OWNISUFpOGVyYnc2cHZwTS1KNEtOZV90T1ZDejh0dmc0QkNiQVJITUcyUktZX3hZZ0JSSlFPdURTSFd1bkJBU3B1NGdNc0NNTDZFR3FyQXJfcXY4bi1ocVhXNGpCRjNWSWV6SG9KTkdFQV96SlI5bVdnS3VS?oc=5",
+      "title": "Little Rock board votes to expunge previous decision on ShotSpotter contract renewal",
+      "source": "KATV",
+      "date": "2025-03-05",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1AJBVV95cUxQMVp5aFhsZ2lRUVNmQW1MeDB6QmZOcFRheFNWMnhlR0RLUkxTeU5oRHZ3M3h2N2xoRGt0TFFqeXlacy1tQlUxYy1tOHlCTDBNa25Id2Yyc1VMTHVyMVVmT0Q0RHB4bFZwOUJEd2g3VFBzVTVPNDE3cFpwc3pHbmZTY19ZS3JybXU0c00tank3QlVMWFAyd0k4SjNUTEltMzhXNmhiTjhZQi1kV2FObUJ0TTFwc1VaRWhhQS1KWC1fN1NvV0dCNVRQNGVFSWhSTFVZOS1SVER4R0lxbGtpUG40OWNISUFpOGVyYnc2cHZwTS1KNEtOZV90T1ZDejh0dmc0QkNiQVJITUcyUktZX3hZZ0JSSlFPdURTSFd1bkJBU3B1NGdNc0NNTDZFR3FyQXJfcXY4bi1ocVhXNGpCRjNWSWV6SG9KTkdFQV96SlI5bVdnS3VS?oc=5\" target=\"_blank\">Little Rock board votes to expunge previous decision on ShotSpotter contract renewal</a> <font color=\"#6f6f6f\">KATV</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "ShotSpotter, Google",
+      "location": null,
+      "tags": [
+        "gunshot detection"
       ],
       "needs_review": 0
     },
@@ -19105,6 +19278,24 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "e68d3f4ffd298d4a4b5b98e516becd1e",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNWV9QNnNhMzRaTTlTUlNkVTZaSjBfXzExMlZjVVFPbjZ6azNYMlY2V054MklUc0ZVeEw0YTlzUkZkelFBaktJam14YVBuRTBaN3ptVXpUM09kLXpPdHQ3RmZzLXNsSlhmTV9yek40MzFFUWpNUnBLTWQzOENJSm1JWjNoRkVKRUgxaU5EYW1DWlk?oc=5",
+      "title": "Despite opposition, Oakland will keep ShotSpotter gunshot detection technology",
+      "source": "The Oaklandside",
+      "date": "2024-10-16",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNWV9QNnNhMzRaTTlTUlNkVTZaSjBfXzExMlZjVVFPbjZ6azNYMlY2V054MklUc0ZVeEw0YTlzUkZkelFBaktJam14YVBuRTBaN3ptVXpUM09kLXpPdHQ3RmZzLXNsSlhmTV9yek40MzFFUWpNUnBLTWQzOENJSm1JWjNoRkVKRUgxaU5EYW1DWlk?oc=5\" target=\"_blank\">Despite opposition, Oakland will keep ShotSpotter gunshot detection technology</a> <font color=\"#6f6f6f\">The Oaklandside</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "ShotSpotter, Google",
+      "location": null,
+      "tags": [
+        "gunshot detection",
+        "policy"
       ],
       "needs_review": 0
     },
@@ -24158,6 +24349,43 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "f6486b5e33f8c52ea116970353c21240",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPN1FMNWl3dGVLOWpSaGFmaEplNGljaFlwcXVmNWJtaGNSYUFmVU5HRUc2Vk9pN0FJV1V3dnRkdXpyRVZwSXR5WFFOd1QxVUFyNnZybjFYLUNfWUlvM25ZRnhjWXdKbUNRbDNkY1dEcmtyTjc3bWN3UDgxaUFFZlFFYkh5ZlNLOFUyYmViY3YwWnh2REZrZkoxdHpZSGRsb3U5SEdzbkExeTJjZ0F5cDBVUg?oc=5",
+      "title": "Clearview AI—Yet Another Example of Why We Need A Ban on Law Enforcement Use of Face Recognition Now",
+      "source": "Electronic Frontier Foundation",
+      "date": "2020-01-31",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPN1FMNWl3dGVLOWpSaGFmaEplNGljaFlwcXVmNWJtaGNSYUFmVU5HRUc2Vk9pN0FJV1V3dnRkdXpyRVZwSXR5WFFOd1QxVUFyNnZybjFYLUNfWUlvM25ZRnhjWXdKbUNRbDNkY1dEcmtyTjc3bWN3UDgxaUFFZlFFYkh5ZlNLOFUyYmViY3YwWnh2REZrZkoxdHpZSGRsb3U5SEdzbkExeTJjZ0F5cDBVUg?oc=5\" target=\"_blank\">Clearview AI—Yet Another Example of Why We Need A Ban on Law Enforcement Use of Face Recognition Now</a> <font color=\"#6f6f6f\">Electronic Frontier Foundation</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Clearview AI, Google",
+      "location": null,
+      "tags": [
+        "AI",
+        "facial recognition",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "06a36d5b260084e52cb3db5ecefba53d",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQLWQ0eUFTaTVxcUhfUkZOUHFneDVodFhXVlJEdHdhNmZPQkJ2YVFBUzAtdDNqakNXZzVOSURuTmlxMlBwTkJSSno1OVNWVWZHWE5DX2dLTmZoZFA5b0h2ZmxGWUJNMVYwTUZmVU83TXlud1RpbHR3OGxIcThvT2l2bzNUSWxxd1VaRUpWeEliX0JCTGI0?oc=5",
+      "title": "Records on Clearview AI reveal new info on police use",
+      "source": "MuckRock",
+      "date": "2020-01-18",
+      "date_discovered": "2026-01-19",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxQLWQ0eUFTaTVxcUhfUkZOUHFneDVodFhXVlJEdHdhNmZPQkJ2YVFBUzAtdDNqakNXZzVOSURuTmlxMlBwTkJSSno1OVNWVWZHWE5DX2dLTmZoZFA5b0h2ZmxGWUJNMVYwTUZmVU83TXlud1RpbHR3OGxIcThvT2l2bzNUSWxxd1VaRUpWeEliX0JCTGI0?oc=5\" target=\"_blank\">Records on Clearview AI reveal new info on police use</a> <font color=\"#6f6f6f\">MuckRock</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Clearview AI, Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "facial recognition"
       ],
       "needs_review": 0
     },
