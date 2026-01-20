@@ -1,8 +1,8 @@
 {
-  "updated": "2026-01-19T11:23:11Z",
+  "updated": "2026-01-20T11:25:31Z",
   "feed_type": "primary",
   "description": "Force Science direct and proxy mentions",
-  "count": 27,
+  "count": 28,
   "stories": [
     {
       "id": "89619950132667ea3a5d4072afdcfd29",
@@ -727,6 +727,33 @@
       "key_entities": "Google, ICE",
       "location": null,
       "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "ab170258ff6ed0a22ae153af84bc5b1e",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNTVVxRGk4Y19iX0NmSmNwNV9sREZ1MDlFNUtNUl9SRUtvZWRfQzlOblJUYVNXX3ZsOTlfcXZzcG4wNkgwcXNYOVhTOW1TTUlLXzVia1VlS0QzU0ZYcUo1eVB4UzhWVm5SWHhRWHIzaFVMdldNS1dLZzZsWl9KcWpDVUNaVWhTbmVwUUlNc0VmSC1aZ3lOQnU5bnZkWTFBWWlubVE1XzBWcGwxRDBLcl80U25TTEhXdWlMcFE3M0F6V1Z0b2s3ajFV0gHMAUFVX3lxTE5RNU94X2ZMX19zcGhmR3k4LVBxSllQR0hFUWp6MEIyTWJ3SWZxSG4tSld4bXVpOEpoNjBOZnk2TnZEdEl4MXdabzF5R2FTNWNrM1hSa1l5N0NETmxpcXpGcEt6aVcwM2FkZE93Y3RJTjlrOFB1bW11YWpBVHFWYkFoOEswdkREVWNQVnhaczF1RTQ2VlFGOU5rTk1HeHhNaFdneFk0dnBCMkhqX0pqRVowZll2OXViMVh1Y2t3clFSTmtMb2U1aTZfYUNOMA?oc=5",
+      "title": "'This is a violent, chaotic event:' Use-of-force expert defends Brown Deer officer's actions in shooting",
+      "source": "FOX6 News Milwaukee",
+      "date": "2018-02-21",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxNTVVxRGk4Y19iX0NmSmNwNV9sREZ1MDlFNUtNUl9SRUtvZWRfQzlOblJUYVNXX3ZsOTlfcXZzcG4wNkgwcXNYOVhTOW1TTUlLXzVia1VlS0QzU0ZYcUo1eVB4UzhWVm5SWHhRWHIzaFVMdldNS1dLZzZsWl9KcWpDVUNaVWhTbmVwUUlNc0VmSC1aZ3lOQnU5bnZkWTFBWWlubVE1XzBWcGwxRDBLcl80U25TTEhXdWlMcFE3M0F6V1Z0b2s3ajFV0gHMAUFVX3lxTE5RNU94X2ZMX19zcGhmR3k4LVBxSllQR0hFUWp6MEIyTWJ3SWZxSG4tSld4bXVpOEpoNjBOZnk2TnZEdEl4MXdabzF5R2FTNWNrM1hSa1l5N0NETmxpcXpGcEt6aVcwM2FkZE93Y3RJTjlrOFB1bW11YWpBVHFWYkFoOEswdkREVWNQVnhaczF1RTQ2VlFGOU5rTk1HeHhNaFdneFk0dnBCMkhqX0pqRVowZll2OXViMVh1Y2t3clFSTmtMb2U1aTZfYUNOMA?oc=5\" target=\"_blank\">'This is a violent, chaotic event:' Use-of-force expert defends Brown Deer officer's actions in shooting</a> <font color=\"#6f6f6f\">FOX6 News Milwaukee</font>",
+      "story_type": "incident",
+      "label": "PROXY",
+      "confidence": 0.8,
+      "relevance": 80,
+      "relevance_score": 0.8,
+      "signals": [
+        "use-of-force expert"
+      ],
+      "entities": [
+        "Brown Deer officer"
+      ],
+      "rationale": "The article discusses a use-of-force expert testifying in a police shooting case, which is a proxy for the Force Science ecosystem, even though Force Science is not explicitly mentioned.",
+      "key_entities": "Brown Deer officer",
+      "location": null,
+      "tags": [
+        "body camera"
+      ],
       "needs_review": 0
     }
   ]
