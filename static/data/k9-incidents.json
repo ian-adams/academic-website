@@ -1,7 +1,22 @@
 {
-  "updated": "2026-01-19T10:38:54Z",
-  "count": 513,
+  "updated": "2026-01-20T10:38:34Z",
+  "count": 525,
   "stories": [
+    {
+      "id": "44391500a287a5b6da651935f82dae45",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbW9wRTg0VFdsdWwxUjlKMlJjQnU5Um90YVVLR2U4MUhaMnFMajJ0V0FRMFlLS3hqQlFleVFKQU53U1FRTXBFcU5QcklqcFBJejFUdEtkdDI1bmJmaWhMVENKR2syWDYzZ2Q2VHRQNU1XaG44N2NUbmRQaVNIc2NzcWtEc3Fybm4yNjFyZ0pnU09XYTI0U2taaFNGSmg3Zw?oc=5",
+      "title": "Injured Loveland police K9 returns to duty after stabbing",
+      "source": "CBS News",
+      "date": "2026-01-19",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQbW9wRTg0VFdsdWwxUjlKMlJjQnU5Um90YVVLR2U4MUhaMnFMajJ0V0FRMFlLS3hqQlFleVFKQU53U1FRTXBFcU5QcklqcFBJejFUdEtkdDI1bmJmaWhMVENKR2syWDYzZ2Q2VHRQNU1XaG44N2NUbmRQaVNIc2NzcWtEc3Fybm4yNjFyZ0pnU09XYTI0U2taaFNGSmg3Zw?oc=5\" target=\"_blank\">Injured Loveland police K9 returns to duty after stabbing</a> <font color=\"#6f6f6f\">CBS News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
     {
       "id": "cceee37af7c2404c5bfd1e4c4902d8cc",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQclFmR0RWOU9JV3IzOFNpLV85WGRmT1NwbU1TX1RXdmNKd1NtOHA5bnhVSU5ZX3ZianFfN0tscHI3V0UwS3RuazZfSy1OTTVpQUZZb2NscVNYYTEzczcwaTB2OUhCRkk4MkU1QmNWTzBWcVAtUGxiN0lYN1NqcGxzR0pNS01aaG0zRC1jMVFfSFJhekJfc3d5eFNyazhBVms0d3kyT2J4QQ?oc=5",
@@ -239,6 +254,21 @@
       "tags": [
         "AI"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "2ad75b22971e3dadf9f03f5855cb4cf5",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNSXFuekVLUUFsNUw2MldCMnhjVXFyZUdUeUN2VzZ2LWZqeFRPVGh6aU5mVGlVZjkyd2RTUDNMVWticWlzN1dNU3ZxVFhsaDNwMlB4Tm1nREo3RmRwU18yZlpfOXBPZ3VMUkxYeGhibHQzTjQ0LW9JZ216TUV4cU1IWFNrQ2JUQXgzVENVbDA3TzkzR1ZKSUZCWndKWGhJSW1Ld0k2NHR0S1kwMXVkNkgwdFhwdlp0QUlB?oc=5",
+      "title": "IIO probing case of man injured by police dog during Saanich arrest",
+      "source": "Times Colonist",
+      "date": "2025-12-05",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNSXFuekVLUUFsNUw2MldCMnhjVXFyZUdUeUN2VzZ2LWZqeFRPVGh6aU5mVGlVZjkyd2RTUDNMVWticWlzN1dNU3ZxVFhsaDNwMlB4Tm1nREo3RmRwU18yZlpfOXBPZ3VMUkxYeGhibHQzTjQ0LW9JZ216TUV4cU1IWFNrQ2JUQXgzVENVbDA3TzkzR1ZKSUZCWndKWGhJSW1Ld0k2NHR0S1kwMXVkNkgwdFhwdlp0QUlB?oc=5\" target=\"_blank\">IIO probing case of man injured by police dog during Saanich arrest</a> <font color=\"#6f6f6f\">Times Colonist</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Ring, Google, ICE",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
@@ -650,6 +680,21 @@
       "needs_review": 0
     },
     {
+      "id": "69f3ac1efc9a1840642c64fbf74d39ed",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOV1AxOWJYYzQyNzBUUUNXQVA5aXByZGJ3TFJFN3h6M09NYTAzNHlKZ0QydXZ3QjFrbVhCbkFFVXZDb3RpTVhTY0d1cWlZZGNiTFhJcndmV2RRLWZhSGhNVUtCSVJVRjV3V1ZyLWxQUW00X1g2NVhiYUxZQkJ1b1BPVWRiT2tRNTNHd3p6dV9tZ242RXB4Q092bmVtTVFjd0pFcU5CbA?oc=5",
+      "title": "Genesee County sheriff's office announces death of K-9 Deputy Max",
+      "source": "CBS News",
+      "date": "2025-11-17",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOV1AxOWJYYzQyNzBUUUNXQVA5aXByZGJ3TFJFN3h6M09NYTAzNHlKZ0QydXZ3QjFrbVhCbkFFVXZDb3RpTVhTY0d1cWlZZGNiTFhJcndmV2RRLWZhSGhNVUtCSVJVRjV3V1ZyLWxQUW00X1g2NVhiYUxZQkJ1b1BPVWRiT2tRNTNHd3p6dV9tZ242RXB4Q092bmVtTVFjd0pFcU5CbA?oc=5\" target=\"_blank\">Genesee County sheriff's office announces death of K-9 Deputy Max</a> <font color=\"#6f6f6f\">CBS News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "c87d9b4a86a9d3dad7d2b25274044a54",
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQUmtEeVdaSjZnTFczSnJyN0pxa3M5eTh0Z2U1cWlqUHZSR1RVRkhkWXFvM2xPSHNkM2ZsNGV1V1dReEpVSTFQZ212RmdYT2cyY0tZWWxNMW5FSC0yUnpkeHZkSko1WllON0lQTFJBOHk4NTROSEltRVR4R29QYVUwc1NycldRSno1XzhCNnlzLUtlU1pFOXFFRE83dHR3MnhEMzRHX3pQQXA4VW5zVHA0VUVfRTJBSTFHcVpIRHZOZWVfVElQZjgwRjFnOXlrYzdIaDVtMW9QN05nVFRFMzZrWTg1X2lXNHNuZXdpQ2lPZzk?oc=5",
       "title": "Southaven K9 recovering at home after injury during traffic stop, police say",
@@ -880,6 +925,23 @@
       "key_entities": "Google",
       "location": null,
       "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "f906fe50dd64bccf89a4daf05a6a26c2",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNXVDRGxsdjBpMHRZaC01OVBOU3JuZG90TVNZRTZ6Z3JFVlB5Sk9wb0k1UjlGay02ZUpKckJUZFA3QXJhMFZ0UzJORVAxUnRkWmxnZW1DOHU0NDVxUzJKUjJ2NFEta2hzWEZZRmlROW81WGtDeEktVWgyR3F2S0Zhai1nY0xkbVZxS292VlBqdjZ3RElWQ09NZmVFSGNQalNWQWdXVzNOLWJuY2pZZXJsekpiSkZHY1JHUXplS0VPOE9rUGN6aDB4MFpIc3dWZWp5NDNERUZTbXg1RlctNU1JQnZBVmxkTnJSNGdMbU0tWQ?oc=5",
+      "title": "K9 critically injured in stabbing; police say additional charges pending",
+      "source": "KGW",
+      "date": "2025-10-17",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNXVDRGxsdjBpMHRZaC01OVBOU3JuZG90TVNZRTZ6Z3JFVlB5Sk9wb0k1UjlGay02ZUpKckJUZFA3QXJhMFZ0UzJORVAxUnRkWmxnZW1DOHU0NDVxUzJKUjJ2NFEta2hzWEZZRmlROW81WGtDeEktVWgyR3F2S0Zhai1nY0xkbVZxS292VlBqdjZ3RElWQ09NZmVFSGNQalNWQWdXVzNOLWJuY2pZZXJsekpiSkZHY1JHUXplS0VPOE9rUGN6aDB4MFpIc3dWZWp5NDNERUZTbXg1RlctNU1JQnZBVmxkTnJSNGdMbU0tWQ?oc=5\" target=\"_blank\">K9 critically injured in stabbing; police say additional charges pending</a> <font color=\"#6f6f6f\">KGW</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
       "needs_review": 0
     },
     {
@@ -1253,6 +1315,21 @@
       "story_type": "incident",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "d80cd776fefe93a2fb2f43831054b596",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNbWZyN0JkQ3N1cmt3UUwyUXdOZXFWb2hHZFNYVjJ6c243d0NkZDI5VnVvS2lKcTVHOWE1dk5DMDgwN0pYTG9mOWd1bHllU1hqRjZONmJVYnhXVWhoOGVnQllDWkFrU3dicWt6S1Q0SmxmekFJdTlqMDlyRU5objdGLUE2RVlQaFdtUkVjTzhFLVNuT01UZjdrTHQxbHU1b2gtREh5VEtUZGHSAbwBQVVfeXFMT0RIMVlfZkh6Rjd3ajVtYThfZnAyOWRfdEwtRXZLSy14YUpOQV9MOXg0ejgwNVlCMWtaaFV5ZWtiTFV4eF8tSXFOcGQ0WUc1TXpLakVmZkNlMDhCYWhLWlpWYTFDZDk0LTcyQjF3N3hrRWJJRC0tU1VoQ0YzY3FITGhVcy1BbnNnS3ZtUVlmNFZKYUtIMHZnMmk3SXZMYk9QT0FUck9XMUdQUHAwSTlZWWRYMU9jd3hqTlZKcTA?oc=5",
+      "title": "Police K-9 euthanized after being severely injured during a SWAT operation",
+      "source": "WALB",
+      "date": "2025-09-20",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNbWZyN0JkQ3N1cmt3UUwyUXdOZXFWb2hHZFNYVjJ6c243d0NkZDI5VnVvS2lKcTVHOWE1dk5DMDgwN0pYTG9mOWd1bHllU1hqRjZONmJVYnhXVWhoOGVnQllDWkFrU3dicWt6S1Q0SmxmekFJdTlqMDlyRU5objdGLUE2RVlQaFdtUkVjTzhFLVNuT01UZjdrTHQxbHU1b2gtREh5VEtUZGHSAbwBQVVfeXFMT0RIMVlfZkh6Rjd3ajVtYThfZnAyOWRfdEwtRXZLSy14YUpOQV9MOXg0ejgwNVlCMWtaaFV5ZWtiTFV4eF8tSXFOcGQ0WUc1TXpLakVmZkNlMDhCYWhLWlpWYTFDZDk0LTcyQjF3N3hrRWJJRC0tU1VoQ0YzY3FITGhVcy1BbnNnS3ZtUVlmNFZKYUtIMHZnMmk3SXZMYk9QT0FUck9XMUdQUHAwSTlZWWRYMU9jd3hqTlZKcTA?oc=5\" target=\"_blank\">Police K-9 euthanized after being severely injured during a SWAT operation</a> <font color=\"#6f6f6f\">WALB</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Ring, Google, ICE",
       "location": null,
       "tags": [],
       "needs_review": 0
@@ -4248,6 +4325,21 @@
       "needs_review": 0
     },
     {
+      "id": "08bdbe11938b355bad73cbc0a743ff41",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNeGNYdzVnX0ZWM2FNSDNSVUlJLTlEdW5yZ3ZZOE9IYUgyaUViNHpFX1FTV01SbllQZEJnZGRrNUk1SmZfSlBFRHp0bHpBVFViNzBGNGVxeEFEQ0hicTVhZ3k1bjdHQ3JnRHBTY0dwSUt2OGozZ01GQk1PYUtFRXpWVTdrUDJuWWdHM3g5NkVLSE9hZGF4a0ZEbWFUVF8yeG8tMTNuYdIBqgFBVV95cUxPak9Gb3RBQnVjZnZWRzJ3NW5HQm5NSXVvdTc0eGpsV1lraEJyNE1ob3ZSTzl5OVNra1Y3Wnlya0lPbDRibnRzTDViWDdqYUgyZmk3RXRtX3pwNms3WDFxZ2V6cjhUSVN2SURCS1ZxR19jZEpVSkRzUmhkeHV4QXdqMTF0NkdPa0czWDF3MTkwWnJuaWhOSUh1T2NJNWpxQzVWUTJHb2g2WUI0QQ?oc=5",
+      "title": "Georgetown K-9 euthanized after aggressive biting incident",
+      "source": "FOX 56 News",
+      "date": "2024-08-07",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNeGNYdzVnX0ZWM2FNSDNSVUlJLTlEdW5yZ3ZZOE9IYUgyaUViNHpFX1FTV01SbllQZEJnZGRrNUk1SmZfSlBFRHp0bHpBVFViNzBGNGVxeEFEQ0hicTVhZ3k1bjdHQ3JnRHBTY0dwSUt2OGozZ01GQk1PYUtFRXpWVTdrUDJuWWdHM3g5NkVLSE9hZGF4a0ZEbWFUVF8yeG8tMTNuYdIBqgFBVV95cUxPak9Gb3RBQnVjZnZWRzJ3NW5HQm5NSXVvdTc0eGpsV1lraEJyNE1ob3ZSTzl5OVNra1Y3Wnlya0lPbDRibnRzTDViWDdqYUgyZmk3RXRtX3pwNms3WDFxZ2V6cjhUSVN2SURCS1ZxR19jZEpVSkRzUmhkeHV4QXdqMTF0NkdPa0czWDF3MTkwWnJuaWhOSUh1T2NJNWpxQzVWUTJHb2g2WUI0QQ?oc=5\" target=\"_blank\">Georgetown K-9 euthanized after aggressive biting incident</a> <font color=\"#6f6f6f\">FOX 56 News</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "708b8fdb7b02bdf74b8ea7767cbe86fd",
       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQVXNJTThUdE91b0NUcThxWHhiNXlEaUQyRDVzMkVSNE1hYU85WEpiMnZPbTRiT2x4SXFScE1LM3MweFVXcmd2UjF4NUpvTS1FZFJycXlIbmtCZ3RzYzlvLXE2YXlTeGJGaXF5NGxsdVRFTHNVUDVsRXhLSk9NODJFMklFMDdqM2tEV1J6ZHpScmxrVHpvS2FkNjZic3psN1hNQWxOVGV0Z3ItcnRIS0ZZMkNFWFVsWnRBbGhIYjJ3WEZudXI0VjZGRjhpeDBaR0Ytc1dfWXlQbjVud0RCSkpEYXBB?oc=5",
       "title": "Acquitted at trial, Salt Lake City K-9 handler found to have used excessive force in another arrest",
@@ -4273,6 +4365,21 @@
       "story_type": "incident",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "12f9ff23a42c4691fb8a9f91cbf3645e",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOZHhMSVFBZkg0SVNkbWVQWW1oTU8xWS1oSkxybERmYnBoSGFzN0pRNHU0ZlVxTjEtT0E1NEJpR1VMWkFxS2JpeHhkemF0VzdFcnhncm01UUlZWldEZE5Na0s0TDVUSkpKUGJ0SmVFR0JJWmZ1bE5CUS0wOGdPWEdZQVJJZnloLUdwaFBGN0JNbjhCX3h5T09OQVZ5WmcwcGZWdHBpajRxVUs3Y2hQRU1lamJQaDNrOHRsa2sxcG80OTl3WHpVRHhnRWxkMTdDQzZVaGdmd3JTSzViN2cx0gHiAUFVX3lxTE9xRTRiVUlTZldwSmNwS3hlYjRCUmc4NlNGUV82SHkxVUVIaTZ1LWJ3ekdRSkY4WXd3QkhSdUtOWWxuUEw2WUFpQUlGbVhuWUU0d2FfaGVUNHdnV2prcHNWTGh4dWU4eG9jVk1IQ2pjVHF2STkxN2NGbUpfNVRZSDNOVE00LXRwcmdrbVRvLW5aRG95dC1oU3picXF1Zk9PLW4zb1lIczFRRkt4RnlPVjM4WnFJMHJTbUtSSFJTV3pLTndPekMzQ2NscWFYNGQ1UVl0cl80bVZ3Tnlfb1YtRlZIOHc?oc=5",
+      "title": "'He likely saved lives': Dog dies stopping home invasion, biting 1 intruder later found bleeding on a neighbor's porch",
+      "source": "Law and Crime News",
+      "date": "2024-07-29",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxOZHhMSVFBZkg0SVNkbWVQWW1oTU8xWS1oSkxybERmYnBoSGFzN0pRNHU0ZlVxTjEtT0E1NEJpR1VMWkFxS2JpeHhkemF0VzdFcnhncm01UUlZWldEZE5Na0s0TDVUSkpKUGJ0SmVFR0JJWmZ1bE5CUS0wOGdPWEdZQVJJZnloLUdwaFBGN0JNbjhCX3h5T09OQVZ5WmcwcGZWdHBpajRxVUs3Y2hQRU1lamJQaDNrOHRsa2sxcG80OTl3WHpVRHhnRWxkMTdDQzZVaGdmd3JTSzViN2cx0gHiAUFVX3lxTE9xRTRiVUlTZldwSmNwS3hlYjRCUmc4NlNGUV82SHkxVUVIaTZ1LWJ3ekdRSkY4WXd3QkhSdUtOWWxuUEw2WUFpQUlGbVhuWUU0d2FfaGVUNHdnV2prcHNWTGh4dWU4eG9jVk1IQ2pjVHF2STkxN2NGbUpfNVRZSDNOVE00LXRwcmdrbVRvLW5aRG95dC1oU3picXF1Zk9PLW4zb1lIczFRRkt4RnlPVjM4WnFJMHJTbUtSSFJTV3pLTndPekMzQ2NscWFYNGQ1UVl0cl80bVZ3Tnlfb1YtRlZIOHc?oc=5\" target=\"_blank\">'He likely saved lives': Dog dies stopping home invasion, biting 1 intruder later found bleeding on a neighbor's porch</a> <font color=\"#6f6f6f\">Law and Crime News</font>",
+      "story_type": "policy",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
       "location": null,
       "tags": [],
       "needs_review": 0
@@ -4698,6 +4805,21 @@
       "tags": [
         "civil rights"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "0a722bece1e3557dfe02e399018651c8",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQUkV4dnZianFjT1o0Y2c4THhQbWlpaU80amN2RjA1YUNLenZQM3RYVUkwRldrSVZqaXBYSFRNT0FUWjI4cnNXbzNtNWNEd0xheEtzMUNMeXpUQ3hfbTVTSGpLeFNXbVN1NXRQb2ZpR2luSEMyM1dfZUNid2F2MzhhN0d4bmNKWklBd0ZGWExEamUyT2xiRGRUdWtxR004TmtBZUU0WE12RVNSZmV6YXZWQ2tXbDRLS0NDYnQzWDg3Mm94SnNRQWVHbQ?oc=5",
+      "title": "A police dog attacked a Black trucker on his knees. Circleville is dealing with the aftermath",
+      "source": "WOSU Public Media",
+      "date": "2023-10-23",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxQUkV4dnZianFjT1o0Y2c4THhQbWlpaU80amN2RjA1YUNLenZQM3RYVUkwRldrSVZqaXBYSFRNT0FUWjI4cnNXbzNtNWNEd0xheEtzMUNMeXpUQ3hfbTVTSGpLeFNXbVN1NXRQb2ZpR2luSEMyM1dfZUNid2F2MzhhN0d4bmNKWklBd0ZGWExEamUyT2xiRGRUdWtxR004TmtBZUU0WE12RVNSZmV6YXZWQ2tXbDRLS0NDYnQzWDg3Mm94SnNRQWVHbQ?oc=5\" target=\"_blank\">A police dog attacked a Black trucker on his knees. Circleville is dealing with the aftermath</a> <font color=\"#6f6f6f\">WOSU Public Media</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
@@ -5485,6 +5607,21 @@
       "needs_review": 0
     },
     {
+      "id": "e57ebf5569544cf0747de8f0f1e1efda",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQZl9VOWpMTGE5amcyYzRaRWJUaDNFaWdETlEzem0tTDhDdVNrdTNwdzNLSndka2l5SzhydkdRLURpMUFXdXk2T0Utejk4cTN6Mk9aZ2FKX0ZXR2prdlFGNEJ5eElxMk1kdVJaaV9YeXp1WTRPcUI5X3Z6WUVmeVFpSDVzM3dlcjhEcWdfQkV3YVItdDFESHVieUx3S1lHcU05dEE2V3FueUZmeVAxcmREdUd0eWNtRkNpSU0wMDBtSFNuUE52UGpOZHNVZw?oc=5",
+      "title": "Former Correctional Officer Indicted for K-9 Heat Death",
+      "source": "WBOC TV",
+      "date": "2023-01-31",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxQZl9VOWpMTGE5amcyYzRaRWJUaDNFaWdETlEzem0tTDhDdVNrdTNwdzNLSndka2l5SzhydkdRLURpMUFXdXk2T0Utejk4cTN6Mk9aZ2FKX0ZXR2prdlFGNEJ5eElxMk1kdVJaaV9YeXp1WTRPcUI5X3Z6WUVmeVFpSDVzM3dlcjhEcWdfQkV3YVItdDFESHVieUx3S1lHcU05dEE2V3FueUZmeVAxcmREdUd0eWNtRkNpSU0wMDBtSFNuUE52UGpOZHNVZw?oc=5\" target=\"_blank\">Former Correctional Officer Indicted for K-9 Heat Death</a> <font color=\"#6f6f6f\">WBOC TV</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "be819f202b5e1ac2a5570962f5722200",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE00ZTA0bTZodDBsWVVDME1CVXpWYm9oMXVabEZKTnJnR0JlbnVYM05LU21RSVVCa05idWdTODRhSXRpTU1nS052YWY5Q0VpaGxQekJrcXRhaW1lTGRKem9vWVBPb3N3Z1c3SmkxQWg4RFotNTTSAXhBVV95cUxNSzZGcjMzU2dSUS1zSldtTjk3OTExWmtMSzlzUlBQcEVESjRPTElIVThSNjhnaGZvRWlrVUlsWm15TDJPRVJtSEtNaHdyYkdqemo2OWR5aEVBTVFqazdqYmFiaURFd3VldERDaldtcjZPR0hVSWt2ZHI?oc=5",
       "title": "Delaware correctional officer indicted for death of K9 left in a hot car for hours",
@@ -5492,6 +5629,21 @@
       "date": "2023-01-31",
       "date_discovered": "2026-01-12",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE00ZTA0bTZodDBsWVVDME1CVXpWYm9oMXVabEZKTnJnR0JlbnVYM05LU21RSVVCa05idWdTODRhSXRpTU1nS052YWY5Q0VpaGxQekJrcXRhaW1lTGRKem9vWVBPb3N3Z1c3SmkxQWg4RFotNTTSAXhBVV95cUxNSzZGcjMzU2dSUS1zSldtTjk3OTExWmtMSzlzUlBQcEVESjRPTElIVThSNjhnaGZvRWlrVUlsWm15TDJPRVJtSEtNaHdyYkdqemo2OWR5aEVBTVFqazdqYmFiaURFd3VldERDaldtcjZPR0hVSWt2ZHI?oc=5\" target=\"_blank\">Delaware correctional officer indicted for death of K9 left in a hot car for hours</a> <font color=\"#6f6f6f\">WHYY</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "e8422e5a86f8cfe5c4f7d6ff771b3f75",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOU1NaY1RIR2p0dV9TRDlyZWViRjVKS3pDZXlqanVLREJrOHM0bC1FZmx0Z2Z3d3kybUxIbFJYTHdnRWx5X3Z4YnByWlJiZ1Z6ODhwRlV0bDc1ckdodlEweFJ6ZWlJSXJnOHlyQ2o1OHBwN0RGZnZQS3QxOW9uaTU5bE5qUDNWZ0pDTXkyU3VyYThfOThhWHF5Ny1WZUFES1NvOWlxdmh0ZGZDTERoMWl5SXVSTjFTbEtzWWdCYWl1ZGZRd2hfdUHSAdoBQVVfeXFMTzN4TThJaEl6dklPeDhBOXpLQmc1NGRoTzhUSkJfT3BxQmRwMXhWWkNiWUpHQzk4eFZkZjR1VllBRmtEUXFQdmJQZDVzbm9uM1ZnMmV0cWF6TUE2SDExRF9kanUtb0dacEl1UFdmQ3Y0VDVpR2xVWmVCam1meGdIam4xdXZNaldyOVdLcDhyaU95R1FlXzYyUXF0QkNiRzJvenMycGhIeXkzTFpZTnRZQTR0Q3QwY2U0akVzVGFQZnVoWHVlTmlmV3J3aUhfeW1lblJoN3o2cU5BSUE?oc=5",
+      "title": "Judge blocks release of video of deadly police dog attack in Alabama, says ‘cannot be unseen’",
+      "source": "AL.com",
+      "date": "2022-12-17",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxOU1NaY1RIR2p0dV9TRDlyZWViRjVKS3pDZXlqanVLREJrOHM0bC1FZmx0Z2Z3d3kybUxIbFJYTHdnRWx5X3Z4YnByWlJiZ1Z6ODhwRlV0bDc1ckdodlEweFJ6ZWlJSXJnOHlyQ2o1OHBwN0RGZnZQS3QxOW9uaTU5bE5qUDNWZ0pDTXkyU3VyYThfOThhWHF5Ny1WZUFES1NvOWlxdmh0ZGZDTERoMWl5SXVSTjFTbEtzWWdCYWl1ZGZRd2hfdUHSAdoBQVVfeXFMTzN4TThJaEl6dklPeDhBOXpLQmc1NGRoTzhUSkJfT3BxQmRwMXhWWkNiWUpHQzk4eFZkZjR1VllBRmtEUXFQdmJQZDVzbm9uM1ZnMmV0cWF6TUE2SDExRF9kanUtb0dacEl1UFdmQ3Y0VDVpR2xVWmVCam1meGdIam4xdXZNaldyOVdLcDhyaU95R1FlXzYyUXF0QkNiRzJvenMycGhIeXkzTFpZTnRZQTR0Q3QwY2U0akVzVGFQZnVoWHVlTmlmV3J3aUhfeW1lblJoN3o2cU5BSUE?oc=5\" target=\"_blank\">Judge blocks release of video of deadly police dog attack in Alabama, says ‘cannot be unseen’</a> <font color=\"#6f6f6f\">AL.com</font>",
       "story_type": "incident",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
@@ -6229,6 +6381,21 @@
       "date": "2021-08-16",
       "date_discovered": "2026-01-12",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOSWkyMkJ5UGxCYmg5eVh4Ulg3MlVSamNuZ0VKcVhON19FQnViR0FYWFV0cDg2SlpNWjlwWWlDUkVhWWJUOFlVdlRiQzQ4SjlMRzgySENqMFZzdW9jNlB0bjRuXzNJSnY1Y1RaZ01zWi1mMWRCUzhDbXJKeUxSVl8ta09URdIBlwFBVV95cUxPWkIwRk9rbDdacDdyVS1PNGNTWXFCRkpkbE5SRkhYeXc0dC1yaEpsU3k2SUs3VDNVVUlyTGRKWHJyTHJzZ2RpWlZpUFNXLThDMG1aOWNIN3NYOFdlUkdfeEtEYzFBNTdxbkppUTEtMDdUOTFHQ2x4MVpUeDg4VWZGVW9Ib09Fa0k0WHhtUHVkLWJMRG16Y09r?oc=5\" target=\"_blank\">City reaches settlement in police dog bite case</a> <font color=\"#6f6f6f\">WSAZ</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "f2e0cfc3d570fc62a6dca90d7003ae8e",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQYmtycFJuRV9lWUpjcUVWODFzWTZhZkJZSFR2N2Z4NWRvS0gzbTgtb0NhTUZvZzRibEh1elFUWVQ1NklRV1VkZ1lKRFlmeEVkSFhMb3R1QnEtUU8wdXM1NUFZbVBpbTM2MDJGYUEyaWhxQUFVR1h4MElUQnV2VjFFbVl30gGHAUFVX3lxTE9GaEVFNGtmN2NYdFRPa0RBeUx5MVprRjJBQ0ZZa0pDRWtjajJmeFZKemRQbk94ZnpHeUtzTWNrRmM1akVEejZnQWx5QkRrc3lfMkF6RVhnMzNsd3piTEs4d1Y4bTNIOURxLXh2NjVkVmJWR3hZdDZnUVMtUC1CczdqXzMtaGtHWQ?oc=5",
+      "title": "Police dog taken off patrol assignments after attacking boy, 5, at South Pasadena event",
+      "source": "ABC7 Los Angeles",
+      "date": "2021-08-06",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxQYmtycFJuRV9lWUpjcUVWODFzWTZhZkJZSFR2N2Z4NWRvS0gzbTgtb0NhTUZvZzRibEh1elFUWVQ1NklRV1VkZ1lKRFlmeEVkSFhMb3R1QnEtUU8wdXM1NUFZbVBpbTM2MDJGYUEyaWhxQUFVR1h4MElUQnV2VjFFbVl30gGHAUFVX3lxTE9GaEVFNGtmN2NYdFRPa0RBeUx5MVprRjJBQ0ZZa0pDRWtjajJmeFZKemRQbk94ZnpHeUtzTWNrRmM1akVEejZnQWx5QkRrc3lfMkF6RVhnMzNsd3piTEs4d1Y4bTNIOURxLXh2NjVkVmJWR3hZdDZnUVMtUC1CczdqXzMtaGtHWQ?oc=5\" target=\"_blank\">Police dog taken off patrol assignments after attacking boy, 5, at South Pasadena event</a> <font color=\"#6f6f6f\">ABC7 Los Angeles</font>",
       "story_type": "incident",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
@@ -7855,6 +8022,21 @@
       "date": "2015-03-18",
       "date_discovered": "2026-01-12",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE5oaTZ6MXJXellqRFR1bkVsUWxBMUxweDVRMUltMGw2V3AyaU93M0xBUUY2NVhic2Vra3ZoNFlzLWx2SEhFNG9FOElYc0QtLXB3bGdGNG4tcHZZM1BBVHFOZVMyYjNGWElFZTFLZVdGYVlKR3htblE?oc=5\" target=\"_blank\">Police Dog Bites Black Man</a> <font color=\"#6f6f6f\">The New Yorker</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "ff8d4d5d2dc8023fdf4b906d92ac5c21",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQNFBKME5meUVvSG9rbzZTOHBHV19OLXJ5cXhvY2I0VlpLcHVkNTl0dmY1M0ZxMFpSTEdId1N0R2NrcDFlbmQySTk1Q1NSMU9YV2FnU2o5ODFFdVgxcUtaTUVROXdpTVNIZENvTi0wOF9ESTREWXZFSE1JaXBQQkxEVXR3?oc=5",
+      "title": "Bystander mauled by London police dog",
+      "source": "CTV News",
+      "date": "2014-11-07",
+      "date_discovered": "2026-01-20",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxQNFBKME5meUVvSG9rbzZTOHBHV19OLXJ5cXhvY2I0VlpLcHVkNTl0dmY1M0ZxMFpSTEdId1N0R2NrcDFlbmQySTk1Q1NSMU9YV2FnU2o5ODFFdVgxcUtaTUVROXdpTVNIZENvTi0wOF9ESTREWXZFSE1JaXBQQkxEVXR3?oc=5\" target=\"_blank\">Bystander mauled by London police dog</a> <font color=\"#6f6f6f\">CTV News</font>",
       "story_type": "general",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
