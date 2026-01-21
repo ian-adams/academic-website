@@ -21,7 +21,7 @@ export default function ChartCard({
   const chartRef = useRef<HTMLDivElement>(null);
 
   // Build full title with filter context
-  const fullTitle = `${title} — ${causeLabel}${yearLabel !== 'All Years' ? `, ${yearLabel}` : ''}`;
+  const fullTitle = `${title} — ${causeLabel}, ${yearLabel}`;
 
   const handleDownload = useCallback(async () => {
     // Find the Plotly chart inside this card
@@ -38,44 +38,46 @@ export default function ChartCard({
       day: 'numeric',
     });
 
-    // Get current layout and data
-    const currentData = (plotDiv as any).data;
-    const currentLayout = (plotDiv as any).layout;
+    // Get current layout and data - make deep copies
+    const currentData = JSON.parse(JSON.stringify((plotDiv as any).data));
+    const currentLayout = JSON.parse(JSON.stringify((plotDiv as any).layout));
 
     // Filter out any existing attribution annotations to avoid duplicates
     const existingAnnotations = (currentLayout.annotations || []).filter(
       (a: any) => !a.text?.includes('Mapping Police Violence') && !a.text?.includes(ATTRIBUTION.name)
     );
 
+    const attributionText = `Source: Mapping Police Violence  •  ${ATTRIBUTION.name}, ${ATTRIBUTION.institution}  •  ${ATTRIBUTION.website}  •  ${today}`;
+
     // Create modified layout with title and attribution for export
     const exportLayout = {
       ...currentLayout,
       title: {
-        text: `<b>${fullTitle}</b>`,
-        font: { size: 18, color: '#1f2937' },
+        text: fullTitle,
+        font: { size: 18, color: '#1f2937', family: 'Arial, sans-serif' },
         x: 0.5,
         xanchor: 'center',
-        y: 0.98,
+        y: 0.95,
         yanchor: 'top',
       },
       margin: {
         l: currentLayout.margin?.l || 60,
         r: currentLayout.margin?.r || 60,
-        t: 80,
-        b: 80,
+        t: 100,
+        b: 100,
       },
       annotations: [
         ...existingAnnotations,
         {
-          text: `Source: Mapping Police Violence | ${ATTRIBUTION.name}, ${ATTRIBUTION.institution} | ${ATTRIBUTION.website} | ${today}`,
+          text: attributionText,
           showarrow: false,
           xref: 'paper',
           yref: 'paper',
           x: 0.5,
-          y: -0.12,
+          y: -0.15,
           xanchor: 'center',
           yanchor: 'top',
-          font: { size: 11, color: '#6b7280' },
+          font: { size: 11, color: '#6b7280', family: 'Arial, sans-serif' },
         },
       ],
       paper_bgcolor: '#ffffff',
@@ -88,10 +90,6 @@ export default function ChartCard({
         linecolor: '#d1d5db',
         tickcolor: '#6b7280',
         tickfont: { color: '#374151' },
-        title: currentLayout.xaxis?.title ? {
-          ...currentLayout.xaxis.title,
-          font: { color: '#374151' },
-        } : undefined,
       },
       yaxis: {
         ...currentLayout.yaxis,
@@ -99,10 +97,6 @@ export default function ChartCard({
         linecolor: '#d1d5db',
         tickcolor: '#6b7280',
         tickfont: { color: '#374151' },
-        title: currentLayout.yaxis?.title ? {
-          ...currentLayout.yaxis.title,
-          font: { color: '#374151' },
-        } : undefined,
       },
     };
 
@@ -112,7 +106,7 @@ export default function ChartCard({
       tempDiv.style.position = 'absolute';
       tempDiv.style.left = '-9999px';
       tempDiv.style.width = '1200px';
-      tempDiv.style.height = '800px';
+      tempDiv.style.height = '900px';
       document.body.appendChild(tempDiv);
 
       await window.Plotly.newPlot(tempDiv, currentData, exportLayout, { staticPlot: true });
@@ -120,7 +114,7 @@ export default function ChartCard({
       const exportDataUrl = await window.Plotly.toImage(tempDiv, {
         format: 'png',
         width: 1200,
-        height: 800,
+        height: 900,
         scale: 2,
       });
 
@@ -130,7 +124,7 @@ export default function ChartCard({
 
       // Download the image
       const link = document.createElement('a');
-      const filename = `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${causeLabel.toLowerCase().replace(/\s+/g, '-')}-${yearLabel.toLowerCase().replace(/\s+/g, '-')}.png`;
+      const filename = `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${causeLabel.toLowerCase().replace(/\s+/g, '-')}-${yearLabel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`;
       link.download = filename;
       link.href = exportDataUrl;
       link.click();
@@ -154,7 +148,7 @@ export default function ChartCard({
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{subtitle}</p>
           )}
           <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
-            {causeLabel}{yearLabel !== 'All Years' ? ` • ${yearLabel}` : ''}
+            {causeLabel} • {yearLabel}
           </p>
         </div>
         <button
@@ -184,7 +178,7 @@ export default function ChartCard({
       {/* Attribution footer */}
       <div className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
         <p className="text-xs text-gray-400 dark:text-gray-500 text-center">
-          Source: Mapping Police Violence | {ATTRIBUTION.name}, {ATTRIBUTION.institution} | {ATTRIBUTION.website} | {today}
+          Source: Mapping Police Violence • {ATTRIBUTION.name}, {ATTRIBUTION.institution} • {ATTRIBUTION.website} • {today}
         </p>
       </div>
     </div>

@@ -59,7 +59,6 @@ export default function MPVDashboard() {
 
   // Filter labels for display
   const causeLabel = filters.causeFilter === 'shootings' ? 'Fatal Shootings' : 'All Deaths';
-  const yearLabel = filters.yearFilter === 'All' ? 'All Years' : filters.yearFilter;
 
   // Check dark mode
   useEffect(() => {
@@ -96,6 +95,16 @@ export default function MPVDashboard() {
     data.records.forEach((r) => yearSet.add(r.year));
     return Array.from(yearSet).sort((a, b) => b - a);
   }, [data]);
+
+  // Calculate year range for "All Years" label
+  const yearRange = useMemo(() => {
+    if (years.length === 0) return 'All Years';
+    const minYear = Math.min(...years);
+    const maxYear = Math.max(...years);
+    return `${minYear}–${maxYear}`;
+  }, [years]);
+
+  const yearLabel = filters.yearFilter === 'All' ? yearRange : filters.yearFilter;
 
   // Filter data (respects both cause and year filters)
   const filteredData = useMemo(() => {
