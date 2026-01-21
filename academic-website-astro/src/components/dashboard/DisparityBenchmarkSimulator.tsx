@@ -408,6 +408,7 @@ export default function DisparityBenchmarkSimulator() {
                   ...baseLayout.xaxis,
                   title: 'Odds Ratio (Black vs White)',
                   zeroline: false,
+                  range: [0, Math.max(...allOddsRatios.map(o => o.oddsRatio)) + 0.5],
                 },
                 yaxis: {
                   ...baseLayout.yaxis,
@@ -416,18 +417,22 @@ export default function DisparityBenchmarkSimulator() {
                 shapes: [
                   {
                     type: 'line',
+                    xref: 'x',
+                    yref: 'paper',
                     x0: 1,
                     x1: 1,
-                    y0: -0.5,
-                    y1: 6.5,
+                    y0: 0,
+                    y1: 1,
                     line: { color: isDark ? '#9ca3af' : '#374151', width: 2, dash: 'dash' },
                   },
                 ],
                 annotations: [
                   {
                     x: 1,
-                    y: 6.8,
-                    text: 'Equal likelihood',
+                    xref: 'x',
+                    y: 1.05,
+                    yref: 'paper',
+                    text: 'Equal likelihood (1.0)',
                     showarrow: false,
                     font: { size: 10, color: isDark ? '#9ca3af' : '#6b7280' },
                   },
