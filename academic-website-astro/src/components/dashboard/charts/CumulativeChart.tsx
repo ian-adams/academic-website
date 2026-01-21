@@ -66,6 +66,7 @@ export default function CumulativeChart({ data, isDark }: ChartProps) {
       ...(isDark ? DARK_LAYOUT.xaxis : LIGHT_LAYOUT.xaxis),
       title: 'Month-Day',
       tickangle: -45,
+      type: 'category' as const,
     },
     yaxis: {
       ...(isDark ? DARK_LAYOUT.yaxis : LIGHT_LAYOUT.yaxis),
