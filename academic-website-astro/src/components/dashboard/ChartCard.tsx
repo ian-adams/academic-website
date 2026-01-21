@@ -42,50 +42,77 @@ export default function ChartCard({
     const currentData = (plotDiv as any).data;
     const currentLayout = (plotDiv as any).layout;
 
-    // Create modified layout with title and attribution
+    // Filter out any existing attribution annotations to avoid duplicates
+    const existingAnnotations = (currentLayout.annotations || []).filter(
+      (a: any) => !a.text?.includes('Mapping Police Violence') && !a.text?.includes(ATTRIBUTION.name)
+    );
+
+    // Create modified layout with title and attribution for export
     const exportLayout = {
       ...currentLayout,
       title: {
         text: `<b>${fullTitle}</b>`,
-        font: { size: 16 },
+        font: { size: 18, color: '#1f2937' },
         x: 0.5,
         xanchor: 'center',
+        y: 0.98,
+        yanchor: 'top',
       },
       margin: {
-        ...currentLayout.margin,
+        l: currentLayout.margin?.l || 60,
+        r: currentLayout.margin?.r || 60,
         t: 80,
-        b: (currentLayout.margin?.b || 50) + 40,
+        b: 80,
       },
       annotations: [
-        ...(currentLayout.annotations || []),
+        ...existingAnnotations,
         {
           text: `Source: Mapping Police Violence | ${ATTRIBUTION.name}, ${ATTRIBUTION.institution} | ${ATTRIBUTION.website} | ${today}`,
           showarrow: false,
           xref: 'paper',
           yref: 'paper',
           x: 0.5,
-          y: -0.18,
+          y: -0.12,
           xanchor: 'center',
-          font: { size: 10, color: '#6b7280' },
+          yanchor: 'top',
+          font: { size: 11, color: '#6b7280' },
         },
       ],
       paper_bgcolor: '#ffffff',
       plot_bgcolor: '#ffffff',
-      font: { color: '#374151' },
+      font: { ...currentLayout.font, color: '#374151' },
+      // Override axis colors for light background
+      xaxis: {
+        ...currentLayout.xaxis,
+        gridcolor: '#e5e7eb',
+        linecolor: '#d1d5db',
+        tickcolor: '#6b7280',
+        tickfont: { color: '#374151' },
+        title: currentLayout.xaxis?.title ? {
+          ...currentLayout.xaxis.title,
+          font: { color: '#374151' },
+        } : undefined,
+      },
+      yaxis: {
+        ...currentLayout.yaxis,
+        gridcolor: '#e5e7eb',
+        linecolor: '#d1d5db',
+        tickcolor: '#6b7280',
+        tickfont: { color: '#374151' },
+        title: currentLayout.yaxis?.title ? {
+          ...currentLayout.yaxis.title,
+          font: { color: '#374151' },
+        } : undefined,
+      },
     };
 
     try {
-      const dataUrl = await window.Plotly.toImage(plotDiv, {
-        format: 'png',
-        width: 1200,
-        height: 800,
-        scale: 2,
-      });
-
       // Create temporary plot for export with modified layout
       const tempDiv = document.createElement('div');
       tempDiv.style.position = 'absolute';
       tempDiv.style.left = '-9999px';
+      tempDiv.style.width = '1200px';
+      tempDiv.style.height = '800px';
       document.body.appendChild(tempDiv);
 
       await window.Plotly.newPlot(tempDiv, currentData, exportLayout, { staticPlot: true });
@@ -111,6 +138,12 @@ export default function ChartCard({
       console.error('Failed to export chart:', err);
     }
   }, [fullTitle, title, causeLabel, yearLabel]);
+
+  const today = new Date().toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
 
   return (
     <div className="card p-6">
@@ -148,6 +181,12 @@ export default function ChartCard({
         </button>
       </div>
       <div ref={chartRef}>{children}</div>
+      {/* Attribution footer */}
+      <div className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
+        <p className="text-xs text-gray-400 dark:text-gray-500 text-center">
+          Source: Mapping Police Violence | {ATTRIBUTION.name}, {ATTRIBUTION.institution} | {ATTRIBUTION.website} | {today}
+        </p>
+      </div>
     </div>
   );
 }
