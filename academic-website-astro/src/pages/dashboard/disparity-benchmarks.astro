@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import DisparityBenchmarkSimulator from '@/components/dashboard/DisparityBenchmarkSimulator';
+---
+
+<BaseLayout
+  title="Disparity Benchmark Simulator"
+  description="Interactive simulator exploring how choice of denominator affects conclusions about racial disparities in police use of force. Based on Tregle, Nix & Alpert (2018)."
+>
+  <section class="section">
+    <div class="container-wide">
+      <DisparityBenchmarkSimulator client:load />
+    </div>
+  </section>
+</BaseLayout>

@@ -41,6 +41,7 @@ Dr. Adams has over fifty peer-reviewed publications on these and related topics,
       items: [
         { name: 'MPV Analysis', href: '/dashboard' },
         { name: 'Bad Apples Simulator', href: '/dashboard/bad-apples' },
+        { name: 'Disparity Benchmarks', href: '/dashboard/disparity-benchmarks' },
       ],
     },
     {
