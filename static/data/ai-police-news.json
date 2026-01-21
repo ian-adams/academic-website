@@ -1,7 +1,114 @@
 {
-  "updated": "2026-01-20T09:31:27Z",
-  "count": 1470,
+  "updated": "2026-01-21T09:30:28Z",
+  "count": 1484,
   "stories": [
+    {
+      "id": "85cd863d7386da6ac8e4fe6ce08d40f0",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWFVkc1hnMkxselZ4STI4aUxyZGI3RHpFenNQeE9OT25tamFwbExxZ0VKS1JVdEdXQzRfLUtmRUMxSTFrdjV4T005cXNtOXF6cjBfb1dkUndxcFBSNm5Ddzcxd3RMOHFXeFZuV1h1Tzl3QjlKVWE2UXZ1X3UyQXpyRGMyeWppbHR5M2MtZWE0aXlub2QyOUJBRXVtTHItU01FUUlqaWFzMDRhSkEtWHNaNHFJeUhtLTJ3RjlZ0gHPAUFVX3lxTE03dWliWTk4Vng5b1NyQVBSV0V1YlByTTlBS285YnJwOXA3VG5WYWpuS0ttZUhMRGN3MHNwSk1fRmpZMHZxbDlrdVlpN3NnZ3pTTWhPc1RxRlZ0Ylg2dmJaTGZ2aTBOa19GejB0RHBoTVZFT3U2VHhnVVlFclFCSkg5QndWaVIwVjQyY21NY2kyNjgxbjVJQlNHRnlHM1Z0X0tDZzNFLXJ6M3dDY0pOY0xKNmNBRW5FWW1nRWp4TklDM1pSUlpXeG5xMHBoa09WYw?oc=5",
+      "title": "Minot City Council narrowly approves usage of license plate reader system, debates scope",
+      "source": "kfyrtv.com",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWFVkc1hnMkxselZ4STI4aUxyZGI3RHpFenNQeE9OT25tamFwbExxZ0VKS1JVdEdXQzRfLUtmRUMxSTFrdjV4T005cXNtOXF6cjBfb1dkUndxcFBSNm5Ddzcxd3RMOHFXeFZuV1h1Tzl3QjlKVWE2UXZ1X3UyQXpyRGMyeWppbHR5M2MtZWE0aXlub2QyOUJBRXVtTHItU01FUUlqaWFzMDRhSkEtWHNaNHFJeUhtLTJ3RjlZ0gHPAUFVX3lxTE03dWliWTk4Vng5b1NyQVBSV0V1YlByTTlBS285YnJwOXA3VG5WYWpuS0ttZUhMRGN3MHNwSk1fRmpZMHZxbDlrdVlpN3NnZ3pTTWhPc1RxRlZ0Ylg2dmJaTGZ2aTBOa19GejB0RHBoTVZFT3U2VHhnVVlFclFCSkg5QndWaVIwVjQyY21NY2kyNjgxbjVJQlNHRnlHM1Z0X0tDZzNFLXJ6M3dDY0pOY0xKNmNBRW5FWW1nRWp4TklDM1pSUlpXeG5xMHBoa09WYw?oc=5\" target=\"_blank\">Minot City Council narrowly approves usage of license plate reader system, debates scope</a> <font color=\"#6f6f6f\">kfyrtv.com</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "e77306dadae642be9d97cd50691fc583",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOQ0xDTS1zSjdNNG0tNERMZ1NxTG5zdmxuZ0dMY3VBX2NOdHZyREExS2VoYW45LVE3dnVxLUJKNTBzU1p6TTlDLXQwUDdnck5PdjBDdzlfdWwwa3FsSTBkWFlLN2I2bnZaMnM4LUU0dzVJbDU2bXdnZlBnZG5pdDJBanR0dzVwVkxaSnQxWEdSV3o1TkZURFdwS3RoQTJkNjY2SHRoWWdpaHVpNlNKdUtwMmc4OTYzOWNxd1Vhckk0bzJvMEVPaHZsTVVyLUx3MDZvbVVXUUJVZHBzTWZva1JVeWFCdlhBeDZPeGZvTndqSU51VllZYW9FcA?oc=5",
+      "title": "Washington lawmakers move to limit Flock license plate reader cameras amid privacy concerns",
+      "source": "king5.com",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi-AFBVV95cUxOQ0xDTS1zSjdNNG0tNERMZ1NxTG5zdmxuZ0dMY3VBX2NOdHZyREExS2VoYW45LVE3dnVxLUJKNTBzU1p6TTlDLXQwUDdnck5PdjBDdzlfdWwwa3FsSTBkWFlLN2I2bnZaMnM4LUU0dzVJbDU2bXdnZlBnZG5pdDJBanR0dzVwVkxaSnQxWEdSV3o1TkZURFdwS3RoQTJkNjY2SHRoWWdpaHVpNlNKdUtwMmc4OTYzOWNxd1Vhckk0bzJvMEVPaHZsTVVyLUx3MDZvbVVXUUJVZHBzTWZva1JVeWFCdlhBeDZPeGZvTndqSU51VllZYW9FcA?oc=5\" target=\"_blank\">Washington lawmakers move to limit Flock license plate reader cameras amid privacy concerns</a> <font color=\"#6f6f6f\">king5.com</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "ALPR",
+        "civil rights",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "8c5fa33debb431998c14e8983f883bad",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB0OUNSdlJFWEoyTnd6eWh4Ujdhdjg0clFhSHhSTFlIeFFkdkJPbmdEU2VlOHJvVElwS2s4ZWp5emtFeEdNM09QVi1sWEFpNERXc08tTm9WSEw0d9IBX0FVX3lxTE9sVDg4Z01iaDRLTTJETjFRdHMzcXpGSlVuTFhtajlVaEV0SDdsUGJ3bmtEZU8xTlNOeTYzczRSQXZVU1RzTjFMM3dnZVJ5b3ZhUTVoODBObWhGVW8xQzNN?oc=5",
+      "title": "Police using facial recognition: what is it and is it a problem?",
+      "source": "BBC",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTFB0OUNSdlJFWEoyTnd6eWh4Ujdhdjg0clFhSHhSTFlIeFFkdkJPbmdEU2VlOHJvVElwS2s4ZWp5emtFeEdNM09QVi1sWEFpNERXc08tTm9WSEw0d9IBX0FVX3lxTE9sVDg4Z01iaDRLTTJETjFRdHMzcXpGSlVuTFhtajlVaEV0SDdsUGJ3bmtEZU8xTlNOeTYzczRSQXZVU1RzTjFMM3dnZVJ5b3ZhUTVoODBObWhGVW8xQzNN?oc=5\" target=\"_blank\">Police using facial recognition: what is it and is it a problem?</a> <font color=\"#6f6f6f\">BBC</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, EFF, ICE",
+      "location": null,
+      "tags": [
+        "facial recognition"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "998afb97e120ea9480bb972d1c05d77e",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9fSHJCTFhDZkI4dm96LS1MZXZRTWRhOUxzNGJud2pVVV9XYXZtczQ3Unc0amxxZDZYMXpTb19Nd0VRWmlVWjY0Y0RKSHBxMmRrbEEwT21DTTBKSjZy0gFiQVVfeXFMUElTeUJhNGJLdTl3UU9uRG1Fdnp2SFFRU29MUGo3eVd4TUc2eUFYbXhza2FMM0xzQ0lfLXJVOXVpazJKVTRySExZaW1tQ1lpOGR5MDdiYnBzMFFoWUdVZ2xHQnc?oc=5",
+      "title": "Police using facial recognition: what is it and is it a problem?",
+      "source": "BBC",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9fSHJCTFhDZkI4dm96LS1MZXZRTWRhOUxzNGJud2pVVV9XYXZtczQ3Unc0amxxZDZYMXpTb19Nd0VRWmlVWjY0Y0RKSHBxMmRrbEEwT21DTTBKSjZy0gFiQVVfeXFMUElTeUJhNGJLdTl3UU9uRG1Fdnp2SFFRU29MUGo3eVd4TUc2eUFYbXhza2FMM0xzQ0lfLXJVOXVpazJKVTRySExZaW1tQ1lpOGR5MDdiYnBzMFFoWUdVZ2xHQnc?oc=5\" target=\"_blank\">Police using facial recognition: what is it and is it a problem?</a> <font color=\"#6f6f6f\">BBC</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "facial recognition"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "17c9f617fc5e79784fa1506c48c39f0d",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbTlrUzFCYVRfR2RNOVgtaHdIME9tcXJIOTVVbFFHa0NXMmhLdGZkbjFjX3dKQ3hBZC1NbnVncjNuX2dKS1dPU09pWnJsX2ZDLWpfYU5PaUlfUi1jMjJETWxRVzZlTVYtenhXcTAtNkdKcEh3eE95R0JLSmxjVDltV2Y5Rk5NeWZXRUhRd1Q4QTV5eDdO0gGcAUFVX3lxTE1DcVktMmNaUHVoYlVzRW9wZTNpcmk3T25JUllJXzBqR3JsMUNGN2xKVXZ0TVBXLXN2UElvWV9zX21KQXktZzAtRE84VjlCc3JkamJuZHBLc3pIdU93T04yMVNpbzhXVmlSMUMzYzlvenFfX3FtV1NqX0FnU1VaalZnYzlXRGUwanR3RnV4dXN4UVp5LUZtdXNrbmJwNg?oc=5",
+      "title": "Perplexity Offers Free AI to Police as Experts Warn of Risks",
+      "source": "findarticles.com",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxQbTlrUzFCYVRfR2RNOVgtaHdIME9tcXJIOTVVbFFHa0NXMmhLdGZkbjFjX3dKQ3hBZC1NbnVncjNuX2dKS1dPU09pWnJsX2ZDLWpfYU5PaUlfUi1jMjJETWxRVzZlTVYtenhXcTAtNkdKcEh3eE95R0JLSmxjVDltV2Y5Rk5NeWZXRUhRd1Q4QTV5eDdO0gGcAUFVX3lxTE1DcVktMmNaUHVoYlVzRW9wZTNpcmk3T25JUllJXzBqR3JsMUNGN2xKVXZ0TVBXLXN2UElvWV9zX21KQXktZzAtRE84VjlCc3JkamJuZHBLc3pIdU93T04yMVNpbzhXVmlSMUMzYzlvenFfX3FtV1NqX0FnU1VaalZnYzlXRGUwanR3RnV4dXN4UVp5LUZtdXNrbmJwNg?oc=5\" target=\"_blank\">Perplexity Offers Free AI to Police as Experts Warn of Risks</a> <font color=\"#6f6f6f\">findarticles.com</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "1d7fae1bb8fa887be74908c20ea5a51e",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZWlhRFRuX08wVDlUWGp1Q2lEVXl0UW43emhJV3p0cTluNVFRZG5xbmN0RVJpS2xmNml6QmRFNTgyNnJZMmZya0cwX1dTSjRfb2hiY1VBSTNFd0hvNXR1UjZMVmhtWmpEc28xZkNmdnh0ZGtxaXFNMWRkSk00R3pXRWJxd3FDZWtId003QTBzRjhuMC1BVzkyV2VvWS1qVWszcUVXQUhhNFZaWUdpQmxDLUtuVnRRMFBYRGhEcA?oc=5",
+      "title": "Scottsdale PD’s massive use of AI license plate tracking cameras raises privacy concerns",
+      "source": "azmirror.com",
+      "date": "2026-01-20",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNZWlhRFRuX08wVDlUWGp1Q2lEVXl0UW43emhJV3p0cTluNVFRZG5xbmN0RVJpS2xmNml6QmRFNTgyNnJZMmZya0cwX1dTSjRfb2hiY1VBSTNFd0hvNXR1UjZMVmhtWmpEc28xZkNmdnh0ZGtxaXFNMWRkSk00R3pXRWJxd3FDZWtId003QTBzRjhuMC1BVzkyV2VvWS1qVWszcUVXQUhhNFZaWUdpQmxDLUtuVnRRMFBYRGhEcA?oc=5\" target=\"_blank\">Scottsdale PD’s massive use of AI license plate tracking cameras raises privacy concerns</a> <font color=\"#6f6f6f\">azmirror.com</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI",
+        "surveillance",
+        "ALPR",
+        "civil rights"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "96ddda2a4ca7dc0ea541364b4e45f642",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQeW9FYVBCOFViTjZ2TlBYTzBDbU1PMjlhd29mUkNnUkY5eEJacE1FUGtyTnJGRTNYYjJWVjZ6b0o3dmZDUTd3bEZPRnpHbFVmem1xb0lGRDdiTjJRSDVuZGpUaUxBdlEzRFNKVGlhNDYyRXlGcmtFejVTU3NhWW80ZkZ6UVM4UkZxZzR5VDM2RkZDa3YxbE9aQjV0cjFZQ09KVmg4UFNxbw?oc=5",
@@ -291,6 +398,24 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "f48e7ea470e5eb26297b9782439e514c",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNaHVGalIxTEtaYV9hd0g0UGdCcW9IVmd1elIza3hTSWFsYW1tT2NCMHpvVW5kcUxwb2xiRWh4MWwwV3FheFlXU0MtSm94MGNKVDVBck5PUkNEZ0ZybmRMdFI4SU5pVDNBaTd6RmhuemM5T3VGQU1QQldOMWZRRFdEUg?oc=5",
+      "title": "Louisville police adjust license plate reader practices amid privacy concerns",
+      "source": "Spectrum News",
+      "date": "2026-01-16",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxNaHVGalIxTEtaYV9hd0g0UGdCcW9IVmd1elIza3hTSWFsYW1tT2NCMHpvVW5kcUxwb2xiRWh4MWwwV3FheFlXU0MtSm94MGNKVDVBck5PUkNEZ0ZybmRMdFI4SU5pVDNBaTd6RmhuemM5T3VGQU1QQldOMWZRRFdEUg?oc=5\" target=\"_blank\">Louisville police adjust license plate reader practices amid privacy concerns</a> <font color=\"#6f6f6f\">Spectrum News</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "ALPR",
+        "civil rights"
       ],
       "needs_review": 0
     },
@@ -1267,6 +1392,23 @@
         "ICE"
       ],
       "needs_review": 1
+    },
+    {
+      "id": "261be5e52b75bc3ba4aa511b957eb3b6",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNaTREUHY0UjF0aXhaLV9fUlpISkZnZzZDVENfUVVaM0Vzczh2NW5jOXlMVGgzcFpTdlo0TGFoUzBFVWpYdEMyZTRLRlROaklsMTVjMER6TGZtNmlHTTJ4UlZ6VXN2dE5CVm9RWkR2TnVGYWpDLXNLVWRNRllRUllQNjFJRFhZZzRRc2UtQlVhVnBqdWFONXNqTF9lVEZlazhyNkZteWVtU29YQTNYT0M3ZkpMRDE5bWxLeG1rNWd2LXV4MHhyQzVuanN4aUpQWDBLRGZaNjlLdC1YaUkwV0pPNVZ4Wl8?oc=5",
+      "title": "Flock Safety exposed live police camera feeds in internet data breach, company says",
+      "source": "wptv.com",
+      "date": "2026-01-09",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxNaTREUHY0UjF0aXhaLV9fUlpISkZnZzZDVENfUVVaM0Vzczh2NW5jOXlMVGgzcFpTdlo0TGFoUzBFVWpYdEMyZTRLRlROaklsMTVjMER6TGZtNmlHTTJ4UlZ6VXN2dE5CVm9RWkR2TnVGYWpDLXNLVWRNRllRUllQNjFJRFhZZzRRc2UtQlVhVnBqdWFONXNqTF9lVEZlazhyNkZteWVtU29YQTNYT0M3ZkpMRDE5bWxLeG1rNWd2LXV4MHhyQzVuanN4aUpQWDBLRGZaNjlLdC1YaUkwV0pPNVZ4Wl8?oc=5\" target=\"_blank\">Flock Safety exposed live police camera feeds in internet data breach, company says</a> <font color=\"#6f6f6f\">wptv.com</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Flock Safety, Google, ICE",
+      "location": null,
+      "tags": [
+        "ALPR"
+      ],
+      "needs_review": 0
     },
     {
       "id": "dc0cda0063d8ae87247e3840b1a532a4",
@@ -7805,6 +7947,23 @@
       "needs_review": 0
     },
     {
+      "id": "aa10fa8335aaf21d26373afeab606119",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdTJoQ3VOaWczdEFHbUF1cGZyRDF4bVdRakNiRFNwdE9kRHFGNF9kT0hPWU5tNEJQZl94VFFHdjBPZXoyWjFBdjl2R0dWanlpb0stNEkxQU9iVWRJTngzSkRjV2pvTlBHLUFtdWx2cWxvWXlaN1BCWU9idVM4NEYxVjZJaUJpaXJBYkUzdFlsX1ZXU3FOdGRpTmtsaGo1Qk8ydjd2WkdtMTNMQVVGNkdZZXloMWhHdXg4TWw3U1lraw?oc=5",
+      "title": "Metropolitan Police to expand live facial recognition use even amid legal challenge",
+      "source": "Biometric Update",
+      "date": "2025-11-03",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPdTJoQ3VOaWczdEFHbUF1cGZyRDF4bVdRakNiRFNwdE9kRHFGNF9kT0hPWU5tNEJQZl94VFFHdjBPZXoyWjFBdjl2R0dWanlpb0stNEkxQU9iVWRJTngzSkRjV2pvTlBHLUFtdWx2cWxvWXlaN1BCWU9idVM4NEYxVjZJaUJpaXJBYkUzdFlsX1ZXU3FOdGRpTmtsaGo1Qk8ydjd2WkdtMTNMQVVGNkdZZXloMWhHdXg4TWw3U1lraw?oc=5\" target=\"_blank\">Metropolitan Police to expand live facial recognition use even amid legal challenge</a> <font color=\"#6f6f6f\">Biometric Update</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "facial recognition"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "bf341731556aec4c72abdf31cd90d4f2",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOX1dUZWlXM1hPMUtMNjZ3UWxDcjBsMGtCLXhoUVp1Q2xfV0dJQ1JRbTZDTnV2djlFVVAtLW5HcVNLT2oxTGU5UjR3VXdjVmF4YkRKTjZ5MVhhMkdZVjJhRTE0dzI4UlFDUVVmNlJRelIxd08yQUNUOUpsV05iLUh0NXRad3FDdkhLeFh0ejA5OEEtMlRaNnpDNUxieEU?oc=5",
       "title": "Motorola Solutions upgrades public safety AI assistant",
@@ -10816,6 +10975,23 @@
       "needs_review": 0
     },
     {
+      "id": "7977ceabb386306fa57819299c092da5",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQY2lNa2IzNlVtcDhzRFdQZ1ZvQmYwSWw2Vnp6elFxamN3S3BsNWh3cmswU0VXLXNGN2pMMzZSazIyTWgwUzlOZVpneExIenNianZYRWJmLXlKbGstVGhobmZycVgtcnU5YWZSaktQTkV5TlBMUzJ2NnduUjVpZWc5QjIwUENPdV9tTVJiNkY0cEE3c3V1aVdLdHM0c09aSjNWUWZCeGtVSjU2NU1YeEJWYnYzcjFubXg5YThMMTVZZ0Q3RHlHblZv?oc=5",
+      "title": "Ohio launches crime reporting app with AI technology",
+      "source": "10tv.com",
+      "date": "2025-09-25",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxQY2lNa2IzNlVtcDhzRFdQZ1ZvQmYwSWw2Vnp6elFxamN3S3BsNWh3cmswU0VXLXNGN2pMMzZSazIyTWgwUzlOZVpneExIenNianZYRWJmLXlKbGstVGhobmZycVgtcnU5YWZSaktQTkV5TlBMUzJ2NnduUjVpZWc5QjIwUENPdV9tTVJiNkY0cEE3c3V1aVdLdHM0c09aSjNWUWZCeGtVSjU2NU1YeEJWYnYzcjFubXg5YThMMTVZZ0Q3RHlHblZv?oc=5\" target=\"_blank\">Ohio launches crime reporting app with AI technology</a> <font color=\"#6f6f6f\">10tv.com</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Google",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "3b1ba4e043370c755cbe6bb7afce02af",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNYXZzbnVYd3Z4dGU0Y1Z2aHZKUHh0clNWQzF3LVFXb2ZWTG9pcy1YWTJhNmhhMDFkaFJHNm0tZlUyZmZOSHVOY09qMjVaU29fWjVFT0l6cXlsM1hSQ1lQSDY0VDJ6NEZFeE53MHh0NEtsUnNNQmxXU2ZRYUFIMzl1YnlhZW1QajV2dWpWSUxseF9URFhER1I0VW5peElfaTlQ?oc=5",
       "title": "Anthropic blocks law enforcement AI surveillance, sparks govt tension",
@@ -11472,6 +11648,23 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "f902ff97f9eec492b21ce8a5243c61bb",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNQXk3UHdOOEZDU0VoQV9FU2MtdE5OdmFRcWtBTmRNZHYzMWJkWERJeHFhV0oxYTUxNjhaMVJhWTNWT3ZING5tNXJQNmVvbTBldjdvcGJCOWd5bXVNVFdrOUFpLXRZX29FTXltZS15VHFLaUt6cG1YWDFYS0piR1Vpc09pVExEb3U5Y3JuUHAtcw?oc=5",
+      "title": "ShotSpotter Alerts Police to Shooting on Stockton Street",
+      "source": "baltimorewitness.org",
+      "date": "2025-09-08",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNQXk3UHdOOEZDU0VoQV9FU2MtdE5OdmFRcWtBTmRNZHYzMWJkWERJeHFhV0oxYTUxNjhaMVJhWTNWT3ZING5tNXJQNmVvbTBldjdvcGJCOWd5bXVNVFdrOUFpLXRZX29FTXltZS15VHFLaUt6cG1YWDFYS0piR1Vpc09pVExEb3U5Y3JuUHAtcw?oc=5\" target=\"_blank\">ShotSpotter Alerts Police to Shooting on Stockton Street</a> <font color=\"#6f6f6f\">baltimorewitness.org</font>",
+      "story_type": "incident",
+      "relevance_score": 0.85,
+      "key_entities": "ShotSpotter, Google, ICE",
+      "location": null,
+      "tags": [
+        "gunshot detection"
       ],
       "needs_review": 0
     },
@@ -15881,6 +16074,23 @@
       "location": null,
       "tags": [
         "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "33e457fe9004abe0e01cb977ae1c0147",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaDVtQ1JIWXY4Um9NSzN6MDdjLTYyM2dFY0k1V0ZKdHRsZXZNZWxDa2s0RzdYWHY3YmNpR3dqbTdteC1CTUVmMGhmUzc1ZHU0eXdCR0VhRUs0clllT3pqd3QtcTZYVkp3M0JNdWozNms1d3p3UldOc0VObEptOThqUTZwNXg5M1F4emlSOUlKWlZtWEtUX2NsMk04SFNNOGgzU3BOYVFrYUJ5Y0x4b2pBbHQ5QngxTlNHODhpR0N2SHJXZw?oc=5",
+      "title": "New Orleans police secretly used facial recognition on over 200 live camera feeds",
+      "source": "Engadget",
+      "date": "2025-05-19",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaDVtQ1JIWXY4Um9NSzN6MDdjLTYyM2dFY0k1V0ZKdHRsZXZNZWxDa2s0RzdYWHY3YmNpR3dqbTdteC1CTUVmMGhmUzc1ZHU0eXdCR0VhRUs0clllT3pqd3QtcTZYVkp3M0JNdWozNms1d3p3UldOc0VObEptOThqUTZwNXg5M1F4emlSOUlKWlZtWEtUX2NsMk04SFNNOGgzU3BOYVFrYUJ5Y0x4b2pBbHQ5QngxTlNHODhpR0N2SHJXZw?oc=5\" target=\"_blank\">New Orleans police secretly used facial recognition on over 200 live camera feeds</a> <font color=\"#6f6f6f\">Engadget</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "facial recognition"
       ],
       "needs_review": 0
     },
@@ -21029,6 +21239,23 @@
       "needs_review": 0
     },
     {
+      "id": "51061812e874a911be74637bf51307e6",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWkI0VngwVFd0UTR2R0NTU1RQdzZsbi1pYnFrRFY5amkwbHpzN3ZVaC14V3pUREY5YV9rV1VZYUNfZmFGbGJoNkVWMkxlcEN6cmlUOUJoTGU0VlVodUJaOWhvbUdibjZvTy1DT2NLR09xZjJzTVRYWkpvbGItR0JuaUQ4STB2cjZiak9qM3BoSGNMSWlRY1dtNzBpUUtHX2tVY0tWeExkQ2NNMGFmWDA1bGh5cUZkSExZ?oc=5",
+      "title": "The Last Word: Dallas Police Chief on Potentially Deploying Facial Recognition Technology",
+      "source": "dallasinnovates.com",
+      "date": "2024-05-14",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWkI0VngwVFd0UTR2R0NTU1RQdzZsbi1pYnFrRFY5amkwbHpzN3ZVaC14V3pUREY5YV9rV1VZYUNfZmFGbGJoNkVWMkxlcEN6cmlUOUJoTGU0VlVodUJaOWhvbUdibjZvTy1DT2NLR09xZjJzTVRYWkpvbGItR0JuaUQ4STB2cjZiak9qM3BoSGNMSWlRY1dtNzBpUUtHX2tVY0tWeExkQ2NNMGFmWDA1bGh5cUZkSExZ?oc=5\" target=\"_blank\">The Last Word: Dallas Police Chief on Potentially Deploying Facial Recognition Technology</a> <font color=\"#6f6f6f\">dallasinnovates.com</font>",
+      "story_type": "vendor",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "facial recognition"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "c8ecac9774cd07598dd8bf0a3ca34d0c",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQ0hLbGZ3dldEQXNGMFFlNTBwU2E3ZnMxdHBDRnZ0UHR6MkhQeDRPb3lFSW16blBYRTJHVVF4RzgzS0hvUjMwOVU4LWw1TktxNW5ZT0RNNWpXRjdBSmsxeGRpZzh5Ny1aNVN5YlF4c2hwQVFTM3BlSnZSbFYxUjZyX0ZtOTI0c3VJblhzc19EVWNpRklPQTBHMTkwak5kRl9vc0pVYzJZRFVtM2M?oc=5",
       "title": "Dallas PD to implement facial recognition tech at real-time crime center",
@@ -23736,6 +23963,23 @@
       "date": "2022-01-06",
       "date_discovered": "2026-01-12",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNcEF6YXlQSjd5NDV6S3dnUDc0ZDl1bE1TUnltRTBycUtpa3d4cmNnWDFTeUpZSVhKYTFWaHZjeldxY3hhZndLNmF0dzdmUWpCOE83Ul9fY29CdG5JUGRxZTNiU09nYjJlaktBWW9kZXNmSEx4VS1jNm5IX3RuSHg0a1VfOUVuRHozWW1aRzcyUGxKdlB5Zi0zZWpNMGJJMWl6ZFVhQkFR?oc=5\" target=\"_blank\">Police are being trained to create fake social-media accounts using AI to generate images of people who don't exist</a> <font color=\"#6f6f6f\">Business Insider</font>",
+      "story_type": "general",
+      "relevance_score": 0.85,
+      "key_entities": "Google, ICE",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "60645c7b49cf300c633b366dcedab1ae",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZ3htU2dkTmhWRkg5cmE1dmpWNGtTRm9XUzQ1X3V2UTZ1TjNyaHFjbnJ5eVFZbUtBc2R4emxLdER3RzdDbkhFLXRRRVJTLUJUdFRubHBrMWRkMXB3XzJ5bnBsQ3ZuOWk4VzVQckVUcnNsNTlaQ2s5RzJyTE5kcEpacHlhRWd3dzFZUnhidw?oc=5",
+      "title": "Police Use of Artificial Intelligence: 2021 in Review",
+      "source": "Electronic Frontier Foundation",
+      "date": "2022-01-01",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQZ3htU2dkTmhWRkg5cmE1dmpWNGtTRm9XUzQ1X3V2UTZ1TjNyaHFjbnJ5eVFZbUtBc2R4emxLdER3RzdDbkhFLXRRRVJTLUJUdFRubHBrMWRkMXB3XzJ5bnBsQ3ZuOWk4VzVQckVUcnNsNTlaQ2s5RzJyTE5kcEpacHlhRWd3dzFZUnhidw?oc=5\" target=\"_blank\">Police Use of Artificial Intelligence: 2021 in Review</a> <font color=\"#6f6f6f\">Electronic Frontier Foundation</font>",
       "story_type": "general",
       "relevance_score": 0.85,
       "key_entities": "Google, ICE",
