@@ -207,8 +207,8 @@ export default function MPVDashboard() {
           MPV Analytical Dashboard
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
-          Interactive analysis of Mapping Police Violence data. All results are descriptive; causal
-          inference requires controls for local crime rates and deployment density.
+          Interactive analysis of Mapping Police Violence data. All results are descriptive and
+          should not be used to infer causal relationships.
         </p>
       </div>
 
