@@ -42,48 +42,18 @@ export default function ChartCard({
     const currentData = JSON.parse(JSON.stringify((plotDiv as any).data));
     const currentLayout = JSON.parse(JSON.stringify((plotDiv as any).layout));
 
-    // Filter out any existing attribution annotations to avoid duplicates
-    const existingAnnotations = (currentLayout.annotations || []).filter(
-      (a: any) => !a.text?.includes('Mapping Police Violence') && !a.text?.includes(ATTRIBUTION.name)
-    );
-
-    const attributionText = `Source: Mapping Police Violence  •  ${ATTRIBUTION.name}, ${ATTRIBUTION.institution}  •  ${ATTRIBUTION.website}  •  ${today}`;
-
-    // Create modified layout with title and attribution for export
+    // Create clean export layout (just the chart, we'll add title/attribution via canvas)
     const exportLayout = {
       ...currentLayout,
-      title: {
-        text: fullTitle,
-        font: { size: 18, color: '#1f2937', family: 'Arial, sans-serif' },
-        x: 0.5,
-        xanchor: 'center',
-        y: 0.95,
-        yanchor: 'top',
-      },
       margin: {
         l: currentLayout.margin?.l || 60,
         r: currentLayout.margin?.r || 60,
-        t: 100,
-        b: 100,
+        t: 40,
+        b: 60,
       },
-      annotations: [
-        ...existingAnnotations,
-        {
-          text: attributionText,
-          showarrow: false,
-          xref: 'paper',
-          yref: 'paper',
-          x: 0.5,
-          y: -0.15,
-          xanchor: 'center',
-          yanchor: 'top',
-          font: { size: 11, color: '#6b7280', family: 'Arial, sans-serif' },
-        },
-      ],
       paper_bgcolor: '#ffffff',
       plot_bgcolor: '#ffffff',
       font: { ...currentLayout.font, color: '#374151' },
-      // Override axis colors for light background
       xaxis: {
         ...currentLayout.xaxis,
         gridcolor: '#e5e7eb',
@@ -101,20 +71,20 @@ export default function ChartCard({
     };
 
     try {
-      // Create temporary plot for export with modified layout
+      // Create temporary plot for export
       const tempDiv = document.createElement('div');
       tempDiv.style.position = 'absolute';
       tempDiv.style.left = '-9999px';
       tempDiv.style.width = '1200px';
-      tempDiv.style.height = '900px';
+      tempDiv.style.height = '700px';
       document.body.appendChild(tempDiv);
 
       await window.Plotly.newPlot(tempDiv, currentData, exportLayout, { staticPlot: true });
 
-      const exportDataUrl = await window.Plotly.toImage(tempDiv, {
+      const plotImageUrl = await window.Plotly.toImage(tempDiv, {
         format: 'png',
         width: 1200,
-        height: 900,
+        height: 700,
         scale: 2,
       });
 
@@ -122,12 +92,68 @@ export default function ChartCard({
       window.Plotly.purge(tempDiv);
       document.body.removeChild(tempDiv);
 
-      // Download the image
-      const link = document.createElement('a');
-      const filename = `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${causeLabel.toLowerCase().replace(/\s+/g, '-')}-${yearLabel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`;
-      link.download = filename;
-      link.href = exportDataUrl;
-      link.click();
+      // Now create a canvas to combine plot + title + attribution
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      if (!ctx) {
+        console.error('Could not get canvas context');
+        return;
+      }
+
+      // Canvas dimensions (2x for retina)
+      const scale = 2;
+      const width = 1200;
+      const height = 850; // Extra space for title and attribution
+      canvas.width = width * scale;
+      canvas.height = height * scale;
+      ctx.scale(scale, scale);
+
+      // Fill white background
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, width, height);
+
+      // Draw title at top
+      ctx.fillStyle = '#1f2937';
+      ctx.font = 'bold 20px Arial, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(fullTitle, width / 2, 35);
+
+      // Load and draw the plot image
+      const plotImage = new Image();
+      plotImage.crossOrigin = 'anonymous';
+
+      await new Promise<void>((resolve, reject) => {
+        plotImage.onload = () => {
+          // Draw plot image below title
+          ctx.drawImage(plotImage, 0, 55, width, 700);
+          resolve();
+        };
+        plotImage.onerror = reject;
+        plotImage.src = plotImageUrl;
+      });
+
+      // Draw attribution at bottom
+      const attributionText = `Source: Mapping Police Violence  •  ${ATTRIBUTION.name}, ${ATTRIBUTION.institution}  •  ${ATTRIBUTION.website}  •  ${today}`;
+      ctx.fillStyle = '#6b7280';
+      ctx.font = '12px Arial, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(attributionText, width / 2, height - 15);
+
+      // Convert canvas to blob and download
+      canvas.toBlob((blob) => {
+        if (!blob) {
+          console.error('Failed to create blob');
+          return;
+        }
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        const filename = `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${causeLabel.toLowerCase().replace(/\s+/g, '-')}-${yearLabel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`;
+        link.download = filename;
+        link.href = url;
+        link.click();
+        URL.revokeObjectURL(url);
+      }, 'image/png');
+
     } catch (err) {
       console.error('Failed to export chart:', err);
     }
