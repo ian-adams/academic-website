@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import MPVDashboard from '@/components/dashboard/MPVDashboard';
+---
+
+<BaseLayout
+  title="MPV Dashboard"
+  description="Interactive analysis of Mapping Police Violence data with filters, charts, and geographic visualizations."
+>
+  <section class="section">
+    <div class="container-wide">
+      <MPVDashboard client:load />
+    </div>
+  </section>
+</BaseLayout>

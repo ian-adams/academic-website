@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import NewsFeedClient from '@/components/news/NewsFeedClient';
+---
+
+<BaseLayout
+  title="AI in Policing News"
+  description="Curated news feed covering artificial intelligence applications in law enforcement"
+>
+  <section class="section">
+    <div class="container-wide">
+      <NewsFeedClient
+        client:load
+        feedUrl="/data/ai-police-news.json"
+        title="AI in Policing News"
+        description="Curated coverage of artificial intelligence applications in law enforcement"
+      />
+    </div>
+  </section>
+</BaseLayout>

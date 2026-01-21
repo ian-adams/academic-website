@@ -1,0 +1,64 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts', ({ data }) => !data.draft);
+const sortedPosts = posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout
+  title="Posts"
+  description="Blog posts and updates from Ian T. Adams, Ph.D."
+>
+  <section class="section">
+    <div class="container-wide">
+      <!-- Header -->
+      <header class="mb-12">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-primary-900 dark:text-gray-100 mb-4">
+          Posts
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
+          Thoughts, updates, and insights on policing research and academic life.
+        </p>
+      </header>
+
+      <!-- Posts Grid -->
+      {sortedPosts.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sortedPosts.map((post) => (
+            <article class="card overflow-hidden group">
+              <a href={`/posts/${post.slug}`} class="block">
+                <div class="p-6">
+                  <time class="text-sm text-gray-500 dark:text-gray-500">
+                    {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </time>
+                  <h2 class="text-xl font-serif font-semibold text-primary-900 dark:text-gray-100 group-hover:text-accent-burgundy dark:group-hover:text-accent-gold transition-colors mt-2 mb-2">
+                    {post.data.title}
+                  </h2>
+                  {post.data.subtitle && (
+                    <p class="text-gray-600 dark:text-gray-400 line-clamp-3">
+                      {post.data.subtitle}
+                    </p>
+                  )}
+                  {post.data.tags && post.data.tags.length > 0 && (
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      {post.data.tags.slice(0, 3).map((tag) => (
+                        <span class="px-2 py-0.5 text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-12">
+          <p class="text-gray-600 dark:text-gray-400">No posts yet. Check back soon!</p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

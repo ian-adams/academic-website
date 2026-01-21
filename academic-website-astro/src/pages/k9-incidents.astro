@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import NewsFeedClient from '@/components/news/NewsFeedClient';
+---
+
+<BaseLayout
+  title="K9 Incidents"
+  description="News coverage of police K9 incidents and related developments"
+>
+  <section class="section">
+    <div class="container-wide">
+      <NewsFeedClient
+        client:load
+        feedUrl="/data/k9-incidents.json"
+        title="K9 Incidents"
+        description="News coverage of police K9 incidents and related developments"
+      />
+    </div>
+  </section>
+</BaseLayout>

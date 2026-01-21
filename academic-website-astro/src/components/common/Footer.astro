@@ -1,0 +1,129 @@
+---
+import { siteConfig } from '@/data/site';
+
+const currentYear = new Date().getFullYear();
+const social = siteConfig.author.social;
+---
+
+<footer class="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+  <div class="container-wide py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- About -->
+      <div>
+        <h3 class="font-serif text-lg font-semibold text-primary-900 dark:text-gray-100 mb-4">
+          {siteConfig.author.name}
+        </h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+          {siteConfig.author.role}
+        </p>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          <a
+            href={siteConfig.author.institutionUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-primary-700 dark:hover:text-primary-400 underline"
+          >
+            {siteConfig.author.institution}
+          </a>
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-serif text-lg font-semibold text-primary-900 dark:text-gray-100 mb-4">
+          Quick Links
+        </h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="/publications" class="text-gray-600 dark:text-gray-400 hover:text-primary-700 dark:hover:text-primary-400">
+              Publications
+            </a>
+          </li>
+          <li>
+            <a href="/posts" class="text-gray-600 dark:text-gray-400 hover:text-primary-700 dark:hover:text-primary-400">
+              Blog Posts
+            </a>
+          </li>
+          <li>
+            <a href="/dashboard" class="text-gray-600 dark:text-gray-400 hover:text-primary-700 dark:hover:text-primary-400">
+              MPV Dashboard
+            </a>
+          </li>
+          <li>
+            <a href={siteConfig.author.cv} target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-400 hover:text-primary-700 dark:hover:text-primary-400">
+              Download CV
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Connect -->
+      <div>
+        <h3 class="font-serif text-lg font-semibold text-primary-900 dark:text-gray-100 mb-4">
+          Connect
+        </h3>
+        <div class="flex gap-4">
+          <a
+            href={social.twitter}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-500 hover:text-primary-700 dark:text-gray-400 dark:hover:text-primary-400"
+            aria-label="Twitter"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a
+            href={social.googleScholar}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-500 hover:text-primary-700 dark:text-gray-400 dark:hover:text-primary-400"
+            aria-label="Google Scholar"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+            </svg>
+          </a>
+          <a
+            href={social.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-500 hover:text-primary-700 dark:text-gray-400 dark:hover:text-primary-400"
+            aria-label="GitHub"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+          <a
+            href={social.researchGate}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-500 hover:text-primary-700 dark:text-gray-400 dark:hover:text-primary-400"
+            aria-label="ResearchGate"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.121 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .078.53h-.005a3.334 3.334 0 0 0 .112.438c.244.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.335-.3.602-.576.8a1.69 1.69 0 0 1-.972.296c-.39 0-.71-.105-.96-.318a1.895 1.895 0 0 1-.51-.783 3.32 3.32 0 0 1-.2-.756c-.04-.282-.06-.633-.06-1.055v-.63c0-.422.02-.773.06-1.055.04-.282.1-.535.2-.756.102-.22.276-.43.51-.633.326-.282.7-.352 1.092-.282.36.063.636.213.834.444.198.23.331.514.398.85.018.095.065.142.14.142h1.186c.065 0 .102-.028.102-.083 0-.037-.003-.074-.01-.111a3.243 3.243 0 0 0-.553-1.395 2.97 2.97 0 0 0-1.175-.992 3.533 3.533 0 0 0-1.647-.386zM.86 5.387c-.094 0-.14.047-.14.14v9.42c0 .094.046.14.14.14h1.273c.094 0 .14-.046.14-.14v-3.418c0-.09.046-.14.14-.14h.91c.614 0 1.108.104 1.49.313.38.21.66.504.836.881.175.378.263.818.263 1.322v1.043c0 .093.047.14.14.14h1.274c.093 0 .14-.047.14-.14v-1.134c0-.655-.13-1.222-.39-1.7a2.63 2.63 0 0 0-1.09-1.096c-.47-.26-1.025-.405-1.673-.434-.038 0-.056-.02-.056-.056a.09.09 0 0 1 .028-.063l2.87-3.208c.03-.038.037-.078.02-.12a.116.116 0 0 0-.108-.073H4.645c-.066 0-.102.02-.14.064L2.42 9.632c-.04.047-.078.056-.11.028a.088.088 0 0 1-.03-.073V5.527c0-.093-.046-.14-.14-.14H.86zm13.944 2.34c-.81 0-1.474.138-1.99.415a2.66 2.66 0 0 0-1.167 1.17c-.254.502-.38 1.09-.38 1.763v.37c0 .664.127 1.248.38 1.75.253.502.657.894 1.213 1.175.556.282 1.25.423 2.08.423.618 0 1.137-.08 1.563-.24.425-.16.77-.38 1.037-.66.267-.28.42-.6.458-.96 0-.057-.028-.084-.084-.084H16.72c-.066 0-.11.027-.14.084a1.173 1.173 0 0 1-.427.518c-.225.16-.56.24-1.002.24-.503 0-.904-.126-1.204-.376-.3-.25-.494-.58-.583-.99a3.527 3.527 0 0 1-.064-.52V11c0-.048.03-.073.084-.073h4.384c.093 0 .14-.046.14-.14v-.334c0-.673-.127-1.26-.38-1.762a2.66 2.66 0 0 0-1.167-1.17c-.517-.276-1.18-.415-1.99-.415zm0 1.188c.473 0 .86.115 1.163.345.3.23.51.54.62.924.04.148.064.292.073.435 0 .056-.028.084-.084.084h-3.505c-.056 0-.084-.028-.084-.084.01-.143.034-.287.073-.435.11-.385.32-.695.62-.924.302-.23.69-.345 1.163-.345h-.04z"/>
+            </svg>
+          </a>
+          <a
+            href={`mailto:${siteConfig.author.email}`}
+            class="text-gray-500 hover:text-primary-700 dark:text-gray-400 dark:hover:text-primary-400"
+            aria-label="Email"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
+      <p class="text-center text-sm text-gray-500 dark:text-gray-400">
+        &copy; {currentYear} {siteConfig.author.name}. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

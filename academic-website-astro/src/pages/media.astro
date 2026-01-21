@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import NewsFeedClient from '@/components/news/NewsFeedClient';
+---
+
+<BaseLayout
+  title="Media Mentions"
+  description="Media coverage featuring Ian T. Adams research and commentary"
+>
+  <section class="section">
+    <div class="container-wide">
+      <NewsFeedClient
+        client:load
+        feedUrl="/data/media-mentions.json"
+        title="Media Mentions"
+        description="Media coverage featuring research and commentary"
+      />
+    </div>
+  </section>
+</BaseLayout>

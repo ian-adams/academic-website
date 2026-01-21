@@ -1,0 +1,118 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  publication: CollectionEntry<'publications'>;
+}
+
+const { publication } = Astro.props;
+const { title, authors, date, publication: venue, abstract, summary, url_source, url_pdf, links } = publication.data;
+---
+
+<BaseLayout title={title} description={summary || abstract?.slice(0, 160)} article={true}>
+  <article class="section">
+    <div class="container-narrow">
+      <!-- Header -->
+      <header class="mb-8">
+        <h1 class="text-3xl md:text-4xl font-serif font-bold text-primary-900 dark:text-gray-100 mb-4 text-balance">
+          {title}
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            {date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
+          </span>
+          {venue && (
+            <span class="italic">{venue}</span>
+          )}
+        </div>
+
+        <!-- Authors -->
+        <div class="mb-6">
+          <p class="text-gray-700 dark:text-gray-300">
+            {authors.map((author, i) => (
+              <>
+                <span class={author.includes('Ian') ? 'font-semibold' : ''}>{author}</span>
+                {i < authors.length - 1 && <span>, </span>}
+              </>
+            ))}
+          </p>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="flex flex-wrap gap-3">
+          {url_source && (
+            <a
+              href={url_source}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+            >
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+              View Publication
+            </a>
+          )}
+          {url_pdf && url_pdf.length > 0 && (
+            <a
+              href={url_pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary"
+            >
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+              Download PDF
+            </a>
+          )}
+          {links?.map((link) => (
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+      </header>
+
+      <!-- Abstract -->
+      {abstract && (
+        <section class="mb-8">
+          <h2 class="text-xl font-serif font-semibold text-primary-900 dark:text-gray-100 mb-3">
+            Abstract
+          </h2>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+            {abstract}
+          </p>
+        </section>
+      )}
+
+      <!-- Content (summary section from markdown) -->
+      <section class="prose-academic dark:prose-dark">
+        <slot />
+      </section>
+
+      <!-- Back link -->
+      <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <a
+          href="/publications"
+          class="inline-flex items-center text-primary-700 dark:text-primary-400 hover:text-accent-burgundy dark:hover:text-accent-gold"
+        >
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+          </svg>
+          Back to Publications
+        </a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

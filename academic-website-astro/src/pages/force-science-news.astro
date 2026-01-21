@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import NewsFeedClient from '@/components/news/NewsFeedClient';
+---
+
+<BaseLayout
+  title="Force Science News"
+  description="News and research related to force science and use of force in law enforcement"
+>
+  <section class="section">
+    <div class="container-wide">
+      <NewsFeedClient
+        client:load
+        feedUrl="/data/force-science-news.json"
+        title="Force Science News"
+        description="News and research related to force science and use of force in law enforcement"
+      />
+    </div>
+  </section>
+</BaseLayout>
