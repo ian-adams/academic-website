@@ -207,8 +207,16 @@ export default function MPVDashboard() {
           MPV Analytical Dashboard
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
-          Interactive analysis of Mapping Police Violence data. All results are descriptive and
-          should not be used to infer causal relationships.
+          Interactive analysis of{' '}
+          <a
+            href="https://mappingpoliceviolence.us"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent-burgundy dark:text-accent-gold hover:underline"
+          >
+            Mapping Police Violence
+          </a>{' '}
+          data. All results are descriptive and should not be used to infer causal relationships.
         </p>
       </div>
 

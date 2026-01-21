@@ -119,7 +119,7 @@ export default function ChartCard({
       ctx.fillText(fullTitle, width / 2, 32);
 
       // Draw attribution right below title
-      const attributionText = `Source: Mapping Police Violence  •  ${ATTRIBUTION.name}, ${ATTRIBUTION.institution}  •  ${ATTRIBUTION.website}  •  ${today}`;
+      const attributionText = `Source: mappingpoliceviolence.us  •  ${ATTRIBUTION.name}, ${ATTRIBUTION.institution}  •  ${ATTRIBUTION.website}  •  ${today}`;
       ctx.fillStyle = '#6b7280';
       ctx.font = '11px Arial, sans-serif';
       ctx.fillText(attributionText, width / 2, 52);
@@ -203,7 +203,16 @@ export default function ChartCard({
       {/* Attribution footer */}
       <div className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
         <p className="text-xs text-gray-400 dark:text-gray-500 text-center">
-          Source: Mapping Police Violence • {ATTRIBUTION.name}, {ATTRIBUTION.institution} • {ATTRIBUTION.website} • {today}
+          Source:{' '}
+          <a
+            href="https://mappingpoliceviolence.us"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Mapping Police Violence
+          </a>
+          {' '}• {ATTRIBUTION.name}, {ATTRIBUTION.institution} • {ATTRIBUTION.website} • {today}
         </p>
       </div>
     </div>
