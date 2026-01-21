@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, lazy, Suspense } from 'react';
 import type { MPVRecord, MPVData, FilterState } from './types';
+import ChartCard from './ChartCard';
 
 // Lazy load chart components
 const CumulativeChart = lazy(() => import('./charts/CumulativeChart'));
@@ -56,6 +57,10 @@ export default function MPVDashboard() {
   });
   const [isDark, setIsDark] = useState(false);
 
+  // Filter labels for display
+  const causeLabel = filters.causeFilter === 'shootings' ? 'Fatal Shootings' : 'All Deaths';
+  const yearLabel = filters.yearFilter === 'All' ? 'All Years' : filters.yearFilter;
+
   // Check dark mode
   useEffect(() => {
     const checkDark = () => {
@@ -92,7 +97,7 @@ export default function MPVDashboard() {
     return Array.from(yearSet).sort((a, b) => b - a);
   }, [data]);
 
-  // Filter data
+  // Filter data (respects both cause and year filters)
   const filteredData = useMemo(() => {
     if (!data) return [];
     let records = data.records;
@@ -108,7 +113,7 @@ export default function MPVDashboard() {
     return records;
   }, [data, filters]);
 
-  // Long data (no year filter, for trend charts)
+  // Long data (only cause filter, for trend charts that need all years)
   const longData = useMemo(() => {
     if (!data) return [];
     if (filters.causeFilter === 'shootings') {
@@ -278,22 +283,42 @@ export default function MPVDashboard() {
         {activeTab === 'overview' && (
           <div className="space-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Cumulative Trajectory</h3>
+              <ChartCard
+                title="Cumulative Trajectory"
+                subtitle="Year-over-year comparison of cumulative deaths"
+                causeLabel={causeLabel}
+                yearLabel="All Years"
+                isDark={isDark}
+              >
                 <CumulativeChart data={longData} population={POPULATION} isDark={isDark} />
-              </div>
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Per Capita (Normalized)</h3>
+              </ChartCard>
+              <ChartCard
+                title="Per Capita Rate"
+                subtitle="Deaths per million population by year"
+                causeLabel={causeLabel}
+                yearLabel="All Years"
+                isDark={isDark}
+              >
                 <PerCapitaChart data={longData} population={POPULATION} isDark={isDark} />
-              </div>
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Temporal Heatmap</h3>
+              </ChartCard>
+              <ChartCard
+                title="Temporal Heatmap"
+                subtitle="Distribution by month and day of week"
+                causeLabel={causeLabel}
+                yearLabel={yearLabel}
+                isDark={isDark}
+              >
                 <HeatmapChart data={filteredData} population={POPULATION} isDark={isDark} />
-              </div>
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Day of Week</h3>
+              </ChartCard>
+              <ChartCard
+                title="Day of Week"
+                subtitle="Average deaths by day of week"
+                causeLabel={causeLabel}
+                yearLabel={yearLabel}
+                isDark={isDark}
+              >
                 <DayOfWeekChart data={filteredData} population={POPULATION} isDark={isDark} />
-              </div>
+              </ChartCard>
             </div>
           </div>
         )}
@@ -301,25 +326,52 @@ export default function MPVDashboard() {
         {activeTab === 'demographics' && (
           <div className="space-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Race Distribution</h3>
+              <ChartCard
+                title="Race Distribution"
+                subtitle="Deaths by victim race"
+                causeLabel={causeLabel}
+                yearLabel={yearLabel}
+                isDark={isDark}
+              >
                 <RaceDistributionChart data={filteredData} population={POPULATION} isDark={isDark} />
-              </div>
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Race by Year</h3>
-                <RaceByYearChart data={filteredData} population={POPULATION} isDark={isDark} />
-              </div>
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Age Distribution</h3>
+              </ChartCard>
+              <ChartCard
+                title="Race by Year"
+                subtitle="Racial composition over time"
+                causeLabel={causeLabel}
+                yearLabel="All Years"
+                isDark={isDark}
+              >
+                <RaceByYearChart data={longData} population={POPULATION} isDark={isDark} />
+              </ChartCard>
+              <ChartCard
+                title="Age Distribution"
+                subtitle="Deaths by victim age"
+                causeLabel={causeLabel}
+                yearLabel={yearLabel}
+                isDark={isDark}
+              >
                 <AgeDistributionChart data={filteredData} population={POPULATION} isDark={isDark} />
-              </div>
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Unarmed by Race</h3>
+              </ChartCard>
+              <ChartCard
+                title="Unarmed by Race"
+                subtitle="Unarmed deaths broken down by race"
+                causeLabel={causeLabel}
+                yearLabel={yearLabel}
+                isDark={isDark}
+              >
                 <UnarmedByRaceChart data={filteredData} population={POPULATION} isDark={isDark} />
-              </div>
-              <div className="card p-6 lg:col-span-2">
-                <h3 className="text-lg font-semibold mb-4">Age & Race</h3>
-                <AgeRaceChart data={filteredData} population={POPULATION} isDark={isDark} />
+              </ChartCard>
+              <div className="lg:col-span-2">
+                <ChartCard
+                  title="Age & Race"
+                  subtitle="Age distribution by race"
+                  causeLabel={causeLabel}
+                  yearLabel={yearLabel}
+                  isDark={isDark}
+                >
+                  <AgeRaceChart data={filteredData} population={POPULATION} isDark={isDark} />
+                </ChartCard>
               </div>
             </div>
           </div>
@@ -328,25 +380,52 @@ export default function MPVDashboard() {
         {activeTab === 'behavioral' && (
           <div className="space-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Armed Status</h3>
+              <ChartCard
+                title="Armed Status"
+                subtitle="Victim armed/unarmed status"
+                causeLabel={causeLabel}
+                yearLabel={yearLabel}
+                isDark={isDark}
+              >
                 <ArmedStatusChart data={filteredData} population={POPULATION} isDark={isDark} />
-              </div>
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Alleged Weapons</h3>
+              </ChartCard>
+              <ChartCard
+                title="Alleged Weapons"
+                subtitle="Types of alleged weapons"
+                causeLabel={causeLabel}
+                yearLabel={yearLabel}
+                isDark={isDark}
+              >
                 <WeaponsChart data={filteredData} population={POPULATION} isDark={isDark} />
-              </div>
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Fleeing Outcomes</h3>
+              </ChartCard>
+              <ChartCard
+                title="Fleeing Outcomes"
+                subtitle="Outcomes by fleeing status"
+                causeLabel={causeLabel}
+                yearLabel={yearLabel}
+                isDark={isDark}
+              >
                 <FleeingChart data={filteredData} population={POPULATION} isDark={isDark} />
-              </div>
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Mental Health Trend</h3>
+              </ChartCard>
+              <ChartCard
+                title="Mental Health Trend"
+                subtitle="Cases involving mental health symptoms"
+                causeLabel={causeLabel}
+                yearLabel="All Years"
+                isDark={isDark}
+              >
                 <MentalHealthChart data={longData} population={POPULATION} isDark={isDark} />
-              </div>
-              <div className="card p-6 lg:col-span-2">
-                <h3 className="text-lg font-semibold mb-4">Body Camera Growth</h3>
-                <BodyCameraChart data={longData} population={POPULATION} isDark={isDark} />
+              </ChartCard>
+              <div className="lg:col-span-2">
+                <ChartCard
+                  title="Body Camera Growth"
+                  subtitle="Body camera presence over time"
+                  causeLabel={causeLabel}
+                  yearLabel="All Years"
+                  isDark={isDark}
+                >
+                  <BodyCameraChart data={longData} population={POPULATION} isDark={isDark} />
+                </ChartCard>
               </div>
             </div>
           </div>
@@ -354,33 +433,58 @@ export default function MPVDashboard() {
 
         {activeTab === 'geography' && (
           <div className="space-y-8">
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-4">National Map</h3>
+            <ChartCard
+              title="National Map"
+              subtitle="Geographic distribution of deaths"
+              causeLabel={causeLabel}
+              yearLabel={yearLabel}
+              isDark={isDark}
+            >
               <USMapChart data={filteredData} population={POPULATION} isDark={isDark} />
-            </div>
+            </ChartCard>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Top 15 States</h3>
+              <ChartCard
+                title="Top 15 States"
+                subtitle="States with highest counts"
+                causeLabel={causeLabel}
+                yearLabel={yearLabel}
+                isDark={isDark}
+              >
                 <TopStatesChart data={filteredData} population={POPULATION} isDark={isDark} />
-              </div>
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold mb-4">Top 20 Cities</h3>
+              </ChartCard>
+              <ChartCard
+                title="Top 20 Cities"
+                subtitle="Cities with highest counts"
+                causeLabel={causeLabel}
+                yearLabel={yearLabel}
+                isDark={isDark}
+              >
                 <TopCitiesChart data={filteredData} population={POPULATION} isDark={isDark} />
-              </div>
+              </ChartCard>
             </div>
           </div>
         )}
 
         {activeTab === 'accountability' && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-4">Criminal Charges Trend</h3>
+            <ChartCard
+              title="Criminal Charges Trend"
+              subtitle="Officers charged over time"
+              causeLabel={causeLabel}
+              yearLabel="All Years"
+              isDark={isDark}
+            >
               <CriminalChargesChart data={longData} population={POPULATION} isDark={isDark} />
-            </div>
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-4">Neighborhood Income Disparities</h3>
+            </ChartCard>
+            <ChartCard
+              title="Neighborhood Income Disparities"
+              subtitle="Deaths by median household income"
+              causeLabel={causeLabel}
+              yearLabel={yearLabel}
+              isDark={isDark}
+            >
               <IncomeDisparitiesChart data={filteredData} population={POPULATION} isDark={isDark} />
-            </div>
+            </ChartCard>
           </div>
         )}
       </Suspense>

@@ -34,11 +34,26 @@ export interface FilterState {
   yearFilter: string;
 }
 
+export interface FilterContext {
+  causeFilter: 'all' | 'shootings';
+  yearFilter: string;
+  causeLabel: string; // "All Deaths" or "Fatal Shootings"
+  yearLabel: string;  // "All Years" or specific year
+}
+
 export interface ChartProps {
   data: MPVRecord[];
   population: Record<number, number>;
   isDark: boolean;
+  filterContext?: FilterContext;
 }
+
+// Attribution for downloads
+export const ATTRIBUTION = {
+  name: 'Ian T. Adams, Ph.D.',
+  institution: 'University of South Carolina',
+  website: 'ianadamsresearch.com',
+};
 
 // Color palettes
 export const COLORS = {
