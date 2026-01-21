@@ -11,25 +11,38 @@ interface Publication {
   featured?: boolean;
   url_source?: string;
   url_pdf?: string[];
+  isPreprint: boolean;
 }
 
 interface Props {
   publications: Publication[];
+  onCountChange?: (count: number) => void;
 }
 
-export default function PublicationsSearch({ publications }: Props) {
+export default function PublicationsSearch({ publications, onCountChange }: Props) {
   const [search, setSearch] = useState('');
   const [yearFilter, setYearFilter] = useState<string>('all');
+  const [viewMode, setViewMode] = useState<'publications' | 'preprints'>('publications');
+
+  // Separate publications and preprints
+  const { pubs, preprints } = useMemo(() => {
+    const pubs = publications.filter(p => !p.isPreprint);
+    const preprints = publications.filter(p => p.isPreprint);
+    return { pubs, preprints };
+  }, [publications]);
+
+  // Get the base dataset based on view mode
+  const baseData = viewMode === 'publications' ? pubs : preprints;
 
   // Get unique years for filter dropdown
   const years = useMemo(() => {
-    const uniqueYears = [...new Set(publications.map(p => p.year))];
+    const uniqueYears = [...new Set(baseData.map(p => p.year))];
     return uniqueYears.sort((a, b) => b - a);
-  }, [publications]);
+  }, [baseData]);
 
   // Filter publications based on search and year
   const filtered = useMemo(() => {
-    return publications.filter(pub => {
+    const result = baseData.filter(pub => {
       const searchLower = search.toLowerCase();
       const matchesSearch = search === '' ||
         pub.title.toLowerCase().includes(searchLower) ||
@@ -42,7 +55,14 @@ export default function PublicationsSearch({ publications }: Props) {
 
       return matchesSearch && matchesYear;
     });
-  }, [publications, search, yearFilter]);
+
+    // Notify parent of count change
+    if (onCountChange) {
+      onCountChange(result.length);
+    }
+
+    return result;
+  }, [baseData, search, yearFilter, onCountChange]);
 
   // Group filtered results by year
   const groupedByYear = useMemo(() => {
@@ -56,8 +76,39 @@ export default function PublicationsSearch({ publications }: Props) {
 
   const sortedYears = Object.keys(groupedByYear).map(Number).sort((a, b) => b - a);
 
+  // Reset year filter when switching view modes
+  const handleViewModeChange = (mode: 'publications' | 'preprints') => {
+    setViewMode(mode);
+    setYearFilter('all');
+    setSearch('');
+  };
+
   return (
     <div>
+      {/* View Mode Toggle */}
+      <div className="flex gap-2 mb-6">
+        <button
+          onClick={() => handleViewModeChange('publications')}
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+            viewMode === 'publications'
+              ? 'bg-primary-700 text-white'
+              : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+          }`}
+        >
+          Publications ({pubs.length})
+        </button>
+        <button
+          onClick={() => handleViewModeChange('preprints')}
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+            viewMode === 'preprints'
+              ? 'bg-primary-700 text-white'
+              : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+          }`}
+        >
+          Preprints ({preprints.length})
+        </button>
+      </div>
+
       {/* Search and Filter Controls */}
       <div className="flex flex-col sm:flex-row gap-4 mb-8">
         <div className="flex-1">
@@ -85,7 +136,7 @@ export default function PublicationsSearch({ publications }: Props) {
 
       {/* Results count */}
       <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-        Showing {filtered.length} of {publications.length} publications
+        Showing {filtered.length} of {baseData.length} {viewMode}
         {search && <span> matching "<strong>{search}</strong>"</span>}
         {yearFilter !== 'all' && <span> from {yearFilter}</span>}
       </p>
@@ -93,7 +144,7 @@ export default function PublicationsSearch({ publications }: Props) {
       {/* Publications List */}
       {filtered.length === 0 ? (
         <div className="text-center py-12 text-gray-500 dark:text-gray-400">
-          <p className="text-lg">No publications found</p>
+          <p className="text-lg">No {viewMode} found</p>
           <p className="text-sm mt-2">Try adjusting your search or filter</p>
         </div>
       ) : (
@@ -103,7 +154,7 @@ export default function PublicationsSearch({ publications }: Props) {
               <h2 className="text-2xl font-serif font-bold text-primary-900 dark:text-gray-100 mb-6 pb-2 border-b border-gray-200 dark:border-gray-700">
                 {year}
                 <span className="text-base font-normal text-gray-500 dark:text-gray-400 ml-2">
-                  ({groupedByYear[year].length} {groupedByYear[year].length === 1 ? 'publication' : 'publications'})
+                  ({groupedByYear[year].length} {groupedByYear[year].length === 1 ? (viewMode === 'publications' ? 'publication' : 'preprint') : viewMode})
                 </span>
               </h2>
 
@@ -130,11 +181,18 @@ export default function PublicationsSearch({ publications }: Props) {
                             </p>
                           )}
                         </div>
-                        {pub.featured && (
-                          <span className="flex-shrink-0 px-2 py-1 text-xs font-medium bg-accent-gold/20 text-accent-gold rounded">
-                            Featured
-                          </span>
-                        )}
+                        <div className="flex flex-col gap-1 items-end">
+                          {pub.featured && (
+                            <span className="flex-shrink-0 px-2 py-1 text-xs font-medium bg-accent-gold/20 text-accent-gold rounded">
+                              Featured
+                            </span>
+                          )}
+                          {pub.isPreprint && viewMode === 'publications' && (
+                            <span className="flex-shrink-0 px-2 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded">
+                              Preprint
+                            </span>
+                          )}
+                        </div>
                       </div>
 
                       {pub.summary && (

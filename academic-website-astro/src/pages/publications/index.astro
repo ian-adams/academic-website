@@ -21,7 +21,12 @@ const pubsForSearch = sortedPubs.map(pub => ({
   featured: pub.data.featured,
   url_source: pub.data.url_source,
   url_pdf: pub.data.url_pdf,
+  isPreprint: pub.data.publication === 'CrimRxiv',
 }));
+
+// Count publications vs preprints
+const pubCount = pubsForSearch.filter(p => !p.isPreprint).length;
+const preprintCount = pubsForSearch.filter(p => p.isPreprint).length;
 ---
 
 <BaseLayout
@@ -36,7 +41,7 @@ const pubsForSearch = sortedPubs.map(pub => ({
           Publications
         </h1>
         <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
-          Over fifty peer-reviewed publications on policing policy, technology, behavior, and use-of-force in law enforcement.
+          Peer-reviewed publications on policing policy, technology, behavior, and use-of-force in law enforcement.
         </p>
       </header>
 
@@ -75,8 +80,8 @@ const pubsForSearch = sortedPubs.map(pub => ({
           </div>
         </div>
         <div class="card p-4 text-center">
-          <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
-            {publications.length}
+          <div class="text-3xl font-bold text-primary-900 dark:text-gray-100" id="pub-count">
+            {pubCount}
           </div>
           <div class="text-sm text-gray-600 dark:text-gray-400">Publications</div>
         </div>
