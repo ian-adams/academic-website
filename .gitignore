@@ -1,34 +1,27 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment
+.env
+.env.*
+
+# Editor/IDE
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
 
-# Hugo generated resources
-resources/_gen/
-public/publication/2021-07-06-elevated-police-turnover-following-the-summer-of-george-floyd-protests-a-synthetic-control-study/featured_hu624da4a71ff4e906c9d6f5107a4d83f1_248451_720x0_resize_q75_lanczos.jpg
-public/publication/2021-07-06-elevated-police-turnover/featured_hu624da4a71ff4e906c9d6f5107a4d83f1_248451_720x0_resize_q75_lanczos.jpg
-public/publication/covid-19-vaccine-infection-rate-police/featured_huc481276552365ce4ad34e266c5e05428_39827_720x0_resize_q75_lanczos.JPG
-public/publication/covid-19-vaccine-infection-rate-police/featured_huc481276552365ce4ad34e266c5e05428_67506_720x0_resize_q75_lanczos.JPG
-public/publication/police-body-worn-cameras-effects-on-officers-burnout-and-perceived-organizational-support/featured_huc481276552365ce4ad34e266c5e05428_48044_720x0_resize_q75_lanczos.jpg
-public/publication/preprint/featured_hu559a5add5185b02575aa8333502ab2cc_220813_150x0_resize_q1_lanczos.jpg
-public/publication/preprint/featured_hu559a5add5185b02575aa8333502ab2cc_220813_150x0_resize_q75_lanczos.jpg
-public/publication/preprint/featured_hu559a5add5185b02575aa8333502ab2cc_220813_720x0_resize_q75_lanczos.jpg
-# AI News Aggregator
-data/ai-police-news/logs/
-data/ai-police-news/stories/
-data/ai-police-news/*.db
-
-# K9 Incidents Aggregator
-data/k9-incidents/logs/
-data/k9-incidents/stories/
-data/k9-incidents/*.db
-
-# Force Science Aggregator
-data/force-science/logs/
-data/force-science/stories/
-data/force-science/*.db
+# Python
 .venv/
 __pycache__/
 *.pyc
+
+# Logs
+*.log
+npm-debug.log*
+
+# Astro
+.astro/
