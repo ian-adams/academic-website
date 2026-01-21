@@ -286,7 +286,7 @@ export default function DisparityBenchmarkSimulator() {
               The Core Problem: What's Your Denominator?
             </h3>
             <p className="text-rose-700 dark:text-rose-300 mb-4">
-              In {selectedYear}, police fatally shot <strong>259 Black citizens</strong> and <strong>497 White citizens</strong>.
+              In {selectedYear}, police fatally shot <strong>{benchmarkData[0].years[selectedYear].blackShot} Black citizens</strong> and <strong>{benchmarkData[0].years[selectedYear].whiteShot} White citizens</strong>.
               Black citizens are ~13% of the US population but ~26% of those fatally shot.
               Does this prove racial bias?
             </p>
@@ -381,6 +381,7 @@ export default function DisparityBenchmarkSimulator() {
           <div className="card p-6">
             <h3 className="text-lg font-semibold mb-4">Odds Ratios by Benchmark ({selectedYear})</h3>
             <PlotWrapper
+              key={`comparison-${selectedYear}`}
               data={[
                 {
                   x: allOddsRatios.map((o) => o.oddsRatio),
@@ -618,6 +619,7 @@ export default function DisparityBenchmarkSimulator() {
           <div className="card p-6">
             <h3 className="text-lg font-semibold mb-4">Rate Comparison ({currentBenchmark.shortName})</h3>
             <PlotWrapper
+              key={`rate-${selectedYear}-${selectedBenchmark}`}
               data={[
                 {
                   x: ['Black Citizens', 'White Citizens'],
