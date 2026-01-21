@@ -1,0 +1,25 @@
+Year,Black Fatally Shot,White Fatally Shot,Black Population,White Population,Black Police Contacts,White Police Contacts,Black Traffic Stops,White Traffic Stops,Black Street Stops,White Street Stops,Black Total Arrests,White Total Arrests,Black Violent Crime Arrests,White Violent Crime Arrests,Black Weapons Arrests,White Weapons Arrests
+2015,259,497,39908095,232943055,2542400,16642200,2001000,13997700,541400,2644500,2197140,5753212,140543,232180,44284,63967
+2016,234,466,40241818,233657078,2542400,16642200,2001000,13997700,541400,2644500,2263112,5858330,153341,241063,51898,69414
+2017,223,458,41366336,235494966,2542400,16642200,2001000,13997700,541400,2644500,2221697,5626140,151744,236590,56143,68787
+2018,,,,,,,,,,,,,,,,
+2019,,,,,,,,,,,,,,,,
+2020,,,,,,,,,,,,,,,,
+2021,,,,,,,,,,,,,,,,
+2022,,,,,,,,,,,,,,,,
+2023,,,,,,,,,,,,,,,,
+2024,,,,,,,,,,,,,,,,
+2025,,,,,,,,,,,,,,,,
+
+DATA SOURCES:
+"Black/White Fatally Shot","Washington Post Fatal Force Database: https://github.com/washingtonpost/data-police-shootings"
+"Population","US Census ACS 5-year estimates (or 1-year for most recent). Look for 'one race white' and 'one race black or African American'"
+"Police Contacts / Traffic Stops / Street Stops","Bureau of Justice Statistics Police-Public Contact Survey (PPCS). Note: Survey conducted every 3 years. Use most recent available or average across waves."
+"Total Arrests","FBI UCR Table 43A (Arrests by Race): https://ucr.fbi.gov/crime-in-the-u.s/"
+"Violent Crime Arrests","FBI UCR Table 43A - sum of murder, rape, robbery, aggravated assault arrests by race"
+"Weapons Arrests","FBI UCR Table 43A - 'Weapons; carrying, possessing, etc.' by race"
+
+NOTES:
+"PPCS data is survey-based and only updated every 3 years (2011, 2015, 2018, etc). The 2015-2017 values above use averages from 2002-2011 waves per the original paper."
+"UCR data may have gaps due to agency non-participation. Check coverage notes in FBI reports."
+"For UCR, look for tables disaggregated by race - typically Table 43A or Table 21A depending on year."

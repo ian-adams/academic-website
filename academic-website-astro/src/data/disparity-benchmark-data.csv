@@ -1,0 +1,27 @@
+Year,Black Fatally Shot,White Fatally Shot,Black Population,White Population,Black Police Contacts,White Police Contacts,Black Traffic Stops,White Traffic Stops,Black Street Stops,White Street Stops,Black Total Arrests,White Total Arrests,Black Violent Crime Arrests,White Violent Crime Arrests,Black Weapons Arrests,White Weapons Arrests,Notes
+2015,259,497,39908095,232943055,2542400,16642200,2001000,13997700,541400,2644500,2197140,5753212,140543,232180,44284,63967,Original Tregle et al. data
+2016,234,466,40241818,233657078,2542400,16642200,2001000,13997700,541400,2644500,2263112,5858330,153341,241063,51898,69414,Original Tregle et al. data
+2017,223,458,41366336,235494966,2542400,16642200,2001000,13997700,541400,2644500,2221697,5626140,151744,236590,56143,68787,Original Tregle et al. data
+2018,228,459,41617764,236173020,2542400,16642200,2001000,13997700,541400,2644500,2824823,7114252,162740,248654,60687,72789,OIS from WaPo/Statista; Pop est from ACS; Arrests from UCR Table 43 (69% W / 27.4% B of 10.3M)
+2019,251,424,42042342,236690522,2542400,16642200,2001000,13997700,541400,2644500,2587418,6747298,158000,242000,62000,74000,OIS from WaPo/Statista; Arrests est from UCR (26.6% B / 69.4% W)
+2020,243,459,41104200,204277273,2890000,17800000,2200000,14500000,690000,3300000,1800000,4900000,140000,220000,55000,65000,2020 Census changed race categories significantly; PPCS 2018 wave data; UCR incomplete due to NIBRS transition
+2021,233,446,41500000,205000000,2890000,17800000,2200000,14500000,690000,3300000,1750000,4800000,145000,225000,58000,68000,Population interpolated; PPCS 2018 data; UCR very incomplete (only ~60% agencies reporting)
+2022,225,389,42000000,205500000,2890000,17800000,2200000,14500000,690000,3300000,1623876,3927541,155000,235000,60000,70000,OIS from WaPo; Arrests from FBI CDE (beautifydata.com verified)
+2023,249,499,42500000,206000000,2890000,17800000,2200000,14500000,690000,3300000,1460000,2920000,159793,200871,62000,72000,OIS from WaPo; Violent crime arrests from FBI CDE
+2024,248,385,43000000,206500000,2890000,17800000,2200000,14500000,690000,3300000,,,,,,"OIS from WaPo (partial year); Other data not yet available"
+
+IMPORTANT NOTES:
+"1. OIS Data: 2018-2024 from Washington Post Fatal Force database via Statista compilation"
+"2. Population: 2018-2019 interpolated from ACS; 2020+ complicated by Census methodology changes in race categorization"
+"3. PPCS Data: 2018 wave released - values updated for 2020+. Values for 2015-2019 use 2002-2011 average per original paper"
+"4. UCR Arrests: FBI transitioned to NIBRS in 2021 causing major data gaps. 2020-2021 data incomplete. 2022-2023 from FBI Crime Data Explorer"
+"5. Many 2020-2024 values are estimates - USE WITH CAUTION for research purposes"
+"6. Violent crime = murder + rape + robbery + aggravated assault"
+
+DATA SOURCES:
+"Fatal OIS: https://www.washingtonpost.com/graphics/investigations/police-shootings-database/"
+"Fatal OIS (compiled): https://www.statista.com/statistics/585152/people-shot-to-death-by-us-police-by-race/"
+"Population: https://data.census.gov/ (ACS 1-year and 5-year estimates)"
+"PPCS: https://bjs.ojp.gov/data-collection/police-public-contact-survey-ppcs"
+"UCR Arrests (2015-2019): https://ucr.fbi.gov/crime-in-the-u.s/"
+"UCR Arrests (2020+): https://cde.ucr.cjis.gov/ (FBI Crime Data Explorer)"

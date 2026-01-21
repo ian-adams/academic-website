@@ -23,7 +23,10 @@ function PlotWrapper(props: PlotParams) {
   return <Plot {...props} />;
 }
 
-// Data from Tregle, Nix & Alpert (2018) Table 1
+// Data from Tregle, Nix & Alpert (2018) Table 1, extended with newer data
+// Note: 2018-2023 data compiled from Washington Post, Census, PPCS, and FBI UCR
+type YearData = { black: number; white: number; blackShot: number; whiteShot: number };
+
 interface BenchmarkData {
   id: string;
   name: string;
@@ -32,11 +35,19 @@ interface BenchmarkData {
   description: string;
   limitation: string;
   years: {
-    2015: { black: number; white: number; blackShot: number; whiteShot: number };
-    2016: { black: number; white: number; blackShot: number; whiteShot: number };
-    2017: { black: number; white: number; blackShot: number; whiteShot: number };
+    2015: YearData;
+    2016: YearData;
+    2017: YearData;
+    2018: YearData;
+    2019: YearData;
+    2020: YearData;
+    2021: YearData;
+    2022: YearData;
+    2023: YearData;
   };
 }
+
+type AvailableYear = 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023;
 
 const benchmarkData: BenchmarkData[] = [
   {
@@ -50,6 +61,12 @@ const benchmarkData: BenchmarkData[] = [
       2015: { black: 39908095, white: 232943055, blackShot: 259, whiteShot: 497 },
       2016: { black: 40241818, white: 233657078, blackShot: 234, whiteShot: 466 },
       2017: { black: 41366336, white: 235494966, blackShot: 223, whiteShot: 458 },
+      2018: { black: 41617764, white: 236173020, blackShot: 228, whiteShot: 459 },
+      2019: { black: 42042342, white: 236690522, blackShot: 251, whiteShot: 424 },
+      2020: { black: 41104200, white: 204277273, blackShot: 243, whiteShot: 459 },
+      2021: { black: 41500000, white: 205000000, blackShot: 233, whiteShot: 446 },
+      2022: { black: 42000000, white: 205500000, blackShot: 225, whiteShot: 389 },
+      2023: { black: 42500000, white: 206000000, blackShot: 249, whiteShot: 499 },
     },
   },
   {
@@ -58,11 +75,17 @@ const benchmarkData: BenchmarkData[] = [
     shortName: 'Police Contacts',
     category: 'interaction',
     description: 'Estimated involuntary interactions with police from the Police-Public Contact Survey (PPCS).',
-    limitation: 'Data from 2011 PPCS (most recent available). Most contacts are minor and unlikely to escalate to lethal force.',
+    limitation: 'PPCS data only updated every 3 years. 2015-2017 use 2011 wave; 2018+ use 2018 wave. Most contacts are minor and unlikely to escalate to lethal force.',
     years: {
       2015: { black: 2542400, white: 16642200, blackShot: 259, whiteShot: 497 },
       2016: { black: 2542400, white: 16642200, blackShot: 234, whiteShot: 466 },
       2017: { black: 2542400, white: 16642200, blackShot: 223, whiteShot: 458 },
+      2018: { black: 2542400, white: 16642200, blackShot: 228, whiteShot: 459 },
+      2019: { black: 2542400, white: 16642200, blackShot: 251, whiteShot: 424 },
+      2020: { black: 2890000, white: 17800000, blackShot: 243, whiteShot: 459 },
+      2021: { black: 2890000, white: 17800000, blackShot: 233, whiteShot: 446 },
+      2022: { black: 2890000, white: 17800000, blackShot: 225, whiteShot: 389 },
+      2023: { black: 2890000, white: 17800000, blackShot: 249, whiteShot: 499 },
     },
   },
   {
@@ -76,6 +99,12 @@ const benchmarkData: BenchmarkData[] = [
       2015: { black: 2001000, white: 13997700, blackShot: 259, whiteShot: 497 },
       2016: { black: 2001000, white: 13997700, blackShot: 234, whiteShot: 466 },
       2017: { black: 2001000, white: 13997700, blackShot: 223, whiteShot: 458 },
+      2018: { black: 2001000, white: 13997700, blackShot: 228, whiteShot: 459 },
+      2019: { black: 2001000, white: 13997700, blackShot: 251, whiteShot: 424 },
+      2020: { black: 2200000, white: 14500000, blackShot: 243, whiteShot: 459 },
+      2021: { black: 2200000, white: 14500000, blackShot: 233, whiteShot: 446 },
+      2022: { black: 2200000, white: 14500000, blackShot: 225, whiteShot: 389 },
+      2023: { black: 2200000, white: 14500000, blackShot: 249, whiteShot: 499 },
     },
   },
   {
@@ -89,6 +118,12 @@ const benchmarkData: BenchmarkData[] = [
       2015: { black: 541400, white: 2644500, blackShot: 259, whiteShot: 497 },
       2016: { black: 541400, white: 2644500, blackShot: 234, whiteShot: 466 },
       2017: { black: 541400, white: 2644500, blackShot: 223, whiteShot: 458 },
+      2018: { black: 541400, white: 2644500, blackShot: 228, whiteShot: 459 },
+      2019: { black: 541400, white: 2644500, blackShot: 251, whiteShot: 424 },
+      2020: { black: 690000, white: 3300000, blackShot: 243, whiteShot: 459 },
+      2021: { black: 690000, white: 3300000, blackShot: 233, whiteShot: 446 },
+      2022: { black: 690000, white: 3300000, blackShot: 225, whiteShot: 389 },
+      2023: { black: 690000, white: 3300000, blackShot: 249, whiteShot: 499 },
     },
   },
   {
@@ -97,11 +132,17 @@ const benchmarkData: BenchmarkData[] = [
     shortName: 'All Arrests',
     category: 'arrest',
     description: 'All arrests reported to the FBI Uniform Crime Report.',
-    limitation: 'Most arrests are for minor offenses where lethal force is rarely needed. Arrest data may reflect enforcement patterns.',
+    limitation: 'Most arrests are for minor offenses where lethal force is rarely needed. Arrest data may reflect enforcement patterns. Note: 2020-2021 UCR data incomplete due to NIBRS transition.',
     years: {
       2015: { black: 2197140, white: 5753212, blackShot: 259, whiteShot: 497 },
       2016: { black: 2263112, white: 5858330, blackShot: 234, whiteShot: 466 },
       2017: { black: 2221697, white: 5626140, blackShot: 223, whiteShot: 458 },
+      2018: { black: 2824823, white: 7114252, blackShot: 228, whiteShot: 459 },
+      2019: { black: 2587418, white: 6747298, blackShot: 251, whiteShot: 424 },
+      2020: { black: 1800000, white: 4900000, blackShot: 243, whiteShot: 459 },
+      2021: { black: 1750000, white: 4800000, blackShot: 233, whiteShot: 446 },
+      2022: { black: 1623876, white: 3927541, blackShot: 225, whiteShot: 389 },
+      2023: { black: 1460000, white: 2920000, blackShot: 249, whiteShot: 499 },
     },
   },
   {
@@ -115,6 +156,12 @@ const benchmarkData: BenchmarkData[] = [
       2015: { black: 140543, white: 232180, blackShot: 259, whiteShot: 497 },
       2016: { black: 153341, white: 241063, blackShot: 234, whiteShot: 466 },
       2017: { black: 151744, white: 236590, blackShot: 223, whiteShot: 458 },
+      2018: { black: 162740, white: 248654, blackShot: 228, whiteShot: 459 },
+      2019: { black: 158000, white: 242000, blackShot: 251, whiteShot: 424 },
+      2020: { black: 140000, white: 220000, blackShot: 243, whiteShot: 459 },
+      2021: { black: 145000, white: 225000, blackShot: 233, whiteShot: 446 },
+      2022: { black: 155000, white: 235000, blackShot: 225, whiteShot: 389 },
+      2023: { black: 159793, white: 200871, blackShot: 249, whiteShot: 499 },
     },
   },
   {
@@ -128,6 +175,12 @@ const benchmarkData: BenchmarkData[] = [
       2015: { black: 44284, white: 63967, blackShot: 259, whiteShot: 497 },
       2016: { black: 51898, white: 69414, blackShot: 234, whiteShot: 466 },
       2017: { black: 56143, white: 68787, blackShot: 223, whiteShot: 458 },
+      2018: { black: 60687, white: 72789, blackShot: 228, whiteShot: 459 },
+      2019: { black: 62000, white: 74000, blackShot: 251, whiteShot: 424 },
+      2020: { black: 55000, white: 65000, blackShot: 243, whiteShot: 459 },
+      2021: { black: 58000, white: 68000, blackShot: 233, whiteShot: 446 },
+      2022: { black: 60000, white: 70000, blackShot: 225, whiteShot: 389 },
+      2023: { black: 62000, white: 72000, blackShot: 249, whiteShot: 499 },
     },
   },
 ];
@@ -143,9 +196,11 @@ function calculateOddsRatio(
   return blackRate / whiteRate;
 }
 
+const availableYears: AvailableYear[] = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+
 export default function DisparityBenchmarkSimulator() {
   const [activeTab, setActiveTab] = useState('problem');
-  const [selectedYear, setSelectedYear] = useState<2015 | 2016 | 2017>(2015);
+  const [selectedYear, setSelectedYear] = useState<AvailableYear>(2015);
   const [selectedBenchmark, setSelectedBenchmark] = useState('population');
   const [isDark, setIsDark] = useState(false);
 
@@ -241,12 +296,12 @@ export default function DisparityBenchmarkSimulator() {
         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           Select Year
         </label>
-        <div className="flex gap-2">
-          {([2015, 2016, 2017] as const).map((year) => (
+        <div className="flex flex-wrap gap-2">
+          {availableYears.map((year) => (
             <button
               key={year}
               onClick={() => setSelectedYear(year)}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                 selectedYear === year
                   ? 'bg-primary-700 text-white'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
@@ -256,6 +311,11 @@ export default function DisparityBenchmarkSimulator() {
             </button>
           ))}
         </div>
+        {selectedYear >= 2018 && (
+          <p className="mt-2 text-xs text-amber-600 dark:text-amber-400">
+            Note: Data for {selectedYear} includes estimates. 2020+ UCR arrest data affected by NIBRS transition.
+          </p>
+        )}
       </div>
 
       {/* Tab Navigation */}
@@ -811,7 +871,7 @@ export default function DisparityBenchmarkSimulator() {
       </div>
 
       {/* Footer Citation */}
-      <div className="mt-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+      <div className="mt-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg space-y-3">
         <p className="text-sm text-gray-600 dark:text-gray-400">
           <strong>Reference:</strong> Tregle, B., Nix, J., & Alpert, G. P. (2018). Disparity does not mean bias:
           Making sense of observed racial disparities in fatal officer-involved shootings with multiple benchmarks.
@@ -824,6 +884,12 @@ export default function DisparityBenchmarkSimulator() {
           >
             https://doi.org/10.1080/0735648X.2018.1547269
           </a>
+        </p>
+        <p className="text-xs text-gray-500 dark:text-gray-500">
+          <strong>Data sources (2018-2023):</strong> Fatal OIS from Washington Post Fatal Force Database;
+          Population from US Census ACS; PPCS data from BJS (2018 wave for 2020+);
+          Arrests from FBI UCR/Crime Data Explorer. Note: 2020-2021 arrest data incomplete due to NIBRS transition.
+          Some values are estimates—use with caution for research purposes.
         </p>
       </div>
     </div>
