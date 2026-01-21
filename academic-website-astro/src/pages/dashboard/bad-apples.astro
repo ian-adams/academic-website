@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BadApplesSimulator from '@/components/dashboard/BadApplesSimulator';
+---
+
+<BaseLayout
+  title="Bad Apples Policy Simulator"
+  description="Interactive policy simulator exploring police complaint concentration, data density bias, and the effectiveness of early warning systems. Based on Chalfin & Kaplan (2021)."
+>
+  <section class="section">
+    <div class="container-wide">
+      <BadApplesSimulator client:load />
+    </div>
+  </section>
+</BaseLayout>

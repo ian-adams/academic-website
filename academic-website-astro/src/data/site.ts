@@ -36,7 +36,13 @@ Dr. Adams has over fifty peer-reviewed publications on these and related topics,
     { name: 'Home', href: '/' },
     { name: 'Publications', href: '/publications' },
     { name: 'Posts', href: '/posts' },
-    { name: 'Dashboard', href: '/dashboard' },
+    {
+      name: 'Dashboards',
+      items: [
+        { name: 'MPV Analysis', href: '/dashboard' },
+        { name: 'Bad Apples Simulator', href: '/dashboard/bad-apples' },
+      ],
+    },
     {
       name: 'News Feeds',
       items: [
