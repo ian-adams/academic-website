@@ -1,6 +1,27 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
-import Plot from 'react-plotly.js';
 import { DARK_LAYOUT, LIGHT_LAYOUT } from './types';
+import type { PlotParams } from 'react-plotly.js';
+
+// Client-side only Plot component wrapper
+function PlotWrapper(props: PlotParams) {
+  const [Plot, setPlot] = useState<React.ComponentType<PlotParams> | null>(null);
+
+  useEffect(() => {
+    import('react-plotly.js').then((mod) => {
+      setPlot(() => mod.default);
+    });
+  }, []);
+
+  if (!Plot) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-700 dark:border-primary-400"></div>
+      </div>
+    );
+  }
+
+  return <Plot {...props} />;
+}
 
 // Types for the simulator
 interface SimulationParams {
@@ -449,8 +470,8 @@ export default function BadApplesSimulator() {
         </nav>
       </div>
 
-      {/* Tab Content */}
-      {activeTab === 'bias' && (
+      {/* Tab Content - Using CSS display to prevent unmount/remount issues with Plotly */}
+      <div style={{ display: activeTab === 'bias' ? 'block' : 'none' }}>
         <div className="space-y-6">
           {/* Key Insight Box */}
           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
@@ -485,7 +506,7 @@ export default function BadApplesSimulator() {
           {/* Concentration Chart */}
           <div className="card p-6">
             <h3 className="text-lg font-semibold mb-4">Complaint Concentration Curves</h3>
-            <Plot
+            <PlotWrapper
               data={[
                 {
                   x: concentrationData.percentiles,
@@ -559,9 +580,9 @@ export default function BadApplesSimulator() {
             </div>
           </div>
         </div>
-      )}
+      </div>
 
-      {activeTab === 'persistence' && (
+      <div style={{ display: activeTab === 'persistence' ? 'block' : 'none' }}>
         <div className="space-y-6">
           {/* Controls */}
           <div className="flex gap-4 items-end">
@@ -644,9 +665,9 @@ export default function BadApplesSimulator() {
             </p>
           </div>
         </div>
-      )}
+      </div>
 
-      {activeTab === 'policy' && (
+      <div style={{ display: activeTab === 'policy' ? 'block' : 'none' }}>
         <div className="space-y-6">
           {/* Controls */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -730,7 +751,7 @@ export default function BadApplesSimulator() {
               </div>
 
               {/* Bar Chart */}
-              <Plot
+              <PlotWrapper
                 data={[
                   {
                     x: ['Estimated Reduction'],
@@ -775,9 +796,9 @@ export default function BadApplesSimulator() {
             </div>
           )}
         </div>
-      )}
+      </div>
 
-      {activeTab === 'calculator' && (
+      <div style={{ display: activeTab === 'calculator' ? 'block' : 'none' }}>
         <div className="space-y-6">
           <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4">
             <h4 className="font-semibold text-purple-800 dark:text-purple-200 mb-2">Build Your Own Scenario</h4>
@@ -916,7 +937,7 @@ export default function BadApplesSimulator() {
             </div>
           </div>
         </div>
-      )}
+      </div>
 
       {/* Footer Citation */}
       <div className="mt-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
