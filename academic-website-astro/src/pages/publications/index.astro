@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import scholarMetrics from '@/../public/data/scholar-metrics.json';
 
 const publications = await getCollection('publications');
 
@@ -40,33 +41,36 @@ publications.forEach((pub) => {
         </p>
       </header>
 
-      <!-- Stats -->
+      <!-- Google Scholar Stats -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div class="card p-4 text-center">
+          <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
+            {scholarMetrics.citations?.toLocaleString() ?? '—'}
+          </div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Total Citations</div>
+        </div>
+        <div class="card p-4 text-center">
+          <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
+            {scholarMetrics.h_index ?? '—'}
+          </div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">h-index</div>
+        </div>
+        <div class="card p-4 text-center">
+          <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
+            {scholarMetrics.i10_index ?? '—'}
+          </div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">i10-index</div>
+        </div>
         <div class="card p-4 text-center">
           <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
             {publications.length}
           </div>
-          <div class="text-sm text-gray-600 dark:text-gray-400">Total Publications</div>
-        </div>
-        <div class="card p-4 text-center">
-          <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
-            {years.length}
-          </div>
-          <div class="text-sm text-gray-600 dark:text-gray-400">Years Active</div>
-        </div>
-        <div class="card p-4 text-center">
-          <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
-            {Math.max(...years)}
-          </div>
-          <div class="text-sm text-gray-600 dark:text-gray-400">Latest Year</div>
-        </div>
-        <div class="card p-4 text-center">
-          <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
-            {publications.filter((p) => p.data.featured).length}
-          </div>
-          <div class="text-sm text-gray-600 dark:text-gray-400">Featured Works</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Publications</div>
         </div>
       </div>
+      <p class="text-xs text-gray-500 dark:text-gray-500 mb-8 -mt-8">
+        Metrics from <a href={scholarMetrics.scholar_url} target="_blank" rel="noopener noreferrer" class="underline hover:text-primary-700 dark:hover:text-primary-400">Google Scholar</a>
+      </p>
 
       <!-- Publications by Year -->
       <div class="space-y-12">
