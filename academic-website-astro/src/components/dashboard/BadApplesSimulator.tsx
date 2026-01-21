@@ -810,33 +810,68 @@ export default function BadApplesSimulator() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Input Summary */}
+            {/* Input Controls */}
             <div className="card p-6">
               <h3 className="text-lg font-semibold mb-4">Your Parameters</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between py-2 border-b border-gray-200 dark:border-gray-700">
-                  <span className="text-gray-600 dark:text-gray-400">Department Size</span>
-                  <span className="font-medium">{numOfficers.toLocaleString()} officers</span>
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">Department Size</label>
+                  <input
+                    type="number"
+                    value={numOfficers}
+                    onChange={(e) => setNumOfficers(Math.max(100, Math.min(15000, parseInt(e.target.value) || 1000)))}
+                    className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                  />
                 </div>
-                <div className="flex justify-between py-2 border-b border-gray-200 dark:border-gray-700">
-                  <span className="text-gray-600 dark:text-gray-400">Annual Complaints (est.)</span>
-                  <span className="font-medium">{numComplaints.toLocaleString()}</span>
+                <div>
+                  <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">Annual Complaints (est.)</label>
+                  <input
+                    type="number"
+                    value={numComplaints}
+                    onChange={(e) => setNumComplaints(Math.max(10, Math.min(50000, parseInt(e.target.value) || 1500)))}
+                    className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                  />
                 </div>
                 <div className="flex justify-between py-2 border-b border-gray-200 dark:border-gray-700">
                   <span className="text-gray-600 dark:text-gray-400">Data Density</span>
                   <span className="font-medium">{metrics.dataDensity.toFixed(2)} complaints/officer</span>
                 </div>
-                <div className="flex justify-between py-2 border-b border-gray-200 dark:border-gray-700">
-                  <span className="text-gray-600 dark:text-gray-400">Removal Target</span>
-                  <span className="font-medium">Top {topPercentile}% ({Math.floor(numOfficers * topPercentile / 100)} officers)</span>
+                <div>
+                  <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">Removal Target</label>
+                  <select
+                    value={topPercentile}
+                    onChange={(e) => setTopPercentile(parseInt(e.target.value))}
+                    className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                  >
+                    <option value={2}>Top 2% ({Math.floor(numOfficers * 0.02)} officers)</option>
+                    <option value={5}>Top 5% ({Math.floor(numOfficers * 0.05)} officers)</option>
+                    <option value={10}>Top 10% ({Math.floor(numOfficers * 0.10)} officers)</option>
+                    <option value={20}>Top 20% ({Math.floor(numOfficers * 0.20)} officers)</option>
+                  </select>
                 </div>
-                <div className="flex justify-between py-2 border-b border-gray-200 dark:border-gray-700">
-                  <span className="text-gray-600 dark:text-gray-400">Replacement Strategy</span>
-                  <span className="font-medium capitalize">{replacementStrategy.replace(/_/g, ' ')}</span>
+                <div>
+                  <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">Replacement Strategy</label>
+                  <select
+                    value={replacementStrategy}
+                    onChange={(e) => setReplacementStrategy(e.target.value as SimulationParams['replacementStrategy'])}
+                    className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                  >
+                    <option value="median">Median officer (40-60th percentile)</option>
+                    <option value="p70_90">70-90th percentile</option>
+                    <option value="same_district_median">Same district, median</option>
+                    <option value="same_district_p70_90">Same district, 70-90th percentile</option>
+                  </select>
                 </div>
-                <div className="flex justify-between py-2">
-                  <span className="text-gray-600 dark:text-gray-400">Observation Period</span>
-                  <span className="font-medium">{probationMonths} months</span>
+                <div>
+                  <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">Observation Period</label>
+                  <select
+                    value={probationMonths}
+                    onChange={(e) => setProbationMonths(parseInt(e.target.value))}
+                    className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                  >
+                    <option value={18}>18 months (standard)</option>
+                    <option value={60}>5 years (extended)</option>
+                  </select>
                 </div>
               </div>
 
