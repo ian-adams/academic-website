@@ -1,8 +1,8 @@
 {
-  "updated": "2026-01-20T11:25:32Z",
+  "updated": "2026-01-21T11:25:24Z",
   "feed_type": "adjacent",
   "description": "Expert testimony ecosystem - police use-of-force litigation",
-  "count": 65,
+  "count": 78,
   "stories": [
     {
       "id": "dbaa777f8466ec3e95819b12e0973742",
@@ -107,6 +107,32 @@
       ],
       "rationale": "The article discusses a use-of-force expert testifying in a specific court case, but does not mention Force Science or related proxies.",
       "key_entities": "Connor Grubb",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "b82a5ca3219472d79705caed2e87a15d",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE40REptUVgtUWNTc0s2eXRzbkpzSjQ5Z2xIZ0J6Q1lvLUFHbXBSSjJDUWVGSWtNdE90bmdMLVJrTnNCYVF2NTBfSkN1M1ZqOVhJQ2owRnVQbGtteHpLZlVSdWp3SnZsTmZ4amc?oc=5",
+      "title": "Daniel Sanchez trial: Defense's use-of-force expert testifies on Day 5",
+      "source": "fox7austin.com",
+      "date": "2025-11-13",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE40REptUVgtUWNTc0s2eXRzbkpzSjQ5Z2xIZ0J6Q1lvLUFHbXBSSjJDUWVGSWtNdE90bmdMLVJrTnNCYVF2NTBfSkN1M1ZqOVhJQ2owRnVQbGtteHpLZlVSdWp3SnZsTmZ4amc?oc=5\" target=\"_blank\">Daniel Sanchez trial: Defense's use-of-force expert testifies on Day 5</a> <font color=\"#6f6f6f\">fox7austin.com</font>",
+      "story_type": "general",
+      "label": "ADJACENT",
+      "confidence": 0.8,
+      "relevance": 60,
+      "relevance_score": 0.6,
+      "signals": [
+        "use-of-force expert",
+        "use of force"
+      ],
+      "entities": [
+        "Daniel Sanchez"
+      ],
+      "rationale": "The article discusses a police use-of-force expert testifying in a trial, but does not mention Force Science directly or reference any organizational proxies.",
+      "key_entities": "Daniel Sanchez",
       "location": null,
       "tags": [],
       "needs_review": 0
@@ -408,6 +434,61 @@
       "needs_review": 0
     },
     {
+      "id": "6fc06e4e62d117ab3a594143d9394323",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORi15UW9GQVB2Rl9aUkpvWnNaVnJMNVpqZUI3Z1B4a0dNQkMxXzV1VWRCdEgtU1pmMjJtaG1jN3ljMlA4N2lJUk5xU1VEX3JmY2M5Y3hOaHRjdEw2WEpSaUx1NmJDWDMtYW9RdF9OUkJKN19wRFAweHVKVURzZXY1VjlHUmlMT21GOVU5bFk0V3dJY2g1ZXM3c0VDOThhZmd4cUVVZ3dCcUdHM3pFbDhB?oc=5",
+      "title": "Mother of Alabama man slain by cop in mall shooting challenges immunity ruling",
+      "source": "Courthouse News",
+      "date": "2024-09-25",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxORi15UW9GQVB2Rl9aUkpvWnNaVnJMNVpqZUI3Z1B4a0dNQkMxXzV1VWRCdEgtU1pmMjJtaG1jN3ljMlA4N2lJUk5xU1VEX3JmY2M5Y3hOaHRjdEw2WEpSaUx1NmJDWDMtYW9RdF9OUkJKN19wRFAweHVKVURzZXY1VjlHUmlMT21GOVU5bFk0V3dJY2g1ZXM3c0VDOThhZmd4cUVVZ3dCcUdHM3pFbDhB?oc=5\" target=\"_blank\">Mother of Alabama man slain by cop in mall shooting challenges immunity ruling</a> <font color=\"#6f6f6f\">Courthouse News</font>",
+      "story_type": "incident",
+      "label": "ADJACENT",
+      "confidence": 0.9,
+      "relevance": 60,
+      "relevance_score": 0.6,
+      "signals": [
+        "police use-of-force litigation",
+        "expert testimony gatekeeping/credibility"
+      ],
+      "entities": [
+        "Alabama man",
+        "cop"
+      ],
+      "rationale": "The article discusses a court case involving police use-of-force and expert testimony, but does not mention Force Science or any of its proxies.",
+      "key_entities": "Alabama man, cop",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "cd31b7b8aa7610ae1e0fac4db93bcdd7",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOcEJHZEU0TmxQbDNiMnhBdEF2QzY1VkxUT25heTdXMVhsZUhXVUhLZlpzZlRXSmZWekx4ZzZBZlBxdmFWeDY0Z1RxUWNoTWU2Q1hPaU1RRWVrMExGSEtVbWZJbmhCdUFmM3VlbzdlX3B1dXdGeWVIcjc2X3AySXJUaWtqRGljVGxSWDMxUlJTb1JrVE5KTUNLS2pNVU9RRHA4VDZILTFzS2l4RzdhR2pMU05TZ1hCQ0lVdVF1aVhpeTFRQlhNQ0lV?oc=5",
+      "title": "Houston cop didn’t appear justified in deadly shooting of man, expert says",
+      "source": "houstonchronicle.com",
+      "date": "2024-09-13",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxOcEJHZEU0TmxQbDNiMnhBdEF2QzY1VkxUT25heTdXMVhsZUhXVUhLZlpzZlRXSmZWekx4ZzZBZlBxdmFWeDY0Z1RxUWNoTWU2Q1hPaU1RRWVrMExGSEtVbWZJbmhCdUFmM3VlbzdlX3B1dXdGeWVIcjc2X3AySXJUaWtqRGljVGxSWDMxUlJTb1JrVE5KTUNLS2pNVU9RRHA4VDZILTFzS2l4RzdhR2pMU05TZ1hCQ0lVdVF1aVhpeTFRQlhNQ0lV?oc=5\" target=\"_blank\">Houston cop didn’t appear justified in deadly shooting of man, expert says</a> <font color=\"#6f6f6f\">houstonchronicle.com</font>",
+      "story_type": "incident",
+      "label": "ADJACENT",
+      "confidence": 0.8,
+      "relevance": 60,
+      "relevance_score": 0.6,
+      "signals": [
+        "use of force",
+        "expert testimony"
+      ],
+      "entities": [
+        "Houston"
+      ],
+      "rationale": "The article discusses the use of force by a Houston police officer and the expert testimony around the justification for the shooting, but does not mention Force Science or related proxies.",
+      "key_entities": "Houston",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "2e17f5aa73631df8aa76075420c8cee1",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZnF3MW5LS3JmT0lJdzVSVmlKaXFjRkhPd0FvM1RhTUQ1WU81M1Z4ZDQxTG9rZ1BjT0czbXNKZ2Q1dElPYS1DdjlSOUUyVTFjb210dVNOekkwSDBPY1haZXFDMkN4RzMzNkJXd0U4d1Fob0NPYXcxeWRwYkJIaHVRSXc1bUs5NU9UczFBNUt0d2E1WDRnbGF3QzRkUjlEOXpuU0dCY2dlLUM3R3dPd3lHQ1lxajBNOVZoaldXZG5GQjl0Zw?oc=5",
       "title": "In Session: Prosecutors try to exclude expert testimony in trial of former Savannah Police officer",
@@ -455,6 +536,33 @@
       ],
       "rationale": "The article discusses a police use-of-force incident and a police procedure expert's perspective, but does not mention Force Science or its proxies directly.",
       "key_entities": "Frank Tyson",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "02130285e189fa1cef2d5c37ce3ee51e",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxORnpZQzRucmhpS0tRYlFLVXFTMnRoWmo2cHVGNHVDOTJEZ1o2RUd6Z2xEejBpT19ZVFJubmQ5ZjRxY0JtMzlXeDdybVZ3bjg4S3J5WlI0OWxYNTAtOXVuYkxsNkxZR1p4c3hrN0xsS0ItWUh0RFh2R2NfT0xlc1RiNQ?oc=5",
+      "title": "Credibility on trial in trooper’s case",
+      "source": "Star Tribune",
+      "date": "2024-03-23",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxORnpZQzRucmhpS0tRYlFLVXFTMnRoWmo2cHVGNHVDOTJEZ1o2RUd6Z2xEejBpT19ZVFJubmQ5ZjRxY0JtMzlXeDdybVZ3bjg4S3J5WlI0OWxYNTAtOXVuYkxsNkxZR1p4c3hrN0xsS0ItWUh0RFh2R2NfT0xlc1RiNQ?oc=5\" target=\"_blank\">Credibility on trial in trooper’s case</a> <font color=\"#6f6f6f\">Star Tribune</font>",
+      "story_type": "general",
+      "label": "ADJACENT",
+      "confidence": 0.8,
+      "relevance": 60,
+      "relevance_score": 0.6,
+      "signals": [
+        "use of force",
+        "credibility on trial",
+        "expert testimony"
+      ],
+      "entities": [
+        "trooper's case"
+      ],
+      "rationale": "The article discusses issues around use-of-force expert testimony and credibility, but does not mention Force Science or related proxies.",
+      "key_entities": "trooper's case",
       "location": null,
       "tags": [],
       "needs_review": 0
@@ -810,6 +918,34 @@
       "entities": [],
       "rationale": "The article discusses the challenges in assessing shooting threats and the role of expert testimony in use-of-force cases, but does not explicitly mention Force Science or associated proxies.",
       "key_entities": "Google",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "a2116795b371cf9dd80551b3da09aa58",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNTVpSUE1vWnhWYzhoVkV4WDdldEV4YzJ4MjRwekhBa090WE9QeU1KeG1ZSUxRRjlBczlaYkJRQ3ltWFZKRXA4OEZqdHZfdnBDVmJZdDFYOWhLVEJmOExnRUNLZDg1X21CVmM0RkZNaWFpajVRbzVFS05adUJGbTRYRFFSV3pTenQ5d3E4Ym5qbU1HVzJxTVRpbWpxZlNkUzVwbm0tRkRsVTl4TnpTWUV5S0lfbXpQYVhJRW01bC1FLWI2X3ZGZTBNYjRCQzNhODdsNmZGWUdVN242ZnRCUmFQeGJWM2dwWnM?oc=5",
+      "title": "Daunte Wright’s father, use-of-force experts testify in sixth day of Kim Potter trial",
+      "source": "kare11.com",
+      "date": "2021-12-15",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi5wFBVV95cUxNTVpSUE1vWnhWYzhoVkV4WDdldEV4YzJ4MjRwekhBa090WE9QeU1KeG1ZSUxRRjlBczlaYkJRQ3ltWFZKRXA4OEZqdHZfdnBDVmJZdDFYOWhLVEJmOExnRUNLZDg1X21CVmM0RkZNaWFpajVRbzVFS05adUJGbTRYRFFSV3pTenQ5d3E4Ym5qbU1HVzJxTVRpbWpxZlNkUzVwbm0tRkRsVTl4TnpTWUV5S0lfbXpQYVhJRW01bC1FLWI2X3ZGZTBNYjRCQzNhODdsNmZGWUdVN242ZnRCUmFQeGJWM2dwWnM?oc=5\" target=\"_blank\">Daunte Wright’s father, use-of-force experts testify in sixth day of Kim Potter trial</a> <font color=\"#6f6f6f\">kare11.com</font>",
+      "story_type": "general",
+      "label": "ADJACENT",
+      "confidence": 0.7,
+      "relevance": 60,
+      "relevance_score": 0.6,
+      "signals": [
+        "use-of-force experts",
+        "Daunte Wright",
+        "Kim Potter trial"
+      ],
+      "entities": [
+        "Daunte Wright",
+        "Kim Potter"
+      ],
+      "rationale": "The article discusses use-of-force experts testifying in the Kim Potter trial, but does not mention Force Science directly or indirectly.",
+      "key_entities": "Daunte Wright, Kim Potter",
       "location": null,
       "tags": [],
       "needs_review": 0
@@ -1195,6 +1331,34 @@
       "needs_review": 0
     },
     {
+      "id": "72906531c04d839530e67ad107877cb5",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPR2pJc3RDcGU4RWZmS0tpeUc5WmlYSXJPTFE5MElFZ2g3LXB5d01sdWZEdTdKRHlPRm5XLThwWGxVUTM4cDZhZUVxZWNYQjhFN0d4cGtmaTd5U0lWYjRhMkpYazNpUW9kZ0hYWHhWZ0JxSnI5Vktza0cxdU5jSGhxNDRZalZpYVZwWXcwVGJBWnNxbXZYMVVjVXI3aEMzNWU2Z0tqam9Cd0NVWHJ1Unlz0gG0AUFVX3lxTE9paDFKcWdhNEFLUTVySFNsMmFwcHBUOWttOXRQZVdWdU12TW43Q21FZXJrTEx0OVhIcy1TVDlkNWhlcEhzcmpBb1oyTG81M0Q3eGN1Y3BXcnE0Nk1GQUNCLTMtQk1xa2M1UTRTSDJZS1JLZnZuMWVVQ0J5a05FcHNGX210U0dtNHJVRVJfVks5d1RmcDkydkQxdFFYR0x3dzF2d2hEWUpNRWdPVFJ5SGRWNW1jVw?oc=5",
+      "title": "Judge rejects second use-of-force witness in King trial",
+      "source": "upi.com",
+      "date": "1992-04-14",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPR2pJc3RDcGU4RWZmS0tpeUc5WmlYSXJPTFE5MElFZ2g3LXB5d01sdWZEdTdKRHlPRm5XLThwWGxVUTM4cDZhZUVxZWNYQjhFN0d4cGtmaTd5U0lWYjRhMkpYazNpUW9kZ0hYWHhWZ0JxSnI5Vktza0cxdU5jSGhxNDRZalZpYVZwWXcwVGJBWnNxbXZYMVVjVXI3aEMzNWU2Z0tqam9Cd0NVWHJ1Unlz0gG0AUFVX3lxTE9paDFKcWdhNEFLUTVySFNsMmFwcHBUOWttOXRQZVdWdU12TW43Q21FZXJrTEx0OVhIcy1TVDlkNWhlcEhzcmpBb1oyTG81M0Q3eGN1Y3BXcnE0Nk1GQUNCLTMtQk1xa2M1UTRTSDJZS1JLZnZuMWVVQ0J5a05FcHNGX210U0dtNHJVRVJfVks5d1RmcDkydkQxdFFYR0x3dzF2d2hEWUpNRWdPVFJ5SGRWNW1jVw?oc=5\" target=\"_blank\">Judge rejects second use-of-force witness in King trial</a> <font color=\"#6f6f6f\">upi.com</font>",
+      "story_type": "general",
+      "label": "ADJACENT",
+      "confidence": 0.8,
+      "relevance": 60,
+      "relevance_score": 0.6,
+      "signals": [
+        "use-of-force witness",
+        "King trial"
+      ],
+      "entities": [
+        "King"
+      ],
+      "rationale": "The article discusses a judge rejecting a use-of-force expert witness in a trial, which is related to police use-of-force litigation and expert testimony, but does not directly mention Force Science or its proxies.",
+      "key_entities": "King",
+      "location": null,
+      "tags": [
+        "ALPR"
+      ],
+      "needs_review": 0
+    },
+    {
       "id": "46aa69ecf2b770d1585c5b89b0de2bdb",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNa3FBeTNHWGJHeFkwTU5KWUExTTROOXBkVTBXckl6VDZGWW81Z0FUdFViR09zMkJoUy1rSkptVV9EYXljYmtSbjJXQ25qc0FVa0JqdmVUanRadVJidDVkQ2Y2TWdUR3hmTFhwekNxOWpVN0tuc1JMVmVLTG5RV1JUTmxOUzdjSTBtdU1oaExPVklzQU1YNTh1MUs1cGlsOFd3a093NE5xTHlIbW5pUjQ1NUU3RGlyUXVrSmdkMlFaZmpIazVzeVVNUGp2WmZxaURoWjZNZ0NrVE4?oc=5",
       "title": "Court denies city's motion to dismiss lawsuit alleging unreasonable force by Boston Police at protest",
@@ -1330,6 +1494,32 @@
       "needs_review": 0
     },
     {
+      "id": "bb24f1ecb7d56eb3c299beb92270ac22",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQUVFDU3ZNQmRBUkFrRXJLZnJmTkFCblZxR3FycE9yeWlDWS1UOHFSV0xRd0xJeldBQXYyTkpBOFZhYWU0U2hWRVFDcHI5Y1VmcHp0c2x2ZjR2Y05qeUlsWFFzRUstRkhGUktjMEQ5OGFaT3llaUxBRGRELXk4LVRfdWpaTFk5aEpld1JZMERlSmFseDRSMW94cVhfYUM5b012OFc0QnNLWUJIRUdmZzBPcElubjVSYzV4?oc=5",
+      "title": "Expert opinions from law enforcement agents: Diaz isn't the end of the analysis",
+      "source": "Reuters",
+      "date": "2024-07-03",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQUVFDU3ZNQmRBUkFrRXJLZnJmTkFCblZxR3FycE9yeWlDWS1UOHFSV0xRd0xJeldBQXYyTkpBOFZhYWU0U2hWRVFDcHI5Y1VmcHp0c2x2ZjR2Y05qeUlsWFFzRUstRkhGUktjMEQ5OGFaT3llaUxBRGRELXk4LVRfdWpaTFk5aEpld1JZMERlSmFseDRSMW94cVhfYUM5b012OFc0QnNLWUJIRUdmZzBPcElubjVSYzV4?oc=5\" target=\"_blank\">Expert opinions from law enforcement agents: Diaz isn't the end of the analysis</a> <font color=\"#6f6f6f\">Reuters</font>",
+      "story_type": "policy",
+      "label": "ADJACENT",
+      "confidence": 0.7,
+      "relevance": 55,
+      "relevance_score": 0.55,
+      "signals": [
+        "Diaz isn't the end of the analysis",
+        "law enforcement agents"
+      ],
+      "entities": [
+        "Diaz"
+      ],
+      "rationale": "The article discusses police use-of-force expert testimony and analysis, but does not directly mention Force Science or its proxies.",
+      "key_entities": "Diaz",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "4122e7142d2b4706a62c7f33089810de",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPLTVZeS0yWldObk1jVW5wUFZBUFQ4b2R1MUZQaFVNaHk4U2JycVUyOTlvNm83Y2FsTVRUVjE2N2lReEU1bnhGd2VfY2txeVk4ak5idWFDNG1uWTBmRW91b2J2ZE1JY19QYVR5X25HTGZQREtadU5GOHN3b1h1Sko5UWp4Yzl5eEgzYU14bzZjd3FFVDVDNGxDQmJPTFTSAaIBQVVfeXFMTVdGS2VGUVRGTXV6RjZKUENEZGNlaDZEVzF1ekh5Tm45ZHZFNkZkQUFJZWtDMGZSX0tZT0tGc3QxQmszQVYwbE9aMFdJWUExS2c0d01CQnBQRXVUWHllQy1BbndBWmlJV2kxcjRqeHVQXzQ4NjhROC1tVVNoYkJFTm1tdi1FYS1jbmZLbXdRWWRab0N1RWxpbXVXR0FqN2E1cjZB?oc=5",
       "title": "Kim Potter trial: Missed chance to explain Taser-gun mix-up, experts say",
@@ -1438,6 +1628,32 @@
       "needs_review": 0
     },
     {
+      "id": "b7ba720d7840b188f7b8ee46d5d7d2e4",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPd1R2Vi13QVRLYVN6MTZUTWlMd0pBbW93aFlYR0I0cEFybmJwOEtsQjVnT21OUkVONkFkMHhyMFRtVklsRkc5OHluVXp2Z3ZIdHJodEIyYThfYURyUzVwOFFDS002LXJNbHFuZEl3NS14d1dYTGwyckhpRGthUG1KMHdUMlZCdndObkw1ejloVlZZX1nSAZgBQVVfeXFMTWdESHQ3aW1sRGpmTmVnMlNjUDlOcnFvUXpzdXJNWk91b0NWelNTZGxnQUI1aWdQbENySG5RbklXV3F3ZVU3N1pqS29qWmdOYlFNX3Q3QlFLUXJBTmhKYzQtdXFNWVJyYmhZYlM4U1VTenFYZGI5VDVoU1MzYm5FdVAzN3E2eGczWlRQVHNleUJNcURlZFQ3TFA?oc=5",
+      "title": "Expert: baton blows were reasonable",
+      "source": "upi.com",
+      "date": "1992-03-23",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxPd1R2Vi13QVRLYVN6MTZUTWlMd0pBbW93aFlYR0I0cEFybmJwOEtsQjVnT21OUkVONkFkMHhyMFRtVklsRkc5OHluVXp2Z3ZIdHJodEIyYThfYURyUzVwOFFDS002LXJNbHFuZEl3NS14d1dYTGwyckhpRGthUG1KMHdUMlZCdndObkw1ejloVlZZX1nSAZgBQVVfeXFMTWdESHQ3aW1sRGpmTmVnMlNjUDlOcnFvUXpzdXJNWk91b0NWelNTZGxnQUI1aWdQbENySG5RbklXV3F3ZVU3N1pqS29qWmdOYlFNX3Q3QlFLUXJBTmhKYzQtdXFNWVJyYmhZYlM4U1VTenFYZGI5VDVoU1MzYm5FdVAzN3E2eGczWlRQVHNleUJNcURlZFQ3TFA?oc=5\" target=\"_blank\">Expert: baton blows were reasonable</a> <font color=\"#6f6f6f\">upi.com</font>",
+      "story_type": "general",
+      "label": "ADJACENT",
+      "confidence": 0.8,
+      "relevance": 55,
+      "relevance_score": 0.55,
+      "signals": [
+        "expert testimony",
+        "reasonable"
+      ],
+      "entities": [
+        "expert"
+      ],
+      "rationale": "The article discusses an expert witness testimony on the reasonableness of police use of force, but does not directly mention Force Science or related proxies.",
+      "key_entities": "expert",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "87b39d7070605b3a472e8676a8958138",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPc1E0eDdZRjVhQk1CeUttQm9leW03enRycW1fUE54ODU5czEtczJCNnhicEVuREJhZnJjLTJhbWtMazNkaVdxTEtaVkMwUUVadGZDNTFicmgzVGV3QTMtR24zN3B2WUhla1BwcGhBZnVoajh4X21ObC1UbS1DYXN6Tk84a0I0bHhxOTNSNDlGWHpuV0FCOGpZ?oc=5",
       "title": "We talked to 5 use-of-force experts. This is what they say about the Minneapolis ICE shooting",
@@ -1492,6 +1708,33 @@
       "tags": [
         "AI"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "d30fa044bc8596de853dbe86896f9672",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNU3BjMzFETVk1WEM4VzRSYjhDVEF6VC1QWnZDb0s4LThmUG55Z0NlZ0V4Z0hyRmc3VVhYNF8xYm1Pcm9USUVXSExzNXVOMzVsZDl0bnV3WEZZSEVjSTl5RGgxNklSd19VbDR6OXdncXR3ZlV1MjdtTEJMYmVvU3BJeWI1TzNyN1c0RjZBVzV6V09ncjdsVExGZl8tNlpDV3ZmQ3M4RHE1R0xGMEtic040SUwyLUJELWtsYjEtdnlCS0Y0VDRNZEdja1JtUTgwZlp6ODlQSEx5ZnBBVkh6ZzVhQlNKNXdWeFJkZDdXdi1R?oc=5",
+      "title": "Defense expert testifies officer Connor Grubb was justified in shooting of Ta’Kiya Young",
+      "source": "10tv.com",
+      "date": "2025-11-17",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxNU3BjMzFETVk1WEM4VzRSYjhDVEF6VC1QWnZDb0s4LThmUG55Z0NlZ0V4Z0hyRmc3VVhYNF8xYm1Pcm9USUVXSExzNXVOMzVsZDl0bnV3WEZZSEVjSTl5RGgxNklSd19VbDR6OXdncXR3ZlV1MjdtTEJMYmVvU3BJeWI1TzNyN1c0RjZBVzV6V09ncjdsVExGZl8tNlpDV3ZmQ3M4RHE1R0xGMEtic040SUwyLUJELWtsYjEtdnlCS0Y0VDRNZEdja1JtUTgwZlp6ODlQSEx5ZnBBVkh6ZzVhQlNKNXdWeFJkZDdXdi1R?oc=5\" target=\"_blank\">Defense expert testifies officer Connor Grubb was justified in shooting of Ta’Kiya Young</a> <font color=\"#6f6f6f\">10tv.com</font>",
+      "story_type": "incident",
+      "label": "ADJACENT",
+      "confidence": 0.8,
+      "relevance": 50,
+      "relevance_score": 0.5,
+      "signals": [
+        "officer Connor Grubb was justified in shooting",
+        "police use-of-force litigation"
+      ],
+      "entities": [
+        "Connor Grubb",
+        "Ta'Kiya Young"
+      ],
+      "rationale": "The article discusses a police shooting and use-of-force expert testimony, but does not mention Force Science or any of its proxies.",
+      "key_entities": "Connor Grubb, Ta'Kiya Young",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     },
     {
@@ -1715,6 +1958,58 @@
       "needs_review": 0
     },
     {
+      "id": "decf00f65a2d1f0bcf314026e51db12d",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZkpsUEJUeUZaMVVGc1JGOVZtVU9wMEhvXy1iVERnaFRlV3BFT0drZDJac1NZVU9yMVREbkNfUlZBMHNkTl82ejQ0Q3dEQVd6ckRqZFZLOFJkTFN2MTJJUjE1N05SbVJrb3pSYWZUVUZ5Skw1Q0w5RU1aNWJVMGJJVTJzSE1oY2RsZlE?oc=5",
+      "title": "Defence in Polchies trial questions witness about excluding 'important' messages from testimony",
+      "source": "CBC",
+      "date": "2021-11-04",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPZkpsUEJUeUZaMVVGc1JGOVZtVU9wMEhvXy1iVERnaFRlV3BFT0drZDJac1NZVU9yMVREbkNfUlZBMHNkTl82ejQ0Q3dEQVd6ckRqZFZLOFJkTFN2MTJJUjE1N05SbVJrb3pSYWZUVUZ5Skw1Q0w5RU1aNWJVMGJJVTJzSE1oY2RsZlE?oc=5\" target=\"_blank\">Defence in Polchies trial questions witness about excluding 'important' messages from testimony</a> <font color=\"#6f6f6f\">CBC</font>",
+      "story_type": "general",
+      "label": "ADJACENT",
+      "confidence": 0.7,
+      "relevance": 50,
+      "relevance_score": 0.5,
+      "signals": [
+        "excluding 'important' messages from testimony",
+        "use of force"
+      ],
+      "entities": [],
+      "rationale": "The article discusses issues around the exclusion of evidence in a use-of-force trial, which is adjacent to the broader police use-of-force expert testimony ecosystem, but does not directly mention Force Science or related proxies.",
+      "key_entities": "Google",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "096b94827f40aceacb681cb21ace6d1b",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQRkQyUTVOdk94MWVEVW0wUWlRc25DLWlybUVZbkhLcWI2eE01MnNlQk1tRXUyNXNFSXZBYllnV3FRY2FVdDdJTkJiUDNEdzc3VnBfYldtZG9DZTM1alZIUHlpWVVHY2NIN0I0NUYzZ3lZemN2UGVla0lrbGstWHRxUDRHSjNGUjRHY1hWbXBnZE12ZWN0WUxxX3ZJYlZiQzJER3djd2xTTWlqWFU?oc=5",
+      "title": "Police Summon Expert Witness to Defend Use-of-Force Incident",
+      "source": "stthomassource.com",
+      "date": "2021-09-01",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQRkQyUTVOdk94MWVEVW0wUWlRc25DLWlybUVZbkhLcWI2eE01MnNlQk1tRXUyNXNFSXZBYllnV3FRY2FVdDdJTkJiUDNEdzc3VnBfYldtZG9DZTM1alZIUHlpWVVHY2NIN0I0NUYzZ3lZemN2UGVla0lrbGstWHRxUDRHSjNGUjRHY1hWbXBnZE12ZWN0WUxxX3ZJYlZiQzJER3djd2xTTWlqWFU?oc=5\" target=\"_blank\">Police Summon Expert Witness to Defend Use-of-Force Incident</a> <font color=\"#6f6f6f\">stthomassource.com</font>",
+      "story_type": "general",
+      "label": "ADJACENT",
+      "confidence": 0.9,
+      "relevance": 50,
+      "relevance_score": 0.5,
+      "signals": [
+        "use-of-force",
+        "expert witness",
+        "police use-of-force litigation",
+        "expert testimony gatekeeping/credibility"
+      ],
+      "entities": [
+        "police"
+      ],
+      "rationale": "The article is about police use-of-force incidents and the role of expert witness testimony, but does not mention Force Science directly or contain any proxy signals.",
+      "key_entities": "police",
+      "location": null,
+      "tags": [],
+      "needs_review": 0
+    },
+    {
       "id": "befa16c204711849f3d2129cac255d69",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdkc4Znloek5QX3BLWExOaDRoSjFDbm15RXowUExYdGN5Zm5jeTNCaDRzWlh0SGxZbm9KcG1iNm9FQWllUzBqd3pGWXNSd1o5SHJtaGhiektzeHljcUdlN1dSYU8yR3VIUDFUdkNadDdVOEdBVjBnQXBuU3R6NHpjY1NnVTV0aWluNXllQTF5NjNCbHBQdmZGNEQxeXdTTDk4aWV3NFVmWdIBrAFBVV95cUxOVHkxOG9MYjJEMTRCMlJlN0dENk1oM1h0MmhyTng4T244TWh4YjdGZDMtNDZ2ZWVOZ0Zvb1owMzJtdG9WNWcyZzBIZUY3V2pUbDJuMXllZjROWXJIWE5VZmxBOVZ1NVdxYWhEU3cwb2c5QWFhTGVfeFdoOVAybzFfLUxocTJ0U1ZOa3dmNkdyVmh5UDBoSFA1cEpWTnBQTTdrU1d5emh5eVppT3Ja?oc=5",
       "title": "Daunte Wright case highlights challenge of police reaching for stun guns: Experts",
@@ -1739,6 +2034,35 @@
       "key_entities": "Daunte Wright",
       "location": null,
       "tags": [],
+      "needs_review": 0
+    },
+    {
+      "id": "371a4305a0dfdab645eea94cd022bbdf",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOdU0zcFlaQnVKclZYZ1NUMlNBUmlWd0FoUXpTRXZEb3p0OS1TYUh2blltUHBjMldIMDFpTG53X0VqMVJ5c1ZJZnNIeHBTQkVRTjFQelFieUViSGVlNEhyaVppWjlFbWJ3ZUJLQkRRU0loMlNqWFVqYTFyd2dOQW9jVDJJbFJreUloUml3SHZiRUFwT1BvRHd6WWhlS2w5M3p5SmhjYlJlWmNXU1dsWkpDeFdYekgtMWo2NGc3YnpZMHU5dURQUHdJQldRSWM1c2x2SmItZ1NCbVNya2hEb25yWEMtQ3N4S3NXdC1Yd1RUYUMwX0Z1RjJKcmNCYzBjSm1kaVh0NWk0aFZwUGN1TGfSAXhBVV95cUxQbk5JSE5faEd6enFaRDdUcm5mazRQdVljM0x1ZEYyM3dNR3lzVnJMZHJQRW00aEZYamNsQmctMllTNVVvY1FjMFhGSWg4eU50TFFDb0d4OG5SZlNLcEY0SXZ1ZWF1VTRkTGp1a1lYb0dCR1dsNERjVXg?oc=5",
+      "title": "Dallas ex-police officer claims 'inattentional blindness' after shooting neighbour in own home",
+      "source": "9News.com.au",
+      "date": "2019-09-29",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijgJBVV95cUxOdU0zcFlaQnVKclZYZ1NUMlNBUmlWd0FoUXpTRXZEb3p0OS1TYUh2blltUHBjMldIMDFpTG53X0VqMVJ5c1ZJZnNIeHBTQkVRTjFQelFieUViSGVlNEhyaVppWjlFbWJ3ZUJLQkRRU0loMlNqWFVqYTFyd2dOQW9jVDJJbFJreUloUml3SHZiRUFwT1BvRHd6WWhlS2w5M3p5SmhjYlJlWmNXU1dsWkpDeFdYekgtMWo2NGc3YnpZMHU5dURQUHdJQldRSWM1c2x2SmItZ1NCbVNya2hEb25yWEMtQ3N4S3NXdC1Yd1RUYUMwX0Z1RjJKcmNCYzBjSm1kaVh0NWk0aFZwUGN1TGfSAXhBVV95cUxQbk5JSE5faEd6enFaRDdUcm5mazRQdVljM0x1ZEYyM3dNR3lzVnJMZHJQRW00aEZYamNsQmctMllTNVVvY1FjMFhGSWg4eU50TFFDb0d4OG5SZlNLcEY0SXZ1ZWF1VTRkTGp1a1lYb0dCR1dsNERjVXg?oc=5\" target=\"_blank\">Dallas ex-police officer claims 'inattentional blindness' after shooting neighbour in own home</a> <font color=\"#6f6f6f\">9News.com.au</font>",
+      "story_type": "incident",
+      "label": "ADJACENT",
+      "confidence": 0.8,
+      "relevance": 50,
+      "relevance_score": 0.5,
+      "signals": [
+        "inattentional blindness",
+        "police use-of-force litigation",
+        "expert testimony"
+      ],
+      "entities": [
+        "Dallas ex-police officer"
+      ],
+      "rationale": "The article discusses a police use-of-force incident and the officer's defense of 'inattentional blindness', but does not explicitly mention Force Science or related organizations.",
+      "key_entities": "Dallas ex-police officer",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
       "needs_review": 0
     },
     {
@@ -1767,6 +2091,29 @@
       "tags": [
         "AI"
       ],
+      "needs_review": 0
+    },
+    {
+      "id": "50b66e76eaad27beea557d1bd564dfd0",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQV1BJMEpoMHVxeXFQNHQtTTBBTGZBck8ybHlPbzdVcGpNY25jQjc4YW9NZXJoTmJxNE93TC1LRnVrcnhXaVNWSDBNQmpaODFfekR6eWk1YmpPUU1WRUVXMVNST0VfeGlCYXBneEdDT3NMSTQxMUI5SWIyRVpDZjVQZ3kzNHB0QVVrMUhnVkQtUXpzWVFwcEE2U2VLU0MxWUd3UzZYLWVLR3pMNGpOTXhvcnRUODc1Qk1tcjFTRmNYQnFES3czSmc?oc=5",
+      "title": "Judge rules on evidence in NAU shooting trial",
+      "source": "azcentral.com",
+      "date": "2017-03-23",
+      "date_discovered": "2026-01-21",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQV1BJMEpoMHVxeXFQNHQtTTBBTGZBck8ybHlPbzdVcGpNY25jQjc4YW9NZXJoTmJxNE93TC1LRnVrcnhXaVNWSDBNQmpaODFfekR6eWk1YmpPUU1WRUVXMVNST0VfeGlCYXBneEdDT3NMSTQxMUI5SWIyRVpDZjVQZ3kzNHB0QVVrMUhnVkQtUXpzWVFwcEE2U2VLU0MxWUd3UzZYLWVLR3pMNGpOTXhvcnRUODc1Qk1tcjFTRmNYQnFES3czSmc?oc=5\" target=\"_blank\">Judge rules on evidence in NAU shooting trial</a> <font color=\"#6f6f6f\">azcentral.com</font>",
+      "story_type": "incident",
+      "label": "ADJACENT",
+      "confidence": 0.7,
+      "relevance": 50,
+      "relevance_score": 0.5,
+      "signals": [
+        "use of force"
+      ],
+      "entities": [],
+      "rationale": "The article discusses a judge's ruling on evidence in a police use-of-force trial, but does not mention Force Science or related proxies.",
+      "key_entities": "Google",
+      "location": null,
+      "tags": [],
       "needs_review": 0
     }
   ]
