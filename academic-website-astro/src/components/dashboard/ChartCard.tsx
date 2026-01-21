@@ -103,7 +103,7 @@ export default function ChartCard({
       // Canvas dimensions (2x for retina)
       const scale = 2;
       const width = 1200;
-      const height = 850; // Extra space for title and attribution
+      const height = 800; // Title + attribution + chart
       canvas.width = width * scale;
       canvas.height = height * scale;
       ctx.scale(scale, scale);
@@ -116,7 +116,13 @@ export default function ChartCard({
       ctx.fillStyle = '#1f2937';
       ctx.font = 'bold 20px Arial, sans-serif';
       ctx.textAlign = 'center';
-      ctx.fillText(fullTitle, width / 2, 35);
+      ctx.fillText(fullTitle, width / 2, 32);
+
+      // Draw attribution right below title
+      const attributionText = `Source: Mapping Police Violence  •  ${ATTRIBUTION.name}, ${ATTRIBUTION.institution}  •  ${ATTRIBUTION.website}  •  ${today}`;
+      ctx.fillStyle = '#6b7280';
+      ctx.font = '11px Arial, sans-serif';
+      ctx.fillText(attributionText, width / 2, 52);
 
       // Load and draw the plot image
       const plotImage = new Image();
@@ -124,20 +130,13 @@ export default function ChartCard({
 
       await new Promise<void>((resolve, reject) => {
         plotImage.onload = () => {
-          // Draw plot image below title
-          ctx.drawImage(plotImage, 0, 55, width, 700);
+          // Draw plot image below title and attribution
+          ctx.drawImage(plotImage, 0, 70, width, 700);
           resolve();
         };
         plotImage.onerror = reject;
         plotImage.src = plotImageUrl;
       });
-
-      // Draw attribution at bottom
-      const attributionText = `Source: Mapping Police Violence  •  ${ATTRIBUTION.name}, ${ATTRIBUTION.institution}  •  ${ATTRIBUTION.website}  •  ${today}`;
-      ctx.fillStyle = '#6b7280';
-      ctx.font = '12px Arial, sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText(attributionText, width / 2, height - 15);
 
       // Convert canvas to blob and download
       canvas.toBlob((blob) => {
