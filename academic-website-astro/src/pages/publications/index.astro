@@ -48,17 +48,31 @@ const pubsForSearch = sortedPubs.map(pub => ({
           </div>
           <div class="text-sm text-gray-600 dark:text-gray-400">Total Citations</div>
         </div>
-        <div class="card p-4 text-center">
+        <div class="card p-4 text-center group relative cursor-help">
           <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
             {scholarMetrics.h_index ?? '—'}
           </div>
-          <div class="text-sm text-gray-600 dark:text-gray-400">h-index</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">
+            h-index
+            <span class="inline-block ml-1 text-gray-400 dark:text-gray-500">&#9432;</span>
+          </div>
+          <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-64 text-left z-10">
+            The h-index measures productivity and citation impact. An h-index of {scholarMetrics.h_index} means {scholarMetrics.h_index} publications have been cited at least {scholarMetrics.h_index} times each.
+            <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
+          </div>
         </div>
-        <div class="card p-4 text-center">
+        <div class="card p-4 text-center group relative cursor-help">
           <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
             {scholarMetrics.i10_index ?? '—'}
           </div>
-          <div class="text-sm text-gray-600 dark:text-gray-400">i10-index</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">
+            i10-index
+            <span class="inline-block ml-1 text-gray-400 dark:text-gray-500">&#9432;</span>
+          </div>
+          <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-64 text-left z-10">
+            The i10-index counts publications with at least 10 citations. An i10-index of {scholarMetrics.i10_index} means {scholarMetrics.i10_index} publications have 10 or more citations.
+            <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
+          </div>
         </div>
         <div class="card p-4 text-center">
           <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
