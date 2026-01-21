@@ -2,27 +2,26 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import scholarMetrics from '@/../public/data/scholar-metrics.json';
+import PublicationsSearch from '@/components/publications/PublicationsSearch';
 
 const publications = await getCollection('publications');
 
 // Sort by date descending
 const sortedPubs = publications.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-// Group by year
-const pubsByYear = sortedPubs.reduce((acc, pub) => {
-  const year = pub.data.date.getFullYear();
-  if (!acc[year]) acc[year] = [];
-  acc[year].push(pub);
-  return acc;
-}, {} as Record<number, typeof publications>);
-
-const years = Object.keys(pubsByYear).map(Number).sort((a, b) => b - a);
-
-// Get unique publication types
-const allTypes = new Set<string>();
-publications.forEach((pub) => {
-  pub.data.publication_types?.forEach((type) => allTypes.add(type));
-});
+// Prepare publications data for the React component
+const pubsForSearch = sortedPubs.map(pub => ({
+  slug: pub.slug,
+  title: pub.data.title,
+  authors: pub.data.authors,
+  date: pub.data.date.toISOString(),
+  year: pub.data.date.getFullYear(),
+  publication: pub.data.publication,
+  summary: pub.data.summary,
+  featured: pub.data.featured,
+  url_source: pub.data.url_source,
+  url_pdf: pub.data.url_pdf,
+}));
 ---
 
 <BaseLayout
@@ -72,72 +71,8 @@ publications.forEach((pub) => {
         Metrics from <a href={scholarMetrics.scholar_url} target="_blank" rel="noopener noreferrer" class="underline hover:text-primary-700 dark:hover:text-primary-400">Google Scholar</a>
       </p>
 
-      <!-- Publications by Year -->
-      <div class="space-y-12">
-        {years.map((year) => (
-          <section>
-            <h2 class="text-2xl font-serif font-bold text-primary-900 dark:text-gray-100 mb-6 pb-2 border-b border-gray-200 dark:border-gray-700">
-              {year}
-              <span class="text-base font-normal text-gray-500 dark:text-gray-400 ml-2">
-                ({pubsByYear[year].length} {pubsByYear[year].length === 1 ? 'publication' : 'publications'})
-              </span>
-            </h2>
-
-            <div class="space-y-4">
-              {pubsByYear[year].map((pub) => (
-                <article class="card p-6 group">
-                  <a href={`/publications/${pub.slug}`} class="block">
-                    <div class="flex items-start justify-between gap-4">
-                      <div class="flex-1 min-w-0">
-                        <h3 class="text-lg font-serif font-semibold text-primary-900 dark:text-gray-100 group-hover:text-accent-burgundy dark:group-hover:text-accent-gold transition-colors mb-2">
-                          {pub.data.title}
-                        </h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                          {pub.data.authors.map((author, i) => (
-                            <>
-                              <span class={author.includes('Ian') ? 'font-semibold' : ''}>{author}</span>
-                              {i < pub.data.authors.length - 1 && <span>, </span>}
-                            </>
-                          ))}
-                        </p>
-                        {pub.data.publication && (
-                          <p class="text-sm italic text-gray-500 dark:text-gray-500">
-                            {pub.data.publication}
-                          </p>
-                        )}
-                      </div>
-                      {pub.data.featured && (
-                        <span class="flex-shrink-0 px-2 py-1 text-xs font-medium bg-accent-gold/20 text-accent-gold rounded">
-                          Featured
-                        </span>
-                      )}
-                    </div>
-
-                    {pub.data.summary && (
-                      <p class="text-sm text-gray-600 dark:text-gray-400 mt-3 line-clamp-2">
-                        {pub.data.summary}
-                      </p>
-                    )}
-
-                    <div class="flex items-center gap-4 mt-4">
-                      {pub.data.url_source && (
-                        <span class="text-xs text-primary-700 dark:text-primary-400">
-                          View Publication
-                        </span>
-                      )}
-                      {pub.data.url_pdf && pub.data.url_pdf.length > 0 && (
-                        <span class="text-xs text-primary-700 dark:text-primary-400">
-                          PDF Available
-                        </span>
-                      )}
-                    </div>
-                  </a>
-                </article>
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
+      <!-- Publications Search and List -->
+      <PublicationsSearch client:load publications={pubsForSearch} />
     </div>
   </section>
 </BaseLayout>
