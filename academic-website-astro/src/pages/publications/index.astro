@@ -36,28 +36,34 @@ const preprintCount = pubsForSearch.filter(p => p.isPreprint).length;
   <section class="section">
     <div class="container-wide">
       <!-- Header -->
-      <header class="mb-12">
-        <h1 class="text-4xl md:text-5xl font-serif font-bold text-primary-900 dark:text-gray-100 mb-4">
+      <header class="border-b-4 border-primary-700 dark:border-primary-500 pb-8 mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-1 h-12 bg-primary-700 dark:bg-primary-500"></div>
+          <span class="text-sm font-bold tracking-widest uppercase text-primary-700 dark:text-primary-400">
+            Peer-Reviewed Research
+          </span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 dark:text-white leading-tight mb-4">
           Publications
         </h1>
-        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
+        <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl font-light leading-relaxed">
           Peer-reviewed publications on policing policy, technology, behavior, and use-of-force in law enforcement.
         </p>
       </header>
 
       <!-- Google Scholar Stats -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-        <div class="card p-4 text-center">
-          <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
+        <div class="bg-white dark:bg-gray-800 border-l-4 border-primary-700 dark:border-primary-500 rounded-r-lg shadow-sm p-4 text-center">
+          <div class="text-3xl font-bold text-gray-900 dark:text-white">
             {scholarMetrics.citations?.toLocaleString() ?? '—'}
           </div>
-          <div class="text-sm text-gray-600 dark:text-gray-400">Total Citations</div>
+          <div class="text-sm font-medium text-primary-700 dark:text-primary-400">Total Citations</div>
         </div>
-        <div class="card p-4 text-center group relative cursor-help !overflow-visible">
-          <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
+        <div class="bg-white dark:bg-gray-800 border-l-4 border-primary-700 dark:border-primary-500 rounded-r-lg shadow-sm p-4 text-center group relative cursor-help !overflow-visible">
+          <div class="text-3xl font-bold text-gray-900 dark:text-white">
             {scholarMetrics.h_index ?? '—'}
           </div>
-          <div class="text-sm text-gray-600 dark:text-gray-400">
+          <div class="text-sm font-medium text-primary-700 dark:text-primary-400">
             h-index
             <span class="inline-block ml-1 text-gray-400 dark:text-gray-500">&#9432;</span>
           </div>
@@ -66,11 +72,11 @@ const preprintCount = pubsForSearch.filter(p => p.isPreprint).length;
             <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
           </div>
         </div>
-        <div class="card p-4 text-center group relative cursor-help !overflow-visible">
-          <div class="text-3xl font-bold text-primary-900 dark:text-gray-100">
+        <div class="bg-white dark:bg-gray-800 border-l-4 border-primary-700 dark:border-primary-500 rounded-r-lg shadow-sm p-4 text-center group relative cursor-help !overflow-visible">
+          <div class="text-3xl font-bold text-gray-900 dark:text-white">
             {scholarMetrics.i10_index ?? '—'}
           </div>
-          <div class="text-sm text-gray-600 dark:text-gray-400">
+          <div class="text-sm font-medium text-primary-700 dark:text-primary-400">
             i10-index
             <span class="inline-block ml-1 text-gray-400 dark:text-gray-500">&#9432;</span>
           </div>
@@ -79,11 +85,11 @@ const preprintCount = pubsForSearch.filter(p => p.isPreprint).length;
             <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
           </div>
         </div>
-        <div class="card p-4 text-center">
-          <div class="text-3xl font-bold text-primary-900 dark:text-gray-100" id="pub-count">
+        <div class="bg-white dark:bg-gray-800 border-l-4 border-primary-700 dark:border-primary-500 rounded-r-lg shadow-sm p-4 text-center">
+          <div class="text-3xl font-bold text-gray-900 dark:text-white" id="pub-count">
             {pubCount}
           </div>
-          <div class="text-sm text-gray-600 dark:text-gray-400">Publications</div>
+          <div class="text-sm font-medium text-primary-700 dark:text-primary-400">Publications</div>
         </div>
       </div>
       <p class="text-xs text-gray-500 dark:text-gray-500 mb-8 -mt-8">
