@@ -1,263 +1,409 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0">
   <channel>
     <title>Force Science News</title>
-    <link>https://ian-adams.com/force-science/</link>
-    <description>News about Force Science Institute and police use-of-force expert testimony</description>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 20 Jan 2026 11:25:32 +0000</lastBuildDate>
-    <atom:link href="https://ian-adams.com/data/force-science-news.xml" rel="self" type="application/rss+xml"/>
+    <description>Force Science News - automated news feed</description>
+    <link>https://ianadamsresearch.com/force-science</link>
+    <lastBuildDate>Thu, 22 Jan 2026 12:20:40 GMT</lastBuildDate>
     <item>
-      <title><![CDATA[Force expert: Rittenhouse decisions to shoot were reasonable [DIRECT]]]></title>
-      <link>https://news.google.com/rss/articles/CBMiswFBVV95cUxOVUhWSTVXZDlhZjU5RnJoaXk4Q0VVcldEaHZ5SW5sN0hrdzdtMTlpbnM5clY0aEJ3cWFucENPaFdHOXR2UTJ5Tzl2Qmc4R2RYRmJsZ1c2cXJSbUUzdzBudzFVYVVyLVV0eVNsYm5paEJoN3lLOXI1bUxxdXNhSEN6bXk5RnpFSTQ5Uk9taUdTOWszaUxMTDduU1d3MWY2OXZtSEpGZ1BZZ0ticXpQZ29xUHZmbw?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMiswFBVV95cUxOVUhWSTVXZDlhZjU5RnJoaXk4Q0VVcldEaHZ5SW5sN0hrdzdtMTlpbnM5clY0aEJ3cWFucENPaFdHOXR2UTJ5Tzl2Qmc4R2RYRmJsZ1c2cXJSbUUzdzBudzFVYVVyLVV0eVNsYm5paEJoN3lLOXI1bUxxdXNhSEN6bXk5RnpFSTQ5Uk9taUdTOWszaUxMTDduU1d3MWY2OXZtSEpGZ1BZZ0ticXpQZ29xUHZmbw?oc=5</guid>
-      <pubDate>2021-10-05</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOVUhWSTVXZDlhZjU5RnJoaXk4Q0VVcldEaHZ5SW5sN0hrdzdtMTlpbnM5clY0aEJ3cWFucENPaFdHOXR2UTJ5Tzl2Qmc4R2RYRmJsZ1c2cXJSbUUzdzBudzFVYVVyLVV0eVNsYm5paEJoN3lLOXI1bUxxdXNhSEN6bXk5RnpFSTQ5Uk9taUdTOWszaUxMTDduU1d3MWY2OXZtSEpGZ1BZZ0ticXpQZ29xUHZmbw?oc=5" target="_blank">Force expert: Rittenhouse decisions to shoot were reasonable</a> <font color="#6f6f6f">AP News</font>]]></description>
-      <source>AP News</source>
-      <category>DIRECT</category>
+      <title><![CDATA[MAGA Jesus Is Not the Real Jesus]]></title>
+      <link>https://www.theatlantic.com/ideas/2026/01/maga-christians-betray-ethics-ice/685679/</link>
+      <guid>f36db93a3fbb84c46f3eed456a01e254</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>The Atlantic</source>
+      <description><![CDATA[<a href="https://www.theatlantic.com/ideas/2026/01/maga-christians-betray-ethics-ice/685679/" target="_blank">MAGA Jesus Is Not the Real Jesus</a> <font color="#6f6f6f">The Atlantic</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Training Officers to Shoot First, and He Will Answer Questions Later [DIRECT]]]></title>
-      <link>https://www.nytimes.com/2015/08/02/us/training-officers-to-shoot-first-and-he-will-answer-questions-later.html</link>
-      <guid isPermaLink="true">https://www.nytimes.com/2015/08/02/us/training-officers-to-shoot-first-and-he-will-answer-questions-later.html</guid>
-      <pubDate>2015-08-02</pubDate>
-      <description><![CDATA[A prominent expert helps police defend shootings; his methods face challenges in court. The New York Times investigation into Bill Lewinski and the Force Science Institute.]]></description>
-      <source>The New York Times</source>
-      <category>DIRECT</category>
+      <title><![CDATA[We Don’t Know How Many People Have Been Harmed by ICE]]></title>
+      <link>http://prospect.org/2026/01/21/ice-trump-minnesota-minneapolis-accountability-violence-deaths/</link>
+      <guid>7ce9b729f22e780236861fc93b9f4fff</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>The American Prospect</source>
+      <description><![CDATA[<a href="http://prospect.org/2026/01/21/ice-trump-minnesota-minneapolis-accountability-violence-deaths/" target="_blank">We Don’t Know How Many People Have Been Harmed by ICE</a> <font color="#6f6f6f">The American Prospect</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Lewinski: Education not enough for use of force skills [DIRECT]]]></title>
-      <link>https://news.google.com/rss/articles/CBMi5wFBVV95cUxNZXd6TXRFWkhEV0ZvWWl1cEhRUDZjZnpOVXZLdWtwbUFzdTZnZEpBNFlhVmk3aFREaTg4OFNmXzFEWWt5SmR5WW5iODdUcjEtanNSRktMSVlQSEVQM3B3cy11TENtajlJLVcyMmM0aVhMWURrYWZzQzhSYzRBRGpLa2k0Q3dzMlhNa2toSzF6d0NxX1RaZUNIY2lqY1E4bHFNZjVZYVk3WFVnT0pMaXhSTjl0SjZ3OW9pR2ZGV3N6UDBxd0tJTVlSbzFSWmx4R0xXdGRkM0Q2dVE1NkUwQlZleHJXVnpic0U?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMi5wFBVV95cUxNZXd6TXRFWkhEV0ZvWWl1cEhRUDZjZnpOVXZLdWtwbUFzdTZnZEpBNFlhVmk3aFREaTg4OFNmXzFEWWt5SmR5WW5iODdUcjEtanNSRktMSVlQSEVQM3B3cy11TENtajlJLVcyMmM0aVhMWURrYWZzQzhSYzRBRGpLa2k0Q3dzMlhNa2toSzF6d0NxX1RaZUNIY2lqY1E4bHFNZjVZYVk3WFVnT0pMaXhSTjl0SjZ3OW9pR2ZGV3N6UDBxd0tJTVlSbzFSWmx4R0xXdGRkM0Q2dVE1NkUwQlZleHJXVnpic0U?oc=5</guid>
-      <pubDate>2026-01-13</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxNZXd6TXRFWkhEV0ZvWWl1cEhRUDZjZnpOVXZLdWtwbUFzdTZnZEpBNFlhVmk3aFREaTg4OFNmXzFEWWt5SmR5WW5iODdUcjEtanNSRktMSVlQSEVQM3B3cy11TENtajlJLVcyMmM0aVhMWURrYWZzQzhSYzRBRGpLa2k0Q3dzMlhNa2toSzF6d0NxX1RaZUNIY2lqY1E4bHFNZjVZYVk3WFVnT0pMaXhSTjl0SjZ3OW9pR2ZGV3N6UDBxd0tJTVlSbzFSWmx4R0xXdGRkM0Q2dVE1NkUwQlZleHJXVnpic0U?oc=5" target="_blank">Lewinski: Education not enough for use of force skills</a> <font color="#6f6f6f">Mankato Free Press</font>]]></description>
-      <source>Mankato Free Press</source>
-      <category>DIRECT</category>
+      <title><![CDATA[Japan Aramid Fiber Market Projected to Reach US$ 434.99 Million by 2035, Supported by Cross-Border Production Investments Says Astute Analytica]]></title>
+      <link>https://www.globenewswire.com/news-release/2026/01/21/3222421/0/en/Japan-Aramid-Fiber-Market-Projected-to-Reach-US-434-99-Million-by-2035-Supported-by-Cross-Border-Production-Investments-Says-Astute-Analytica.html</link>
+      <guid>563a05b119c9b562ae2b6d65d0fdad28</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>GlobeNewswire</source>
+      <description><![CDATA[<a href="https://www.globenewswire.com/news-release/2026/01/21/3222421/0/en/Japan-Aramid-Fiber-Market-Projected-to-Reach-US-434-99-Million-by-2035-Supported-by-Cross-Border-Production-Investments-Says-Astute-Analytica.html" target="_blank">Japan Aramid Fiber Market Projected to Reach US$ 434.99 Million by 2035, Supported by Cross-Border Production Investments Says Astute Analytica</a> <font color="#6f6f6f">GlobeNewswire</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Minnesota police trainer is critic—And target [DIRECT]]]></title>
-      <link>https://www.fox9.com/news/minnesota-police-trainer-is-critic-and-target</link>
-      <guid isPermaLink="true">https://www.fox9.com/news/minnesota-police-trainer-is-critic-and-target</guid>
-      <pubDate>2020-08-02</pubDate>
-      <description><![CDATA[Bill Lewinski, founder of Force Science Institute based in Minnesota, is both a prominent police trainer and target of critics who question his methodology.]]></description>
-      <source>FOX 9</source>
-      <category>DIRECT</category>
+      <title><![CDATA[A year into Trump's second term, the Supreme Court's docket is full of legal challenges]]></title>
+      <link>https://www.abc.net.au/news/2026-01-21/trump-supreme-court-cases-breakdown/106249160</link>
+      <guid>204d8408bab6913672663f8f59c38658</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>ABC News (AU)</source>
+      <description><![CDATA[<a href="https://www.abc.net.au/news/2026-01-21/trump-supreme-court-cases-breakdown/106249160" target="_blank">A year into Trump's second term, the Supreme Court's docket is full of legal challenges</a> <font color="#6f6f6f">ABC News (AU)</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Rochester Police backpedal on controversial William Lewinski training [DIRECT]]]></title>
-      <link>https://news.google.com/rss/articles/CBMi4AFBVV95cUxPUEpVRFJhVjBpT2pockxnNTZ5cGlxWktpQWtvSnlUdWlqY1Itdmhzd1d1OHNRQ1NCUk1sN2o3ZUQxS3pZRm55LUprRkV6Q3J2WXZINjNhRUVEMWs5V1N0alFDeG15TXBaS0s1WmJOd3lvR0xuYW1wNE1uNVp6dFpTVVlJRkZSOFI0cUlvREtnZU92eTk1dkxEWTdYbjA5UDZHaXpYMGw5N1ZCel9QeXBfWWVpaDdkcVJKQlU5X2pyeVNOSVJ4VHFkTFd5RGxpT0lPVG9BaGZZM2ZmS1FuVXdJZg?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMi4AFBVV95cUxPUEpVRFJhVjBpT2pockxnNTZ5cGlxWktpQWtvSnlUdWlqY1Itdmhzd1d1OHNRQ1NCUk1sN2o3ZUQxS3pZRm55LUprRkV6Q3J2WXZINjNhRUVEMWs5V1N0alFDeG15TXBaS0s1WmJOd3lvR0xuYW1wNE1uNVp6dFpTVVlJRkZSOFI0cUlvREtnZU92eTk1dkxEWTdYbjA5UDZHaXpYMGw5N1ZCel9QeXBfWWVpaDdkcVJKQlU5X2pyeVNOSVJ4VHFkTFd5RGxpT0lPVG9BaGZZM2ZmS1FuVXdJZg?oc=5</guid>
-      <pubDate>2017-09-06</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxPUEpVRFJhVjBpT2pockxnNTZ5cGlxWktpQWtvSnlUdWlqY1Itdmhzd1d1OHNRQ1NCUk1sN2o3ZUQxS3pZRm55LUprRkV6Q3J2WXZINjNhRUVEMWs5V1N0alFDeG15TXBaS0s1WmJOd3lvR0xuYW1wNE1uNVp6dFpTVVlJRkZSOFI0cUlvREtnZU92eTk1dkxEWTdYbjA5UDZHaXpYMGw5N1ZCel9QeXBfWWVpaDdkcVJKQlU5X2pyeVNOSVJ4VHFkTFd5RGxpT0lPVG9BaGZZM2ZmS1FuVXdJZg?oc=5" target="_blank">Rochester Police backpedal on controversial William Lewinski training</a> <font color="#6f6f6f">Democrat and Chronicle</font>]]></description>
-      <source>Democrat and Chronicle</source>
-      <category>DIRECT</category>
+      <title><![CDATA[Armed militias fire heavy machine guns through Tehran streets in deadly night attacks]]></title>
+      <link>https://www.foxnews.com/world/armed-militias-fire-heavy-machine-guns-tehran-streets-deadly-night-attacks</link>
+      <guid>f67767d49b6394b8b544ec6f2ac4ff36</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Fox News</source>
+      <description><![CDATA[<a href="https://www.foxnews.com/world/armed-militias-fire-heavy-machine-guns-tehran-streets-deadly-night-attacks" target="_blank">Armed militias fire heavy machine guns through Tehran streets in deadly night attacks</a> <font color="#6f6f6f">Fox News</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Anthony Heffernan's family 'outraged' to learn use of force expert connected to controversial institute [DIRECT]]]></title>
-      <link>https://www.cbc.ca/news/canada/calgary/anthony-heffernan-asirt-use-force-expert-chris-lawrence-force-science-1.3736083</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/calgary/anthony-heffernan-asirt-use-force-expert-chris-lawrence-force-science-1.3736083</guid>
-      <pubDate>2016-08-26</pubDate>
-      <description><![CDATA[Family of man shot by Calgary police outraged after learning the use-of-force expert reviewing the case trained at Force Science Institute.]]></description>
-      <source>CBC News</source>
-      <category>DIRECT</category>
+      <title><![CDATA[Minnesota teacher insults student’s intelligence during ugly classroom clash over Renee Good’s death: video]]></title>
+      <link>https://nypost.com/2026/01/20/us-news/minnesota-teacher-insults-student-in-classroom-clash-over-renee-goods-death-video/</link>
+      <guid>39ae5404db561e195770bf7cdad549f1</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>New York Post</source>
+      <description><![CDATA[<a href="https://nypost.com/2026/01/20/us-news/minnesota-teacher-insults-student-in-classroom-clash-over-renee-goods-death-video/" target="_blank">Minnesota teacher insults student’s intelligence during ugly classroom clash over Renee Good’s death: video</a> <font color="#6f6f6f">New York Post</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Psychology professor William Lewinski under fire over 'pseudoscience' [DIRECT]]]></title>
-      <link>https://www.news.com.au/lifestyle/real-life/news-life/psychology-professor-william-lewinski-under-fire-over-pseudoscience/news-story/df914ee370a6408c05a4617432baac67</link>
-      <guid isPermaLink="true">https://www.news.com.au/lifestyle/real-life/news-life/psychology-professor-william-lewinski-under-fire-over-pseudoscience/news-story/df914ee370a6408c05a4617432baac67</guid>
-      <pubDate>2015-08-04</pubDate>
-      <description><![CDATA[William Lewinski, founder of Force Science Institute, faces criticism from scientists who call his methodology pseudoscience used to defend police shootings.]]></description>
-      <source>News.com.au</source>
-      <category>DIRECT</category>
+      <title><![CDATA[Ex-NFL reporter launches GOP Senate bid, reveals how she will flip script on state's 'crisis of leadership']]></title>
+      <link>https://www.foxnews.com/politics/ex-nfl-reporter-launches-gop-senate-bid-reveals-how-she-will-flip-script-crisis-leadership</link>
+      <guid>529adb015a0ca395f90834fc23662a9d</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Fox News</source>
+      <description><![CDATA[<a href="https://www.foxnews.com/politics/ex-nfl-reporter-launches-gop-senate-bid-reveals-how-she-will-flip-script-crisis-leadership" target="_blank">Ex-NFL reporter launches GOP Senate bid, reveals how she will flip script on state's 'crisis of leadership'</a> <font color="#6f6f6f">Fox News</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Meet the Man Helping Police Officers Get Away with Shootings [DIRECT]]]></title>
-      <link>https://reason.com/2015/08/03/meet-the-man-helping-police-officers-get/</link>
-      <guid isPermaLink="true">https://reason.com/2015/08/03/meet-the-man-helping-police-officers-get/</guid>
-      <pubDate>2015-08-03</pubDate>
-      <description><![CDATA[Bill Lewinski and his Force Science Institute provide expert testimony that helps police officers avoid accountability for shootings.]]></description>
-      <source>Reason</source>
-      <category>DIRECT</category>
+      <title><![CDATA[Why your electric vehicle and its data could be a target for cyberattacks]]></title>
+      <link>https://timesofindia.indiatimes.com/auto/electric-vehicles/why-your-electric-vehicle-and-its-data-could-be-a-target-for-cyberattacks/articleshow/126976031.cms</link>
+      <guid>1d9586f6fbadd3c28654352a0ba7c9a1</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>The Times of India</source>
+      <description><![CDATA[<a href="https://timesofindia.indiatimes.com/auto/electric-vehicles/why-your-electric-vehicle-and-its-data-could-be-a-target-for-cyberattacks/articleshow/126976031.cms" target="_blank">Why your electric vehicle and its data could be a target for cyberattacks</a> <font color="#6f6f6f">The Times of India</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Officer training by institute fosters fear, critics say [DIRECT]]]></title>
-      <link>https://enewspaper.latimes.com/infinity/article_share.aspx?guid=06ba65cc-b364-438a-bf2f-0cb9dd35fc3d</link>
-      <guid isPermaLink="true">https://enewspaper.latimes.com/infinity/article_share.aspx?guid=06ba65cc-b364-438a-bf2f-0cb9dd35fc3d</guid>
-      <pubDate>2015-08-02</pubDate>
-      <description><![CDATA[Critics say Force Science Institute's officer training programs foster fear and provide scientific cover for police shootings.]]></description>
-      <source>Los Angeles Times</source>
-      <category>DIRECT</category>
+      <title><![CDATA[How ICE Became Trump’s Very Own Paramilitary Force]]></title>
+      <link>https://www.motherjones.com/politics/2026/01/radley-balko-trump-ice-paramilitary-immigration-militarization-police/</link>
+      <guid>dab35fc5478bff32e6cc925d901ac868</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Mother Jones</source>
+      <description><![CDATA[<a href="https://www.motherjones.com/politics/2026/01/radley-balko-trump-ice-paramilitary-immigration-militarization-police/" target="_blank">How ICE Became Trump’s Very Own Paramilitary Force</a> <font color="#6f6f6f">Mother Jones</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Defense Witness In Oscar Grant Killing Contacted By Tulsa Deputy's Lawyers In Shooting Death Caught On Camera [DIRECT]]]></title>
-      <link>https://www.cbsnews.com/sanfrancisco/news/defense-witness-in-oscar-grant-killing-contacted-by-tulsa-deputys-lawyers-in-shooting-death-caught-on-camera/</link>
-      <guid isPermaLink="true">https://www.cbsnews.com/sanfrancisco/news/defense-witness-in-oscar-grant-killing-contacted-by-tulsa-deputys-lawyers-in-shooting-death-caught-on-camera/</guid>
-      <pubDate>2015-04-14</pubDate>
-      <description><![CDATA[Bill Lewinski, who testified as an expert witness in the Oscar Grant killing case, was contacted by lawyers defending the Tulsa deputy in a shooting death caught on camera.]]></description>
-      <source>CBS News SF</source>
-      <category>DIRECT</category>
+      <title><![CDATA[The Minneapolis Faith Community Is Showing How to Fight ICE]]></title>
+      <link>https://newrepublic.com/article/205446/minneapolis-faith-leaders-response-ice</link>
+      <guid>02772986170a453c7bd07aabd2081c83</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>The New Republic</source>
+      <description><![CDATA[<a href="https://newrepublic.com/article/205446/minneapolis-faith-leaders-response-ice" target="_blank">The Minneapolis Faith Community Is Showing How to Fight ICE</a> <font color="#6f6f6f">The New Republic</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Controversial 'use of force' expert may testify in Tulsa reserve deputy case [DIRECT]]]></title>
-      <link>https://www.readfrontier.org/stories/controversial-use-of-force-expert-may-testify-in-tulsa-reserve-deputy-case/</link>
-      <guid isPermaLink="true">https://www.readfrontier.org/stories/controversial-use-of-force-expert-may-testify-in-tulsa-reserve-deputy-case/</guid>
-      <pubDate>2015-03-14</pubDate>
-      <description><![CDATA[Bill Lewinski, controversial use-of-force expert from Force Science Institute, may testify in Tulsa reserve deputy shooting case.]]></description>
-      <source>The Frontier</source>
-      <category>DIRECT</category>
+      <title><![CDATA[‘You’ll find out’: Key takeaways from Trump’s one-year anniversary remarks]]></title>
+      <link>https://www.aljazeera.com/news/2026/1/21/youll-find-out-key-takeaways-from-trumps-one-year-anniversary-remarks</link>
+      <guid>353023986d5e0622d4f4b77cbd659d00</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Al Jazeera English</source>
+      <description><![CDATA[<a href="https://www.aljazeera.com/news/2026/1/21/youll-find-out-key-takeaways-from-trumps-one-year-anniversary-remarks" target="_blank">‘You’ll find out’: Key takeaways from Trump’s one-year anniversary remarks</a> <font color="#6f6f6f">Al Jazeera English</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Canada Warned About Controversial Police Shooting Expert [DIRECT]]]></title>
-      <link>https://www.cbc.ca/news/canada/edmonton/canada-warned-about-controversial-police-shooting-expert-1.1374682</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/edmonton/canada-warned-about-controversial-police-shooting-expert-1.1374682</guid>
-      <pubDate>2013-04-04</pubDate>
-      <description><![CDATA[Canadian authorities warned about Bill Lewinski, the controversial police shooting expert from Force Science Institute, whose testimony has been challenged in U.S. courts.]]></description>
-      <source>CBC News</source>
-      <category>DIRECT</category>
+      <title><![CDATA[DHS says ICE agents rammed by vehicles amid Minneapolis enforcement surge: 'Aggressively assaulted']]></title>
+      <link>https://www.foxnews.com/politics/dhs-says-ice-agents-rammed-vehicles-amid-minneapolis-enforcement-surge-aggressively-assaulted</link>
+      <guid>07f91992cdf366f47141a1c1a0a62e59</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Fox News</source>
+      <description><![CDATA[<a href="https://www.foxnews.com/politics/dhs-says-ice-agents-rammed-vehicles-amid-minneapolis-enforcement-surge-aggressively-assaulted" target="_blank">DHS says ICE agents rammed by vehicles amid Minneapolis enforcement surge: 'Aggressively assaulted'</a> <font color="#6f6f6f">Fox News</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Minnesota company target of police-training criticism [DIRECT]]]></title>
-      <link>https://www.minnpost.com/glean/2020/06/minnesota-company-target-of-police-training-criticism/</link>
-      <guid isPermaLink="true">https://www.minnpost.com/glean/2020/06/minnesota-company-target-of-police-training-criticism/</guid>
-      <pubDate>2020-06-22</pubDate>
-      <description><![CDATA[Force Science Institute, a Minnesota-based company, faces criticism for its police training programs following George Floyd protests.]]></description>
-      <source>MinnPost</source>
-      <category>DIRECT</category>
+      <title><![CDATA[How Far Do China’s Ambitions Reach?]]></title>
+      <link>http://foreignpolicy.com/2026/01/21/china-united-states-trump-foreign-policy-competition/</link>
+      <guid>36a45f1b7d31dbc8884496b689bec791</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Foreign Policy</source>
+      <description><![CDATA[<a href="http://foreignpolicy.com/2026/01/21/china-united-states-trump-foreign-policy-competition/" target="_blank">How Far Do China’s Ambitions Reach?</a> <font color="#6f6f6f">Foreign Policy</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Police training programs have a pseudoscience problem [DIRECT]]]></title>
-      <link>https://www.businessinsider.com/police-training-programs-have-a-pseudoscience-problem-experts-say-2020-6</link>
-      <guid isPermaLink="true">https://www.businessinsider.com/police-training-programs-have-a-pseudoscience-problem-experts-say-2020-6</guid>
-      <pubDate>2020-06-17</pubDate>
-      <description><![CDATA[Experts say police training programs rely on pseudoscience, including Force Science Institute's controversial claims about officer perception and reaction time.]]></description>
-      <source>Business Insider</source>
-      <category>DIRECT</category>
+      <title><![CDATA[IAF’s two-seater microlite aircraft meets with accident in UP's Prayagraj, crew safe]]></title>
+      <link>https://www.thehindubusinessline.com/news/national/iafs-two-seater-microlite-aircraft-meets-with-accident-in-ups-prayagraj-crew-safe/article70532800.ece</link>
+      <guid>adbb4d27c2d502a8ad071126aa4bfd54</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>BusinessLine</source>
+      <description><![CDATA[<a href="https://www.thehindubusinessline.com/news/national/iafs-two-seater-microlite-aircraft-meets-with-accident-in-ups-prayagraj-crew-safe/article70532800.ece" target="_blank">IAF’s two-seater microlite aircraft meets with accident in UP's Prayagraj, crew safe</a> <font color="#6f6f6f">BusinessLine</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Ohio State cancels 'force science' training after community criticism [DIRECT]]]></title>
-      <link>https://www.thelantern.com/2020/02/ohio-state-cancels-force-science-training-after-community-criticism/</link>
-      <guid isPermaLink="true">https://www.thelantern.com/2020/02/ohio-state-cancels-force-science-training-after-community-criticism/</guid>
-      <pubDate>2020-02-25</pubDate>
-      <description><![CDATA[Ohio State University cancelled a Force Science training session for police after community criticism of the controversial institute's methodology.]]></description>
-      <source>The Lantern</source>
-      <category>DIRECT</category>
+      <title><![CDATA[Actor who's appeared in Crimewatch and Triple Nine retires after 20 years as volunteer police officer]]></title>
+      <link>https://cnalifestyle.channelnewsasia.com/entertainment/singapore-actor-gary-lee-wei-volunteer-police-officer-576756</link>
+      <guid>dc714fd6386e0da973deb72338622f1a</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>CNA</source>
+      <description><![CDATA[<a href="https://cnalifestyle.channelnewsasia.com/entertainment/singapore-actor-gary-lee-wei-volunteer-police-officer-576756" target="_blank">Actor who's appeared in Crimewatch and Triple Nine retires after 20 years as volunteer police officer</a> <font color="#6f6f6f">CNA</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Portland Police Bureau’s contract with Minnesota-based Force Science to train instructors draws concerns]]></title>
-      <link>https://news.google.com/rss/articles/CBMi6AFBVV95cUxPNVBMTVl0MWhreTBEM0hMUGZDY2NZazktakJyckp0dEVsRDlFb0NSZjVDZjV6WGRDX3Z0VjNzYk5YTlJ4azlDR1BDcjZEY1k3RDUzaVFZUnc1MWstMFpjMDdmM1FqSDV3d1l6RVFiYzJEZ3BlekJuYjNMTUpwZ0FXNUtqTEtDVnZmQ1k1bUtsOTB6TW5GVm5hUFdUcTZ0azh3a2pWbGJZSkxJeXNHWUdaMmRPSnluNUpwR3YzYXd4QWtTUk5Ec05GSG5jNzdCS2FHcWVYOU0xX0I2a2pDNUFSdHBKdVRhNEdS0gH8AUFVX3lxTE9fbFN3dk1ZZFRzZE5paXdvZWt1Uzd1aW9Pamdudnd3ZTVidUVMazdlRldmRmYzbHNkMjlwU3dhOVVYaml1VTBkUFhVaVdKbXVPVGJRQmlNeVB5bE9TcTZrdy1vWDFQaC1Ra1dMZ3pCRHpKd1RHVHBtQmhVZTZHdFVza2M1SkpXUGFqM013VW5tajJiWURqb2txM2tuN1JKOXJITkEtV24tWnRmOFdvUjliZmRVblZmQ0c5WkpDZGdqNmw3R2VKSDFYZGxCanpLRUwzM3M2YzhCOHdhYVZFTlBlRjRTLWYybnBvRldYWVEydVh5TWczMDRhVUxDTw?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMi6AFBVV95cUxPNVBMTVl0MWhreTBEM0hMUGZDY2NZazktakJyckp0dEVsRDlFb0NSZjVDZjV6WGRDX3Z0VjNzYk5YTlJ4azlDR1BDcjZEY1k3RDUzaVFZUnc1MWstMFpjMDdmM1FqSDV3d1l6RVFiYzJEZ3BlekJuYjNMTUpwZ0FXNUtqTEtDVnZmQ1k1bUtsOTB6TW5GVm5hUFdUcTZ0azh3a2pWbGJZSkxJeXNHWUdaMmRPSnluNUpwR3YzYXd4QWtTUk5Ec05GSG5jNzdCS2FHcWVYOU0xX0I2a2pDNUFSdHBKdVRhNEdS0gH8AUFVX3lxTE9fbFN3dk1ZZFRzZE5paXdvZWt1Uzd1aW9Pamdudnd3ZTVidUVMazdlRldmRmYzbHNkMjlwU3dhOVVYaml1VTBkUFhVaVdKbXVPVGJRQmlNeVB5bE9TcTZrdy1vWDFQaC1Ra1dMZ3pCRHpKd1RHVHBtQmhVZTZHdFVza2M1SkpXUGFqM013VW5tajJiWURqb2txM2tuN1JKOXJITkEtV24tWnRmOFdvUjliZmRVblZmQ0c5WkpDZGdqNmw3R2VKSDFYZGxCanpLRUwzM3M2YzhCOHdhYVZFTlBlRjRTLWYybnBvRldYWVEydVh5TWczMDRhVUxDTw?oc=5</guid>
-      <pubDate>2023-08-16</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxPNVBMTVl0MWhreTBEM0hMUGZDY2NZazktakJyckp0dEVsRDlFb0NSZjVDZjV6WGRDX3Z0VjNzYk5YTlJ4azlDR1BDcjZEY1k3RDUzaVFZUnc1MWstMFpjMDdmM1FqSDV3d1l6RVFiYzJEZ3BlekJuYjNMTUpwZ0FXNUtqTEtDVnZmQ1k1bUtsOTB6TW5GVm5hUFdUcTZ0azh3a2pWbGJZSkxJeXNHWUdaMmRPSnluNUpwR3YzYXd4QWtTUk5Ec05GSG5jNzdCS2FHcWVYOU0xX0I2a2pDNUFSdHBKdVRhNEdS0gH8AUFVX3lxTE9fbFN3dk1ZZFRzZE5paXdvZWt1Uzd1aW9Pamdudnd3ZTVidUVMazdlRldmRmYzbHNkMjlwU3dhOVVYaml1VTBkUFhVaVdKbXVPVGJRQmlNeVB5bE9TcTZrdy1vWDFQaC1Ra1dMZ3pCRHpKd1RHVHBtQmhVZTZHdFVza2M1SkpXUGFqM013VW5tajJiWURqb2txM2tuN1JKOXJITkEtV24tWnRmOFdvUjliZmRVblZmQ0c5WkpDZGdqNmw3R2VKSDFYZGxCanpLRUwzM3M2YzhCOHdhYVZFTlBlRjRTLWYybnBvRldYWVEydVh5TWczMDRhVUxDTw?oc=5" target="_blank">Portland Police Bureau’s contract with Minnesota-based Force Science to train instructors draws concerns</a> <font color="#6f6f6f">OregonLive.com</font>]]></description>
-      <source>OregonLive.com</source>
-      <category>None</category>
+      <title><![CDATA[Rumen Radev, the ex-president vowing to end Bulgaria's political crisis]]></title>
+      <link>https://www.yahoo.com/news/articles/rumen-radev-ex-president-vowing-070126852.html</link>
+      <guid>7e485d5cb3caafe0672b8326396e44f9</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Yahoo Entertainment</source>
+      <description><![CDATA[<a href="https://www.yahoo.com/news/articles/rumen-radev-ex-president-vowing-070126852.html" target="_blank">Rumen Radev, the ex-president vowing to end Bulgaria's political crisis</a> <font color="#6f6f6f">Yahoo Entertainment</font>]]></description>
     </item>
     <item>
-      <title><![CDATA['Force Science Institute' hosts controversial use of force training in Westlake for police across Ohio]]></title>
-      <link>https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTy1uR1NYclVSSENQQUtheWotR1FndW1YRHd1ODZTTVN2YnM2bE4ydmpqUlRpWVRkbk9nS0xIZFZUeE5IdUo5WEM4ZzF3elBZSzBCS0czUHFLdzFIczRSN0lpXzZlZlI0R0c4Rkp1Z3BQR3RVZ1VLY0NkckJtVHFLSExnTjNGNzVtVk9rR1FyM2YxRmlNREhycE5GdUhmcXplalhpa0hZTUdvYUJHRnJyYVBJdU9OWjBKTEFCTFcyVEdVUUNaNnctNkMyc1hIMDJJ?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTy1uR1NYclVSSENQQUtheWotR1FndW1YRHd1ODZTTVN2YnM2bE4ydmpqUlRpWVRkbk9nS0xIZFZUeE5IdUo5WEM4ZzF3elBZSzBCS0czUHFLdzFIczRSN0lpXzZlZlI0R0c4Rkp1Z3BQR3RVZ1VLY0NkckJtVHFLSExnTjNGNzVtVk9rR1FyM2YxRmlNREhycE5GdUhmcXplalhpa0hZTUdvYUJHRnJyYVBJdU9OWjBKTEFCTFcyVEdVUUNaNnctNkMyc1hIMDJJ?oc=5</guid>
-      <pubDate>2022-04-26</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTy1uR1NYclVSSENQQUtheWotR1FndW1YRHd1ODZTTVN2YnM2bE4ydmpqUlRpWVRkbk9nS0xIZFZUeE5IdUo5WEM4ZzF3elBZSzBCS0czUHFLdzFIczRSN0lpXzZlZlI0R0c4Rkp1Z3BQR3RVZ1VLY0NkckJtVHFLSExnTjNGNzVtVk9rR1FyM2YxRmlNREhycE5GdUhmcXplalhpa0hZTUdvYUJHRnJyYVBJdU9OWjBKTEFCTFcyVEdVUUNaNnctNkMyc1hIMDJJ?oc=5" target="_blank">'Force Science Institute' hosts controversial use of force training in Westlake for police across Ohio</a> <font color="#6f6f6f">News 5 Cleveland WEWS</font>]]></description>
-      <source>News 5 Cleveland WEWS</source>
-      <category>None</category>
+      <title><![CDATA[Being “Peaceful” and “Law-Abiding” Will Not Stop Authoritarianism : A Message from Germany]]></title>
+      <link>https://crimethinc.com/2026/01/21/being-peaceful-and-law-abiding-will-not-stop-authoritarianism-a-message-from-germany</link>
+      <guid>5bd13d39a0c5ad19151ded61c715d78d</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Crimethinc.com</source>
+      <description><![CDATA[<a href="https://crimethinc.com/2026/01/21/being-peaceful-and-law-abiding-will-not-stop-authoritarianism-a-message-from-germany" target="_blank">Being “Peaceful” and “Law-Abiding” Will Not Stop Authoritarianism : A Message from Germany</a> <font color="#6f6f6f">Crimethinc.com</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Judge rejects El Paso police trainer as expert witness in deadly force lawsuit, cites ‘flawed methodology’]]></title>
-      <link>https://news.google.com/rss/articles/CBMi2AFBVV95cUxPX2l0bzNOWTY4cUl2MFdfWnRhNzgwcmVoS3M1dzhfQ0NRRmlSUERtUWZYSEx6ZHY4MzVJQ1dqNXZ6QXRfNDU5TWVONTlBNGZoNDd3TEV6eXNvYUNmS1FLWVZNQ2Y0X2txUENicndlWGhiN3dWZkwzYmVrbmNucWptWkVKdHRHWmNTWFpvRGZUcFg5RUJxa1NXRnBTdWM5dXVFQXdOZ3doSFJMT2tlMnhKa25LOVM1S2VBUGZUOEh6ZkZMX2JGVUpIMHp5ZGNsNzU3amtERXNtQlU?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMi2AFBVV95cUxPX2l0bzNOWTY4cUl2MFdfWnRhNzgwcmVoS3M1dzhfQ0NRRmlSUERtUWZYSEx6ZHY4MzVJQ1dqNXZ6QXRfNDU5TWVONTlBNGZoNDd3TEV6eXNvYUNmS1FLWVZNQ2Y0X2txUENicndlWGhiN3dWZkwzYmVrbmNucWptWkVKdHRHWmNTWFpvRGZUcFg5RUJxa1NXRnBTdWM5dXVFQXdOZ3doSFJMT2tlMnhKa25LOVM1S2VBUGZUOEh6ZkZMX2JGVUpIMHp5ZGNsNzU3amtERXNtQlU?oc=5</guid>
-      <pubDate>2021-09-29</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxPX2l0bzNOWTY4cUl2MFdfWnRhNzgwcmVoS3M1dzhfQ0NRRmlSUERtUWZYSEx6ZHY4MzVJQ1dqNXZ6QXRfNDU5TWVONTlBNGZoNDd3TEV6eXNvYUNmS1FLWVZNQ2Y0X2txUENicndlWGhiN3dWZkwzYmVrbmNucWptWkVKdHRHWmNTWFpvRGZUcFg5RUJxa1NXRnBTdWM5dXVFQXdOZ3doSFJMT2tlMnhKa25LOVM1S2VBUGZUOEh6ZkZMX2JGVUpIMHp5ZGNsNzU3amtERXNtQlU?oc=5" target="_blank">Judge rejects El Paso police trainer as expert witness in deadly force lawsuit, cites ‘flawed methodology’</a> <font color="#6f6f6f">El Paso Matters</font>]]></description>
-      <source>El Paso Matters</source>
-      <category>None</category>
+      <title><![CDATA[Greenland should be prepared for 'everything,' prime minister says, not ruling out U.S. military action]]></title>
+      <link>https://www.cnbc.com/2026/01/21/greenland-us-trump-military-takeover-nato.html</link>
+      <guid>159f188326d448da723020421fcdcd98</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>CNBC</source>
+      <description><![CDATA[<a href="https://www.cnbc.com/2026/01/21/greenland-us-trump-military-takeover-nato.html" target="_blank">Greenland should be prepared for 'everything,' prime minister says, not ruling out U.S. military action</a> <font color="#6f6f6f">CNBC</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Ohio State Cancels Police 'Force Science' Training Session After Backlash]]></title>
-      <link>https://news.google.com/rss/articles/CBMirAFBVV95cUxOdWFUQklGRWg5UnZkWE1UaWg3YlJMUGNRbk9xaWEyWmg3VlFUVFpGX3JLemZtcDlRMHBGRzkxYnBuUjYzZVZIeEtSbVRudDU4bS1BV0Y1U3NzR2NFbjVDclBjMmNGVjhqUEkya1BzR3lwRVpvc1ZDT1FCdFpaY0NjUk5yMXVfVGJkVFF6b3pHUC14RDJvbU5PRUU0bjJhOTh5aVk5U2ItekFGZWl0?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMirAFBVV95cUxOdWFUQklGRWg5UnZkWE1UaWg3YlJMUGNRbk9xaWEyWmg3VlFUVFpGX3JLemZtcDlRMHBGRzkxYnBuUjYzZVZIeEtSbVRudDU4bS1BV0Y1U3NzR2NFbjVDclBjMmNGVjhqUEkya1BzR3lwRVpvc1ZDT1FCdFpaY0NjUk5yMXVfVGJkVFF6b3pHUC14RDJvbU5PRUU0bjJhOTh5aVk5U2ItekFGZWl0?oc=5</guid>
-      <pubDate>2020-02-25</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxOdWFUQklGRWg5UnZkWE1UaWg3YlJMUGNRbk9xaWEyWmg3VlFUVFpGX3JLemZtcDlRMHBGRzkxYnBuUjYzZVZIeEtSbVRudDU4bS1BV0Y1U3NzR2NFbjVDclBjMmNGVjhqUEkya1BzR3lwRVpvc1ZDT1FCdFpaY0NjUk5yMXVfVGJkVFF6b3pHUC14RDJvbU5PRUU0bjJhOTh5aVk5U2ItekFGZWl0?oc=5" target="_blank">Ohio State Cancels Police 'Force Science' Training Session After Backlash</a> <font color="#6f6f6f">WOSU Public Media</font>]]></description>
-      <source>WOSU Public Media</source>
-      <category>None</category>
+      <title><![CDATA[Trump wants to send troops into Mexico. The land grab of the Mexican-American War makes this ‘politically untenable’]]></title>
+      <link>https://theconversation.com/trump-wants-to-send-troops-into-mexico-the-land-grab-of-the-mexican-american-war-makes-this-politically-untenable-273767</link>
+      <guid>ce0ad685383d46df83980726b642f171</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>The Conversation Africa</source>
+      <description><![CDATA[<a href="https://theconversation.com/trump-wants-to-send-troops-into-mexico-the-land-grab-of-the-mexican-american-war-makes-this-politically-untenable-273767" target="_blank">Trump wants to send troops into Mexico. The land grab of the Mexican-American War makes this ‘politically untenable’</a> <font color="#6f6f6f">The Conversation Africa</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[5 tips from Force Science on de-escalation tactics]]></title>
-      <link>https://news.google.com/rss/articles/CBMiygFBVV95cUxOYmQtTDBKbHYzUFY4eXRoUWw1STZ5N21DZE9kaDNXYlk0YnFVVWZDWTdqUDM5NXRHdkZSallsR3duZkl1UVFfcWgzc0ZkVUhoUzREX0hKNDJDTHRNS3c0Mkdjckk4M1JsY3R5eW9ybW0tckE4SXRRQVpzSE4wMUx5NXN3YjdqTFljWGcxNTVuNkFkNldKNElKZFBfLXlMaVo2dGhFbmFnai1GR0ZLcFJNT2VaV0NNTEl0aUQtZmhPaFdqWkpTcDloQUN3?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMiygFBVV95cUxOYmQtTDBKbHYzUFY4eXRoUWw1STZ5N21DZE9kaDNXYlk0YnFVVWZDWTdqUDM5NXRHdkZSallsR3duZkl1UVFfcWgzc0ZkVUhoUzREX0hKNDJDTHRNS3c0Mkdjckk4M1JsY3R5eW9ybW0tckE4SXRRQVpzSE4wMUx5NXN3YjdqTFljWGcxNTVuNkFkNldKNElKZFBfLXlMaVo2dGhFbmFnai1GR0ZLcFJNT2VaV0NNTEl0aUQtZmhPaFdqWkpTcDloQUN3?oc=5</guid>
-      <pubDate>2017-11-08</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxOYmQtTDBKbHYzUFY4eXRoUWw1STZ5N21DZE9kaDNXYlk0YnFVVWZDWTdqUDM5NXRHdkZSallsR3duZkl1UVFfcWgzc0ZkVUhoUzREX0hKNDJDTHRNS3c0Mkdjckk4M1JsY3R5eW9ybW0tckE4SXRRQVpzSE4wMUx5NXN3YjdqTFljWGcxNTVuNkFkNldKNElKZFBfLXlMaVo2dGhFbmFnai1GR0ZLcFJNT2VaV0NNTEl0aUQtZmhPaFdqWkpTcDloQUN3?oc=5" target="_blank">5 tips from Force Science on de-escalation tactics</a> <font color="#6f6f6f">Police1</font>]]></description>
-      <source>Police1</source>
-      <category>None</category>
+      <title><![CDATA[Here’s What Jim Jordan And Congressional Republicans Need To Ask Jack Smith On Thursday]]></title>
+      <link>https://thefederalist.com/2026/01/21/heres-what-jim-jordan-and-congressional-republicans-need-to-ask-jack-smith-on-thursday/</link>
+      <guid>c0f9e4310558cce60aa666e4f319e320</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>The Federalist</source>
+      <description><![CDATA[<a href="https://thefederalist.com/2026/01/21/heres-what-jim-jordan-and-congressional-republicans-need-to-ask-jack-smith-on-thursday/" target="_blank">Here’s What Jim Jordan And Congressional Republicans Need To Ask Jack Smith On Thursday</a> <font color="#6f6f6f">The Federalist</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Getting civilian oversight? Get them Force Science Certified]]></title>
-      <link>https://news.google.com/rss/articles/CBMixAFBVV95cUxPejJaUmZNSEtLenh4bFBuU3ZZTThkRnhPZFBwTmhFVGV6NzFnV2dQV3M2SXhJVTdKMjJLbmEwTGpacEh0V0Zod2RZbExfQklMd2YwS1J3alZFUXlRaWhORm01ckx0NXJnektOM3luRW9LNzlfWnFPcUNPSDFQZEh1bm5IZGVIS0h1cEpEOFNnRmlHQXgxUzRYVnFfOFJOZGp6SkRlUjNKeThQRmhyRlJiMGpLMXBudHVzd2lrSTI3dDY4bk1M?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMixAFBVV95cUxPejJaUmZNSEtLenh4bFBuU3ZZTThkRnhPZFBwTmhFVGV6NzFnV2dQV3M2SXhJVTdKMjJLbmEwTGpacEh0V0Zod2RZbExfQklMd2YwS1J3alZFUXlRaWhORm01ckx0NXJnektOM3luRW9LNzlfWnFPcUNPSDFQZEh1bm5IZGVIS0h1cEpEOFNnRmlHQXgxUzRYVnFfOFJOZGp6SkRlUjNKeThQRmhyRlJiMGpLMXBudHVzd2lrSTI3dDY4bk1M?oc=5</guid>
-      <pubDate>2015-05-29</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPejJaUmZNSEtLenh4bFBuU3ZZTThkRnhPZFBwTmhFVGV6NzFnV2dQV3M2SXhJVTdKMjJLbmEwTGpacEh0V0Zod2RZbExfQklMd2YwS1J3alZFUXlRaWhORm01ckx0NXJnektOM3luRW9LNzlfWnFPcUNPSDFQZEh1bm5IZGVIS0h1cEpEOFNnRmlHQXgxUzRYVnFfOFJOZGp6SkRlUjNKeThQRmhyRlJiMGpLMXBudHVzd2lrSTI3dDY4bk1M?oc=5" target="_blank">Getting civilian oversight? Get them Force Science Certified</a> <font color="#6f6f6f">Police1</font>]]></description>
-      <source>Police1</source>
-      <category>None</category>
+      <title><![CDATA[Trump arrives in Switzerland, but his quest to possess Greenland threatens to overshadow other priorities]]></title>
+      <link>https://economictimes.indiatimes.com/news/international/global-trends/trump-arrives-in-switzerland-but-his-quest-to-possess-greenland-threatens-to-overshadow-other-priorities/articleshow/126980815.cms</link>
+      <guid>d6c6ca28a299bfe1f115e27be0dc3e17</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>The Times of India</source>
+      <description><![CDATA[<a href="https://economictimes.indiatimes.com/news/international/global-trends/trump-arrives-in-switzerland-but-his-quest-to-possess-greenland-threatens-to-overshadow-other-priorities/articleshow/126980815.cms" target="_blank">Trump arrives in Switzerland, but his quest to possess Greenland threatens to overshadow other priorities</a> <font color="#6f6f6f">The Times of India</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Force Science: Can an Armed Suspect Holding an AR-15 in a "Non-Threatening" Position Outshoot an Officer with His Gun Drawn?]]></title>
-      <link>https://news.google.com/rss/articles/CBMi6wFBVV95cUxQeDZGTjA0QWRKR3NrOFp2ejR0SFRvMHF3bS1YYUtyRFBUZ3BrOVhTcUh1SWp5WnNaYUtVbjhuMWxQWV9ta3J3UGhvNmUtSWdYVm5pVVRHakstWExTNWZiMDRtY2ozTXJpSDlvZkdfaGtYVy1BbGoza3dHZWoyR3hfanF5aXFyVG40SnZkUktCM3BwSmpQSGZBLVVubU9JVF9wakZ2bWNTWkMzdk1JT1d2cWhsRThabnRwVE9hbEMtd3ljZVJHdXpLT0ROSS05UXhFU0ZaaWdMeGhnQ0RtRjh1M1MwREphM0o3WkJR?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMi6wFBVV95cUxQeDZGTjA0QWRKR3NrOFp2ejR0SFRvMHF3bS1YYUtyRFBUZ3BrOVhTcUh1SWp5WnNaYUtVbjhuMWxQWV9ta3J3UGhvNmUtSWdYVm5pVVRHakstWExTNWZiMDRtY2ozTXJpSDlvZkdfaGtYVy1BbGoza3dHZWoyR3hfanF5aXFyVG40SnZkUktCM3BwSmpQSGZBLVVubU9JVF9wakZ2bWNTWkMzdk1JT1d2cWhsRThabnRwVE9hbEMtd3ljZVJHdXpLT0ROSS05UXhFU0ZaaWdMeGhnQ0RtRjh1M1MwREphM0o3WkJR?oc=5</guid>
-      <pubDate>2015-04-09</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxQeDZGTjA0QWRKR3NrOFp2ejR0SFRvMHF3bS1YYUtyRFBUZ3BrOVhTcUh1SWp5WnNaYUtVbjhuMWxQWV9ta3J3UGhvNmUtSWdYVm5pVVRHakstWExTNWZiMDRtY2ozTXJpSDlvZkdfaGtYVy1BbGoza3dHZWoyR3hfanF5aXFyVG40SnZkUktCM3BwSmpQSGZBLVVubU9JVF9wakZ2bWNTWkMzdk1JT1d2cWhsRThabnRwVE9hbEMtd3ljZVJHdXpLT0ROSS05UXhFU0ZaaWdMeGhnQ0RtRjh1M1MwREphM0o3WkJR?oc=5" target="_blank">Force Science: Can an Armed Suspect Holding an AR-15 in a "Non-Threatening" Position Outshoot an Officer with His Gun Drawn?</a> <font color="#6f6f6f">The Truth About Guns</font>]]></description>
-      <source>The Truth About Guns</source>
-      <category>None</category>
+      <title><![CDATA[Satyajit Das: President Trump’s Spat With the Federal Reserve Is Not About Central Bank Independence]]></title>
+      <link>https://www.nakedcapitalism.com/2026/01/satyajit-das-president-trumps-spat-with-the-federal-reserve-is-not-about-central-bank-independence.html</link>
+      <guid>803ab13d677156045dc21063a45753e0</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Nakedcapitalism.com</source>
+      <description><![CDATA[<a href="https://www.nakedcapitalism.com/2026/01/satyajit-das-president-trumps-spat-with-the-federal-reserve-is-not-about-central-bank-independence.html" target="_blank">Satyajit Das: President Trump’s Spat With the Federal Reserve Is Not About Central Bank Independence</a> <font color="#6f6f6f">Nakedcapitalism.com</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[How to apply Force Science findings to policy and training]]></title>
-      <link>https://news.google.com/rss/articles/CBMiwgFBVV95cUxPXzdZSWdtSTByVTR1S2U5cGxZMFlXWDZwdTVRRVFfczRyaEc4UWE1UUZqd1UzT0tJY1I4S04xdEItdlIxYlktQUhpcEo1R3l1V2xkNEpDaW43VDlMX3N2WWE5Q2Z1Ukg2bW9VbGZURENJOUpUaUx3Y2NYOWxqcUhuQjZ1MDZPSXhQYkxfM1d0WXBLVlJZZ3VyX19ncnJoY0lLTDh6MnNCVHBBZlp6eGtjR2FoVmFfamxZd2R5SnJQbHZmdw?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMiwgFBVV95cUxPXzdZSWdtSTByVTR1S2U5cGxZMFlXWDZwdTVRRVFfczRyaEc4UWE1UUZqd1UzT0tJY1I4S04xdEItdlIxYlktQUhpcEo1R3l1V2xkNEpDaW43VDlMX3N2WWE5Q2Z1Ukg2bW9VbGZURENJOUpUaUx3Y2NYOWxqcUhuQjZ1MDZPSXhQYkxfM1d0WXBLVlJZZ3VyX19ncnJoY0lLTDh6MnNCVHBBZlp6eGtjR2FoVmFfamxZd2R5SnJQbHZmdw?oc=5</guid>
-      <pubDate>2013-10-08</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPXzdZSWdtSTByVTR1S2U5cGxZMFlXWDZwdTVRRVFfczRyaEc4UWE1UUZqd1UzT0tJY1I4S04xdEItdlIxYlktQUhpcEo1R3l1V2xkNEpDaW43VDlMX3N2WWE5Q2Z1Ukg2bW9VbGZURENJOUpUaUx3Y2NYOWxqcUhuQjZ1MDZPSXhQYkxfM1d0WXBLVlJZZ3VyX19ncnJoY0lLTDh6MnNCVHBBZlp6eGtjR2FoVmFfamxZd2R5SnJQbHZmdw?oc=5" target="_blank">How to apply Force Science findings to policy and training</a> <font color="#6f6f6f">Police1</font>]]></description>
-      <source>Police1</source>
-      <category>None</category>
+      <title><![CDATA[New lift standards for PwDs to force redesigns for India’s property, infrastructure developers]]></title>
+      <link>https://www.livemint.com/companies/new-lift-standards-people-with-disabilities-pwds-property-developers-infra-builders-accessible-india-lift-operations-11768987070005.html</link>
+      <guid>2a6a2d3ab2a6017ebac6f72d4db9d7a3</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Livemint</source>
+      <description><![CDATA[<a href="https://www.livemint.com/companies/new-lift-standards-people-with-disabilities-pwds-property-developers-infra-builders-accessible-india-lift-operations-11768987070005.html" target="_blank">New lift standards for PwDs to force redesigns for India’s property, infrastructure developers</a> <font color="#6f6f6f">Livemint</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Force Science study pinpoints vehicle stop vulnerabilities]]></title>
-      <link>https://news.google.com/rss/articles/CBMiwgFBVV95cUxPQ3pIajNyc3NWMkhEaEV6Yk50ZDIyR3hCVU55ZjR6M3NCRkEtNjU0b3VQWGNxWUc3UERsOGJXODhueTZKMFdBa0lWMlJVN3h4ZlhHWEFjQlZLRjdtdERKdVI3aThkS3lyRzZPY0ktYXJBWHpUQnNSNERmM3BKdXVQZVlJNmlvWWx2STMzUjdLeEZHSGItLUduTU9GQk1PQmxvSzBkdk5pcVJOUUo3amdXU2ZtblVwMmFBN09yYlNNSm5RZw?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMiwgFBVV95cUxPQ3pIajNyc3NWMkhEaEV6Yk50ZDIyR3hCVU55ZjR6M3NCRkEtNjU0b3VQWGNxWUc3UERsOGJXODhueTZKMFdBa0lWMlJVN3h4ZlhHWEFjQlZLRjdtdERKdVI3aThkS3lyRzZPY0ktYXJBWHpUQnNSNERmM3BKdXVQZVlJNmlvWWx2STMzUjdLeEZHSGItLUduTU9GQk1PQmxvSzBkdk5pcVJOUUo3amdXU2ZtblVwMmFBN09yYlNNSm5RZw?oc=5</guid>
-      <pubDate>2013-03-01</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPQ3pIajNyc3NWMkhEaEV6Yk50ZDIyR3hCVU55ZjR6M3NCRkEtNjU0b3VQWGNxWUc3UERsOGJXODhueTZKMFdBa0lWMlJVN3h4ZlhHWEFjQlZLRjdtdERKdVI3aThkS3lyRzZPY0ktYXJBWHpUQnNSNERmM3BKdXVQZVlJNmlvWWx2STMzUjdLeEZHSGItLUduTU9GQk1PQmxvSzBkdk5pcVJOUUo3amdXU2ZtblVwMmFBN09yYlNNSm5RZw?oc=5" target="_blank">Force Science study pinpoints vehicle stop vulnerabilities</a> <font color="#6f6f6f">Police1</font>]]></description>
-      <source>Police1</source>
-      <category>None</category>
+      <title><![CDATA[Trump is on his way to Davos, where his quest to own Greenland could overshadow his other goals]]></title>
+      <link>https://www.bostonherald.com/2026/01/21/trump-davos-world-economic-forum/</link>
+      <guid>74aa074631967d2ca74dc997432d4f7d</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Boston Herald</source>
+      <description><![CDATA[<a href="https://www.bostonherald.com/2026/01/21/trump-davos-world-economic-forum/" target="_blank">Trump is on his way to Davos, where his quest to own Greenland could overshadow his other goals</a> <font color="#6f6f6f">Boston Herald</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Hillsboro police and Force Science Institute hold traffic stop study on officer memory, safety]]></title>
-      <link>https://news.google.com/rss/articles/CBMihwFBVV95cUxQSm9ZX0VfWlNpT2ZHLUhYWlFaZnRZNU5lNXRFcGI5RGtLeklVbkFfZGN6dVdsVEcyOEJUY29kS0plVk55OWwzZDlibHFRa0JqbXlqNlp5LWtLSWJpbUV2bmRqVVFGT0lsOEhVZkE0ek9TLTJHSVJiM0JIUTFYeERubW9HNTFXU28?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMihwFBVV95cUxQSm9ZX0VfWlNpT2ZHLUhYWlFaZnRZNU5lNXRFcGI5RGtLeklVbkFfZGN6dVdsVEcyOEJUY29kS0plVk55OWwzZDlibHFRa0JqbXlqNlp5LWtLSWJpbUV2bmRqVVFGT0lsOEhVZkE0ek9TLTJHSVJiM0JIUTFYeERubW9HNTFXU28?oc=5</guid>
-      <pubDate>2012-04-10</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQSm9ZX0VfWlNpT2ZHLUhYWlFaZnRZNU5lNXRFcGI5RGtLeklVbkFfZGN6dVdsVEcyOEJUY29kS0plVk55OWwzZDlibHFRa0JqbXlqNlp5LWtLSWJpbUV2bmRqVVFGT0lsOEhVZkE0ek9TLTJHSVJiM0JIUTFYeERubW9HNTFXU28?oc=5" target="_blank">Hillsboro police and Force Science Institute hold traffic stop study on officer memory, safety</a> <font color="#6f6f6f">OregonLive.com</font>]]></description>
-      <source>OregonLive.com</source>
-      <category>None</category>
+      <title><![CDATA[The US attack on Venezuela and the collapse of international law]]></title>
+      <link>https://www.aljazeera.com/opinions/2026/1/21/the-us-attack-on-venezuela-and-the-collapse-of-international-law</link>
+      <guid>94511c7f9216119a3bb89a613e100023</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Al Jazeera English</source>
+      <description><![CDATA[<a href="https://www.aljazeera.com/opinions/2026/1/21/the-us-attack-on-venezuela-and-the-collapse-of-international-law" target="_blank">The US attack on Venezuela and the collapse of international law</a> <font color="#6f6f6f">Al Jazeera English</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Force Science explains "slips-and-capture errors"]]></title>
-      <link>https://news.google.com/rss/articles/CBMizAFBVV95cUxPOHBtcmZTRmE4ajE4dHJXZVJYU0F4ejZrME5jcG1fMTBmQV8wUHpfUC1kcGpXNjNXeTRST182ZWVxWUEtbGdSNG84Y2lRYzAwaWlKMmFCUTlKVGlQQl9ROUpta1U5anowTHRoR2lfRXJCN3lKV0pMeUpBZFh6OWhkQkZWUHVscnBJdHh1X3NGQ2VNU3BpT19ORTBkQ1FVc0N0UWZnb0FkclU4WUJFTkpYb2JDbnRkY3QzbzlvclV1WnRZeEVsMFhnaHJmWGs?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMizAFBVV95cUxPOHBtcmZTRmE4ajE4dHJXZVJYU0F4ejZrME5jcG1fMTBmQV8wUHpfUC1kcGpXNjNXeTRST182ZWVxWUEtbGdSNG84Y2lRYzAwaWlKMmFCUTlKVGlQQl9ROUpta1U5anowTHRoR2lfRXJCN3lKV0pMeUpBZFh6OWhkQkZWUHVscnBJdHh1X3NGQ2VNU3BpT19ORTBkQ1FVc0N0UWZnb0FkclU4WUJFTkpYb2JDbnRkY3QzbzlvclV1WnRZeEVsMFhnaHJmWGs?oc=5</guid>
-      <pubDate>2010-07-22</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPOHBtcmZTRmE4ajE4dHJXZVJYU0F4ejZrME5jcG1fMTBmQV8wUHpfUC1kcGpXNjNXeTRST182ZWVxWUEtbGdSNG84Y2lRYzAwaWlKMmFCUTlKVGlQQl9ROUpta1U5anowTHRoR2lfRXJCN3lKV0pMeUpBZFh6OWhkQkZWUHVscnBJdHh1X3NGQ2VNU3BpT19ORTBkQ1FVc0N0UWZnb0FkclU4WUJFTkpYb2JDbnRkY3QzbzlvclV1WnRZeEVsMFhnaHJmWGs?oc=5" target="_blank">Force Science explains "slips-and-capture errors"</a> <font color="#6f6f6f">Police1</font>]]></description>
-      <source>Police1</source>
-      <category>None</category>
+      <title><![CDATA[James Whelan, the Real Estate Board of New York’s President, Talks Mamdani and More]]></title>
+      <link>http://commercialobserver.com/2026/01/james-whelan-rebny-mamdani-housing/</link>
+      <guid>5cb133acbebfe3b00cf34e38d7d0474b</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Commercial Observer</source>
+      <description><![CDATA[<a href="http://commercialobserver.com/2026/01/james-whelan-rebny-mamdani-housing/" target="_blank">James Whelan, the Real Estate Board of New York’s President, Talks Mamdani and More</a> <font color="#6f6f6f">Commercial Observer</font>]]></description>
     </item>
     <item>
-      <title><![CDATA[Police Officers Complete Expert Witness Course [PROXY]]]></title>
-      <link>https://news.google.com/rss/articles/CBMigAFBVV95cUxNZ2NTYVAyMXdua2NlVnZEZ1ZUUjY0X0lYcllNcmM1cUxFcFZ0TGhyc2lmVzlvWms0RW05MVJwRWszNTVhUVZEUi1iVEpIX0ZzaUVaNTI4dkVUeG9aTnBWQWRCVVVmekxNSXEyMGQ5aTl1NmY2c0lGLVJwWm9RMmhZYg?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMigAFBVV95cUxNZ2NTYVAyMXdua2NlVnZEZ1ZUUjY0X0lYcllNcmM1cUxFcFZ0TGhyc2lmVzlvWms0RW05MVJwRWszNTVhUVZEUi1iVEpIX0ZzaUVaNTI4dkVUeG9aTnBWQWRCVVVmekxNSXEyMGQ5aTl1NmY2c0lGLVJwWm9RMmhZYg?oc=5</guid>
-      <pubDate>2024-06-25</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNZ2NTYVAyMXdua2NlVnZEZ1ZUUjY0X0lYcllNcmM1cUxFcFZ0TGhyc2lmVzlvWms0RW05MVJwRWszNTVhUVZEUi1iVEpIX0ZzaUVaNTI4dkVUeG9aTnBWQWRCVVVmekxNSXEyMGQ5aTl1NmY2c0lGLVJwWm9RMmhZYg?oc=5" target="_blank">Police Officers Complete Expert Witness Course</a> <font color="#6f6f6f">Bernews</font>]]></description>
-      <source>Bernews</source>
-      <category>PROXY</category>
+      <title><![CDATA[An exclusive look inside the largest effort ever mounted to keep the Great Barrier Reef alive]]></title>
+      <link>https://www.vox.com/climate/475447/australia-great-barrier-reef-climate-change-restoration</link>
+      <guid>0cc2c889cb6c694f8c3dada4ba7c2844</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Vox</source>
+      <description><![CDATA[<a href="https://www.vox.com/climate/475447/australia-great-barrier-reef-climate-change-restoration" target="_blank">An exclusive look inside the largest effort ever mounted to keep the Great Barrier Reef alive</a> <font color="#6f6f6f">Vox</font>]]></description>
     </item>
     <item>
-      <title><![CDATA['This is a violent, chaotic event:' Use-of-force expert defends Brown Deer officer's actions in shooting [PROXY]]]></title>
-      <link>https://news.google.com/rss/articles/CBMixwFBVV95cUxNTVVxRGk4Y19iX0NmSmNwNV9sREZ1MDlFNUtNUl9SRUtvZWRfQzlOblJUYVNXX3ZsOTlfcXZzcG4wNkgwcXNYOVhTOW1TTUlLXzVia1VlS0QzU0ZYcUo1eVB4UzhWVm5SWHhRWHIzaFVMdldNS1dLZzZsWl9KcWpDVUNaVWhTbmVwUUlNc0VmSC1aZ3lOQnU5bnZkWTFBWWlubVE1XzBWcGwxRDBLcl80U25TTEhXdWlMcFE3M0F6V1Z0b2s3ajFV0gHMAUFVX3lxTE5RNU94X2ZMX19zcGhmR3k4LVBxSllQR0hFUWp6MEIyTWJ3SWZxSG4tSld4bXVpOEpoNjBOZnk2TnZEdEl4MXdabzF5R2FTNWNrM1hSa1l5N0NETmxpcXpGcEt6aVcwM2FkZE93Y3RJTjlrOFB1bW11YWpBVHFWYkFoOEswdkREVWNQVnhaczF1RTQ2VlFGOU5rTk1HeHhNaFdneFk0dnBCMkhqX0pqRVowZll2OXViMVh1Y2t3clFSTmtMb2U1aTZfYUNOMA?oc=5</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMixwFBVV95cUxNTVVxRGk4Y19iX0NmSmNwNV9sREZ1MDlFNUtNUl9SRUtvZWRfQzlOblJUYVNXX3ZsOTlfcXZzcG4wNkgwcXNYOVhTOW1TTUlLXzVia1VlS0QzU0ZYcUo1eVB4UzhWVm5SWHhRWHIzaFVMdldNS1dLZzZsWl9KcWpDVUNaVWhTbmVwUUlNc0VmSC1aZ3lOQnU5bnZkWTFBWWlubVE1XzBWcGwxRDBLcl80U25TTEhXdWlMcFE3M0F6V1Z0b2s3ajFV0gHMAUFVX3lxTE5RNU94X2ZMX19zcGhmR3k4LVBxSllQR0hFUWp6MEIyTWJ3SWZxSG4tSld4bXVpOEpoNjBOZnk2TnZEdEl4MXdabzF5R2FTNWNrM1hSa1l5N0NETmxpcXpGcEt6aVcwM2FkZE93Y3RJTjlrOFB1bW11YWpBVHFWYkFoOEswdkREVWNQVnhaczF1RTQ2VlFGOU5rTk1HeHhNaFdneFk0dnBCMkhqX0pqRVowZll2OXViMVh1Y2t3clFSTmtMb2U1aTZfYUNOMA?oc=5</guid>
-      <pubDate>2018-02-21</pubDate>
-      <description><![CDATA[<a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxNTVVxRGk4Y19iX0NmSmNwNV9sREZ1MDlFNUtNUl9SRUtvZWRfQzlOblJUYVNXX3ZsOTlfcXZzcG4wNkgwcXNYOVhTOW1TTUlLXzVia1VlS0QzU0ZYcUo1eVB4UzhWVm5SWHhRWHIzaFVMdldNS1dLZzZsWl9KcWpDVUNaVWhTbmVwUUlNc0VmSC1aZ3lOQnU5bnZkWTFBWWlubVE1XzBWcGwxRDBLcl80U25TTEhXdWlMcFE3M0F6V1Z0b2s3ajFV0gHMAUFVX3lxTE5RNU94X2ZMX19zcGhmR3k4LVBxSllQR0hFUWp6MEIyTWJ3SWZxSG4tSld4bXVpOEpoNjBOZnk2TnZEdEl4MXdabzF5R2FTNWNrM1hSa1l5N0NETmxpcXpGcEt6aVcwM2FkZE93Y3RJTjlrOFB1bW11YWpBVHFWYkFoOEswdkREVWNQVnhaczF1RTQ2VlFGOU5rTk1HeHhNaFdneFk0dnBCMkhqX0pqRVowZll2OXViMVh1Y2t3clFSTmtMb2U1aTZfYUNOMA?oc=5" target="_blank">'This is a violent, chaotic event:' Use-of-force expert defends Brown Deer officer's actions in shooting</a> <font color="#6f6f6f">FOX6 News Milwaukee</font>]]></description>
-      <source>FOX6 News Milwaukee</source>
-      <category>PROXY</category>
+      <title><![CDATA[Trump says he's stopped eight wars. Here are ten he's started]]></title>
+      <link>https://www.rawstory.com/raw-investigates/donald-trump-nobel-peace-prize/</link>
+      <guid>1953834956bc6f26886ea6b11ce9db67</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Raw Story</source>
+      <description><![CDATA[<a href="https://www.rawstory.com/raw-investigates/donald-trump-nobel-peace-prize/" target="_blank">Trump says he's stopped eight wars. Here are ten he's started</a> <font color="#6f6f6f">Raw Story</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA["Focus Capabilities on OPCON Transition and Future Military Structure Reform"]]></title>
+      <link>https://www.globalsecurity.org/wmd/library/news/rok/2026/rok-260120-rok-mnd01.htm</link>
+      <guid>d3f7b7f24ee152ef5afd55e175204a0f</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Globalsecurity.org</source>
+      <description><![CDATA[<a href="https://www.globalsecurity.org/wmd/library/news/rok/2026/rok-260120-rok-mnd01.htm" target="_blank">"Focus Capabilities on OPCON Transition and Future Military Structure Reform"</a> <font color="#6f6f6f">Globalsecurity.org</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[GORDON CHANG: Appeasing China won’t save Europe — Trump’s hard power just might]]></title>
+      <link>https://www.foxnews.com/opinion/gordon-chang-appeasing-china-wont-save-europe-trumps-hard-power-just-might</link>
+      <guid>3e73c589f2df0dd00ad7af81c5e40545</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Fox News</source>
+      <description><![CDATA[<a href="https://www.foxnews.com/opinion/gordon-chang-appeasing-china-wont-save-europe-trumps-hard-power-just-might" target="_blank">GORDON CHANG: Appeasing China won’t save Europe — Trump’s hard power just might</a> <font color="#6f6f6f">Fox News</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Iran Is Still Offline. Will Access To The Global Internet Ever Be Restored?]]></title>
+      <link>https://www.globalsecurity.org/wmd/library/news/iran/2026/01/iran-260120-rferl01.htm</link>
+      <guid>85659c334885c197c0957e99ce674fdc</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Globalsecurity.org</source>
+      <description><![CDATA[<a href="https://www.globalsecurity.org/wmd/library/news/iran/2026/01/iran-260120-rferl01.htm" target="_blank">Iran Is Still Offline. Will Access To The Global Internet Ever Be Restored?</a> <font color="#6f6f6f">Globalsecurity.org</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[What Does Kevin Warsh Bring To The Fed?]]></title>
+      <link>https://realinvestmentadvice.com/resources/blog/what-does-kevin-warsh-bring-to-the-fed/</link>
+      <guid>0ad183ef789abfee5b82d590bdde9dc9</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Realinvestmentadvice.com</source>
+      <description><![CDATA[<a href="https://realinvestmentadvice.com/resources/blog/what-does-kevin-warsh-bring-to-the-fed/" target="_blank">What Does Kevin Warsh Bring To The Fed?</a> <font color="#6f6f6f">Realinvestmentadvice.com</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Ships or Munitions? Clarifying the Discussion on Unmanned Surface Vessels]]></title>
+      <link>https://warontherocks.com/2026/01/ships-or-munitions-clarifying-the-discussion-on-unmanned-surface-vessels/</link>
+      <guid>59084659562c0b18dd5d3006ed767746</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>War on the Rocks</source>
+      <description><![CDATA[<a href="https://warontherocks.com/2026/01/ships-or-munitions-clarifying-the-discussion-on-unmanned-surface-vessels/" target="_blank">Ships or Munitions? Clarifying the Discussion on Unmanned Surface Vessels</a> <font color="#6f6f6f">War on the Rocks</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[‘You’ll find out’: Trump hurtles to Davos with Greenland on his mind and no stop in sight]]></title>
+      <link>https://www.irishtimes.com/world/2026/01/21/youll-find-out-trump-hurtles-to-davos-with-greenland-on-his-mind-and-no-stop-in-sight/</link>
+      <guid>7a83db7e0eeaa7548544f4fde987abb4</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>The Irish Times</source>
+      <description><![CDATA[<a href="https://www.irishtimes.com/world/2026/01/21/youll-find-out-trump-hurtles-to-davos-with-greenland-on-his-mind-and-no-stop-in-sight/" target="_blank">‘You’ll find out’: Trump hurtles to Davos with Greenland on his mind and no stop in sight</a> <font color="#6f6f6f">The Irish Times</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[AVPN's AI Opportunity Fund Expands Regional Efforts to Build AI Skilling Infrastructure]]></title>
+      <link>https://en.antaranews.com/news/400846/avpns-ai-opportunity-fund-expands-regional-efforts-to-build-ai-skilling-infrastructure</link>
+      <guid>cb15e3c2ae2cfa1f6303d915b9821a60</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Antaranews.com</source>
+      <description><![CDATA[<a href="https://en.antaranews.com/news/400846/avpns-ai-opportunity-fund-expands-regional-efforts-to-build-ai-skilling-infrastructure" target="_blank">AVPN's AI Opportunity Fund Expands Regional Efforts to Build AI Skilling Infrastructure</a> <font color="#6f6f6f">Antaranews.com</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[CNBC Daily Open: Investors flee from the U.S. as Trump doubles down on Greenland]]></title>
+      <link>https://www.cnbc.com/2026/01/21/cnbc-daily-open-investors-flee-from-the-us-as-trump-doubles-down-on-greenland.html</link>
+      <guid>6f28e4be43d44bdf215a85171dbd3938</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>CNBC</source>
+      <description><![CDATA[<a href="https://www.cnbc.com/2026/01/21/cnbc-daily-open-investors-flee-from-the-us-as-trump-doubles-down-on-greenland.html" target="_blank">CNBC Daily Open: Investors flee from the U.S. as Trump doubles down on Greenland</a> <font color="#6f6f6f">CNBC</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Davos 2026: The old global order is gone]]></title>
+      <link>https://punchng.com/davos-2026-the-old-global-order-is-gone/</link>
+      <guid>48c4cf8e00734c29e91bf7d36f47a9f4</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>The Punch</source>
+      <description><![CDATA[<a href="https://punchng.com/davos-2026-the-old-global-order-is-gone/" target="_blank">Davos 2026: The old global order is gone</a> <font color="#6f6f6f">The Punch</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[realitycheck added to PyPI]]></title>
+      <link>https://pypi.org/project/realitycheck/</link>
+      <guid>9a1070191c1798a547253fd41c1ab856</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Pypi.org</source>
+      <description><![CDATA[<a href="https://pypi.org/project/realitycheck/" target="_blank">realitycheck added to PyPI</a> <font color="#6f6f6f">Pypi.org</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Denmark deploys combat troops to Greenland as Trump pushes for control]]></title>
+      <link>https://www.naturalnews.com/2026-01-21-denmark-troops-greenland-trump-control.html</link>
+      <guid>d09709a33f7974e526f5681d8292378a</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Naturalnews.com</source>
+      <description><![CDATA[<a href="https://www.naturalnews.com/2026-01-21-denmark-troops-greenland-trump-control.html" target="_blank">Denmark deploys combat troops to Greenland as Trump pushes for control</a> <font color="#6f6f6f">Naturalnews.com</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[The Carney doctrine - Paul Wells]]></title>
+      <link>https://paulwells.substack.com/p/the-carney-doctrine</link>
+      <guid>62c771fa142c4fec70250854a64d5e23</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Substack.com</source>
+      <description><![CDATA[<a href="https://paulwells.substack.com/p/the-carney-doctrine" target="_blank">The Carney doctrine - Paul Wells</a> <font color="#6f6f6f">Substack.com</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Full Transcript of Carney's Speech to World Economic Forum]]></title>
+      <link>https://globalnews.ca/news/11620877/carney-davos-wef-speech-transcript/</link>
+      <guid>b5804d6e8fd2d85789f72e20459793e8</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Global News</source>
+      <description><![CDATA[<a href="https://globalnews.ca/news/11620877/carney-davos-wef-speech-transcript/" target="_blank">Full Transcript of Carney's Speech to World Economic Forum</a> <font color="#6f6f6f">Global News</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Greenland, Davos, and a Flame-Throwing President]]></title>
+      <link>https://www.theatlantic.com/national-security/2026/01/greenland-davos-trump-nato/685688/</link>
+      <guid>691bff0ea4e5ca4164a32bf2023c2f58</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>The Atlantic</source>
+      <description><![CDATA[<a href="https://www.theatlantic.com/national-security/2026/01/greenland-davos-trump-nato/685688/" target="_blank">Greenland, Davos, and a Flame-Throwing President</a> <font color="#6f6f6f">The Atlantic</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[How Japan and the Philippines Are Hedging Against China Together]]></title>
+      <link>http://foreignpolicy.com/2026/01/21/japan-philippines-defense-pact-china-south-sea/</link>
+      <guid>6f35bf019b97912daa50d4aeccb2088c</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Foreign Policy</source>
+      <description><![CDATA[<a href="http://foreignpolicy.com/2026/01/21/japan-philippines-defense-pact-china-south-sea/" target="_blank">How Japan and the Philippines Are Hedging Against China Together</a> <font color="#6f6f6f">Foreign Policy</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[FBI Director Patel warns elected officials 'no one' is exempt from federal scrutiny amid Minnesota probe]]></title>
+      <link>https://www.foxnews.com/media/fbi-director-patel-warns-elected-officials-no-one-exempt-from-federal-scrutiny-amid-minnesota-probe</link>
+      <guid>fe8f8d513c3ef4a259e06ceb14186981</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Fox News</source>
+      <description><![CDATA[<a href="https://www.foxnews.com/media/fbi-director-patel-warns-elected-officials-no-one-exempt-from-federal-scrutiny-amid-minnesota-probe" target="_blank">FBI Director Patel warns elected officials 'no one' is exempt from federal scrutiny amid Minnesota probe</a> <font color="#6f6f6f">Fox News</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Stewart Brand – Maintenance: Of Everything, Part One]]></title>
+      <link>https://press.stripe.com/maintenance-part-one</link>
+      <guid>8624ff21b1cc25d62260d020c0f7eb4b</guid>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Stripe.com</source>
+      <description><![CDATA[<a href="https://press.stripe.com/maintenance-part-one" target="_blank">Stewart Brand – Maintenance: Of Everything, Part One</a> <font color="#6f6f6f">Stripe.com</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Inside the program teaching US ICE agents to 'defend the Homeland']]></title>
+      <link>https://www.abc.net.au/news/2026-01-21/ice-us-agent-training-program-to-defend-the-homeland/106231394</link>
+      <guid>169293b8022843b9c673ffd9e9fdcbbc</guid>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
+      <source>ABC News (AU)</source>
+      <description><![CDATA[<a href="https://www.abc.net.au/news/2026-01-21/ice-us-agent-training-program-to-defend-the-homeland/106231394" target="_blank">Inside the program teaching US ICE agents to 'defend the Homeland'</a> <font color="#6f6f6f">ABC News (AU)</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Vulnerability Summary for the Week of January 12, 2026]]></title>
+      <link>https://www.cisa.gov/news-events/bulletins/sb26-020</link>
+      <guid>b2c1e004d36172d7da01e1bca42fc2df</guid>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Cisa.gov</source>
+      <description><![CDATA[<a href="https://www.cisa.gov/news-events/bulletins/sb26-020" target="_blank">Vulnerability Summary for the Week of January 12, 2026</a> <font color="#6f6f6f">Cisa.gov</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA['A shared hope:' Reflecting on Martin Luther King Jr.'s legacy in 2026]]></title>
+      <link>https://www.kpbs.org/podcasts/kpbs-midday-edition/a-shared-hope-reflecting-on-martin-luther-king-jr-s-legacy-in-2026</link>
+      <guid>6a434b0696cd0696ce2cf290d389a1d6</guid>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
+      <source>KPBS</source>
+      <description><![CDATA[<a href="https://www.kpbs.org/podcasts/kpbs-midday-edition/a-shared-hope-reflecting-on-martin-luther-king-jr-s-legacy-in-2026" target="_blank">'A shared hope:' Reflecting on Martin Luther King Jr.'s legacy in 2026</a> <font color="#6f6f6f">KPBS</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA['It Has to Stop': Minnesota Police Chief Says Off-Duty Cops Racially Profiled by ICE]]></title>
+      <link>https://www.commondreams.org/news/ice-racial-profiling</link>
+      <guid>7371efdc6e0ff5e1845eff24f4eaa685</guid>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Common Dreams</source>
+      <description><![CDATA[<a href="https://www.commondreams.org/news/ice-racial-profiling" target="_blank">'It Has to Stop': Minnesota Police Chief Says Off-Duty Cops Racially Profiled by ICE</a> <font color="#6f6f6f">Common Dreams</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Trump Has Made ICE the Largest Law Enforcement Agency in the Country]]></title>
+      <link>https://truthout.org/articles/trump-has-made-ice-the-largest-law-enforcement-agency-in-the-country/</link>
+      <guid>382b02907106d3d853ea34800d3d9954</guid>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
+      <source>Truthout</source>
+      <description><![CDATA[<a href="https://truthout.org/articles/trump-has-made-ice-the-largest-law-enforcement-agency-in-the-country/" target="_blank">Trump Has Made ICE the Largest Law Enforcement Agency in the Country</a> <font color="#6f6f6f">Truthout</font>]]></description>
     </item>
   </channel>
 </rss>
