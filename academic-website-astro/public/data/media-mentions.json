@@ -1,7 +1,25 @@
 {
-  "updated": "2026-01-22T12:05:27.990Z",
-  "count": 71,
+  "updated": "2026-01-22T13:07:34.597Z",
+  "count": 72,
   "stories": [
+    {
+      "id": "7a385f13730f43810b6c8d595f7e9d9e",
+      "url": "https://www.wsbradio.com/news/politics/immigration-agents/UW5PKF5YKA43NJJPAZACDJIKFU/",
+      "title": "Immigration agents policing protests in Minneapolis spark safety and training concerns",
+      "source": "WSB Radio",
+      "date": "2026-01-15",
+      "date_discovered": "2026-01-22",
+      "summary": "<a href=\"https://www.wsbradio.com/news/politics/immigration-agents/UW5PKF5YKA43NJJPAZACDJIKFU/\" target=\"_blank\">Immigration agents policing protests in Minneapolis spark safety and training concerns</a> <font color=\"#6f6f6f\">WSB Radio</font>",
+      "story_type": "incident",
+      "relevance_score": 0,
+      "key_entities": "immigration agents, Minneapolis, crowd control, protests, chemical irritants",
+      "location": "Minneapolis, Minnesota",
+      "tags": [
+        "policing",
+        "use of force"
+      ],
+      "needs_review": 1
+    },
     {
       "id": "4b5bae51845b2d781387cbd40043f4fe",
       "url": "https://abcnews.go.com/US/wireStory/immigration-agents-police-minneapolis-protests-experts-warn-training-129255700",

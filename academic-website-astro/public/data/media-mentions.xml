@@ -4,7 +4,15 @@
     <title>Media Mentions</title>
     <description>Media Mentions - automated news feed</description>
     <link>https://ianadamsresearch.com/media-mentions</link>
-    <lastBuildDate>Thu, 22 Jan 2026 12:05:27 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Jan 2026 13:07:34 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Immigration agents policing protests in Minneapolis spark safety and training concerns]]></title>
+      <link>https://www.wsbradio.com/news/politics/immigration-agents/UW5PKF5YKA43NJJPAZACDJIKFU/</link>
+      <guid>7a385f13730f43810b6c8d595f7e9d9e</guid>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
+      <source>WSB Radio</source>
+      <description><![CDATA[<a href="https://www.wsbradio.com/news/politics/immigration-agents/UW5PKF5YKA43NJJPAZACDJIKFU/" target="_blank">Immigration agents policing protests in Minneapolis spark safety and training concerns</a> <font color="#6f6f6f">WSB Radio</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[As immigration agents police Minneapolis protests, experts warn of training gaps and the rising risk]]></title>
       <link>https://abcnews.go.com/US/wireStory/immigration-agents-police-minneapolis-protests-experts-warn-training-129255700</link>
@@ -396,14 +404,6 @@
       <pubDate>Sat, 06 Apr 2024 00:00:00 GMT</pubDate>
       <source>New York Times</source>
       <description><![CDATA[Investigation into tensions between NYPD and violence interrupter programs.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Baltimore County officer investigated for punching 2nd detainee: 'Seems to be a pattern']]></title>
-      <link>https://www.baltimoresun.com/2024/03/18/baltimore-county-police-punching-detainee/</link>
-      <guid>baltimoresun20240318</guid>
-      <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-      <source>Baltimore Sun</source>
-      <description><![CDATA[Investigation into Baltimore County officer use of force patterns.]]></description>
     </item>
   </channel>
 </rss>
