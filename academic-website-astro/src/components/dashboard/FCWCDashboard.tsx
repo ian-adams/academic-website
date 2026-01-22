@@ -35,6 +35,38 @@ function Tooltip({ children, tip }: { children: React.ReactNode; tip: string }) 
   );
 }
 
+// Preset button with tooltip
+function PresetButton({
+  label,
+  tip,
+  onClick,
+  isActive
+}: {
+  label: string;
+  tip: string;
+  onClick: () => void;
+  isActive: boolean;
+}) {
+  return (
+    <span className="relative group">
+      <button
+        onClick={onClick}
+        className={`px-3 py-1.5 text-xs font-semibold rounded transition-colors ${
+          isActive
+            ? 'bg-red-700 text-white'
+            : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300'
+        }`}
+      >
+        {label}
+      </button>
+      <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none w-64 text-left z-50 shadow-lg">
+        {tip}
+        <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></span>
+      </span>
+    </span>
+  );
+}
+
 // Economist-style color palette
 const COLORS = {
   red: '#E3120B',
@@ -93,6 +125,31 @@ function getPercentile(sorted: number[], p: number): number {
   return sorted[Math.min(index, sorted.length - 1)];
 }
 
+// Preset definitions with tooltips
+const PRESETS = [
+  {
+    label: 'Conservative',
+    br: 0.95,
+    sens: 0.83,
+    spec: 0.85,
+    tip: 'Uses the paper\'s default assumptions: 95% of confessions are true, tactics work 83% of the time on guilty suspects, and 85% of innocent people resist false confession.'
+  },
+  {
+    label: 'Moderate',
+    br: 0.92,
+    sens: 0.80,
+    spec: 0.80,
+    tip: 'More skeptical assumptions: assumes a higher false confession rate (8% vs 5%) and somewhat lower protection for innocent suspects.'
+  },
+  {
+    label: 'Pessimistic',
+    br: 0.88,
+    sens: 0.90,
+    spec: 0.70,
+    tip: 'Worst-case assumptions: 12% false confession rate, highly effective tactics that also pose greater risk to innocent suspects (only 70% resist).'
+  },
+];
+
 export default function FCWCDashboard() {
   const [activeTab, setActiveTab] = useState<'calculator' | 'acceptability' | 'about'>('calculator');
   const [isDark, setIsDark] = useState(false);
@@ -130,7 +187,7 @@ export default function FCWCDashboard() {
 
   const acceptableThreshold = getAcceptableRisk(lambda);
 
-  // Static data for acceptability curve - computed once
+  // Static data for acceptability curve
   const acceptabilityCurveData = useMemo(() => {
     const lambdas: number[] = [];
     const thresholds: number[] = [];
@@ -141,28 +198,14 @@ export default function FCWCDashboard() {
     return { lambdas, thresholds };
   }, []);
 
-  // Sensitivity analysis data
-  const sensitivityData = useMemo(() => {
-    const specs = [0.70, 0.80, 0.90, 0.95, 0.99];
-    const traces: { baseRate: number[]; risk: number[]; spec: number }[] = [];
-
-    for (const spec of specs) {
-      const baseRates: number[] = [];
-      const risks: number[] = [];
-      for (let br = 0.01; br <= 0.20; br += 0.01) {
-        baseRates.push(br * 100);
-        risks.push(calculateWrongfulConvictionRisk(br, sensitivity, spec) * 100);
-      }
-      traces.push({ baseRate: baseRates, risk: risks, spec });
-    }
-
-    return { traces };
-  }, [sensitivity]);
+  // Check if current values match a preset
+  const activePreset = PRESETS.find(
+    p => p.br === baseRateGuilty && p.sens === sensitivity && p.spec === specificity
+  )?.label || null;
 
   // Dynamic interpretation of results
   const getInterpretation = () => {
     const riskPct = wrongfulConvictionRisk * 100;
-    const thresholdPct = acceptableThreshold * 100;
 
     if (riskPct < 1) {
       return `With these assumptions, fewer than 1 in 100 confessions obtained using this tactic would be false and lead to wrongful conviction.`;
@@ -217,7 +260,7 @@ export default function FCWCDashboard() {
           </span>
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 dark:text-white leading-tight mb-4">
-          The Risk of False Confession<br />
+          The Risk of False Confession Driven<br />
           <span className="text-red-700">Wrongful Convictions</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl font-light leading-relaxed">
@@ -227,11 +270,7 @@ export default function FCWCDashboard() {
         <div className="flex items-center gap-6 mt-6 text-sm text-gray-500 dark:text-gray-400">
           <span className="flex items-center gap-2">
             <span className="w-2 h-2 bg-red-700 rounded-full"></span>
-            Based on{' '}
-            <a href="https://smourtgos.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">
-              Mourtgos
-            </a>
-            {' & Adams, forthcoming at <em>Journal of Criminal Justice</em>'}
+            Based on Scott M. Mourtgos and Ian T. Adams, forthcoming at <em className="ml-1">Journal of Criminal Justice</em>
           </span>
         </div>
       </header>
@@ -263,6 +302,19 @@ export default function FCWCDashboard() {
       {/* Calculator Tab */}
       {activeTab === 'calculator' && (
         <div className="space-y-8">
+          {/* Key Finding - moved to top */}
+          <div className="bg-gray-100 dark:bg-gray-900 p-6 border-l-4 border-red-700">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Key Finding from the Research
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              Under most reasonable assumptions, the estimated risk of a false confession leading to wrongful
+              conviction <strong>clusters around 1%</strong>. At the traditional Blackstone standard (λ=10),
+              the maximum acceptable risk is about 9%. This suggests common interrogation tactics may fall
+              within acceptable bounds—but your conclusion depends on your assumptions and choice of λ.
+            </p>
+          </div>
+
           {/* Key Result Banner */}
           <div className="bg-gray-900 dark:bg-gray-800 text-white p-8 -mx-4 sm:mx-0">
             <div className="max-w-4xl mx-auto">
@@ -417,28 +469,24 @@ export default function FCWCDashboard() {
                 </div>
               </div>
 
-              {/* Presets */}
+              {/* Presets with tooltips */}
               <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
                 <div className="text-xs font-bold uppercase tracking-wide text-gray-500 mb-3">
                   Presets from Literature
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {[
-                    { label: 'Conservative (Paper Default)', br: 0.95, sens: 0.83, spec: 0.85 },
-                    { label: 'Moderate', br: 0.92, sens: 0.80, spec: 0.80 },
-                    { label: 'Pessimistic', br: 0.88, sens: 0.90, spec: 0.70 },
-                  ].map((preset) => (
-                    <button
+                  {PRESETS.map((preset) => (
+                    <PresetButton
                       key={preset.label}
+                      label={preset.label}
+                      tip={preset.tip}
+                      isActive={activePreset === preset.label}
                       onClick={() => {
                         setBaseRateGuilty(preset.br);
                         setSensitivity(preset.sens);
                         setSpecificity(preset.spec);
                       }}
-                      className="px-3 py-1.5 text-xs font-semibold bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded transition-colors"
-                    >
-                      {preset.label}
-                    </button>
+                    />
                   ))}
                 </div>
               </div>
@@ -462,6 +510,7 @@ export default function FCWCDashboard() {
               </div>
 
               <PlotWrapper
+                key={`histogram-${baseRateGuilty}-${sensitivity}-${specificity}`}
                 data={[
                   {
                     x: mcResults.map(v => v * 100),
@@ -471,7 +520,6 @@ export default function FCWCDashboard() {
                       color: COLORS.red,
                       line: { color: isDark ? '#1f2937' : '#ffffff', width: 1 },
                     },
-                    opacity: 0.8,
                     hovertemplate: 'Risk: %{x:.1f}%<br>Count: %{y}<extra></extra>',
                   },
                 ]}
@@ -533,67 +581,6 @@ export default function FCWCDashboard() {
               </div>
             </div>
           </div>
-
-          {/* Sensitivity Analysis */}
-          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
-            <h2 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-              <span className="w-1 h-6 bg-red-700"></span>
-              How Protection Rates Change the Picture
-            </h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-              This chart shows how the wrongful conviction risk changes based on how well the tactic protects innocent people (different lines) and the underlying rate of false confessions (x-axis).
-            </p>
-
-            <PlotWrapper
-              data={sensitivityData.traces.map((trace, i) => ({
-                x: trace.baseRate,
-                y: trace.risk,
-                type: 'scatter' as const,
-                mode: 'lines' as const,
-                name: `${(trace.spec * 100).toFixed(0)}% protection`,
-                line: {
-                  width: trace.spec === 0.85 ? 3 : 2,
-                  color: [COLORS.warmGray, COLORS.slate, COLORS.navy, COLORS.red, COLORS.darkRed][i],
-                  dash: trace.spec === specificity ? 'solid' : 'dot',
-                },
-              }))}
-              layout={{
-                ...chartLayout,
-                height: 350,
-                showlegend: true,
-                legend: {
-                  orientation: 'h',
-                  y: -0.2,
-                  x: 0.5,
-                  xanchor: 'center',
-                },
-                xaxis: {
-                  ...chartLayout.xaxis,
-                  title: { text: 'False Confession Rate (%)', font: { size: 12 } },
-                  range: [0, 20],
-                },
-                yaxis: {
-                  ...chartLayout.yaxis,
-                  title: { text: 'Wrongful Conviction Risk (%)', font: { size: 12 } },
-                },
-                shapes: [
-                  {
-                    type: 'line',
-                    x0: 0,
-                    x1: 20,
-                    y0: acceptableThreshold * 100,
-                    y1: acceptableThreshold * 100,
-                    line: { color: COLORS.teal, width: 2, dash: 'dash' },
-                  },
-                ],
-              }}
-              config={{ responsive: true, displayModeBar: false, staticPlot: true }}
-              style={{ width: '100%', height: '350px' }}
-            />
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4 text-center">
-              Dashed teal line = your acceptability threshold ({(acceptableThreshold * 100).toFixed(1)}%). Solid line = your current protection rate setting.
-            </p>
-          </div>
         </div>
       )}
 
@@ -619,7 +606,7 @@ export default function FCWCDashboard() {
             </div>
           </div>
 
-          {/* Lambda Selector with better explanation */}
+          {/* Lambda Selector */}
           <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
             <div className="mb-6">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
@@ -786,13 +773,33 @@ export default function FCWCDashboard() {
                 },
                 annotations: [
                   {
-                    x: 10,
-                    y: getAcceptableRisk(10) * 100,
-                    text: 'Blackstone',
+                    x: 5,
+                    y: getAcceptableRisk(4.5) * 100,
+                    text: 'Volokh (λ=4.5)',
                     showarrow: true,
                     arrowhead: 0,
-                    ax: 40,
+                    ax: -50,
+                    ay: -25,
+                    font: { size: 10 },
+                  },
+                  {
+                    x: 10,
+                    y: getAcceptableRisk(10) * 100,
+                    text: 'Blackstone (λ=10)',
+                    showarrow: true,
+                    arrowhead: 0,
+                    ax: 50,
                     ay: 25,
+                    font: { size: 10 },
+                  },
+                  {
+                    x: 20,
+                    y: getAcceptableRisk(20) * 100,
+                    text: 'Fortescue (λ=20)',
+                    showarrow: true,
+                    arrowhead: 0,
+                    ax: 50,
+                    ay: -20,
                     font: { size: 10 },
                   },
                 ],
@@ -800,19 +807,6 @@ export default function FCWCDashboard() {
               config={{ responsive: true, displayModeBar: false, staticPlot: true }}
               style={{ width: '100%', height: '400px' }}
             />
-          </div>
-
-          {/* Key Insight */}
-          <div className="bg-gray-100 dark:bg-gray-900 p-8 border-l-4 border-red-700">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-              Key Finding from the Research
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              Under most reasonable assumptions, the estimated risk of a false confession leading to wrongful
-              conviction <strong>clusters around 1%</strong>. At the traditional Blackstone standard (λ=10),
-              the maximum acceptable risk is about 9%. This suggests common interrogation tactics may fall
-              within acceptable bounds—but your conclusion depends on your choice of λ.
-            </p>
           </div>
         </div>
       )}
