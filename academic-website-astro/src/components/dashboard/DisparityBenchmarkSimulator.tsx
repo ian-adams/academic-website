@@ -2,6 +2,15 @@ import { useState, useEffect, useMemo } from 'react';
 import type { PlotParams } from 'react-plotly.js';
 import { DARK_LAYOUT, LIGHT_LAYOUT } from './types';
 
+// Purple/Indigo color palette for Disparity dashboard
+const COLORS = {
+  primary: '#7C3AED',
+  primaryDark: '#6D28D9',
+  accent: '#8B5CF6',
+  navy: '#1E1B4B',
+  slate: '#334155',
+};
+
 // Client-side only Plot component wrapper
 function PlotWrapper(props: PlotParams) {
   const [Plot, setPlot] = useState<React.ComponentType<PlotParams> | null>(null);
@@ -15,7 +24,7 @@ function PlotWrapper(props: PlotParams) {
   if (!Plot) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-700 dark:border-primary-400"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-violet-600 dark:border-violet-400"></div>
       </div>
     );
   }
@@ -271,93 +280,111 @@ export default function DisparityBenchmarkSimulator() {
   const baseLayout = isDark ? DARK_LAYOUT : LIGHT_LAYOUT;
 
   return (
-    <div>
-      {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary-900 dark:text-gray-100 mb-4">
-          Disparity Benchmark Simulator
+    <div className="min-h-screen">
+      {/* Hero Header */}
+      <header className="border-b-4 border-violet-600 pb-8 mb-8">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-1 h-12 bg-violet-600"></div>
+          <span className="text-sm font-bold tracking-widest uppercase text-violet-600">
+            Methodological Analysis
+          </span>
+        </div>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 dark:text-white leading-tight mb-4">
+          The Denominator Problem<br />
+          <span className="text-violet-600">Why Benchmark Choice Matters</span>
         </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
-          Explore how your choice of denominator can completely change—even reverse—conclusions
-          about racial disparities in police use of force. Based on{' '}
-          <a
-            href="https://doi.org/10.1080/0735648X.2018.1547269"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent-burgundy dark:text-accent-gold hover:underline"
-          >
-            Tregle, Nix & Alpert (2018)
-          </a>.
+        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl font-light leading-relaxed">
+          Your choice of denominator can completely change—even reverse—conclusions
+          about racial disparities in police use of force.
         </p>
-      </div>
+        <div className="flex items-center gap-6 mt-6 text-sm text-gray-500 dark:text-gray-400">
+          <span className="flex items-center gap-2">
+            <span className="w-2 h-2 bg-violet-600 rounded-full"></span>
+            Based on{' '}
+            <a
+              href="https://doi.org/10.1080/0735648X.2018.1547269"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-violet-600 hover:underline"
+            >
+              Tregle, Nix & Alpert (2018)
+            </a>
+          </span>
+        </div>
+      </header>
 
       {/* Year Selector */}
-      <div className="mb-6">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-          Select Year
-        </label>
-        <div className="flex flex-wrap gap-2">
-          {availableYears.map((year) => (
-            <button
-              key={year}
-              onClick={() => setSelectedYear(year)}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                selectedYear === year
-                  ? 'bg-primary-700 text-white'
-                  : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-              }`}
-            >
-              {year}
-            </button>
-          ))}
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 mb-8">
+        <div className="flex flex-wrap items-center gap-4">
+          <label className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            Select Year:
+          </label>
+          <div className="flex flex-wrap gap-2">
+            {availableYears.map((year) => (
+              <button
+                key={year}
+                onClick={() => setSelectedYear(year)}
+                className={`px-3 py-1.5 text-sm font-semibold transition-colors ${
+                  selectedYear === year
+                    ? 'bg-violet-600 text-white'
+                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                }`}
+              >
+                {year}
+              </button>
+            ))}
+          </div>
+          {selectedYear >= 2018 && (
+            <p className="text-xs text-amber-600 dark:text-amber-400 ml-auto">
+              ⚠ {selectedYear >= 2020 ? 'UCR arrest data incomplete' : 'Includes some estimates'}
+            </p>
+          )}
         </div>
-        {selectedYear >= 2018 && (
-          <p className="mt-2 text-xs text-amber-600 dark:text-amber-400">
-            Note: Data for {selectedYear} includes estimates. 2020+ UCR arrest data affected by NIBRS transition.
-          </p>
-        )}
       </div>
 
       {/* Tab Navigation */}
-      <div className="border-b border-gray-200 dark:border-gray-700 mb-6">
-        <nav className="flex space-x-4 overflow-x-auto">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
-                activeTab === tab.id
-                  ? 'border-primary-700 text-primary-700 dark:border-primary-400 dark:text-primary-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </nav>
-      </div>
+      <nav className="flex border-b border-gray-200 dark:border-gray-700 mb-8">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`px-6 py-4 text-sm font-semibold tracking-wide uppercase transition-colors relative ${
+              activeTab === tab.id
+                ? 'text-violet-600 dark:text-violet-400'
+                : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+            }`}
+          >
+            {tab.label}
+            {activeTab === tab.id && (
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-violet-600"></div>
+            )}
+          </button>
+        ))}
+      </nav>
 
       {/* Tab Content */}
       <div style={{ display: activeTab === 'problem' ? 'block' : 'none' }}>
         <div className="space-y-6">
-          {/* Key Insight */}
-          <div className="bg-rose-50 dark:bg-rose-900/20 border border-rose-200 dark:border-rose-800 rounded-lg p-6">
-            <h3 className="text-xl font-semibold text-rose-800 dark:text-rose-200 mb-3">
-              The Core Problem: What's Your Denominator?
-            </h3>
-            <p className="text-rose-700 dark:text-rose-300 mb-4">
-              In {selectedYear}, police fatally shot <strong>{benchmarkData[0].years[selectedYear].blackShot} Black citizens</strong> and <strong>{benchmarkData[0].years[selectedYear].whiteShot} White citizens</strong>.
-              Black citizens are ~13% of the US population but ~26% of those fatally shot.
-              Does this prove racial bias?
-            </p>
-            <p className="text-rose-700 dark:text-rose-300 font-medium">
-              It depends entirely on what you compare these numbers to—your choice of <em>denominator</em> or <em>benchmark</em>.
-            </p>
+          {/* Key Insight Banner */}
+          <div className="bg-gray-900 dark:bg-gray-800 text-white p-8 -mx-4 sm:mx-0">
+            <div className="max-w-4xl">
+              <h3 className="text-3xl font-serif font-bold mb-4">What's Your Denominator?</h3>
+              <p className="text-xl text-gray-300 leading-relaxed mb-4">
+                In {selectedYear}, police fatally shot <strong className="text-violet-400">{benchmarkData[0].years[selectedYear].blackShot}</strong> Black citizens and <strong className="text-violet-400">{benchmarkData[0].years[selectedYear].whiteShot}</strong> White citizens.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                Black citizens are ~13% of the US population but ~26% of those fatally shot.
+                Does this prove racial bias? <strong className="text-violet-400">It depends entirely on your choice of benchmark.</strong>
+              </p>
+            </div>
           </div>
 
           {/* The Iceberg Metaphor */}
-          <div className="card p-6">
-            <h3 className="text-lg font-semibold mb-4">The "Iceberg Phenomenon"</h3>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+            <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+              <span className="w-1 h-6 bg-violet-600"></span>
+              The Hidden Denominator
+            </h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
@@ -371,20 +398,20 @@ export default function DisparityBenchmarkSimulator() {
                     <span><strong>Numerator:</strong> Fatal OIS by race (known from Washington Post data)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-amber-600 dark:text-amber-400 font-bold">?</span>
+                    <span className="text-violet-600 dark:text-violet-400 font-bold">?</span>
                     <span><strong>Denominator:</strong> Who is at risk of being shot? (debated)</span>
                   </li>
                 </ul>
               </div>
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                <h4 className="font-medium mb-3">The Formula</h4>
-                <div className="bg-white dark:bg-gray-900 rounded p-4 font-mono text-sm text-center">
+              <div className="bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-800 p-4">
+                <h4 className="font-bold text-violet-800 dark:text-violet-200 mb-3">The Formula</h4>
+                <div className="bg-white dark:bg-gray-900 p-4 font-mono text-sm text-center">
                   <div className="mb-2">
-                    <span className="text-blue-600 dark:text-blue-400">[Black Shot ÷ Black Benchmark]</span>
+                    <span className="text-violet-600 dark:text-violet-400">[Black Shot ÷ Black Benchmark]</span>
                   </div>
                   <div className="border-t border-gray-300 dark:border-gray-600 my-2"></div>
                   <div>
-                    <span className="text-rose-600 dark:text-rose-400">[White Shot ÷ White Benchmark]</span>
+                    <span className="text-gray-600 dark:text-gray-400">[White Shot ÷ White Benchmark]</span>
                   </div>
                 </div>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">
@@ -395,8 +422,8 @@ export default function DisparityBenchmarkSimulator() {
           </div>
 
           {/* Why Population Fails */}
-          <div className="card p-6 border-l-4 border-amber-500">
-            <h3 className="text-lg font-semibold mb-4">Why Population is a Flawed Benchmark</h3>
+          <div className="bg-gray-100 dark:bg-gray-900 p-6 border-l-4 border-violet-600">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Why Population is a Flawed Benchmark</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               Using population assumes <em>everyone has an equal chance of encountering police</em>.
               This is demonstrably false:
@@ -411,25 +438,25 @@ export default function DisparityBenchmarkSimulator() {
 
           {/* Quick Comparison */}
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="value-box">
-              <div className="value-box-title">Using Population ({selectedYear})</div>
-              <div className="value-box-value text-rose-600 dark:text-rose-400">
+            <div className="bg-rose-50 dark:bg-rose-900/20 border border-rose-200 dark:border-rose-800 p-6 text-center">
+              <div className="text-xs font-bold uppercase tracking-wide text-rose-700 dark:text-rose-300 mb-2">Using Population ({selectedYear})</div>
+              <div className="text-5xl font-bold font-serif text-rose-600 dark:text-rose-400">
                 {allOddsRatios.find(o => o.id === 'population')?.oddsRatio.toFixed(2)}x
               </div>
-              <div className="text-sm text-gray-500 dark:text-gray-400">Black citizens more likely to be shot</div>
+              <div className="text-sm text-rose-700 dark:text-rose-300 mt-2">Black citizens more likely</div>
             </div>
-            <div className="value-box">
-              <div className="value-box-title">Using Weapons Arrests ({selectedYear})</div>
-              <div className="value-box-value text-blue-600 dark:text-blue-400">
+            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 p-6 text-center">
+              <div className="text-xs font-bold uppercase tracking-wide text-blue-700 dark:text-blue-300 mb-2">Using Weapons Arrests ({selectedYear})</div>
+              <div className="text-5xl font-bold font-serif text-blue-600 dark:text-blue-400">
                 {(1 / (allOddsRatios.find(o => o.id === 'weapons_arrests')?.oddsRatio || 1)).toFixed(2)}x
               </div>
-              <div className="text-sm text-gray-500 dark:text-gray-400">White citizens more likely to be shot</div>
+              <div className="text-sm text-blue-700 dark:text-blue-300 mt-2">White citizens more likely</div>
             </div>
           </div>
 
-          <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 text-center">
-            <p className="text-lg font-medium text-gray-900 dark:text-gray-100">
-              Same numerator. Different denominators. <span className="text-accent-burgundy dark:text-accent-gold">Opposite conclusions.</span>
+          <div className="bg-gray-900 dark:bg-gray-800 p-6 text-center">
+            <p className="text-xl font-serif text-white">
+              Same numerator. Different denominators. <span className="text-violet-400">Opposite conclusions.</span>
             </p>
           </div>
         </div>
@@ -438,8 +465,11 @@ export default function DisparityBenchmarkSimulator() {
       <div style={{ display: activeTab === 'compare' ? 'block' : 'none' }}>
         <div className="space-y-6">
           {/* Comparison Chart */}
-          <div className="card p-6">
-            <h3 className="text-lg font-semibold mb-4">Odds Ratios by Benchmark ({selectedYear})</h3>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+            <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+              <span className="w-1 h-6 bg-violet-600"></span>
+              Odds Ratios by Benchmark ({selectedYear})
+            </h3>
             <PlotWrapper
               key={`comparison-${selectedYear}`}
               data={[
@@ -515,8 +545,11 @@ export default function DisparityBenchmarkSimulator() {
           </div>
 
           {/* Data Table */}
-          <div className="card p-6">
-            <h3 className="text-lg font-semibold mb-4">Detailed Comparison ({selectedYear})</h3>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+            <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+              <span className="w-1 h-6 bg-violet-600"></span>
+              Detailed Comparison ({selectedYear})
+            </h3>
             <div className="overflow-x-auto">
               <table className="min-w-full text-sm">
                 <thead>
@@ -556,31 +589,31 @@ export default function DisparityBenchmarkSimulator() {
 
           {/* Benchmark Categories */}
           <div className="grid md:grid-cols-3 gap-4">
-            <div className="card p-4 border-t-4 border-purple-500">
-              <h4 className="font-semibold text-purple-700 dark:text-purple-300 mb-2">Population-Based</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+            <div className="bg-white dark:bg-gray-800 border-l-4 border-violet-500 p-6">
+              <h4 className="font-bold text-violet-700 dark:text-violet-300 mb-2">Population-Based</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 Census data. Simple but flawed—assumes equal police contact rates.
               </p>
-              <div className="mt-2 text-lg font-bold text-purple-600 dark:text-purple-400">
-                OR: {allOddsRatios.find(o => o.id === 'population')?.oddsRatio.toFixed(2)}
+              <div className="text-3xl font-bold font-serif text-violet-600 dark:text-violet-400">
+                {allOddsRatios.find(o => o.id === 'population')?.oddsRatio.toFixed(2)}x
               </div>
             </div>
-            <div className="card p-4 border-t-4 border-amber-500">
-              <h4 className="font-semibold text-amber-700 dark:text-amber-300 mb-2">Interaction-Based</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+            <div className="bg-white dark:bg-gray-800 border-l-4 border-amber-500 p-6">
+              <h4 className="font-bold text-amber-700 dark:text-amber-300 mb-2">Interaction-Based</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 PPCS survey data. Better than population but most contacts are low-risk.
               </p>
-              <div className="mt-2 text-lg font-bold text-amber-600 dark:text-amber-400">
-                OR: {allOddsRatios.find(o => o.id === 'street_stops')?.oddsRatio.toFixed(2)}
+              <div className="text-3xl font-bold font-serif text-amber-600 dark:text-amber-400">
+                {allOddsRatios.find(o => o.id === 'street_stops')?.oddsRatio.toFixed(2)}x
               </div>
             </div>
-            <div className="card p-4 border-t-4 border-teal-500">
-              <h4 className="font-semibold text-teal-700 dark:text-teal-300 mb-2">Arrest-Based</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+            <div className="bg-white dark:bg-gray-800 border-l-4 border-teal-500 p-6">
+              <h4 className="font-bold text-teal-700 dark:text-teal-300 mb-2">Arrest-Based</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 UCR arrest data. Closer to lethal-risk situations but may reflect enforcement bias.
               </p>
-              <div className="mt-2 text-lg font-bold text-teal-600 dark:text-teal-400">
-                OR: {allOddsRatios.find(o => o.id === 'weapons_arrests')?.oddsRatio.toFixed(2)}
+              <div className="text-3xl font-bold font-serif text-teal-600 dark:text-teal-400">
+                {allOddsRatios.find(o => o.id === 'weapons_arrests')?.oddsRatio.toFixed(2)}x
               </div>
             </div>
           </div>
@@ -590,17 +623,20 @@ export default function DisparityBenchmarkSimulator() {
       <div style={{ display: activeTab === 'explore' ? 'block' : 'none' }}>
         <div className="space-y-6">
           {/* Benchmark Selector */}
-          <div className="card p-6">
-            <h3 className="text-lg font-semibold mb-4">Select a Benchmark to Explore</h3>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+            <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+              <span className="w-1 h-6 bg-violet-600"></span>
+              Select a Benchmark
+            </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
               {benchmarkData.map((b) => (
                 <button
                   key={b.id}
                   onClick={() => setSelectedBenchmark(b.id)}
-                  className={`p-3 rounded-lg text-sm font-medium transition-colors text-left ${
+                  className={`p-3 text-sm font-semibold transition-colors text-left ${
                     selectedBenchmark === b.id
-                      ? 'bg-primary-700 text-white'
-                      : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                      ? 'bg-violet-600 text-white'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
                   {b.shortName}
@@ -611,13 +647,13 @@ export default function DisparityBenchmarkSimulator() {
 
           {/* Selected Benchmark Details */}
           <div className="grid lg:grid-cols-2 gap-6">
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-2">{currentBenchmark.name}</h3>
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{currentBenchmark.name}</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">{currentBenchmark.description}</p>
 
-              <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg p-4 mb-4">
-                <h4 className="font-medium text-amber-800 dark:text-amber-200 mb-1">Limitation</h4>
-                <p className="text-sm text-amber-700 dark:text-amber-300">{currentBenchmark.limitation}</p>
+              <div className="bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-700 p-4 mb-4">
+                <h4 className="font-bold text-violet-800 dark:text-violet-200 mb-1">Limitation</h4>
+                <p className="text-sm text-violet-700 dark:text-violet-300">{currentBenchmark.limitation}</p>
               </div>
 
               <div className="space-y-3">
@@ -640,8 +676,11 @@ export default function DisparityBenchmarkSimulator() {
               </div>
             </div>
 
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-4">Result</h3>
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+              <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                <span className="w-1 h-6 bg-violet-600"></span>
+                Result
+              </h3>
 
               <div className={`p-6 rounded-lg text-center mb-4 ${
                 currentOddsRatio > 1
@@ -682,8 +721,11 @@ export default function DisparityBenchmarkSimulator() {
           </div>
 
           {/* Visual Comparison */}
-          <div className="card p-6">
-            <h3 className="text-lg font-semibold mb-4">Rate Comparison ({currentBenchmark.shortName})</h3>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+            <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+              <span className="w-1 h-6 bg-violet-600"></span>
+              Rate Comparison ({currentBenchmark.shortName})
+            </h3>
             <PlotWrapper
               key={`rate-${selectedYear}-${selectedBenchmark}`}
               data={[
@@ -724,18 +766,24 @@ export default function DisparityBenchmarkSimulator() {
 
       <div style={{ display: activeTab === 'custom' ? 'block' : 'none' }}>
         <div className="space-y-6">
-          <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4">
-            <h4 className="font-semibold text-purple-800 dark:text-purple-200 mb-2">Build Your Own Scenario</h4>
-            <p className="text-purple-700 dark:text-purple-300 text-sm">
-              Enter custom values to see how different numerators and denominators affect the odds ratio.
-              This helps illustrate why benchmark selection is so critical.
-            </p>
+          {/* Banner */}
+          <div className="bg-gray-900 dark:bg-gray-800 text-white p-6 -mx-4 sm:mx-0">
+            <div className="max-w-4xl">
+              <h3 className="text-2xl font-serif font-bold mb-3">Build Your Own Scenario</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Enter custom values to see how different numerators and denominators affect the odds ratio.
+                This helps illustrate why benchmark selection is so critical.
+              </p>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6">
             {/* Inputs */}
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-4">Input Values</h3>
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+              <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                <span className="w-1 h-6 bg-violet-600"></span>
+                Input Values
+              </h3>
 
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
@@ -804,8 +852,11 @@ export default function DisparityBenchmarkSimulator() {
             </div>
 
             {/* Result */}
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-4">Your Result</h3>
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+              <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                <span className="w-1 h-6 bg-violet-600"></span>
+                Your Result
+              </h3>
 
               <div className={`p-6 rounded-lg text-center mb-4 ${
                 customOddsRatio > 1
@@ -846,23 +897,23 @@ export default function DisparityBenchmarkSimulator() {
           </div>
 
           {/* Key Takeaway */}
-          <div className="card p-6 bg-gray-50 dark:bg-gray-800">
-            <h3 className="text-lg font-semibold mb-4">Key Takeaways</h3>
-            <ul className="space-y-3 text-gray-600 dark:text-gray-400">
+          <div className="bg-gray-100 dark:bg-gray-900 p-6 border-l-4 border-violet-600">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Key Takeaways</h3>
+            <ul className="space-y-3 text-gray-700 dark:text-gray-300">
               <li className="flex items-start gap-3">
-                <span className="text-primary-700 dark:text-primary-400 font-bold">1.</span>
+                <span className="text-violet-600 dark:text-violet-400 font-bold text-lg">1.</span>
                 <span><strong>Disparity ≠ Bias:</strong> Observed disparities depend heavily on benchmark choice. Different benchmarks yield different—even opposite—conclusions.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary-700 dark:text-primary-400 font-bold">2.</span>
+                <span className="text-violet-600 dark:text-violet-400 font-bold text-lg">2.</span>
                 <span><strong>No perfect benchmark exists:</strong> Each has strengths and limitations. Population is convenient but flawed. Arrests may reflect enforcement bias.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary-700 dark:text-primary-400 font-bold">3.</span>
+                <span className="text-violet-600 dark:text-violet-400 font-bold text-lg">3.</span>
                 <span><strong>Context matters:</strong> The "at-risk" population for fatal OIS is not the general population—it's those who encounter police in potentially lethal situations.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary-700 dark:text-primary-400 font-bold">4.</span>
+                <span className="text-violet-600 dark:text-violet-400 font-bold text-lg">4.</span>
                 <span><strong>Be skeptical of simple claims:</strong> Anyone citing disparity statistics without discussing their benchmark choice is presenting incomplete analysis.</span>
               </li>
             </ul>
@@ -870,28 +921,43 @@ export default function DisparityBenchmarkSimulator() {
         </div>
       </div>
 
-      {/* Footer Citation */}
-      <div className="mt-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg space-y-3">
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          <strong>Reference:</strong> Tregle, B., Nix, J., & Alpert, G. P. (2018). Disparity does not mean bias:
-          Making sense of observed racial disparities in fatal officer-involved shootings with multiple benchmarks.
-          <em> Journal of Crime and Justice</em>.{' '}
-          <a
-            href="https://doi.org/10.1080/0735648X.2018.1547269"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent-burgundy dark:text-accent-gold hover:underline"
-          >
-            https://doi.org/10.1080/0735648X.2018.1547269
-          </a>
-        </p>
-        <p className="text-xs text-gray-500 dark:text-gray-500">
-          <strong>Data sources (2018-2023):</strong> Fatal OIS from Washington Post Fatal Force Database;
-          Population from US Census ACS; PPCS data from BJS (2018 wave for 2020+);
-          Arrests from FBI UCR/Crime Data Explorer. Note: 2020-2021 arrest data incomplete due to NIBRS transition.
-          Some values are estimates—use with caution for research purposes.
-        </p>
-      </div>
+      {/* Footer */}
+      <footer className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <div className="bg-gray-50 dark:bg-gray-800 p-6 border border-gray-200 dark:border-gray-700 space-y-4">
+          <div className="text-xs font-bold uppercase tracking-wide text-gray-500 mb-3">
+            Citation
+          </div>
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            Tregle, B., Nix, J., & Alpert, G. P. (2018). Disparity does not mean bias:
+            Making sense of observed racial disparities in fatal officer-involved shootings with multiple benchmarks.
+            <em> Journal of Crime and Justice</em>.{' '}
+            <a
+              href="https://doi.org/10.1080/0735648X.2018.1547269"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-violet-600 hover:underline"
+            >
+              https://doi.org/10.1080/0735648X.2018.1547269
+            </a>
+          </p>
+          <p className="text-xs text-gray-500 dark:text-gray-500 pt-2 border-t border-gray-200 dark:border-gray-700">
+            <strong>Data sources (2018-2023):</strong> Fatal OIS from Washington Post Fatal Force Database;
+            Population from US Census ACS; PPCS data from BJS (2018 wave for 2020+);
+            Arrests from FBI UCR/Crime Data Explorer. 2020-2021 arrest data incomplete due to NIBRS transition.
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-6 text-sm text-gray-500 dark:text-gray-400">
+          <div>
+            Interactive analysis by{' '}
+            <a href="https://ianadamsresearch.com" className="text-violet-600 hover:underline">
+              Ian T. Adams, Ph.D.
+            </a>
+          </div>
+          <div className="text-xs">
+            Benchmark selection is an analytical choice with significant implications.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

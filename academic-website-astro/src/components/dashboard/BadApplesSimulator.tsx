@@ -2,6 +2,15 @@ import { useState, useEffect, useMemo, useCallback } from 'react';
 import { DARK_LAYOUT, LIGHT_LAYOUT } from './types';
 import type { PlotParams } from 'react-plotly.js';
 
+// Amber color palette for Bad Apples dashboard
+const COLORS = {
+  primary: '#D97706',
+  primaryDark: '#B45309',
+  accent: '#F59E0B',
+  navy: '#1E293B',
+  slate: '#334155',
+};
+
 // Client-side only Plot component wrapper
 function PlotWrapper(props: PlotParams) {
   const [Plot, setPlot] = useState<React.ComponentType<PlotParams> | null>(null);
@@ -15,7 +24,7 @@ function PlotWrapper(props: PlotParams) {
   if (!Plot) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-700 dark:border-primary-400"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-600 dark:border-amber-400"></div>
       </div>
     );
   }
@@ -382,130 +391,155 @@ export default function BadApplesSimulator() {
   const baseLayout = isDark ? DARK_LAYOUT : LIGHT_LAYOUT;
 
   return (
-    <div>
-      {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary-900 dark:text-gray-100 mb-4">
-          "Bad Apples" Policy Simulator
+    <div className="min-h-screen">
+      {/* Hero Header */}
+      <header className="border-b-4 border-amber-600 pb-8 mb-8">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-1 h-12 bg-amber-600"></div>
+          <span className="text-sm font-bold tracking-widest uppercase text-amber-600">
+            Policy Simulation
+          </span>
+        </div>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 dark:text-white leading-tight mb-4">
+          The "Bad Apples" Problem<br />
+          <span className="text-amber-600">Can We Identify Them?</span>
         </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
-          Explore how data density bias affects our understanding of police complaint concentration,
-          and simulate the impact of early warning system policies. Based on{' '}
-          <a
-            href="https://doi.org/10.1111/1745-9133.12542"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent-burgundy dark:text-accent-gold hover:underline"
-          >
-            Chalfin & Kaplan (2021)
-          </a>.
+        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl font-light leading-relaxed">
+          Explore how data density bias affects our understanding of complaint concentration,
+          and simulate the impact of early warning system policies.
         </p>
-      </div>
+        <div className="flex items-center gap-6 mt-6 text-sm text-gray-500 dark:text-gray-400">
+          <span className="flex items-center gap-2">
+            <span className="w-2 h-2 bg-amber-600 rounded-full"></span>
+            Based on{' '}
+            <a
+              href="https://doi.org/10.1111/1745-9133.12542"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-600 hover:underline"
+            >
+              Chalfin & Kaplan (2021)
+            </a>
+          </span>
+        </div>
+      </header>
 
       {/* Global Controls */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-            Number of Officers
-          </label>
-          <input
-            type="number"
-            value={numOfficers}
-            onChange={(e) => setNumOfficers(Math.max(100, Math.min(15000, parseInt(e.target.value) || 1000)))}
-            className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-            Number of Complaints
-          </label>
-          <input
-            type="number"
-            value={numComplaints}
-            onChange={(e) => setNumComplaints(Math.max(10, Math.min(50000, parseInt(e.target.value) || 1500)))}
-            className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-            Top Percentile to Remove
-          </label>
-          <select
-            value={topPercentile}
-            onChange={(e) => setTopPercentile(parseInt(e.target.value))}
-            className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          >
-            <option value={2}>Top 2%</option>
-            <option value={5}>Top 5%</option>
-            <option value={10}>Top 10%</option>
-            <option value={20}>Top 20%</option>
-          </select>
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-            Data Density
-          </label>
-          <div className="px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
-            {metrics.dataDensity.toFixed(2)} complaints/officer
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 mb-8">
+        <h2 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <span className="w-1 h-6 bg-amber-600"></span>
+          Simulation Parameters
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+              Number of Officers
+            </label>
+            <input
+              type="number"
+              value={numOfficers}
+              onChange={(e) => setNumOfficers(Math.max(100, Math.min(15000, parseInt(e.target.value) || 1000)))}
+              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+              Number of Complaints
+            </label>
+            <input
+              type="number"
+              value={numComplaints}
+              onChange={(e) => setNumComplaints(Math.max(10, Math.min(50000, parseInt(e.target.value) || 1500)))}
+              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+              Top Percentile to Remove
+            </label>
+            <select
+              value={topPercentile}
+              onChange={(e) => setTopPercentile(parseInt(e.target.value))}
+              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+            >
+              <option value={2}>Top 2%</option>
+              <option value={5}>Top 5%</option>
+              <option value={10}>Top 10%</option>
+              <option value={20}>Top 20%</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+              Data Density
+            </label>
+            <div className="px-3 py-2 rounded bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200 font-mono font-bold">
+              {metrics.dataDensity.toFixed(2)} <span className="text-xs font-normal">complaints/officer</span>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Tab Navigation */}
-      <div className="border-b border-gray-200 dark:border-gray-700 mb-6">
-        <nav className="flex space-x-4 overflow-x-auto">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
-                activeTab === tab.id
-                  ? 'border-primary-700 text-primary-700 dark:border-primary-400 dark:text-primary-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </nav>
-      </div>
+      <nav className="flex border-b border-gray-200 dark:border-gray-700 mb-8">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`px-6 py-4 text-sm font-semibold tracking-wide uppercase transition-colors relative ${
+              activeTab === tab.id
+                ? 'text-amber-600 dark:text-amber-400'
+                : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+            }`}
+          >
+            {tab.label}
+            {activeTab === tab.id && (
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-amber-600"></div>
+            )}
+          </button>
+        ))}
+      </nav>
 
       {/* Tab Content - Using CSS display to prevent unmount/remount issues with Plotly */}
       <div style={{ display: activeTab === 'bias' ? 'block' : 'none' }}>
         <div className="space-y-6">
           {/* Key Insight Box */}
-          <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
-            <h4 className="font-semibold text-amber-800 dark:text-amber-200 mb-2">Key Insight: Data Density Bias</h4>
-            <p className="text-amber-700 dark:text-amber-300 text-sm">
-              When complaints are sparse relative to officers, even <strong>random</strong> assignment
-              creates apparent concentration. The "top 2% account for X% of complaints" statistic
-              is misleading without comparing to this null distribution.
-            </p>
+          <div className="bg-gray-900 dark:bg-gray-800 text-white p-6 -mx-4 sm:mx-0">
+            <div className="max-w-4xl">
+              <h3 className="text-2xl font-serif font-bold mb-3">The Data Density Illusion</h3>
+              <p className="text-gray-300 leading-relaxed">
+                When complaints are sparse relative to officers, even <strong className="text-amber-400">random</strong> assignment
+                creates apparent concentration. The "top 2% account for X% of complaints" statistic
+                is misleading without comparing to this null distribution.
+              </p>
+            </div>
           </div>
 
           {/* Metrics Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="value-box">
-              <div className="value-box-title">Top 2% Share (Actual)</div>
-              <div className="value-box-value">{metrics.actualShare2.toFixed(1)}%</div>
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
+              <div className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">Top 2% Share (Actual)</div>
+              <div className="text-3xl font-bold font-serif text-gray-900 dark:text-white">{metrics.actualShare2.toFixed(1)}%</div>
             </div>
-            <div className="value-box">
-              <div className="value-box-title">Top 2% Share (Random)</div>
-              <div className="value-box-value">{metrics.simShare2.toFixed(1)}%</div>
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
+              <div className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">Top 2% Share (Random)</div>
+              <div className="text-3xl font-bold font-serif text-gray-900 dark:text-white">{metrics.simShare2.toFixed(1)}%</div>
             </div>
-            <div className="value-box">
-              <div className="value-box-title">Naive Relative Risk</div>
-              <div className="value-box-value">{metrics.naiveRR2.toFixed(1)}x</div>
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
+              <div className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">Naive Relative Risk</div>
+              <div className="text-3xl font-bold font-serif text-gray-900 dark:text-white">{metrics.naiveRR2.toFixed(1)}x</div>
             </div>
-            <div className="value-box">
-              <div className="value-box-title">Adjusted Relative Risk</div>
-              <div className="value-box-value text-accent-burgundy dark:text-accent-gold">{metrics.adjustedRR2.toFixed(1)}x</div>
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
+              <div className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">Adjusted Relative Risk</div>
+              <div className="text-3xl font-bold font-serif text-amber-600 dark:text-amber-400">{metrics.adjustedRR2.toFixed(1)}x</div>
             </div>
           </div>
 
           {/* Concentration Chart */}
-          <div className="card p-6">
-            <h3 className="text-lg font-semibold mb-4">Complaint Concentration Curves</h3>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+            <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+              <span className="w-1 h-6 bg-amber-600"></span>
+              Complaint Concentration Curves
+            </h3>
             <PlotWrapper
               data={[
                 {
@@ -563,19 +597,19 @@ export default function BadApplesSimulator() {
           </div>
 
           {/* Explanation */}
-          <div className="card p-6">
-            <h3 className="text-lg font-semibold mb-4">Understanding the Math</h3>
-            <div className="prose dark:prose-invert max-w-none text-sm">
+          <div className="bg-gray-100 dark:bg-gray-900 p-6 border-l-4 border-amber-600">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Understanding the Math</h3>
+            <div className="text-gray-700 dark:text-gray-300 space-y-3">
               <p>
                 The naive calculation suggests the top 2% of officers are <strong>{metrics.naiveRR2.toFixed(1)}x</strong> more
                 likely to generate complaints. However, even under random assignment, the top 2% would
                 be <strong>{(metrics.simShare2 / 2 / ((100 - metrics.simShare2) / 98)).toFixed(1)}x</strong> more
                 likely simply due to statistical clustering.
               </p>
-              <p className="mt-2">
+              <p>
                 After correcting for data density bias, the top 2% are actually only{' '}
-                <strong className="text-accent-burgundy dark:text-accent-gold">{metrics.adjustedRR2.toFixed(1)}x</strong>{' '}
-                more likely to generate complaints - still elevated, but far less dramatic than the naive estimate.
+                <strong className="text-amber-600 dark:text-amber-400">{metrics.adjustedRR2.toFixed(1)}x</strong>{' '}
+                more likely to generate complaints—still elevated, but far less dramatic than the naive estimate.
               </p>
             </div>
           </div>
@@ -584,16 +618,28 @@ export default function BadApplesSimulator() {
 
       <div style={{ display: activeTab === 'persistence' ? 'block' : 'none' }}>
         <div className="space-y-6">
+          {/* Key Insight Banner */}
+          <div className="bg-gray-900 dark:bg-gray-800 text-white p-6 -mx-4 sm:mx-0">
+            <div className="max-w-4xl">
+              <h3 className="text-2xl font-serif font-bold mb-3">The Prediction Problem</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Officers in the top 2% during probation have only a <strong className="text-amber-400">~2-4% chance</strong> of remaining
+                in the top 2% over the next 10 years. Even with a 5-year observation window,
+                positive predictive values remain modest, making surgical "bad apple" removal challenging.
+              </p>
+            </div>
+          </div>
+
           {/* Controls */}
-          <div className="flex gap-4 items-end">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                Probation Period
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
+            <div className="flex gap-4 items-center">
+              <label className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                Probation Period:
               </label>
               <select
                 value={probationMonths}
                 onChange={(e) => setProbationMonths(parseInt(e.target.value))}
-                className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                className="px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
               >
                 <option value={18}>18 months (standard)</option>
                 <option value={60}>5 years (extended)</option>
@@ -601,21 +647,14 @@ export default function BadApplesSimulator() {
             </div>
           </div>
 
-          {/* Key Insight */}
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">Key Insight: Persistence is Imperfect</h4>
-            <p className="text-blue-700 dark:text-blue-300 text-sm">
-              Officers in the top 2% during probation have only a ~2-4% chance of remaining
-              in the top 2% over the next 10 years. Even with a 5-year observation window,
-              positive predictive values remain modest, making surgical "bad apple" removal challenging.
-            </p>
-          </div>
-
           {/* Persistence Heatmap */}
-          <div className="card p-6">
-            <h3 className="text-lg font-semibold mb-4">Persistence Matrix: Positive Predictive Values (%)</h3>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+            <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+              <span className="w-1 h-6 bg-amber-600"></span>
+              Persistence Matrix
+            </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-              Rows = percentile ranking during probation period | Columns = percentile ranking in 10-year follow-up
+              Positive Predictive Values (%) — Rows: probation ranking | Columns: 10-year follow-up ranking
             </p>
 
             <div className="overflow-x-auto">
@@ -669,81 +708,92 @@ export default function BadApplesSimulator() {
 
       <div style={{ display: activeTab === 'policy' ? 'block' : 'none' }}>
         <div className="space-y-6">
-          {/* Controls */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                Replacement Strategy
-              </label>
-              <select
-                value={replacementStrategy}
-                onChange={(e) => setReplacementStrategy(e.target.value as SimulationParams['replacementStrategy'])}
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-              >
-                <option value="median">Median officer (40-60th percentile)</option>
-                <option value="p70_90">70-90th percentile</option>
-                <option value="same_district_median">Same district, median</option>
-                <option value="same_district_p70_90">Same district, 70-90th percentile</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                Probation Period
-              </label>
-              <select
-                value={probationMonths}
-                onChange={(e) => setProbationMonths(parseInt(e.target.value))}
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-              >
-                <option value={18}>18 months</option>
-                <option value={60}>5 years</option>
-              </select>
-            </div>
-            <div className="flex items-end">
-              <button
-                onClick={runPolicySimulation}
-                disabled={isSimulating}
-                className="w-full px-4 py-2 bg-primary-700 hover:bg-primary-800 disabled:bg-gray-400 text-white rounded-lg transition-colors"
-              >
-                {isSimulating ? 'Simulating...' : 'Run Simulation'}
-              </button>
+          {/* Key Insight Banner */}
+          <div className="bg-gray-900 dark:bg-gray-800 text-white p-6 -mx-4 sm:mx-0">
+            <div className="max-w-4xl">
+              <h3 className="text-2xl font-serif font-bold mb-3">Modest Incapacitation Effects</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Chalfin & Kaplan find that removing the top 10% of officers (identified ex ante)
+                and replacing them with median officers would reduce complaints by only <strong className="text-amber-400">4-6%</strong>.
+                This modest effect stems from both prediction difficulty and the fact that replacement
+                officers also generate complaints.
+              </p>
             </div>
           </div>
 
-          {/* Key Insight */}
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-            <h4 className="font-semibold text-green-800 dark:text-green-200 mb-2">Key Insight: Modest Incapacitation Effects</h4>
-            <p className="text-green-700 dark:text-green-300 text-sm">
-              Chalfin & Kaplan find that removing the top 10% of officers (identified ex ante)
-              and replacing them with median officers would reduce complaints by only <strong>4-6%</strong>.
-              This modest effect stems from both prediction difficulty and the fact that replacement
-              officers also generate complaints.
-            </p>
+          {/* Controls */}
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+            <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+              <span className="w-1 h-6 bg-amber-600"></span>
+              Policy Parameters
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+                  Replacement Strategy
+                </label>
+                <select
+                  value={replacementStrategy}
+                  onChange={(e) => setReplacementStrategy(e.target.value as SimulationParams['replacementStrategy'])}
+                  className="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                >
+                  <option value="median">Median officer (40-60th percentile)</option>
+                  <option value="p70_90">70-90th percentile</option>
+                  <option value="same_district_median">Same district, median</option>
+                  <option value="same_district_p70_90">Same district, 70-90th percentile</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+                  Probation Period
+                </label>
+                <select
+                  value={probationMonths}
+                  onChange={(e) => setProbationMonths(parseInt(e.target.value))}
+                  className="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                >
+                  <option value={18}>18 months</option>
+                  <option value={60}>5 years</option>
+                </select>
+              </div>
+              <div className="flex items-end">
+                <button
+                  onClick={runPolicySimulation}
+                  disabled={isSimulating}
+                  className="w-full px-4 py-3 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 text-white font-semibold rounded transition-colors"
+                >
+                  {isSimulating ? 'Simulating...' : 'Run Simulation'}
+                </button>
+              </div>
+            </div>
           </div>
 
           {/* Results */}
           {policyResult && (
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-4">Simulation Results</h3>
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+              <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                <span className="w-1 h-6 bg-amber-600"></span>
+                Simulation Results
+              </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                <div className="value-box">
-                  <div className="value-box-title">Officers Removed</div>
-                  <div className="value-box-value">{Math.floor(numOfficers * topPercentile / 100)}</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div className="bg-gray-50 dark:bg-gray-900 p-4 text-center">
+                  <div className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">Officers Removed</div>
+                  <div className="text-3xl font-bold font-serif text-gray-900 dark:text-white">{Math.floor(numOfficers * topPercentile / 100)}</div>
                   <div className="text-xs text-gray-500 dark:text-gray-400">Top {topPercentile}% of {numOfficers}</div>
                 </div>
-                <div className="value-box">
-                  <div className="value-box-title">Est. Complaint Reduction</div>
-                  <div className="value-box-value text-green-600 dark:text-green-400">
+                <div className="bg-amber-50 dark:bg-amber-900/20 p-4 text-center">
+                  <div className="text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-300 mb-1">Est. Complaint Reduction</div>
+                  <div className="text-3xl font-bold font-serif text-amber-600 dark:text-amber-400">
                     {policyResult.mean.toFixed(1)}%
                   </div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">
+                  <div className="text-xs text-amber-600 dark:text-amber-400">
                     95% CI: [{policyResult.ci[0].toFixed(1)}%, {policyResult.ci[1].toFixed(1)}%]
                   </div>
                 </div>
-                <div className="value-box">
-                  <div className="value-box-title">Complaints Averted</div>
-                  <div className="value-box-value">
+                <div className="bg-gray-50 dark:bg-gray-900 p-4 text-center">
+                  <div className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">Complaints Averted</div>
+                  <div className="text-3xl font-bold font-serif text-gray-900 dark:text-white">
                     ~{Math.round(numComplaints * policyResult.mean / 100)}
                   </div>
                   <div className="text-xs text-gray-500 dark:text-gray-400">per observation period</div>
@@ -800,19 +850,25 @@ export default function BadApplesSimulator() {
 
       <div style={{ display: activeTab === 'calculator' ? 'block' : 'none' }}>
         <div className="space-y-6">
-          <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4">
-            <h4 className="font-semibold text-purple-800 dark:text-purple-200 mb-2">Build Your Own Scenario</h4>
-            <p className="text-purple-700 dark:text-purple-300 text-sm">
-              Adjust the parameters above to model your department's situation. The simulation
-              will estimate how much removing "bad apples" might reduce complaints, accounting
-              for prediction error and replacement effects.
-            </p>
+          {/* Key Insight Banner */}
+          <div className="bg-gray-900 dark:bg-gray-800 text-white p-6 -mx-4 sm:mx-0">
+            <div className="max-w-4xl">
+              <h3 className="text-2xl font-serif font-bold mb-3">Build Your Own Scenario</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Adjust the parameters to model your department's situation. The simulation
+                will estimate how much removing "bad apples" might reduce complaints, accounting
+                for prediction error and replacement effects.
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Input Controls */}
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-4">Your Parameters</h3>
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+              <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                <span className="w-1 h-6 bg-amber-600"></span>
+                Your Parameters
+              </h3>
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">Department Size</label>
@@ -878,15 +934,18 @@ export default function BadApplesSimulator() {
               <button
                 onClick={runPolicySimulation}
                 disabled={isSimulating}
-                className="w-full mt-6 px-4 py-3 bg-primary-700 hover:bg-primary-800 disabled:bg-gray-400 text-white rounded-lg transition-colors font-medium"
+                className="w-full mt-6 px-4 py-3 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 text-white font-semibold rounded transition-colors"
               >
                 {isSimulating ? 'Running Simulation...' : 'Calculate Impact'}
               </button>
             </div>
 
             {/* Results */}
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-4">Projected Outcomes</h3>
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+              <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                <span className="w-1 h-6 bg-amber-600"></span>
+                Projected Outcomes
+              </h3>
 
               {policyResult ? (
                 <div className="space-y-4">
@@ -974,22 +1033,38 @@ export default function BadApplesSimulator() {
         </div>
       </div>
 
-      {/* Footer Citation */}
-      <div className="mt-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          <strong>Reference:</strong> Chalfin, A., & Kaplan, J. (2021). How many complaints against
-          police officers can be abated by incapacitating a few "bad apples?" <em>Criminology & Public Policy</em>,
-          20(2), 351-370.{' '}
-          <a
-            href="https://doi.org/10.1111/1745-9133.12542"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent-burgundy dark:text-accent-gold hover:underline"
-          >
-            https://doi.org/10.1111/1745-9133.12542
-          </a>
-        </p>
-      </div>
+      {/* Footer */}
+      <footer className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <div className="bg-gray-50 dark:bg-gray-800 p-6 border border-gray-200 dark:border-gray-700">
+          <div className="text-xs font-bold uppercase tracking-wide text-gray-500 mb-3">
+            Citation
+          </div>
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            Chalfin, A., & Kaplan, J. (2021). How many complaints against
+            police officers can be abated by incapacitating a few "bad apples?"
+            <em> Criminology & Public Policy</em>, 20(2), 351-370.{' '}
+            <a
+              href="https://doi.org/10.1111/1745-9133.12542"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-600 hover:underline"
+            >
+              https://doi.org/10.1111/1745-9133.12542
+            </a>
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-6 text-sm text-gray-500 dark:text-gray-400">
+          <div>
+            Interactive analysis by{' '}
+            <a href="https://ianadamsresearch.com" className="text-amber-600 hover:underline">
+              Ian T. Adams, Ph.D.
+            </a>
+          </div>
+          <div className="text-xs">
+            Simulation results are illustrative. Actual effects will vary based on local conditions.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

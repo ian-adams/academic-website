@@ -23,9 +23,17 @@ const TopCitiesChart = lazy(() => import('./charts/TopCitiesChart'));
 const CriminalChargesChart = lazy(() => import('./charts/CriminalChargesChart'));
 const IncomeDisparitiesChart = lazy(() => import('./charts/IncomeDisparitiesChart'));
 
+// Teal color palette for MPV dashboard
+const COLORS = {
+  primary: '#0D9488',
+  primaryDark: '#0F766E',
+  accent: '#14B8A6',
+  slate: '#334155',
+};
+
 const ChartLoader = () => (
   <div className="flex items-center justify-center h-64">
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-700 dark:border-primary-400"></div>
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-600 dark:border-teal-400"></div>
   </div>
 );
 
@@ -181,7 +189,7 @@ export default function MPVDashboard() {
     return (
       <div className="flex items-center justify-center py-20">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-700 dark:border-primary-400 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-teal-600 dark:border-teal-400 mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400">Loading dashboard data...</p>
         </div>
       </div>
@@ -200,100 +208,113 @@ export default function MPVDashboard() {
   }
 
   return (
-    <div>
-      {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary-900 dark:text-gray-100 mb-4">
-          MPV Analytical Dashboard
+    <div className="min-h-screen">
+      {/* Hero Header */}
+      <header className="border-b-4 border-teal-600 pb-8 mb-8">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-1 h-12 bg-teal-600"></div>
+          <span className="text-sm font-bold tracking-widest uppercase text-teal-600">
+            Data Analysis
+          </span>
+        </div>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 dark:text-white leading-tight mb-4">
+          Police Violence in America<br />
+          <span className="text-teal-600">A Data-Driven Examination</span>
         </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
+        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl font-light leading-relaxed">
           Interactive analysis of{' '}
           <a
             href="https://mappingpoliceviolence.us"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent-burgundy dark:text-accent-gold hover:underline"
+            className="text-teal-600 dark:text-teal-400 hover:underline"
           >
             Mapping Police Violence
           </a>{' '}
           data. All results are descriptive and should not be used to infer causal relationships.
         </p>
-      </div>
+      </header>
 
       {/* Filters */}
-      <div className="flex flex-wrap gap-4 mb-8">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-            Death Subset
-          </label>
-          <select
-            value={filters.causeFilter}
-            onChange={(e) =>
-              setFilters((f) => ({ ...f, causeFilter: e.target.value as 'all' | 'shootings' }))
-            }
-            className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          >
-            <option value="all">All Deaths</option>
-            <option value="shootings">Fatal Shootings</option>
-          </select>
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-            Temporal Focus
-          </label>
-          <select
-            value={filters.yearFilter}
-            onChange={(e) => setFilters((f) => ({ ...f, yearFilter: e.target.value }))}
-            className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          >
-            <option value="All">All Years</option>
-            {years.map((year) => (
-              <option key={year} value={year.toString()}>
-                {year}
-              </option>
-            ))}
-          </select>
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 mb-8">
+        <div className="flex flex-wrap gap-6 items-end">
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+              Death Subset
+            </label>
+            <select
+              value={filters.causeFilter}
+              onChange={(e) =>
+                setFilters((f) => ({ ...f, causeFilter: e.target.value as 'all' | 'shootings' }))
+              }
+              className="px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+            >
+              <option value="all">All Deaths</option>
+              <option value="shootings">Fatal Shootings</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+              Temporal Focus
+            </label>
+            <select
+              value={filters.yearFilter}
+              onChange={(e) => setFilters((f) => ({ ...f, yearFilter: e.target.value }))}
+              className="px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+            >
+              <option value="All">All Years</option>
+              {years.map((year) => (
+                <option key={year} value={year.toString()}>
+                  {year}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="text-sm text-gray-500 dark:text-gray-400 ml-auto">
+            Showing: <span className="font-semibold text-gray-900 dark:text-white">{causeLabel}</span> for <span className="font-semibold text-gray-900 dark:text-white">{yearLabel}</span>
+          </div>
         </div>
       </div>
 
       {/* KPI Value Boxes */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div className="value-box">
-          <div className="value-box-title">Total Observations</div>
-          <div className="value-box-value">{kpis.total}</div>
+        <div className="bg-gray-900 dark:bg-gray-800 p-6 text-center">
+          <div className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Total Observations</div>
+          <div className="text-4xl font-bold font-serif text-white">{kpis.total}</div>
         </div>
-        <div className="value-box">
-          <div className="value-box-title">Mean Rate (per 1M)</div>
-          <div className="value-box-value">{kpis.rate}</div>
+        <div className="bg-gray-900 dark:bg-gray-800 p-6 text-center">
+          <div className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Mean Rate (per 1M)</div>
+          <div className="text-4xl font-bold font-serif text-white">{kpis.rate}</div>
         </div>
-        <div className="value-box">
-          <div className="value-box-title">Black Victim Share</div>
-          <div className="value-box-value">{kpis.blackPct}</div>
+        <div className="bg-gray-900 dark:bg-gray-800 p-6 text-center">
+          <div className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Black Victim Share</div>
+          <div className="text-4xl font-bold font-serif text-white">{kpis.blackPct}</div>
         </div>
-        <div className="value-box">
-          <div className="value-box-title">Unarmed Share</div>
-          <div className="value-box-value">{kpis.unarmedPct}</div>
+        <div className="bg-gray-900 dark:bg-gray-800 p-6 text-center">
+          <div className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Unarmed Share</div>
+          <div className="text-4xl font-bold font-serif text-white">{kpis.unarmedPct}</div>
         </div>
       </div>
 
       {/* Tab Navigation */}
-      <div className="border-b border-gray-200 dark:border-gray-700 mb-6">
-        <nav className="flex space-x-4 overflow-x-auto">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
-                activeTab === tab.id
-                  ? 'border-primary-700 text-primary-700 dark:border-primary-400 dark:text-primary-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </nav>
-      </div>
+      <nav className="flex border-b border-gray-200 dark:border-gray-700 mb-8">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`px-6 py-4 text-sm font-semibold tracking-wide uppercase transition-colors relative ${
+              activeTab === tab.id
+                ? 'text-teal-600 dark:text-teal-400'
+                : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+            }`}
+          >
+            {tab.label}
+            {activeTab === tab.id && (
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-teal-600"></div>
+            )}
+          </button>
+        ))}
+      </nav>
 
       {/* Tab Content */}
       <Suspense fallback={<ChartLoader />}>
@@ -506,13 +527,44 @@ export default function MPVDashboard() {
         )}
       </Suspense>
 
-      {/* Data note */}
-      <div className="mt-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          <strong>Data Source:</strong> Mapping Police Violence. Data is automatically synced and
-          processed. Last updated: {data?.updated ? new Date(data.updated).toLocaleDateString() : 'Unknown'}.
-        </p>
-      </div>
+      {/* Footer */}
+      <footer className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <div className="bg-gray-100 dark:bg-gray-800 p-6 mb-6">
+          <div className="flex items-start gap-3">
+            <span className="w-1 h-16 bg-teal-600 flex-shrink-0"></span>
+            <div>
+              <div className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+                About This Dashboard
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                This dashboard presents descriptive statistics from the Mapping Police Violence database.
+                These figures show patterns in the data but <strong>should not be interpreted as evidence of causal relationships</strong>.
+                Proper analysis requires controlling for numerous confounding variables not available in this dataset.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+          <div>
+            <strong>Data Source:</strong>{' '}
+            <a
+              href="https://mappingpoliceviolence.us"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal-600 hover:underline"
+            >
+              Mapping Police Violence
+            </a>.
+            Last updated: {data?.updated ? new Date(data.updated).toLocaleDateString() : 'Unknown'}.
+          </div>
+          <div className="text-xs">
+            Dashboard by{' '}
+            <a href="https://ianadamsresearch.com" className="text-teal-600 hover:underline">
+              Ian T. Adams, Ph.D.
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
