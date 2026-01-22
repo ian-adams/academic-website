@@ -50,17 +50,17 @@ export default function ResearchSummary() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">What did I do?</h4>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">What did we do?</h4>
             <p className="text-gray-600 dark:text-gray-400">
-              I surveyed nearly 1,500 law enforcement executives (72%) and HR directors (25%) from agencies
+              We surveyed nearly 1,500 law enforcement executives (72%) and HR directors (25%) from agencies
               across all 50 US states. With an average of 27.5 years of professional experience, these leaders
-              rated realistic scenarios of officers using profanity. I also documented 50 different "fuck"
+              rated realistic scenarios of officers using profanity. We also documented 50 different "fuck"
               derivatives commonly used in police culture—that's where The Fuckulator quiz comes from.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">What did I find?</h4>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">What did we find?</h4>
             <ul className="space-y-2 text-gray-600 dark:text-gray-400">
               <li className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
