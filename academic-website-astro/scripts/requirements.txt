@@ -1,0 +1,4 @@
+# Python dependencies for utility scripts
+# Used by: fetch-scholar-metrics.py
+
+scholarly>=1.7.0
