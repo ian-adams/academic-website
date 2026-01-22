@@ -1,7 +1,64 @@
 {
-  "updated": "2026-01-20T13:12:41Z",
-  "count": 68,
+  "updated": "2026-01-22T12:05:27.990Z",
+  "count": 71,
   "stories": [
+    {
+      "id": "4b5bae51845b2d781387cbd40043f4fe",
+      "url": "https://abcnews.go.com/US/wireStory/immigration-agents-police-minneapolis-protests-experts-warn-training-129255700",
+      "title": "As immigration agents police Minneapolis protests, experts warn of training gaps and the rising risk",
+      "source": "ABC News",
+      "date": "2026-01-15",
+      "date_discovered": "2026-01-22",
+      "summary": "<a href=\"https://abcnews.go.com/US/wireStory/immigration-agents-police-minneapolis-protests-experts-warn-training-129255700\" target=\"_blank\">As immigration agents police Minneapolis protests, experts warn of training gaps and the rising risk</a> <font color=\"#6f6f6f\">ABC News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.1,
+      "key_entities": "federal immigration agents, Minneapolis protests, crowd-control tactics, chemical irritants",
+      "location": "Minneapolis",
+      "tags": [
+        "expert commentary",
+        "policing",
+        "use of force"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "9e2e49d1be5f4b157300e3f47b9bbc22",
+      "url": "https://www.denverpost.com/2026/01/15/immigration-enforcement-minneapolis-tactics/",
+      "title": "As immigration agents police Minneapolis protests, experts warn of training gaps and the rising risk",
+      "source": "The Denver Post",
+      "date": "2026-01-15",
+      "date_discovered": "2026-01-22",
+      "summary": "<a href=\"https://www.denverpost.com/2026/01/15/immigration-enforcement-minneapolis-tactics/\" target=\"_blank\">As immigration agents police Minneapolis protests, experts warn of training gaps and the rising risk</a> <font color=\"#6f6f6f\">The Denver Post</font>",
+      "story_type": "incident",
+      "relevance_score": 0.1,
+      "key_entities": "immigration agents, Minneapolis protests, crowd-control tactics, chemical irritants",
+      "location": "Minneapolis",
+      "tags": [
+        "expert commentary",
+        "policing",
+        "use of force"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "75e964071ba52be74627936111e9abe0",
+      "url": "https://www.bostonherald.com/2026/01/15/immigration-enforcement-minneapolis-tactics/",
+      "title": "As immigration agents police Minneapolis protests, experts warn of training gaps and the rising risk",
+      "source": "Boston Herald",
+      "date": "2026-01-15",
+      "date_discovered": "2026-01-22",
+      "summary": "<a href=\"https://www.bostonherald.com/2026/01/15/immigration-enforcement-minneapolis-tactics/\" target=\"_blank\">As immigration agents police Minneapolis protests, experts warn of training gaps and the rising risk</a> <font color=\"#6f6f6f\">Boston Herald</font>",
+      "story_type": "incident",
+      "relevance_score": 0.1,
+      "key_entities": "immigration enforcement, Minneapolis protests, crowd control tactics, chemical irritants",
+      "location": "Minneapolis",
+      "tags": [
+        "expert commentary",
+        "policing",
+        "use of force"
+      ],
+      "needs_review": 1
+    },
     {
       "id": "kcur20251212",
       "url": "https://www.kcur.org/news/2025-12-12/force-science-law-enforcement-training-research-lenexa-police-discredited",
@@ -14,7 +71,10 @@
       "story_type": "investigative",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["Training", "Policy/Reform"],
+      "topics": [
+        "Training",
+        "Policy/Reform"
+      ],
       "needs_review": 0,
       "featured": 1
     },
@@ -30,7 +90,10 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Body Cameras"],
+      "topics": [
+        "AI/Technology",
+        "Body Cameras"
+      ],
       "needs_review": 0,
       "featured": 1
     },
@@ -47,7 +110,11 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Use of Force", "Policy/Reform"],
+      "topics": [
+        "AI/Technology",
+        "Use of Force",
+        "Policy/Reform"
+      ],
       "needs_review": 0,
       "featured": 1
     },
@@ -64,9 +131,33 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Use of Force", "Policy/Reform"],
+      "topics": [
+        "AI/Technology",
+        "Use of Force",
+        "Policy/Reform"
+      ],
       "needs_review": 0,
       "featured": 1
+    },
+    {
+      "id": "postandcourier20251109",
+      "url": "https://www.postandcourier.com/charleston_sc/isle-of-palms-ai-police-reports/article_420bdcba-469a-4d57-acdc-50bb9216c842.html",
+      "title": "Isle of Palms police are using AI to draft reports from body camera footage. Here's how it works.",
+      "source": "Post and Courier",
+      "date": "2025-11-09",
+      "date_discovered": "2026-01-07",
+      "summary": "Coverage of Isle of Palms police department's adoption of AI for report writing from body camera footage.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": [
+        "AI/Technology",
+        "Body Cameras",
+        "Report Writing"
+      ],
+      "needs_review": 0,
+      "featured": 0
     },
     {
       "id": "wapo20251101",
@@ -80,7 +171,10 @@
       "story_type": "investigative",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["Use of Force", "Policy/Reform"],
+      "topics": [
+        "Use of Force",
+        "Policy/Reform"
+      ],
       "needs_review": 0,
       "featured": 1
     },
@@ -96,9 +190,31 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["Use of Force", "Policy/Reform"],
+      "topics": [
+        "Use of Force",
+        "Policy/Reform"
+      ],
       "needs_review": 0,
       "featured": 1
+    },
+    {
+      "id": "therecord20250929",
+      "url": "https://therecord.media/law-enforcement-ai-platforms-synthesize-evidence-criminal-cases",
+      "title": "Law enforcement is using AI to synthesize evidence. Is the justice system ready for it?",
+      "source": "The Record",
+      "date": "2025-09-29",
+      "date_discovered": "2026-01-07",
+      "summary": "Examination of AI platforms being used by law enforcement to synthesize evidence in criminal cases.",
+      "mention_type": "quoted",
+      "story_type": "feature",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": [
+        "AI/Technology",
+        "Policy/Reform"
+      ],
+      "needs_review": 0,
+      "featured": 0
     },
     {
       "id": "wsj20250806",
@@ -115,278 +231,6 @@
       "topics": "Policy/Reform",
       "needs_review": 0,
       "featured": 1
-    },
-    {
-      "id": "ap20250428",
-      "url": "https://apnews.com/article/grand-rapids-michigan-police-shooting-lyoya-schurr-7f50168b3e22c59a2e5d032542fab987",
-      "title": "What to know about the trial of an ex-Michigan officer charged in the killing of a Black motorist",
-      "source": "AP News",
-      "date": "2025-04-28",
-      "date_discovered": "2026-01-07",
-      "summary": "Background and context on the Patrick Lyoya shooting trial.",
-      "mention_type": "quoted",
-      "story_type": "news",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": "Use of Force",
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "cnbc20241126",
-      "url": "https://www.cnbc.com/2024/11/26/police-departments-are-using-ai-to-write-crime-reports.html",
-      "title": "Police departments across U.S. are starting to use artificial intelligence to write crime reports",
-      "source": "CNBC",
-      "date": "2024-11-26",
-      "date_discovered": "2026-01-07",
-      "summary": "National coverage of AI adoption for police report writing across US departments.",
-      "mention_type": "quoted",
-      "story_type": "news",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Report Writing"],
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "kqed20241003",
-      "url": "https://www.kqed.org/news/12007520/how-artificial-intelligence-is-changing-the-reports-police-write",
-      "title": "How Artificial Intelligence Is Changing The Reports Police Write",
-      "source": "KQED (NPR)",
-      "date": "2024-10-03",
-      "date_discovered": "2026-01-07",
-      "summary": "In-depth coverage of AI's impact on police report writing practices.",
-      "mention_type": "quoted",
-      "story_type": "feature",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Report Writing"],
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "reducingcrime20241001",
-      "url": "https://podcasts.apple.com/us/podcast/75-ian-adams/id1412813382?i=1000671268077",
-      "title": "Ian Adams - Reducing Crime Podcast Episode 75",
-      "source": "Reducing Crime Podcast",
-      "date": "2024-10-01",
-      "date_discovered": "2026-01-07",
-      "summary": "Full podcast interview on the Reducing Crime podcast with Jerry Ratcliffe.",
-      "mention_type": "quoted",
-      "story_type": "interview",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Policy/Reform"],
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "npr20240924",
-      "url": "https://www.npr.org/2024/09/23/nx-s1-5096298/human-reviewers-cant-keep-up-with-all-the-police-body-cam-videos-now-theyre-giving-the-job-to-ai",
-      "title": "Human reviewers, who can't keep up with all the police body cam videos, welcome AI",
-      "source": "NPR Morning Edition",
-      "date": "2024-09-24",
-      "date_discovered": "2026-01-07",
-      "summary": "NPR national broadcast on AI being used to review body camera footage.",
-      "mention_type": "quoted",
-      "story_type": "news",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Body Cameras"],
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "wapo20240910",
-      "url": "https://www.washingtonpost.com/dc-md-va/2024/09/10/dc-police-shooting-video-protests-justin-robinson-death/",
-      "title": "Video of D.C. police fatally shooting violence interrupter sparks protests",
-      "source": "Washington Post",
-      "date": "2024-09-10",
-      "date_discovered": "2026-01-07",
-      "summary": "Coverage of DC police shooting of violence interrupter Justin Robinson.",
-      "mention_type": "quoted",
-      "story_type": "news",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": "Use of Force",
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "ap20240730",
-      "url": "https://apnews.com/article/denver-police-hazing-lawsuit-9098ccb36f43762c9f9fa91ab54041dd",
-      "title": "Police recruit who lost both legs in 'barbaric hazing ritual' sues Denver, paramedics and officers",
-      "source": "AP News",
-      "date": "2024-07-30",
-      "date_discovered": "2026-01-07",
-      "summary": "Coverage of lawsuit over Denver police hazing incident.",
-      "mention_type": "quoted",
-      "story_type": "news",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": ["Training", "Policy/Reform"],
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "ap20240511",
-      "url": "https://apnews.com/article/florida-deputy-black-airman-killed-fortson-5b97a30b51272413346b255235f3ba70",
-      "title": "Experts say gun alone doesn't justify deadly force in fatal shooting of Florida airman",
-      "source": "AP News",
-      "date": "2024-05-11",
-      "date_discovered": "2026-01-07",
-      "summary": "Expert analysis on Roger Fortson shooting by Florida deputy.",
-      "mention_type": "quoted",
-      "story_type": "news",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": "Use of Force",
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "nbc20240417",
-      "url": "https://www.nbcnews.com/nightly-news/video/l-a-police-chief-says-officer-shortage-makes-it-harder-to-respond-to-some-calls-209212485616",
-      "title": "L.A. police chief says officer shortage makes it harder to respond to some calls",
-      "source": "NBC Nightly News",
-      "date": "2024-04-17",
-      "date_discovered": "2026-01-07",
-      "summary": "National broadcast coverage on police staffing shortages in Los Angeles.",
-      "mention_type": "quoted",
-      "story_type": "news",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": "Policy/Reform",
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "nyt20240406",
-      "url": "https://www.nytimes.com/2024/04/06/nyregion/nypd-violence-interrupters-sos.html",
-      "title": "Arrests Expose Rift Between N.Y.P.D. and 'Violence Interrupters'",
-      "source": "New York Times",
-      "date": "2024-04-06",
-      "date_discovered": "2026-01-07",
-      "summary": "Investigation into tensions between NYPD and violence interrupter programs.",
-      "mention_type": "quoted",
-      "story_type": "investigative",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": "Policy/Reform",
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "npr20231015",
-      "url": "https://www.npr.org/2023/10/15/1206041620/california-bans-excited-delirium-term-as-a-cause-of-death",
-      "title": "California bans 'excited delirium' term as a cause of death",
-      "source": "NPR All Things Considered",
-      "date": "2023-10-15",
-      "date_discovered": "2026-01-07",
-      "summary": "NPR coverage of California banning 'excited delirium' with expert commentary.",
-      "mention_type": "quoted",
-      "story_type": "news",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": ["Use of Force", "Policy/Reform"],
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "undark20230724",
-      "url": "https://undark.org/2023/07/24/police-say-dogs-help-solve-crimes-little-evidence-supports-that/",
-      "title": "Police Say Dogs Help Solve Crimes. Little Evidence Supports That.",
-      "source": "Undark Magazine",
-      "date": "2023-07-24",
-      "date_discovered": "2026-01-07",
-      "summary": "Investigation into evidence supporting police K9 effectiveness.",
-      "mention_type": "quoted",
-      "story_type": "investigative",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": "Police K9",
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "nbc20230629",
-      "url": "https://youtu.be/036dw-RUZ90?t=2522",
-      "title": "Officer Burn Out - Top Story with Tom Llamas",
-      "source": "NBC News NOW",
-      "date": "2023-06-29",
-      "date_discovered": "2026-01-07",
-      "summary": "NBC national news segment on police officer burnout.",
-      "mention_type": "quoted",
-      "story_type": "news",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": "Policy/Reform",
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "npr20230318",
-      "url": "https://www.npr.org/2023/03/18/1163112111/police-didnt-get-defunded-but-many-large-departments-are-shrinking",
-      "title": "Police didn't get defunded but many large departments are shrinking",
-      "source": "NPR",
-      "date": "2023-03-18",
-      "date_discovered": "2026-01-07",
-      "summary": "NPR national coverage on police department staffing trends.",
-      "mention_type": "quoted",
-      "story_type": "news",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": "Policy/Reform",
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "npr20230128",
-      "url": "https://www.npr.org/2023/01/28/1152313361/policing-experts-condemn-memphis-officers-after-the-release-of-tyre-nichols-foot",
-      "title": "Policing experts condemn Memphis officers after the release of Tyre Nichols footage",
-      "source": "NPR Weekend Edition",
-      "date": "2023-01-28",
-      "date_discovered": "2026-01-07",
-      "summary": "NPR coverage of expert reactions to Tyre Nichols body camera footage.",
-      "mention_type": "quoted",
-      "story_type": "news",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": ["Use of Force", "Body Cameras"],
-      "needs_review": 0,
-      "featured": 1
-    },
-    {
-      "id": "postandcourier20251109",
-      "url": "https://www.postandcourier.com/charleston_sc/isle-of-palms-ai-police-reports/article_420bdcba-469a-4d57-acdc-50bb9216c842.html",
-      "title": "Isle of Palms police are using AI to draft reports from body camera footage. Here's how it works.",
-      "source": "Post and Courier",
-      "date": "2025-11-09",
-      "date_discovered": "2026-01-07",
-      "summary": "Coverage of Isle of Palms police department's adoption of AI for report writing from body camera footage.",
-      "mention_type": "quoted",
-      "story_type": "news",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Body Cameras", "Report Writing"],
-      "needs_review": 0,
-      "featured": 0
-    },
-    {
-      "id": "therecord20250929",
-      "url": "https://therecord.media/law-enforcement-ai-platforms-synthesize-evidence-criminal-cases",
-      "title": "Law enforcement is using AI to synthesize evidence. Is the justice system ready for it?",
-      "source": "The Record",
-      "date": "2025-09-29",
-      "date_discovered": "2026-01-07",
-      "summary": "Examination of AI platforms being used by law enforcement to synthesize evidence in criminal cases.",
-      "mention_type": "quoted",
-      "story_type": "feature",
-      "relevance_score": 0.95,
-      "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Policy/Reform"],
-      "needs_review": 0,
-      "featured": 0
     },
     {
       "id": "csm20250728",
@@ -416,7 +260,10 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["Use of Force", "Policy/Reform"],
+      "topics": [
+        "Use of Force",
+        "Policy/Reform"
+      ],
       "needs_review": 0,
       "featured": 0
     },
@@ -448,7 +295,10 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Body Cameras"],
+      "topics": [
+        "AI/Technology",
+        "Body Cameras"
+      ],
       "needs_review": 0,
       "featured": 0
     },
@@ -485,6 +335,22 @@
       "featured": 0
     },
     {
+      "id": "ap20250428",
+      "url": "https://apnews.com/article/grand-rapids-michigan-police-shooting-lyoya-schurr-7f50168b3e22c59a2e5d032542fab987",
+      "title": "What to know about the trial of an ex-Michigan officer charged in the killing of a Black motorist",
+      "source": "AP News",
+      "date": "2025-04-28",
+      "date_discovered": "2026-01-07",
+      "summary": "Background and context on the Patrick Lyoya shooting trial.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": "Use of Force",
+      "needs_review": 0,
+      "featured": 1
+    },
+    {
       "id": "kera20250221",
       "url": "https://www.keranews.org/government/2025-02-21/christopher-loyo-shooting-tarrant-county-body-camera-footage",
       "title": "Tarrant County says there's no video of fatal shooting—Sheriff's deputies don't wear body cameras",
@@ -496,7 +362,10 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["Body Cameras", "Use of Force"],
+      "topics": [
+        "Body Cameras",
+        "Use of Force"
+      ],
       "needs_review": 0,
       "featured": 0
     },
@@ -512,7 +381,10 @@
       "story_type": "investigative",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["Body Cameras", "Use of Force"],
+      "topics": [
+        "Body Cameras",
+        "Use of Force"
+      ],
       "needs_review": 0,
       "featured": 0
     },
@@ -544,7 +416,10 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["Police K9", "Use of Force"],
+      "topics": [
+        "Police K9",
+        "Use of Force"
+      ],
       "needs_review": 0,
       "featured": 0
     },
@@ -576,7 +451,10 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["Body Cameras", "Use of Force"],
+      "topics": [
+        "Body Cameras",
+        "Use of Force"
+      ],
       "needs_review": 0,
       "featured": 0
     },
@@ -640,9 +518,32 @@
       "story_type": "policy",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Report Writing", "Policy/Reform"],
+      "topics": [
+        "AI/Technology",
+        "Report Writing",
+        "Policy/Reform"
+      ],
       "needs_review": 0,
       "featured": 0
+    },
+    {
+      "id": "cnbc20241126",
+      "url": "https://www.cnbc.com/2024/11/26/police-departments-are-using-ai-to-write-crime-reports.html",
+      "title": "Police departments across U.S. are starting to use artificial intelligence to write crime reports",
+      "source": "CNBC",
+      "date": "2024-11-26",
+      "date_discovered": "2026-01-07",
+      "summary": "National coverage of AI adoption for police report writing across US departments.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": [
+        "AI/Technology",
+        "Report Writing"
+      ],
+      "needs_review": 0,
+      "featured": 1
     },
     {
       "id": "mercurynews20241102",
@@ -677,6 +578,44 @@
       "featured": 0
     },
     {
+      "id": "kqed20241003",
+      "url": "https://www.kqed.org/news/12007520/how-artificial-intelligence-is-changing-the-reports-police-write",
+      "title": "How Artificial Intelligence Is Changing The Reports Police Write",
+      "source": "KQED (NPR)",
+      "date": "2024-10-03",
+      "date_discovered": "2026-01-07",
+      "summary": "In-depth coverage of AI's impact on police report writing practices.",
+      "mention_type": "quoted",
+      "story_type": "feature",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": [
+        "AI/Technology",
+        "Report Writing"
+      ],
+      "needs_review": 0,
+      "featured": 1
+    },
+    {
+      "id": "reducingcrime20241001",
+      "url": "https://podcasts.apple.com/us/podcast/75-ian-adams/id1412813382?i=1000671268077",
+      "title": "Ian Adams - Reducing Crime Podcast Episode 75",
+      "source": "Reducing Crime Podcast",
+      "date": "2024-10-01",
+      "date_discovered": "2026-01-07",
+      "summary": "Full podcast interview on the Reducing Crime podcast with Jerry Ratcliffe.",
+      "mention_type": "quoted",
+      "story_type": "interview",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": [
+        "AI/Technology",
+        "Policy/Reform"
+      ],
+      "needs_review": 0,
+      "featured": 1
+    },
+    {
       "id": "clickhere20241001",
       "url": "https://podcasts.apple.com/us/podcast/170-ai-is-writing-police-reports-should-we-be-worried/id1225077306?i=1000671389738",
       "title": "AI is writing police reports: Should we be worried?",
@@ -688,7 +627,10 @@
       "story_type": "interview",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Report Writing"],
+      "topics": [
+        "AI/Technology",
+        "Report Writing"
+      ],
       "needs_review": 0,
       "featured": 0
     },
@@ -704,9 +646,31 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Report Writing"],
+      "topics": [
+        "AI/Technology",
+        "Report Writing"
+      ],
       "needs_review": 0,
       "featured": 0
+    },
+    {
+      "id": "npr20240924",
+      "url": "https://www.npr.org/2024/09/23/nx-s1-5096298/human-reviewers-cant-keep-up-with-all-the-police-body-cam-videos-now-theyre-giving-the-job-to-ai",
+      "title": "Human reviewers, who can't keep up with all the police body cam videos, welcome AI",
+      "source": "NPR Morning Edition",
+      "date": "2024-09-24",
+      "date_discovered": "2026-01-07",
+      "summary": "NPR national broadcast on AI being used to review body camera footage.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": [
+        "AI/Technology",
+        "Body Cameras"
+      ],
+      "needs_review": 0,
+      "featured": 1
     },
     {
       "id": "openvallejo20240923",
@@ -725,6 +689,22 @@
       "featured": 0
     },
     {
+      "id": "wapo20240910",
+      "url": "https://www.washingtonpost.com/dc-md-va/2024/09/10/dc-police-shooting-video-protests-justin-robinson-death/",
+      "title": "Video of D.C. police fatally shooting violence interrupter sparks protests",
+      "source": "Washington Post",
+      "date": "2024-09-10",
+      "date_discovered": "2026-01-07",
+      "summary": "Coverage of DC police shooting of violence interrupter Justin Robinson.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": "Use of Force",
+      "needs_review": 0,
+      "featured": 1
+    },
+    {
       "id": "wistv20240903",
       "url": "https://www.wistv.com/2024/09/03/usc-becomes-first-campus-state-use-ai-body-cam-technology-police-officers/",
       "title": "USC becomes first campus in the state to use AI Body Cam Technology for police officers",
@@ -736,7 +716,10 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Body Cameras"],
+      "topics": [
+        "AI/Technology",
+        "Body Cameras"
+      ],
       "needs_review": 0,
       "featured": 0
     },
@@ -752,7 +735,10 @@
       "story_type": "research",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Body Cameras"],
+      "topics": [
+        "AI/Technology",
+        "Body Cameras"
+      ],
       "needs_review": 0,
       "featured": 0
     },
@@ -789,6 +775,25 @@
       "featured": 0
     },
     {
+      "id": "ap20240730",
+      "url": "https://apnews.com/article/denver-police-hazing-lawsuit-9098ccb36f43762c9f9fa91ab54041dd",
+      "title": "Police recruit who lost both legs in 'barbaric hazing ritual' sues Denver, paramedics and officers",
+      "source": "AP News",
+      "date": "2024-07-30",
+      "date_discovered": "2026-01-07",
+      "summary": "Coverage of lawsuit over Denver police hazing incident.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": [
+        "Training",
+        "Policy/Reform"
+      ],
+      "needs_review": 0,
+      "featured": 1
+    },
+    {
       "id": "baltimoresun20240719",
       "url": "https://www.baltimoresun.com/2024/07/19/baltimore-police-gun-to-temple-restrained-man-suspension/",
       "title": "Police Accountability Board calls for suspension of Baltimore officer who put gun to temple of restrained man",
@@ -800,7 +805,10 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["Use of Force", "Policy/Reform"],
+      "topics": [
+        "Use of Force",
+        "Policy/Reform"
+      ],
       "needs_review": 0,
       "featured": 0
     },
@@ -819,6 +827,54 @@
       "topics": "Policy/Reform",
       "needs_review": 0,
       "featured": 0
+    },
+    {
+      "id": "ap20240511",
+      "url": "https://apnews.com/article/florida-deputy-black-airman-killed-fortson-5b97a30b51272413346b255235f3ba70",
+      "title": "Experts say gun alone doesn't justify deadly force in fatal shooting of Florida airman",
+      "source": "AP News",
+      "date": "2024-05-11",
+      "date_discovered": "2026-01-07",
+      "summary": "Expert analysis on Roger Fortson shooting by Florida deputy.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": "Use of Force",
+      "needs_review": 0,
+      "featured": 1
+    },
+    {
+      "id": "nbc20240417",
+      "url": "https://www.nbcnews.com/nightly-news/video/l-a-police-chief-says-officer-shortage-makes-it-harder-to-respond-to-some-calls-209212485616",
+      "title": "L.A. police chief says officer shortage makes it harder to respond to some calls",
+      "source": "NBC Nightly News",
+      "date": "2024-04-17",
+      "date_discovered": "2026-01-07",
+      "summary": "National broadcast coverage on police staffing shortages in Los Angeles.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": "Policy/Reform",
+      "needs_review": 0,
+      "featured": 1
+    },
+    {
+      "id": "nyt20240406",
+      "url": "https://www.nytimes.com/2024/04/06/nyregion/nypd-violence-interrupters-sos.html",
+      "title": "Arrests Expose Rift Between N.Y.P.D. and 'Violence Interrupters'",
+      "source": "New York Times",
+      "date": "2024-04-06",
+      "date_discovered": "2026-01-07",
+      "summary": "Investigation into tensions between NYPD and violence interrupter programs.",
+      "mention_type": "quoted",
+      "story_type": "investigative",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": "Policy/Reform",
+      "needs_review": 0,
+      "featured": 1
     },
     {
       "id": "baltimoresun20240318",
@@ -864,7 +920,10 @@
       "story_type": "feature",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["AI/Technology", "Report Writing"],
+      "topics": [
+        "AI/Technology",
+        "Report Writing"
+      ],
       "needs_review": 0,
       "featured": 0
     },
@@ -885,6 +944,25 @@
       "featured": 0
     },
     {
+      "id": "npr20231015",
+      "url": "https://www.npr.org/2023/10/15/1206041620/california-bans-excited-delirium-term-as-a-cause-of-death",
+      "title": "California bans 'excited delirium' term as a cause of death",
+      "source": "NPR All Things Considered",
+      "date": "2023-10-15",
+      "date_discovered": "2026-01-07",
+      "summary": "NPR coverage of California banning 'excited delirium' with expert commentary.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": [
+        "Use of Force",
+        "Policy/Reform"
+      ],
+      "needs_review": 0,
+      "featured": 1
+    },
+    {
       "id": "houstonlanding20230814",
       "url": "http://houstonlanding.org/houston-family-seeks-answers-on-fatal-police-shooting-gaps-in-released-footage/",
       "title": "Houston family seeks answers on fatal police shooting, gaps in released footage",
@@ -896,9 +974,28 @@
       "story_type": "investigative",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["Body Cameras", "Use of Force"],
+      "topics": [
+        "Body Cameras",
+        "Use of Force"
+      ],
       "needs_review": 0,
       "featured": 0
+    },
+    {
+      "id": "undark20230724",
+      "url": "https://undark.org/2023/07/24/police-say-dogs-help-solve-crimes-little-evidence-supports-that/",
+      "title": "Police Say Dogs Help Solve Crimes. Little Evidence Supports That.",
+      "source": "Undark Magazine",
+      "date": "2023-07-24",
+      "date_discovered": "2026-01-07",
+      "summary": "Investigation into evidence supporting police K9 effectiveness.",
+      "mention_type": "quoted",
+      "story_type": "investigative",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": "Police K9",
+      "needs_review": 0,
+      "featured": 1
     },
     {
       "id": "securityguys20230701",
@@ -915,6 +1012,22 @@
       "topics": "Policy/Reform",
       "needs_review": 0,
       "featured": 0
+    },
+    {
+      "id": "nbc20230629",
+      "url": "https://youtu.be/036dw-RUZ90?t=2522",
+      "title": "Officer Burn Out - Top Story with Tom Llamas",
+      "source": "NBC News NOW",
+      "date": "2023-06-29",
+      "date_discovered": "2026-01-07",
+      "summary": "NBC national news segment on police officer burnout.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": "Policy/Reform",
+      "needs_review": 0,
+      "featured": 1
     },
     {
       "id": "avlwatchdog20230605",
@@ -981,6 +1094,22 @@
       "featured": 0
     },
     {
+      "id": "npr20230318",
+      "url": "https://www.npr.org/2023/03/18/1163112111/police-didnt-get-defunded-but-many-large-departments-are-shrinking",
+      "title": "Police didn't get defunded but many large departments are shrinking",
+      "source": "NPR",
+      "date": "2023-03-18",
+      "date_discovered": "2026-01-07",
+      "summary": "NPR national coverage on police department staffing trends.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": "Policy/Reform",
+      "needs_review": 0,
+      "featured": 1
+    },
+    {
       "id": "wmbf20230301",
       "url": "https://www.wmbfnews.com/2023/03/02/wmbf-investigates-why-did-north-myrtle-beach-city-manager-wear-body-camera-community-event/",
       "title": "Why did the North Myrtle Beach City Manager wear a body camera to a community event?",
@@ -1024,9 +1153,31 @@
       "story_type": "opinion",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["Use of Force", "Policy/Reform"],
+      "topics": [
+        "Use of Force",
+        "Policy/Reform"
+      ],
       "needs_review": 0,
       "featured": 0
+    },
+    {
+      "id": "npr20230128",
+      "url": "https://www.npr.org/2023/01/28/1152313361/policing-experts-condemn-memphis-officers-after-the-release-of-tyre-nichols-foot",
+      "title": "Policing experts condemn Memphis officers after the release of Tyre Nichols footage",
+      "source": "NPR Weekend Edition",
+      "date": "2023-01-28",
+      "date_discovered": "2026-01-07",
+      "summary": "NPR coverage of expert reactions to Tyre Nichols body camera footage.",
+      "mention_type": "quoted",
+      "story_type": "news",
+      "relevance_score": 0.95,
+      "relevance_confidence": "high",
+      "topics": [
+        "Use of Force",
+        "Body Cameras"
+      ],
+      "needs_review": 0,
+      "featured": 1
     },
     {
       "id": "dailybeast20230128",
@@ -1088,7 +1239,10 @@
       "story_type": "news",
       "relevance_score": 0.95,
       "relevance_confidence": "high",
-      "topics": ["Use of Force", "Policy/Reform"],
+      "topics": [
+        "Use of Force",
+        "Policy/Reform"
+      ],
       "needs_review": 0,
       "featured": 0
     }
