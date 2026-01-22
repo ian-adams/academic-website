@@ -11,6 +11,6 @@
       "@data/*": ["src/data/*"]
     }
   },
-  "include": ["src/**/*", "env.d.ts"],
+  "include": ["src/**/*", "scripts/**/*", "env.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

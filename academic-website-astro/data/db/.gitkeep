@@ -1,0 +1,2 @@
+# This directory holds SQLite archive databases created by the scrapers
+# The actual .db files are ignored (see parent .gitignore)

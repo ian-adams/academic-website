@@ -1,0 +1,8 @@
+# Ignore SQLite database files (large, recreated by scrapers)
+db/*.db
+db/*.db-journal
+db/*.db-wal
+db/*.db-shm
+
+# Ignore log files (uploaded as artifacts instead)
+logs/

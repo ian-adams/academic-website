@@ -16,77 +16,35 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup R
-        uses: r-lib/actions/setup-r@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          r-version: '4.3.2'
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: academic-website-astro/package-lock.json
 
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libcurl4-openssl-dev \
-            libssl-dev \
-            libxml2-dev \
-            libsqlite3-dev
-
-      - name: Cache R packages
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-4.3-packages
-          restore-keys: ${{ runner.os }}-r-4.3-
-
-      - name: Install R dependencies
-        run: |
-          install.packages(c(
-            'here',
-            'yaml',
-            'dplyr',
-            'tidyr',
-            'stringr',
-            'purrr',
-            'lubridate',
-            'httr2',
-            'jsonlite',
-            'xml2',
-            'tidyRSS',
-            'DBI',
-            'RSQLite',
-            'digest'
-          ), repos = 'https://cloud.r-project.org')
-        shell: Rscript {0}
+      - name: Install dependencies
+        working-directory: academic-website-astro
+        run: npm ci
 
       - name: Create data directories
         run: |
-          mkdir -p data/media-mentions/logs
-          mkdir -p static/data
+          mkdir -p academic-website-astro/data/db
+          mkdir -p academic-website-astro/data/logs/media-mentions
 
-      - name: Restore database from previous run
-        id: restore-db
-        uses: actions/cache/restore@v4
-        with:
-          path: data/media-mentions/stories.sqlite
-          key: media-mentions-db-${{ github.run_id }}
-          restore-keys: |
-            media-mentions-db-
-
-      - name: Run media mentions aggregator pipeline
+      - name: Run media mentions scraper
+        working-directory: academic-website-astro
         env:
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          Rscript R/media-mentions-aggregator/run_pipeline.R
-        continue-on-error: false
+          npm run scrape:media-mentions 2>&1 | tee data/logs/media-mentions/run-$(date +'%Y%m%d-%H%M%S').log
 
       - name: Check for changes
         id: check-changes
         run: |
-          if [ -f static/data/media-mentions.json ]; then
-            if git diff --quiet static/data/media-mentions.json; then
-              echo "changes=false" >> $GITHUB_OUTPUT
-            else
-              echo "changes=true" >> $GITHUB_OUTPUT
-            fi
+          if git diff --quiet academic-website-astro/public/data/media-mentions.json 2>/dev/null; then
+            echo "changes=false" >> $GITHUB_OUTPUT
           else
             echo "changes=true" >> $GITHUB_OUTPUT
           fi
@@ -96,45 +54,38 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add static/data/media-mentions.json
-          git add static/data/media-mentions.xml
-          git add data/media-mentions/needs_review.json
+          git add academic-website-astro/public/data/media-mentions.json
+          git add academic-website-astro/public/data/media-mentions.xml
+          git add academic-website-astro/data/db/media-mentions.db || true
           git diff --quiet && git diff --staged --quiet || git commit -m "Update media mentions feed - $(date +'%Y-%m-%d')"
           git push
-
-      - name: Save database for next run
-        uses: actions/cache/save@v4
-        if: always()
-        with:
-          path: data/media-mentions/stories.sqlite
-          key: media-mentions-db-${{ github.run_id }}
 
       - name: Upload logs as artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: media-mentions-aggregator-logs
-          path: data/media-mentions/logs/
+          name: media-mentions-scraper-logs
+          path: academic-website-astro/data/logs/media-mentions/
           retention-days: 7
 
       - name: Report summary
         if: always()
         run: |
-          echo "## Media Mentions Aggregator Run Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## Media Mentions Scraper Run Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Run Date:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
-          if ls data/media-mentions/logs/*.log 1> /dev/null 2>&1; then
-            LATEST_LOG=$(ls -t data/media-mentions/logs/*.log | head -1)
+          if ls academic-website-astro/data/logs/media-mentions/*.log 1> /dev/null 2>&1; then
+            LATEST_LOG=$(ls -t academic-website-astro/data/logs/media-mentions/*.log | head -1)
             echo "**Latest Log:**" >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
-            tail -30 "$LATEST_LOG" >> $GITHUB_STEP_SUMMARY
+            tail -50 "$LATEST_LOG" >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           fi
 
-          if [ -f data/media-mentions/needs_review.json ]; then
-            REVIEW_COUNT=$(jq '.count' data/media-mentions/needs_review.json)
+          if [ -f academic-website-astro/public/data/media-mentions.json ]; then
+            STORY_COUNT=$(jq '.count' academic-website-astro/public/data/media-mentions.json)
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "**Stories needing review:** $REVIEW_COUNT" >> $GITHUB_STEP_SUMMARY
+            echo "**Total stories in feed:** $STORY_COUNT" >> $GITHUB_STEP_SUMMARY
           fi

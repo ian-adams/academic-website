@@ -16,42 +16,34 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.11'
-
-      - name: Cache Python dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('scripts/news_scraper/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: academic-website-astro/package-lock.json
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r scripts/news_scraper/requirements.txt
+        working-directory: academic-website-astro
+        run: npm ci
 
       - name: Create data directories
         run: |
-          mkdir -p assets/db
-          mkdir -p static/data
-          mkdir -p data/ai-police-news/logs
+          mkdir -p academic-website-astro/data/db
+          mkdir -p academic-website-astro/data/logs/ai-police-news
 
       - name: Run news scraper
+        working-directory: academic-website-astro
         env:
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          cd $GITHUB_WORKSPACE
-          python -m scripts.news_scraper.scraper 2>&1 | tee data/ai-police-news/logs/run-$(date +'%Y%m%d-%H%M%S').log
+          npm run scrape:ai-police 2>&1 | tee data/logs/ai-police-news/run-$(date +'%Y%m%d-%H%M%S').log
 
       - name: Check for changes
         id: check-changes
         run: |
-          if git diff --quiet static/data/ai-police-news.json assets/db/news_archive.db 2>/dev/null; then
+          if git diff --quiet academic-website-astro/public/data/ai-police-news.json 2>/dev/null; then
             echo "changes=false" >> $GITHUB_OUTPUT
           else
             echo "changes=true" >> $GITHUB_OUTPUT
@@ -62,9 +54,9 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add static/data/ai-police-news.json
-          git add static/data/ai-police-news.xml
-          git add assets/db/news_archive.db
+          git add academic-website-astro/public/data/ai-police-news.json
+          git add academic-website-astro/public/data/ai-police-news.xml
+          git add academic-website-astro/data/db/ai-police-news.db || true
           git diff --quiet && git diff --staged --quiet || git commit -m "Update AI police news feed - $(date +'%Y-%m-%d')"
           git push
 
@@ -72,8 +64,8 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: news-scraper-logs
-          path: data/ai-police-news/logs/
+          name: ai-police-news-scraper-logs
+          path: academic-website-astro/data/logs/ai-police-news/
           retention-days: 7
 
       - name: Report summary
@@ -84,16 +76,16 @@ jobs:
           echo "**Run Date:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
-          if ls data/ai-police-news/logs/*.log 1> /dev/null 2>&1; then
-            LATEST_LOG=$(ls -t data/ai-police-news/logs/*.log | head -1)
+          if ls academic-website-astro/data/logs/ai-police-news/*.log 1> /dev/null 2>&1; then
+            LATEST_LOG=$(ls -t academic-website-astro/data/logs/ai-police-news/*.log | head -1)
             echo "**Latest Log:**" >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
             tail -50 "$LATEST_LOG" >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           fi
 
-          if [ -f static/data/ai-police-news.json ]; then
-            STORY_COUNT=$(jq '.count' static/data/ai-police-news.json)
+          if [ -f academic-website-astro/public/data/ai-police-news.json ]; then
+            STORY_COUNT=$(jq '.count' academic-website-astro/public/data/ai-police-news.json)
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "**Total stories in feed:** $STORY_COUNT" >> $GITHUB_STEP_SUMMARY
           fi

@@ -16,42 +16,34 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.11'
-
-      - name: Cache Python dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('scripts/news_scraper/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: academic-website-astro/package-lock.json
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r scripts/news_scraper/requirements.txt
+        working-directory: academic-website-astro
+        run: npm ci
 
       - name: Create data directories
         run: |
-          mkdir -p assets/db
-          mkdir -p static/data
-          mkdir -p data/k9-incidents/logs
+          mkdir -p academic-website-astro/data/db
+          mkdir -p academic-website-astro/data/logs/k9-incidents
 
       - name: Run news scraper
+        working-directory: academic-website-astro
         env:
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          cd $GITHUB_WORKSPACE
-          python -m scripts.news_scraper.scraper --topic k9 2>&1 | tee data/k9-incidents/logs/run-$(date +'%Y%m%d-%H%M%S').log
+          npm run scrape:k9 2>&1 | tee data/logs/k9-incidents/run-$(date +'%Y%m%d-%H%M%S').log
 
       - name: Check for changes
         id: check-changes
         run: |
-          if git diff --quiet static/data/k9-incidents.json assets/db/k9_archive.db 2>/dev/null; then
+          if git diff --quiet academic-website-astro/public/data/k9-incidents.json 2>/dev/null; then
             echo "changes=false" >> $GITHUB_OUTPUT
           else
             echo "changes=true" >> $GITHUB_OUTPUT
@@ -62,9 +54,9 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add static/data/k9-incidents.json
-          git add static/data/k9-incidents.xml
-          git add assets/db/k9_archive.db
+          git add academic-website-astro/public/data/k9-incidents.json
+          git add academic-website-astro/public/data/k9-incidents.xml
+          git add academic-website-astro/data/db/k9-incidents.db || true
           git diff --quiet && git diff --staged --quiet || git commit -m "Update K9 incidents feed - $(date +'%Y-%m-%d')"
           git push
 
@@ -72,28 +64,28 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: k9-scraper-logs
-          path: data/k9-incidents/logs/
+          name: k9-incidents-scraper-logs
+          path: academic-website-astro/data/logs/k9-incidents/
           retention-days: 7
 
       - name: Report summary
         if: always()
         run: |
-          echo "## K9 Incidents Scraper Run Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## Police K9 Incidents Scraper Run Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Run Date:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
-          if ls data/k9-incidents/logs/*.log 1> /dev/null 2>&1; then
-            LATEST_LOG=$(ls -t data/k9-incidents/logs/*.log | head -1)
+          if ls academic-website-astro/data/logs/k9-incidents/*.log 1> /dev/null 2>&1; then
+            LATEST_LOG=$(ls -t academic-website-astro/data/logs/k9-incidents/*.log | head -1)
             echo "**Latest Log:**" >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
             tail -50 "$LATEST_LOG" >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           fi
 
-          if [ -f static/data/k9-incidents.json ]; then
-            STORY_COUNT=$(jq '.count' static/data/k9-incidents.json)
+          if [ -f academic-website-astro/public/data/k9-incidents.json ]; then
+            STORY_COUNT=$(jq '.count' academic-website-astro/public/data/k9-incidents.json)
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "**Total stories in feed:** $STORY_COUNT" >> $GITHUB_STEP_SUMMARY
           fi
