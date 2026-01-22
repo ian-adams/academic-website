@@ -205,7 +205,7 @@ export default function FCWCDashboard() {
         <div className="flex items-center gap-6 mt-6 text-sm text-gray-500 dark:text-gray-400">
           <span className="flex items-center gap-2">
             <span className="w-2 h-2 bg-red-700 rounded-full"></span>
-            Based on Adams, Mourtgos & Marier (forthcoming)
+            Based on Mourtgos & Adams, forthcoming at <em>Journal of Criminal Justice</em>
           </span>
         </div>
       </header>
@@ -819,8 +819,9 @@ export default function FCWCDashboard() {
               Citation
             </div>
             <p className="text-sm text-gray-700 dark:text-gray-300">
-              Adams, I. T., Mourtgos, S. M., & Marier, C. J. (forthcoming). Recalibrating the Risk of
+              Mourtgos, S. M., & Adams, I. T. (forthcoming). Recalibrating the Risk of
               False Confession Wrongful Convictions: A Bayesian Inverse Probability Simulation Approach.
+              <em>Journal of Criminal Justice</em>.
             </p>
           </div>
         </div>
