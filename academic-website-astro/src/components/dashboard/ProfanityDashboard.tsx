@@ -7,8 +7,9 @@ const TargetIntentExplorer = lazy(() => import('./TargetIntentExplorer'));
 const PublicVsExecutive = lazy(() => import('./PublicVsExecutive'));
 const DemographicExplorer = lazy(() => import('./DemographicExplorer'));
 const PolicyGenerator = lazy(() => import('./PolicyGenerator'));
+const ResearchSummary = lazy(() => import('./ResearchSummary'));
 
-type Tab = 'fuckulator' | 'judgment' | 'explorer' | 'comparison' | 'demographics' | 'policy';
+type Tab = 'fuckulator' | 'judgment' | 'explorer' | 'comparison' | 'demographics' | 'policy' | 'research';
 
 interface TabInfo {
   id: Tab;
@@ -53,6 +54,12 @@ const TABS: TabInfo[] = [
     label: 'Policy Generator',
     shortLabel: 'Policy',
     description: 'Create a custom profanity policy',
+  },
+  {
+    id: 'research',
+    label: 'The Research',
+    shortLabel: 'Research',
+    description: 'Learn about the science behind the dashboard',
   },
 ];
 
@@ -168,6 +175,7 @@ export default function ProfanityDashboard() {
           {activeTab === 'comparison' && <PublicVsExecutive />}
           {activeTab === 'demographics' && <DemographicExplorer />}
           {activeTab === 'policy' && <PolicyGenerator />}
+          {activeTab === 'research' && <ResearchSummary />}
         </Suspense>
       </div>
 
@@ -181,11 +189,27 @@ export default function ProfanityDashboard() {
             </h3>
             <div className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
               <p>
-                Adams, I. T. (2024). Fuck: The Police. <em>The Journal of Criminal Justice Education</em>.
+                Adams, I. T. (2024). Fuck: The Police. <em>Police Quarterly, 28</em>(1).{' '}
+                <a
+                  href="https://doi.org/10.1177/10986111241241750"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-600 hover:underline"
+                >
+                  doi.org/10.1177/10986111241241750
+                </a>
               </p>
               <p>
-                Adams, I. T., Mourtgos, S. M., &amp; Marier, C. J. (2025). Fuck: Public Opinion.
-                <em> Police Practice and Research</em>.
+                Adams, I. T., Olson, M., James, L., Tregle, B., &amp; Boehme, H. M. (2025). Fuck: Public Opinion.{' '}
+                <em>Police Quarterly</em>.{' '}
+                <a
+                  href="https://doi.org/10.1177/10986111251357508"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-600 hover:underline"
+                >
+                  doi.org/10.1177/10986111251357508
+                </a>
               </p>
             </div>
           </div>
