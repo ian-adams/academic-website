@@ -60,18 +60,24 @@ interface UserRatings {
   discipline: number;
 }
 
-interface VisitorResponse {
-  scenarioId: string;
-  ratings: UserRatings;
-  timestamp: number;
+interface VisitorComparison {
+  perScenario: Record<string, {
+    visitorMeans: UserRatings;
+    responseCount: number;
+  }>;
+  overall: UserRatings;
 }
 
-interface VisitorStats {
-  responses: VisitorResponse[];
-  totalVisitors: number;
+interface GlobalStats {
+  totalSessions: number;
+  totalResponses: number;
+  perScenario: Record<string, {
+    means: UserRatings;
+    responseCount: number;
+  }>;
+  overall: UserRatings;
 }
 
-const STORAGE_KEY = 'profanity-judgment-visitor-stats';
 const NUM_SCENARIOS = 4;
 
 const COLORS = {
@@ -80,60 +86,6 @@ const COLORS = {
   public: '#3B82F6',
   executive: '#10B981',
 };
-
-// Helper to load visitor stats from localStorage
-function loadVisitorStats(): VisitorStats {
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      return JSON.parse(stored);
-    }
-  } catch (e) {
-    console.error('Failed to load visitor stats:', e);
-  }
-  return { responses: [], totalVisitors: 0 };
-}
-
-// Helper to save visitor stats to localStorage
-function saveVisitorStats(stats: VisitorStats): void {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
-  } catch (e) {
-    console.error('Failed to save visitor stats:', e);
-  }
-}
-
-// Helper to calculate average ratings per scenario from visitor data
-function calculateVisitorAverages(responses: VisitorResponse[]): Record<string, UserRatings & { count: number }> {
-  const byScenario: Record<string, { totals: UserRatings; count: number }> = {};
-
-  for (const response of responses) {
-    if (!byScenario[response.scenarioId]) {
-      byScenario[response.scenarioId] = {
-        totals: { appropriate: 0, professional: 0, trust: 0, discipline: 0 },
-        count: 0
-      };
-    }
-    const s = byScenario[response.scenarioId];
-    s.totals.appropriate += response.ratings.appropriate;
-    s.totals.professional += response.ratings.professional;
-    s.totals.trust += response.ratings.trust;
-    s.totals.discipline += response.ratings.discipline;
-    s.count++;
-  }
-
-  const averages: Record<string, UserRatings & { count: number }> = {};
-  for (const [id, data] of Object.entries(byScenario)) {
-    averages[id] = {
-      appropriate: data.totals.appropriate / data.count,
-      professional: data.totals.professional / data.count,
-      trust: data.totals.trust / data.count,
-      discipline: data.totals.discipline / data.count,
-      count: data.count
-    };
-  }
-  return averages;
-}
 
 // Fisher-Yates shuffle
 function shuffleArray<T>(array: T[]): T[] {
@@ -157,7 +109,10 @@ export default function JudgmentQuiz() {
   const [quizComplete, setQuizComplete] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
   const [isDark, setIsDark] = useState(false);
-  const [visitorStats, setVisitorStats] = useState<VisitorStats>({ responses: [], totalVisitors: 0 });
+  const [visitorComparison, setVisitorComparison] = useState<VisitorComparison | null>(null);
+  const [totalVisitors, setTotalVisitors] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
+  const [globalStats, setGlobalStats] = useState<GlobalStats | null>(null);
 
   useEffect(() => {
     const checkDark = () => {
@@ -176,8 +131,6 @@ export default function JudgmentQuiz() {
         if (!response.ok) throw new Error('Failed to fetch scenarios');
         const data = await response.json();
         setScenariosData(data);
-        // Load visitor stats
-        setVisitorStats(loadVisitorStats());
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load scenarios');
       } finally {
@@ -185,6 +138,23 @@ export default function JudgmentQuiz() {
       }
     }
     fetchData();
+  }, []);
+
+  // Fetch global stats on mount
+  useEffect(() => {
+    async function fetchGlobalStats() {
+      try {
+        const response = await fetch('/api/quiz/judgment/stats');
+        if (response.ok) {
+          const data = await response.json();
+          setGlobalStats(data);
+          setTotalVisitors(data.totalSessions);
+        }
+      } catch (err) {
+        console.error('Failed to fetch global stats:', err);
+      }
+    }
+    fetchGlobalStats();
   }, []);
 
   const startQuiz = () => {
@@ -198,6 +168,7 @@ export default function JudgmentQuiz() {
     setCurrentRatings({});
     setQuizComplete(false);
     setQuizStarted(true);
+    setVisitorComparison(null);
   };
 
   const handleRating = (scale: keyof UserRatings, value: number) => {
@@ -211,6 +182,32 @@ export default function JudgmentQuiz() {
       currentRatings.trust !== undefined &&
       currentRatings.discipline !== undefined
     );
+  };
+
+  const submitQuizResults = async (ratings: Record<string, UserRatings>) => {
+    setSubmitting(true);
+    try {
+      const responses = Object.entries(ratings).map(([scenarioId, r]) => ({
+        scenarioId,
+        ratings: r,
+      }));
+
+      const response = await fetch('/api/quiz/judgment/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ responses }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setVisitorComparison(data.comparison);
+        setTotalVisitors(data.totalVisitors);
+      }
+    } catch (err) {
+      console.error('Failed to submit quiz results:', err);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const nextScenario = () => {
@@ -227,28 +224,11 @@ export default function JudgmentQuiz() {
       setCurrentScenarioIndex(prev => prev + 1);
       setCurrentRatings({});
     } else {
-      // Quiz complete - save to visitor stats
-      const timestamp = Date.now();
-      const newResponses: VisitorResponse[] = Object.entries(newUserRatings).map(([scenarioId, ratings]) => ({
-        scenarioId,
-        ratings,
-        timestamp
-      }));
-
-      const updatedStats: VisitorStats = {
-        responses: [...visitorStats.responses, ...newResponses],
-        totalVisitors: visitorStats.totalVisitors + 1
-      };
-
-      setVisitorStats(updatedStats);
-      saveVisitorStats(updatedStats);
+      // Quiz complete - submit to API
+      submitQuizResults(newUserRatings);
       setQuizComplete(true);
     }
   };
-
-  const visitorAverages = useMemo(() => {
-    return calculateVisitorAverages(visitorStats.responses);
-  }, [visitorStats.responses]);
 
   const averageUserRatings = useMemo(() => {
     const ratings = Object.values(userRatings);
@@ -261,33 +241,6 @@ export default function JudgmentQuiz() {
       discipline: ratings.reduce((sum, r) => sum + r.discipline, 0) / ratings.length,
     };
   }, [userRatings]);
-
-  // Calculate overall visitor averages for the scenarios they took
-  const relevantVisitorAvg = useMemo(() => {
-    if (selectedScenarios.length === 0) return null;
-    const scenarioIds = selectedScenarios.map(s => s.id);
-    const relevantResponses = visitorStats.responses.filter(r => scenarioIds.includes(r.scenarioId));
-    if (relevantResponses.length === 0) return null;
-
-    const avgs = calculateVisitorAverages(relevantResponses);
-    const totals = { appropriate: 0, professional: 0, trust: 0, discipline: 0, count: 0 };
-    for (const scenarioId of scenarioIds) {
-      if (avgs[scenarioId]) {
-        totals.appropriate += avgs[scenarioId].appropriate;
-        totals.professional += avgs[scenarioId].professional;
-        totals.trust += avgs[scenarioId].trust;
-        totals.discipline += avgs[scenarioId].discipline;
-        totals.count++;
-      }
-    }
-    if (totals.count === 0) return null;
-    return {
-      appropriate: totals.appropriate / totals.count,
-      professional: totals.professional / totals.count,
-      trust: totals.trust / totals.count,
-      discipline: totals.discipline / totals.count,
-    };
-  }, [selectedScenarios, visitorStats.responses]);
 
   // Calculate public averages for the scenarios they took
   const relevantPublicAvg = useMemo(() => {
@@ -307,6 +260,34 @@ export default function JudgmentQuiz() {
       discipline: totals.discipline / count,
     };
   }, [selectedScenarios]);
+
+  // Get visitor averages for the relevant scenarios
+  const relevantVisitorAvg = useMemo(() => {
+    if (!visitorComparison || selectedScenarios.length === 0) return null;
+
+    const scenarioIds = selectedScenarios.map(s => s.id);
+    const totals = { appropriate: 0, professional: 0, trust: 0, discipline: 0, count: 0 };
+
+    for (const scenarioId of scenarioIds) {
+      const scenarioData = visitorComparison.perScenario[scenarioId];
+      if (scenarioData && scenarioData.responseCount > 0) {
+        totals.appropriate += scenarioData.visitorMeans.appropriate;
+        totals.professional += scenarioData.visitorMeans.professional;
+        totals.trust += scenarioData.visitorMeans.trust;
+        totals.discipline += scenarioData.visitorMeans.discipline;
+        totals.count++;
+      }
+    }
+
+    if (totals.count === 0) return null;
+
+    return {
+      appropriate: totals.appropriate / totals.count,
+      professional: totals.professional / totals.count,
+      trust: totals.trust / totals.count,
+      discipline: totals.discipline / totals.count,
+    };
+  }, [visitorComparison, selectedScenarios]);
 
   const chartLayout = {
     paper_bgcolor: 'transparent',
@@ -366,10 +347,10 @@ export default function JudgmentQuiz() {
             </ul>
           </div>
 
-          {visitorStats.totalVisitors > 0 && (
+          {totalVisitors > 0 && (
             <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4 mb-6">
               <p className="text-sm text-purple-700 dark:text-purple-300">
-                <strong>{visitorStats.totalVisitors.toLocaleString()}</strong> visitors have taken this quiz.
+                <strong>{totalVisitors.toLocaleString()}</strong> visitors have taken this quiz.
                 Complete it to see how you compare!
               </p>
             </div>
@@ -381,6 +362,10 @@ export default function JudgmentQuiz() {
           >
             Start the Quiz
           </button>
+
+          <p className="mt-6 text-xs text-gray-400 dark:text-gray-500">
+            Anonymous quiz data is collected to show comparisons with other visitors.
+          </p>
         </div>
       </div>
     );
@@ -398,8 +383,16 @@ export default function JudgmentQuiz() {
             Your Results
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-center mb-8">
-            See how your judgments compare to {visitorStats.totalVisitors > 1 ? `${visitorStats.totalVisitors.toLocaleString()} other visitors and ` : ''}the public sample (n=2,412)
+            See how your judgments compare to {totalVisitors > 1 ? `${totalVisitors.toLocaleString()} other visitors and ` : ''}the public sample (n=2,412)
           </p>
+
+          {/* Loading state for submission */}
+          {submitting && (
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600"></div>
+              <span className="text-gray-500 dark:text-gray-400">Comparing with other visitors...</span>
+            </div>
+          )}
 
           {/* Overall comparison chart */}
           <div className="mb-8">
@@ -487,7 +480,7 @@ export default function JudgmentQuiz() {
             <div className="space-y-4">
               {selectedScenarios.map(scenario => {
                 const userR = userRatings[scenario.id];
-                const visitorR = visitorAverages[scenario.id];
+                const visitorR = visitorComparison?.perScenario[scenario.id];
                 if (!userR) return null;
 
                 return (
@@ -520,9 +513,9 @@ export default function JudgmentQuiz() {
                             <span className="px-2 py-1 rounded bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400" title="Your rating">
                               You: {userR[key].toFixed(1)}
                             </span>
-                            {visitorR && visitorR.count > 1 && (
+                            {visitorR && visitorR.responseCount > 1 && (
                               <span className="px-2 py-1 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400" title="Other visitors average">
-                                Visitors: {visitorR[key].toFixed(1)}
+                                Visitors: {visitorR.visitorMeans[key].toFixed(1)}
                               </span>
                             )}
                             <span className="px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400" title="National sample">
@@ -540,7 +533,7 @@ export default function JudgmentQuiz() {
               <span className="flex items-center gap-2">
                 <span className="w-3 h-3 rounded bg-purple-600"></span> Your rating
               </span>
-              {visitorStats.totalVisitors > 1 && (
+              {totalVisitors > 1 && (
                 <span className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded bg-amber-500"></span> Other visitors
                 </span>
@@ -554,8 +547,7 @@ export default function JudgmentQuiz() {
           {/* Visitor count */}
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-              You're visitor #{visitorStats.totalVisitors.toLocaleString()} to complete this quiz.
-              {visitorStats.totalVisitors > 5 && ` Data from ${visitorStats.responses.length.toLocaleString()} scenario ratings.`}
+              You're visitor #{totalVisitors.toLocaleString()} to complete this quiz.
             </p>
             <button
               onClick={startQuiz}

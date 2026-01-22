@@ -5,6 +5,31 @@
 [build.environment]
   NODE_VERSION = "20"
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# API redirects for quiz endpoints
+[[redirects]]
+  from = "/api/quiz/fuckulator/submit"
+  to = "/.netlify/functions/quiz-fuckulator-submit"
+  status = 200
+
+[[redirects]]
+  from = "/api/quiz/fuckulator/stats"
+  to = "/.netlify/functions/quiz-fuckulator-stats"
+  status = 200
+
+[[redirects]]
+  from = "/api/quiz/judgment/submit"
+  to = "/.netlify/functions/quiz-judgment-submit"
+  status = 200
+
+[[redirects]]
+  from = "/api/quiz/judgment/stats"
+  to = "/.netlify/functions/quiz-judgment-stats"
+  status = 200
+
 # Headers for static assets
 [[headers]]
   for = "/data/*"

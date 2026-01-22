@@ -1,4 +1,25 @@
 import { useState, useEffect, useMemo } from 'react';
+import type { PlotParams } from 'react-plotly.js';
+
+function PlotWrapper(props: PlotParams) {
+  const [Plot, setPlot] = useState<React.ComponentType<PlotParams> | null>(null);
+
+  useEffect(() => {
+    import('react-plotly.js').then((mod) => {
+      setPlot(() => mod.default);
+    });
+  }, []);
+
+  if (!Plot) {
+    return (
+      <div className="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
+      </div>
+    );
+  }
+
+  return <Plot {...props} />;
+}
 
 interface Term {
   term: string;
@@ -17,6 +38,11 @@ interface QuizQuestion {
   correctIndex: number;
 }
 
+interface QuizResponse {
+  term: string;
+  correct: boolean;
+}
+
 interface TermStats {
   correct: number;
   incorrect: number;
@@ -24,6 +50,23 @@ interface TermStats {
 
 interface AllStats {
   [term: string]: TermStats;
+}
+
+interface ComparisonData {
+  percentile: number;
+  averageScore: number;
+  totalSessions: number;
+  hardestTerms: Array<{ term: string; correctRate: number; attempts: number }>;
+  easiestTerms: Array<{ term: string; correctRate: number; attempts: number }>;
+  scoreDistribution: Array<{ bucket: string; count: number }>;
+}
+
+interface GlobalStats {
+  totalSessions: number;
+  averageScore: number;
+  hardestTerms: Array<{ term: string; correctRate: number; attempts: number }>;
+  easiestTerms: Array<{ term: string; correctRate: number; attempts: number }>;
+  scoreDistribution: Array<{ bucket: string; count: number }>;
 }
 
 const STATS_KEY = 'fuckulator-stats';
@@ -73,6 +116,22 @@ function recordAnswer(term: string, correct: boolean) {
   saveStats(stats);
 }
 
+function getPercentileColor(percentile: number): string {
+  if (percentile >= 90) return 'text-green-600';
+  if (percentile >= 70) return 'text-blue-600';
+  if (percentile >= 50) return 'text-yellow-600';
+  if (percentile >= 30) return 'text-orange-600';
+  return 'text-red-600';
+}
+
+function getPercentileBadge(percentile: number): string {
+  if (percentile >= 90) return 'Top 10%!';
+  if (percentile >= 75) return 'Top 25%!';
+  if (percentile >= 50) return 'Above Average';
+  if (percentile >= 25) return 'Below Average';
+  return 'Keep Practicing';
+}
+
 export default function FuckulatorQuiz() {
   const [termsData, setTermsData] = useState<TermsData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -90,6 +149,10 @@ export default function FuckulatorQuiz() {
   const [showStats, setShowStats] = useState(false);
   const [stats, setStats] = useState<AllStats>({});
   const [isDark, setIsDark] = useState(false);
+  const [quizResponses, setQuizResponses] = useState<QuizResponse[]>([]);
+  const [comparisonData, setComparisonData] = useState<ComparisonData | null>(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [globalStats, setGlobalStats] = useState<GlobalStats | null>(null);
 
   useEffect(() => {
     const checkDark = () => {
@@ -119,6 +182,22 @@ export default function FuckulatorQuiz() {
       }
     }
     fetchData();
+  }, []);
+
+  // Fetch global stats on mount
+  useEffect(() => {
+    async function fetchGlobalStats() {
+      try {
+        const response = await fetch('/api/quiz/fuckulator/stats');
+        if (response.ok) {
+          const data = await response.json();
+          setGlobalStats(data);
+        }
+      } catch (err) {
+        console.error('Failed to fetch global stats:', err);
+      }
+    }
+    fetchGlobalStats();
   }, []);
 
   const generateQuestions = (count: number): QuizQuestion[] => {
@@ -159,6 +238,8 @@ export default function FuckulatorQuiz() {
     setQuizStarted(true);
     setShowStats(false);
     setFeedbackMessage('');
+    setQuizResponses([]);
+    setComparisonData(null);
   };
 
   const handleAnswer = (index: number) => {
@@ -170,14 +251,37 @@ export default function FuckulatorQuiz() {
     const isCorrect = index === questions[currentQuestion].correctIndex;
     const termName = questions[currentQuestion].term.term;
 
-    // Record the answer
+    // Record the answer locally
     recordAnswer(termName, isCorrect);
+
+    // Track response for API submission
+    setQuizResponses(prev => [...prev, { term: termName, correct: isCorrect }]);
 
     if (isCorrect) {
       setScore(prev => prev + 1);
       setFeedbackMessage(getRandomItem(termsData.correctResponses));
     } else {
       setFeedbackMessage(getRandomItem(termsData.incorrectResponses));
+    }
+  };
+
+  const submitQuizResults = async (responses: QuizResponse[]) => {
+    setSubmitting(true);
+    try {
+      const response = await fetch('/api/quiz/fuckulator/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ responses }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setComparisonData(data.comparison);
+      }
+    } catch (err) {
+      console.error('Failed to submit quiz results:', err);
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -189,7 +293,9 @@ export default function FuckulatorQuiz() {
       setFeedbackMessage('');
     } else {
       setQuizComplete(true);
-      setStats(loadStats()); // Refresh stats
+      setStats(loadStats());
+      // Submit results to API
+      submitQuizResults(quizResponses);
     }
   };
 
@@ -227,7 +333,6 @@ export default function FuckulatorQuiz() {
         rate,
       };
     }).sort((a, b) => {
-      // Sort by total attempts descending, then by term name
       if (b.total !== a.total) return b.total - a.total;
       return a.term.localeCompare(b.term);
     });
@@ -248,7 +353,7 @@ export default function FuckulatorQuiz() {
 
   const hardestTerms = useMemo(() => {
     return sortedStats
-      .filter(s => s.total >= 3) // Only include terms with at least 3 attempts
+      .filter(s => s.total >= 3)
       .sort((a, b) => (a.rate ?? 100) - (b.rate ?? 100))
       .slice(0, 5);
   }, [sortedStats]);
@@ -265,6 +370,24 @@ export default function FuckulatorQuiz() {
       localStorage.removeItem(STATS_KEY);
       setStats({});
     }
+  };
+
+  const chartLayout = {
+    paper_bgcolor: 'transparent',
+    plot_bgcolor: 'transparent',
+    font: {
+      color: isDark ? '#e5e7eb' : '#1f2937',
+      family: 'Inter, system-ui, sans-serif',
+    },
+    margin: { l: 50, r: 30, t: 40, b: 60 },
+    xaxis: {
+      gridcolor: isDark ? '#374151' : '#e5e7eb',
+      linecolor: isDark ? '#4b5563' : '#d1d5db',
+    },
+    yaxis: {
+      gridcolor: isDark ? '#374151' : '#e5e7eb',
+      linecolor: isDark ? '#4b5563' : '#d1d5db',
+    },
   };
 
   if (loading) {
@@ -487,6 +610,16 @@ export default function FuckulatorQuiz() {
             </div>
           </div>
 
+          {/* Global stats preview */}
+          {globalStats && globalStats.totalSessions > 0 && (
+            <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4 mb-6">
+              <p className="text-sm text-purple-700 dark:text-purple-300">
+                <strong>{globalStats.totalSessions.toLocaleString()}</strong> visitors have taken this quiz.
+                Average score: <strong>{globalStats.averageScore.toFixed(0)}%</strong>
+              </p>
+            </div>
+          )}
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button
               onClick={startQuiz}
@@ -509,6 +642,10 @@ export default function FuckulatorQuiz() {
               You've answered {overallStats.total} questions ({overallStats.rate.toFixed(0)}% accuracy)
             </div>
           )}
+
+          <p className="mt-6 text-xs text-gray-400 dark:text-gray-500">
+            Anonymous quiz data is collected to show comparisons with other visitors.
+          </p>
         </div>
       </div>
     );
@@ -516,8 +653,10 @@ export default function FuckulatorQuiz() {
 
   // Quiz complete screen
   if (quizComplete) {
+    const scorePercentage = (score / questions.length) * 100;
+
     return (
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-3xl mx-auto space-y-6">
         <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 text-center">
           <div className="text-6xl mb-4">{getScoreEmoji()}</div>
           <h2 className="text-3xl font-serif font-bold text-gray-900 dark:text-white mb-4">
@@ -526,12 +665,29 @@ export default function FuckulatorQuiz() {
           <div className="text-5xl font-bold text-purple-600 mb-4">
             {score} / {questions.length}
           </div>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">
+          <p className="text-xl text-gray-600 dark:text-gray-400 mb-2">
             {getScoreMessage()}
           </p>
-          <div className="text-sm text-gray-500 dark:text-gray-500 mb-8">
-            {((score / questions.length) * 100).toFixed(0)}% correct
+          <div className="text-sm text-gray-500 dark:text-gray-500 mb-6">
+            {scorePercentage.toFixed(0)}% correct
           </div>
+
+          {/* Percentile badge */}
+          {submitting ? (
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600"></div>
+              <span className="text-gray-500 dark:text-gray-400">Comparing with other visitors...</span>
+            </div>
+          ) : comparisonData && comparisonData.totalSessions > 1 && (
+            <div className="mb-6">
+              <div className={`inline-block px-6 py-3 rounded-full text-lg font-bold ${getPercentileColor(comparisonData.percentile)} bg-gray-100 dark:bg-gray-700`}>
+                {getPercentileBadge(comparisonData.percentile)}
+              </div>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                You scored better than <strong>{comparisonData.percentile}%</strong> of {comparisonData.totalSessions.toLocaleString()} visitors
+              </p>
+            </div>
+          )}
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button
@@ -553,19 +709,188 @@ export default function FuckulatorQuiz() {
               Change Settings
             </button>
           </div>
+        </div>
 
-          {/* Quick stats summary */}
-          <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
-            <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">Overall Performance</div>
-            <div className="flex justify-center gap-6">
-              <div>
-                <span className="text-2xl font-bold text-purple-600">{overallStats.total}</span>
-                <span className="text-sm text-gray-500 dark:text-gray-400 ml-1">total</span>
+        {/* Comparison charts */}
+        {comparisonData && comparisonData.totalSessions > 1 && (
+          <>
+            {/* Score Distribution Histogram */}
+            {comparisonData.scoreDistribution.length > 0 && (
+              <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+                  Score Distribution
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                  Where your score falls among all visitors
+                </p>
+                <PlotWrapper
+                  data={[
+                    {
+                      x: comparisonData.scoreDistribution.map(d => d.bucket),
+                      y: comparisonData.scoreDistribution.map(d => d.count),
+                      type: 'bar',
+                      marker: {
+                        color: comparisonData.scoreDistribution.map((d) => {
+                          const bucketStart = parseInt(d.bucket.split('-')[0]);
+                          const bucketEnd = bucketStart + 10;
+                          return scorePercentage >= bucketStart && scorePercentage < bucketEnd
+                            ? '#7C3AED'
+                            : isDark ? '#4B5563' : '#D1D5DB';
+                        }),
+                      },
+                    },
+                  ]}
+                  layout={{
+                    ...chartLayout,
+                    height: 250,
+                    xaxis: {
+                      ...chartLayout.xaxis,
+                      title: 'Score Range',
+                    },
+                    yaxis: {
+                      ...chartLayout.yaxis,
+                      title: 'Number of Visitors',
+                    },
+                    annotations: [{
+                      x: `${Math.floor(scorePercentage / 10) * 10}-${Math.floor(scorePercentage / 10) * 10 + 10}%`,
+                      y: comparisonData.scoreDistribution[Math.min(Math.floor(scorePercentage / 10), 9)]?.count || 0,
+                      text: 'You',
+                      showarrow: true,
+                      arrowhead: 2,
+                      arrowcolor: '#7C3AED',
+                      font: { color: '#7C3AED' },
+                    }],
+                  }}
+                  config={{ responsive: true, displayModeBar: false }}
+                  style={{ width: '100%', height: '250px' }}
+                />
               </div>
-              <div>
-                <span className="text-2xl font-bold text-green-600">{overallStats.rate.toFixed(0)}%</span>
-                <span className="text-sm text-gray-500 dark:text-gray-400 ml-1">accuracy</span>
+            )}
+
+            {/* Hardest Terms for All Visitors */}
+            <div className="grid md:grid-cols-2 gap-6">
+              {comparisonData.hardestTerms.length > 0 && (
+                <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+                  <h3 className="text-lg font-bold text-red-600 mb-2">Hardest Terms (All Visitors)</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    Terms most visitors struggle with
+                  </p>
+                  <div className="space-y-3">
+                    {comparisonData.hardestTerms.map((term, i) => {
+                      const userMissedThis = quizResponses.some(r => r.term === term.term && !r.correct);
+                      return (
+                        <div key={term.term} className="flex items-center justify-between">
+                          <div className="flex-1 min-w-0">
+                            <div className="font-semibold text-gray-900 dark:text-white truncate flex items-center gap-2">
+                              {i + 1}. {term.term}
+                              {userMissedThis && (
+                                <span className="text-xs bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 px-2 py-0.5 rounded">
+                                  You missed
+                                </span>
+                              )}
+                            </div>
+                            <div className="text-xs text-gray-500 dark:text-gray-400">
+                              {term.attempts} attempts
+                            </div>
+                          </div>
+                          <div className="text-lg font-bold text-red-600 ml-4">
+                            {term.correctRate.toFixed(0)}%
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {comparisonData.easiestTerms.length > 0 && (
+                <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+                  <h3 className="text-lg font-bold text-green-600 mb-2">Easiest Terms (All Visitors)</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    Terms most visitors get right
+                  </p>
+                  <div className="space-y-3">
+                    {comparisonData.easiestTerms.map((term, i) => {
+                      const userGotThis = quizResponses.some(r => r.term === term.term && r.correct);
+                      return (
+                        <div key={term.term} className="flex items-center justify-between">
+                          <div className="flex-1 min-w-0">
+                            <div className="font-semibold text-gray-900 dark:text-white truncate flex items-center gap-2">
+                              {i + 1}. {term.term}
+                              {userGotThis && (
+                                <span className="text-xs bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 px-2 py-0.5 rounded">
+                                  You got it
+                                </span>
+                              )}
+                            </div>
+                            <div className="text-xs text-gray-500 dark:text-gray-400">
+                              {term.attempts} attempts
+                            </div>
+                          </div>
+                          <div className="text-lg font-bold text-green-600 ml-4">
+                            {term.correctRate.toFixed(0)}%
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Average comparison */}
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">Your Score vs. Average</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Average visitor score: {comparisonData.averageScore.toFixed(0)}%
+                  </p>
+                </div>
+                <div className={`text-2xl font-bold ${
+                  scorePercentage > comparisonData.averageScore ? 'text-green-600' :
+                  scorePercentage < comparisonData.averageScore ? 'text-red-600' :
+                  'text-yellow-600'
+                }`}>
+                  {scorePercentage > comparisonData.averageScore ? '+' : ''}
+                  {(scorePercentage - comparisonData.averageScore).toFixed(0)}%
+                </div>
               </div>
+              <div className="mt-4 h-4 bg-gray-200 dark:bg-gray-700 rounded-full relative">
+                <div
+                  className="absolute h-full bg-gray-400 dark:bg-gray-500 rounded-full"
+                  style={{ width: `${comparisonData.averageScore}%` }}
+                />
+                <div
+                  className="absolute h-full bg-purple-600 rounded-full"
+                  style={{ width: `${scorePercentage}%` }}
+                />
+                <div
+                  className="absolute top-1/2 -translate-y-1/2 w-1 h-6 bg-gray-600 dark:bg-gray-300"
+                  style={{ left: `${comparisonData.averageScore}%` }}
+                  title="Average"
+                />
+              </div>
+              <div className="flex justify-between mt-1 text-xs text-gray-500 dark:text-gray-400">
+                <span>0%</span>
+                <span>Average: {comparisonData.averageScore.toFixed(0)}%</span>
+                <span>100%</span>
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* Quick stats summary */}
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <div className="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center">Your Overall Performance</div>
+          <div className="flex justify-center gap-6">
+            <div className="text-center">
+              <span className="text-2xl font-bold text-purple-600">{overallStats.total}</span>
+              <span className="text-sm text-gray-500 dark:text-gray-400 ml-1">total</span>
+            </div>
+            <div className="text-center">
+              <span className="text-2xl font-bold text-green-600">{overallStats.rate.toFixed(0)}%</span>
+              <span className="text-sm text-gray-500 dark:text-gray-400 ml-1">accuracy</span>
             </div>
           </div>
         </div>
