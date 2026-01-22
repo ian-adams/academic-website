@@ -43,6 +43,7 @@ Dr. Adams has over fifty peer-reviewed publications on these and related topics,
         { name: 'Bad Apples Simulator', href: '/dashboard/bad-apples' },
         { name: 'Disparity Benchmarks', href: '/dashboard/disparity-benchmarks' },
         { name: 'FCWC Risk Calculator', href: '/dashboard/fcwc-risk' },
+        { name: 'Police Profanity', href: '/dashboard/profanity' },
       ],
     },
     {
