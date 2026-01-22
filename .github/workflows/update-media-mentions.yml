@@ -58,7 +58,12 @@ jobs:
           git add academic-website-astro/public/data/media-mentions.xml
           git add academic-website-astro/data/db/media-mentions.db || true
           git diff --quiet && git diff --staged --quiet || git commit -m "Update media mentions feed - $(date +'%Y-%m-%d')"
-          git push
+          # Pull with rebase to handle concurrent workflow runs, then push with retry
+          for i in 1 2 3; do
+            git pull --rebase origin master && git push && break
+            echo "Push attempt $i failed, retrying in 5s..."
+            sleep 5
+          done
 
       - name: Upload logs as artifact
         if: always()

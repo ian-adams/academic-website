@@ -64,7 +64,12 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add academic-website-astro/public/data/scholar-metrics.json
         git diff --quiet && git diff --staged --quiet || git commit -m "Update scholar metrics - $(date +'%Y-%m-%d')"
-        git push
+        # Pull with rebase to handle concurrent workflow runs, then push with retry
+        for i in 1 2 3; do
+          git pull --rebase origin master && git push && break
+          echo "Push attempt $i failed, retrying in 5s..."
+          sleep 5
+        done
 
     - name: Create summary
       if: always()
