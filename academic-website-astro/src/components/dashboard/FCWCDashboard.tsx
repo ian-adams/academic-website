@@ -154,11 +154,14 @@ export default function FCWCDashboard() {
   const [activeTab, setActiveTab] = useState<'calculator' | 'acceptability' | 'about'>('calculator');
   const [isDark, setIsDark] = useState(false);
 
-  // Calculator inputs
+  // Calculator tab inputs
   const [baseRateGuilty, setBaseRateGuilty] = useState(0.95);
   const [sensitivity, setSensitivity] = useState(0.83);
   const [specificity, setSpecificity] = useState(0.85);
-  const [lambda, setLambda] = useState(10);
+  const [lambdaCalc, setLambdaCalc] = useState(10);
+
+  // Acceptability curve tab inputs (independent)
+  const [lambdaCurve, setLambdaCurve] = useState(10);
 
   useEffect(() => {
     const checkDark = () => {
@@ -185,7 +188,8 @@ export default function FCWCDashboard() {
   const mc50th = getPercentile(mcResults, 0.50);
   const mc95th = getPercentile(mcResults, 0.95);
 
-  const acceptableThreshold = getAcceptableRisk(lambda);
+  const acceptableThresholdCalc = getAcceptableRisk(lambdaCalc);
+  const acceptableThresholdCurve = getAcceptableRisk(lambdaCurve);
 
   // Static data for acceptability curve
   const acceptabilityCurveData = useMemo(() => {
@@ -218,9 +222,9 @@ export default function FCWCDashboard() {
 
   const getThresholdInterpretation = () => {
     const riskPct = wrongfulConvictionRisk * 100;
-    const thresholdPct = acceptableThreshold * 100;
+    const thresholdPct = acceptableThresholdCalc * 100;
 
-    if (wrongfulConvictionRisk < acceptableThreshold) {
+    if (wrongfulConvictionRisk < acceptableThresholdCalc) {
       const margin = thresholdPct - riskPct;
       return `This is ${margin.toFixed(1)} percentage points below your chosen acceptability threshold of ${thresholdPct.toFixed(1)}%.`;
     } else {
@@ -270,7 +274,7 @@ export default function FCWCDashboard() {
         <div className="flex items-center gap-6 mt-6 text-sm text-gray-500 dark:text-gray-400">
           <span className="flex items-center gap-2">
             <span className="w-2 h-2 bg-red-700 rounded-full"></span>
-            Based on Scott M. Mourtgos and Ian T. Adams, forthcoming at <em className="ml-1">Journal of Criminal Justice</em>
+            Based on Scott M. Mourtgos and Ian T. Adams, forthcoming at <em>Journal of Criminal Justice</em>
           </span>
         </div>
       </header>
@@ -335,14 +339,14 @@ export default function FCWCDashboard() {
                 </div>
                 <div className="text-center">
                   <div className={`text-lg font-semibold px-4 py-2 rounded ${
-                    wrongfulConvictionRisk < acceptableThreshold
+                    wrongfulConvictionRisk < acceptableThresholdCalc
                       ? 'bg-teal-900/50 text-teal-300'
                       : 'bg-red-900/50 text-red-300'
                   }`}>
-                    {wrongfulConvictionRisk < acceptableThreshold ? 'Within' : 'Exceeds'} Acceptable Range
+                    {wrongfulConvictionRisk < acceptableThresholdCalc ? 'Within' : 'Exceeds'} Acceptable Range
                   </div>
                   <div className="text-sm text-gray-400 mt-2">
-                    Your threshold (λ={lambda}): {(acceptableThreshold * 100).toFixed(1)}%
+                    Your threshold (λ={lambdaCalc}): {(acceptableThresholdCalc * 100).toFixed(1)}%
                   </div>
                 </div>
               </div>
@@ -440,31 +444,36 @@ export default function FCWCDashboard() {
                   </div>
                 </div>
 
-                {/* Lambda */}
+                {/* Lambda - What's Your Trade-off */}
                 <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
                   <div className="flex justify-between items-baseline mb-2">
                     <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
                       <Tooltip tip="How many guilty people going free equals the harm of one innocent person wrongly convicted? Higher values mean you place more weight on protecting the innocent.">
-                        Harm Trade-off (λ)
+                        What's Your Trade-off? (λ)
                       </Tooltip>
                     </label>
                     <span className="text-2xl font-bold font-mono text-gray-900 dark:text-white">
-                      {lambda}
+                      {lambdaCalc}
                     </span>
                   </div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+                    λ represents how many guilty people going free equals the harm of one wrongful conviction.
+                  </p>
                   <input
                     type="range"
                     min="1"
                     max="50"
                     step="1"
-                    value={lambda}
-                    onChange={(e) => setLambda(parseInt(e.target.value))}
+                    value={lambdaCalc}
+                    onChange={(e) => setLambdaCalc(parseInt(e.target.value))}
                     className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-700"
                   />
-                  <div className="flex justify-between text-xs text-gray-500 mt-1">
-                    <span>1 (equal weight)</span>
-                    <span>10 = Blackstone</span>
-                    <span>50 (protect innocent)</span>
+                  <div className="relative h-6 mt-1">
+                    <span className="absolute left-0 text-xs text-gray-500">1</span>
+                    <span className="absolute text-xs text-gray-500" style={{ left: '7%' }}>Volokh (5)</span>
+                    <span className="absolute text-xs text-gray-500 font-semibold" style={{ left: '18%' }}>Blackstone (10)</span>
+                    <span className="absolute text-xs text-gray-500" style={{ left: '38%' }}>Fortescue (20)</span>
+                    <span className="absolute right-0 text-xs text-gray-500">50</span>
                   </div>
                 </div>
               </div>
@@ -538,8 +547,8 @@ export default function FCWCDashboard() {
                   shapes: [
                     {
                       type: 'line',
-                      x0: acceptableThreshold * 100,
-                      x1: acceptableThreshold * 100,
+                      x0: acceptableThresholdCalc * 100,
+                      x1: acceptableThresholdCalc * 100,
                       y0: 0,
                       y1: 1,
                       yref: 'paper',
@@ -548,7 +557,7 @@ export default function FCWCDashboard() {
                   ],
                   annotations: [
                     {
-                      x: acceptableThreshold * 100,
+                      x: acceptableThresholdCalc * 100,
                       y: 1,
                       yref: 'paper',
                       text: `Your threshold`,
@@ -629,32 +638,25 @@ export default function FCWCDashboard() {
                   min="1"
                   max="100"
                   step="1"
-                  value={lambda}
-                  onChange={(e) => setLambda(parseInt(e.target.value))}
+                  value={lambdaCurve}
+                  onChange={(e) => setLambdaCurve(parseInt(e.target.value))}
                   className="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-700 mt-2"
                 />
-                <div className="flex justify-between text-xs text-gray-500 mt-2">
-                  <div className="text-left">
-                    <div className="font-semibold">λ = 1</div>
-                    <div>Equal weight to both errors</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-semibold">λ = 10</div>
-                    <div>Blackstone's ratio</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-semibold">λ = 100</div>
-                    <div>Strong protection for innocent</div>
-                  </div>
+                <div className="relative h-6 mt-2">
+                  <span className="absolute left-0 text-xs text-gray-500">1</span>
+                  <span className="absolute text-xs text-gray-500" style={{ left: '3.5%' }}>Volokh (5)</span>
+                  <span className="absolute text-xs text-gray-500 font-semibold" style={{ left: '9%' }}>Blackstone (10)</span>
+                  <span className="absolute text-xs text-gray-500" style={{ left: '19%' }}>Fortescue (20)</span>
+                  <span className="absolute right-0 text-xs text-gray-500">100</span>
                 </div>
               </div>
               <div className="text-center md:text-right md:ml-8">
                 <div className="text-sm font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400">
                   Your λ
                 </div>
-                <div className="text-5xl font-bold font-mono text-red-700">{lambda}</div>
+                <div className="text-5xl font-bold font-mono text-red-700">{lambdaCurve}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                  Max acceptable risk: <strong>{(acceptableThreshold * 100).toFixed(2)}%</strong>
+                  Max acceptable risk: <strong>{(acceptableThresholdCurve * 100).toFixed(2)}%</strong>
                 </div>
               </div>
             </div>
@@ -662,9 +664,9 @@ export default function FCWCDashboard() {
             {/* Plain language interpretation */}
             <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
               <p className="text-gray-700 dark:text-gray-300">
-                <strong>Your choice means:</strong> You believe that {lambda} guilty {lambda === 1 ? 'person' : 'people'} going free
+                <strong>Your choice means:</strong> You believe that {lambdaCurve} guilty {lambdaCurve === 1 ? 'person' : 'people'} going free
                 is about as harmful as one innocent person being wrongly convicted. Therefore, you'd accept a wrongful
-                conviction risk of up to {(acceptableThreshold * 100).toFixed(1)}%.
+                conviction risk of up to {(acceptableThresholdCurve * 100).toFixed(1)}%.
               </p>
             </div>
           </div>
@@ -680,9 +682,9 @@ export default function FCWCDashboard() {
               },
               {
                 name: 'Volokh (Empirical)',
-                lambda: 4.5,
+                lambda: 5,
                 desc: 'Based on survey research asking people about their actual preferences.',
-                threshold: (getAcceptableRisk(4.5) * 100).toFixed(1),
+                threshold: (getAcceptableRisk(5) * 100).toFixed(1),
               },
               {
                 name: 'Fortescue',
@@ -693,9 +695,9 @@ export default function FCWCDashboard() {
             ].map((standard) => (
               <button
                 key={standard.name}
-                onClick={() => setLambda(standard.lambda)}
+                onClick={() => setLambdaCurve(standard.lambda)}
                 className={`text-left p-6 border transition-all ${
-                  lambda === standard.lambda
+                  lambdaCurve === standard.lambda
                     ? 'border-red-700 bg-red-50 dark:bg-red-900/20'
                     : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-gray-400'
                 }`}
@@ -729,7 +731,7 @@ export default function FCWCDashboard() {
             </p>
 
             <PlotWrapper
-              key={`acceptability-curve-${lambda}`}
+              key={`acceptability-curve-${lambdaCurve}`}
               data={[
                 {
                   x: acceptabilityCurveData.lambdas,
@@ -743,12 +745,12 @@ export default function FCWCDashboard() {
                   name: 'Acceptable risk',
                 },
                 {
-                  x: [lambda],
-                  y: [acceptableThreshold * 100],
+                  x: [lambdaCurve],
+                  y: [acceptableThresholdCurve * 100],
                   type: 'scatter',
                   mode: 'markers+text',
                   marker: { size: 16, color: COLORS.red, symbol: 'circle' },
-                  text: [`You: ${(acceptableThreshold * 100).toFixed(1)}%`],
+                  text: [`You: ${(acceptableThresholdCurve * 100).toFixed(1)}%`],
                   textposition: 'top center',
                   textfont: { size: 12, color: isDark ? '#e5e7eb' : '#1f2937' },
                   hovertemplate: 'Your λ=%{x}<br>Max Risk=%{y:.2f}%<extra></extra>',
@@ -774,8 +776,8 @@ export default function FCWCDashboard() {
                 annotations: [
                   {
                     x: 5,
-                    y: getAcceptableRisk(4.5) * 100,
-                    text: 'Volokh (λ=4.5)',
+                    y: getAcceptableRisk(5) * 100,
+                    text: 'Volokh (λ=5)',
                     showarrow: true,
                     arrowhead: 0,
                     ax: -50,
