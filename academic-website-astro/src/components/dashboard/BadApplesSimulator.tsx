@@ -2,11 +2,11 @@ import { useState, useEffect, useMemo, useCallback } from 'react';
 import { DARK_LAYOUT, LIGHT_LAYOUT } from './types';
 import type { PlotParams } from 'react-plotly.js';
 
-// Amber color palette for Bad Apples dashboard
+// Apple-red color palette for Bad Apples dashboard
 const COLORS = {
-  primary: '#D97706',
-  primaryDark: '#B45309',
-  accent: '#F59E0B',
+  primary: '#DC2626',
+  primaryDark: '#B91C1C',
+  accent: '#EF4444',
   navy: '#1E293B',
   slate: '#334155',
 };
@@ -24,7 +24,7 @@ function PlotWrapper(props: PlotParams) {
   if (!Plot) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-600 dark:border-amber-400"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 dark:border-red-400"></div>
       </div>
     );
   }
@@ -393,16 +393,16 @@ export default function BadApplesSimulator() {
   return (
     <div className="min-h-screen">
       {/* Hero Header */}
-      <header className="border-b-4 border-amber-600 pb-8 mb-8">
+      <header className="border-b-4 border-red-600 pb-8 mb-8">
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-1 h-12 bg-amber-600"></div>
-          <span className="text-sm font-bold tracking-widest uppercase text-amber-600">
+          <div className="w-1 h-12 bg-red-600"></div>
+          <span className="text-sm font-bold tracking-widest uppercase text-red-600">
             Policy Simulation
           </span>
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 dark:text-white leading-tight mb-4">
           The "Bad Apples" Problem<br />
-          <span className="text-amber-600">Can We Identify Them?</span>
+          <span className="text-red-600">Can We Identify Them?</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl font-light leading-relaxed">
           Explore how data density bias affects our understanding of complaint concentration,
@@ -410,13 +410,13 @@ export default function BadApplesSimulator() {
         </p>
         <div className="flex items-center gap-6 mt-6 text-sm text-gray-500 dark:text-gray-400">
           <span className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-amber-600 rounded-full"></span>
+            <span className="w-2 h-2 bg-red-600 rounded-full"></span>
             Based on{' '}
             <a
               href="https://doi.org/10.1111/1745-9133.12542"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-amber-600 hover:underline"
+              className="text-red-600 hover:underline"
             >
               Chalfin & Kaplan (2021)
             </a>
@@ -427,7 +427,7 @@ export default function BadApplesSimulator() {
       {/* Global Controls */}
       <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 mb-8">
         <h2 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-          <span className="w-1 h-6 bg-amber-600"></span>
+          <span className="w-1 h-6 bg-red-600"></span>
           Simulation Parameters
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -439,7 +439,7 @@ export default function BadApplesSimulator() {
               type="number"
               value={numOfficers}
               onChange={(e) => setNumOfficers(Math.max(100, Math.min(15000, parseInt(e.target.value) || 1000)))}
-              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:border-transparent"
             />
           </div>
           <div>
@@ -450,7 +450,7 @@ export default function BadApplesSimulator() {
               type="number"
               value={numComplaints}
               onChange={(e) => setNumComplaints(Math.max(10, Math.min(50000, parseInt(e.target.value) || 1500)))}
-              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:border-transparent"
             />
           </div>
           <div>
@@ -460,7 +460,7 @@ export default function BadApplesSimulator() {
             <select
               value={topPercentile}
               onChange={(e) => setTopPercentile(parseInt(e.target.value))}
-              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:border-transparent"
             >
               <option value={2}>Top 2%</option>
               <option value={5}>Top 5%</option>
@@ -472,7 +472,7 @@ export default function BadApplesSimulator() {
             <label className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
               Data Density
             </label>
-            <div className="px-3 py-2 rounded bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200 font-mono font-bold">
+            <div className="px-3 py-2 rounded bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-800 dark:text-red-200 font-mono font-bold">
               {metrics.dataDensity.toFixed(2)} <span className="text-xs font-normal">complaints/officer</span>
             </div>
           </div>
@@ -487,13 +487,13 @@ export default function BadApplesSimulator() {
             onClick={() => setActiveTab(tab.id)}
             className={`px-6 py-4 text-sm font-semibold tracking-wide uppercase transition-colors relative ${
               activeTab === tab.id
-                ? 'text-amber-600 dark:text-amber-400'
+                ? 'text-red-600 dark:text-red-400'
                 : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
             }`}
           >
             {tab.label}
             {activeTab === tab.id && (
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-amber-600"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600"></div>
             )}
           </button>
         ))}
@@ -507,7 +507,7 @@ export default function BadApplesSimulator() {
             <div className="max-w-4xl">
               <h3 className="text-2xl font-serif font-bold mb-3">The Data Density Illusion</h3>
               <p className="text-gray-300 leading-relaxed">
-                When complaints are sparse relative to officers, even <strong className="text-amber-400">random</strong> assignment
+                When complaints are sparse relative to officers, even <strong className="text-red-400">random</strong> assignment
                 creates apparent concentration. The "top 2% account for X% of complaints" statistic
                 is misleading without comparing to this null distribution.
               </p>
@@ -530,14 +530,14 @@ export default function BadApplesSimulator() {
             </div>
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
               <div className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">Adjusted Relative Risk</div>
-              <div className="text-3xl font-bold font-serif text-amber-600 dark:text-amber-400">{metrics.adjustedRR2.toFixed(1)}x</div>
+              <div className="text-3xl font-bold font-serif text-red-600 dark:text-red-400">{metrics.adjustedRR2.toFixed(1)}x</div>
             </div>
           </div>
 
           {/* Concentration Chart */}
           <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
             <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-              <span className="w-1 h-6 bg-amber-600"></span>
+              <span className="w-1 h-6 bg-red-600"></span>
               Complaint Concentration Curves
             </h3>
             <PlotWrapper
@@ -597,7 +597,7 @@ export default function BadApplesSimulator() {
           </div>
 
           {/* Explanation */}
-          <div className="bg-gray-100 dark:bg-gray-900 p-6 border-l-4 border-amber-600">
+          <div className="bg-gray-100 dark:bg-gray-900 p-6 border-l-4 border-red-600">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Understanding the Math</h3>
             <div className="text-gray-700 dark:text-gray-300 space-y-3">
               <p>
@@ -608,7 +608,7 @@ export default function BadApplesSimulator() {
               </p>
               <p>
                 After correcting for data density bias, the top 2% are actually only{' '}
-                <strong className="text-amber-600 dark:text-amber-400">{metrics.adjustedRR2.toFixed(1)}x</strong>{' '}
+                <strong className="text-red-600 dark:text-red-400">{metrics.adjustedRR2.toFixed(1)}x</strong>{' '}
                 more likely to generate complaints—still elevated, but far less dramatic than the naive estimate.
               </p>
             </div>
@@ -623,7 +623,7 @@ export default function BadApplesSimulator() {
             <div className="max-w-4xl">
               <h3 className="text-2xl font-serif font-bold mb-3">The Prediction Problem</h3>
               <p className="text-gray-300 leading-relaxed">
-                Officers in the top 2% during probation have only a <strong className="text-amber-400">~2-4% chance</strong> of remaining
+                Officers in the top 2% during probation have only a <strong className="text-red-400">~2-4% chance</strong> of remaining
                 in the top 2% over the next 10 years. Even with a 5-year observation window,
                 positive predictive values remain modest, making surgical "bad apple" removal challenging.
               </p>
@@ -639,7 +639,7 @@ export default function BadApplesSimulator() {
               <select
                 value={probationMonths}
                 onChange={(e) => setProbationMonths(parseInt(e.target.value))}
-                className="px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                className="px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:border-transparent"
               >
                 <option value={18}>18 months (standard)</option>
                 <option value={60}>5 years (extended)</option>
@@ -650,7 +650,7 @@ export default function BadApplesSimulator() {
           {/* Persistence Heatmap */}
           <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
             <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-              <span className="w-1 h-6 bg-amber-600"></span>
+              <span className="w-1 h-6 bg-red-600"></span>
               Persistence Matrix
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
@@ -714,7 +714,7 @@ export default function BadApplesSimulator() {
               <h3 className="text-2xl font-serif font-bold mb-3">Modest Incapacitation Effects</h3>
               <p className="text-gray-300 leading-relaxed">
                 Chalfin & Kaplan find that removing the top 10% of officers (identified ex ante)
-                and replacing them with median officers would reduce complaints by only <strong className="text-amber-400">4-6%</strong>.
+                and replacing them with median officers would reduce complaints by only <strong className="text-red-400">4-6%</strong>.
                 This modest effect stems from both prediction difficulty and the fact that replacement
                 officers also generate complaints.
               </p>
@@ -724,7 +724,7 @@ export default function BadApplesSimulator() {
           {/* Controls */}
           <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
             <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-              <span className="w-1 h-6 bg-amber-600"></span>
+              <span className="w-1 h-6 bg-red-600"></span>
               Policy Parameters
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -735,7 +735,7 @@ export default function BadApplesSimulator() {
                 <select
                   value={replacementStrategy}
                   onChange={(e) => setReplacementStrategy(e.target.value as SimulationParams['replacementStrategy'])}
-                  className="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                  className="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:border-transparent"
                 >
                   <option value="median">Median officer (40-60th percentile)</option>
                   <option value="p70_90">70-90th percentile</option>
@@ -750,7 +750,7 @@ export default function BadApplesSimulator() {
                 <select
                   value={probationMonths}
                   onChange={(e) => setProbationMonths(parseInt(e.target.value))}
-                  className="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                  className="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:border-transparent"
                 >
                   <option value={18}>18 months</option>
                   <option value={60}>5 years</option>
@@ -760,7 +760,7 @@ export default function BadApplesSimulator() {
                 <button
                   onClick={runPolicySimulation}
                   disabled={isSimulating}
-                  className="w-full px-4 py-3 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 text-white font-semibold rounded transition-colors"
+                  className="w-full px-4 py-3 bg-red-600 hover:bg-red-700 disabled:bg-gray-400 text-white font-semibold rounded transition-colors"
                 >
                   {isSimulating ? 'Simulating...' : 'Run Simulation'}
                 </button>
@@ -772,7 +772,7 @@ export default function BadApplesSimulator() {
           {policyResult && (
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
               <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <span className="w-1 h-6 bg-amber-600"></span>
+                <span className="w-1 h-6 bg-red-600"></span>
                 Simulation Results
               </h3>
 
@@ -782,12 +782,12 @@ export default function BadApplesSimulator() {
                   <div className="text-3xl font-bold font-serif text-gray-900 dark:text-white">{Math.floor(numOfficers * topPercentile / 100)}</div>
                   <div className="text-xs text-gray-500 dark:text-gray-400">Top {topPercentile}% of {numOfficers}</div>
                 </div>
-                <div className="bg-amber-50 dark:bg-amber-900/20 p-4 text-center">
-                  <div className="text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-300 mb-1">Est. Complaint Reduction</div>
-                  <div className="text-3xl font-bold font-serif text-amber-600 dark:text-amber-400">
+                <div className="bg-red-50 dark:bg-red-900/20 p-4 text-center">
+                  <div className="text-xs font-bold uppercase tracking-wide text-red-700 dark:text-red-300 mb-1">Est. Complaint Reduction</div>
+                  <div className="text-3xl font-bold font-serif text-red-600 dark:text-red-400">
                     {policyResult.mean.toFixed(1)}%
                   </div>
-                  <div className="text-xs text-amber-600 dark:text-amber-400">
+                  <div className="text-xs text-red-600 dark:text-red-400">
                     95% CI: [{policyResult.ci[0].toFixed(1)}%, {policyResult.ci[1].toFixed(1)}%]
                   </div>
                 </div>
@@ -866,7 +866,7 @@ export default function BadApplesSimulator() {
             {/* Input Controls */}
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
               <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <span className="w-1 h-6 bg-amber-600"></span>
+                <span className="w-1 h-6 bg-red-600"></span>
                 Your Parameters
               </h3>
               <div className="space-y-4">
@@ -934,7 +934,7 @@ export default function BadApplesSimulator() {
               <button
                 onClick={runPolicySimulation}
                 disabled={isSimulating}
-                className="w-full mt-6 px-4 py-3 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 text-white font-semibold rounded transition-colors"
+                className="w-full mt-6 px-4 py-3 bg-red-600 hover:bg-red-700 disabled:bg-gray-400 text-white font-semibold rounded transition-colors"
               >
                 {isSimulating ? 'Running Simulation...' : 'Calculate Impact'}
               </button>
@@ -943,7 +943,7 @@ export default function BadApplesSimulator() {
             {/* Results */}
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
               <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <span className="w-1 h-6 bg-amber-600"></span>
+                <span className="w-1 h-6 bg-red-600"></span>
                 Projected Outcomes
               </h3>
 
@@ -1047,7 +1047,7 @@ export default function BadApplesSimulator() {
               href="https://doi.org/10.1111/1745-9133.12542"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-amber-600 hover:underline"
+              className="text-red-600 hover:underline"
             >
               https://doi.org/10.1111/1745-9133.12542
             </a>
@@ -1056,7 +1056,7 @@ export default function BadApplesSimulator() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-6 text-sm text-gray-500 dark:text-gray-400">
           <div>
             Interactive analysis by{' '}
-            <a href="https://ianadamsresearch.com" className="text-amber-600 hover:underline">
+            <a href="https://ianadamsresearch.com" className="text-red-600 hover:underline">
               Ian T. Adams, Ph.D.
             </a>
           </div>

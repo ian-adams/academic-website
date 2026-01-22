@@ -1,9 +1,11 @@
-import { useMemo, useEffect, useState } from 'react';
+import { useMemo, useEffect, useState, useRef } from 'react';
 import type { ChartProps } from '../types';
 
 // We'll use Leaflet for the map since it's free and doesn't require an API key
 export default function USMapChart({ data, isDark }: ChartProps) {
   const [mapLoaded, setMapLoaded] = useState(false);
+  const mapRef = useRef<any>(null);
+  const markerGroupRef = useRef<any>(null);
 
   const points = useMemo(() => {
     return data
@@ -15,19 +17,14 @@ export default function USMapChart({ data, isDark }: ChartProps) {
       }));
   }, [data]);
 
+  // Initialize the map once
   useEffect(() => {
-    // Dynamically import Leaflet to avoid SSR issues
-    const loadMap = async () => {
+    const initMap = async () => {
       const L = await import('leaflet');
       await import('leaflet/dist/leaflet.css');
 
-      // Check if map already exists
       const container = document.getElementById('us-map');
-      if (!container) return;
-      if ((container as any)._leaflet_id) {
-        // Map already initialized, just update markers
-        return;
-      }
+      if (!container || mapRef.current) return;
 
       const map = L.map('us-map').setView([39.8283, -98.5795], 4);
 
@@ -35,9 +32,41 @@ export default function USMapChart({ data, isDark }: ChartProps) {
         attribution: '&copy; OpenStreetMap contributors',
       }).addTo(map);
 
-      // Add markers (using circle markers for better performance with many points)
-      const markerGroup = L.layerGroup().addTo(map);
+      // Fit bounds to US
+      map.fitBounds([
+        [24, -125],
+        [49, -66],
+      ]);
 
+      // Create marker group
+      markerGroupRef.current = L.layerGroup().addTo(map);
+      mapRef.current = map;
+      setMapLoaded(true);
+    };
+
+    initMap();
+
+    // Cleanup on unmount
+    return () => {
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+        markerGroupRef.current = null;
+      }
+    };
+  }, []);
+
+  // Update markers when points change
+  useEffect(() => {
+    const updateMarkers = async () => {
+      if (!markerGroupRef.current) return;
+
+      const L = await import('leaflet');
+
+      // Clear existing markers
+      markerGroupRef.current.clearLayers();
+
+      // Add new markers
       points.forEach((point) => {
         L.circleMarker([point.lat, point.lng], {
           radius: 3,
@@ -46,19 +75,11 @@ export default function USMapChart({ data, isDark }: ChartProps) {
           weight: 1,
           opacity: 0.5,
           fillOpacity: 0.5,
-        }).addTo(markerGroup);
+        }).addTo(markerGroupRef.current);
       });
-
-      // Fit bounds to US
-      map.fitBounds([
-        [24, -125],
-        [49, -66],
-      ]);
-
-      setMapLoaded(true);
     };
 
-    loadMap();
+    updateMarkers();
   }, [points]);
 
   return (
