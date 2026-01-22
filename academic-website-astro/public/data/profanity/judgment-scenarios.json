@@ -100,8 +100,15 @@
     },
     "discipline": {
       "label": "Recommended Discipline",
-      "question": "What level of discipline, if any, should the officer receive?",
-      "anchors": ["1 - No Discipline", "5 - Termination"]
+      "question": "In your personal opinion, how severe should the disciplinary action be for this officer?",
+      "anchors": ["No sanction", "Termination"],
+      "labels": {
+        "1": "No sanction",
+        "2": "Verbal coaching",
+        "3": "Written warning",
+        "4": "Significant sanction (e.g., time off)",
+        "5": "Termination of employment"
+      }
     }
   }
 }
