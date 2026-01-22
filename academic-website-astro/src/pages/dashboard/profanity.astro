@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ProfanityDashboard from '@/components/dashboard/ProfanityDashboard';
+---
+
+<BaseLayout
+  title="Police Profanity Judgment Dashboard"
+  description="Interactive dashboard exploring how police profanity is judged based on target and intent. Based on Adams (2024) and Adams et al. (2025) research with nationally representative survey data."
+>
+  <section class="section">
+    <div class="container-wide">
+      <ProfanityDashboard client:load />
+    </div>
+  </section>
+</BaseLayout>

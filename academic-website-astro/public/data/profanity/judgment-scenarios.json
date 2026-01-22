@@ -1,0 +1,107 @@
+{
+  "scenarios": [
+    {
+      "id": "self_derogatory",
+      "target": "self",
+      "intent": "derogatory",
+      "vignette": "Officer Smith had pulled over a speeding car. After discovering the driver had an outstanding warrant, Officer Smith called for backup. While waiting, the driver suddenly drove off. Smith returned to his patrol car and radioed dispatch, then muttered to himself, 'Man, I'm such a fuck-up.'",
+      "quote": "Man, I'm such a fuck-up.",
+      "publicMeans": { "appropriate": 2.43, "professional": 2.28, "trust": 2.73, "discipline": 1.74 },
+      "executiveMeans": { "appropriate": 2.89, "professional": 2.67, "trust": 2.82, "discipline": 1.45 }
+    },
+    {
+      "id": "self_positive",
+      "target": "self",
+      "intent": "positive",
+      "vignette": "Officer Smith had pulled over a speeding car. After discovering the driver had an outstanding warrant, Officer Smith called for backup and successfully made the arrest without incident. Back in the patrol car, Smith remarked to himself, 'That was a fucking good job.'",
+      "quote": "That was a fucking good job.",
+      "publicMeans": { "appropriate": 2.62, "professional": 2.44, "trust": 2.86, "discipline": 1.53 },
+      "executiveMeans": { "appropriate": 3.12, "professional": 2.85, "trust": 2.95, "discipline": 1.32 }
+    },
+    {
+      "id": "self_neutral",
+      "target": "self",
+      "intent": "neutral",
+      "vignette": "Officer Smith was on routine patrol on a quiet afternoon. Looking out the window at the clear skies, Smith commented to himself, 'It's a fucking beautiful day.'",
+      "quote": "It's a fucking beautiful day.",
+      "publicMeans": { "appropriate": 2.50, "professional": 2.34, "trust": 2.74, "discipline": 1.65 },
+      "executiveMeans": { "appropriate": 3.05, "professional": 2.78, "trust": 2.88, "discipline": 1.38 }
+    },
+    {
+      "id": "colleague_derogatory",
+      "target": "colleague",
+      "intent": "derogatory",
+      "vignette": "Officer Smith and Officer Jones were partners on patrol. After Jones accidentally left important paperwork at the station, delaying their shift, Smith turned to Jones and said, 'Jones, you're a real fuck-up sometimes.'",
+      "quote": "Jones, you're a real fuck-up sometimes.",
+      "publicMeans": { "appropriate": 2.15, "professional": 2.03, "trust": 2.63, "discipline": 1.97 },
+      "executiveMeans": { "appropriate": 2.45, "professional": 2.23, "trust": 2.55, "discipline": 1.78 }
+    },
+    {
+      "id": "colleague_positive",
+      "target": "colleague",
+      "intent": "positive",
+      "vignette": "Officer Smith and Officer Jones responded to a tense domestic dispute. Jones managed to de-escalate the situation peacefully. Afterwards, Smith said to Jones, 'Jones, you handled that fucking brilliantly.'",
+      "quote": "Jones, you handled that fucking brilliantly.",
+      "publicMeans": { "appropriate": 2.33, "professional": 2.13, "trust": 2.74, "discipline": 1.76 },
+      "executiveMeans": { "appropriate": 2.78, "professional": 2.52, "trust": 2.72, "discipline": 1.55 }
+    },
+    {
+      "id": "colleague_neutral",
+      "target": "colleague",
+      "intent": "neutral",
+      "vignette": "Officer Smith and Officer Jones were on traffic patrol when they observed a vehicle weaving between lanes. Smith turned to Jones and said, 'That car is going at least 20 miles over the fucking speed limit.'",
+      "quote": "Going at least 20 miles over the fucking speed limit.",
+      "publicMeans": { "appropriate": 2.21, "professional": 2.03, "trust": 2.63, "discipline": 1.88 },
+      "executiveMeans": { "appropriate": 2.68, "professional": 2.45, "trust": 2.65, "discipline": 1.62 }
+    },
+    {
+      "id": "public_derogatory",
+      "target": "public",
+      "intent": "derogatory",
+      "vignette": "Officer Smith responded to a call about a disturbance at a local store. Upon arrival, Smith found an agitated customer arguing loudly with staff and knocking items off shelves. Smith approached and said to the customer, 'Stop acting like a fucking idiot.'",
+      "quote": "Stop acting like a fucking idiot.",
+      "publicMeans": { "appropriate": 1.51, "professional": 1.43, "trust": 2.27, "discipline": 2.56 },
+      "executiveMeans": { "appropriate": 1.65, "professional": 1.52, "trust": 2.18, "discipline": 2.85 }
+    },
+    {
+      "id": "public_positive",
+      "target": "public",
+      "intent": "positive",
+      "vignette": "Officer Smith pulled over a driver for a minor traffic violation. The driver immediately admitted to the violation and apologized. Smith replied, 'I fucking appreciate your honesty.'",
+      "quote": "I fucking appreciate your honesty.",
+      "publicMeans": { "appropriate": 1.69, "professional": 1.59, "trust": 2.41, "discipline": 2.34 },
+      "executiveMeans": { "appropriate": 1.95, "professional": 1.78, "trust": 2.35, "discipline": 2.48 }
+    },
+    {
+      "id": "public_neutral",
+      "target": "public",
+      "intent": "neutral",
+      "vignette": "Officer Smith pulled over a driver for speeding. While explaining the reason for the stop, Smith said to the driver, 'You were going over the fucking speed limit.'",
+      "quote": "You were going over the fucking speed limit.",
+      "publicMeans": { "appropriate": 1.57, "professional": 1.49, "trust": 2.30, "discipline": 2.47 },
+      "executiveMeans": { "appropriate": 1.82, "professional": 1.68, "trust": 2.25, "discipline": 2.65 }
+    }
+  ],
+  "scales": {
+    "appropriate": {
+      "label": "Appropriateness",
+      "question": "How appropriate was the officer's language in this situation?",
+      "anchors": ["1 - Very Inappropriate", "5 - Very Appropriate"]
+    },
+    "professional": {
+      "label": "Professionalism",
+      "question": "How professional was the officer's language in this situation?",
+      "anchors": ["1 - Very Unprofessional", "5 - Very Professional"]
+    },
+    "trust": {
+      "label": "Public Trust",
+      "question": "How would this language affect your trust in the police?",
+      "anchors": ["1 - Greatly Decrease", "5 - Greatly Increase"]
+    },
+    "discipline": {
+      "label": "Recommended Discipline",
+      "question": "What level of discipline, if any, should the officer receive?",
+      "anchors": ["1 - No Discipline", "5 - Termination"]
+    }
+  }
+}

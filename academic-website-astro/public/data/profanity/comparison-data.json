@@ -1,0 +1,111 @@
+{
+  "description": "Comparison data from Adams (2024) police executive study and Adams et al. (2025) public opinion study",
+  "sources": {
+    "executive": {
+      "citation": "Adams, I. T. (2024). Fuck: The Police. The Journal of Criminal Justice Education.",
+      "sample": "Police executives (n=394)",
+      "note": "Survey of active police executives on profanity norms"
+    },
+    "public": {
+      "citation": "Adams, I. T., Mourtgos, S. M., & Marier, C. J. (2025). Fuck: Public Opinion. Police Practice and Research.",
+      "sample": "Nationally representative public sample (n=1,012)",
+      "note": "Nationally representative survey weighted to U.S. demographics"
+    }
+  },
+  "regressionCoefficients": {
+    "description": "Coefficients from Table 3 of Adams et al. (2025), showing effects relative to Self/Neutral baseline",
+    "note": "Add coefficients to baseline (Self/Neutral intercept) to get predicted means for each condition",
+    "appropriate": {
+      "intercept": 2.496,
+      "colleague": -0.284,
+      "public": -0.927,
+      "derogatory": -0.063,
+      "positive": 0.119
+    },
+    "professional": {
+      "intercept": 2.343,
+      "colleague": -0.308,
+      "public": -0.845,
+      "derogatory": -0.066,
+      "positive": 0.099
+    },
+    "trust": {
+      "intercept": 2.743,
+      "colleague": -0.117,
+      "public": -0.447,
+      "derogatory": -0.016,
+      "positive": 0.118
+    },
+    "discipline": {
+      "intercept": 1.648,
+      "colleague": 0.235,
+      "public": 0.818,
+      "derogatory": 0.091,
+      "positive": -0.120
+    }
+  },
+  "demographicEffects": {
+    "description": "Demographic moderators from Table 4 of Adams et al. (2025)",
+    "note": "These show how demographic groups differ from the reference category",
+    "appropriate": {
+      "female": -0.182,
+      "nonWhite": -0.156,
+      "collegeEducated": 0.042,
+      "higherIncome": 0.089,
+      "republican": 0.231,
+      "democrat": -0.087
+    },
+    "professional": {
+      "female": -0.195,
+      "nonWhite": -0.178,
+      "collegeEducated": 0.051,
+      "higherIncome": 0.076,
+      "republican": 0.198,
+      "democrat": -0.102
+    },
+    "trust": {
+      "female": -0.098,
+      "nonWhite": -0.142,
+      "collegeEducated": 0.023,
+      "higherIncome": 0.054,
+      "republican": 0.167,
+      "democrat": -0.089
+    },
+    "discipline": {
+      "female": 0.145,
+      "nonWhite": 0.187,
+      "collegeEducated": -0.034,
+      "higherIncome": -0.067,
+      "republican": -0.212,
+      "democrat": 0.098
+    }
+  },
+  "keyFindings": [
+    {
+      "title": "Target matters most",
+      "description": "Public-directed profanity receives substantially harsher judgments than colleague- or self-directed profanity, regardless of intent."
+    },
+    {
+      "title": "Intent has smaller effects",
+      "description": "While derogatory intent worsens judgments and positive intent improves them, these effects are much smaller than target effects."
+    },
+    {
+      "title": "Executives vs. Public",
+      "description": "Police executives tend to be slightly more accepting of profanity directed at self or colleagues, but similarly condemn public-directed profanity."
+    },
+    {
+      "title": "Demographic differences",
+      "description": "Women, non-white respondents, and Democrats tend to rate police profanity as less appropriate; Republicans and higher-income respondents tend to be more accepting."
+    }
+  ],
+  "targetLabels": {
+    "self": "Self/Situation",
+    "colleague": "Colleague",
+    "public": "Public"
+  },
+  "intentLabels": {
+    "derogatory": "Derogatory",
+    "neutral": "Neutral",
+    "positive": "Positive"
+  }
+}
