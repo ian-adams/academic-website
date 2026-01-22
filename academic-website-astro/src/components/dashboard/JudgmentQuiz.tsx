@@ -262,6 +262,52 @@ export default function JudgmentQuiz() {
     };
   }, [userRatings]);
 
+  // Calculate overall visitor averages for the scenarios they took
+  const relevantVisitorAvg = useMemo(() => {
+    if (selectedScenarios.length === 0) return null;
+    const scenarioIds = selectedScenarios.map(s => s.id);
+    const relevantResponses = visitorStats.responses.filter(r => scenarioIds.includes(r.scenarioId));
+    if (relevantResponses.length === 0) return null;
+
+    const avgs = calculateVisitorAverages(relevantResponses);
+    const totals = { appropriate: 0, professional: 0, trust: 0, discipline: 0, count: 0 };
+    for (const scenarioId of scenarioIds) {
+      if (avgs[scenarioId]) {
+        totals.appropriate += avgs[scenarioId].appropriate;
+        totals.professional += avgs[scenarioId].professional;
+        totals.trust += avgs[scenarioId].trust;
+        totals.discipline += avgs[scenarioId].discipline;
+        totals.count++;
+      }
+    }
+    if (totals.count === 0) return null;
+    return {
+      appropriate: totals.appropriate / totals.count,
+      professional: totals.professional / totals.count,
+      trust: totals.trust / totals.count,
+      discipline: totals.discipline / totals.count,
+    };
+  }, [selectedScenarios, visitorStats.responses]);
+
+  // Calculate public averages for the scenarios they took
+  const relevantPublicAvg = useMemo(() => {
+    if (selectedScenarios.length === 0) return null;
+    const totals = { appropriate: 0, professional: 0, trust: 0, discipline: 0 };
+    for (const scenario of selectedScenarios) {
+      totals.appropriate += scenario.publicMeans.appropriate;
+      totals.professional += scenario.publicMeans.professional;
+      totals.trust += scenario.publicMeans.trust;
+      totals.discipline += scenario.publicMeans.discipline;
+    }
+    const count = selectedScenarios.length;
+    return {
+      appropriate: totals.appropriate / count,
+      professional: totals.professional / count,
+      trust: totals.trust / count,
+      discipline: totals.discipline / count,
+    };
+  }, [selectedScenarios]);
+
   const chartLayout = {
     paper_bgcolor: 'transparent',
     plot_bgcolor: 'transparent',
@@ -341,53 +387,9 @@ export default function JudgmentQuiz() {
   }
 
   // Results screen
-  if (quizComplete && scenariosData && averageUserRatings) {
+  if (quizComplete && scenariosData && averageUserRatings && relevantPublicAvg) {
     const scaleLabels = ['Appropriateness', 'Professionalism', 'Trust', 'Discipline'];
     const scaleKeys: (keyof UserRatings)[] = ['appropriate', 'professional', 'trust', 'discipline'];
-
-    // Calculate overall visitor averages for the scenarios they took
-    const relevantVisitorAvg = useMemo(() => {
-      const scenarioIds = selectedScenarios.map(s => s.id);
-      const relevantResponses = visitorStats.responses.filter(r => scenarioIds.includes(r.scenarioId));
-      if (relevantResponses.length === 0) return null;
-
-      const avgs = calculateVisitorAverages(relevantResponses);
-      const totals = { appropriate: 0, professional: 0, trust: 0, discipline: 0, count: 0 };
-      for (const scenarioId of scenarioIds) {
-        if (avgs[scenarioId]) {
-          totals.appropriate += avgs[scenarioId].appropriate;
-          totals.professional += avgs[scenarioId].professional;
-          totals.trust += avgs[scenarioId].trust;
-          totals.discipline += avgs[scenarioId].discipline;
-          totals.count++;
-        }
-      }
-      if (totals.count === 0) return null;
-      return {
-        appropriate: totals.appropriate / totals.count,
-        professional: totals.professional / totals.count,
-        trust: totals.trust / totals.count,
-        discipline: totals.discipline / totals.count,
-      };
-    }, [selectedScenarios, visitorStats.responses]);
-
-    // Calculate public averages for the scenarios they took
-    const relevantPublicAvg = useMemo(() => {
-      const totals = { appropriate: 0, professional: 0, trust: 0, discipline: 0 };
-      for (const scenario of selectedScenarios) {
-        totals.appropriate += scenario.publicMeans.appropriate;
-        totals.professional += scenario.publicMeans.professional;
-        totals.trust += scenario.publicMeans.trust;
-        totals.discipline += scenario.publicMeans.discipline;
-      }
-      const count = selectedScenarios.length;
-      return {
-        appropriate: totals.appropriate / count,
-        professional: totals.professional / count,
-        trust: totals.trust / count,
-        discipline: totals.discipline / count,
-      };
-    }, [selectedScenarios]);
 
     return (
       <div className="space-y-8">
