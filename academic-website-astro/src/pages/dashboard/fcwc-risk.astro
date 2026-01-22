@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FCWCDashboard from '@/components/dashboard/FCWCDashboard';
+---
+
+<BaseLayout
+  title="False Confession Risk Calculator"
+  description="Interactive Bayesian calculator exploring the risk of false confession wrongful convictions from interrogation tactics. Based on Adams et al. (forthcoming)."
+>
+  <section class="section bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <div class="container-wide">
+      <FCWCDashboard client:load />
+    </div>
+  </section>
+</BaseLayout>
