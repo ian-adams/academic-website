@@ -353,7 +353,7 @@ export default function JudgmentQuiz() {
           <p className="text-gray-600 dark:text-gray-400 mb-6">
             You'll read <strong>4 randomly selected scenarios</strong> of police officers using profanity in different contexts.
             For each one, rate the language on four dimensions. Then see how your judgments
-            compare to other visitors and the nationally representative sample.
+            compare to other visitors and the public sample.
           </p>
 
           <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 mb-6 text-left">
@@ -398,7 +398,7 @@ export default function JudgmentQuiz() {
             Your Results
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-center mb-8">
-            See how your judgments compare to {visitorStats.totalVisitors > 1 ? `${visitorStats.totalVisitors.toLocaleString()} other visitors and ` : ''}the national sample (n=1,012)
+            See how your judgments compare to {visitorStats.totalVisitors > 1 ? `${visitorStats.totalVisitors.toLocaleString()} other visitors and ` : ''}the public sample (n=2,412)
           </p>
 
           {/* Overall comparison chart */}
@@ -426,7 +426,7 @@ export default function JudgmentQuiz() {
                   x: scaleLabels,
                   y: scaleKeys.map(k => relevantPublicAvg[k]),
                   type: 'bar',
-                  name: 'National Sample',
+                  name: 'Public Sample',
                   marker: { color: COLORS.public },
                 },
               ]}
@@ -456,22 +456,22 @@ export default function JudgmentQuiz() {
             <h3 className="font-bold text-gray-900 dark:text-white mb-3">What Your Ratings Suggest</h3>
             <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
               {averageUserRatings.appropriate > relevantPublicAvg.appropriate + 0.3 && (
-                <p>• You rated police profanity as <strong>more appropriate</strong> than the national sample.</p>
+                <p>• You rated police profanity as <strong>more appropriate</strong> than the public sample.</p>
               )}
               {averageUserRatings.appropriate < relevantPublicAvg.appropriate - 0.3 && (
-                <p>• You rated police profanity as <strong>less appropriate</strong> than the national sample.</p>
+                <p>• You rated police profanity as <strong>less appropriate</strong> than the public sample.</p>
               )}
               {Math.abs(averageUserRatings.appropriate - relevantPublicAvg.appropriate) <= 0.3 && (
-                <p>• Your views on appropriateness are <strong>similar to</strong> the national sample.</p>
+                <p>• Your views on appropriateness are <strong>similar to</strong> the public sample.</p>
               )}
               {averageUserRatings.discipline > relevantPublicAvg.discipline + 0.3 && (
-                <p>• You recommended <strong>more discipline</strong> than the national sample.</p>
+                <p>• You recommended <strong>more discipline</strong> than the public sample.</p>
               )}
               {averageUserRatings.discipline < relevantPublicAvg.discipline - 0.3 && (
-                <p>• You recommended <strong>less discipline</strong> than the national sample.</p>
+                <p>• You recommended <strong>less discipline</strong> than the public sample.</p>
               )}
               {Math.abs(averageUserRatings.discipline - relevantPublicAvg.discipline) <= 0.3 && (
-                <p>• Your discipline recommendations are <strong>similar to</strong> the national sample.</p>
+                <p>• Your discipline recommendations are <strong>similar to</strong> the public sample.</p>
               )}
               {relevantVisitorAvg && Math.abs(averageUserRatings.appropriate - relevantVisitorAvg.appropriate) > 0.3 && (
                 <p>• Compared to other visitors, you're {averageUserRatings.appropriate > relevantVisitorAvg.appropriate ? 'more' : 'less'} accepting of police profanity.</p>

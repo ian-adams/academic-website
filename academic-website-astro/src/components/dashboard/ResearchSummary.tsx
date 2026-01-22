@@ -37,8 +37,8 @@ export default function ResearchSummary() {
         <div className="p-6 space-y-4">
           <div className="flex flex-wrap gap-2 text-xs">
             <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Police Quarterly</span>
-            <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">n = 394 police executives</span>
-            <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Survey experiment</span>
+            <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">n = 1,492 executives (5,280 observations)</span>
+            <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">All 50 US states</span>
           </div>
 
           <div>
@@ -52,10 +52,10 @@ export default function ResearchSummary() {
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">What did we do?</h4>
             <p className="text-gray-600 dark:text-gray-400">
-              We surveyed nearly 400 police executives (chiefs, sheriffs, and command staff) from across
-              the United States. We showed them realistic scenarios of officers using profanity and asked
-              them to rate the behavior. We also documented 50 different "fuck" derivatives commonly used
-              in police culture—that's where The Fuckulator quiz comes from.
+              We surveyed nearly 1,500 law enforcement executives (72%) and HR directors (25%) from agencies
+              across all 50 US states. With an average of 27.5 years of professional experience, these leaders
+              rated realistic scenarios of officers using profanity. We also documented 50 different "fuck"
+              derivatives commonly used in police culture—that's where The Fuckulator quiz comes from.
             </p>
           </div>
 
@@ -111,8 +111,8 @@ export default function ResearchSummary() {
         <div className="p-6 space-y-4">
           <div className="flex flex-wrap gap-2 text-xs">
             <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Police Quarterly</span>
-            <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">n = 1,012 U.S. adults</span>
-            <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Nationally representative</span>
+            <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">n = 2,412 adults</span>
+            <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">South Carolina sample</span>
           </div>
 
           <div>
@@ -126,8 +126,8 @@ export default function ResearchSummary() {
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">What did we do?</h4>
             <p className="text-gray-600 dark:text-gray-400">
-              We conducted a nationally representative survey of over 1,000 American adults. We used the
-              same scenarios from Study 1, allowing us to directly compare how the public and police
+              We surveyed over 2,400 South Carolina residents, drawn from a commercial household listserv.
+              We used the same scenarios from Study 1, allowing us to directly compare how the public and
               executives judge the same behaviors. We also looked at how demographics (age, race, gender,
               political affiliation) predict people's judgments.
             </p>
@@ -220,7 +220,7 @@ export default function ResearchSummary() {
           </p>
           <p>
             The interactive tools in this dashboard let you explore the data yourself. You can see how
-            your own judgments compare to national samples, understand the patterns in the data, and
+            your own judgments compare to the research samples, understand the patterns in the data, and
             even generate a custom policy based on your preferences.
           </p>
           <p className="font-medium text-gray-900 dark:text-white">

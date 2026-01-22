@@ -227,14 +227,14 @@ export default function PublicVsExecutive() {
               x: scenariosData.scenarios.map(s => `${TARGET_LABELS[s.target]} (${s.intent})`),
               y: scenariosData.scenarios.map(s => s.publicMeans[selectedOutcome]),
               type: 'bar',
-              name: 'Public Sample (n=1,012)',
+              name: 'Public Sample (n=2,412)',
               marker: { color: COLORS.public },
             },
             {
               x: scenariosData.scenarios.map(s => `${TARGET_LABELS[s.target]} (${s.intent})`),
               y: scenariosData.scenarios.map(s => s.executiveMeans[selectedOutcome]),
               type: 'bar',
-              name: 'Police Executives (n=394)',
+              name: 'Executives (n=1,492)',
               marker: { color: COLORS.executive },
             },
           ]}

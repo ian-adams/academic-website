@@ -29,7 +29,7 @@ const TABS: TabInfo[] = [
     id: 'judgment',
     label: 'Judgment Quiz',
     shortLabel: 'Quiz 2',
-    description: 'Rate scenarios and compare to the national sample',
+    description: 'Rate scenarios and compare to other respondents',
   },
   {
     id: 'explorer',
@@ -95,13 +95,16 @@ export default function ProfanityDashboard() {
             Interactive Research Dashboard
           </span>
         </div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 dark:text-white leading-tight mb-4">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 dark:text-white leading-tight mb-2">
           Police Profanity<br />
           <span className="text-purple-600">Judgment Dashboard</span>
         </h1>
+        <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 italic mb-4">
+          What the fuck do you know about police profanity?
+        </p>
         <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl font-light leading-relaxed">
           Explore how police profanity is judged based on its <strong>target</strong> and <strong>intent</strong>,
-          drawing from nationally representative survey data.
+          drawing from survey data of executives and the public.
         </p>
         <div className="flex flex-wrap items-center gap-6 mt-6 text-sm text-gray-500 dark:text-gray-400">
           <span className="flex items-center gap-2">
@@ -110,7 +113,7 @@ export default function ProfanityDashboard() {
           </span>
           <span className="flex items-center gap-2">
             <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
-            n = 1,012 public + 394 police executives
+            n = 2,412 public + 1,492 executives
           </span>
         </div>
       </header>
@@ -245,7 +248,7 @@ export default function ProfanityDashboard() {
             , University of South Carolina
           </div>
           <div className="text-xs">
-            For educational and research purposes. Data from nationally representative surveys.
+            For educational and research purposes. Data from peer-reviewed survey research.
           </div>
         </div>
       </footer>

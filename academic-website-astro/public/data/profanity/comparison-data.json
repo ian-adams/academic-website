@@ -4,14 +4,14 @@
     "executive": {
       "citation": "Adams, I. T. (2024). Fuck: The Police. Police Quarterly, 28(1), 10986111241241750.",
       "doi": "https://doi.org/10.1177/10986111241241750",
-      "sample": "Police executives (n=394)",
-      "note": "Survey of active police executives on profanity norms"
+      "sample": "Law enforcement and HR executives (n=1,492; 5,280 observations)",
+      "note": "Survey of law enforcement heads (72.3%) and HR heads (24.7%) from all 50 US states"
     },
     "public": {
       "citation": "Adams, I. T., Olson, M., James, L., Tregle, B., & Boehme, H. M. (2025). Fuck: Public Opinion. Police Quarterly, 10986111251357508.",
       "doi": "https://doi.org/10.1177/10986111251357508",
-      "sample": "Nationally representative public sample (n=1,012)",
-      "note": "Nationally representative survey weighted to U.S. demographics"
+      "sample": "South Carolina public sample (n=2,412)",
+      "note": "Survey of South Carolina heads of households"
     }
   },
   "regressionCoefficients": {
