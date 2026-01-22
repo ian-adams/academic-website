@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import type { PlotParams } from 'react-plotly.js';
 
 // Client-side only Plot component wrapper
@@ -22,9 +22,22 @@ function PlotWrapper(props: PlotParams) {
   return <Plot {...props} />;
 }
 
+// Tooltip component for technical terms
+function Tooltip({ children, tip }: { children: React.ReactNode; tip: string }) {
+  return (
+    <span className="relative group cursor-help border-b border-dotted border-gray-400">
+      {children}
+      <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none w-64 text-left z-50 shadow-lg">
+        {tip}
+        <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></span>
+      </span>
+    </span>
+  );
+}
+
 // Economist-style color palette
 const COLORS = {
-  red: '#E3120B',        // The Economist red
+  red: '#E3120B',
   darkRed: '#9B0000',
   navy: '#0D1F3C',
   slate: '#3D4F5F',
@@ -34,29 +47,20 @@ const COLORS = {
   blue: '#1565C0',
 };
 
-// Bayesian calculation for FCWC risk
-function calculateFCWCRisk(
-  baseRateInnocent: number,  // P(Innocent|Confession) = 1 - P(Guilty|Confession)
-  sensitivity: number,       // P(Tactic elicits confession | Guilty) - True positive rate
-  specificity: number        // P(Tactic doesn't elicit | Innocent) - True negative rate
+// Bayesian calculation for wrongful conviction risk
+function calculateWrongfulConvictionRisk(
+  baseRateInnocent: number,
+  sensitivity: number,
+  specificity: number
 ): number {
-  // Using Bayes' theorem:
-  // P(FCWC|Tactic) = P(Tactic|Innocent) * P(Innocent) / P(Tactic)
-  // Where P(Tactic) = P(Tactic|Guilty)*P(Guilty) + P(Tactic|Innocent)*P(Innocent)
-
   const pInnocent = baseRateInnocent;
   const pGuilty = 1 - baseRateInnocent;
-
-  const pTacticGivenInnocent = 1 - specificity;  // False positive rate
-  const pTacticGivenGuilty = sensitivity;         // True positive rate
-
+  const pTacticGivenInnocent = 1 - specificity;
+  const pTacticGivenGuilty = sensitivity;
   const pTactic = (pTacticGivenGuilty * pGuilty) + (pTacticGivenInnocent * pInnocent);
 
   if (pTactic === 0) return 0;
-
-  const pFCWC = (pTacticGivenInnocent * pInnocent) / pTactic;
-
-  return pFCWC;
+  return (pTacticGivenInnocent * pInnocent) / pTactic;
 }
 
 // Calculate acceptable risk threshold given lambda
@@ -69,24 +73,21 @@ function runMonteCarloSimulation(
   baseRateMean: number,
   sensitivityMean: number,
   specificityMean: number,
-  iterations: number = 1000,
+  iterations: number = 2000,
   uncertainty: number = 0.05
 ): number[] {
   const results: number[] = [];
 
   for (let i = 0; i < iterations; i++) {
-    // Add gaussian noise to parameters
     const baseRate = Math.max(0.001, Math.min(0.5, baseRateMean + (Math.random() - 0.5) * 2 * uncertainty * baseRateMean));
     const sens = Math.max(0.1, Math.min(0.99, sensitivityMean + (Math.random() - 0.5) * 2 * uncertainty));
     const spec = Math.max(0.1, Math.min(0.99, specificityMean + (Math.random() - 0.5) * 2 * uncertainty));
-
-    results.push(calculateFCWCRisk(baseRate, sens, spec));
+    results.push(calculateWrongfulConvictionRisk(baseRate, sens, spec));
   }
 
   return results.sort((a, b) => a - b);
 }
 
-// Get percentile from sorted array
 function getPercentile(sorted: number[], p: number): number {
   const index = Math.floor(p * sorted.length);
   return sorted[Math.min(index, sorted.length - 1)];
@@ -97,14 +98,11 @@ export default function FCWCDashboard() {
   const [isDark, setIsDark] = useState(false);
 
   // Calculator inputs
-  const [baseRateGuilty, setBaseRateGuilty] = useState(0.95);  // P(Guilty|Confession)
-  const [sensitivity, setSensitivity] = useState(0.83);        // From paper's minimization estimate
-  const [specificity, setSpecificity] = useState(0.85);        // Conservative estimate
+  const [baseRateGuilty, setBaseRateGuilty] = useState(0.95);
+  const [sensitivity, setSensitivity] = useState(0.83);
+  const [specificity, setSpecificity] = useState(0.85);
+  const [lambda, setLambda] = useState(10);
 
-  // Acceptability curve inputs
-  const [lambda, setLambda] = useState(10);  // Blackstone standard
-
-  // Check dark mode
   useEffect(() => {
     const checkDark = () => {
       setIsDark(document.documentElement.classList.contains('dark'));
@@ -115,14 +113,12 @@ export default function FCWCDashboard() {
     return () => observer.disconnect();
   }, []);
 
-  // Calculate FCWC risk
   const baseRateInnocent = 1 - baseRateGuilty;
-  const fcwcRisk = useMemo(() =>
-    calculateFCWCRisk(baseRateInnocent, sensitivity, specificity),
+  const wrongfulConvictionRisk = useMemo(() =>
+    calculateWrongfulConvictionRisk(baseRateInnocent, sensitivity, specificity),
     [baseRateInnocent, sensitivity, specificity]
   );
 
-  // Monte Carlo simulation
   const mcResults = useMemo(() =>
     runMonteCarloSimulation(baseRateInnocent, sensitivity, specificity, 2000),
     [baseRateInnocent, sensitivity, specificity]
@@ -132,13 +128,12 @@ export default function FCWCDashboard() {
   const mc50th = getPercentile(mcResults, 0.50);
   const mc95th = getPercentile(mcResults, 0.95);
 
-  // Acceptable risk threshold
   const acceptableThreshold = getAcceptableRisk(lambda);
 
-  // Data for acceptability curve
+  // Static data for acceptability curve - computed once
   const acceptabilityCurveData = useMemo(() => {
-    const lambdas = [];
-    const thresholds = [];
+    const lambdas: number[] = [];
+    const thresholds: number[] = [];
     for (let l = 1; l <= 100; l++) {
       lambdas.push(l);
       thresholds.push(getAcceptableRisk(l) * 100);
@@ -149,20 +144,47 @@ export default function FCWCDashboard() {
   // Sensitivity analysis data
   const sensitivityData = useMemo(() => {
     const specs = [0.70, 0.80, 0.90, 0.95, 0.99];
-    const baseRates = [];
     const traces: { baseRate: number[]; risk: number[]; spec: number }[] = [];
 
-    for (let br = 0.01; br <= 0.20; br += 0.01) {
-      baseRates.push(br);
-    }
-
     for (const spec of specs) {
-      const risks = baseRates.map(br => calculateFCWCRisk(br, sensitivity, spec) * 100);
-      traces.push({ baseRate: baseRates.map(b => b * 100), risk: risks, spec });
+      const baseRates: number[] = [];
+      const risks: number[] = [];
+      for (let br = 0.01; br <= 0.20; br += 0.01) {
+        baseRates.push(br * 100);
+        risks.push(calculateWrongfulConvictionRisk(br, sensitivity, spec) * 100);
+      }
+      traces.push({ baseRate: baseRates, risk: risks, spec });
     }
 
-    return { baseRates, traces };
+    return { traces };
   }, [sensitivity]);
+
+  // Dynamic interpretation of results
+  const getInterpretation = () => {
+    const riskPct = wrongfulConvictionRisk * 100;
+    const thresholdPct = acceptableThreshold * 100;
+
+    if (riskPct < 1) {
+      return `With these assumptions, fewer than 1 in 100 confessions obtained using this tactic would be false and lead to wrongful conviction.`;
+    } else if (riskPct < 5) {
+      return `With these assumptions, roughly ${riskPct.toFixed(0)} in 100 confessions obtained using this tactic would be false and lead to wrongful conviction.`;
+    } else {
+      return `With these assumptions, about ${riskPct.toFixed(0)} in 100 confessions obtained using this tactic would be false and lead to wrongful conviction—a relatively high rate.`;
+    }
+  };
+
+  const getThresholdInterpretation = () => {
+    const riskPct = wrongfulConvictionRisk * 100;
+    const thresholdPct = acceptableThreshold * 100;
+
+    if (wrongfulConvictionRisk < acceptableThreshold) {
+      const margin = thresholdPct - riskPct;
+      return `This is ${margin.toFixed(1)} percentage points below your chosen acceptability threshold of ${thresholdPct.toFixed(1)}%.`;
+    } else {
+      const excess = riskPct - thresholdPct;
+      return `This exceeds your chosen acceptability threshold of ${thresholdPct.toFixed(1)}% by ${excess.toFixed(1)} percentage points.`;
+    }
+  };
 
   const chartLayout = {
     paper_bgcolor: 'transparent',
@@ -186,7 +208,7 @@ export default function FCWCDashboard() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Header - Economist Style */}
+      {/* Hero Header */}
       <header className="border-b-4 border-red-700 pb-8 mb-8">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-1 h-12 bg-red-700"></div>
@@ -205,7 +227,11 @@ export default function FCWCDashboard() {
         <div className="flex items-center gap-6 mt-6 text-sm text-gray-500 dark:text-gray-400">
           <span className="flex items-center gap-2">
             <span className="w-2 h-2 bg-red-700 rounded-full"></span>
-            Based on Mourtgos & Adams, forthcoming at <em>Journal of Criminal Justice</em>
+            Based on{' '}
+            <a href="https://smourtgos.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">
+              Mourtgos
+            </a>
+            {' & Adams, forthcoming at <em>Journal of Criminal Justice</em>'}
           </span>
         </div>
       </header>
@@ -238,33 +264,33 @@ export default function FCWCDashboard() {
       {activeTab === 'calculator' && (
         <div className="space-y-8">
           {/* Key Result Banner */}
-          <div className="bg-gray-900 dark:bg-gray-800 text-white p-8 -mx-4 sm:mx-0 sm:rounded-none">
+          <div className="bg-gray-900 dark:bg-gray-800 text-white p-8 -mx-4 sm:mx-0">
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-3 gap-8 items-center">
                 <div className="md:col-span-2">
                   <div className="text-sm font-bold tracking-widest uppercase text-red-400 mb-2">
-                    Posterior Probability
+                    Estimated Wrongful Conviction Risk
                   </div>
                   <div className="text-6xl md:text-7xl font-bold font-serif">
-                    {(fcwcRisk * 100).toFixed(1)}%
+                    {(wrongfulConvictionRisk * 100).toFixed(1)}%
                   </div>
-                  <div className="text-lg text-gray-300 mt-2">
-                    Estimated risk of FCWC given tactic use
+                  <div className="text-lg text-gray-300 mt-3 leading-relaxed">
+                    {getInterpretation()}
                   </div>
                   <div className="text-sm text-gray-400 mt-4 font-mono">
-                    90% CI: [{(mc5th * 100).toFixed(1)}% – {(mc95th * 100).toFixed(1)}%]
+                    90% confidence interval: {(mc5th * 100).toFixed(1)}% – {(mc95th * 100).toFixed(1)}%
                   </div>
                 </div>
                 <div className="text-center">
                   <div className={`text-lg font-semibold px-4 py-2 rounded ${
-                    fcwcRisk < acceptableThreshold
+                    wrongfulConvictionRisk < acceptableThreshold
                       ? 'bg-teal-900/50 text-teal-300'
                       : 'bg-red-900/50 text-red-300'
                   }`}>
-                    {fcwcRisk < acceptableThreshold ? 'Below' : 'Exceeds'} Threshold
+                    {wrongfulConvictionRisk < acceptableThreshold ? 'Within' : 'Exceeds'} Acceptable Range
                   </div>
                   <div className="text-sm text-gray-400 mt-2">
-                    λ={lambda} threshold: {(acceptableThreshold * 100).toFixed(1)}%
+                    Your threshold (λ={lambda}): {(acceptableThreshold * 100).toFixed(1)}%
                   </div>
                 </div>
               </div>
@@ -277,7 +303,7 @@ export default function FCWCDashboard() {
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
               <h2 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                 <span className="w-1 h-6 bg-red-700"></span>
-                Model Parameters
+                Adjust Your Assumptions
               </h2>
 
               <div className="space-y-8">
@@ -285,7 +311,9 @@ export default function FCWCDashboard() {
                 <div>
                   <div className="flex justify-between items-baseline mb-2">
                     <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                      P(Guilty | Confession)
+                      <Tooltip tip="What percentage of confessions are from truly guilty people? Higher values mean confessions are more reliable indicators of guilt.">
+                        True Confession Rate
+                      </Tooltip>
                     </label>
                     <span className="text-2xl font-bold font-mono text-gray-900 dark:text-white">
                       {(baseRateGuilty * 100).toFixed(0)}%
@@ -301,9 +329,8 @@ export default function FCWCDashboard() {
                     className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-700"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
-                    <span>80%</span>
-                    <span className="text-gray-400">Base rate of true confessions</span>
-                    <span>99%</span>
+                    <span>80% (more false confessions)</span>
+                    <span>99% (very reliable)</span>
                   </div>
                 </div>
 
@@ -311,7 +338,9 @@ export default function FCWCDashboard() {
                 <div>
                   <div className="flex justify-between items-baseline mb-2">
                     <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                      Sensitivity (True Positive Rate)
+                      <Tooltip tip="How effective is the tactic at getting guilty people to confess? Higher values mean the tactic is more effective at eliciting true confessions.">
+                        Tactic Effectiveness (Guilty)
+                      </Tooltip>
                     </label>
                     <span className="text-2xl font-bold font-mono text-gray-900 dark:text-white">
                       {(sensitivity * 100).toFixed(0)}%
@@ -327,9 +356,8 @@ export default function FCWCDashboard() {
                     className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-700"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
-                    <span>50%</span>
-                    <span className="text-gray-400">P(Tactic works | Guilty)</span>
-                    <span>99%</span>
+                    <span>50% (less effective)</span>
+                    <span>99% (highly effective)</span>
                   </div>
                 </div>
 
@@ -337,7 +365,9 @@ export default function FCWCDashboard() {
                 <div>
                   <div className="flex justify-between items-baseline mb-2">
                     <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                      Specificity (True Negative Rate)
+                      <Tooltip tip="How well does the tactic protect innocent people from falsely confessing? Higher values mean innocent people are less likely to falsely confess under this tactic.">
+                        Innocent Protection Rate
+                      </Tooltip>
                     </label>
                     <span className="text-2xl font-bold font-mono text-gray-900 dark:text-white">
                       {(specificity * 100).toFixed(0)}%
@@ -353,9 +383,8 @@ export default function FCWCDashboard() {
                     className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-700"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
-                    <span>50%</span>
-                    <span className="text-gray-400">P(No confession | Innocent)</span>
-                    <span>99%</span>
+                    <span>50% (risky for innocents)</span>
+                    <span>99% (protects innocents)</span>
                   </div>
                 </div>
 
@@ -363,7 +392,9 @@ export default function FCWCDashboard() {
                 <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
                   <div className="flex justify-between items-baseline mb-2">
                     <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                      λ (Harm Ratio)
+                      <Tooltip tip="How many guilty people going free equals the harm of one innocent person wrongly convicted? Higher values mean you place more weight on protecting the innocent.">
+                        Harm Trade-off (λ)
+                      </Tooltip>
                     </label>
                     <span className="text-2xl font-bold font-mono text-gray-900 dark:text-white">
                       {lambda}
@@ -379,9 +410,9 @@ export default function FCWCDashboard() {
                     className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-700"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
-                    <span>1</span>
-                    <span className="text-gray-400">Blackstone standard = 10</span>
-                    <span>50</span>
+                    <span>1 (equal weight)</span>
+                    <span>10 = Blackstone</span>
+                    <span>50 (protect innocent)</span>
                   </div>
                 </div>
               </div>
@@ -393,10 +424,9 @@ export default function FCWCDashboard() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    { label: 'Conservative', br: 0.95, sens: 0.83, spec: 0.85 },
+                    { label: 'Conservative (Paper Default)', br: 0.95, sens: 0.83, spec: 0.85 },
                     { label: 'Moderate', br: 0.92, sens: 0.80, spec: 0.80 },
-                    { label: 'Aggressive', br: 0.88, sens: 0.90, spec: 0.70 },
-                    { label: 'Paper Default', br: 0.95, sens: 0.83, spec: 0.85 },
+                    { label: 'Pessimistic', br: 0.88, sens: 0.90, spec: 0.70 },
                   ].map((preset) => (
                     <button
                       key={preset.label}
@@ -414,12 +444,22 @@ export default function FCWCDashboard() {
               </div>
             </div>
 
-            {/* Monte Carlo Distribution */}
+            {/* Results Panel */}
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
               <h2 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                 <span className="w-1 h-6 bg-red-700"></span>
-                Posterior Distribution
+                What Your Choices Mean
               </h2>
+
+              {/* Dynamic interpretation */}
+              <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg mb-6">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                  {getInterpretation()}
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-3">
+                  {getThresholdInterpretation()}
+                </p>
+              </div>
 
               <PlotWrapper
                 data={[
@@ -437,15 +477,15 @@ export default function FCWCDashboard() {
                 ]}
                 layout={{
                   ...chartLayout,
-                  height: 300,
+                  height: 220,
                   showlegend: false,
                   xaxis: {
                     ...chartLayout.xaxis,
-                    title: { text: 'FCWC Risk (%)', font: { size: 12 } },
+                    title: { text: 'Wrongful Conviction Risk (%)', font: { size: 11 } },
                   },
                   yaxis: {
                     ...chartLayout.yaxis,
-                    title: { text: 'Frequency', font: { size: 12 } },
+                    title: { text: 'Frequency', font: { size: 11 } },
                   },
                   shapes: [
                     {
@@ -463,7 +503,7 @@ export default function FCWCDashboard() {
                       x: acceptableThreshold * 100,
                       y: 1,
                       yref: 'paper',
-                      text: `λ=${lambda} threshold`,
+                      text: `Your threshold`,
                       showarrow: true,
                       arrowhead: 0,
                       ax: 40,
@@ -472,23 +512,23 @@ export default function FCWCDashboard() {
                     },
                   ],
                 }}
-                config={{ responsive: true, displayModeBar: false }}
-                style={{ width: '100%', height: '300px' }}
+                config={{ responsive: true, displayModeBar: false, staticPlot: true }}
+                style={{ width: '100%', height: '220px' }}
               />
 
               {/* Summary Stats */}
-              <div className="grid grid-cols-3 gap-4 mt-6 text-center">
-                <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded">
-                  <div className="text-xs font-bold uppercase tracking-wide text-gray-500">5th %ile</div>
-                  <div className="text-xl font-bold font-mono text-gray-900 dark:text-white">{(mc5th * 100).toFixed(2)}%</div>
+              <div className="grid grid-cols-3 gap-4 mt-4 text-center">
+                <div className="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                  <div className="text-xs font-bold uppercase tracking-wide text-gray-500">Low Est.</div>
+                  <div className="text-lg font-bold font-mono text-gray-900 dark:text-white">{(mc5th * 100).toFixed(1)}%</div>
                 </div>
-                <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded">
-                  <div className="text-xs font-bold uppercase tracking-wide text-gray-500">Median</div>
-                  <div className="text-xl font-bold font-mono text-gray-900 dark:text-white">{(mc50th * 100).toFixed(2)}%</div>
+                <div className="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                  <div className="text-xs font-bold uppercase tracking-wide text-gray-500">Middle</div>
+                  <div className="text-lg font-bold font-mono text-gray-900 dark:text-white">{(mc50th * 100).toFixed(1)}%</div>
                 </div>
-                <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded">
-                  <div className="text-xs font-bold uppercase tracking-wide text-gray-500">95th %ile</div>
-                  <div className="text-xl font-bold font-mono text-gray-900 dark:text-white">{(mc95th * 100).toFixed(2)}%</div>
+                <div className="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                  <div className="text-xs font-bold uppercase tracking-wide text-gray-500">High Est.</div>
+                  <div className="text-lg font-bold font-mono text-gray-900 dark:text-white">{(mc95th * 100).toFixed(1)}%</div>
                 </div>
               </div>
             </div>
@@ -496,10 +536,13 @@ export default function FCWCDashboard() {
 
           {/* Sensitivity Analysis */}
           <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
-            <h2 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+            <h2 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-2 flex items-center gap-2">
               <span className="w-1 h-6 bg-red-700"></span>
-              Sensitivity Analysis: How Specificity Affects Risk
+              How Protection Rates Change the Picture
             </h2>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+              This chart shows how the wrongful conviction risk changes based on how well the tactic protects innocent people (different lines) and the underlying rate of false confessions (x-axis).
+            </p>
 
             <PlotWrapper
               data={sensitivityData.traces.map((trace, i) => ({
@@ -507,7 +550,7 @@ export default function FCWCDashboard() {
                 y: trace.risk,
                 type: 'scatter' as const,
                 mode: 'lines' as const,
-                name: `Spec=${(trace.spec * 100).toFixed(0)}%`,
+                name: `${(trace.spec * 100).toFixed(0)}% protection`,
                 line: {
                   width: trace.spec === 0.85 ? 3 : 2,
                   color: [COLORS.warmGray, COLORS.slate, COLORS.navy, COLORS.red, COLORS.darkRed][i],
@@ -526,12 +569,12 @@ export default function FCWCDashboard() {
                 },
                 xaxis: {
                   ...chartLayout.xaxis,
-                  title: { text: 'Base Rate of False Confessions (%)', font: { size: 12 } },
+                  title: { text: 'False Confession Rate (%)', font: { size: 12 } },
                   range: [0, 20],
                 },
                 yaxis: {
                   ...chartLayout.yaxis,
-                  title: { text: 'FCWC Risk (%)', font: { size: 12 } },
+                  title: { text: 'Wrongful Conviction Risk (%)', font: { size: 12 } },
                 },
                 shapes: [
                   {
@@ -544,11 +587,11 @@ export default function FCWCDashboard() {
                   },
                 ],
               }}
-              config={{ responsive: true, displayModeBar: false }}
+              config={{ responsive: true, displayModeBar: false, staticPlot: true }}
               style={{ width: '100%', height: '350px' }}
             />
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-4 text-center">
-              Dashed teal line shows the acceptable risk threshold at λ={lambda} ({(acceptableThreshold * 100).toFixed(1)}%)
+              Dashed teal line = your acceptability threshold ({(acceptableThreshold * 100).toFixed(1)}%). Solid line = your current protection rate setting.
             </p>
           </div>
         </div>
@@ -562,21 +605,37 @@ export default function FCWCDashboard() {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-serif font-bold mb-4">The Acceptability Curve</h2>
               <p className="text-lg text-gray-300 leading-relaxed">
-                How much risk of wrongful conviction is "acceptable"? The answer depends on <strong className="text-white">λ (lambda)</strong>—the
-                ratio of harm from wrongfully convicting an innocent person versus wrongfully acquitting a guilty one.
+                How much risk of wrongful conviction is "acceptable"? There's no single answer—it depends on
+                how you weigh the harm of convicting an innocent person against the harm of letting a guilty person go free.
               </p>
-              <div className="mt-6 p-4 bg-white/10 rounded-lg font-mono text-center">
-                <span className="text-xl">Acceptable Risk = 1 / (1 + λ)</span>
+              <div className="mt-6 p-4 bg-white/10 rounded-lg">
+                <div className="text-center font-mono text-xl mb-2">
+                  Maximum Acceptable Risk = 1 ÷ (1 + λ)
+                </div>
+                <p className="text-sm text-gray-400 text-center">
+                  Where λ represents how many guilty people going free equals the harm of one wrongful conviction
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Lambda Selector */}
+          {/* Lambda Selector with better explanation */}
           <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+            <div className="mb-6">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                What's Your Trade-off?
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                The value <strong>λ (lambda)</strong> represents a moral judgment: How many guilty people going free
+                is equivalent in harm to one innocent person being wrongly convicted? A higher λ means you believe
+                wrongful convictions are much worse than wrongful acquittals, so you'll tolerate less risk.
+              </p>
+            </div>
+
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div className="flex-1">
                 <label className="text-sm font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                  Select Your λ Value
+                  Slide to set your λ value
                 </label>
                 <input
                   type="range"
@@ -587,12 +646,22 @@ export default function FCWCDashboard() {
                   onChange={(e) => setLambda(parseInt(e.target.value))}
                   className="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-700 mt-2"
                 />
-                <div className="flex justify-between text-xs text-gray-500 mt-1">
-                  <span>λ=1 (equal harm)</span>
-                  <span>λ=100 (strong protection)</span>
+                <div className="flex justify-between text-xs text-gray-500 mt-2">
+                  <div className="text-left">
+                    <div className="font-semibold">λ = 1</div>
+                    <div>Equal weight to both errors</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="font-semibold">λ = 10</div>
+                    <div>Blackstone's ratio</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-semibold">λ = 100</div>
+                    <div>Strong protection for innocent</div>
+                  </div>
                 </div>
               </div>
-              <div className="text-center md:text-right">
+              <div className="text-center md:text-right md:ml-8">
                 <div className="text-sm font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400">
                   Your λ
                 </div>
@@ -601,6 +670,15 @@ export default function FCWCDashboard() {
                   Max acceptable risk: <strong>{(acceptableThreshold * 100).toFixed(2)}%</strong>
                 </div>
               </div>
+            </div>
+
+            {/* Plain language interpretation */}
+            <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
+              <p className="text-gray-700 dark:text-gray-300">
+                <strong>Your choice means:</strong> You believe that {lambda} guilty {lambda === 1 ? 'person' : 'people'} going free
+                is about as harmful as one innocent person being wrongly convicted. Therefore, you'd accept a wrongful
+                conviction risk of up to {(acceptableThreshold * 100).toFixed(1)}%.
+              </p>
             </div>
           </div>
 
@@ -614,15 +692,15 @@ export default function FCWCDashboard() {
                 threshold: (getAcceptableRisk(10) * 100).toFixed(1),
               },
               {
-                name: 'Volokh Empirical',
+                name: 'Volokh (Empirical)',
                 lambda: 4.5,
-                desc: 'Empirical estimate from survey research on public attitudes.',
+                desc: 'Based on survey research asking people about their actual preferences.',
                 threshold: (getAcceptableRisk(4.5) * 100).toFixed(1),
               },
               {
                 name: 'Fortescue',
                 lambda: 20,
-                desc: '"One would much rather that twenty guilty persons should escape...than one innocent person should be condemned."',
+                desc: '"One would much rather that twenty guilty persons should escape..."',
                 threshold: (getAcceptableRisk(20) * 100).toFixed(1),
               },
             ].map((standard) => (
@@ -655,12 +733,16 @@ export default function FCWCDashboard() {
 
           {/* Acceptability Curve Chart */}
           <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
-            <h2 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+            <h2 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-2 flex items-center gap-2">
               <span className="w-1 h-6 bg-red-700"></span>
               The Acceptability Curve
             </h2>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+              As λ increases (more weight on protecting the innocent), the maximum acceptable risk decreases rapidly at first, then levels off.
+            </p>
 
             <PlotWrapper
+              key={`acceptability-curve-${lambda}`}
               data={[
                 {
                   x: acceptabilityCurveData.lambdas,
@@ -670,16 +752,20 @@ export default function FCWCDashboard() {
                   fill: 'tozeroy',
                   fillcolor: isDark ? 'rgba(227, 18, 11, 0.1)' : 'rgba(227, 18, 11, 0.1)',
                   line: { color: COLORS.red, width: 3 },
-                  hovertemplate: 'λ=%{x}<br>Threshold=%{y:.1f}%<extra></extra>',
+                  hovertemplate: 'λ=%{x}<br>Max Risk=%{y:.1f}%<extra></extra>',
+                  name: 'Acceptable risk',
                 },
                 {
                   x: [lambda],
                   y: [acceptableThreshold * 100],
                   type: 'scatter',
-                  mode: 'markers',
+                  mode: 'markers+text',
                   marker: { size: 16, color: COLORS.red, symbol: 'circle' },
+                  text: [`You: ${(acceptableThreshold * 100).toFixed(1)}%`],
+                  textposition: 'top center',
+                  textfont: { size: 12, color: isDark ? '#e5e7eb' : '#1f2937' },
+                  hovertemplate: 'Your λ=%{x}<br>Max Risk=%{y:.2f}%<extra></extra>',
                   name: 'Your selection',
-                  hovertemplate: 'Your λ=%{x}<br>Threshold=%{y:.2f}%<extra></extra>',
                 },
               ]}
               layout={{
@@ -688,38 +774,30 @@ export default function FCWCDashboard() {
                 showlegend: false,
                 xaxis: {
                   ...chartLayout.xaxis,
-                  title: { text: 'λ (Harm Ratio)', font: { size: 14, family: 'Inter' } },
-                  range: [0, 100],
+                  title: { text: 'λ (Your Harm Trade-off Value)', font: { size: 14 } },
+                  range: [0, 105],
+                  fixedrange: true,
                 },
                 yaxis: {
                   ...chartLayout.yaxis,
-                  title: { text: 'Maximum Acceptable FCWC Risk (%)', font: { size: 14, family: 'Inter' } },
+                  title: { text: 'Maximum Acceptable Risk (%)', font: { size: 14 } },
                   range: [0, 55],
+                  fixedrange: true,
                 },
                 annotations: [
                   {
                     x: 10,
                     y: getAcceptableRisk(10) * 100,
-                    text: 'Blackstone (λ=10)',
+                    text: 'Blackstone',
                     showarrow: true,
                     arrowhead: 0,
-                    ax: 50,
-                    ay: 20,
-                    font: { size: 11 },
-                  },
-                  {
-                    x: 20,
-                    y: getAcceptableRisk(20) * 100,
-                    text: 'Fortescue (λ=20)',
-                    showarrow: true,
-                    arrowhead: 0,
-                    ax: 50,
-                    ay: -20,
-                    font: { size: 11 },
+                    ax: 40,
+                    ay: 25,
+                    font: { size: 10 },
                   },
                 ],
               }}
-              config={{ responsive: true, displayModeBar: false }}
+              config={{ responsive: true, displayModeBar: false, staticPlot: true }}
               style={{ width: '100%', height: '400px' }}
             />
           </div>
@@ -730,11 +808,10 @@ export default function FCWCDashboard() {
               Key Finding from the Research
             </h3>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              Under most reasonable assumptions about base rates and test characteristics, the posterior
-              probability of a false confession wrongful conviction <strong>clusters around 1%</strong>.
-              At the Blackstone standard (λ=10), the maximum tolerable risk is ~9.1%. This suggests that
-              common interrogation tactics may fall within acceptable risk bounds—though the interpretation
-              depends heavily on one's chosen value of λ.
+              Under most reasonable assumptions, the estimated risk of a false confession leading to wrongful
+              conviction <strong>clusters around 1%</strong>. At the traditional Blackstone standard (λ=10),
+              the maximum acceptable risk is about 9%. This suggests common interrogation tactics may fall
+              within acceptable bounds—but your conclusion depends on your choice of λ.
             </p>
           </div>
         </div>
@@ -750,66 +827,60 @@ export default function FCWCDashboard() {
             </h2>
 
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              This calculator implements a Bayesian inverse probability framework for estimating
-              the risk of false confession wrongful convictions (FCWC) arising from lawful
-              interrogation tactics like minimization.
+              This calculator uses Bayesian probability to estimate the risk that lawful
+              interrogation tactics contribute to wrongful convictions of innocent people.
             </p>
 
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
               The Core Question
             </h3>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              When police use lawful interrogation tactics that elicit a confession, what is the
-              probability that this confession is false and leads to wrongful conviction?
+              When police use an interrogation tactic and obtain a confession, what's the chance
+              that confession is false and leads to wrongful conviction?
             </p>
 
-            <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg my-6 font-mono text-center">
-              <div className="text-sm text-gray-500 mb-2">We want to find:</div>
-              <div className="text-xl">P(FCWC | Tactic Used)</div>
-            </div>
-
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
-              The Parameters
+              The Three Key Inputs
             </h3>
 
             <div className="space-y-4">
               <div className="border-l-4 border-red-700 pl-4">
-                <h4 className="font-bold text-gray-900 dark:text-white">Base Rate: P(Guilty | Confession)</h4>
+                <h4 className="font-bold text-gray-900 dark:text-white">True Confession Rate</h4>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  The probability that a confession is true. Literature suggests ~95% of confessions
-                  lead to true convictions, implying a ~5% false confession base rate.
+                  What percentage of confessions come from actually guilty people? Research suggests
+                  about 95% of confessions are true, meaning about 5% are false.
                 </p>
               </div>
 
               <div className="border-l-4 border-red-700 pl-4">
-                <h4 className="font-bold text-gray-900 dark:text-white">Sensitivity: P(Tactic Works | Guilty)</h4>
+                <h4 className="font-bold text-gray-900 dark:text-white">Tactic Effectiveness</h4>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  The probability that the tactic elicits a confession from a guilty suspect.
-                  Estimated at ~83% for minimization tactics based on experimental research.
+                  How good is the tactic at getting guilty people to confess? Experimental research
+                  suggests tactics like minimization work about 83% of the time on guilty suspects.
                 </p>
               </div>
 
               <div className="border-l-4 border-red-700 pl-4">
-                <h4 className="font-bold text-gray-900 dark:text-white">Specificity: P(No Confession | Innocent)</h4>
+                <h4 className="font-bold text-gray-900 dark:text-white">Innocent Protection Rate</h4>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  The probability that an innocent suspect does NOT falsely confess. Higher values
-                  mean the tactic better protects the innocent.
+                  How well does the tactic protect innocent people from falsely confessing? Higher
+                  values mean innocent people are less likely to falsely confess.
                 </p>
               </div>
             </div>
 
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
-              The Acceptability Framework
+              The Acceptability Question
             </h3>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              Rather than declaring any fixed risk "acceptable," the framework asks: given your
-              values about the relative harms of wrongful conviction vs. wrongful acquittal,
-              what risk level follows logically?
+              Rather than declaring any fixed risk "acceptable," the framework asks: given how you
+              personally weigh the harm of wrongful conviction versus wrongful acquittal, what risk
+              level is logically acceptable?
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              The parameter <strong>λ (lambda)</strong> captures this trade-off. The classic
-              Blackstone formulation—"better that ten guilty persons escape than that one innocent
-              suffer"—implies λ=10, yielding a maximum acceptable FCWC risk of 9.1%.
+              The classic Blackstone formulation—"better that ten guilty persons escape than that one
+              innocent suffer"—implies a λ of 10, meaning wrongful conviction is 10× worse than
+              wrongful acquittal. This yields a maximum acceptable risk of about 9%.
             </p>
           </div>
 
@@ -821,7 +892,7 @@ export default function FCWCDashboard() {
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Mourtgos, S. M., & Adams, I. T. (forthcoming). Recalibrating the Risk of
               False Confession Wrongful Convictions: A Bayesian Inverse Probability Simulation Approach.
-              <em>Journal of Criminal Justice</em>.
+              <em> Journal of Criminal Justice</em>.
             </p>
           </div>
         </div>
@@ -838,7 +909,7 @@ export default function FCWCDashboard() {
             , University of South Carolina
           </div>
           <div className="text-xs">
-            All results are for educational purposes. Assumptions and parameters significantly affect outcomes.
+            All results are for educational purposes. Your assumptions significantly affect the outcomes.
           </div>
         </div>
       </footer>
