@@ -4,27 +4,37 @@ node_modules/
 # Build output
 dist/
 
-# Environment
+# Generated types
+.astro/
+
+# Environment variables
 .env
 .env.*
+.env.production
+.env.local
 
 # Editor/IDE
 .DS_Store
 Thumbs.db
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 .idea/
 
 # Python
 .venv/
 __pycache__/
-*.pyc
+*.py[cod]
 
 # Logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Astro
-.astro/
+# Temporary files
+*.tmp
+*.temp
 
 # Local Netlify folder
 .netlify
