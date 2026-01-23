@@ -1,11 +1,25 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import NewsFeedClient from '@/components/news/NewsFeedClient';
+
+const keywords = [
+  'AI policing',
+  'facial recognition police',
+  'predictive policing',
+  'police surveillance',
+  'ALPR',
+  'body camera analytics',
+  'police technology',
+  'algorithmic policing',
+  'Fourth Amendment',
+  'police civil liberties',
+];
 ---
 
 <BaseLayout
   title="AI in Policing News"
-  description="Curated news feed covering artificial intelligence applications in law enforcement"
+  description="Curated research and news on artificial intelligence in law enforcement: facial recognition, predictive policing, surveillance technology, and algorithmic accountability. Essential reading for policing scholars, police executives, and civil rights attorneys."
+  keywords={keywords}
 >
   <section class="section">
     <div class="container-wide">

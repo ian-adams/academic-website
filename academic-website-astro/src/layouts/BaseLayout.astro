@@ -9,6 +9,9 @@ interface Props {
   description?: string;
   image?: string;
   article?: boolean;
+  keywords?: string[];
+  datePublished?: string;
+  dateModified?: string;
 }
 
 const {
@@ -16,10 +19,101 @@ const {
   description = siteConfig.description,
   image = '/media/og-image.jpg',
   article = false,
+  keywords = [],
+  datePublished,
+  dateModified,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, siteConfig.url);
 const fullTitle = title === siteConfig.title ? title : `${title} | ${siteConfig.name}`;
+
+// Default keywords for SEO targeting scholars, police executives, and litigation attorneys
+const defaultKeywords = [
+  'police research',
+  'criminology',
+  'law enforcement policy',
+  'use of force',
+  'police accountability',
+  'Section 1983',
+  'qualified immunity',
+  'police litigation',
+  'body-worn cameras',
+  'police training',
+  'evidence-based policing',
+];
+const allKeywords = [...new Set([...keywords, ...defaultKeywords])];
+
+// JSON-LD structured data for Person (Dr. Ian Adams)
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: siteConfig.author.name,
+  givenName: 'Ian',
+  familyName: 'Adams',
+  honorificSuffix: 'Ph.D.',
+  jobTitle: 'Assistant Professor',
+  worksFor: {
+    '@type': 'Organization',
+    name: siteConfig.author.institution,
+    department: {
+      '@type': 'Organization',
+      name: 'Department of Criminology & Criminal Justice',
+    },
+  },
+  url: siteConfig.url,
+  email: siteConfig.author.email,
+  image: new URL(siteConfig.author.avatar, siteConfig.url).href,
+  sameAs: [
+    siteConfig.author.social.twitter,
+    siteConfig.author.social.googleScholar,
+    siteConfig.author.social.github,
+    siteConfig.author.social.researchGate,
+  ],
+  knowsAbout: [
+    'Police Use of Force',
+    'Body-Worn Cameras',
+    'Artificial Intelligence in Policing',
+    'Police Accountability',
+    'Criminal Justice Policy',
+    'Evidence-Based Policing',
+    'Police Training',
+    'Section 1983 Litigation',
+  ],
+  alumniOf: siteConfig.author.education.map((edu) => ({
+    '@type': 'EducationalOrganization',
+    name: edu.institution,
+  })),
+};
+
+// JSON-LD for the WebSite
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteConfig.title,
+  url: siteConfig.url,
+  description: siteConfig.description,
+  author: { '@id': `${siteConfig.url}/#person` },
+  publisher: { '@id': `${siteConfig.url}/#person` },
+  inLanguage: 'en-US',
+  copyrightHolder: { '@id': `${siteConfig.url}/#person` },
+  keywords: allKeywords.join(', '),
+};
+
+// JSON-LD for articles/pages
+const articleSchema = article ? {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonicalURL.href,
+  author: { '@id': `${siteConfig.url}/#person` },
+  publisher: { '@id': `${siteConfig.url}/#person` },
+  image: new URL(image, siteConfig.url).href,
+  datePublished: datePublished,
+  dateModified: dateModified || datePublished,
+  mainEntityOfPage: canonicalURL.href,
+  keywords: allKeywords.join(', '),
+} : null;
 ---
 
 <!doctype html>
@@ -50,6 +144,22 @@ const fullTitle = title === siteConfig.title ? title : `${title} | ${siteConfig.
     <meta property="twitter:title" content={fullTitle} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, siteConfig.url)} />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="keywords" content={allKeywords.join(', ')} />
+    <meta name="author" content={siteConfig.author.name} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Academic/Scholar specific meta -->
+    <meta name="citation_author" content="Adams, Ian T." />
+    <meta name="citation_author_institution" content={siteConfig.author.institution} />
+    <meta name="DC.creator" content={siteConfig.author.name} />
+    <meta name="DC.publisher" content={siteConfig.author.institution} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    {articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
 
     <!-- Theme initialization (prevent flash) -->
     <script is:inline>

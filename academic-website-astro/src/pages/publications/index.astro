@@ -27,11 +27,25 @@ const pubsForSearch = sortedPubs.map(pub => ({
 // Count publications vs preprints
 const pubCount = pubsForSearch.filter(p => !p.isPreprint).length;
 const preprintCount = pubsForSearch.filter(p => p.isPreprint).length;
+
+const publicationsKeywords = [
+  'policing research',
+  'criminology publications',
+  'police use of force studies',
+  'body-worn camera research',
+  'police accountability research',
+  'evidence-based policing',
+  'police behavior research',
+  'law enforcement policy research',
+  'criminal justice scholarship',
+  'peer-reviewed policing articles',
+];
 ---
 
 <BaseLayout
   title="Publications"
-  description="Academic publications by Ian T. Adams, Ph.D."
+  description={`${pubCount}+ peer-reviewed publications on policing, use of force, body cameras, and police accountability by Dr. Ian T. Adams. Research cited in Criminology, Justice Quarterly, and Public Administration Review.`}
+  keywords={publicationsKeywords}
 >
   <section class="section">
     <div class="container-wide">

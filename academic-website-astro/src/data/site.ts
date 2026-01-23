@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Ian T. Adams, Ph.D.',
   title: 'Ian T. Adams Research',
-  description: 'Academic website for Ian T. Adams, Ph.D. - Assistant Professor in the Department of Criminology & Criminal Justice at the University of South Carolina.',
+  description: 'Dr. Ian T. Adams is a leading policing scholar at the University of South Carolina. Research on police use of force, body-worn cameras, AI in policing, and police accountability. Publications and resources for criminologists, law enforcement executives, and Section 1983 litigation attorneys.',
   url: 'https://ianadamsresearch.com',
   author: {
     name: 'Ian T. Adams, Ph.D.',

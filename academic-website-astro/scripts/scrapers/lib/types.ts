@@ -65,63 +65,123 @@ export const TOPICS: Record<string, ScraperConfig> = {
     topic: 'ai-police',
     name: 'AI Police News',
     queries: [
-      'police artificial intelligence',
-      'law enforcement AI technology',
-      'predictive policing algorithm',
-      'facial recognition police',
-      'police surveillance technology',
-      'automated license plate reader police',
+      '"police department" AND "artificial intelligence"',
+      '"law enforcement" AND "machine learning"',
+      '"predictive policing" algorithm',
+      '"facial recognition" AND ("police" OR "law enforcement")',
+      '"police" AND "surveillance technology" -china -military',
+      '"automated license plate reader" OR "ALPR" AND police',
+      '"police body camera" AND "AI" OR "analytics"',
+      '"gunshot detection" AND police',
     ],
     outputFile: 'ai-police-news.json',
     dbFile: 'ai-police-news.db',
-    systemPrompt: `You are an expert analyst categorizing news articles about artificial intelligence and technology use in policing. Analyze the article and provide:
-1. story_type: "research" (academic/studies), "incident" (specific events), "investigative" (in-depth reporting), or "general" (news coverage)
-2. relevance_score: 0.0-1.0 indicating how relevant this is to AI/technology in policing
-3. key_entities: comma-separated list of key organizations, technologies, or people mentioned
-4. location: city/state/country if mentioned, or null
-5. tags: array of 1-5 relevant tags from: AI, facial recognition, predictive policing, surveillance, ALPR, body cameras, drones, robots, civil rights, privacy, policy, research
-6. needs_review: 1 if the article seems tangentially related or needs human review, 0 otherwise`,
+    systemPrompt: `You are an expert analyst for a criminology professor's curated news feed on AI and technology in policing.
+
+STRICT RELEVANCE CRITERIA - The article MUST be about:
+- U.S. police departments deploying or evaluating AI/technology
+- Research studies on AI use in law enforcement
+- Policy debates about police surveillance technology
+- Legal cases involving police use of AI/facial recognition
+- Body camera analytics, predictive policing, or gunshot detection by police
+
+REJECT (score 0.0-0.2) articles about:
+- General AI/tech news not specifically about police
+- Military or national security surveillance (unless about local police)
+- International police (unless directly relevant to U.S. policing debates)
+- Consumer technology or business AI applications
+- Cybersecurity, fraud, or scams (unless police AI response)
+- Market research reports or press releases about products
+
+Provide analysis as JSON:
+1. story_type: "research" (academic/peer-reviewed), "incident" (specific deployment/event), "investigative" (journalism deep-dive), or "general" (news coverage)
+2. relevance_score: 0.0-1.0 - BE STRICT. Only score 0.6+ if clearly about police AI/technology
+3. key_entities: comma-separated organizations, technologies, researchers mentioned
+4. location: U.S. city/state if mentioned, or null
+5. tags: 1-5 from: AI, facial recognition, predictive policing, surveillance, ALPR, body cameras, drones, robots, civil rights, privacy, policy, research
+6. needs_review: 1 ONLY if genuinely unclear, 0 otherwise. When in doubt, score low rather than flagging for review.`,
   },
   'force-science': {
     topic: 'force-science',
     name: 'Force Science News',
     queries: [
-      'police use of force research',
-      'law enforcement deadly force',
-      'officer involved shooting',
-      'police training force',
-      'use of force policy',
-      'police force science',
+      '"police" AND "use of force" AND ("research" OR "study" OR "policy")',
+      '"officer-involved shooting" OR "officer involved shooting"',
+      '"police shooting" AND ("investigation" OR "policy" OR "training")',
+      '"force science" OR "use-of-force research"',
+      '"police" AND "de-escalation" AND ("training" OR "policy")',
+      '"taser" OR "conducted energy weapon" AND "police" AND ("policy" OR "death" OR "study")',
+      '"police restraint" AND ("death" OR "asphyxia" OR "policy")',
+      '"qualified immunity" AND "police" AND "excessive force"',
     ],
     outputFile: 'force-science-news.json',
     dbFile: 'force-science-news.db',
-    systemPrompt: `You are an expert analyst categorizing news articles about police use of force and force science research. Analyze the article and provide:
-1. story_type: "research" (academic/studies), "incident" (specific use of force events), "investigative" (in-depth reporting), or "general" (news coverage)
-2. relevance_score: 0.0-1.0 indicating how relevant this is to police use of force or force science
-3. key_entities: comma-separated list of key organizations, researchers, or agencies mentioned
-4. location: city/state/country if mentioned, or null
-5. tags: array of 1-5 relevant tags from: use of force, deadly force, training, policy, research, shooting, taser, restraint, de-escalation, body cameras, accountability
-6. needs_review: 1 if the article seems tangentially related or needs human review, 0 otherwise`,
+    systemPrompt: `You are an expert analyst for a criminology professor's curated news feed on police use of force and force science.
+
+STRICT RELEVANCE CRITERIA - The article MUST be about:
+- Academic research on police use of force
+- Police officer-involved shootings in the U.S.
+- Use of force policies, training, or reforms
+- De-escalation training and tactics research
+- Legal cases (Section 1983, qualified immunity) involving excessive force
+- Taser/CEW incidents, restraint deaths, or related policy
+- Force Science Institute or similar research organizations
+
+REJECT (score 0.0-0.2) articles about:
+- General violence, crime, or shootings NOT involving police use of force
+- International conflicts, military force, or geopolitics
+- Sports ("forcing" plays), business ("market forces"), politics ("forcing votes")
+- Immigration enforcement (ICE/CBP) unless about use-of-force policy
+- Prison/corrections (unless about police)
+- Personal disputes, domestic violence, or non-police violence
+
+Provide analysis as JSON:
+1. story_type: "research" (academic/peer-reviewed), "incident" (specific use-of-force event), "investigative" (journalism deep-dive), or "general" (news coverage)
+2. relevance_score: 0.0-1.0 - BE STRICT. Only score 0.6+ if clearly about police use of force
+3. key_entities: comma-separated organizations, researchers, agencies mentioned
+4. location: U.S. city/state if mentioned, or null
+5. tags: 1-5 from: use of force, deadly force, training, policy, research, shooting, taser, restraint, de-escalation, body cameras, accountability, qualified immunity, Section 1983
+6. needs_review: 1 ONLY if genuinely unclear, 0 otherwise. When in doubt, score low rather than flagging for review.`,
   },
   'k9': {
     topic: 'k9',
     name: 'Police K9 Incidents',
     queries: [
-      'police K9 bite',
-      'police dog attack',
-      'K9 unit incident',
-      'police canine injury',
-      'police dog deployment',
+      '"police K9" OR "police K-9" AND (bite OR attack OR incident)',
+      '"police dog" AND (bite OR attack OR lawsuit)',
+      '"K9 unit" AND ("deployment" OR "policy" OR "injury")',
+      '"police canine" AND ("bite" OR "force" OR "lawsuit")',
+      '"sheriff" AND "K9" AND (bite OR attack)',
+      '"police dog" AND "civil rights" OR "excessive force"',
     ],
     outputFile: 'k9-incidents.json',
     dbFile: 'k9-incidents.db',
-    systemPrompt: `You are an expert analyst categorizing news articles about police K9 (canine) units and incidents. Analyze the article and provide:
-1. story_type: "research" (academic/studies), "incident" (specific K9 events), "investigative" (in-depth reporting), or "general" (news coverage)
-2. relevance_score: 0.0-1.0 indicating how relevant this is to police K9 operations
-3. key_entities: comma-separated list of key organizations, agencies, or individuals mentioned
-4. location: city/state/country if mentioned, or null
-5. tags: array of 1-5 relevant tags from: K9 bite, K9 deployment, training, policy, lawsuit, injury, search, narcotics, tracking, handler
-6. needs_review: 1 if the article seems tangentially related or needs human review, 0 otherwise`,
+    systemPrompt: `You are an expert analyst for a criminology professor's curated news feed on police K9 units and incidents.
+
+STRICT RELEVANCE CRITERIA - The article MUST be about:
+- Police K9 (canine unit) bites, attacks, or deployments
+- Lawsuits or civil rights cases involving police dogs
+- Police K9 training, policy, or certification issues
+- Research on police K9 use and injuries
+- Deaths or serious injuries from police dog bites
+
+REJECT (score 0.0-0.2) articles about:
+- Pet dogs, stray dogs, or non-police canines (even if aggressive)
+- Military working dogs (unless loaned to police)
+- K9 officers retiring, feel-good adoption stories, or ceremonies
+- Drug-sniffing dogs at airports/borders (CBP/TSA, not local police)
+- Police dogs finding missing persons (unless force was used)
+- Any article where "K9" or "dog" appears incidentally or metaphorically
+- Entertainment (movies, TV, books) mentioning police dogs
+- Dingoes, coyotes, wolves, or wild animal attacks
+
+Provide analysis as JSON:
+1. story_type: "research" (academic/peer-reviewed), "incident" (specific K9 bite/deployment), "investigative" (journalism deep-dive), or "general" (news coverage)
+2. relevance_score: 0.0-1.0 - BE STRICT. Only score 0.6+ if clearly about police K9 use-of-force or policy
+3. key_entities: comma-separated agencies, departments, individuals mentioned
+4. location: U.S. city/state if mentioned, or null
+5. tags: 1-5 from: K9 bite, K9 deployment, training, policy, lawsuit, injury, search, narcotics, tracking, handler, civil rights, excessive force
+6. needs_review: 1 ONLY if genuinely unclear, 0 otherwise. When in doubt, score low rather than flagging for review.`,
   },
   'media-mentions': {
     topic: 'media-mentions',

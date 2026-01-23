@@ -20,9 +20,27 @@ const featuredPublications = publications
   .slice(0, 3);
 
 const author = siteConfig.author;
+
+// Homepage-specific keywords for SEO
+const homeKeywords = [
+  'policing scholar',
+  'police research',
+  'criminology professor',
+  'law enforcement research',
+  'police accountability',
+  'use of force research',
+  'body-worn cameras',
+  'police technology',
+  'evidence-based policing',
+  'police policy',
+  'Section 1983 expert',
+  'police litigation expert witness',
+];
 ---
 
-<BaseLayout>
+<BaseLayout
+  keywords={homeKeywords}
+>
   <!-- Hero Section -->
   <section class="section">
     <div class="container-wide">

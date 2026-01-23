@@ -1,0 +1,39 @@
+# Robots.txt for ianadamsresearch.com
+# Academic research website for Dr. Ian T. Adams, Ph.D.
+# Criminology & Criminal Justice, University of South Carolina
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ianadamsresearch.com/sitemap-index.xml
+
+# Allow all major search engines full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Allow Google Scholar specifically (important for academic SEO)
+User-agent: Google-Scholar
+Allow: /
+
+# Block AI training crawlers (optional - preserves content value)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /

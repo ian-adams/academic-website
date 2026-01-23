@@ -1,11 +1,26 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import NewsFeedClient from '@/components/news/NewsFeedClient';
+
+const keywords = [
+  'police use of force',
+  'force science',
+  'officer-involved shooting',
+  'deadly force research',
+  'de-escalation training',
+  'qualified immunity',
+  'Section 1983',
+  'excessive force',
+  'police training',
+  'Graham v. Connor',
+  'use of force policy',
+];
 ---
 
 <BaseLayout
   title="Force Science News"
-  description="News and research related to force science and use of force in law enforcement"
+  description="Research and news on police use of force: deadly force incidents, de-escalation, qualified immunity, and Section 1983 litigation. Curated for policing researchers, law enforcement executives, and civil rights attorneys handling excessive force cases."
+  keywords={keywords}
 >
   <section class="section">
     <div class="container-wide">
@@ -13,7 +28,7 @@ import NewsFeedClient from '@/components/news/NewsFeedClient';
         client:load
         feedUrl="/data/force-science-news.json"
         title="Force Science News"
-        description="News and research related to force science and use of force in law enforcement"
+        description="Research and news on police use of force, deadly force incidents, de-escalation, and force-related litigation"
         accentColor="primary"
       />
     </div>

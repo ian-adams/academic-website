@@ -1,19 +1,34 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import NewsFeedClient from '@/components/news/NewsFeedClient';
+
+const keywords = [
+  'police K9',
+  'police dog bite',
+  'K9 unit',
+  'police canine',
+  'K9 excessive force',
+  'K9 lawsuit',
+  'police dog attack',
+  'K9 policy',
+  'K9 training',
+  'canine deployment',
+  'Section 1983 K9',
+];
 ---
 
 <BaseLayout
-  title="K9 Incidents"
-  description="News coverage of police K9 incidents and related developments"
+  title="Police K9 Incidents"
+  description="Curated news and research on police K9 deployments, bite incidents, and canine-related litigation. Essential resource for policing scholars studying K9 policy and attorneys handling Section 1983 cases involving police dogs."
+  keywords={keywords}
 >
   <section class="section">
     <div class="container-wide">
       <NewsFeedClient
         client:load
         feedUrl="/data/k9-incidents.json"
-        title="K9 Incidents"
-        description="News coverage of police K9 incidents and related developments"
+        title="Police K9 Incidents"
+        description="Curated news on police K9 deployments, bite incidents, canine policy, and related litigation"
         accentColor="amber"
       />
     </div>

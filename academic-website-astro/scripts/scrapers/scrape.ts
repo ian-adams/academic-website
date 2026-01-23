@@ -129,11 +129,12 @@ async function main() {
     return createNewsStory(article, analysis);
   });
 
-  // Filter by relevance score (keep stories with score >= 0.3 or needs_review)
+  // Filter by relevance score (keep stories with score >= 0.6)
+  // Note: We no longer auto-include needs_review items - they must also meet threshold
   const relevantStories = newStories.filter(
-    (s) => (s.relevance_score ?? 0) >= 0.3 || s.needs_review === 1
+    (s) => (s.relevance_score ?? 0) >= 0.6
   );
-  console.log(`${relevantStories.length} stories pass relevance threshold (>= 0.3)`);
+  console.log(`${relevantStories.length} stories pass relevance threshold (>= 0.6)`);
 
   if (dryRun) {
     console.log('\n--- Dry run - not saving ---');
