@@ -1,7 +1,595 @@
 {
-  "updated": "2026-01-22T11:51:47.537Z",
-  "count": 1619,
+  "updated": "2026-01-23T09:25:07.726Z",
+  "count": 1653,
   "stories": [
+    {
+      "id": "c3097cd87e7a4e269257f953b5dab960",
+      "url": "https://www.bostonherald.com/2026/01/22/schlocky-sci-fi-flick-offers-no-mercy-for-viewer/",
+      "title": "Schlocky sci-fi flick offers no ‘Mercy’ for viewer",
+      "source": "Boston Herald",
+      "date": "2026-01-22",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.bostonherald.com/2026/01/22/schlocky-sci-fi-flick-offers-no-mercy-for-viewer/\" target=\"_blank\">Schlocky sci-fi flick offers no ‘Mercy’ for viewer</a> <font color=\"#6f6f6f\">Boston Herald</font>",
+      "story_type": "general",
+      "relevance_score": 0,
+      "key_entities": "Chris Pratt, IMAX",
+      "location": null,
+      "tags": [],
+      "needs_review": 1
+    },
+    {
+      "id": "b382f4fb3565c11cbeeecdc76a099f15",
+      "url": "https://www.thestar.com.my/news/nation/2026/01/22/mcmc-receives-17-complaints-on-grok-says-fahmi",
+      "title": "MCMC receives 17 complaints on Grok, says Fahmi",
+      "source": "The Star Online",
+      "date": "2026-01-22",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.thestar.com.my/news/nation/2026/01/22/mcmc-receives-17-complaints-on-grok-says-fahmi\" target=\"_blank\">MCMC receives 17 complaints on Grok, says Fahmi</a> <font color=\"#6f6f6f\">The Star Online</font>",
+      "story_type": "general",
+      "relevance_score": 0.1,
+      "key_entities": "Malaysian Communications and Multimedia Commission, MCMC, Grok, X, Datuk Fahmi Fadzil",
+      "location": "Kuala Lumpur, Malaysia",
+      "tags": [
+        "AI",
+        "policy"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "ed06dc0ad59b2fa1c1538c79e9547bfb",
+      "url": "https://indianexpress.com/article/legal-news/my-brand-is-justice-not-movies-senior-advocate-vikas-pahwa-on-becoming-first-lawyer-to-have-personality-rights-protected-10487499/",
+      "title": "‘My brand is justice, not movies’: Senior advocate Vikas Pahwa on becoming first lawyer to have personality rights protected",
+      "source": "The Indian Express",
+      "date": "2026-01-22",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://indianexpress.com/article/legal-news/my-brand-is-justice-not-movies-senior-advocate-vikas-pahwa-on-becoming-first-lawyer-to-have-personality-rights-protected-10487499/\" target=\"_blank\">‘My brand is justice, not movies’: Senior advocate Vikas Pahwa on becoming first lawyer to have personality rights protected</a> <font color=\"#6f6f6f\">The Indian Express</font>",
+      "story_type": "general",
+      "relevance_score": 0,
+      "key_entities": "Vikas Pahwa, Delhi High Court",
+      "location": "Delhi, India",
+      "tags": [
+        "policy"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "b44dc5b59db72c7998f8ac0d4266b7fa",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/ai-has-arrived-in-gmail-heres-what-to-know/articleshow/127090157.cms",
+      "title": "AI has arrived in Gmail: Here's what to know",
+      "source": "The Times of India",
+      "date": "2026-01-22",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://economictimes.indiatimes.com/tech/artificial-intelligence/ai-has-arrived-in-gmail-heres-what-to-know/articleshow/127090157.cms\" target=\"_blank\">AI has arrived in Gmail: Here's what to know</a> <font color=\"#6f6f6f\">The Times of India</font>",
+      "story_type": "general",
+      "relevance_score": 0,
+      "key_entities": "Google, Gmail",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "079715e4cc4ada04c41713a1166770b1",
+      "url": "https://www.darkhorizons.com/reviews-are-in-for-chris-pratt-led-mercy/",
+      "title": "Reviews Are In For Chris Pratt-Led “Mercy”",
+      "source": "Dark Horizons",
+      "date": "2026-01-22",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.darkhorizons.com/reviews-are-in-for-chris-pratt-led-mercy/\" target=\"_blank\">Reviews Are In For Chris Pratt-Led “Mercy”</a> <font color=\"#6f6f6f\">Dark Horizons</font>",
+      "story_type": "general",
+      "relevance_score": 0,
+      "key_entities": "Chris Pratt, Rebecca Ferguson, Amazon MGM Studios, Avatar: Fire and Ash",
+      "location": null,
+      "tags": [],
+      "needs_review": 1
+    },
+    {
+      "id": "9ae3e145d2f52cbd15bccf07b368c7ea",
+      "url": "https://timesofindia.indiatimes.com/education/news/trump-administration-drops-legal-appeal-over-anti-dei-funding-threat-to-k-12-schools-and-colleges/articleshow/127120059.cms",
+      "title": "Trump administration drops legal appeal over anti-DEI funding threat to K-12 schools and colleges",
+      "source": "The Times of India",
+      "date": "2026-01-22",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://timesofindia.indiatimes.com/education/news/trump-administration-drops-legal-appeal-over-anti-dei-funding-threat-to-k-12-schools-and-colleges/articleshow/127120059.cms\" target=\"_blank\">Trump administration drops legal appeal over anti-DEI funding threat to K-12 schools and colleges</a> <font color=\"#6f6f6f\">The Times of India</font>",
+      "story_type": "general",
+      "relevance_score": 0,
+      "key_entities": "Trump administration, K-12 schools, colleges, DEI, federal court",
+      "location": null,
+      "tags": [
+        "policy"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "b0f30f5a62ef0b524e48ad75f2ecef88",
+      "url": "https://www.thehindubusinessline.com/news/national/delhi-police-to-use-ai-enabled-smart-glasses-for-republic-day-2026-security/article70536707.ece",
+      "title": "Delhi police to use AI-enabled smart glasses for Republic Day 2026 security",
+      "source": "BusinessLine",
+      "date": "2026-01-22",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.thehindubusinessline.com/news/national/delhi-police-to-use-ai-enabled-smart-glasses-for-republic-day-2026-security/article70536707.ece\" target=\"_blank\">Delhi police to use AI-enabled smart glasses for Republic Day 2026 security</a> <font color=\"#6f6f6f\">BusinessLine</font>",
+      "story_type": "general",
+      "relevance_score": 0.9,
+      "key_entities": "Delhi Police, Republic Day, AI-enabled smart glasses, facial recognition systems",
+      "location": "Delhi, India",
+      "tags": [
+        "AI",
+        "facial recognition",
+        "surveillance",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "1bf1831d2963d384ba49516f005d566d",
+      "url": "https://www.thestar.com.my/news/nation/2026/01/22/total-of-478-foreign-vessels-detained-between-2020-and-2025",
+      "title": "Total of 478 foreign vessels detained between 2020 and 2025",
+      "source": "The Star Online",
+      "date": "2026-01-22",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.thestar.com.my/news/nation/2026/01/22/total-of-478-foreign-vessels-detained-between-2020-and-2025\" target=\"_blank\">Total of 478 foreign vessels detained between 2020 and 2025</a> <font color=\"#6f6f6f\">The Star Online</font>",
+      "story_type": "general",
+      "relevance_score": 0.1,
+      "key_entities": "Dewan Rakyat, Home Minister Datuk, Vietnamese fishermen",
+      "location": "Kuala Lumpur, Malaysia",
+      "tags": [
+        "surveillance"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "3ff5d43b472bcc9dd026425733832904",
+      "url": "https://punchng.com/counter-terrorism-campaign-fg-moves-to-fast-track-trial-of-5000-insurgents/",
+      "title": "Counter-terrorism campaign: FG moves to fast-track trial of 5,000 insurgents",
+      "source": "The Punch",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://punchng.com/counter-terrorism-campaign-fg-moves-to-fast-track-trial-of-5000-insurgents/\" target=\"_blank\">Counter-terrorism campaign: FG moves to fast-track trial of 5,000 insurgents</a> <font color=\"#6f6f6f\">The Punch</font>",
+      "story_type": "general",
+      "relevance_score": 0.1,
+      "key_entities": "Nigerian Federal Government, The Punch",
+      "location": "Nigeria",
+      "tags": [
+        "policy"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "ca53a26391f7acb7695f551ba2acd48d",
+      "url": "https://www.bostonherald.com/2026/01/21/bay-area-chess-grandmaster-had-methamphetamine-active-ingredients-of-kratom-in-his-system-at-time-of-death/",
+      "title": "Chess grandmaster died of cardiac arrhythmia with methamphetamine, kratom in his system",
+      "source": "Boston Herald",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.bostonherald.com/2026/01/21/bay-area-chess-grandmaster-had-methamphetamine-active-ingredients-of-kratom-in-his-system-at-time-of-death/\" target=\"_blank\">Chess grandmaster died of cardiac arrhythmia with methamphetamine, kratom in his system</a> <font color=\"#6f6f6f\">Boston Herald</font>",
+      "story_type": "incident",
+      "relevance_score": 0,
+      "key_entities": "Daniel Naroditsky, North Carolina medical examiner",
+      "location": "North Carolina",
+      "tags": [],
+      "needs_review": 1
+    },
+    {
+      "id": "e24cf131502a0b02a27ccb4ff25fab77",
+      "url": "https://www.breitbart.com/tech/2026/01/21/palantir-ceo-ai-technology-reduces-the-need-for-skilled-migration/",
+      "title": "Palantir CEO: AI Technology Reduces the Need for Skilled Migration",
+      "source": "Breitbart News",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.breitbart.com/tech/2026/01/21/palantir-ceo-ai-technology-reduces-the-need-for-skilled-migration/\" target=\"_blank\">Palantir CEO: AI Technology Reduces the Need for Skilled Migration</a> <font color=\"#6f6f6f\">Breitbart News</font>",
+      "story_type": "general",
+      "relevance_score": 0.1,
+      "key_entities": "Palantir Technologies, Alex Karp",
+      "location": "United States",
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "995001087615e6f2ec45419bbe011734",
+      "url": "https://www.cinemablend.com/movies/mercy-review",
+      "title": "Mercy Review: Minority Report For Dummies",
+      "source": "CinemaBlend",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.cinemablend.com/movies/mercy-review\" target=\"_blank\">Mercy Review: Minority Report For Dummies</a> <font color=\"#6f6f6f\">CinemaBlend</font>",
+      "story_type": "general",
+      "relevance_score": 0.1,
+      "key_entities": "Minority Report, Steven Spielberg",
+      "location": null,
+      "tags": [
+        "predictive policing"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "efb76ce15a5b17138f2d399acb76ac81",
+      "url": "http://comicbook.com/movies/list/7-great-animated-sci-fi-movies-nobody-talks-about/",
+      "title": "7 Great Animated Sci-Fi Movies Nobody Talks About",
+      "source": "ComicBook.com",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"http://comicbook.com/movies/list/7-great-animated-sci-fi-movies-nobody-talks-about/\" target=\"_blank\">7 Great Animated Sci-Fi Movies Nobody Talks About</a> <font color=\"#6f6f6f\">ComicBook.com</font>",
+      "story_type": "general",
+      "relevance_score": 0,
+      "key_entities": "ComicBook.com, Pandora Filmproduktion",
+      "location": null,
+      "tags": [],
+      "needs_review": 1
+    },
+    {
+      "id": "2e2e731b2f44e8c8cc58f712e9607979",
+      "url": "https://indianexpress.com/article/world/full-text-what-trump-said-india-pakistan-war-greenland-venezuela-davos-2026-10487607/",
+      "title": "Full text: What Trump said on India-Pakistan war, Greenland, Venezuela at Davos 2026",
+      "source": "The Indian Express",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://indianexpress.com/article/world/full-text-what-trump-said-india-pakistan-war-greenland-venezuela-davos-2026-10487607/\" target=\"_blank\">Full text: What Trump said on India-Pakistan war, Greenland, Venezuela at Davos 2026</a> <font color=\"#6f6f6f\">The Indian Express</font>",
+      "story_type": "general",
+      "relevance_score": 0,
+      "key_entities": "Donald Trump, World Economic Forum, Greenland",
+      "location": "Davos, Switzerland",
+      "tags": [
+        "policy"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "781db337e751c11fc16c1ce49b576251",
+      "url": "https://inthesetimes.com/article/capitalism-without-humans-labor-ai-tech-waymo-riot",
+      "title": "Capitalism Without Humans",
+      "source": "In These Times",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://inthesetimes.com/article/capitalism-without-humans-labor-ai-tech-waymo-riot\" target=\"_blank\">Capitalism Without Humans</a> <font color=\"#6f6f6f\">In These Times</font>",
+      "story_type": "general",
+      "relevance_score": 0.2,
+      "key_entities": "Donald Trump, Immigration and Customs Enforcement, National Guard",
+      "location": "United States",
+      "tags": [
+        "surveillance",
+        "policy"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "cadf706fb095934f30f11569f4500357",
+      "url": "https://www.dw.com/en/new-eu-anti-racism-strategy-misses-the-point-say-ngos/a-75588965",
+      "title": "New EU anti-racism strategy misses the point, say NGOs",
+      "source": "DW (English)",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.dw.com/en/new-eu-anti-racism-strategy-misses-the-point-say-ngos/a-75588965\" target=\"_blank\">New EU anti-racism strategy misses the point, say NGOs</a> <font color=\"#6f6f6f\">DW (English)</font>",
+      "story_type": "general",
+      "relevance_score": 0.1,
+      "key_entities": "EU, European Commissioner Hadja Lahbib, Trump administration",
+      "location": "EU",
+      "tags": [
+        "policy",
+        "civil rights"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "f4d68e76f4563fad54be805ffe2db39f",
+      "url": "https://www.404media.co/comic-con-bans-ai-art-after-artist-pushback/",
+      "title": "Comic-Con Bans AI Art After Artist Pushback",
+      "source": "404media.co",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.404media.co/comic-con-bans-ai-art-after-artist-pushback/\" target=\"_blank\">Comic-Con Bans AI Art After Artist Pushback</a> <font color=\"#6f6f6f\">404media.co</font>",
+      "story_type": "general",
+      "relevance_score": 0,
+      "key_entities": "San Diego Comic-Con, AI art",
+      "location": "San Diego",
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "ae53d4512e759537d28b9e9b50dac956",
+      "url": "https://statetimes.in/instagram-friend-booked-for-blackmailing-woman-with-ai-videos/",
+      "title": "Instagram ‘friend’ booked for blackmailing woman with ‘AI videos’",
+      "source": "Statetimes.in",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://statetimes.in/instagram-friend-booked-for-blackmailing-woman-with-ai-videos/\" target=\"_blank\">Instagram ‘friend’ booked for blackmailing woman with ‘AI videos’</a> <font color=\"#6f6f6f\">Statetimes.in</font>",
+      "story_type": "incident",
+      "relevance_score": 0.3,
+      "key_entities": "Gujarat man, Superintendent of Police Rajesh Dwivedi, Instagram",
+      "location": "Shahjahanpur, Uttar Pradesh, India",
+      "tags": [
+        "AI",
+        "civil rights"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "6afe4559bc6696553d6a61db7084874a",
+      "url": "https://economictimes.indiatimes.com/news/international/us/wealth-quote-of-the-day-by-palantir-ceo-alex-karp-let-the-shorts-keep-doing-blow-well-just-keep-building-the-company-from-philosophy-and-law-to-billion-dollar-data-power-why-palantirs-ceo-keeps-building-while-critics-bet-against-him/articleshow/126997537.cms",
+      "title": "Wealth Quote of the Day by Palantir CEO Alex Karp, “Let the shorts keep doing blow; we’ll just keep building the company” From philosophy and law to billion-dollar data power: why Palantir’s CEO keeps building while critics bet against him",
+      "source": "The Times of India",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://economictimes.indiatimes.com/news/international/us/wealth-quote-of-the-day-by-palantir-ceo-alex-karp-let-the-shorts-keep-doing-blow-well-just-keep-building-the-company-from-philosophy-and-law-to-billion-dollar-data-power-why-palantirs-ceo-keeps-building-while-critics-bet-against-him/articleshow/126997537.cms\" target=\"_blank\">Wealth Quote of the Day by Palantir CEO Alex Karp, “Let the shorts keep doing blow; we’ll just keep building the company” From philosophy and law to billion-dollar data power: why Palantir’s CEO keeps building while critics bet against him</a> <font color=\"#6f6f6f\">The Times of India</font>",
+      "story_type": "general",
+      "relevance_score": 0.3,
+      "key_entities": "Palantir, Alex Karp",
+      "location": null,
+      "tags": [
+        "surveillance"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "50420a03de13623e0746f03f06722344",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/864951/human-artistry-campaign-ai-licensing-artists",
+      "title": "Hundreds of creatives warn against an AI slop future",
+      "source": "The Verge",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.theverge.com/ai-artificial-intelligence/864951/human-artistry-campaign-ai-licensing-artists\" target=\"_blank\">Hundreds of creatives warn against an AI slop future</a> <font color=\"#6f6f6f\">The Verge</font>",
+      "story_type": "general",
+      "relevance_score": 0,
+      "key_entities": "Cate Blanchett, Cyndi Lauper, George Saunders, Jodi Pic, The Verge, Stealing Isn't Innovation campaign",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "65494b3cbe330edafdecfcfd8d6967d7",
+      "url": "https://www.thehindubusinessline.com/opinion/letters/letters-to-editor/article70534682.ece",
+      "title": "Letters to the Editor dated January 21, 2026",
+      "source": "BusinessLine",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.thehindubusinessline.com/opinion/letters/letters-to-editor/article70534682.ece\" target=\"_blank\">Letters to the Editor dated January 21, 2026</a> <font color=\"#6f6f6f\">BusinessLine</font>",
+      "story_type": "general",
+      "relevance_score": 0.2,
+      "key_entities": "BusinessLine",
+      "location": "India",
+      "tags": [
+        "civil rights"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "96f23e40744e29e0c54800e1d7d67a26",
+      "url": "https://economictimes.indiatimes.com/tech/newsletters/tech-top-5/deepinder-goyal-looks-beyond-eternal/articleshow/126995104.cms",
+      "title": "Deepinder Goyal looks beyond Eternal",
+      "source": "The Times of India",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://economictimes.indiatimes.com/tech/newsletters/tech-top-5/deepinder-goyal-looks-beyond-eternal/articleshow/126995104.cms\" target=\"_blank\">Deepinder Goyal looks beyond Eternal</a> <font color=\"#6f6f6f\">The Times of India</font>",
+      "story_type": "general",
+      "relevance_score": 0,
+      "key_entities": "Deepinder Goyal, Eternal, Albinder Dhindsa, Blinkit, Amagi, Google, Anthropic",
+      "location": null,
+      "tags": [],
+      "needs_review": 1
+    },
+    {
+      "id": "e191b696853d605a415d79f8cd4e6f03",
+      "url": "https://www.globenewswire.com/news-release/2026/01/21/3222803/0/en/AITX-s-RAD-to-Exhibit-and-Present-at-ISC-West-2026.html",
+      "title": "AITX’s RAD to Exhibit and Present at ISC West 2026",
+      "source": "GlobeNewswire",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.globenewswire.com/news-release/2026/01/21/3222803/0/en/AITX-s-RAD-to-Exhibit-and-Present-at-ISC-West-2026.html\" target=\"_blank\">AITX’s RAD to Exhibit and Present at ISC West 2026</a> <font color=\"#6f6f6f\">GlobeNewswire</font>",
+      "story_type": "general",
+      "relevance_score": 0.3,
+      "key_entities": "AITX, RAD, ISC West, SARA",
+      "location": "Las Vegas, Nevada",
+      "tags": [
+        "AI",
+        "surveillance"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "5e3323e4c8a58549f6a33d347b810e4e",
+      "url": "https://www.buddytv.com/steal-reviews-sophie-turners-high-stakes-prime-video-heist/",
+      "title": "Steal Reviews: Sophie Turner’s High-Stakes Prime Video Heist",
+      "source": "Buddytv.com",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.buddytv.com/steal-reviews-sophie-turners-high-stakes-prime-video-heist/\" target=\"_blank\">Steal Reviews: Sophie Turner’s High-Stakes Prime Video Heist</a> <font color=\"#6f6f6f\">Buddytv.com</font>",
+      "story_type": "general",
+      "relevance_score": 0,
+      "key_entities": "Sophie Turner, Prime Video, Steal",
+      "location": null,
+      "tags": [],
+      "needs_review": 1
+    },
+    {
+      "id": "dadb870b0a6d14d9939bab24b050a168",
+      "url": "https://www.activistpost.com/britains-new-mind-reading-and-behavior-predicting-surveillance-system-turns-every-citizen-into-a-suspect/",
+      "title": "Britain’s new “mind-reading” and behavior-predicting surveillance system turns every citizen into a suspect",
+      "source": "Activistpost.com",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.activistpost.com/britains-new-mind-reading-and-behavior-predicting-surveillance-system-turns-every-citizen-into-a-suspect/\" target=\"_blank\">Britain’s new “mind-reading” and behavior-predicting surveillance system turns every citizen into a suspect</a> <font color=\"#6f6f6f\">Activistpost.com</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.9,
+      "key_entities": "British government, Activistpost.com",
+      "location": "Britain",
+      "tags": [
+        "surveillance",
+        "AI",
+        "predictive policing",
+        "privacy",
+        "civil rights"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "18556116ca7ae487960e059e802ddba3",
+      "url": "https://theconversation.com/filming-ice-is-legal-but-exposes-you-to-digital-tracking-heres-how-to-minimize-the-risk-273566",
+      "title": "Filming ICE is legal but exposes you to digital tracking – here’s how to minimize the risk",
+      "source": "The Conversation Africa",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://theconversation.com/filming-ice-is-legal-but-exposes-you-to-digital-tracking-heres-how-to-minimize-the-risk-273566\" target=\"_blank\">Filming ICE is legal but exposes you to digital tracking – here’s how to minimize the risk</a> <font color=\"#6f6f6f\">The Conversation Africa</font>",
+      "story_type": "general",
+      "relevance_score": 0.3,
+      "key_entities": "ICE, Immigration and Customs Enforcement",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "privacy",
+        "civil rights"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "5bc305ea7441738702f5c09afb81ce7b",
+      "url": "https://www.theregister.com/2026/01/21/ireland_wants_to_give_police/",
+      "title": "Ireland wants to give its cops spyware, ability to crack encrypted messages",
+      "source": "Theregister.com",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.theregister.com/2026/01/21/ireland_wants_to_give_police/\" target=\"_blank\">Ireland wants to give its cops spyware, ability to crack encrypted messages</a> <font color=\"#6f6f6f\">Theregister.com</font>",
+      "story_type": "general",
+      "relevance_score": 0.9,
+      "key_entities": "Irish government, Irish police, Communications Interception, spyware, encrypted messages",
+      "location": "Ireland",
+      "tags": [
+        "surveillance",
+        "privacy",
+        "policy",
+        "civil rights"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "d0a886d96bd15d82abcdbabb6d5d8acf",
+      "url": "https://economictimes.indiatimes.com/news/india/delhi-police-to-deploy-ai-enabled-smart-glasses-with-facial-recognition-for-republic-day-security/articleshow/126982240.cms",
+      "title": "Delhi Police to deploy AI-enabled smart glasses with facial recognition for Republic Day security",
+      "source": "The Times of India",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://economictimes.indiatimes.com/news/india/delhi-police-to-deploy-ai-enabled-smart-glasses-with-facial-recognition-for-republic-day-security/articleshow/126982240.cms\" target=\"_blank\">Delhi Police to deploy AI-enabled smart glasses with facial recognition for Republic Day security</a> <font color=\"#6f6f6f\">The Times of India</font>",
+      "story_type": "general",
+      "relevance_score": 1,
+      "key_entities": "Delhi Police, Republic Day, facial recognition system, AI-enabled smart glasses",
+      "location": "Delhi, India",
+      "tags": [
+        "AI",
+        "facial recognition",
+        "surveillance",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "c7bd4e167cddf9d076969f456c1f367d",
+      "url": "https://variety.com/2026/film/reviews/mercy-review-chris-pratt-rebecca-ferguson-1236636322/",
+      "title": "‘Mercy’ Review: Chris Pratt Finds a New Vibe in a Well-Executed Future-Shock Thriller About a Cop Placed on Trial by AI Judge",
+      "source": "Variety",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://variety.com/2026/film/reviews/mercy-review-chris-pratt-rebecca-ferguson-1236636322/\" target=\"_blank\">‘Mercy’ Review: Chris Pratt Finds a New Vibe in a Well-Executed Future-Shock Thriller About a Cop Placed on Trial by AI Judge</a> <font color=\"#6f6f6f\">Variety</font>",
+      "story_type": "general",
+      "relevance_score": 0.2,
+      "key_entities": "Chris Pratt, Timur Bekmambetov, AI Judge",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "2ca9dd06ba86874126c01670792f93bb",
+      "url": "https://www.ign.com/articles/mercy-review-chris-pratt-rebecca-ferguson",
+      "title": "Mercy Review",
+      "source": "IGN",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.ign.com/articles/mercy-review-chris-pratt-rebecca-ferguson\" target=\"_blank\">Mercy Review</a> <font color=\"#6f6f6f\">IGN</font>",
+      "story_type": "general",
+      "relevance_score": 0.1,
+      "key_entities": "Timur Bekmambetov, Chris Pratt, Rebecca Ferguson, IMAX",
+      "location": null,
+      "tags": [
+        "AI"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "ce62f2e6f232daeb9646350f32b425b1",
+      "url": "https://www.thelocal.de/20260121/german-ukrainian-accused-of-spying-for-russia-in-berlin",
+      "title": "German-Ukrainian accused of spying for Russia in Berlin",
+      "source": "The Local Germany",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.thelocal.de/20260121/german-ukrainian-accused-of-spying-for-russia-in-berlin\" target=\"_blank\">German-Ukrainian accused of spying for Russia in Berlin</a> <font color=\"#6f6f6f\">The Local Germany</font>",
+      "story_type": "incident",
+      "relevance_score": 0,
+      "key_entities": "German-Ukrainian woman, Berlin prosecutors, Russia, Ukraine",
+      "location": "Berlin, Germany",
+      "tags": [],
+      "needs_review": 1
+    },
+    {
+      "id": "febf001c4147568bf72c27b97f1a9cc6",
+      "url": "https://indianexpress.com/article/cities/mumbai/how-mumbai-police-use-lookout-circulars-to-act-against-online-offences-10487413/",
+      "title": "How Mumbai Police use lookout circulars to act against online offences",
+      "source": "The Indian Express",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://indianexpress.com/article/cities/mumbai/how-mumbai-police-use-lookout-circulars-to-act-against-online-offences-10487413/\" target=\"_blank\">How Mumbai Police use lookout circulars to act against online offences</a> <font color=\"#6f6f6f\">The Indian Express</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.7,
+      "key_entities": "Mumbai Police, Sangram Patil, BJP, lookout circulars, social media",
+      "location": "Mumbai, India",
+      "tags": [
+        "surveillance",
+        "policy",
+        "civil rights"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "7604f11696a75466c9db5ec0b50bd4f4",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0341372",
+      "title": "How can we reduce the rate of Violent-Sexual Crimes? An attempt at street design",
+      "source": "Plos.org",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0341372\" target=\"_blank\">How can we reduce the rate of Violent-Sexual Crimes? An attempt at street design</a> <font color=\"#6f6f6f\">Plos.org</font>",
+      "story_type": "research",
+      "relevance_score": 0.2,
+      "key_entities": "Plos.org, Violent-Sexual Crime, street design",
+      "location": null,
+      "tags": [
+        "research"
+      ],
+      "needs_review": 1
+    },
+    {
+      "id": "eb8e4820d2db4ed83e90c6befb35b142",
+      "url": "https://www.globenewswire.com/news-release/2026/01/21/3222678/0/en/Non-Lethal-Response-Readiness-Warren-County-Trains-Through-High-Repetition-Virtual-Reality-From-Day-One.html",
+      "title": "Non-Lethal Response Readiness: Warren County Trains Through High-Repetition Virtual Reality From Day One",
+      "source": "GlobeNewswire",
+      "date": "2026-01-21",
+      "date_discovered": "2026-01-23",
+      "summary": "<a href=\"https://www.globenewswire.com/news-release/2026/01/21/3222678/0/en/Non-Lethal-Response-Readiness-Warren-County-Trains-Through-High-Repetition-Virtual-Reality-From-Day-One.html\" target=\"_blank\">Non-Lethal Response Readiness: Warren County Trains Through High-Repetition Virtual Reality From Day One</a> <font color=\"#6f6f6f\">GlobeNewswire</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Warren County Sheriff's Office, Wrap Technologies Inc, WRAP Reality VR training system",
+      "location": "Warren County",
+      "tags": [
+        "AI",
+        "policy",
+        "research"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "dc89883e2a4b0e02ae55b48b53023e6d",
       "url": "https://www.zdnet.com/article/perplexity-law-enforcement-program-enterprise-pro/",
