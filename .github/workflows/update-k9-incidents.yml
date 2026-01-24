@@ -21,19 +21,17 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: academic-website-astro/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: academic-website-astro
         run: npm ci
 
       - name: Create data directories
         run: |
-          mkdir -p academic-website-astro/data/db
-          mkdir -p academic-website-astro/data/logs/k9-incidents
+          mkdir -p data/db
+          mkdir -p data/logs/k9-incidents
 
       - name: Run news scraper
-        working-directory: academic-website-astro
         env:
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -43,7 +41,7 @@ jobs:
       - name: Check for changes
         id: check-changes
         run: |
-          if git diff --quiet academic-website-astro/public/data/k9-incidents.json 2>/dev/null; then
+          if git diff --quiet public/data/k9-incidents.json 2>/dev/null; then
             echo "changes=false" >> $GITHUB_OUTPUT
           else
             echo "changes=true" >> $GITHUB_OUTPUT
@@ -54,9 +52,9 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add academic-website-astro/public/data/k9-incidents.json
-          git add academic-website-astro/public/data/k9-incidents.xml
-          git add academic-website-astro/data/db/k9-incidents.db || true
+          git add public/data/k9-incidents.json
+          git add public/data/k9-incidents.xml
+          git add data/db/k9-incidents.db || true
           git diff --quiet && git diff --staged --quiet || git commit -m "Update K9 incidents feed - $(date +'%Y-%m-%d')"
           # Pull with rebase to handle concurrent workflow runs, then push with retry
           for i in 1 2 3; do
@@ -70,7 +68,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: k9-incidents-scraper-logs
-          path: academic-website-astro/data/logs/k9-incidents/
+          path: data/logs/k9-incidents/
           retention-days: 7
 
       - name: Report summary
@@ -81,16 +79,16 @@ jobs:
           echo "**Run Date:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
-          if ls academic-website-astro/data/logs/k9-incidents/*.log 1> /dev/null 2>&1; then
-            LATEST_LOG=$(ls -t academic-website-astro/data/logs/k9-incidents/*.log | head -1)
+          if ls data/logs/k9-incidents/*.log 1> /dev/null 2>&1; then
+            LATEST_LOG=$(ls -t data/logs/k9-incidents/*.log | head -1)
             echo "**Latest Log:**" >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
             tail -50 "$LATEST_LOG" >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           fi
 
-          if [ -f academic-website-astro/public/data/k9-incidents.json ]; then
-            STORY_COUNT=$(jq '.count' academic-website-astro/public/data/k9-incidents.json)
+          if [ -f public/data/k9-incidents.json ]; then
+            STORY_COUNT=$(jq '.count' public/data/k9-incidents.json)
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "**Total stories in feed:** $STORY_COUNT" >> $GITHUB_STEP_SUMMARY
           fi
