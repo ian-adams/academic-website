@@ -1,7 +1,43 @@
 {
-  "updated": "2026-01-24T12:44:48.073Z",
-  "count": 127,
+  "updated": "2026-01-24T13:30:18.877Z",
+  "count": 130,
   "stories": [
+    {
+      "id": "4d208d0d516abb4265f0c9a67a7b1e0c",
+      "url": "https://www.portlandmercury.com/news/2026/01/22/48269154/portland-officers-who-clashed-with-anti-ice-protesters-identified",
+      "title": "Portland Officers Who Clashed With Anti-ICE Protesters Identified",
+      "source": "The Portland Mercury",
+      "date": "2026-01-22",
+      "date_discovered": "2026-01-24",
+      "summary": "<a href=\"https://www.portlandmercury.com/news/2026/01/22/48269154/portland-officers-who-clashed-with-anti-ice-protesters-identified\" target=\"_blank\">Portland Officers Who Clashed With Anti-ICE Protesters Identified</a> <font color=\"#6f6f6f\">The Portland Mercury</font>",
+      "story_type": "incident",
+      "relevance_score": 0.7,
+      "key_entities": "Portland Police Bureau, ICE",
+      "location": "Portland, Oregon",
+      "tags": [
+        "use of force",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "d4623c872937b36b59431e5516ebffff",
+      "url": "https://www.wcvb.com/article/canton-police-de-escalate-lobby-incident-gun-mental-health/70092392",
+      "title": "Officers disarm person having mental health crisis in Canton police lobby",
+      "source": "WCVB Boston",
+      "date": "2026-01-22",
+      "date_discovered": "2026-01-24",
+      "summary": "<a href=\"https://www.wcvb.com/article/canton-police-de-escalate-lobby-incident-gun-mental-health/70092392\" target=\"_blank\">Officers disarm person having mental health crisis in Canton police lobby</a> <font color=\"#6f6f6f\">WCVB Boston</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Canton Police Department",
+      "location": "Canton, Massachusetts",
+      "tags": [
+        "de-escalation",
+        "use of force"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "8818689989ec26d06ab55eaf7a929424",
       "url": "https://www.wsbtv.com/news/local/dekalb-county/man-dies-after-eviction-attempt-turns-into-hours-long-swat-standoff/6BFZI3AQJRBIHM6XYFJBJ3RRFA/",
@@ -448,6 +484,25 @@
         "training",
         "policy",
         "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "857acc496296e19e1b660027c73fb452",
+      "url": "https://nypost.com/2026/01/19/us-news/ex-california-deputy-sheriff-who-killed-11-year-old-son-shot-dead/",
+      "title": "Disgraced ex-California deputy sheriff who killed 11-year-old son shot dead in dramatic bodycam video",
+      "source": "New York Post",
+      "date": "2026-01-19",
+      "date_discovered": "2026-01-24",
+      "summary": "<a href=\"https://nypost.com/2026/01/19/us-news/ex-california-deputy-sheriff-who-killed-11-year-old-son-shot-dead/\" target=\"_blank\">Disgraced ex-California deputy sheriff who killed 11-year-old son shot dead in dramatic bodycam video</a> <font color=\"#6f6f6f\">New York Post</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Sacramento County Sheriff's Office, Marvin Morales",
+      "location": "Sacramento County, California",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "body cameras"
       ],
       "needs_review": 0
     },
