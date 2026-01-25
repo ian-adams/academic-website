@@ -4,7 +4,15 @@
     <title>Force Science News</title>
     <description>Force Science News - automated news feed</description>
     <link>https://ianadamsresearch.com/force-science</link>
-    <lastBuildDate>Sat, 24 Jan 2026 13:30:18 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 25 Jan 2026 11:17:11 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Fatal Shooting by Richmond Detective on Interstate 80 Is Under Investigation]]></title>
+      <link>https://www.kqed.org/news/12070935/fatal-shooting-by-richmond-detective-on-interstate-80-is-under-investigation</link>
+      <guid>2867315e644e303909d9b296f6580720</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
+      <source>KQED</source>
+      <description><![CDATA[<a href="https://www.kqed.org/news/12070935/fatal-shooting-by-richmond-detective-on-interstate-80-is-under-investigation" target="_blank">Fatal Shooting by Richmond Detective on Interstate 80 Is Under Investigation</a> <font color="#6f6f6f">KQED</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[Portland Officers Who Clashed With Anti-ICE Protesters Identified]]></title>
       <link>https://www.portlandmercury.com/news/2026/01/22/48269154/portland-officers-who-clashed-with-anti-ice-protesters-identified</link>
@@ -396,14 +404,6 @@
       <pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate>
       <source>New York Post</source>
       <description><![CDATA[<a href="https://nypost.com/2026/01/16/us-news/lapd-is-banned-from-using-non-lethal-weapons-to-control-violent-protests-against-ice-agents/" target="_blank">LAPD is banned from using non-lethal weapons to control violent protests against ICE agents</a> <font color="#6f6f6f">New York Post</font>]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Brandon police partner with mental health clinicians to transform crisis response]]></title>
-      <link>https://www.cbc.ca/news/canada/manitoba/brandon-police-crisis-response-unit-9.7049464</link>
-      <guid>89c57f84fa1f1fef66628bc6bce2d1ae</guid>
-      <pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate>
-      <source>CBC News</source>
-      <description><![CDATA[<a href="https://www.cbc.ca/news/canada/manitoba/brandon-police-crisis-response-unit-9.7049464" target="_blank">Brandon police partner with mental health clinicians to transform crisis response</a> <font color="#6f6f6f">CBC News</font>]]></description>
     </item>
   </channel>
 </rss>
