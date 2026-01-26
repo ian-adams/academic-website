@@ -1,7 +1,25 @@
 {
-  "updated": "2026-01-25T11:17:11.530Z",
-  "count": 131,
+  "updated": "2026-01-26T11:20:20.977Z",
+  "count": 132,
   "stories": [
+    {
+      "id": "570ca044142bf4dab4e76ef416842b14",
+      "url": "https://www.globalsecurity.org/security/library/news/2026/01/sec-260125-globaltimes01.htm",
+      "title": "Third fatal officer-involved shooting in Minneapolis within a month exposes enforcement flaws, may heighten federal-state tension: expert",
+      "source": "Globalsecurity.org",
+      "date": "2026-01-25",
+      "date_discovered": "2026-01-26",
+      "summary": "<a href=\"https://www.globalsecurity.org/security/library/news/2026/01/sec-260125-globaltimes01.htm\" target=\"_blank\">Third fatal officer-involved shooting in Minneapolis within a month exposes enforcement flaws, may heighten federal-state tension: expert</a> <font color=\"#6f6f6f\">Globalsecurity.org</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Minneapolis Police, US federal agents, Xinhua, Global Times",
+      "location": "Minneapolis, Minnesota",
+      "tags": [
+        "deadly force",
+        "shooting"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "2867315e644e303909d9b296f6580720",
       "url": "https://www.kqed.org/news/12070935/fatal-shooting-by-richmond-detective-on-interstate-80-is-under-investigation",
