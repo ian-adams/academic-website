@@ -1,7 +1,26 @@
 {
-  "updated": "2026-01-24T13:30:11.507Z",
-  "count": 1431,
+  "updated": "2026-01-27T09:27:52.449Z",
+  "count": 1432,
   "stories": [
+    {
+      "id": "623b542ec631c4b6a4da07b50c0098ae",
+      "url": "https://timesofindia.indiatimes.com/auto/cars/this-new-rule-could-stop-you-from-selling-your-vehicle-details/articleshow/127147959.cms",
+      "title": "This new rule could stop you from selling your vehicle: Details",
+      "source": "The Times of India",
+      "date": "2026-01-22",
+      "date_discovered": "2026-01-25",
+      "summary": "<a href=\"https://timesofindia.indiatimes.com/auto/cars/this-new-rule-could-stop-you-from-selling-your-vehicle-details/articleshow/127147959.cms\" target=\"_blank\">This new rule could stop you from selling your vehicle: Details</a> <font color=\"#6f6f6f\">The Times of India</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Delhi Police, AI Smart Glasses, facial recognition",
+      "location": "Delhi, India",
+      "tags": [
+        "AI",
+        "facial recognition",
+        "surveillance"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "b0f30f5a62ef0b524e48ad75f2ecef88",
       "url": "https://www.thehindubusinessline.com/news/national/delhi-police-to-use-ai-enabled-smart-glasses-for-republic-day-2026-security/article70536707.ece",
