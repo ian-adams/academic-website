@@ -1,0 +1,150 @@
+---
+/**
+ * Scholar Metrics Display Component
+ *
+ * Fetches Google Scholar metrics client-side to ensure data is always current,
+ * regardless of when the site was built. This solves the issue where build-time
+ * data imports would show stale/null values if the JSON was updated after deployment.
+ */
+interface Props {
+  pubCount: number;
+}
+
+const { pubCount } = Astro.props;
+
+// Default scholar URL as fallback
+const scholarUrl = 'https://scholar.google.com/citations?user=g9lY5RUAAAAJ';
+---
+
+<div class="scholar-metrics-container" data-pub-count={pubCount}>
+  <!-- Initial skeleton/loading state -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+    <div class="bg-white dark:bg-gray-800 border-l-4 border-primary-700 dark:border-primary-500 rounded-r-lg shadow-sm p-4 text-center">
+      <div class="text-3xl font-bold text-gray-900 dark:text-white" id="citations-value">
+        <span class="animate-pulse">...</span>
+      </div>
+      <div class="text-sm font-medium text-primary-700 dark:text-primary-400">Total Citations</div>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 border-l-4 border-primary-700 dark:border-primary-500 rounded-r-lg shadow-sm p-4 text-center group relative cursor-help !overflow-visible">
+      <div class="text-3xl font-bold text-gray-900 dark:text-white" id="h-index-value">
+        <span class="animate-pulse">...</span>
+      </div>
+      <div class="text-sm font-medium text-primary-700 dark:text-primary-400">
+        h-index
+        <span class="inline-block ml-1 text-gray-400 dark:text-gray-500">&#9432;</span>
+      </div>
+      <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none w-64 text-left z-50 shadow-lg" id="h-index-tooltip">
+        The h-index measures productivity and citation impact.
+        <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 border-l-4 border-primary-700 dark:border-primary-500 rounded-r-lg shadow-sm p-4 text-center group relative cursor-help !overflow-visible">
+      <div class="text-3xl font-bold text-gray-900 dark:text-white" id="i10-index-value">
+        <span class="animate-pulse">...</span>
+      </div>
+      <div class="text-sm font-medium text-primary-700 dark:text-primary-400">
+        i10-index
+        <span class="inline-block ml-1 text-gray-400 dark:text-gray-500">&#9432;</span>
+      </div>
+      <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none w-64 text-left z-50 shadow-lg" id="i10-index-tooltip">
+        The i10-index counts publications with at least 10 citations.
+        <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 border-l-4 border-primary-700 dark:border-primary-500 rounded-r-lg shadow-sm p-4 text-center">
+      <div class="text-3xl font-bold text-gray-900 dark:text-white" id="pub-count">
+        {pubCount}
+      </div>
+      <div class="text-sm font-medium text-primary-700 dark:text-primary-400">Publications</div>
+    </div>
+  </div>
+
+  <p class="text-xs text-gray-500 dark:text-gray-500 mb-8 -mt-8">
+    Metrics from <a
+      href={scholarUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="underline hover:text-primary-700 dark:hover:text-primary-400"
+      id="scholar-link"
+    >Google Scholar</a>
+    <span id="updated-date" class="ml-2 text-gray-400"></span>
+  </p>
+</div>
+
+<script>
+  // Fetch scholar metrics client-side for reliability
+  async function loadScholarMetrics() {
+    try {
+      const response = await fetch('/data/scholar-metrics.json');
+      const data = await response.json();
+
+      // Update citations
+      const citationsEl = document.getElementById('citations-value');
+      if (citationsEl && data.citations !== null) {
+        citationsEl.textContent = data.citations.toLocaleString();
+      } else if (citationsEl) {
+        citationsEl.textContent = '—';
+      }
+
+      // Update h-index
+      const hIndexEl = document.getElementById('h-index-value');
+      if (hIndexEl && data.h_index !== null) {
+        hIndexEl.textContent = data.h_index.toString();
+      } else if (hIndexEl) {
+        hIndexEl.textContent = '—';
+      }
+
+      // Update h-index tooltip
+      const hIndexTooltip = document.getElementById('h-index-tooltip');
+      if (hIndexTooltip && data.h_index !== null) {
+        hIndexTooltip.innerHTML = `The h-index measures productivity and citation impact. An h-index of ${data.h_index} means ${data.h_index} publications have been cited at least ${data.h_index} times each.<div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>`;
+      }
+
+      // Update i10-index
+      const i10IndexEl = document.getElementById('i10-index-value');
+      if (i10IndexEl && data.i10_index !== null) {
+        i10IndexEl.textContent = data.i10_index.toString();
+      } else if (i10IndexEl) {
+        i10IndexEl.textContent = '—';
+      }
+
+      // Update i10-index tooltip
+      const i10IndexTooltip = document.getElementById('i10-index-tooltip');
+      if (i10IndexTooltip && data.i10_index !== null) {
+        i10IndexTooltip.innerHTML = `The i10-index counts publications with at least 10 citations. An i10-index of ${data.i10_index} means ${data.i10_index} publications have 10 or more citations.<div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>`;
+      }
+
+      // Update scholar link
+      const scholarLink = document.getElementById('scholar-link');
+      if (scholarLink && data.scholar_url) {
+        scholarLink.setAttribute('href', data.scholar_url);
+      }
+
+      // Update date
+      const updatedEl = document.getElementById('updated-date');
+      if (updatedEl && data.updated) {
+        const date = new Date(data.updated);
+        updatedEl.textContent = `(updated ${date.toLocaleDateString()})`;
+      }
+
+    } catch (error) {
+      console.error('Failed to load scholar metrics:', error);
+      // Show dashes on error
+      const elements = ['citations-value', 'h-index-value', 'i10-index-value'];
+      elements.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = '—';
+      });
+    }
+  }
+
+  // Load metrics when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadScholarMetrics);
+  } else {
+    loadScholarMetrics();
+  }
+</script>

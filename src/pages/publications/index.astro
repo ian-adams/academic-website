@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import scholarMetrics from '@/../public/data/scholar-metrics.json';
 import PublicationsSearch from '@/components/publications/PublicationsSearch';
+import ScholarMetrics from '@/components/publications/ScholarMetrics.astro';
 
 const publications = await getCollection('publications');
 
@@ -65,50 +65,8 @@ const publicationsKeywords = [
         </p>
       </header>
 
-      <!-- Google Scholar Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-        <div class="bg-white dark:bg-gray-800 border-l-4 border-primary-700 dark:border-primary-500 rounded-r-lg shadow-sm p-4 text-center">
-          <div class="text-3xl font-bold text-gray-900 dark:text-white">
-            {scholarMetrics.citations?.toLocaleString() ?? '—'}
-          </div>
-          <div class="text-sm font-medium text-primary-700 dark:text-primary-400">Total Citations</div>
-        </div>
-        <div class="bg-white dark:bg-gray-800 border-l-4 border-primary-700 dark:border-primary-500 rounded-r-lg shadow-sm p-4 text-center group relative cursor-help !overflow-visible">
-          <div class="text-3xl font-bold text-gray-900 dark:text-white">
-            {scholarMetrics.h_index ?? '—'}
-          </div>
-          <div class="text-sm font-medium text-primary-700 dark:text-primary-400">
-            h-index
-            <span class="inline-block ml-1 text-gray-400 dark:text-gray-500">&#9432;</span>
-          </div>
-          <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none w-64 text-left z-50 shadow-lg">
-            The h-index measures productivity and citation impact. An h-index of {scholarMetrics.h_index} means {scholarMetrics.h_index} publications have been cited at least {scholarMetrics.h_index} times each.
-            <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
-          </div>
-        </div>
-        <div class="bg-white dark:bg-gray-800 border-l-4 border-primary-700 dark:border-primary-500 rounded-r-lg shadow-sm p-4 text-center group relative cursor-help !overflow-visible">
-          <div class="text-3xl font-bold text-gray-900 dark:text-white">
-            {scholarMetrics.i10_index ?? '—'}
-          </div>
-          <div class="text-sm font-medium text-primary-700 dark:text-primary-400">
-            i10-index
-            <span class="inline-block ml-1 text-gray-400 dark:text-gray-500">&#9432;</span>
-          </div>
-          <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none w-64 text-left z-50 shadow-lg">
-            The i10-index counts publications with at least 10 citations. An i10-index of {scholarMetrics.i10_index} means {scholarMetrics.i10_index} publications have 10 or more citations.
-            <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
-          </div>
-        </div>
-        <div class="bg-white dark:bg-gray-800 border-l-4 border-primary-700 dark:border-primary-500 rounded-r-lg shadow-sm p-4 text-center">
-          <div class="text-3xl font-bold text-gray-900 dark:text-white" id="pub-count">
-            {pubCount}
-          </div>
-          <div class="text-sm font-medium text-primary-700 dark:text-primary-400">Publications</div>
-        </div>
-      </div>
-      <p class="text-xs text-gray-500 dark:text-gray-500 mb-8 -mt-8">
-        Metrics from <a href={scholarMetrics.scholar_url} target="_blank" rel="noopener noreferrer" class="underline hover:text-primary-700 dark:hover:text-primary-400">Google Scholar</a>
-      </p>
+      <!-- Google Scholar Stats - fetched client-side for reliability -->
+      <ScholarMetrics pubCount={pubCount} />
 
       <!-- Publications Search and List -->
       <PublicationsSearch client:load publications={pubsForSearch} />
