@@ -1,7 +1,156 @@
 {
-  "updated": "2026-01-27T11:22:43.901Z",
-  "count": 137,
+  "updated": "2026-01-28T11:22:55.413Z",
+  "count": 145,
   "stories": [
+    {
+      "id": "e6cf58eeec451027ddee6cf3478e02dc",
+      "url": "https://abcnews.go.com/Politics/wireStory/minnesota-killing-produces-backlash-trump-administration-amendment-advocates-129588226",
+      "title": "Minnesota killing produces backlash against Trump administration from Second Amendment advocates",
+      "source": "ABC News",
+      "date": "2026-01-27",
+      "date_discovered": "2026-01-28",
+      "summary": "<a href=\"https://abcnews.go.com/Politics/wireStory/minnesota-killing-produces-backlash-trump-administration-amendment-advocates-129588226\" target=\"_blank\">Minnesota killing produces backlash against Trump administration from Second Amendment advocates</a> <font color=\"#6f6f6f\">ABC News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Alex Pretti, White House, Trump administration, Second Amendment advocates",
+      "location": "Minnesota",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "fe4852aa5b881a8d5cbffc48f37e8694",
+      "url": "https://www.denverpost.com/2026/01/26/edgewater-police-shooting-fatality/",
+      "title": "Man shot by Edgewater police in Wheat Ridge has died",
+      "source": "The Denver Post",
+      "date": "2026-01-27",
+      "date_discovered": "2026-01-28",
+      "summary": "<a href=\"https://www.denverpost.com/2026/01/26/edgewater-police-shooting-fatality/\" target=\"_blank\">Man shot by Edgewater police in Wheat Ridge has died</a> <font color=\"#6f6f6f\">The Denver Post</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "Edgewater police",
+      "location": "Wheat Ridge, Colorado",
+      "tags": [
+        "deadly force",
+        "shooting"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "f9248a9a51b45387150e7c9151926e9f",
+      "url": "https://www.bostonherald.com/2026/01/26/minneapolis-shooting-government-statement-contradictions/",
+      "title": "Videos of deadly Minneapolis shooting contradict government statements",
+      "source": "Boston Herald",
+      "date": "2026-01-26",
+      "date_discovered": "2026-01-28",
+      "summary": "<a href=\"https://www.bostonherald.com/2026/01/26/minneapolis-shooting-government-statement-contradictions/\" target=\"_blank\">Videos of deadly Minneapolis shooting contradict government statements</a> <font color=\"#6f6f6f\">Boston Herald</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Minneapolis, federal officers, use-of-force experts",
+      "location": "Minneapolis, Minnesota",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "use of force"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "d3e08cbf6ebcefd58fa68cef8d553028",
+      "url": "https://www.pbs.org/newshour/nation/videos-of-deadly-minneapolis-shooting-of-alex-pretti-contradict-trump-administration-statements",
+      "title": "Videos of deadly Minneapolis shooting of Alex Pretti contradict Trump administration statements",
+      "source": "PBS",
+      "date": "2026-01-26",
+      "date_discovered": "2026-01-28",
+      "summary": "<a href=\"https://www.pbs.org/newshour/nation/videos-of-deadly-minneapolis-shooting-of-alex-pretti-contradict-trump-administration-statements\" target=\"_blank\">Videos of deadly Minneapolis shooting of Alex Pretti contradict Trump administration statements</a> <font color=\"#6f6f6f\">PBS</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Minneapolis, Trump administration, federal officers, use-of-force experts",
+      "location": "Minneapolis, Minnesota",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "use of force",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "c0218a5947605d1a406c129699a881aa",
+      "url": "https://www.foxnews.com/us/knife-wielding-nut-allegedly-asked-christian-his-religion-then-stabbed-him-dog-before-police-shot-him",
+      "title": "Knife-wielding nut allegedly asked Christian his religion – then stabbed him and dog before police shot him",
+      "source": "Fox News",
+      "date": "2026-01-26",
+      "date_discovered": "2026-01-28",
+      "summary": "<a href=\"https://www.foxnews.com/us/knife-wielding-nut-allegedly-asked-christian-his-religion-then-stabbed-him-dog-before-police-shot-him\" target=\"_blank\">Knife-wielding nut allegedly asked Christian his religion – then stabbed him and dog before police shot him</a> <font color=\"#6f6f6f\">Fox News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.7,
+      "key_entities": "Washington police",
+      "location": "Parkland, Washington",
+      "tags": [
+        "deadly force",
+        "shooting"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "049a8c27fde01b80ddee6127dc6da9aa",
+      "url": "https://www.forbes.com/sites/saradorn/2026/01/26/pence-and-other-republicans-break-with-trump-over-pretti-death-deeply-troubling/",
+      "title": "Pence And Other Republicans Break With Trump Over Pretti Death: ‘Deeply Troubling’",
+      "source": "Forbes",
+      "date": "2026-01-26",
+      "date_discovered": "2026-01-28",
+      "summary": "<a href=\"https://www.forbes.com/sites/saradorn/2026/01/26/pence-and-other-republicans-break-with-trump-over-pretti-death-deeply-troubling/\" target=\"_blank\">Pence And Other Republicans Break With Trump Over Pretti Death: ‘Deeply Troubling’</a> <font color=\"#6f6f6f\">Forbes</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Pence, Republicans, Trump",
+      "location": null,
+      "tags": [
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "732151289e2af62ff46ede7cc612228c",
+      "url": "http://nymag.com/intelligencer/article/trump-alex-pretti-ice-minneapolis.html",
+      "title": "Republican Revolt Forces Trump’s Hand on Minnesota",
+      "source": "New York Magazine",
+      "date": "2026-01-26",
+      "date_discovered": "2026-01-28",
+      "summary": "<a href=\"http://nymag.com/intelligencer/article/trump-alex-pretti-ice-minneapolis.html\" target=\"_blank\">Republican Revolt Forces Trump’s Hand on Minnesota</a> <font color=\"#6f6f6f\">New York Magazine</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Tom Homan, Alex Pretti, federal agents",
+      "location": "Minnesota",
+      "tags": [
+        "deadly force",
+        "use of force"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "8e09a328f3ff67aaa01ce54a0f9418c3",
+      "url": "https://www.bbc.com/news/articles/ckgn9q1wp0yo",
+      "title": "Trump abandons attack mode as Minneapolis shooting backlash grows",
+      "source": "BBC News",
+      "date": "2026-01-26",
+      "date_discovered": "2026-01-28",
+      "summary": "<a href=\"https://www.bbc.com/news/articles/ckgn9q1wp0yo\" target=\"_blank\">Trump abandons attack mode as Minneapolis shooting backlash grows</a> <font color=\"#6f6f6f\">BBC News</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Trump administration, White House, Alex Pretti",
+      "location": "Minneapolis",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "228fe78363b666ddfff062e1ef5a0f3b",
       "url": "https://abcnews.go.com/Politics/wireStory/videos-deadly-minneapolis-shooting-contradict-government-statements-129552680",
