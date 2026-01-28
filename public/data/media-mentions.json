@@ -1,7 +1,26 @@
 {
-  "updated": "2026-01-27T13:08:03.444Z",
-  "count": 68,
+  "updated": "2026-01-28T13:08:15.394Z",
+  "count": 69,
   "stories": [
+    {
+      "id": "d3e08cbf6ebcefd58fa68cef8d553028",
+      "url": "https://www.pbs.org/newshour/nation/videos-of-deadly-minneapolis-shooting-of-alex-pretti-contradict-trump-administration-statements",
+      "title": "Videos of deadly Minneapolis shooting of Alex Pretti contradict Trump administration statements",
+      "source": "PBS",
+      "date": "2026-01-26",
+      "date_discovered": "2026-01-28",
+      "summary": "<a href=\"https://www.pbs.org/newshour/nation/videos-of-deadly-minneapolis-shooting-of-alex-pretti-contradict-trump-administration-statements\" target=\"_blank\">Videos of deadly Minneapolis shooting of Alex Pretti contradict Trump administration statements</a> <font color=\"#6f6f6f\">PBS</font>",
+      "story_type": "incident",
+      "relevance_score": 0.7,
+      "key_entities": "Minneapolis, Alex Pretti, Trump administration, federal officers, use-of-force experts",
+      "location": "Minneapolis, Minnesota",
+      "tags": [
+        "expert commentary",
+        "use of force",
+        "policing"
+      ],
+      "needs_review": 1
+    },
     {
       "id": "kcur20251212",
       "url": "https://www.kcur.org/news/2025-12-12/force-science-law-enforcement-training-research-lenexa-police-discredited",

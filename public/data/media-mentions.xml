@@ -4,7 +4,15 @@
     <title>Media Mentions</title>
     <description>Media Mentions - automated news feed</description>
     <link>https://ianadamsresearch.com/media-mentions</link>
-    <lastBuildDate>Tue, 27 Jan 2026 13:08:03 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Jan 2026 13:08:15 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Videos of deadly Minneapolis shooting of Alex Pretti contradict Trump administration statements]]></title>
+      <link>https://www.pbs.org/newshour/nation/videos-of-deadly-minneapolis-shooting-of-alex-pretti-contradict-trump-administration-statements</link>
+      <guid>d3e08cbf6ebcefd58fa68cef8d553028</guid>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 GMT</pubDate>
+      <source>PBS</source>
+      <description><![CDATA[<a href="https://www.pbs.org/newshour/nation/videos-of-deadly-minneapolis-shooting-of-alex-pretti-contradict-trump-administration-statements" target="_blank">Videos of deadly Minneapolis shooting of Alex Pretti contradict Trump administration statements</a> <font color="#6f6f6f">PBS</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[Why are Lenexa Police so closely tied to this controversial officer training company?]]></title>
       <link>https://www.kcur.org/news/2025-12-12/force-science-law-enforcement-training-research-lenexa-police-discredited</link>
@@ -396,14 +404,6 @@
       <pubDate>Mon, 12 Feb 2024 00:00:00 GMT</pubDate>
       <source>Police1</source>
       <description><![CDATA[Analysis of large language model impact on police report writing.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Armed and uninformed: SLED report details what led to cops killing a schizophrenic Spartanburg man]]></title>
-      <link>https://www.postandcourier.com/spartanburg/news/south-carolina-sled-investigation-shows-deputy-fatal-shooting-of-spartanburg-man-caused-by-missteps-and-poor-communication/article_e5ffbf7a-8d94-11ee-8313-b7cb94b08fff.html</link>
-      <guid>postandcourier20231201</guid>
-      <pubDate>Fri, 01 Dec 2023 00:00:00 GMT</pubDate>
-      <source>Post and Courier</source>
-      <description><![CDATA[Investigation into Spartanburg fatal shooting with expert analysis.]]></description>
     </item>
   </channel>
 </rss>
