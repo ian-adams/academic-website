@@ -1,7 +1,102 @@
 {
-  "updated": "2026-01-28T11:22:55.413Z",
-  "count": 145,
+  "updated": "2026-01-29T11:30:27.412Z",
+  "count": 150,
   "stories": [
+    {
+      "id": "d45e8b037e65cfc9ab916e5ee3633db4",
+      "url": "https://abcnews.go.com/US/wireStory/former-virginia-gov-youngkin-pardoned-police-sergeant-fatal-129610471",
+      "title": "Former Virginia Gov. Youngkin pardoned ex-police sergeant in fatal 2023 shooting of unarmed man",
+      "source": "ABC News",
+      "date": "2026-01-27",
+      "date_discovered": "2026-01-29",
+      "summary": "<a href=\"https://abcnews.go.com/US/wireStory/former-virginia-gov-youngkin-pardoned-police-sergeant-fatal-129610471\" target=\"_blank\">Former Virginia Gov. Youngkin pardoned ex-police sergeant in fatal 2023 shooting of unarmed man</a> <font color=\"#6f6f6f\">ABC News</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Glenn Youngkin, Fairfax County Police, Virginia",
+      "location": "Virginia",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "6a83d3d3851e5b2ed7a4a5473e20473b",
+      "url": "https://www.forbes.com/sites/saradorn/2026/01/27/republican-criticism-of-pretti-shooting-grows-rand-paul-calls-for-agents-involved-to-be-put-on-leave/",
+      "title": "Republican Criticism Of Pretti Shooting Grows: Rand Paul Calls For Agents Involved To Be Put On Leave",
+      "source": "Forbes",
+      "date": "2026-01-27",
+      "date_discovered": "2026-01-29",
+      "summary": "<a href=\"https://www.forbes.com/sites/saradorn/2026/01/27/republican-criticism-of-pretti-shooting-grows-rand-paul-calls-for-agents-involved-to-be-put-on-leave/\" target=\"_blank\">Republican Criticism Of Pretti Shooting Grows: Rand Paul Calls For Agents Involved To Be Put On Leave</a> <font color=\"#6f6f6f\">Forbes</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Rand Paul, Alex Pretti, Minneapolis Police, Mike Pence",
+      "location": "Minneapolis, Minnesota",
+      "tags": [
+        "shooting",
+        "deadly force",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "c9139d34b806c43529121abd6b76e4b0",
+      "url": "https://www.wlwt.com/article/alex-pretti-shooting-white-house-backlash/70154255",
+      "title": "Republican backlash over Alex Pretti shooting",
+      "source": "WLWT Cincinnati",
+      "date": "2026-01-27",
+      "date_discovered": "2026-01-29",
+      "summary": "<a href=\"https://www.wlwt.com/article/alex-pretti-shooting-white-house-backlash/70154255\" target=\"_blank\">Republican backlash over Alex Pretti shooting</a> <font color=\"#6f6f6f\">WLWT Cincinnati</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Alex Pretti, White House, Republicans, gun rights advocates",
+      "location": null,
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "8bf80c90455c5f83abea0f3cb8ea41fd",
+      "url": "https://www.wmur.com/article/alex-pretti-shooting-white-house-backlash/70154255",
+      "title": "Republican backlash over Alex Pretti shooting",
+      "source": "WMUR Manchester",
+      "date": "2026-01-27",
+      "date_discovered": "2026-01-29",
+      "summary": "<a href=\"https://www.wmur.com/article/alex-pretti-shooting-white-house-backlash/70154255\" target=\"_blank\">Republican backlash over Alex Pretti shooting</a> <font color=\"#6f6f6f\">WMUR Manchester</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Alex Pretti, White House, Republicans, gun rights advocates",
+      "location": null,
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "4e5f3d985b746055c950bd811b762d90",
+      "url": "https://www.kcra.com/article/alex-pretti-shooting-white-house-backlash/70154255",
+      "title": "Republican backlash over Alex Pretti shooting",
+      "source": "KCRA Sacramento",
+      "date": "2026-01-27",
+      "date_discovered": "2026-01-29",
+      "summary": "<a href=\"https://www.kcra.com/article/alex-pretti-shooting-white-house-backlash/70154255\" target=\"_blank\">Republican backlash over Alex Pretti shooting</a> <font color=\"#6f6f6f\">KCRA Sacramento</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Alex Pretti, White House, Republicans, gun rights advocates",
+      "location": null,
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "e6cf58eeec451027ddee6cf3478e02dc",
       "url": "https://abcnews.go.com/Politics/wireStory/minnesota-killing-produces-backlash-trump-administration-amendment-advocates-129588226",
