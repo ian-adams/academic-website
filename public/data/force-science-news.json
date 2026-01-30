@@ -1,7 +1,99 @@
 {
-  "updated": "2026-01-29T11:30:27.412Z",
-  "count": 150,
+  "updated": "2026-01-30T11:28:14.189Z",
+  "count": 155,
   "stories": [
+    {
+      "id": "df195e3dadb5c2df5266d0ed8c16b14d",
+      "url": "https://www.cbc.ca/news/canada/manitoba/brandon-police-budget-body-cameras-9.7065740",
+      "title": "With final vote on 2026 budget coming, Brandon police plan to spend more than $400K on body cameras",
+      "source": "CBC News",
+      "date": "2026-01-29",
+      "date_discovered": "2026-01-30",
+      "summary": "<a href=\"https://www.cbc.ca/news/canada/manitoba/brandon-police-budget-body-cameras-9.7065740\" target=\"_blank\">With final vote on 2026 budget coming, Brandon police plan to spend more than $400K on body cameras</a> <font color=\"#6f6f6f\">CBC News</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Brandon Police Service",
+      "location": "Brandon, Manitoba, Canada",
+      "tags": [
+        "body cameras",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "ed6d6173ae8ee23b4ef641a904d68a94",
+      "url": "https://www.theamericanconservative.com/which-victims-of-the-police-can-you-slander/",
+      "title": "Which Victims of the Police Can You Slander?",
+      "source": "The American Conservative",
+      "date": "2026-01-29",
+      "date_discovered": "2026-01-30",
+      "summary": "<a href=\"https://www.theamericanconservative.com/which-victims-of-the-police-can-you-slander/\" target=\"_blank\">Which Victims of the Police Can You Slander?</a> <font color=\"#6f6f6f\">The American Conservative</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Renee Good, Alex Pretti",
+      "location": null,
+      "tags": [
+        "deadly force",
+        "shooting"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "8f99132b649a7c94f4dd2958983d7aca",
+      "url": "https://thesocietypages.org/discoveries/2026/01/28/murder-at-home-police-violence-at-work/",
+      "title": "Murder at Home, Police Violence at Work",
+      "source": "Thesocietypages.org",
+      "date": "2026-01-28",
+      "date_discovered": "2026-01-30",
+      "summary": "<a href=\"https://thesocietypages.org/discoveries/2026/01/28/murder-at-home-police-violence-at-work/\" target=\"_blank\">Murder at Home, Police Violence at Work</a> <font color=\"#6f6f6f\">Thesocietypages.org</font>",
+      "story_type": "research",
+      "relevance_score": 0.9,
+      "key_entities": "Samuel Thomas Donahue, Gerard Torrats-Espinosa, American Journal of Sociology",
+      "location": null,
+      "tags": [
+        "research",
+        "use of force",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "b4e0fa59b30a3850ec737c1559119a8b",
+      "url": "https://www.wsbtv.com/news/local/cobb-county/officer-involved-shooting-reported-cobb-county-police-headquarters/F6BSWV56Y5GCPKNMVCFOLCUHR4/",
+      "title": "Officer-involved shooting reported at Cobb County police headquarters",
+      "source": "WSB Atlanta",
+      "date": "2026-01-28",
+      "date_discovered": "2026-01-30",
+      "summary": "<a href=\"https://www.wsbtv.com/news/local/cobb-county/officer-involved-shooting-reported-cobb-county-police-headquarters/F6BSWV56Y5GCPKNMVCFOLCUHR4/\" target=\"_blank\">Officer-involved shooting reported at Cobb County police headquarters</a> <font color=\"#6f6f6f\">WSB Atlanta</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Cobb County Police Department, Georgia Bureau of Investigation",
+      "location": "Cobb County, Georgia",
+      "tags": [
+        "shooting",
+        "use of force"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "8e1260232fb9ad1da7428e1344a0c77f",
+      "url": "https://www.wpxi.com/news/local/officer-involved-shooting-reported-allegheny-county/KSJH2H347FCYZFGCDUCOJTRXGU/",
+      "title": "Officer-involved shooting reported in Allegheny County",
+      "source": "WPXI Pittsburgh",
+      "date": "2026-01-28",
+      "date_discovered": "2026-01-30",
+      "summary": "<a href=\"https://www.wpxi.com/news/local/officer-involved-shooting-reported-allegheny-county/KSJH2H347FCYZFGCDUCOJTRXGU/\" target=\"_blank\">Officer-involved shooting reported in Allegheny County</a> <font color=\"#6f6f6f\">WPXI Pittsburgh</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Allegheny County Police Department",
+      "location": "Wilkins Township, Allegheny County, Pennsylvania",
+      "tags": [
+        "use of force",
+        "shooting",
+        "deadly force"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "d45e8b037e65cfc9ab916e5ee3633db4",
       "url": "https://abcnews.go.com/US/wireStory/former-virginia-gov-youngkin-pardoned-police-sergeant-fatal-129610471",
