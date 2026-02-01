@@ -1,7 +1,121 @@
 {
-  "updated": "2026-01-31T11:19:53.947Z",
-  "count": 155,
+  "updated": "2026-02-01T11:21:45.278Z",
+  "count": 161,
   "stories": [
+    {
+      "id": "12b8ba7e29071b72a3e95f6ec967a316",
+      "url": "https://nypost.com/2026/01/30/us-news/sean-grayson-sentenced-to-20-years-for-killing-sonya-massey/",
+      "title": "Ex-sheriff’s deputy sentenced 20 years for killing unarmed Black woman Sonya Massey",
+      "source": "New York Post",
+      "date": "2026-01-30",
+      "date_discovered": "2026-02-01",
+      "summary": "<a href=\"https://nypost.com/2026/01/30/us-news/sean-grayson-sentenced-to-20-years-for-killing-sonya-massey/\" target=\"_blank\">Ex-sheriff’s deputy sentenced 20 years for killing unarmed Black woman Sonya Massey</a> <font color=\"#6f6f6f\">New York Post</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Sean Grayson, Sonya Massey, Illinois sheriff's deputy",
+      "location": "Springfield, Illinois",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "dbcb0e19a9eb307c4dcc6457725ece38",
+      "url": "https://www.cbc.ca/news/world/sonya-massey-killing-conviction-9.7067607",
+      "title": "Former Illinois deputy sentenced to 20 years for killing woman who reported prowler in her home",
+      "source": "CBC News",
+      "date": "2026-01-30",
+      "date_discovered": "2026-02-01",
+      "summary": "<a href=\"https://www.cbc.ca/news/world/sonya-massey-killing-conviction-9.7067607\" target=\"_blank\">Former Illinois deputy sentenced to 20 years for killing woman who reported prowler in her home</a> <font color=\"#6f6f6f\">CBC News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "Sean Grayson, Sonya Massey, Illinois sheriff's deputy, Springfield",
+      "location": "Springfield, Illinois",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "2f857c39cf4cc5ddba0f4a78153225d7",
+      "url": "https://www.aljazeera.com/news/2026/1/29/former-illinois-deputy-sentenced-to-20-years-for-killing-of-sonya-massey",
+      "title": "Former Illinois deputy sentenced to 20 years for US killing of Sonya Massey",
+      "source": "Al Jazeera English",
+      "date": "2026-01-29",
+      "date_discovered": "2026-02-01",
+      "summary": "<a href=\"https://www.aljazeera.com/news/2026/1/29/former-illinois-deputy-sentenced-to-20-years-for-killing-of-sonya-massey\" target=\"_blank\">Former Illinois deputy sentenced to 20 years for US killing of Sonya Massey</a> <font color=\"#6f6f6f\">Al Jazeera English</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "Sean Grayson, Sonya Massey, Illinois sheriff's deputy",
+      "location": "Illinois",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "072eb20e57c46c4d864324a4b2c4f955",
+      "url": "https://www.pbs.org/newshour/nation/former-illinois-deputy-who-killed-sonya-massey-is-sentenced-to-20-years-in-prison",
+      "title": "Former Illinois deputy who killed Sonya Massey is sentenced to 20 years in prison",
+      "source": "PBS",
+      "date": "2026-01-29",
+      "date_discovered": "2026-02-01",
+      "summary": "<a href=\"https://www.pbs.org/newshour/nation/former-illinois-deputy-who-killed-sonya-massey-is-sentenced-to-20-years-in-prison\" target=\"_blank\">Former Illinois deputy who killed Sonya Massey is sentenced to 20 years in prison</a> <font color=\"#6f6f6f\">PBS</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "Sonya Massey, Illinois sheriff's deputy, Springfield",
+      "location": "Springfield, Illinois",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "4a21631bcaf9129bfb813b86ebc55e4a",
+      "url": "https://www.cnn.com/2026/01/29/us/sean-grayson-sentencing-sonya-massey",
+      "title": "Former Illinois deputy Sean Grayson sentenced to 20 years for fatal shooting of Sonya Massey",
+      "source": "CNN",
+      "date": "2026-01-29",
+      "date_discovered": "2026-02-01",
+      "summary": "<a href=\"https://www.cnn.com/2026/01/29/us/sean-grayson-sentencing-sonya-massey\" target=\"_blank\">Former Illinois deputy Sean Grayson sentenced to 20 years for fatal shooting of Sonya Massey</a> <font color=\"#6f6f6f\">CNN</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "Sean Grayson, Sonja Massey, Illinois sheriff's deputy, Springfield Police",
+      "location": "Springfield, Illinois",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "85d1017e2be3999f4d0b592e5014d406",
+      "url": "https://www.huffpost.com/entry/former-illinois-deputy-sentenced-to-20-years-in-prison-killing-sonya-massey_n_697b8755e4b0b14e6786ac3f",
+      "title": "Former Illinois Deputy Sentenced To 20 Years In Prison For Killing Sonya Massey",
+      "source": "HuffPost",
+      "date": "2026-01-29",
+      "date_discovered": "2026-02-01",
+      "summary": "<a href=\"https://www.huffpost.com/entry/former-illinois-deputy-sentenced-to-20-years-in-prison-killing-sonya-massey_n_697b8755e4b0b14e6786ac3f\" target=\"_blank\">Former Illinois Deputy Sentenced To 20 Years In Prison For Killing Sonya Massey</a> <font color=\"#6f6f6f\">HuffPost</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "Illinois sheriff's deputy, Sonya Massey, Springfield Police",
+      "location": "Springfield, Illinois",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "df195e3dadb5c2df5266d0ed8c16b14d",
       "url": "https://www.cbc.ca/news/canada/manitoba/brandon-police-budget-body-cameras-9.7065740",
