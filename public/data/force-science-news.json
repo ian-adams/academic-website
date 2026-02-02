@@ -1,7 +1,45 @@
 {
-  "updated": "2026-02-01T11:21:45.278Z",
-  "count": 161,
+  "updated": "2026-02-02T11:35:35.209Z",
+  "count": 164,
   "stories": [
+    {
+      "id": "9ff90aa7635098302c5f7b0d50ed7fcb",
+      "url": "https://abcnews.go.com/US/wireStory/officials-disparage-pretti-good-families-black-people-killed-129732421",
+      "title": "As officials disparage Pretti and Good, families of Black people killed by police have déjà vu",
+      "source": "ABC News",
+      "date": "2026-01-31",
+      "date_discovered": "2026-02-02",
+      "summary": "<a href=\"https://abcnews.go.com/US/wireStory/officials-disparage-pretti-good-families-black-people-killed-129732421\" target=\"_blank\">As officials disparage Pretti and Good, families of Black people killed by police have déjà vu</a> <font color=\"#6f6f6f\">ABC News</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.8,
+      "key_entities": "federal officers, Minneapolis police",
+      "location": "Minneapolis, Minnesota",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "45aa92cc8971880b9fbe788f8f7a54db",
+      "url": "https://www.yahoo.com/news/articles/officials-disparage-pretti-good-families-140051128.html",
+      "title": "As officials disparage Pretti and Good, families of Black people killed by police have déjà vu",
+      "source": "Yahoo Entertainment",
+      "date": "2026-01-31",
+      "date_discovered": "2026-02-02",
+      "summary": "<a href=\"https://www.yahoo.com/news/articles/officials-disparage-pretti-good-families-140051128.html\" target=\"_blank\">As officials disparage Pretti and Good, families of Black people killed by police have déjà vu</a> <font color=\"#6f6f6f\">Yahoo Entertainment</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.8,
+      "key_entities": "Alex Pretti, Renee Good, federal officers, Minneapolis",
+      "location": "Minneapolis, Minnesota",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "12b8ba7e29071b72a3e95f6ec967a316",
       "url": "https://nypost.com/2026/01/30/us-news/sean-grayson-sentenced-to-20-years-for-killing-sonya-massey/",
@@ -205,6 +243,25 @@
         "use of force",
         "shooting",
         "deadly force"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "773397b0307c8789c3d410459b66d61e",
+      "url": "https://www.cbsnews.com/news/alex-pretti-shooting-minneapolis-growing-number-of-republicans-criticize-trump-admin-response/",
+      "title": "More Republicans criticize Trump officials' response to Alex Pretti shooting",
+      "source": "CBS News",
+      "date": "2026-01-27",
+      "date_discovered": "2026-02-02",
+      "summary": "<a href=\"https://www.cbsnews.com/news/alex-pretti-shooting-minneapolis-growing-number-of-republicans-criticize-trump-admin-response/\" target=\"_blank\">More Republicans criticize Trump officials' response to Alex Pretti shooting</a> <font color=\"#6f6f6f\">CBS News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Trump administration, Alex Pretti, Border Patrol",
+      "location": null,
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
       ],
       "needs_review": 0
     },
