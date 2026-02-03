@@ -1,7 +1,26 @@
 {
-  "updated": "2026-02-02T11:35:35.209Z",
-  "count": 164,
+  "updated": "2026-02-03T11:34:10.275Z",
+  "count": 166,
   "stories": [
+    {
+      "id": "54403d08b990368ae963414c3d44eb8e",
+      "url": "https://www.globalsecurity.org/security/library/news/2026/02/sec-260202-pdo02.htm",
+      "title": "Violent law enforcement tears U.S. society wider apart",
+      "source": "Globalsecurity.org",
+      "date": "2026-02-02",
+      "date_discovered": "2026-02-03",
+      "summary": "<a href=\"https://www.globalsecurity.org/security/library/news/2026/02/sec-260202-pdo02.htm\" target=\"_blank\">Violent law enforcement tears U.S. society wider apart</a> <font color=\"#6f6f6f\">Globalsecurity.org</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Xinhua, People's Daily Online, U.S. federal law enforcement",
+      "location": "United States",
+      "tags": [
+        "use of force",
+        "deadly force",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "9ff90aa7635098302c5f7b0d50ed7fcb",
       "url": "https://abcnews.go.com/US/wireStory/officials-disparage-pretti-good-families-black-people-killed-129732421",
@@ -73,6 +92,24 @@
       "location": "Springfield, Illinois",
       "tags": [
         "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "0e316179520b5b3ad66df7a2c3808757",
+      "url": "https://www.foxnews.com/opinion/morning-glory-minnesota-tragedies-arent-instant-replay-calls-make-couch",
+      "title": "MORNING GLORY: Minnesota tragedies aren't instant replay calls you make from the couch",
+      "source": "Fox News",
+      "date": "2026-01-29",
+      "date_discovered": "2026-02-03",
+      "summary": "<a href=\"https://www.foxnews.com/opinion/morning-glory-minnesota-tragedies-arent-instant-replay-calls-make-couch\" target=\"_blank\">MORNING GLORY: Minnesota tragedies aren't instant replay calls you make from the couch</a> <font color=\"#6f6f6f\">Fox News</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Hugh Hewitt, Fox News",
+      "location": "Minnesota",
+      "tags": [
         "shooting",
         "accountability"
       ],
