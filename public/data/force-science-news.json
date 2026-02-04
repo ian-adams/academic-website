@@ -1,7 +1,25 @@
 {
-  "updated": "2026-02-03T11:34:10.275Z",
-  "count": 166,
+  "updated": "2026-02-04T11:32:32.399Z",
+  "count": 168,
   "stories": [
+    {
+      "id": "f135598c2368070985d530688df74ab3",
+      "url": "https://newrepublic.com/article/205981/second-amendment-failed-alex-pretti",
+      "title": "The Second Amendment Failed Alex Pretti",
+      "source": "The New Republic",
+      "date": "2026-02-02",
+      "date_discovered": "2026-02-04",
+      "summary": "<a href=\"https://newrepublic.com/article/205981/second-amendment-failed-alex-pretti\" target=\"_blank\">The Second Amendment Failed Alex Pretti</a> <font color=\"#6f6f6f\">The New Republic</font>",
+      "story_type": "incident",
+      "relevance_score": 0.7,
+      "key_entities": "Alex Pretti, federal agents, Supreme Court",
+      "location": null,
+      "tags": [
+        "deadly force",
+        "shooting"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "54403d08b990368ae963414c3d44eb8e",
       "url": "https://www.globalsecurity.org/security/library/news/2026/02/sec-260202-pdo02.htm",
@@ -221,6 +239,24 @@
       "relevance_score": 0.7,
       "key_entities": "Renee Good, Alex Pretti",
       "location": null,
+      "tags": [
+        "deadly force",
+        "shooting"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "fff90bf99dcc6a6f9047e26ef938c51d",
+      "url": "https://abcnews.go.com/Politics/2nd-amendment-backlash-portrayal-alex-pretti-trump-administration/story?id=129559823",
+      "title": "2nd Amendment backlash follows portrayal of Alex Pretti by some Trump administration officials",
+      "source": "ABC News",
+      "date": "2026-01-28",
+      "date_discovered": "2026-02-04",
+      "summary": "<a href=\"https://abcnews.go.com/Politics/2nd-amendment-backlash-portrayal-alex-pretti-trump-administration/story?id=129559823\" target=\"_blank\">2nd Amendment backlash follows portrayal of Alex Pretti by some Trump administration officials</a> <font color=\"#6f6f6f\">ABC News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Alex Pretti, Trump administration, federal agents, Minneapolis",
+      "location": "Minneapolis",
       "tags": [
         "deadly force",
         "shooting"
