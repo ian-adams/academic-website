@@ -1,7 +1,26 @@
 {
-  "updated": "2026-02-04T11:32:32.399Z",
-  "count": 168,
+  "updated": "2026-02-05T11:34:59.709Z",
+  "count": 169,
   "stories": [
+    {
+      "id": "74ae427b5fb37892b49414caea58bc87",
+      "url": "https://gothamist.com/news/nypd-releases-video-showing-police-shooting-22-year-old-schizophrenic-man",
+      "title": "NYPD releases video showing police shooting 22-year-old schizophrenic man",
+      "source": "Gothamist",
+      "date": "2026-02-04",
+      "date_discovered": "2026-02-05",
+      "summary": "<a href=\"https://gothamist.com/news/nypd-releases-video-showing-police-shooting-22-year-old-schizophrenic-man\" target=\"_blank\">NYPD releases video showing police shooting 22-year-old schizophrenic man</a> <font color=\"#6f6f6f\">Gothamist</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "NYPD, Jabez Chakraborty",
+      "location": "Queens, New York",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "body cameras"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "f135598c2368070985d530688df74ab3",
       "url": "https://newrepublic.com/article/205981/second-amendment-failed-alex-pretti",
