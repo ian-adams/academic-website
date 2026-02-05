@@ -1,7 +1,27 @@
 {
-  "updated": "2026-02-04T09:37:59.111Z",
-  "count": 1434,
+  "updated": "2026-02-05T09:38:12.596Z",
+  "count": 1435,
   "stories": [
+    {
+      "id": "f0f5a4449de207745d8d2f23cba3123d",
+      "url": "https://www.aclu.org/news/privacy-technology/alpr-against-op-ed-writer",
+      "title": "Kansas Town Uses License Plate Readers to Go After Man Who Wrote Op-Ed",
+      "source": "Aclu.org",
+      "date": "2026-02-03",
+      "date_discovered": "2026-02-05",
+      "summary": "<a href=\"https://www.aclu.org/news/privacy-technology/alpr-against-op-ed-writer\" target=\"_blank\">Kansas Town Uses License Plate Readers to Go After Man Who Wrote Op-Ed</a> <font color=\"#6f6f6f\">Aclu.org</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "Lenexa Police Department, ACLU, automated license plate readers, ALPR",
+      "location": "Lenexa, Kansas",
+      "tags": [
+        "ALPR",
+        "surveillance",
+        "civil rights",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "daf9ac9503c8ca6cae2e436eecc16682",
       "url": "https://www.theobserver.com/2026/02/02/napd-adds-2-new-automated-license-plate-readers-to-police-radio-cars/",
