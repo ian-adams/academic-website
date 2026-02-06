@@ -1,7 +1,44 @@
 {
-  "updated": "2026-02-05T11:34:59.709Z",
-  "count": 169,
+  "updated": "2026-02-06T11:32:56.900Z",
+  "count": 171,
   "stories": [
+    {
+      "id": "3a49df8ef8268dac655677eb3a3e6964",
+      "url": "https://www.npr.org/2026/02/05/nx-s1-5693908/police-mental-health-calls-988-911-mobile-crisis-teams",
+      "title": "They help police with mental health calls. So why are 'mobile crisis' teams in crisis?",
+      "source": "NPR",
+      "date": "2026-02-05",
+      "date_discovered": "2026-02-06",
+      "summary": "<a href=\"https://www.npr.org/2026/02/05/nx-s1-5693908/police-mental-health-calls-988-911-mobile-crisis-teams\" target=\"_blank\">They help police with mental health calls. So why are 'mobile crisis' teams in crisis?</a> <font color=\"#6f6f6f\">NPR</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "NPR, mobile crisis teams, Bozeman",
+      "location": "Bozeman, Montana",
+      "tags": [
+        "de-escalation",
+        "policy",
+        "training"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "5f339ec22b6a576a3f30a6a588644452",
+      "url": "https://www.cbsnews.com/news/police-helicopter-crashes-in-arizona-after-shooting-involving-officer/",
+      "title": "Police helicopter crashes in Arizona after shooting involving officer",
+      "source": "CBS News",
+      "date": "2026-02-05",
+      "date_discovered": "2026-02-06",
+      "summary": "<a href=\"https://www.cbsnews.com/news/police-helicopter-crashes-in-arizona-after-shooting-involving-officer/\" target=\"_blank\">Police helicopter crashes in Arizona after shooting involving officer</a> <font color=\"#6f6f6f\">CBS News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.7,
+      "key_entities": "Flagstaff Police Department, Page Police Department",
+      "location": "Flagstaff, Arizona",
+      "tags": [
+        "shooting",
+        "deadly force"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "74ae427b5fb37892b49414caea58bc87",
       "url": "https://gothamist.com/news/nypd-releases-video-showing-police-shooting-22-year-old-schizophrenic-man",
