@@ -1,7 +1,26 @@
 {
-  "updated": "2026-02-05T09:38:12.596Z",
-  "count": 1435,
+  "updated": "2026-02-06T09:37:25.325Z",
+  "count": 1436,
   "stories": [
+    {
+      "id": "fcd093d7479bf6bdda694933862d5d2f",
+      "url": "http://nymag.com/intelligencer/article/body-cam-youtube-foia-abuse.html",
+      "title": "The Body-Cam Hustle",
+      "source": "New York Magazine",
+      "date": "2026-02-04",
+      "date_discovered": "2026-02-06",
+      "summary": "<a href=\"http://nymag.com/intelligencer/article/body-cam-youtube-foia-abuse.html\" target=\"_blank\">The Body-Cam Hustle</a> <font color=\"#6f6f6f\">New York Magazine</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.7,
+      "key_entities": "YouTube, police body cameras",
+      "location": null,
+      "tags": [
+        "body cameras",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "f0f5a4449de207745d8d2f23cba3123d",
       "url": "https://www.aclu.org/news/privacy-technology/alpr-against-op-ed-writer",

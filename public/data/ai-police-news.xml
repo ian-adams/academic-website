@@ -4,7 +4,15 @@
     <title>AI Police News</title>
     <description>AI Police News - automated news feed</description>
     <link>https://ianadamsresearch.com/ai-police</link>
-    <lastBuildDate>Thu, 05 Feb 2026 09:38:12 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 09:37:25 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[The Body-Cam Hustle]]></title>
+      <link>http://nymag.com/intelligencer/article/body-cam-youtube-foia-abuse.html</link>
+      <guid>fcd093d7479bf6bdda694933862d5d2f</guid>
+      <pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate>
+      <source>New York Magazine</source>
+      <description><![CDATA[<a href="http://nymag.com/intelligencer/article/body-cam-youtube-foia-abuse.html" target="_blank">The Body-Cam Hustle</a> <font color="#6f6f6f">New York Magazine</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[Kansas Town Uses License Plate Readers to Go After Man Who Wrote Op-Ed]]></title>
       <link>https://www.aclu.org/news/privacy-technology/alpr-against-op-ed-writer</link>
@@ -396,14 +404,6 @@
       <pubDate>Fri, 16 Jan 2026 00:00:00 GMT</pubDate>
       <source>PC Gamer</source>
       <description><![CDATA[<a href="https://www.pcgamer.com/software/ai/uk-police-chief-resigns-over-ai-intel-embarrassment-blames-political-and-media-frenzy-rather-than-his-forces-failure-to-fact-check-copilot/" target="_blank">UK police chief resigns over AI intel embarrassment, blames 'political and media frenzy' rather than his force's failure to fact check Copilot</a> <font color="#6f6f6f">PC Gamer</font>]]></description>
-    </item>
-    <item>
-      <title><![CDATA[A Police Chief and His Cameras]]></title>
-      <link>https://www.thestranger.com/news/2026/01/16/80422953/a-police-chief-and-his-cameras</link>
-      <guid>600972c1cc486cd2498f321a86999f93</guid>
-      <pubDate>Fri, 16 Jan 2026 00:00:00 GMT</pubDate>
-      <source>TheStranger.com</source>
-      <description><![CDATA[<a href="https://www.thestranger.com/news/2026/01/16/80422953/a-police-chief-and-his-cameras" target="_blank">A Police Chief and His Cameras</a> <font color="#6f6f6f">TheStranger.com</font>]]></description>
     </item>
   </channel>
 </rss>
