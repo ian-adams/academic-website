@@ -1,7 +1,48 @@
 {
-  "updated": "2026-02-06T09:37:25.325Z",
-  "count": 1436,
+  "updated": "2026-02-07T09:25:24.056Z",
+  "count": 1438,
   "stories": [
+    {
+      "id": "8c25f3b682747c3b5fada8045431478f",
+      "url": "https://www.thestranger.com/guest-editorial/2026/02/05/80458651/we-need-to-regulate-automated-license-plate-readers-now",
+      "title": "We Need to Regulate Automated License Plate Readers Now",
+      "source": "TheStranger.com",
+      "date": "2026-02-05",
+      "date_discovered": "2026-02-07",
+      "summary": "<a href=\"https://www.thestranger.com/guest-editorial/2026/02/05/80458651/we-need-to-regulate-automated-license-plate-readers-now\" target=\"_blank\">We Need to Regulate Automated License Plate Readers Now</a> <font color=\"#6f6f6f\">TheStranger.com</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.8,
+      "key_entities": "automated license plate readers, ALPR, federal agents",
+      "location": null,
+      "tags": [
+        "ALPR",
+        "surveillance",
+        "privacy",
+        "policy",
+        "civil rights"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "561a7abe2629e421f84a52ecc7e91d36",
+      "url": "https://www.malwarebytes.com/blog/privacy/2026/02/flock-cameras-shared-license-plate-data-without-permission",
+      "title": "Flock cameras shared license plate data without permission",
+      "source": "Malwarebytes.com",
+      "date": "2026-02-05",
+      "date_discovered": "2026-02-07",
+      "summary": "<a href=\"https://www.malwarebytes.com/blog/privacy/2026/02/flock-cameras-shared-license-plate-data-without-permission\" target=\"_blank\">Flock cameras shared license plate data without permission</a> <font color=\"#6f6f6f\">Malwarebytes.com</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "Mountain View California, Flock Safety, ALPR system",
+      "location": "Mountain View, California",
+      "tags": [
+        "ALPR",
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "fcd093d7479bf6bdda694933862d5d2f",
       "url": "http://nymag.com/intelligencer/article/body-cam-youtube-foia-abuse.html",

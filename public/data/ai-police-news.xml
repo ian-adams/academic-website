@@ -4,7 +4,23 @@
     <title>AI Police News</title>
     <description>AI Police News - automated news feed</description>
     <link>https://ianadamsresearch.com/ai-police</link>
-    <lastBuildDate>Fri, 06 Feb 2026 09:37:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Feb 2026 09:25:24 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[We Need to Regulate Automated License Plate Readers Now]]></title>
+      <link>https://www.thestranger.com/guest-editorial/2026/02/05/80458651/we-need-to-regulate-automated-license-plate-readers-now</link>
+      <guid>8c25f3b682747c3b5fada8045431478f</guid>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 GMT</pubDate>
+      <source>TheStranger.com</source>
+      <description><![CDATA[<a href="https://www.thestranger.com/guest-editorial/2026/02/05/80458651/we-need-to-regulate-automated-license-plate-readers-now" target="_blank">We Need to Regulate Automated License Plate Readers Now</a> <font color="#6f6f6f">TheStranger.com</font>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Flock cameras shared license plate data without permission]]></title>
+      <link>https://www.malwarebytes.com/blog/privacy/2026/02/flock-cameras-shared-license-plate-data-without-permission</link>
+      <guid>561a7abe2629e421f84a52ecc7e91d36</guid>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 GMT</pubDate>
+      <source>Malwarebytes.com</source>
+      <description><![CDATA[<a href="https://www.malwarebytes.com/blog/privacy/2026/02/flock-cameras-shared-license-plate-data-without-permission" target="_blank">Flock cameras shared license plate data without permission</a> <font color="#6f6f6f">Malwarebytes.com</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[The Body-Cam Hustle]]></title>
       <link>http://nymag.com/intelligencer/article/body-cam-youtube-foia-abuse.html</link>
@@ -388,22 +404,6 @@
       <pubDate>Fri, 16 Jan 2026 00:00:00 GMT</pubDate>
       <source>Techdirt</source>
       <description><![CDATA[<a href="https://www.techdirt.com/2026/01/16/report-says-ai-that-hallucinated-a-cop-into-a-frog-is-making-utah-streets-safer/" target="_blank">Report Says AI That Hallucinated A Cop Into A Frog Is Making Utah Streets ‘Safer’</a> <font color="#6f6f6f">Techdirt</font>]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Law Enforcement Surveillance Technologies and Indigenous Communities]]></title>
-      <link>https://www.eff.org/event/law-enforcement-surveillance-technologies-and-indigenous-communities</link>
-      <guid>d9d6bb480c257d06b5abb30273dd3974</guid>
-      <pubDate>Fri, 16 Jan 2026 00:00:00 GMT</pubDate>
-      <source>EFF</source>
-      <description><![CDATA[<a href="https://www.eff.org/event/law-enforcement-surveillance-technologies-and-indigenous-communities" target="_blank">Law Enforcement Surveillance Technologies and Indigenous Communities</a> <font color="#6f6f6f">EFF</font>]]></description>
-    </item>
-    <item>
-      <title><![CDATA[UK police chief resigns over AI intel embarrassment, blames 'political and media frenzy' rather than his force's failure to fact check Copilot]]></title>
-      <link>https://www.pcgamer.com/software/ai/uk-police-chief-resigns-over-ai-intel-embarrassment-blames-political-and-media-frenzy-rather-than-his-forces-failure-to-fact-check-copilot/</link>
-      <guid>9712b915231d11ed86e69e82547a92c0</guid>
-      <pubDate>Fri, 16 Jan 2026 00:00:00 GMT</pubDate>
-      <source>PC Gamer</source>
-      <description><![CDATA[<a href="https://www.pcgamer.com/software/ai/uk-police-chief-resigns-over-ai-intel-embarrassment-blames-political-and-media-frenzy-rather-than-his-forces-failure-to-fact-check-copilot/" target="_blank">UK police chief resigns over AI intel embarrassment, blames 'political and media frenzy' rather than his force's failure to fact check Copilot</a> <font color="#6f6f6f">PC Gamer</font>]]></description>
     </item>
   </channel>
 </rss>
