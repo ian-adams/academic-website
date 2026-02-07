@@ -1,7 +1,122 @@
 {
-  "updated": "2026-02-06T11:32:56.900Z",
-  "count": 171,
+  "updated": "2026-02-07T11:21:28.332Z",
+  "count": 177,
   "stories": [
+    {
+      "id": "7a220d82cf93b2af0538990f971e01a0",
+      "url": "https://reason.com/2026/02/06/militarized-policing-caused-at-the-root-of-the-minneapolis-mayhem/",
+      "title": "Militarized Policing Is at the Root of the Minneapolis Mayhem",
+      "source": "Reason",
+      "date": "2026-02-06",
+      "date_discovered": "2026-02-07",
+      "summary": "<a href=\"https://reason.com/2026/02/06/militarized-policing-caused-at-the-root-of-the-minneapolis-mayhem/\" target=\"_blank\">Militarized Policing Is at the Root of the Minneapolis Mayhem</a> <font color=\"#6f6f6f\">Reason</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.7,
+      "key_entities": "ICE, Minneapolis",
+      "location": "Minneapolis, Minnesota",
+      "tags": [
+        "use of force",
+        "training",
+        "policy",
+        "de-escalation",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "afee727088a034073089f9212c5107c5",
+      "url": "http://nymag.com/intelligencer/article/mamdani-tisch-police-shooting-nyc.html",
+      "title": "The Mamdani-Tisch Relationship Isn’t Built to Last",
+      "source": "New York Magazine",
+      "date": "2026-02-06",
+      "date_discovered": "2026-02-07",
+      "summary": "<a href=\"http://nymag.com/intelligencer/article/mamdani-tisch-police-shooting-nyc.html\" target=\"_blank\">The Mamdani-Tisch Relationship Isn’t Built to Last</a> <font color=\"#6f6f6f\">New York Magazine</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "NYPD, Zohran Mamdani, Jessica Tisch, Jabez Chakraborty",
+      "location": "Queens, New York",
+      "tags": [
+        "use of force",
+        "deadly force",
+        "shooting"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "51ca1026b14026399fdc8caa2fd1e1a9",
+      "url": "https://www.kpbs.org/news/public-safety/2026/02/05/ex-sdso-dep-denied-trial-delay-based-on-concerns-amid-recent-ice-shootings",
+      "title": "Ex-SDSO dep. denied trial delay based on concerns amid recent ICE shootings",
+      "source": "KPBS",
+      "date": "2026-02-05",
+      "date_discovered": "2026-02-07",
+      "summary": "<a href=\"https://www.kpbs.org/news/public-safety/2026/02/05/ex-sdso-dep-denied-trial-delay-based-on-concerns-amid-recent-ice-shootings\" target=\"_blank\">Ex-SDSO dep. denied trial delay based on concerns amid recent ICE shootings</a> <font color=\"#6f6f6f\">KPBS</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "San Diego County Sheriff's Office, San Diego Central Jail, federal judge",
+      "location": "San Diego, California",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "28aa8c34fed099a541fea5311002c1e9",
+      "url": "https://freerepublic.com/focus/f-news/4365609/posts",
+      "title": "Pilot, trooper killed in helicopter crash during officer-involved shooting",
+      "source": "Freerepublic.com",
+      "date": "2026-02-05",
+      "date_discovered": "2026-02-07",
+      "summary": "<a href=\"https://freerepublic.com/focus/f-news/4365609/posts\" target=\"_blank\">Pilot, trooper killed in helicopter crash during officer-involved shooting</a> <font color=\"#6f6f6f\">Freerepublic.com</font>",
+      "story_type": "incident",
+      "relevance_score": 0.7,
+      "key_entities": "Arizona law enforcement, helicopter pilot, trooper",
+      "location": "Arizona",
+      "tags": [
+        "shooting",
+        "use of force"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "d29b2ae45bc514c23e3ded4ef4500a9d",
+      "url": "https://dailycaller.com/2026/02/05/zohran-mamdani-jabez-chakraborty-police-shooting-new-york-city/",
+      "title": "Mayor Mamdani Gets His First Big Test And All Sides In Officer-Involved Shooting Aren’t Happy With Him",
+      "source": "The Daily Caller",
+      "date": "2026-02-05",
+      "date_discovered": "2026-02-07",
+      "summary": "<a href=\"https://dailycaller.com/2026/02/05/zohran-mamdani-jabez-chakraborty-police-shooting-new-york-city/\" target=\"_blank\">Mayor Mamdani Gets His First Big Test And All Sides In Officer-Involved Shooting Aren’t Happy With Him</a> <font color=\"#6f6f6f\">The Daily Caller</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "New York City Mayor Zohran Mamdani, NYPD",
+      "location": "New York City, NY",
+      "tags": [
+        "shooting",
+        "use of force"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "348437b85ab53f8f87e1a101d12e5cee",
+      "url": "https://www.denverpost.com/2026/02/05/douglas-county-shooting-jalin-seabron/",
+      "title": "Family of man killed by Douglas County deputy files wrongful death suit",
+      "source": "The Denver Post",
+      "date": "2026-02-05",
+      "date_discovered": "2026-02-07",
+      "summary": "<a href=\"https://www.denverpost.com/2026/02/05/douglas-county-shooting-jalin-seabron/\" target=\"_blank\">Family of man killed by Douglas County deputy files wrongful death suit</a> <font color=\"#6f6f6f\">The Denver Post</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "Douglas County Sheriff's Office, Highlands Ranch",
+      "location": "Highlands Ranch, Colorado",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "Section 1983",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "3a49df8ef8268dac655677eb3a3e6964",
       "url": "https://www.npr.org/2026/02/05/nx-s1-5693908/police-mental-health-calls-988-911-mobile-crisis-teams",
