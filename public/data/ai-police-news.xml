@@ -4,7 +4,15 @@
     <title>AI Police News</title>
     <description>AI Police News - automated news feed</description>
     <link>https://ianadamsresearch.com/ai-police</link>
-    <lastBuildDate>Sat, 07 Feb 2026 09:25:24 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 08 Feb 2026 09:25:00 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Milwaukee Police Department facial recognition technology banned]]></title>
+      <link>https://www.fox6now.com/news/milwaukee-police-department-facial-recognition-technology-banned</link>
+      <guid>fa3e3153c015a51a9c21932a8c3646de</guid>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate>
+      <source>fox6now.com</source>
+      <description><![CDATA[<a href="https://www.fox6now.com/news/milwaukee-police-department-facial-recognition-technology-banned" target="_blank">Milwaukee Police Department facial recognition technology banned</a> <font color="#6f6f6f">fox6now.com</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[We Need to Regulate Automated License Plate Readers Now]]></title>
       <link>https://www.thestranger.com/guest-editorial/2026/02/05/80458651/we-need-to-regulate-automated-license-plate-readers-now</link>
@@ -396,14 +404,6 @@
       <pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate>
       <source>The Verge</source>
       <description><![CDATA[At CES, I did what you're not supposed to do: I brought a pre-production laptop to use as my primary workhorse during a hectic event. The unproven rifle in question is the new Arm-based Asus Zenbook A16. It's a 16-inch laptop that weighs less than a 13-inch MacBook Air and comes with a high-end Snapdragon [&#8230;]]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Report Says AI That Hallucinated A Cop Into A Frog Is Making Utah Streets ‘Safer’]]></title>
-      <link>https://www.techdirt.com/2026/01/16/report-says-ai-that-hallucinated-a-cop-into-a-frog-is-making-utah-streets-safer/</link>
-      <guid>416e565a4adc99f199e2fbe7546c408b</guid>
-      <pubDate>Fri, 16 Jan 2026 00:00:00 GMT</pubDate>
-      <source>Techdirt</source>
-      <description><![CDATA[<a href="https://www.techdirt.com/2026/01/16/report-says-ai-that-hallucinated-a-cop-into-a-frog-is-making-utah-streets-safer/" target="_blank">Report Says AI That Hallucinated A Cop Into A Frog Is Making Utah Streets ‘Safer’</a> <font color="#6f6f6f">Techdirt</font>]]></description>
     </item>
   </channel>
 </rss>

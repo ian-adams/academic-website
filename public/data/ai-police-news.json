@@ -1,7 +1,26 @@
 {
-  "updated": "2026-02-07T09:25:24.056Z",
-  "count": 1438,
+  "updated": "2026-02-08T09:25:00.714Z",
+  "count": 1439,
   "stories": [
+    {
+      "id": "fa3e3153c015a51a9c21932a8c3646de",
+      "url": "https://www.fox6now.com/news/milwaukee-police-department-facial-recognition-technology-banned",
+      "title": "Milwaukee Police Department facial recognition technology banned",
+      "source": "fox6now.com",
+      "date": "2026-02-06",
+      "date_discovered": "2026-02-08",
+      "summary": "<a href=\"https://www.fox6now.com/news/milwaukee-police-department-facial-recognition-technology-banned\" target=\"_blank\">Milwaukee Police Department facial recognition technology banned</a> <font color=\"#6f6f6f\">fox6now.com</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "Milwaukee Police Department, facial recognition technology",
+      "location": "Milwaukee, Wisconsin",
+      "tags": [
+        "facial recognition",
+        "policy",
+        "civil rights"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "8c25f3b682747c3b5fada8045431478f",
       "url": "https://www.thestranger.com/guest-editorial/2026/02/05/80458651/we-need-to-regulate-automated-license-plate-readers-now",
