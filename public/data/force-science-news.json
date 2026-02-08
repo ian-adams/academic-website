@@ -1,7 +1,27 @@
 {
-  "updated": "2026-02-07T11:21:28.332Z",
-  "count": 177,
+  "updated": "2026-02-08T11:22:18.830Z",
+  "count": 178,
   "stories": [
+    {
+      "id": "618fd08549d6afc3a1e08b8a09f5409f",
+      "url": "https://www.thecity.nyc/2026/02/06/jabez-chakraborty-911-mamdani-b-heard-police-mental-health/",
+      "title": "City Effort to Dispatch Mental Health Workers Ends in Police Response 86% of the Time",
+      "source": "THE CITY",
+      "date": "2026-02-06",
+      "date_discovered": "2026-02-08",
+      "summary": "<a href=\"https://www.thecity.nyc/2026/02/06/jabez-chakraborty-911-mamdani-b-heard-police-mental-health/\" target=\"_blank\">City Effort to Dispatch Mental Health Workers Ends in Police Response 86% of the Time</a> <font color=\"#6f6f6f\">THE CITY</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.8,
+      "key_entities": "NYPD, THE CITY, Mayor Mamdani, Jabez Chakraborty",
+      "location": "New York City, NY",
+      "tags": [
+        "shooting",
+        "policy",
+        "de-escalation",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "7a220d82cf93b2af0538990f971e01a0",
       "url": "https://reason.com/2026/02/06/militarized-policing-caused-at-the-root-of-the-minneapolis-mayhem/",
