@@ -1,7 +1,25 @@
 {
-  "updated": "2026-02-08T11:22:18.830Z",
-  "count": 178,
+  "updated": "2026-02-09T11:53:23.868Z",
+  "count": 179,
   "stories": [
+    {
+      "id": "08355d054f7098774c848e297b4130d6",
+      "url": "https://www.wsbtv.com/news/police-investigating-officer-involved-shooting-apartment-northeast-atlanta/U3YO74GMBJH33BQDT3TCSP2III/",
+      "title": "Police investigating officer-involved shooting at apartment in northeast Atlanta",
+      "source": "WSB Atlanta",
+      "date": "2026-02-07",
+      "date_discovered": "2026-02-09",
+      "summary": "<a href=\"https://www.wsbtv.com/news/police-investigating-officer-involved-shooting-apartment-northeast-atlanta/U3YO74GMBJH33BQDT3TCSP2III/\" target=\"_blank\">Police investigating officer-involved shooting at apartment in northeast Atlanta</a> <font color=\"#6f6f6f\">WSB Atlanta</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Atlanta Police Department, APD",
+      "location": "Atlanta, Georgia",
+      "tags": [
+        "shooting",
+        "use of force"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "618fd08549d6afc3a1e08b8a09f5409f",
       "url": "https://www.thecity.nyc/2026/02/06/jabez-chakraborty-911-mamdani-b-heard-police-mental-health/",

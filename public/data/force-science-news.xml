@@ -4,7 +4,15 @@
     <title>Force Science News</title>
     <description>Force Science News - automated news feed</description>
     <link>https://ianadamsresearch.com/force-science</link>
-    <lastBuildDate>Sun, 08 Feb 2026 11:22:18 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Feb 2026 11:53:23 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Police investigating officer-involved shooting at apartment in northeast Atlanta]]></title>
+      <link>https://www.wsbtv.com/news/police-investigating-officer-involved-shooting-apartment-northeast-atlanta/U3YO74GMBJH33BQDT3TCSP2III/</link>
+      <guid>08355d054f7098774c848e297b4130d6</guid>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
+      <source>WSB Atlanta</source>
+      <description><![CDATA[<a href="https://www.wsbtv.com/news/police-investigating-officer-involved-shooting-apartment-northeast-atlanta/U3YO74GMBJH33BQDT3TCSP2III/" target="_blank">Police investigating officer-involved shooting at apartment in northeast Atlanta</a> <font color="#6f6f6f">WSB Atlanta</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[City Effort to Dispatch Mental Health Workers Ends in Police Response 86% of the Time]]></title>
       <link>https://www.thecity.nyc/2026/02/06/jabez-chakraborty-911-mamdani-b-heard-police-mental-health/</link>
@@ -396,14 +404,6 @@
       <pubDate>Thu, 22 Jan 2026 00:00:00 GMT</pubDate>
       <source>The Portland Mercury</source>
       <description><![CDATA[<a href="https://www.portlandmercury.com/news/2026/01/22/48269154/portland-officers-who-clashed-with-anti-ice-protesters-identified" target="_blank">Portland Officers Who Clashed With Anti-ICE Protesters Identified</a> <font color="#6f6f6f">The Portland Mercury</font>]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Officers disarm person having mental health crisis in Canton police lobby]]></title>
-      <link>https://www.wcvb.com/article/canton-police-de-escalate-lobby-incident-gun-mental-health/70092392</link>
-      <guid>d4623c872937b36b59431e5516ebffff</guid>
-      <pubDate>Thu, 22 Jan 2026 00:00:00 GMT</pubDate>
-      <source>WCVB Boston</source>
-      <description><![CDATA[<a href="https://www.wcvb.com/article/canton-police-de-escalate-lobby-incident-gun-mental-health/70092392" target="_blank">Officers disarm person having mental health crisis in Canton police lobby</a> <font color="#6f6f6f">WCVB Boston</font>]]></description>
     </item>
   </channel>
 </rss>
