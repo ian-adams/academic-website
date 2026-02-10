@@ -1,4 +1,5 @@
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, lazy, Suspense } from 'react';
+import { useDarkMode } from './hooks/useDarkMode';
 
 // Lazy load components
 const FuckulatorQuiz = lazy(() => import('./FuckulatorQuiz'));
@@ -71,17 +72,7 @@ const LoadingSpinner = () => (
 
 export default function ProfanityDashboard() {
   const [activeTab, setActiveTab] = useState<Tab>('fuckulator');
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const checkDark = () => {
-      setIsDark(document.documentElement.classList.contains('dark'));
-    };
-    checkDark();
-    const observer = new MutationObserver(checkDark);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
+  const isDark = useDarkMode();
 
   const activeTabInfo = TABS.find(t => t.id === activeTab);
 

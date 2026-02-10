@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import type { PlotParams } from 'react-plotly.js';
+import { useDarkMode } from './hooks/useDarkMode';
 
 // Client-side only Plot component wrapper
 function PlotWrapper(props: PlotParams) {
@@ -152,7 +153,7 @@ const PRESETS = [
 
 export default function FCWCDashboard() {
   const [activeTab, setActiveTab] = useState<'calculator' | 'acceptability' | 'about'>('calculator');
-  const [isDark, setIsDark] = useState(false);
+  const isDark = useDarkMode();
 
   // Calculator tab inputs
   const [baseRateGuilty, setBaseRateGuilty] = useState(0.95);
@@ -162,16 +163,6 @@ export default function FCWCDashboard() {
 
   // Acceptability curve tab inputs (independent)
   const [lambdaCurve, setLambdaCurve] = useState(10);
-
-  useEffect(() => {
-    const checkDark = () => {
-      setIsDark(document.documentElement.classList.contains('dark'));
-    };
-    checkDark();
-    const observer = new MutationObserver(checkDark);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
 
   const baseRateInnocent = 1 - baseRateGuilty;
   const wrongfulConvictionRisk = useMemo(() =>

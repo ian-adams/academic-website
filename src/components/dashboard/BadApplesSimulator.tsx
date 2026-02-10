@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { DARK_LAYOUT, LIGHT_LAYOUT } from './types';
+import { useDarkMode } from './hooks/useDarkMode';
 import type { PlotParams } from 'react-plotly.js';
 
 // Apple-red color palette for Bad Apples dashboard
@@ -274,7 +275,7 @@ function simulatePolicyImpact(
 
 export default function BadApplesSimulator() {
   const [activeTab, setActiveTab] = useState('bias');
-  const [isDark, setIsDark] = useState(false);
+  const isDark = useDarkMode();
 
   // Simulation parameters
   const [numOfficers, setNumOfficers] = useState(1000);
@@ -286,17 +287,6 @@ export default function BadApplesSimulator() {
   // Simulation results
   const [isSimulating, setIsSimulating] = useState(false);
   const [policyResult, setPolicyResult] = useState<{ mean: number; ci: [number, number] } | null>(null);
-
-  // Check dark mode
-  useEffect(() => {
-    const checkDark = () => {
-      setIsDark(document.documentElement.classList.contains('dark'));
-    };
-    checkDark();
-    const observer = new MutationObserver(checkDark);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
 
   // Generate concentration data
   const concentrationData = useMemo((): ConcentrationData => {

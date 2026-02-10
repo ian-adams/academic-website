@@ -11,7 +11,7 @@ function isActive(href: string) {
 ---
 
 <header class="sticky top-0 z-50 bg-white/90 dark:bg-surface-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-  <nav class="container-wide">
+  <nav class="container-wide" aria-label="Main navigation">
     <div class="flex items-center justify-between h-16">
       <!-- Logo/Name -->
       <a href="/" class="font-serif text-xl font-semibold text-primary-900 dark:text-gray-100 hover:text-accent-burgundy dark:hover:text-accent-gold transition-colors">
@@ -22,8 +22,11 @@ function isActive(href: string) {
       <div class="hidden md:flex items-center gap-1">
         {siteConfig.nav.map((item) => (
           item.items ? (
-            <div class="relative group">
+            <div class="relative" data-dropdown>
               <button
+                aria-haspopup="true"
+                aria-expanded="false"
+                data-dropdown-btn
                 class={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   item.items.some((sub) => isActive(sub.href))
                     ? 'text-primary-900 dark:text-white bg-gray-100 dark:bg-gray-800'
@@ -35,10 +38,15 @@ function isActive(href: string) {
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div class="absolute left-0 mt-1 w-48 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div
+                role="menu"
+                data-dropdown-menu
+                class="absolute left-0 mt-1 w-48 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible transition-all duration-200"
+              >
                 {item.items.map((subItem) => (
                   <a
                     href={subItem.href}
+                    role="menuitem"
                     class={`block px-4 py-2 text-sm transition-colors ${
                       isActive(subItem.href)
                         ? 'text-primary-700 dark:text-primary-400 bg-gray-50 dark:bg-gray-700'
@@ -80,6 +88,8 @@ function isActive(href: string) {
           id="mobile-menu-btn"
           class="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
           aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
         >
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -90,56 +100,141 @@ function isActive(href: string) {
     </div>
 
     <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="hidden md:hidden pb-4">
-      <div class="flex flex-col gap-1 pt-2 border-t border-gray-200 dark:border-gray-700">
-        {siteConfig.nav.map((item) => (
-          item.items ? (
-            <>
-              <div class="px-3 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+    <div id="mobile-menu" class="grid md:hidden transition-[grid-template-rows] duration-200 ease-out" style="grid-template-rows: 0fr;">
+      <div class="overflow-hidden">
+        <div class="flex flex-col gap-1 pt-2 pb-4 border-t border-gray-200 dark:border-gray-700">
+          {siteConfig.nav.map((item) => (
+            item.items ? (
+              <>
+                <div class="px-3 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  {item.name}
+                </div>
+                {item.items.map((subItem) => (
+                  <a
+                    href={subItem.href}
+                    class={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                      isActive(subItem.href)
+                        ? 'text-primary-900 dark:text-white bg-gray-100 dark:bg-gray-800'
+                        : 'text-gray-600 dark:text-gray-300 hover:text-primary-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                    }`}
+                  >
+                    {subItem.name}
+                  </a>
+                ))}
+              </>
+            ) : (
+              <a
+                href={item.href}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noopener noreferrer' : undefined}
+                class={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                  isActive(item.href)
+                    ? 'text-primary-900 dark:text-white bg-gray-100 dark:bg-gray-800'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-primary-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                }`}
+              >
                 {item.name}
-              </div>
-              {item.items.map((subItem) => (
-                <a
-                  href={subItem.href}
-                  class={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                    isActive(subItem.href)
-                      ? 'text-primary-900 dark:text-white bg-gray-100 dark:bg-gray-800'
-                      : 'text-gray-600 dark:text-gray-300 hover:text-primary-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
-                  }`}
-                >
-                  {subItem.name}
-                </a>
-              ))}
-            </>
-          ) : (
-            <a
-              href={item.href}
-              target={item.external ? '_blank' : undefined}
-              rel={item.external ? 'noopener noreferrer' : undefined}
-              class={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                isActive(item.href)
-                  ? 'text-primary-900 dark:text-white bg-gray-100 dark:bg-gray-800'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-primary-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
-              }`}
-            >
-              {item.name}
-            </a>
-          )
-        ))}
+              </a>
+            )
+          ))}
+        </div>
       </div>
     </div>
   </nav>
 </header>
 
 <script>
+  // Mobile menu toggle
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const menuIcon = document.getElementById('menu-icon');
   const closeIcon = document.getElementById('close-icon');
+  let mobileOpen = false;
 
   mobileMenuBtn?.addEventListener('click', () => {
-    const isOpen = mobileMenu?.classList.toggle('hidden');
-    menuIcon?.classList.toggle('hidden', !isOpen);
-    closeIcon?.classList.toggle('hidden', isOpen);
+    mobileOpen = !mobileOpen;
+    if (mobileMenu) {
+      mobileMenu.style.gridTemplateRows = mobileOpen ? '1fr' : '0fr';
+    }
+    menuIcon?.classList.toggle('hidden', mobileOpen);
+    closeIcon?.classList.toggle('hidden', !mobileOpen);
+    mobileMenuBtn.setAttribute('aria-expanded', String(mobileOpen));
+  });
+
+  // Desktop dropdown keyboard navigation
+  document.querySelectorAll('[data-dropdown]').forEach((dropdown) => {
+    const btn = dropdown.querySelector('[data-dropdown-btn]') as HTMLButtonElement;
+    const menu = dropdown.querySelector('[data-dropdown-menu]') as HTMLElement;
+    const items = menu?.querySelectorAll('[role="menuitem"]') as NodeListOf<HTMLAnchorElement>;
+
+    function openMenu() {
+      menu?.classList.remove('opacity-0', 'invisible');
+      menu?.classList.add('opacity-100', 'visible');
+      btn?.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      menu?.classList.add('opacity-0', 'invisible');
+      menu?.classList.remove('opacity-100', 'visible');
+      btn?.setAttribute('aria-expanded', 'false');
+    }
+
+    // Hover support (preserves existing behavior)
+    dropdown.addEventListener('mouseenter', openMenu);
+    dropdown.addEventListener('mouseleave', closeMenu);
+
+    // Keyboard: Enter/Space opens, Escape closes
+    btn?.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+          items?.[0]?.focus();
+        }
+      }
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        openMenu();
+        items?.[0]?.focus();
+      }
+    });
+
+    // Arrow key navigation within menu items
+    items?.forEach((item, index) => {
+      item.addEventListener('keydown', (e: KeyboardEvent) => {
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          items[index + 1]?.focus();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (index === 0) {
+            btn?.focus();
+          } else {
+            items[index - 1]?.focus();
+          }
+        } else if (e.key === 'Escape') {
+          e.preventDefault();
+          closeMenu();
+          btn?.focus();
+        }
+      });
+    });
+
+    // Close on Escape from the button
+    btn?.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeMenu();
+      }
+    });
+
+    // Close on focus-out
+    dropdown.addEventListener('focusout', (e: FocusEvent) => {
+      if (!dropdown.contains(e.relatedTarget as Node)) {
+        closeMenu();
+      }
+    });
   });
 </script>

@@ -115,6 +115,7 @@ export default function PublicationsSearch({ publications, onCountChange }: Prop
           <input
             type="text"
             placeholder="Search by title, author, journal, or keyword..."
+            aria-label="Search publications"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
@@ -124,6 +125,7 @@ export default function PublicationsSearch({ publications, onCountChange }: Prop
           <select
             value={yearFilter}
             onChange={(e) => setYearFilter(e.target.value)}
+            aria-label="Filter by year"
             className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
           >
             <option value="all">All Years</option>

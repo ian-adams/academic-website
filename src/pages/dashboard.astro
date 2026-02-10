@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import DashboardNav from '@/components/dashboard/DashboardNav.astro';
 import MPVDashboard from '@/components/dashboard/MPVDashboard';
 ---
 
@@ -9,6 +10,7 @@ import MPVDashboard from '@/components/dashboard/MPVDashboard';
 >
   <section class="section">
     <div class="container-wide">
+      <DashboardNav />
       <MPVDashboard client:load />
     </div>
   </section>

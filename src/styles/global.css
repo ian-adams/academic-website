@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
-
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -16,7 +13,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-semibold tracking-tight;
+    @apply font-serif font-bold tracking-tight;
   }
 
   h1 {
@@ -37,6 +34,16 @@
 
   a {
     @apply transition-colors duration-200;
+  }
+
+  /* Global focus-visible indicators for keyboard navigation */
+  a:focus-visible,
+  button:focus-visible,
+  select:focus-visible,
+  input:focus-visible,
+  [role="tab"]:focus-visible,
+  [role="menuitem"]:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500 rounded-sm;
   }
 }
 
@@ -99,6 +106,15 @@
     @apply text-3xl font-bold text-primary-900 mt-2;
     @apply dark:text-gray-100;
   }
+
+  /* Badge component classes */
+  .badge {
+    @apply inline-block px-2 py-0.5 text-xs font-medium rounded;
+  }
+
+  .badge-lg {
+    @apply inline-block px-4 py-1.5 text-sm font-medium rounded-full;
+  }
 }
 
 @layer utilities {
@@ -119,6 +135,26 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-fade-in {
+    animation: none;
   }
 }
 

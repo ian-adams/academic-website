@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import DashboardNav from '@/components/dashboard/DashboardNav.astro';
 import DisparityBenchmarkSimulator from '@/components/dashboard/DisparityBenchmarkSimulator';
 ---
 
@@ -9,6 +10,7 @@ import DisparityBenchmarkSimulator from '@/components/dashboard/DisparityBenchma
 >
   <section class="section">
     <div class="container-wide">
+      <DashboardNav />
       <DisparityBenchmarkSimulator client:load />
     </div>
   </section>
