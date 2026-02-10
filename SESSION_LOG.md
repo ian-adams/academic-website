@@ -120,3 +120,38 @@
 
 ### Open Questions
 - None
+
+## Session: 2026-02-10 (citation automation + dashboard review)
+
+### Completed
+- Implemented `scripts/update-publication-citations.py` — OpenAlex primary (batch API, no auth) + Google Scholar fallback
+- Added `requests>=2.31.0` to `scripts/requirements.txt`
+- Integrated citation step into `.github/workflows/update-publications.yml` (weekly Sunday 3AM UTC)
+- Ran locally: 106 pubs updated, Scholar fallback found 7 additional papers with citations
+- Merged PR #67: `Add automated per-publication citation updates`
+- Updated CLAUDE.md with citation script docs, dev command, and gotchas
+- Ran `dashboard-reviewer` agent on all 32 dashboard components (4 parallel review agents)
+- Compiled full review report: 7 critical, 30+ warning, 25+ info, 15+ suggestion
+- Fixed all issues via 4 parallel code-fix agents across 28 files:
+  - Critical data bugs: CriminalChargesChart inverted logic, AgeRaceChart NaN, MentalHealthChart div/zero, DisparityBenchmarkSimulator "Odds Ratio" → "Rate Ratio", JudgmentQuiz "National sample" → "Public sample (SC)", USMapChart hardcoded DOM id
+  - Colorblind safety: race palette Hispanic green→orange, FleeingChart green→blue, DemographicExplorer green→blue
+  - Dark mode contrast: navy→indigo-400 (ArmedStatus/Weapons), dark green→bright green (BodyCamera), CARTO dark tiles (USMap)
+  - Accessibility: ARIA tabs on 5 dashboards, ChartCard figure wrapper, spinners, progress bars, radiogroups, fieldset/legend, slider labels, select/label linking, SVG/emoji aria-hidden, removed dead isDark state
+  - Other: WeaponsChart y-axis reversed, HeatmapChart null impossible dates, timezone-safe date parsing, canvas map renderer
+- Merged PR #68: `Fix dashboard data bugs, colorblind safety, dark mode contrast, and accessibility`
+
+### Key Decisions
+- OpenAlex as primary citation source with Scholar as best-effort fallback
+- Orange (#f97316) for Hispanic in race palette — maximally distinguishable from rose red
+- Renamed "Odds Ratio" to "Rate Ratio" in DisparityBenchmarkSimulator (formula computes rate ratio)
+- Left PerCapitaChart 0.92 SE correction factor as-is with documentation comment
+- Used 4 parallel agents with non-overlapping file sets to avoid merge conflicts
+
+### Next Steps
+- Extract shared `PlotWrapper`, `useDarkMode()` hook, and `TabNav` component (DRY refactoring)
+- Add `React.memo` to chart exports to prevent expensive Plotly re-renders
+- BadApplesSimulator O(n*m) inner loop could freeze UI — consider Web Worker
+- Verify PerCapitaChart 0.92 SE correction factor with researcher
+
+### Open Questions
+- Is the 0.92 SE correction in PerCapitaChart a design effect adjustment? Needs researcher confirmation.
