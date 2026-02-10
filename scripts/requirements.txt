@@ -1,5 +1,7 @@
 # Python dependencies for utility scripts
-# Used by: fetch-scholar-metrics.py, update-publication-citations.py
+# Used by: fetch-scholar-metrics.py, update-publication-citations.py, preprocess-mpv-data.py
 
 scholarly>=1.7.0
 requests>=2.31.0
+pandas>=2.0.0
+openpyxl>=3.1.0

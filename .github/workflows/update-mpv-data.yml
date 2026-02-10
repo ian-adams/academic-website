@@ -1,0 +1,73 @@
+name: Update MPV Dashboard Data
+
+on:
+  # Run daily at 8 AM UTC (3 AM EST) — staggered before news scrapers (9-12 UTC)
+  schedule:
+    - cron: '0 8 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  update-mpv-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install pandas openpyxl
+
+      - name: Run MPV data preprocessor
+        run: python scripts/preprocess-mpv-data.py
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          if git diff --quiet public/data/mpv-data.json 2>/dev/null; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/data/mpv-data.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update MPV dashboard data - $(date +'%Y-%m-%d')"
+          # Pull with rebase to handle concurrent workflow runs, then push with retry
+          for i in 1 2 3; do
+            git pull --rebase origin master && git push && break
+            echo "Push attempt $i failed, retrying in 5s..."
+            sleep 5
+          done
+
+      - name: Report summary
+        if: always()
+        run: |
+          echo "## MPV Data Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Run Date:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ -f public/data/mpv-data.json ]; then
+            RECORD_COUNT=$(python -c "import json; d=json.load(open('public/data/mpv-data.json')); print(d['count'])")
+            UPDATED=$(python -c "import json; d=json.load(open('public/data/mpv-data.json')); print(d['updated'])")
+            echo "**Records:** $RECORD_COUNT" >> $GITHUB_STEP_SUMMARY
+            echo "**Data timestamp:** $UPDATED" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.check-changes.outputs.changes }}" == "true" ]; then
+            echo "**Status:** Data updated and committed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "**Status:** No changes detected" >> $GITHUB_STEP_SUMMARY
+          fi
