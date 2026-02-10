@@ -43,7 +43,7 @@ export default {
             '--tw-prose-code': theme('colors.primary.800'),
             'h1, h2, h3, h4': {
               fontFamily: theme('fontFamily.serif').join(', '),
-              fontWeight: '600',
+              fontWeight: '700',
             },
             a: {
               textDecoration: 'underline',

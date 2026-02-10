@@ -61,6 +61,8 @@ const homeKeywords = [
                 <img
                   src="/media/avatar.jpg"
                   alt={author.name}
+                  width="192"
+                  height="192"
                   class="w-full h-full object-cover"
                   loading="eager"
                 />
@@ -97,10 +99,10 @@ const homeKeywords = [
 
             <!-- Action Buttons -->
             <div class="flex flex-wrap gap-4">
-              <a href="/publications" class="inline-flex items-center px-6 py-3 bg-primary-700 hover:bg-primary-800 text-white font-semibold rounded-lg transition-colors">
+              <a href="/publications" class="btn-primary px-6 py-3 font-semibold">
                 View Publications
               </a>
-              <a href={author.cv} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 border-2 border-primary-700 dark:border-primary-500 text-primary-700 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/30 font-semibold rounded-lg transition-colors">
+              <a href={author.cv} target="_blank" rel="noopener noreferrer" class="btn-secondary px-6 py-3 font-semibold border-2 border-primary-700 dark:border-primary-500 text-primary-700 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/30">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                 </svg>

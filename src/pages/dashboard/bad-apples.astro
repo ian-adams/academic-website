@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import DashboardNav from '@/components/dashboard/DashboardNav.astro';
 import BadApplesSimulator from '@/components/dashboard/BadApplesSimulator';
 ---
 
@@ -9,6 +10,7 @@ import BadApplesSimulator from '@/components/dashboard/BadApplesSimulator';
 >
   <section class="section">
     <div class="container-wide">
+      <DashboardNav />
       <BadApplesSimulator client:load />
     </div>
   </section>

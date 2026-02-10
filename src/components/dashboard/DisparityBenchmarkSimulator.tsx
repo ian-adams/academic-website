@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import type { PlotParams } from 'react-plotly.js';
 import { DARK_LAYOUT, LIGHT_LAYOUT } from './types';
+import { useDarkMode } from './hooks/useDarkMode';
 
 // Purple/Indigo color palette for Disparity dashboard
 const COLORS = {
@@ -211,24 +212,13 @@ export default function DisparityBenchmarkSimulator() {
   const [activeTab, setActiveTab] = useState('problem');
   const [selectedYear, setSelectedYear] = useState<AvailableYear>(2015);
   const [selectedBenchmark, setSelectedBenchmark] = useState('population');
-  const [isDark, setIsDark] = useState(false);
+  const isDark = useDarkMode();
 
   // Custom scenario inputs
   const [customBlackShot, setCustomBlackShot] = useState(259);
   const [customWhiteShot, setCustomWhiteShot] = useState(497);
   const [customBlackBenchmark, setCustomBlackBenchmark] = useState(39908095);
   const [customWhiteBenchmark, setCustomWhiteBenchmark] = useState(232943055);
-
-  // Check dark mode
-  useEffect(() => {
-    const checkDark = () => {
-      setIsDark(document.documentElement.classList.contains('dark'));
-    };
-    checkDark();
-    const observer = new MutationObserver(checkDark);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
 
   // Calculate all rate ratios for comparison chart
   const allRateRatios = useMemo(() => {

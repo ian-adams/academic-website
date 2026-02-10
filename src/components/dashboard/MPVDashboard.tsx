@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, lazy, Suspense } from 'react';
 import type { MPVRecord, MPVData, FilterState } from './types';
+import { useDarkMode } from './hooks/useDarkMode';
 import ChartCard from './ChartCard';
 
 // Lazy load chart components
@@ -63,21 +64,10 @@ export default function MPVDashboard() {
     causeFilter: 'all',
     yearFilter: 'All',
   });
-  const [isDark, setIsDark] = useState(false);
+  const isDark = useDarkMode();
 
   // Filter labels for display
   const causeLabel = filters.causeFilter === 'shootings' ? 'Fatal Shootings' : 'All Deaths';
-
-  // Check dark mode
-  useEffect(() => {
-    const checkDark = () => {
-      setIsDark(document.documentElement.classList.contains('dark'));
-    };
-    checkDark();
-    const observer = new MutationObserver(checkDark);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
 
   // Fetch data
   useEffect(() => {

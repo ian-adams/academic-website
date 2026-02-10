@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import type { PlotParams } from 'react-plotly.js';
+import { useDarkMode } from './hooks/useDarkMode';
 
 function PlotWrapper(props: PlotParams) {
   const [Plot, setPlot] = useState<React.ComponentType<PlotParams> | null>(null);
@@ -109,21 +110,11 @@ export default function JudgmentQuiz() {
   const [currentRatings, setCurrentRatings] = useState<Partial<UserRatings>>({});
   const [quizComplete, setQuizComplete] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const isDark = useDarkMode();
   const [visitorComparison, setVisitorComparison] = useState<VisitorComparison | null>(null);
   const [totalVisitors, setTotalVisitors] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const [globalStats, setGlobalStats] = useState<GlobalStats | null>(null);
-
-  useEffect(() => {
-    const checkDark = () => {
-      setIsDark(document.documentElement.classList.contains('dark'));
-    };
-    checkDark();
-    const observer = new MutationObserver(checkDark);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     async function fetchData() {

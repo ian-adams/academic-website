@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import DashboardNav from '@/components/dashboard/DashboardNav.astro';
 import ProfanityDashboard from '@/components/dashboard/ProfanityDashboard';
 ---
 
@@ -9,6 +10,7 @@ import ProfanityDashboard from '@/components/dashboard/ProfanityDashboard';
 >
   <section class="section">
     <div class="container-wide">
+      <DashboardNav />
       <ProfanityDashboard client:load />
     </div>
   </section>

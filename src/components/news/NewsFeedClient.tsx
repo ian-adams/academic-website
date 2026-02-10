@@ -178,6 +178,7 @@ export default function NewsFeedClient({ feedUrl, title, description, accentColo
             <input
               type="text"
               placeholder="Search stories..."
+              aria-label="Search stories"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full px-4 py-2 pl-10 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
@@ -204,6 +205,7 @@ export default function NewsFeedClient({ feedUrl, title, description, accentColo
             <select
               value={selectedTag || ''}
               onChange={(e) => setSelectedTag(e.target.value || null)}
+              aria-label="Filter by tag"
               className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500"
             >
               <option value="">All Tags</option>

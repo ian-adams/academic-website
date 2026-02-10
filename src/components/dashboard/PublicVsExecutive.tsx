@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import type { PlotParams } from 'react-plotly.js';
+import { useDarkMode } from './hooks/useDarkMode';
 
 function PlotWrapper(props: PlotParams) {
   const [Plot, setPlot] = useState<React.ComponentType<PlotParams> | null>(null);
@@ -63,17 +64,7 @@ export default function PublicVsExecutive() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedOutcome, setSelectedOutcome] = useState<Outcome>('appropriate');
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const checkDark = () => {
-      setIsDark(document.documentElement.classList.contains('dark'));
-    };
-    checkDark();
-    const observer = new MutationObserver(checkDark);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
+  const isDark = useDarkMode();
 
   useEffect(() => {
     async function fetchData() {

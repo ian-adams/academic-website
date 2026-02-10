@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import DashboardNav from '@/components/dashboard/DashboardNav.astro';
 import FCWCDashboard from '@/components/dashboard/FCWCDashboard';
 ---
 
@@ -9,6 +10,7 @@ import FCWCDashboard from '@/components/dashboard/FCWCDashboard';
 >
   <section class="section bg-gray-50 dark:bg-gray-900 min-h-screen">
     <div class="container-wide">
+      <DashboardNav />
       <FCWCDashboard client:load />
     </div>
   </section>
