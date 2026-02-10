@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "command": "node -e \"const f=(JSON.parse(process.env.TOOL_INPUT||'{}')).file_path||''; if(/\\.(env|env\\.local|env\\.production)$/.test(f)||/package-lock\\.json$/.test(f)){console.log('BLOCK: Protected file - do not edit .env or lock files directly');process.exit(2)}\""
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "command": "node -e \"const f=(JSON.parse(process.env.TOOL_INPUT||'{}')).file_path||''; if(/src[\\\\/]content[\\\\/]publications[\\\\/].*\\.md$/.test(f)){const fs=require('fs');const c=fs.readFileSync(f,'utf8');const m=c.match(/^---\\n([\\s\\S]*?)\\n---/);if(!m){console.log('WARNING: Publication file missing frontmatter');process.exit(1)}const fm=m[1];if(!/^title:/m.test(fm)){console.log('WARNING: Missing required field: title');process.exit(1)}if(!/^authors:/m.test(fm)){console.log('WARNING: Missing required field: authors');process.exit(1)}if(!/^date:/m.test(fm)){console.log('WARNING: Missing required field: date');process.exit(1)}}\"",
+        "timeout": 5000
+      }
+    ]
+  }
+}

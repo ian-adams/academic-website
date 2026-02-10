@@ -10,7 +10,8 @@
       "Bash(git add:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd Netlify to gitignore and include config/lock files\n\n- Add .netlify to .gitignore for local Netlify folder\n- Add MCP configuration file\n- Add Deno lock file for dependency reproducibility\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git push)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
