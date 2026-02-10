@@ -78,7 +78,7 @@ const scholarUrl = 'https://scholar.google.com/citations?user=g9lY5RUAAAAJ';
   // Fetch scholar metrics client-side for reliability
   async function loadScholarMetrics() {
     try {
-      const response = await fetch('/data/scholar-metrics.json');
+      const response = await fetch('/data/scholar-metrics.json?v=' + Date.now());
       const data = await response.json();
 
       // Update citations
