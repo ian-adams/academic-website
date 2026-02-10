@@ -155,3 +155,25 @@
 
 ### Open Questions
 - Is the 0.92 SE correction in PerCapitaChart a design effect adjustment? Needs researcher confirmation.
+
+## Session: 2026-02-10 (MPV workflow automation)
+
+### Completed
+- Created `.github/workflows/update-mpv-data.yml` — daily workflow at 8 AM UTC
+- Updated `scripts/requirements.txt` — added `pandas>=2.0.0`, `openpyxl>=3.1.0`
+- Verified `preprocess-mpv-data.py` runs locally (14,941 records, fresh timestamp)
+- Committed and pushed to master
+- Triggered workflow manually via `gh workflow run` — all steps passed in 23s
+- Confirmed live dashboard shows updated data
+
+### Key Decisions
+- Scheduled at 8 AM UTC to stagger before news scrapers (9-12 UTC)
+- No API secrets needed — MPV Excel file is a public download
+- Used Python inline in summary step instead of `jq` since Python is already set up
+
+### Next Steps
+- Fix `datetime.utcnow()` deprecation in `preprocess-mpv-data.py` line 222
+- Monitor first few automated runs for MPV Excel download reliability
+
+### Open Questions
+- None
