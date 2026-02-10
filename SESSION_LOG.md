@@ -41,3 +41,21 @@
 
 ### Open Questions
 - None
+
+## Session: 2026-02-10 (hooks fix round 2)
+
+### Completed
+- Fixed `.claude/settings.json` hooks — still erroring after previous "fix"
+- Root cause: `matcher` must be a **regex string**, not an object with `tools` array
+- Previous session incorrectly changed `"Edit|Write"` → `{"tools": ["Edit", "Write"]}`, which is invalid
+- Reverted: PreToolUse matcher back to `"Edit|Write"`, PostToolUse matcher back to `"Write"`
+- Confirmed correct format via official Claude Code hooks documentation
+
+### Key Decisions
+- The hooks docs are clear: `matcher` is always a regex string (e.g., `"Bash"`, `"Edit|Write"`, `"mcp__.*"`)
+
+### Next Steps
+- Verify hooks fire correctly in next session
+
+### Open Questions
+- None
