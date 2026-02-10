@@ -23,3 +23,21 @@
 
 ### Open Questions
 - None
+
+## Session: 2026-02-10 evening
+
+### Completed
+- Fixed Claude Code hooks settings format in `.claude/settings.json`
+- Migrated from old flat hook format (string `matcher` + top-level `command`) to new structured format (`matcher.tools` array + `hooks` array with `type`/`command` objects)
+- Both PreToolUse (.env protection) and PostToolUse (publication frontmatter validation) hooks updated
+
+### Key Decisions
+- Kept all hook logic identical; only restructured to match new schema
+- PreToolUse matcher: `["Edit", "Write"]` (was `"Edit|Write"` string)
+- PostToolUse matcher: `["Write"]` (was `"Write"` string)
+
+### Next Steps
+- Verify hooks work correctly in a new Claude Code session
+
+### Open Questions
+- None
