@@ -4,7 +4,15 @@
     <title>AI Police News</title>
     <description>AI Police News - automated news feed</description>
     <link>https://ianadamsresearch.com/ai-police</link>
-    <lastBuildDate>Mon, 09 Feb 2026 09:57:32 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Feb 2026 09:55:46 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[AI is automating injustice in American policing]]></title>
+      <link>https://www.salon.com/2026/02/08/police-departments-embracing-ai-expose-public-safety-as-a-sham/</link>
+      <guid>fecb9d0424f2bd467bdfc55ff80736c5</guid>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 GMT</pubDate>
+      <source>Salon</source>
+      <description><![CDATA[<a href="https://www.salon.com/2026/02/08/police-departments-embracing-ai-expose-public-safety-as-a-sham/" target="_blank">AI is automating injustice in American policing</a> <font color="#6f6f6f">Salon</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[Milwaukee Police Department facial recognition technology banned]]></title>
       <link>https://www.fox6now.com/news/milwaukee-police-department-facial-recognition-technology-banned</link>
@@ -396,14 +404,6 @@
       <pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate>
       <source>Law Enforcement Today</source>
       <description><![CDATA[Police are finally breaking their silence on a case that left a quiet home soaked in unanswered questions. New details hint at a carefully unfolding story that investigators say is only now coming into focus.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Fear and blogging (and prerelease laptop testing) in Las Vegas]]></title>
-      <link>https://www.theverge.com/tech/862985/asus-zenbook-a16-snapdragon-x2-ces-early-testing-hands-on</link>
-      <guid>23c89725a944f1afbf4a5601d2921c3a</guid>
-      <pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate>
-      <source>The Verge</source>
-      <description><![CDATA[At CES, I did what you're not supposed to do: I brought a pre-production laptop to use as my primary workhorse during a hectic event. The unproven rifle in question is the new Arm-based Asus Zenbook A16. It's a 16-inch laptop that weighs less than a 13-inch MacBook Air and comes with a high-end Snapdragon [&#8230;]]]></description>
     </item>
   </channel>
 </rss>

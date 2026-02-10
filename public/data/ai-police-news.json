@@ -1,7 +1,26 @@
 {
-  "updated": "2026-02-09T09:57:32.329Z",
-  "count": 1439,
+  "updated": "2026-02-10T09:55:46.855Z",
+  "count": 1440,
   "stories": [
+    {
+      "id": "fecb9d0424f2bd467bdfc55ff80736c5",
+      "url": "https://www.salon.com/2026/02/08/police-departments-embracing-ai-expose-public-safety-as-a-sham/",
+      "title": "AI is automating injustice in American policing",
+      "source": "Salon",
+      "date": "2026-02-08",
+      "date_discovered": "2026-02-10",
+      "summary": "<a href=\"https://www.salon.com/2026/02/08/police-departments-embracing-ai-expose-public-safety-as-a-sham/\" target=\"_blank\">AI is automating injustice in American policing</a> <font color=\"#6f6f6f\">Salon</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.8,
+      "key_entities": "AI, American policing, RoboCop",
+      "location": null,
+      "tags": [
+        "AI",
+        "civil rights",
+        "policy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "fa3e3153c015a51a9c21932a8c3646de",
       "url": "https://www.fox6now.com/news/milwaukee-police-department-facial-recognition-technology-banned",
