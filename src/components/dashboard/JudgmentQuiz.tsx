@@ -12,8 +12,9 @@ function PlotWrapper(props: PlotParams) {
 
   if (!Plot) {
     return (
-      <div className="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg">
+      <div className="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg" role="status">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
+        <span className="sr-only">Loading...</span>
       </div>
     );
   }
@@ -309,8 +310,9 @@ export default function JudgmentQuiz() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center py-20">
+      <div className="flex items-center justify-center py-20" role="status">
         <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600"></div>
+        <span className="sr-only">Loading...</span>
       </div>
     );
   }
@@ -388,7 +390,7 @@ export default function JudgmentQuiz() {
 
           {/* Loading state for submission */}
           {submitting && (
-            <div className="flex items-center justify-center gap-2 mb-6">
+            <div className="flex items-center justify-center gap-2 mb-6" role="status">
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600"></div>
               <span className="text-gray-500 dark:text-gray-400">Comparing with other visitors...</span>
             </div>
@@ -518,7 +520,7 @@ export default function JudgmentQuiz() {
                                 Visitors: {visitorR.visitorMeans[key].toFixed(1)}
                               </span>
                             )}
-                            <span className="px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400" title="National sample">
+                            <span className="px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400" title="Public sample (SC)">
                               Sample: {scenario.publicMeans[key].toFixed(1)}
                             </span>
                           </div>
@@ -539,7 +541,7 @@ export default function JudgmentQuiz() {
                 </span>
               )}
               <span className="flex items-center gap-2">
-                <span className="w-3 h-3 rounded bg-blue-600"></span> National sample
+                <span className="w-3 h-3 rounded bg-blue-600"></span> Public sample (SC)
               </span>
             </div>
           </div>
@@ -587,7 +589,13 @@ export default function JudgmentQuiz() {
             </span>
           </span>
         </div>
-        <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+        <div
+          className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden"
+          role="progressbar"
+          aria-valuenow={currentScenarioIndex + 1}
+          aria-valuemin={0}
+          aria-valuemax={selectedScenarios.length}
+        >
           <div
             className="h-full bg-purple-600 transition-all duration-300"
             style={{ width: `${((currentScenarioIndex + 1) / selectedScenarios.length) * 100}%` }}
@@ -620,10 +628,12 @@ export default function JudgmentQuiz() {
 
                 {isDiscipline && disciplineLabels ? (
                   // Special discipline scale with labels
-                  <div className="space-y-2">
+                  <div className="space-y-2" role="radiogroup" aria-label={scale.label}>
                     {[1, 2, 3, 4, 5].map(value => (
                       <button
                         key={value}
+                        role="radio"
+                        aria-checked={currentRatings[key as keyof UserRatings] === value}
                         onClick={() => handleRating(key as keyof UserRatings, value)}
                         className={`w-full p-3 rounded-lg text-left transition-all flex items-center gap-3 ${
                           currentRatings[key as keyof UserRatings] === value
@@ -648,10 +658,12 @@ export default function JudgmentQuiz() {
                     <span className="text-xs text-gray-500 dark:text-gray-400 w-28 text-right">
                       {scale.anchors[0]}
                     </span>
-                    <div className="flex-1 flex justify-between">
+                    <div className="flex-1 flex justify-between" role="radiogroup" aria-label={scale.label}>
                       {[1, 2, 3, 4, 5].map(value => (
                         <button
                           key={value}
+                          role="radio"
+                          aria-checked={currentRatings[key as keyof UserRatings] === value}
                           onClick={() => handleRating(key as keyof UserRatings, value)}
                           className={`w-12 h-12 rounded-lg font-bold text-lg transition-all ${
                             currentRatings[key as keyof UserRatings] === value

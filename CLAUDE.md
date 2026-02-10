@@ -29,6 +29,8 @@ src/
   styles/         # Global CSS
   types/          # TypeScript declarations
 scripts/
+  update-publication-citations.py  # Weekly citation updater (OpenAlex + Scholar)
+  fetch-scholar-metrics.py         # Weekly h-index/i10/total citation fetcher
   scrapers/       # News scraper system (tsx)
     lib/          # Scraper modules (newsapi, anthropic, storage, types)
 netlify/
@@ -65,12 +67,15 @@ npm run dev          # Start dev server
 npm run build        # Production build
 npm run preview      # Preview production build
 npm run scrape:k9    # Run a specific scraper
+python scripts/update-publication-citations.py  # Update per-publication citation counts
 ```
 
 ## Gotchas
 - **Plotly SSR**: `astro.config.mjs` has special Vite config — `react-plotly.js` is in `ssr.noExternal` and `plotly.js-dist-min` is in `optimizeDeps.exclude`. Required for build to work.
 - **Scrapers use `tsx`**: The scraper scripts run via `tsx` (TypeScript execute), a project dependency. Don't replace with `ts-node`.
 - **No `.env` in repo**: API keys (`NEWSAPI_KEY`, `ANTHROPIC_API_KEY`) are set in the shell environment, not in a `.env` file.
+- **Citation line formats**: Publication body uses `**Citations:** N (as of Month Year)` or bare `**Citations:** N`. The update script's regex handles both.
+- **OpenAlex batch limit**: API filter param accepts max ~50 pipe-separated IDs per call. Script batches automatically.
 
 ## Conventions
 - React components use `.tsx`, Astro components use `.astro`

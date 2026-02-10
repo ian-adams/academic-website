@@ -62,11 +62,11 @@ export const COLORS = {
   races: {
     White: '#6366f1',
     Black: '#f43f5e',
-    Hispanic: '#10b981',
+    Hispanic: '#f97316',
     Asian: '#f59e0b',
     'Native American': '#8b5cf6',
     'Pacific Islander': '#06b6d4',
-    Other: '#6b7280',
+    Other: '#a78bfa',
     Unknown: '#9ca3af',
   },
   chart: {

@@ -24,7 +24,7 @@ export default function FleeingChart({ data, isDark }: ChartProps) {
         y: statusData,
         type: 'bar' as const,
         name: status,
-        marker: { color: status === 'Fleeing' ? '#f43f5e' : '#10b981' },
+        marker: { color: status === 'Fleeing' ? '#f43f5e' : '#3b82f6' },
       };
     });
   }, [data]);

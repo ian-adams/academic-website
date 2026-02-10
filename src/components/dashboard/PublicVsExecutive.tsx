@@ -12,8 +12,9 @@ function PlotWrapper(props: PlotParams) {
 
   if (!Plot) {
     return (
-      <div className="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg">
+      <div className="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg" role="status">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
+        <span className="sr-only">Loading...</span>
       </div>
     );
   }
@@ -142,8 +143,9 @@ export default function PublicVsExecutive() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center py-20">
+      <div className="flex items-center justify-center py-20" role="status">
         <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600"></div>
+        <span className="sr-only">Loading...</span>
       </div>
     );
   }
@@ -168,10 +170,12 @@ export default function PublicVsExecutive() {
       </div>
 
       {/* Outcome selector */}
-      <div className="flex flex-wrap gap-2 justify-center">
+      <div className="flex flex-wrap gap-2 justify-center" role="radiogroup" aria-label="Outcome measure">
         {(['appropriate', 'professional', 'trust', 'discipline'] as Outcome[]).map(outcome => (
           <button
             key={outcome}
+            role="radio"
+            aria-checked={selectedOutcome === outcome}
             onClick={() => setSelectedOutcome(outcome)}
             className={`px-4 py-2 rounded-lg font-semibold text-sm transition-colors ${
               selectedOutcome === outcome
@@ -185,13 +189,15 @@ export default function PublicVsExecutive() {
       </div>
 
       {/* Summary stats */}
-      <div className="grid md:grid-cols-4 gap-4">
+      <div className="grid md:grid-cols-4 gap-4" role="radiogroup" aria-label="Outcome statistic">
         {(['appropriate', 'professional', 'trust', 'discipline'] as Outcome[]).map(outcome => {
           const diff = avgDifferences[outcome];
           const isSelected = selectedOutcome === outcome;
           return (
             <button
               key={outcome}
+              role="radio"
+              aria-checked={isSelected}
               onClick={() => setSelectedOutcome(outcome)}
               className={`p-4 rounded-lg text-center transition-all ${
                 isSelected

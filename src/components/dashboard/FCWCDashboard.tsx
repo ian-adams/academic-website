@@ -280,7 +280,7 @@ export default function FCWCDashboard() {
       </header>
 
       {/* Navigation Tabs */}
-      <nav className="flex border-b border-gray-200 dark:border-gray-700 mb-8">
+      <nav className="flex border-b border-gray-200 dark:border-gray-700 mb-8" role="tablist">
         {[
           { id: 'calculator', label: 'Risk Calculator' },
           { id: 'acceptability', label: 'Acceptability Curve' },
@@ -288,6 +288,8 @@ export default function FCWCDashboard() {
         ].map((tab) => (
           <button
             key={tab.id}
+            role="tab"
+            aria-selected={activeTab === tab.id}
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
             className={`px-6 py-4 text-sm font-semibold tracking-wide uppercase transition-colors relative ${
               activeTab === tab.id
@@ -382,6 +384,7 @@ export default function FCWCDashboard() {
                     step="0.01"
                     value={baseRateGuilty}
                     onChange={(e) => setBaseRateGuilty(parseFloat(e.target.value))}
+                    aria-label="True Confession Rate"
                     className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-700"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
@@ -409,6 +412,7 @@ export default function FCWCDashboard() {
                     step="0.01"
                     value={sensitivity}
                     onChange={(e) => setSensitivity(parseFloat(e.target.value))}
+                    aria-label="Tactic Effectiveness (Guilty)"
                     className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-700"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
@@ -436,6 +440,7 @@ export default function FCWCDashboard() {
                     step="0.01"
                     value={specificity}
                     onChange={(e) => setSpecificity(parseFloat(e.target.value))}
+                    aria-label="Innocent Protection Rate"
                     className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-700"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
@@ -466,6 +471,7 @@ export default function FCWCDashboard() {
                     step="1"
                     value={lambdaCalc}
                     onChange={(e) => setLambdaCalc(parseInt(e.target.value))}
+                    aria-label="What's Your Trade-off? (lambda)"
                     className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-700"
                   />
                   <div className="relative h-6 mt-1">
@@ -640,6 +646,7 @@ export default function FCWCDashboard() {
                   step="1"
                   value={lambdaCurve}
                   onChange={(e) => setLambdaCurve(parseInt(e.target.value))}
+                  aria-label="Lambda value"
                   className="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-700 mt-2"
                 />
                 <div className="relative h-6 mt-2">

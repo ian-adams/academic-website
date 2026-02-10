@@ -19,7 +19,7 @@ export default function AgeRaceChart({ data, isDark }: ChartProps) {
     };
 
     const filtered = data.filter(
-      (r) => races.includes(r.race_clean) && r.age_numeric !== null
+      (r) => races.includes(r.race_clean) && r.age_numeric !== null && !isNaN(r.age_numeric!)
     );
 
     return races.map((race) => {

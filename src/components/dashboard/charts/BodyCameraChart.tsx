@@ -14,7 +14,7 @@ export default function BodyCameraChart({ data, isDark }: ChartProps) {
     });
 
     const years = Object.keys(byYear).map(Number).sort();
-    const percentages = years.map((year) => (byYear[year].camera / byYear[year].total) * 100);
+    const percentages = years.map((year) => byYear[year].total > 0 ? (byYear[year].camera / byYear[year].total) * 100 : 0);
 
     return [
       {
@@ -23,7 +23,7 @@ export default function BodyCameraChart({ data, isDark }: ChartProps) {
         type: 'scatter' as const,
         mode: 'none' as const,
         fill: 'tozeroy' as const,
-        fillcolor: 'rgba(0, 100, 0, 0.3)',
+        fillcolor: isDark ? 'rgba(74, 222, 128, 0.3)' : 'rgba(0, 100, 0, 0.3)',
         name: 'Area',
       },
       {
@@ -31,11 +31,11 @@ export default function BodyCameraChart({ data, isDark }: ChartProps) {
         y: percentages,
         type: 'scatter' as const,
         mode: 'lines' as const,
-        line: { color: COLORS.chart.darkGreen, width: 2 },
+        line: { color: isDark ? '#4ade80' : COLORS.chart.darkGreen, width: 2 },
         name: '% with Body Camera',
       },
     ];
-  }, [data]);
+  }, [data, isDark]);
 
   const layout = useMemo(() => ({
     ...(isDark ? DARK_LAYOUT : LIGHT_LAYOUT),

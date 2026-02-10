@@ -12,8 +12,9 @@ function PlotWrapper(props: PlotParams) {
 
   if (!Plot) {
     return (
-      <div className="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg">
+      <div className="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg" role="status">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
+        <span className="sr-only">Loading...</span>
       </div>
     );
   }
@@ -392,8 +393,9 @@ export default function FuckulatorQuiz() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center py-20">
+      <div className="flex items-center justify-center py-20" role="status">
         <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600"></div>
+        <span className="sr-only">Loading...</span>
       </div>
     );
   }
@@ -658,7 +660,7 @@ export default function FuckulatorQuiz() {
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 text-center">
-          <div className="text-6xl mb-4">{getScoreEmoji()}</div>
+          <div className="text-6xl mb-4" aria-hidden="true">{getScoreEmoji()}</div>
           <h2 className="text-3xl font-serif font-bold text-gray-900 dark:text-white mb-4">
             Quiz Complete!
           </h2>
@@ -674,7 +676,7 @@ export default function FuckulatorQuiz() {
 
           {/* Percentile badge */}
           {submitting ? (
-            <div className="flex items-center justify-center gap-2 mb-6">
+            <div className="flex items-center justify-center gap-2 mb-6" role="status">
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600"></div>
               <span className="text-gray-500 dark:text-gray-400">Comparing with other visitors...</span>
             </div>
@@ -909,7 +911,13 @@ export default function FuckulatorQuiz() {
           <span>Question {currentQuestion + 1} of {questions.length}</span>
           <span>Score: {score}</span>
         </div>
-        <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+        <div
+          className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden"
+          role="progressbar"
+          aria-valuenow={currentQuestion + 1}
+          aria-valuemin={0}
+          aria-valuemax={questions.length}
+        >
           <div
             className="h-full bg-purple-600 transition-all duration-300"
             style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}

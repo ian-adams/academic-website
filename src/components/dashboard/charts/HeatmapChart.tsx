@@ -9,16 +9,24 @@ export default function HeatmapChart({ data, isDark }: ChartProps) {
     const days = Array.from({ length: 31 }, (_, i) => i + 1);
 
     // Create matrix
-    const z: number[][] = months.map(() => Array(31).fill(0));
+    const z: (number | null)[][] = months.map(() => Array(31).fill(0));
 
     data.forEach((r) => {
       const date = new Date(r.date);
       const month = date.getMonth();
       const day = date.getDate() - 1;
       if (day >= 0 && day < 31) {
-        z[month][day]++;
+        (z[month][day] as number)++;
       }
     });
+
+    // Set impossible dates to null
+    const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    for (let m = 0; m < 12; m++) {
+      for (let d = daysInMonth[m]; d < 31; d++) {
+        z[m][d] = null;
+      }
+    }
 
     return [{
       z,

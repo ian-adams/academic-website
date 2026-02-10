@@ -11,8 +11,8 @@ export default function CriminalChargesChart({ data, isDark }: ChartProps) {
       if (!byYear[r.year]) byYear[r.year] = { total: 0, charged: 0 };
       byYear[r.year].total++;
 
-      const charges = r.criminal_charges?.toLowerCase() || '';
-      if (!charges.includes('no charges') && !charges.includes('no known') && !charges.includes('pending')) {
+      const charges = (r.criminal_charges || '').toLowerCase();
+      if (charges && charges.includes('charged') && !charges.includes('no ') && !charges.includes('not ')) {
         byYear[r.year].charged++;
       }
     });

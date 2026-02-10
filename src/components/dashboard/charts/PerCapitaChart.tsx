@@ -22,6 +22,7 @@ export default function PerCapitaChart({ data, population, isDark }: ChartProps)
     // Standard errors (simplified)
     const errors = rates.map((rate, i) => {
       const n = yearCounts[years[i]];
+      // NOTE: 0.92 correction factor applied to SE — verify source (possible design effect adjustment)
       return rate / Math.sqrt(0.92 * n);
     });
 

@@ -6,6 +6,7 @@ export default function USMapChart({ data, isDark }: ChartProps) {
   const [mapLoaded, setMapLoaded] = useState(false);
   const mapRef = useRef<any>(null);
   const markerGroupRef = useRef<any>(null);
+  const mapContainerRef = useRef<HTMLDivElement>(null);
 
   const points = useMemo(() => {
     return data
@@ -23,13 +24,21 @@ export default function USMapChart({ data, isDark }: ChartProps) {
       const L = await import('leaflet');
       await import('leaflet/dist/leaflet.css');
 
-      const container = document.getElementById('us-map');
-      if (!container || mapRef.current) return;
+      if (!mapContainerRef.current || mapRef.current) return;
 
-      const map = L.map('us-map').setView([39.8283, -98.5795], 4);
+      const map = L.map(mapContainerRef.current, {
+        renderer: L.canvas(),
+      }).setView([39.8283, -98.5795], 4);
 
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors',
+      const tileUrl = isDark
+        ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+        : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      const tileAttribution = isDark
+        ? '&copy; OpenStreetMap &copy; CARTO'
+        : '&copy; OpenStreetMap contributors';
+
+      L.tileLayer(tileUrl, {
+        attribution: tileAttribution,
       }).addTo(map);
 
       // Fit bounds to US
@@ -46,7 +55,7 @@ export default function USMapChart({ data, isDark }: ChartProps) {
 
     initMap();
 
-    // Cleanup on unmount
+    // Cleanup on unmount or theme change
     return () => {
       if (mapRef.current) {
         mapRef.current.remove();
@@ -54,7 +63,7 @@ export default function USMapChart({ data, isDark }: ChartProps) {
         markerGroupRef.current = null;
       }
     };
-  }, []);
+  }, [isDark]);
 
   // Update markers when points change
   useEffect(() => {
@@ -85,7 +94,9 @@ export default function USMapChart({ data, isDark }: ChartProps) {
   return (
     <div className="relative">
       <div
-        id="us-map"
+        ref={mapContainerRef}
+        role="application"
+        aria-label="Map showing geographic distribution of incidents across the United States"
         className="w-full h-[500px] rounded-lg"
         style={{ background: isDark ? '#1f2937' : '#f3f4f6' }}
       />

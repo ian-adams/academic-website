@@ -168,7 +168,7 @@ export default function ChartCard({
     <div className="card p-6">
       <div className="flex items-start justify-between mb-4">
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">{title}</h3>
+          <h3 id={`chart-${title.replace(/\s+/g, '-').toLowerCase()}`} className="text-lg font-semibold text-gray-900 dark:text-gray-100">{title}</h3>
           {subtitle && (
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{subtitle}</p>
           )}
@@ -182,6 +182,7 @@ export default function ChartCard({
           title="Download chart as PNG"
         >
           <svg
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="14"
             height="14"
@@ -199,7 +200,7 @@ export default function ChartCard({
           Download
         </button>
       </div>
-      <div ref={chartRef}>{children}</div>
+      <div ref={chartRef} role="figure" aria-labelledby={`chart-${title.replace(/\s+/g, '-').toLowerCase()}`}>{children}</div>
       {/* Attribution footer */}
       <div className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
         <p className="text-xs text-gray-400 dark:text-gray-500 text-center">
