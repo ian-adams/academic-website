@@ -76,3 +76,28 @@
 
 ### Open Questions
 - Why does `/doctor` still report "Missing required 'name' field" when the frontmatter is verified correct? Tried multiple write methods, encoding checks, and format variations — none resolved it. Full CLI restart may be needed.
+
+## Session: 2026-02-10 (CLAUDE.md audit & MCP test)
+
+### Completed
+- Ran `/preflight` — all tools healthy, clean working tree, no interrupted work
+- Fixed preflight to avoid broad glob patterns (`**/*.qmd`, `**/*.R`) that crawled outside the project into Dropbox
+- Ran `/claude-md-improver` — audited CLAUDE.md (scored B, 78/100)
+- Updated CLAUDE.md: synced publication/post schemas with actual `config.ts` (added 10+ missing fields)
+- Added Gotchas section to CLAUDE.md (Plotly SSR config, tsx runner, no .env in repo)
+- Added `npm install` to dev commands
+- Updated MEMORY.md with preflight/tool-usage lessons (scope globs, simple bash, skip irrelevant checks)
+- Marked dashboard-reviewer.md /doctor issue as RESOLVED in MEMORY.md
+- Tested GitHub MCP server — confirmed working (listed commits, PRs, issues via `mcp__github__*` tools)
+- Reviewed all PRs: 0 open, 10 most recent all merged (Jan 18–27)
+
+### Key Decisions
+- Preflight should only check tools relevant to the known project stack (node, npm, python, gh) — skip quarto, R, pdflatex
+- Glob patterns must be scoped to known project subdirs to prevent filesystem crawl
+
+### Next Steps
+- Test `/scrape-news` and `/new-publication` skills
+- Consider testing `npm run build` to verify site builds cleanly with current state
+
+### Open Questions
+- None

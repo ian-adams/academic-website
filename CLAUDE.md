@@ -39,10 +39,10 @@ netlify/
 ### Content Collections
 Publications schema (`src/content/config.ts`):
 - Required: `title`, `authors` (string[]), `date`
-- Optional: `publication`, `abstract`, `summary`, `featured`, `url_pdf`, `url_source`, `tags`, `categories`, `links`
+- Optional: `publication`, `publication_short`, `publication_types` (string[]), `publishDate`, `abstract`, `summary`, `featured`, `url_pdf`, `url_code`, `url_dataset`, `url_poster`, `url_project`, `url_slides`, `url_source`, `url_video`, `projects` (string[]), `tags`, `categories`, `links`, `image`
 - Filename convention: `W{openalex_id}.md`
 
-Posts schema: `title`, `date`, optional `subtitle`, `summary`, `authors`, `tags`, `draft`
+Posts schema: `title`, `date`, optional `subtitle`, `summary`, `authors`, `tags`, `categories`, `draft`, `featured`, `lastmod`, `image`, `projects`
 
 ### News Scraper System
 Located in `scripts/scrapers/`. Uses NewsAPI + Anthropic Claude for article curation.
@@ -60,11 +60,17 @@ Quiz endpoints at `/api/quiz/{name}/{action}`:
 
 ## Development Commands
 ```bash
+npm install          # Install dependencies (first time)
 npm run dev          # Start dev server
 npm run build        # Production build
 npm run preview      # Preview production build
 npm run scrape:k9    # Run a specific scraper
 ```
+
+## Gotchas
+- **Plotly SSR**: `astro.config.mjs` has special Vite config — `react-plotly.js` is in `ssr.noExternal` and `plotly.js-dist-min` is in `optimizeDeps.exclude`. Required for build to work.
+- **Scrapers use `tsx`**: The scraper scripts run via `tsx` (TypeScript execute), a project dependency. Don't replace with `ts-node`.
+- **No `.env` in repo**: API keys (`NEWSAPI_KEY`, `ANTHROPIC_API_KEY`) are set in the shell environment, not in a `.env` file.
 
 ## Conventions
 - React components use `.tsx`, Astro components use `.astro`
