@@ -59,3 +59,20 @@
 
 ### Open Questions
 - None
+
+## Session: 2026-02-10 (doctor fixes)
+
+### Completed
+- Fixed MCP server configs for Windows: added `cmd /c` wrapper to `npx` commands in both `~/.claude.json` (GitHub server) and `.mcp.json` (context7 server)
+- Added YAML frontmatter (`name`, `description`, `tools`) to `.claude/agents/dashboard-reviewer.md`
+
+### Key Decisions
+- Used lowercase-hyphenated name format (`dashboard-reviewer`) to match other working agent files
+- Wrote agent file with LF line endings via Python to rule out CRLF parser issues
+
+### Next Steps
+- Re-run `/doctor` after full CLI restart to see if agent frontmatter warning clears
+- If still failing, may be a Claude Code parser bug — consider filing an issue
+
+### Open Questions
+- Why does `/doctor` still report "Missing required 'name' field" when the frontmatter is verified correct? Tried multiple write methods, encoding checks, and format variations — none resolved it. Full CLI restart may be needed.
