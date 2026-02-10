@@ -25,8 +25,8 @@ export default function ScholarMetricsDisplay({ fallbackData }: ScholarMetricsDi
   const [loading, setLoading] = useState(!fallbackData);
 
   useEffect(() => {
-    // Fetch fresh data client-side
-    fetch('/data/scholar-metrics.json')
+    // Fetch fresh data client-side (cache-bust to avoid stale CDN responses)
+    fetch('/data/scholar-metrics.json?v=' + Date.now())
       .then(res => res.json())
       .then((data: ScholarMetrics) => {
         // Only update if we got valid data
