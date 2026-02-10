@@ -20,9 +20,9 @@ export default function WeaponsChart({ data, isDark }: ChartProps) {
       x: sorted.map(([, count]) => count),
       type: 'bar' as const,
       orientation: 'h' as const,
-      marker: { color: COLORS.chart.navy },
+      marker: { color: isDark ? '#818cf8' : COLORS.chart.navy },
     }];
-  }, [data]);
+  }, [data, isDark]);
 
   const layout = useMemo(() => ({
     ...(isDark ? DARK_LAYOUT : LIGHT_LAYOUT),
@@ -35,6 +35,7 @@ export default function WeaponsChart({ data, isDark }: ChartProps) {
     },
     yaxis: {
       ...(isDark ? DARK_LAYOUT.yaxis : LIGHT_LAYOUT.yaxis),
+      autorange: 'reversed' as const,
     },
   }), [isDark]);
 

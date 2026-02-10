@@ -119,10 +119,12 @@ export default function ProfanityDashboard() {
       </header>
 
       {/* Navigation Tabs - Desktop */}
-      <nav className="hidden md:flex border-b border-gray-200 dark:border-gray-700 mb-8 overflow-x-auto">
+      <nav className="hidden md:flex border-b border-gray-200 dark:border-gray-700 mb-8 overflow-x-auto" role="tablist">
         {TABS.map((tab) => (
           <button
             key={tab.id}
+            role="tab"
+            aria-selected={activeTab === tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`px-4 lg:px-6 py-4 text-sm font-semibold tracking-wide uppercase transition-colors relative whitespace-nowrap ${
               activeTab === tab.id
@@ -139,11 +141,13 @@ export default function ProfanityDashboard() {
       </nav>
 
       {/* Navigation Tabs - Mobile */}
-      <nav className="md:hidden mb-6">
+      <nav className="md:hidden mb-6" role="tablist">
         <div className="flex overflow-x-auto gap-2 pb-2">
           {TABS.map((tab) => (
             <button
               key={tab.id}
+              role="tab"
+              aria-selected={activeTab === tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`px-4 py-2 text-sm font-semibold rounded-full whitespace-nowrap transition-colors ${
                 activeTab === tab.id

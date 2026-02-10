@@ -10,8 +10,8 @@ export default function DayOfWeekChart({ data, isDark }: ChartProps) {
     days.forEach((d) => (counts[d] = 0));
 
     data.forEach((r) => {
-      const date = new Date(r.date);
-      const day = days[date.getDay()];
+      const [y, m, d] = r.date.split('-').map(Number);
+      const day = days[new Date(y, m - 1, d).getDay()];
       counts[day]++;
     });
 

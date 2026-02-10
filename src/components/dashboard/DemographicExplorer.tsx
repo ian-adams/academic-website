@@ -12,8 +12,9 @@ function PlotWrapper(props: PlotParams) {
 
   if (!Plot) {
     return (
-      <div className="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg">
+      <div className="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg" role="status">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
+        <span className="sr-only">Loading...</span>
       </div>
     );
   }
@@ -130,8 +131,9 @@ export default function DemographicExplorer() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center py-20">
+      <div className="flex items-center justify-center py-20" role="status">
         <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600"></div>
+        <span className="sr-only">Loading...</span>
       </div>
     );
   }
@@ -163,10 +165,12 @@ export default function DemographicExplorer() {
       </div>
 
       {/* Outcome selector */}
-      <div className="flex flex-wrap gap-2 justify-center">
+      <div className="flex flex-wrap gap-2 justify-center" role="radiogroup" aria-label="Outcome measure">
         {(['appropriate', 'professional', 'trust', 'discipline'] as Outcome[]).map(outcome => (
           <button
             key={outcome}
+            role="radio"
+            aria-checked={selectedOutcome === outcome}
             onClick={() => setSelectedOutcome(outcome)}
             className={`px-4 py-2 rounded-lg font-semibold text-sm transition-colors ${
               selectedOutcome === outcome
@@ -197,9 +201,9 @@ export default function DemographicExplorer() {
                   color: demographics.map(d => {
                     const val = effects[d];
                     if (selectedOutcome === 'discipline') {
-                      return val > 0 ? '#EF4444' : '#10B981';
+                      return val > 0 ? '#EF4444' : '#3B82F6';
                     }
-                    return val < 0 ? '#EF4444' : '#10B981';
+                    return val < 0 ? '#EF4444' : '#3B82F6';
                   }),
                 },
                 hovertemplate: '%{y}: %{x:.3f}<extra></extra>',

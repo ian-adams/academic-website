@@ -23,8 +23,8 @@ export default function TopCitiesChart({ data, isDark }: ChartProps) {
       .slice(0, 20);
 
     const cities = sorted.map(([city]) => city);
-    const counts = sorted.map(([, data]) => data.n);
-    const unarmedPct = sorted.map(([, data]) => (data.unarmed / data.n) * 100);
+    const counts = sorted.map(([, stats]) => stats.n);
+    const unarmedPct = sorted.map(([, stats]) => (stats.unarmed / stats.n) * 100);
 
     return [{
       y: cities,

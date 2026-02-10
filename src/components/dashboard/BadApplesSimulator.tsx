@@ -480,10 +480,12 @@ export default function BadApplesSimulator() {
       </div>
 
       {/* Tab Navigation */}
-      <nav className="flex border-b border-gray-200 dark:border-gray-700 mb-8">
+      <nav className="flex border-b border-gray-200 dark:border-gray-700 mb-8" role="tablist">
         {tabs.map((tab) => (
           <button
             key={tab.id}
+            role="tab"
+            aria-selected={activeTab === tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`px-6 py-4 text-sm font-semibold tracking-wide uppercase transition-colors relative ${
               activeTab === tab.id

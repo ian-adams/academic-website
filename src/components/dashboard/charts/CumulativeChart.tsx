@@ -5,7 +5,8 @@ import { DARK_LAYOUT, LIGHT_LAYOUT } from '../types';
 
 // Convert date to day of year (1-366)
 function getDayOfYear(dateStr: string): number {
-  const date = new Date(dateStr);
+  const [y, m, d] = dateStr.split('-').map(Number);
+  const date = new Date(y, m - 1, d);
   const start = new Date(date.getFullYear(), 0, 0);
   const diff = date.getTime() - start.getTime();
   const oneDay = 1000 * 60 * 60 * 24;

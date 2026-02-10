@@ -14,7 +14,7 @@ export default function MentalHealthChart({ data, isDark }: ChartProps) {
     });
 
     const years = Object.keys(byYear).map(Number).sort();
-    const percentages = years.map((year) => (byYear[year].mental / byYear[year].total) * 100);
+    const percentages = years.map((year) => byYear[year].total > 0 ? (byYear[year].mental / byYear[year].total) * 100 : 0);
 
     // Calculate trend line
     const n = years.length;
@@ -25,6 +25,7 @@ export default function MentalHealthChart({ data, isDark }: ChartProps) {
     const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
     const intercept = (sumY - slope * sumX) / n;
     const trendY = years.map((x) => slope * x + intercept);
+    const clampedTrendY = trendY.map(v => Math.max(0, Math.min(100, v)));
 
     return [
       {
@@ -38,7 +39,7 @@ export default function MentalHealthChart({ data, isDark }: ChartProps) {
       },
       {
         x: years,
-        y: trendY,
+        y: clampedTrendY,
         type: 'scatter' as const,
         mode: 'lines' as const,
         line: { color: 'red', dash: 'dash' as const },

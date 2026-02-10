@@ -239,10 +239,11 @@ export default function MPVDashboard() {
       <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 mb-8">
         <div className="flex flex-wrap gap-6 items-end">
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+            <label htmlFor="filter-cause" className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
               Death Subset
             </label>
             <select
+              id="filter-cause"
               value={filters.causeFilter}
               onChange={(e) =>
                 setFilters((f) => ({ ...f, causeFilter: e.target.value as 'all' | 'shootings' }))
@@ -254,10 +255,11 @@ export default function MPVDashboard() {
             </select>
           </div>
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+            <label htmlFor="filter-year" className="block text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
               Temporal Focus
             </label>
             <select
+              id="filter-year"
               value={filters.yearFilter}
               onChange={(e) => setFilters((f) => ({ ...f, yearFilter: e.target.value }))}
               className="px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-teal-500 focus:border-transparent"
@@ -297,10 +299,12 @@ export default function MPVDashboard() {
       </div>
 
       {/* Tab Navigation */}
-      <nav className="flex border-b border-gray-200 dark:border-gray-700 mb-8">
+      <nav className="flex border-b border-gray-200 dark:border-gray-700 mb-8" role="tablist">
         {tabs.map((tab) => (
           <button
             key={tab.id}
+            role="tab"
+            aria-selected={activeTab === tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`px-6 py-4 text-sm font-semibold tracking-wide uppercase transition-colors relative ${
               activeTab === tab.id

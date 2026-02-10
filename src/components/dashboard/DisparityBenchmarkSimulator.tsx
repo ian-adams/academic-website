@@ -194,7 +194,7 @@ const benchmarkData: BenchmarkData[] = [
   },
 ];
 
-function calculateOddsRatio(
+function calculateRateRatio(
   blackShot: number,
   whiteShot: number,
   blackBenchmark: number,
@@ -230,11 +230,11 @@ export default function DisparityBenchmarkSimulator() {
     return () => observer.disconnect();
   }, []);
 
-  // Calculate all odds ratios for comparison chart
-  const allOddsRatios = useMemo(() => {
+  // Calculate all rate ratios for comparison chart
+  const allRateRatios = useMemo(() => {
     return benchmarkData.map((b) => {
       const yearData = b.years[selectedYear];
-      const or = calculateOddsRatio(
+      const or = calculateRateRatio(
         yearData.blackShot,
         yearData.whiteShot,
         yearData.black,
@@ -244,7 +244,7 @@ export default function DisparityBenchmarkSimulator() {
         id: b.id,
         name: b.shortName,
         category: b.category,
-        oddsRatio: or,
+        rateRatio: or,
         interpretation: or > 1
           ? `Black ${or.toFixed(2)}x more likely`
           : `Black ${(1/or).toFixed(2)}x less likely`,
@@ -255,15 +255,15 @@ export default function DisparityBenchmarkSimulator() {
   // Get current benchmark data
   const currentBenchmark = benchmarkData.find((b) => b.id === selectedBenchmark)!;
   const currentYearData = currentBenchmark.years[selectedYear];
-  const currentOddsRatio = calculateOddsRatio(
+  const currentRateRatio = calculateRateRatio(
     currentYearData.blackShot,
     currentYearData.whiteShot,
     currentYearData.black,
     currentYearData.white
   );
 
-  // Custom odds ratio
-  const customOddsRatio = calculateOddsRatio(
+  // Custom rate ratio
+  const customRateRatio = calculateRateRatio(
     customBlackShot,
     customWhiteShot,
     customBlackBenchmark,
@@ -319,10 +319,12 @@ export default function DisparityBenchmarkSimulator() {
           <label className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400">
             Select Year:
           </label>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Select year">
             {availableYears.map((year) => (
               <button
                 key={year}
+                role="radio"
+                aria-checked={selectedYear === year}
                 onClick={() => setSelectedYear(year)}
                 className={`px-3 py-1.5 text-sm font-semibold transition-colors ${
                   selectedYear === year
@@ -343,10 +345,12 @@ export default function DisparityBenchmarkSimulator() {
       </div>
 
       {/* Tab Navigation */}
-      <nav className="flex border-b border-gray-200 dark:border-gray-700 mb-8">
+      <nav className="flex border-b border-gray-200 dark:border-gray-700 mb-8" role="tablist">
         {tabs.map((tab) => (
           <button
             key={tab.id}
+            role="tab"
+            aria-selected={activeTab === tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`px-6 py-4 text-sm font-semibold tracking-wide uppercase transition-colors relative ${
               activeTab === tab.id
@@ -415,7 +419,7 @@ export default function DisparityBenchmarkSimulator() {
                   </div>
                 </div>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">
-                  Odds Ratio: &gt;1 means Black more likely, &lt;1 means White more likely
+                  Rate Ratio: &gt;1 means Black more likely, &lt;1 means White more likely
                 </p>
               </div>
             </div>
@@ -441,14 +445,14 @@ export default function DisparityBenchmarkSimulator() {
             <div className="bg-rose-50 dark:bg-rose-900/20 border border-rose-200 dark:border-rose-800 p-6 text-center">
               <div className="text-xs font-bold uppercase tracking-wide text-rose-700 dark:text-rose-300 mb-2">Using Population ({selectedYear})</div>
               <div className="text-5xl font-bold font-serif text-rose-600 dark:text-rose-400">
-                {allOddsRatios.find(o => o.id === 'population')?.oddsRatio.toFixed(2)}x
+                {allRateRatios.find(o => o.id === 'population')?.rateRatio.toFixed(2)}x
               </div>
               <div className="text-sm text-rose-700 dark:text-rose-300 mt-2">Black citizens more likely</div>
             </div>
             <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 p-6 text-center">
               <div className="text-xs font-bold uppercase tracking-wide text-blue-700 dark:text-blue-300 mb-2">Using Weapons Arrests ({selectedYear})</div>
               <div className="text-5xl font-bold font-serif text-blue-600 dark:text-blue-400">
-                {(1 / (allOddsRatios.find(o => o.id === 'weapons_arrests')?.oddsRatio || 1)).toFixed(2)}x
+                {(1 / (allRateRatios.find(o => o.id === 'weapons_arrests')?.rateRatio || 1)).toFixed(2)}x
               </div>
               <div className="text-sm text-blue-700 dark:text-blue-300 mt-2">White citizens more likely</div>
             </div>
@@ -468,22 +472,22 @@ export default function DisparityBenchmarkSimulator() {
           <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
             <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-4 flex items-center gap-2">
               <span className="w-1 h-6 bg-violet-600"></span>
-              Odds Ratios by Benchmark ({selectedYear})
+              Rate Ratios by Benchmark ({selectedYear})
             </h3>
             <PlotWrapper
               key={`comparison-${selectedYear}`}
               data={[
                 {
-                  x: allOddsRatios.map((o) => o.oddsRatio),
-                  y: allOddsRatios.map((o) => o.name),
+                  x: allRateRatios.map((o) => o.rateRatio),
+                  y: allRateRatios.map((o) => o.name),
                   type: 'bar',
                   orientation: 'h',
                   marker: {
-                    color: allOddsRatios.map((o) =>
-                      o.oddsRatio > 1 ? '#dc2626' : '#2563eb'
+                    color: allRateRatios.map((o) =>
+                      o.rateRatio > 1 ? '#dc2626' : '#2563eb'
                     ),
                   },
-                  text: allOddsRatios.map((o) => o.oddsRatio.toFixed(2)),
+                  text: allRateRatios.map((o) => o.rateRatio.toFixed(2)),
                   textposition: 'outside',
                   hovertemplate: '%{y}: %{x:.2f}<extra></extra>',
                 },
@@ -495,7 +499,7 @@ export default function DisparityBenchmarkSimulator() {
                 margin: { l: 130, r: 60, t: 30, b: 60 },
                 showlegend: false,
                 xaxis: {
-                  title: 'Odds Ratio (Black vs White)',
+                  title: 'Rate Ratio (Black vs White)',
                   gridcolor: isDark ? '#374151' : '#e5e7eb',
                   zeroline: false,
                   range: [0, 4.5],
@@ -557,14 +561,14 @@ export default function DisparityBenchmarkSimulator() {
                     <th className="px-4 py-2 text-left font-medium text-gray-500 dark:text-gray-400">Benchmark</th>
                     <th className="px-4 py-2 text-right font-medium text-gray-500 dark:text-gray-400">Black Benchmark</th>
                     <th className="px-4 py-2 text-right font-medium text-gray-500 dark:text-gray-400">White Benchmark</th>
-                    <th className="px-4 py-2 text-center font-medium text-gray-500 dark:text-gray-400">Odds Ratio</th>
+                    <th className="px-4 py-2 text-center font-medium text-gray-500 dark:text-gray-400">Rate Ratio</th>
                     <th className="px-4 py-2 text-left font-medium text-gray-500 dark:text-gray-400">Interpretation</th>
                   </tr>
                 </thead>
                 <tbody>
                   {benchmarkData.map((b) => {
                     const yearData = b.years[selectedYear];
-                    const or = calculateOddsRatio(yearData.blackShot, yearData.whiteShot, yearData.black, yearData.white);
+                    const or = calculateRateRatio(yearData.blackShot, yearData.whiteShot, yearData.black, yearData.white);
                     return (
                       <tr key={b.id} className="border-b border-gray-200 dark:border-gray-700">
                         <td className="px-4 py-3 font-medium text-gray-900 dark:text-gray-100">{b.name}</td>
@@ -595,7 +599,7 @@ export default function DisparityBenchmarkSimulator() {
                 Census data. Simple but flawed—assumes equal police contact rates.
               </p>
               <div className="text-3xl font-bold font-serif text-violet-600 dark:text-violet-400">
-                {allOddsRatios.find(o => o.id === 'population')?.oddsRatio.toFixed(2)}x
+                {allRateRatios.find(o => o.id === 'population')?.rateRatio.toFixed(2)}x
               </div>
             </div>
             <div className="bg-white dark:bg-gray-800 border-l-4 border-amber-500 p-6">
@@ -604,7 +608,7 @@ export default function DisparityBenchmarkSimulator() {
                 PPCS survey data. Better than population but most contacts are low-risk.
               </p>
               <div className="text-3xl font-bold font-serif text-amber-600 dark:text-amber-400">
-                {allOddsRatios.find(o => o.id === 'street_stops')?.oddsRatio.toFixed(2)}x
+                {allRateRatios.find(o => o.id === 'street_stops')?.rateRatio.toFixed(2)}x
               </div>
             </div>
             <div className="bg-white dark:bg-gray-800 border-l-4 border-teal-500 p-6">
@@ -613,7 +617,7 @@ export default function DisparityBenchmarkSimulator() {
                 UCR arrest data. Closer to lethal-risk situations but may reflect enforcement bias.
               </p>
               <div className="text-3xl font-bold font-serif text-teal-600 dark:text-teal-400">
-                {allOddsRatios.find(o => o.id === 'weapons_arrests')?.oddsRatio.toFixed(2)}x
+                {allRateRatios.find(o => o.id === 'weapons_arrests')?.rateRatio.toFixed(2)}x
               </div>
             </div>
           </div>
@@ -683,26 +687,26 @@ export default function DisparityBenchmarkSimulator() {
               </h3>
 
               <div className={`p-6 rounded-lg text-center mb-4 ${
-                currentOddsRatio > 1
+                currentRateRatio > 1
                   ? 'bg-rose-50 dark:bg-rose-900/20'
                   : 'bg-blue-50 dark:bg-blue-900/20'
               }`}>
-                <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Odds Ratio</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Rate Ratio</div>
                 <div className={`text-5xl font-bold ${
-                  currentOddsRatio > 1
+                  currentRateRatio > 1
                     ? 'text-rose-600 dark:text-rose-400'
                     : 'text-blue-600 dark:text-blue-400'
                 }`}>
-                  {currentOddsRatio.toFixed(2)}
+                  {currentRateRatio.toFixed(2)}
                 </div>
                 <div className={`text-lg mt-2 ${
-                  currentOddsRatio > 1
+                  currentRateRatio > 1
                     ? 'text-rose-700 dark:text-rose-300'
                     : 'text-blue-700 dark:text-blue-300'
                 }`}>
-                  {currentOddsRatio > 1
-                    ? `Black citizens ${currentOddsRatio.toFixed(1)}x more likely to be fatally shot`
-                    : `White citizens ${(1/currentOddsRatio).toFixed(1)}x more likely to be fatally shot`
+                  {currentRateRatio > 1
+                    ? `Black citizens ${currentRateRatio.toFixed(1)}x more likely to be fatally shot`
+                    : `White citizens ${(1/currentRateRatio).toFixed(1)}x more likely to be fatally shot`
                   }
                 </div>
               </div>
@@ -713,7 +717,7 @@ export default function DisparityBenchmarkSimulator() {
                   <div>Black rate: {currentYearData.blackShot} / {currentYearData.black.toLocaleString()} = {(currentYearData.blackShot / currentYearData.black * 100000).toFixed(2)} per 100k</div>
                   <div>White rate: {currentYearData.whiteShot} / {currentYearData.white.toLocaleString()} = {(currentYearData.whiteShot / currentYearData.white * 100000).toFixed(2)} per 100k</div>
                   <div className="mt-2 pt-2 border-t border-gray-300 dark:border-gray-600">
-                    OR = {(currentYearData.blackShot / currentYearData.black * 100000).toFixed(2)} / {(currentYearData.whiteShot / currentYearData.white * 100000).toFixed(2)} = <strong>{currentOddsRatio.toFixed(2)}</strong>
+                    RR = {(currentYearData.blackShot / currentYearData.black * 100000).toFixed(2)} / {(currentYearData.whiteShot / currentYearData.white * 100000).toFixed(2)} = <strong>{currentRateRatio.toFixed(2)}</strong>
                   </div>
                 </div>
               </div>
@@ -771,7 +775,7 @@ export default function DisparityBenchmarkSimulator() {
             <div className="max-w-4xl">
               <h3 className="text-2xl font-serif font-bold mb-3">Build Your Own Scenario</h3>
               <p className="text-gray-300 leading-relaxed">
-                Enter custom values to see how different numerators and denominators affect the odds ratio.
+                Enter custom values to see how different numerators and denominators affect the rate ratio.
                 This helps illustrate why benchmark selection is so critical.
               </p>
             </div>
@@ -859,27 +863,27 @@ export default function DisparityBenchmarkSimulator() {
               </h3>
 
               <div className={`p-6 rounded-lg text-center mb-4 ${
-                customOddsRatio > 1
+                customRateRatio > 1
                   ? 'bg-rose-50 dark:bg-rose-900/20'
                   : 'bg-blue-50 dark:bg-blue-900/20'
               }`}>
-                <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Odds Ratio</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Rate Ratio</div>
                 <div className={`text-5xl font-bold ${
-                  customOddsRatio > 1
+                  customRateRatio > 1
                     ? 'text-rose-600 dark:text-rose-400'
                     : 'text-blue-600 dark:text-blue-400'
                 }`}>
-                  {isFinite(customOddsRatio) ? customOddsRatio.toFixed(2) : '—'}
+                  {isFinite(customRateRatio) ? customRateRatio.toFixed(2) : '—'}
                 </div>
                 <div className={`text-lg mt-2 ${
-                  customOddsRatio > 1
+                  customRateRatio > 1
                     ? 'text-rose-700 dark:text-rose-300'
                     : 'text-blue-700 dark:text-blue-300'
                 }`}>
-                  {isFinite(customOddsRatio) && (
-                    customOddsRatio > 1
-                      ? `Black ${customOddsRatio.toFixed(1)}x more likely`
-                      : `White ${(1/customOddsRatio).toFixed(1)}x more likely`
+                  {isFinite(customRateRatio) && (
+                    customRateRatio > 1
+                      ? `Black ${customRateRatio.toFixed(1)}x more likely`
+                      : `White ${(1/customRateRatio).toFixed(1)}x more likely`
                   )}
                 </div>
               </div>
@@ -889,7 +893,7 @@ export default function DisparityBenchmarkSimulator() {
                   <div>Black rate: {customBlackShot} / {customBlackBenchmark.toLocaleString()} = {(customBlackShot / customBlackBenchmark * 100000).toFixed(4)} per 100k</div>
                   <div>White rate: {customWhiteShot} / {customWhiteBenchmark.toLocaleString()} = {(customWhiteShot / customWhiteBenchmark * 100000).toFixed(4)} per 100k</div>
                   <div className="mt-2 pt-2 border-t border-gray-300 dark:border-gray-600">
-                    Odds Ratio = <strong>{isFinite(customOddsRatio) ? customOddsRatio.toFixed(2) : '—'}</strong>
+                    Rate Ratio = <strong>{isFinite(customRateRatio) ? customRateRatio.toFixed(2) : '—'}</strong>
                   </div>
                 </div>
               </div>

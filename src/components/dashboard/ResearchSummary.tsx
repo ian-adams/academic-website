@@ -1,18 +1,4 @@
-import { useState, useEffect } from 'react';
-
 export default function ResearchSummary() {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const checkDark = () => {
-      setIsDark(document.documentElement.classList.contains('dark'));
-    };
-    checkDark();
-    const observer = new MutationObserver(checkDark);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className="max-w-4xl mx-auto space-y-8">
       {/* Introduction */}
@@ -92,7 +78,7 @@ export default function ResearchSummary() {
               className="inline-flex items-center gap-1 mt-2 text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300 text-sm font-medium"
             >
               Read the full paper
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
@@ -174,7 +160,7 @@ export default function ResearchSummary() {
               className="inline-flex items-center gap-1 mt-2 text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300 text-sm font-medium"
             >
               Read the full paper
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
@@ -251,7 +237,7 @@ export default function ResearchSummary() {
               className="inline-flex items-center gap-1 mt-3 text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300 text-sm font-medium"
             >
               Learn more about the research
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>

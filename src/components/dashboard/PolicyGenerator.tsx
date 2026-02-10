@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 interface PolicyPreferences {
   selfDirected: 'allow' | 'discourage' | 'prohibit';
@@ -22,17 +22,6 @@ export default function PolicyGenerator() {
   const [preferences, setPreferences] = useState<PolicyPreferences>(DEFAULT_PREFERENCES);
   const [showPolicy, setShowPolicy] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const checkDark = () => {
-      setIsDark(document.documentElement.classList.contains('dark'));
-    };
-    checkDark();
-    const observer = new MutationObserver(checkDark);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
 
   const updatePreference = <K extends keyof PolicyPreferences>(
     key: K,
@@ -208,10 +197,10 @@ export default function PolicyGenerator() {
       {/* Configuration options */}
       <div className="grid md:grid-cols-2 gap-6">
         {/* Self-directed */}
-        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+        <fieldset className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <legend className="font-semibold text-gray-900 dark:text-white mb-2">
             Self-Directed Language
-          </h4>
+          </legend>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
             e.g., "Man, I'm such a fuck-up" or "It's a fucking beautiful day"
           </p>
@@ -229,13 +218,13 @@ export default function PolicyGenerator() {
               </label>
             ))}
           </div>
-        </div>
+        </fieldset>
 
         {/* Colleague positive */}
-        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+        <fieldset className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <legend className="font-semibold text-gray-900 dark:text-white mb-2">
             Colleague (Positive/Neutral)
-          </h4>
+          </legend>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
             e.g., "Jones, you handled that fucking brilliantly"
           </p>
@@ -253,13 +242,13 @@ export default function PolicyGenerator() {
               </label>
             ))}
           </div>
-        </div>
+        </fieldset>
 
         {/* Colleague negative */}
-        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+        <fieldset className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <legend className="font-semibold text-gray-900 dark:text-white mb-2">
             Colleague (Derogatory)
-          </h4>
+          </legend>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
             e.g., "Jones, you're a real fuck-up sometimes"
           </p>
@@ -277,13 +266,13 @@ export default function PolicyGenerator() {
               </label>
             ))}
           </div>
-        </div>
+        </fieldset>
 
         {/* Public-directed */}
-        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+        <fieldset className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <legend className="font-semibold text-gray-900 dark:text-white mb-2">
             Public-Directed Language
-          </h4>
+          </legend>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
             e.g., "Stop acting like a fucking idiot"
           </p>
@@ -301,13 +290,13 @@ export default function PolicyGenerator() {
               </label>
             ))}
           </div>
-        </div>
+        </fieldset>
 
         {/* Intent focus */}
-        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+        <fieldset className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <legend className="font-semibold text-gray-900 dark:text-white mb-2">
             Evaluation Focus
-          </h4>
+          </legend>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
             What should policy evaluations prioritize?
           </p>
@@ -343,13 +332,13 @@ export default function PolicyGenerator() {
               <span className="text-sm text-gray-700 dark:text-gray-300">Both words and intent</span>
             </label>
           </div>
-        </div>
+        </fieldset>
 
         {/* Discipline approach */}
-        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+        <fieldset className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <legend className="font-semibold text-gray-900 dark:text-white mb-2">
             Discipline Approach
-          </h4>
+          </legend>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
             How should violations be handled?
           </p>
@@ -385,7 +374,7 @@ export default function PolicyGenerator() {
               <span className="text-sm text-gray-700 dark:text-gray-300">Zero tolerance</span>
             </label>
           </div>
-        </div>
+        </fieldset>
       </div>
 
       {/* Generate button */}
