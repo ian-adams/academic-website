@@ -101,3 +101,22 @@
 
 ### Open Questions
 - None
+
+## Session: 2026-02-10 (new publication)
+
+### Completed
+- Used `/new-publication` skill with DOI `10.1016/j.jcrimjus.2026.102600`
+- Fetched metadata from OpenAlex API — title, authors, date, journal all pulled automatically
+- Abstract not available via OpenAlex, CrossRef, or ScienceDirect (403 blocked) — user provided manually
+- Created `src/content/publications/W7125487197.md` (Mourtgos & Adams, J. Criminal Justice 103)
+- Committed and pushed to master
+
+### Key Decisions
+- ScienceDirect blocks automated fetches (403) — abstract must be provided manually for Elsevier articles
+
+### Next Steps
+- Test `/scrape-news` skill
+- Consider testing `npm run build` to verify site builds with new publication
+
+### Open Questions
+- None
