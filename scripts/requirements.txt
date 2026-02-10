@@ -1,4 +1,5 @@
 # Python dependencies for utility scripts
-# Used by: fetch-scholar-metrics.py
+# Used by: fetch-scholar-metrics.py, update-publication-citations.py
 
 scholarly>=1.7.0
+requests>=2.31.0

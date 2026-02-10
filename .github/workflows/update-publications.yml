@@ -47,10 +47,13 @@ jobs:
           python scripts/fetch-scholar-metrics.py
         fi
 
+    - name: Update per-publication citations
+      run: python scripts/update-publication-citations.py
+
     - name: Check for changes
       id: check-changes
       run: |
-        if git diff --quiet public/data/scholar-metrics.json 2>/dev/null; then
+        if git diff --quiet public/data/scholar-metrics.json src/content/publications/ 2>/dev/null; then
           echo "changes=false" >> $GITHUB_OUTPUT
         else
           echo "changes=true" >> $GITHUB_OUTPUT
@@ -61,8 +64,8 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add public/data/scholar-metrics.json
-        git diff --quiet && git diff --staged --quiet || git commit -m "Update scholar metrics - $(date +'%Y-%m-%d')"
+        git add public/data/scholar-metrics.json src/content/publications/
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update scholar metrics and publication citations - $(date +'%Y-%m-%d')"
         # Pull with rebase to handle concurrent workflow runs, then push with retry
         for i in 1 2 3; do
           git pull --rebase origin master && git push && break
