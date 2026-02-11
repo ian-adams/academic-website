@@ -177,3 +177,45 @@
 
 ### Open Questions
 - None
+
+## Session: 2026-02-10 (frontend design — comprehensive fixes)
+*Backfilled — session closed without /wrapup*
+
+### Completed
+- Ran `/frontend-design` skill — comprehensive frontend audit and fixes across 25 files (PR #70, merged)
+- **Accessibility**: skip-to-content link, global focus-visible indicators, header keyboard navigation with full ARIA support, search input aria-labels, prefers-reduced-motion, WCAG-compliant 44px footer touch targets
+- **Design system**: unified button classes on homepage, consistent font-bold headings, badge component classes, footer contrast fix (gray-500 → gray-600 for 5.74:1 ratio)
+- **Performance**: moved Google Fonts from render-blocking CSS @import to `<link>` with preconnect, added avatar width/height to prevent CLS
+- **UX polish**: smooth mobile menu animation (grid-rows transition), inter-dashboard pill navigation (`DashboardNav.astro`) across all 5 dashboards, extracted shared `useDarkMode` hook from 10 dashboard components
+- **Header rewrite** (177 lines changed): full keyboard nav, dropdown with Enter/Space/Escape/Arrow keys, mobile menu with aria-expanded
+
+### Key Decisions
+- Extracted `useDarkMode.ts` shared hook (was duplicated across 10 dashboard components)
+- Created `DashboardNav.astro` pill navigation component for cross-dashboard navigation
+- Footer social icons sized to 44px minimum touch target per WCAG 2.1
+
+### Next Steps
+- Run Lighthouse audit to confirm accessibility score 95+
+- Test screen reader flow on key pages
+- Extract shared `PlotWrapper` and `TabNav` components (DRY refactoring — still pending from dashboard review session)
+
+### Open Questions
+- None
+
+## Session: 2026-02-10 (quick checkup)
+
+### Completed
+- Ran `/preflight` — all tools healthy, clean working tree, no interrupted work
+- Identified previous session (frontend design, PR #70) closed without `/wrapup`
+- Backfilled SESSION_LOG.md entry for the frontend design session from PR #70 metadata
+
+### Key Decisions
+- None
+
+### Next Steps
+- Run Lighthouse audit to confirm a11y improvements from PR #70
+- Extract shared `PlotWrapper` and `TabNav` components (DRY — carried forward)
+- Test `/scrape-news` skill (carried forward)
+
+### Open Questions
+- None
