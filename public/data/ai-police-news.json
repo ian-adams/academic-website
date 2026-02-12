@@ -1,7 +1,47 @@
 {
-  "updated": "2026-02-11T09:46:24.222Z",
-  "count": 1440,
+  "updated": "2026-02-12T09:43:05.350Z",
+  "count": 1442,
   "stories": [
+    {
+      "id": "e84da2d4bd6a2009094e6e4e14d557ac",
+      "url": "https://www.denverpost.com/2026/02/10/flock-cameras-privacy-debate-thornton-colorado-legislature/",
+      "title": "Pushback against Flock cameras comes to Denver suburb — the latest Colorado city to enter debate",
+      "source": "The Denver Post",
+      "date": "2026-02-10",
+      "date_discovered": "2026-02-12",
+      "summary": "<a href=\"https://www.denverpost.com/2026/02/10/flock-cameras-privacy-debate-thornton-colorado-legislature/\" target=\"_blank\">Pushback against Flock cameras comes to Denver suburb — the latest Colorado city to enter debate</a> <font color=\"#6f6f6f\">The Denver Post</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Flock Safety, Thornton Police Department, Steve Mathias",
+      "location": "Thornton, Colorado",
+      "tags": [
+        "ALPR",
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "c30999fdcba4762cb03b55207a83ce59",
+      "url": "https://timesofindia.indiatimes.com/education/news/parents-educators-raise-privacy-concerns-as-ice-taps-us-school-cameras-for-enforcement/articleshow/128159224.cms",
+      "title": "Parents, educators raise privacy concerns as ICE taps US school cameras for enforcement",
+      "source": "The Times of India",
+      "date": "2026-02-10",
+      "date_discovered": "2026-02-12",
+      "summary": "<a href=\"https://timesofindia.indiatimes.com/education/news/parents-educators-raise-privacy-concerns-as-ice-taps-us-school-cameras-for-enforcement/articleshow/128159224.cms\" target=\"_blank\">Parents, educators raise privacy concerns as ICE taps US school cameras for enforcement</a> <font color=\"#6f6f6f\">The Times of India</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "ICE, US schools, police departments",
+      "location": "Texas",
+      "tags": [
+        "surveillance",
+        "ALPR",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "fecb9d0424f2bd467bdfc55ff80736c5",
       "url": "https://www.salon.com/2026/02/08/police-departments-embracing-ai-expose-public-safety-as-a-sham/",
