@@ -1,7 +1,26 @@
 {
-  "updated": "2026-02-11T11:43:43.938Z",
-  "count": 180,
+  "updated": "2026-02-12T11:38:45.815Z",
+  "count": 181,
   "stories": [
+    {
+      "id": "0c8704eb1c998bd719ad310cab9f956e",
+      "url": "https://law.stanford.edu/press/stanford-center-for-racial-justice-brings-transparency-to-the-rules-governing-police-use-of-force/",
+      "title": "Stanford Center for Racial Justice Brings Transparency to the Rules Governing Police Use of Force",
+      "source": "Stanford.edu",
+      "date": "2026-02-10",
+      "date_discovered": "2026-02-12",
+      "summary": "<a href=\"https://law.stanford.edu/press/stanford-center-for-racial-justice-brings-transparency-to-the-rules-governing-police-use-of-force/\" target=\"_blank\">Stanford Center for Racial Justice Brings Transparency to the Rules Governing Police Use of Force</a> <font color=\"#6f6f6f\">Stanford.edu</font>",
+      "story_type": "research",
+      "relevance_score": 0.9,
+      "key_entities": "Stanford Center for Racial Justice, police departments",
+      "location": "United States",
+      "tags": [
+        "use of force",
+        "policy",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "ec3a5b2eb0f2e3694f077370d4a955f4",
       "url": "https://www.wsoctv.com/news/local/1-sent-hospital-following-officer-involved-shooting-hickory/BYLBESKQEZEWHKKHPWPCL6GF4E/",
