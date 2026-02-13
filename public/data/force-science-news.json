@@ -1,7 +1,25 @@
 {
-  "updated": "2026-02-12T11:38:45.815Z",
-  "count": 181,
+  "updated": "2026-02-13T11:30:44.778Z",
+  "count": 182,
   "stories": [
+    {
+      "id": "890ad19ea4240cbdd07e5ce2149efb1b",
+      "url": "https://www.montgomeryadvertiser.com/story/news/crime/2026/02/11/alabama-state-trooper-hospitalized-after-shooting-in-montgomery/88634274007/",
+      "title": "Alabama state trooper hospitalized after shooting in Montgomery",
+      "source": "Montgomery Advertiser",
+      "date": "2026-02-12",
+      "date_discovered": "2026-02-13",
+      "summary": "<a href=\"https://www.montgomeryadvertiser.com/story/news/crime/2026/02/11/alabama-state-trooper-hospitalized-after-shooting-in-montgomery/88634274007/\" target=\"_blank\">Alabama state trooper hospitalized after shooting in Montgomery</a> <font color=\"#6f6f6f\">Montgomery Advertiser</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Alabama Law Enforcement Agency, ALEA, Alabama state trooper",
+      "location": "Montgomery, Alabama",
+      "tags": [
+        "shooting",
+        "use of force"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "0c8704eb1c998bd719ad310cab9f956e",
       "url": "https://law.stanford.edu/press/stanford-center-for-racial-justice-brings-transparency-to-the-rules-governing-police-use-of-force/",

@@ -4,7 +4,15 @@
     <title>Force Science News</title>
     <description>Force Science News - automated news feed</description>
     <link>https://ianadamsresearch.com/force-science</link>
-    <lastBuildDate>Thu, 12 Feb 2026 11:38:45 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Feb 2026 11:30:44 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Alabama state trooper hospitalized after shooting in Montgomery]]></title>
+      <link>https://www.montgomeryadvertiser.com/story/news/crime/2026/02/11/alabama-state-trooper-hospitalized-after-shooting-in-montgomery/88634274007/</link>
+      <guid>890ad19ea4240cbdd07e5ce2149efb1b</guid>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+      <source>Montgomery Advertiser</source>
+      <description><![CDATA[<a href="https://www.montgomeryadvertiser.com/story/news/crime/2026/02/11/alabama-state-trooper-hospitalized-after-shooting-in-montgomery/88634274007/" target="_blank">Alabama state trooper hospitalized after shooting in Montgomery</a> <font color="#6f6f6f">Montgomery Advertiser</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[Stanford Center for Racial Justice Brings Transparency to the Rules Governing Police Use of Force]]></title>
       <link>https://law.stanford.edu/press/stanford-center-for-racial-justice-brings-transparency-to-the-rules-governing-police-use-of-force/</link>
@@ -396,14 +404,6 @@
       <pubDate>Sun, 25 Jan 2026 00:00:00 GMT</pubDate>
       <source>The Daily Caller</source>
       <description><![CDATA[<a href="https://dailycaller.com/2026/01/25/federal-judge-dhs-preserve-evidence-alex-pretti-shooting-minneapolis/" target="_blank">Federal Judge Tells DHS Not To Destroy Evidence From Pretti Shooting</a> <font color="#6f6f6f">The Daily Caller</font>]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Third fatal officer-involved shooting in Minneapolis within a month exposes enforcement flaws, may heighten federal-state tension: expert]]></title>
-      <link>https://www.globalsecurity.org/security/library/news/2026/01/sec-260125-globaltimes01.htm</link>
-      <guid>570ca044142bf4dab4e76ef416842b14</guid>
-      <pubDate>Sun, 25 Jan 2026 00:00:00 GMT</pubDate>
-      <source>Globalsecurity.org</source>
-      <description><![CDATA[<a href="https://www.globalsecurity.org/security/library/news/2026/01/sec-260125-globaltimes01.htm" target="_blank">Third fatal officer-involved shooting in Minneapolis within a month exposes enforcement flaws, may heighten federal-state tension: expert</a> <font color="#6f6f6f">Globalsecurity.org</font>]]></description>
     </item>
   </channel>
 </rss>
