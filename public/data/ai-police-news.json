@@ -1,7 +1,85 @@
 {
-  "updated": "2026-02-12T09:43:05.350Z",
-  "count": 1442,
+  "updated": "2026-02-13T09:38:23.857Z",
+  "count": 1446,
   "stories": [
+    {
+      "id": "7684e0551882c7926a033e8bb5db3c10",
+      "url": "https://www.bgr.com/2098762/ring-camera-return-how-much-they-get/",
+      "title": "Ring Owners Are Returning Their Cameras - Here's How Much You Can Get",
+      "source": "BGR",
+      "date": "2026-02-11",
+      "date_discovered": "2026-02-13",
+      "summary": "<a href=\"https://www.bgr.com/2098762/ring-camera-return-how-much-they-get/\" target=\"_blank\">Ring Owners Are Returning Their Cameras - Here's How Much You Can Get</a> <font color=\"#6f6f6f\">BGR</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Ring, Amazon, law enforcement",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "3f9fb0bf4a35b8306cfafedcde9db1be",
+      "url": "https://www.eff.org/deeplinks/2026/02/free-surveillance-tech-still-comes-high-and-dangerous-cost",
+      "title": "“Free” Surveillance Tech Still Comes at a High and Dangerous Cost",
+      "source": "EFF",
+      "date": "2026-02-11",
+      "date_discovered": "2026-02-13",
+      "summary": "<a href=\"https://www.eff.org/deeplinks/2026/02/free-surveillance-tech-still-comes-high-and-dangerous-cost\" target=\"_blank\">“Free” Surveillance Tech Still Comes at a High and Dangerous Cost</a> <font color=\"#6f6f6f\">EFF</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.9,
+      "key_entities": "EFF, surveillance technology vendors, federal agencies, local law enforcement",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "policy",
+        "civil rights",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "0a2ec0f7466430fc20dd8c16b0be9d20",
+      "url": "https://fortune.com/2026/02/11/privacy-concerns-nancy-guthrie-google-nest-camera-footage-kidnapping/",
+      "title": "Law enforcement thought Nancy Guthrie’s smart camera was disconnected, but Google Nest still had the tape",
+      "source": "Fortune",
+      "date": "2026-02-11",
+      "date_discovered": "2026-02-13",
+      "summary": "<a href=\"https://fortune.com/2026/02/11/privacy-concerns-nancy-guthrie-google-nest-camera-footage-kidnapping/\" target=\"_blank\">Law enforcement thought Nancy Guthrie’s smart camera was disconnected, but Google Nest still had the tape</a> <font color=\"#6f6f6f\">Fortune</font>",
+      "story_type": "incident",
+      "relevance_score": 0.7,
+      "key_entities": "Google Nest, Nancy Guthrie, law enforcement",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "eecc256fefab7b93863e38a282c2ab39",
+      "url": "https://reason.com/2026/02/10/rings-lost-dog-finder-is-a-potential-civil-liberties-nightmare/",
+      "title": "Ring's Lost Dog Finder Is a Potential Civil Liberties Nightmare",
+      "source": "Reason",
+      "date": "2026-02-10",
+      "date_discovered": "2026-02-13",
+      "summary": "<a href=\"https://reason.com/2026/02/10/rings-lost-dog-finder-is-a-potential-civil-liberties-nightmare/\" target=\"_blank\">Ring's Lost Dog Finder Is a Potential Civil Liberties Nightmare</a> <font color=\"#6f6f6f\">Reason</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Ring, Amazon, Search Party",
+      "location": null,
+      "tags": [
+        "AI",
+        "surveillance",
+        "civil rights",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "e84da2d4bd6a2009094e6e4e14d557ac",
       "url": "https://www.denverpost.com/2026/02/10/flock-cameras-privacy-debate-thornton-colorado-legislature/",
