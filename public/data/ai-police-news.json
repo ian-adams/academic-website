@@ -1,7 +1,65 @@
 {
-  "updated": "2026-02-13T09:38:23.857Z",
-  "count": 1446,
+  "updated": "2026-02-14T09:25:43.364Z",
+  "count": 1449,
   "stories": [
+    {
+      "id": "d0e48a0cbb1d59e5be608ec7aa19c6a7",
+      "url": "https://www.androidauthority.com/ring-flock-partnership-canceled-3640666/",
+      "title": "Ring cancels controversial integration after major user backlash and privacy concerns",
+      "source": "Android Authority",
+      "date": "2026-02-13",
+      "date_discovered": "2026-02-14",
+      "summary": "<a href=\"https://www.androidauthority.com/ring-flock-partnership-canceled-3640666/\" target=\"_blank\">Ring cancels controversial integration after major user backlash and privacy concerns</a> <font color=\"#6f6f6f\">Android Authority</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Ring, Flock Safety",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "privacy",
+        "ALPR",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "8792cad47ed2b42baf9e41e9408225e0",
+      "url": "https://www.nbcnews.com/news/us-news/amazon-no-longer-working-police-tech-flock-safety-super-bowl-ad-rcna258855",
+      "title": "Amazon drops plans to partner Ring doorbell cameras with police surveillance tech company",
+      "source": "NBC News",
+      "date": "2026-02-13",
+      "date_discovered": "2026-02-14",
+      "summary": "<a href=\"https://www.nbcnews.com/news/us-news/amazon-no-longer-working-police-tech-flock-safety-super-bowl-ad-rcna258855\" target=\"_blank\">Amazon drops plans to partner Ring doorbell cameras with police surveillance tech company</a> <font color=\"#6f6f6f\">NBC News</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Amazon, Ring, Flock Safety",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "557eca591bb63278814570d446bd5aba",
+      "url": "https://www.theverge.com/news/878447/ring-flock-partnership-canceled",
+      "title": "Ring cancels its partnership with Flock Safety after surveillance backlash",
+      "source": "The Verge",
+      "date": "2026-02-12",
+      "date_discovered": "2026-02-14",
+      "summary": "<a href=\"https://www.theverge.com/news/878447/ring-flock-partnership-canceled\" target=\"_blank\">Ring cancels its partnership with Flock Safety after surveillance backlash</a> <font color=\"#6f6f6f\">The Verge</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Ring, Amazon, Flock Safety",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "policy",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "7684e0551882c7926a033e8bb5db3c10",
       "url": "https://www.bgr.com/2098762/ring-camera-return-how-much-they-get/",
