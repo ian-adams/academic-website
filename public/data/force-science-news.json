@@ -1,7 +1,26 @@
 {
-  "updated": "2026-02-13T11:30:44.778Z",
-  "count": 182,
+  "updated": "2026-02-14T11:21:18.740Z",
+  "count": 183,
   "stories": [
+    {
+      "id": "e882b140a6ea67d0950e3d13fc3c8e97",
+      "url": "https://komonews.com/news/local/officer-involved-shooting-gun-violence-seattle-police-department-spd-law-enforcement-ballard-neighborhood-northwest-62nd-street-28th-avenue-west",
+      "title": "Officer-involved shooting under investigation in Seattle’s Ballard neighborhood",
+      "source": "KOMO News",
+      "date": "2026-02-13",
+      "date_discovered": "2026-02-14",
+      "summary": "<a href=\"https://komonews.com/news/local/officer-involved-shooting-gun-violence-seattle-police-department-spd-law-enforcement-ballard-neighborhood-northwest-62nd-street-28th-avenue-west\" target=\"_blank\">Officer-involved shooting under investigation in Seattle’s Ballard neighborhood</a> <font color=\"#6f6f6f\">KOMO News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Seattle Police Department",
+      "location": "Seattle, Washington",
+      "tags": [
+        "use of force",
+        "deadly force",
+        "shooting"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "890ad19ea4240cbdd07e5ce2149efb1b",
       "url": "https://www.montgomeryadvertiser.com/story/news/crime/2026/02/11/alabama-state-trooper-hospitalized-after-shooting-in-montgomery/88634274007/",
