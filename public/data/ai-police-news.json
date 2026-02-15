@@ -1,7 +1,181 @@
 {
-  "updated": "2026-02-14T09:25:43.364Z",
-  "count": 1449,
+  "updated": "2026-02-15T09:26:34.283Z",
+  "count": 1458,
   "stories": [
+    {
+      "id": "598336a57f5821ed248ed41d189c2b96",
+      "url": "https://www.thehindubusinessline.com/news/world/amazons-ring-ends-flock-safety-partnership-amid-privacy-concerns/article70631220.ece",
+      "title": "Amazon’s Ring ends Flock Safety partnership amid privacy concerns",
+      "source": "BusinessLine",
+      "date": "2026-02-14",
+      "date_discovered": "2026-02-15",
+      "summary": "<a href=\"https://www.thehindubusinessline.com/news/world/amazons-ring-ends-flock-safety-partnership-amid-privacy-concerns/article70631220.ece\" target=\"_blank\">Amazon’s Ring ends Flock Safety partnership amid privacy concerns</a> <font color=\"#6f6f6f\">BusinessLine</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Amazon Ring, Flock Safety, Search Party",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "9587a99d7236afcc0eb19f8b6cefb79c",
+      "url": "https://www.kcra.com/article/ring-ends-flock-integration/70348360",
+      "title": "Amazon scraps partnership with surveillance company after Super Bowl ad backlash",
+      "source": "KCRA Sacramento",
+      "date": "2026-02-13",
+      "date_discovered": "2026-02-15",
+      "summary": "<a href=\"https://www.kcra.com/article/ring-ends-flock-integration/70348360\" target=\"_blank\">Amazon scraps partnership with surveillance company after Super Bowl ad backlash</a> <font color=\"#6f6f6f\">KCRA Sacramento</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Amazon, Ring, Flock Safety",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "33473c89a09c58d8597348fe173e672f",
+      "url": "https://economictimes.indiatimes.com/tech/technology/amazon-scraps-partnership-with-surveillance-company-after-super-bowl-ad-backlash/articleshow/128316383.cms",
+      "title": "Amazon scraps partnership with surveillance company after Super Bowl ad backlash",
+      "source": "The Times of India",
+      "date": "2026-02-13",
+      "date_discovered": "2026-02-15",
+      "summary": "<a href=\"https://economictimes.indiatimes.com/tech/technology/amazon-scraps-partnership-with-surveillance-company-after-super-bowl-ad-backlash/articleshow/128316383.cms\" target=\"_blank\">Amazon scraps partnership with surveillance company after Super Bowl ad backlash</a> <font color=\"#6f6f6f\">The Times of India</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Amazon Ring, Flock Safety, law enforcement",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "d1658f77900ae353f02c76cb6c86fb1b",
+      "url": "https://apnews.com/article/amazon-flock-super-bowl-surveillance-privacy-32b7d32a06d369bffe3ffdcdd31962a1",
+      "title": "Amazon scraps partnership with surveillance company after Super Bowl ad backlash",
+      "source": "Associated Press",
+      "date": "2026-02-13",
+      "date_discovered": "2026-02-15",
+      "summary": "<a href=\"https://apnews.com/article/amazon-flock-super-bowl-surveillance-privacy-32b7d32a06d369bffe3ffdcdd31962a1\" target=\"_blank\">Amazon scraps partnership with surveillance company after Super Bowl ad backlash</a> <font color=\"#6f6f6f\">Associated Press</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Amazon, Ring, Flock Safety, police",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "f8b9a78c9c1e0c6819d1e6f20569953a",
+      "url": "https://www.newser.com/story/383699/ring-drops-deal-with-surveillance-company.html",
+      "title": "Ring Drops Deal With Surveillance Company",
+      "source": "Newser",
+      "date": "2026-02-13",
+      "date_discovered": "2026-02-15",
+      "summary": "<a href=\"https://www.newser.com/story/383699/ring-drops-deal-with-surveillance-company.html\" target=\"_blank\">Ring Drops Deal With Surveillance Company</a> <font color=\"#6f6f6f\">Newser</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Ring, Amazon, Flock Safety",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "ALPR",
+        "policy",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "a1930b2d413338721ac0ed7e82ffeb12",
+      "url": "https://techcrunch.com/2026/02/13/amazons-ring-cancels-partnership-with-flock-a-network-of-ai-cameras-used-by-ice-feds-and-police/",
+      "title": "Amazon's Ring cancels partnership with Flock, a network of AI cameras used by ICE, feds, and police | TechCrunch",
+      "source": "TechCrunch",
+      "date": "2026-02-13",
+      "date_discovered": "2026-02-15",
+      "summary": "<a href=\"https://techcrunch.com/2026/02/13/amazons-ring-cancels-partnership-with-flock-a-network-of-ai-cameras-used-by-ice-feds-and-police/\" target=\"_blank\">Amazon's Ring cancels partnership with Flock, a network of AI cameras used by ICE, feds, and police | TechCrunch</a> <font color=\"#6f6f6f\">TechCrunch</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Amazon Ring, Flock Safety, ICE, police departments",
+      "location": null,
+      "tags": [
+        "AI",
+        "surveillance",
+        "policy",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "37291cef29ab9dab87771be41b792a08",
+      "url": "https://www.techradar.com/home/smart-home/ring-cuts-ties-with-controversial-police-tech-company-after-dystopian-super-bowl-ad-sparks-a-huge-backlash",
+      "title": "Ring cuts ties with controversial police tech company after 'dystopian' Super Bowl ad sparks a huge backlash",
+      "source": "TechRadar",
+      "date": "2026-02-13",
+      "date_discovered": "2026-02-15",
+      "summary": "<a href=\"https://www.techradar.com/home/smart-home/ring-cuts-ties-with-controversial-police-tech-company-after-dystopian-super-bowl-ad-sparks-a-huge-backlash\" target=\"_blank\">Ring cuts ties with controversial police tech company after 'dystopian' Super Bowl ad sparks a huge backlash</a> <font color=\"#6f6f6f\">TechRadar</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Ring, Flock Safety",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "c26cc3a2c1d6bd262795570afc6b5902",
+      "url": "https://www.usatoday.com/story/tech/smart-home/2026/02/13/ring-camera-ad-flock-partnership-super-bowl/88657750007/",
+      "title": "Ring ends partnership with Flock, company that gives info to police",
+      "source": "USA Today",
+      "date": "2026-02-13",
+      "date_discovered": "2026-02-15",
+      "summary": "<a href=\"https://www.usatoday.com/story/tech/smart-home/2026/02/13/ring-camera-ad-flock-partnership-super-bowl/88657750007/\" target=\"_blank\">Ring ends partnership with Flock, company that gives info to police</a> <font color=\"#6f6f6f\">USA Today</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Ring, Flock, police departments",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "082711bd59b1de8c97e893d7a9fe0338",
+      "url": "https://www.techdirt.com/2026/02/13/cops-criticize-flock-safety-after-its-caught-handing-out-access-to-federal-agencies/",
+      "title": "Cops Criticize Flock Safety After It’s Caught Handing Out Access To Federal Agencies",
+      "source": "Techdirt",
+      "date": "2026-02-13",
+      "date_discovered": "2026-02-15",
+      "summary": "<a href=\"https://www.techdirt.com/2026/02/13/cops-criticize-flock-safety-after-its-caught-handing-out-access-to-federal-agencies/\" target=\"_blank\">Cops Criticize Flock Safety After It’s Caught Handing Out Access To Federal Agencies</a> <font color=\"#6f6f6f\">Techdirt</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "Flock Safety, Mountain View Police Department, federal agencies",
+      "location": "Mountain View, California",
+      "tags": [
+        "ALPR",
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "d0e48a0cbb1d59e5be608ec7aa19c6a7",
       "url": "https://www.androidauthority.com/ring-flock-partnership-canceled-3640666/",
