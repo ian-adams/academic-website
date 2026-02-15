@@ -1,7 +1,47 @@
 {
-  "updated": "2026-02-14T11:21:18.740Z",
-  "count": 183,
+  "updated": "2026-02-15T11:21:20.542Z",
+  "count": 185,
   "stories": [
+    {
+      "id": "acd9b5bdfd5c60df10290d7b82857794",
+      "url": "https://ktul.com/news/local/tulsa-police-outline-mental-health-crisis-response-protocols-officer-ivolved-shooting-first-aid-evidence-tulsa-county-district-attorney-office",
+      "title": "Tulsa Police Outline Mental Health Crisis Response Protocols",
+      "source": "KTUL",
+      "date": "2026-02-14",
+      "date_discovered": "2026-02-15",
+      "summary": "<a href=\"https://ktul.com/news/local/tulsa-police-outline-mental-health-crisis-response-protocols-officer-ivolved-shooting-first-aid-evidence-tulsa-county-district-attorney-office\" target=\"_blank\">Tulsa Police Outline Mental Health Crisis Response Protocols</a> <font color=\"#6f6f6f\">KTUL</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Tulsa Police Department",
+      "location": "Tulsa, Oklahoma",
+      "tags": [
+        "use of force",
+        "shooting",
+        "policy",
+        "de-escalation"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "a4cd1fff2ad8b954c3634c4171ca4dd2",
+      "url": "https://www.globenewswire.com/news-release/2026/02/13/3238037/0/en/Loveland-Police-Department-Expands-to-Department-Wide-Deployment-of-BolaWrap-150-as-Part-of-Comprehensive-Non-Lethal-Response-Strategy-for-All-Sworn-Officers.html",
+      "title": "Loveland Police Department Expands to Department-Wide Deployment of BolaWrap® 150 as Part of Comprehensive Non-Lethal Response Strategy for All Sworn Officers",
+      "source": "GlobeNewswire",
+      "date": "2026-02-13",
+      "date_discovered": "2026-02-15",
+      "summary": "<a href=\"https://www.globenewswire.com/news-release/2026/02/13/3238037/0/en/Loveland-Police-Department-Expands-to-Department-Wide-Deployment-of-BolaWrap-150-as-Part-of-Comprehensive-Non-Lethal-Response-Strategy-for-All-Sworn-Officers.html\" target=\"_blank\">Loveland Police Department Expands to Department-Wide Deployment of BolaWrap® 150 as Part of Comprehensive Non-Lethal Response Strategy for All Sworn Officers</a> <font color=\"#6f6f6f\">GlobeNewswire</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Loveland Police Department, Wrap Technologies Inc, BolaWrap 150",
+      "location": "Loveland, Colorado",
+      "tags": [
+        "use of force",
+        "training",
+        "policy",
+        "de-escalation"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "e882b140a6ea67d0950e3d13fc3c8e97",
       "url": "https://komonews.com/news/local/officer-involved-shooting-gun-violence-seattle-police-department-spd-law-enforcement-ballard-neighborhood-northwest-62nd-street-28th-avenue-west",
