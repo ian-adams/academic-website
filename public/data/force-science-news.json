@@ -1,7 +1,26 @@
 {
-  "updated": "2026-02-15T11:21:20.542Z",
-  "count": 185,
+  "updated": "2026-02-16T11:39:26.788Z",
+  "count": 186,
   "stories": [
+    {
+      "id": "97a65a9cbe69c3e4b3656f7808b8acd0",
+      "url": "https://www.wpxi.com/news/local/swat-units-shoot-man-barricaded-lower-burrell-home-accused-shooting-officers/DUFVUKMRZBGCLGEJ3N7NQ3TTHI/",
+      "title": "SWAT units shoot man barricaded in Lower Burrell home, accused of shooting at officers",
+      "source": "WPXI Pittsburgh",
+      "date": "2026-02-15",
+      "date_discovered": "2026-02-16",
+      "summary": "<a href=\"https://www.wpxi.com/news/local/swat-units-shoot-man-barricaded-lower-burrell-home-accused-shooting-officers/DUFVUKMRZBGCLGEJ3N7NQ3TTHI/\" target=\"_blank\">SWAT units shoot man barricaded in Lower Burrell home, accused of shooting at officers</a> <font color=\"#6f6f6f\">WPXI Pittsburgh</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Lower Burrell Police Department, Westmoreland County detectives, SWAT units",
+      "location": "Lower Burrell, Pennsylvania",
+      "tags": [
+        "use of force",
+        "deadly force",
+        "shooting"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "acd9b5bdfd5c60df10290d7b82857794",
       "url": "https://ktul.com/news/local/tulsa-police-outline-mental-health-crisis-response-protocols-officer-ivolved-shooting-first-aid-evidence-tulsa-county-district-attorney-office",
