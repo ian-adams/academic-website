@@ -1,7 +1,27 @@
 {
-  "updated": "2026-02-15T09:26:34.283Z",
-  "count": 1458,
+  "updated": "2026-02-16T09:46:14.772Z",
+  "count": 1459,
   "stories": [
+    {
+      "id": "36f01bcf99c6fbf8d64f4e1c170b9af5",
+      "url": "https://fortune.com/2026/02/14/amazon-ring-flock-safety-license-plate-reading-systems-super-bowl-ad-surveillance-society/",
+      "title": "Amazon’s Ring ends partnership with top operator of license-plate reading systems after Super Bowl ad raises fears of dystopian surveillance society",
+      "source": "Fortune",
+      "date": "2026-02-14",
+      "date_discovered": "2026-02-16",
+      "summary": "<a href=\"https://fortune.com/2026/02/14/amazon-ring-flock-safety-license-plate-reading-systems-super-bowl-ad-surveillance-society/\" target=\"_blank\">Amazon’s Ring ends partnership with top operator of license-plate reading systems after Super Bowl ad raises fears of dystopian surveillance society</a> <font color=\"#6f6f6f\">Fortune</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Amazon Ring, Flock Safety, police surveillance",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "ALPR",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "598336a57f5821ed248ed41d189c2b96",
       "url": "https://www.thehindubusinessline.com/news/world/amazons-ring-ends-flock-safety-partnership-amid-privacy-concerns/article70631220.ece",
