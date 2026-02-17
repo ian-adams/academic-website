@@ -1,7 +1,27 @@
 {
-  "updated": "2026-02-16T11:39:26.788Z",
-  "count": 186,
+  "updated": "2026-02-17T11:38:31.531Z",
+  "count": 187,
   "stories": [
+    {
+      "id": "a6bbdb81e72eb6992f4ab73cacc2c5b2",
+      "url": "https://gothamist.com/news/after-police-shootings-mamdani-faces-new-pressure-to-overhaul-nycs-mental-health-crisis-response",
+      "title": "After police shootings, Mamdani faces new pressure to overhaul NYC’s mental health crisis response",
+      "source": "Gothamist",
+      "date": "2026-02-16",
+      "date_discovered": "2026-02-17",
+      "summary": "<a href=\"https://gothamist.com/news/after-police-shootings-mamdani-faces-new-pressure-to-overhaul-nycs-mental-health-crisis-response\" target=\"_blank\">After police shootings, Mamdani faces new pressure to overhaul NYC’s mental health crisis response</a> <font color=\"#6f6f6f\">Gothamist</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "NYPD, B-HEARD, Mayor Zohran Mamdani",
+      "location": "New York City, NY",
+      "tags": [
+        "use of force",
+        "shooting",
+        "policy",
+        "de-escalation"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "97a65a9cbe69c3e4b3656f7808b8acd0",
       "url": "https://www.wpxi.com/news/local/swat-units-shoot-man-barricaded-lower-burrell-home-accused-shooting-officers/DUFVUKMRZBGCLGEJ3N7NQ3TTHI/",
