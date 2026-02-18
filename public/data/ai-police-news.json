@@ -1,7 +1,65 @@
 {
-  "updated": "2026-02-17T09:41:39.679Z",
-  "count": 1459,
+  "updated": "2026-02-18T09:40:48.976Z",
+  "count": 1462,
   "stories": [
+    {
+      "id": "fa1414e29ef63a00991a6372e6cb8f28",
+      "url": "https://www.denverpost.com/2026/02/16/denver-flock-cameras-license-plates-other-bidders/",
+      "title": "Denver considers kicking out Flock — but keeping license plate cameras",
+      "source": "The Denver Post",
+      "date": "2026-02-16",
+      "date_discovered": "2026-02-18",
+      "summary": "<a href=\"https://www.denverpost.com/2026/02/16/denver-flock-cameras-license-plates-other-bidders/\" target=\"_blank\">Denver considers kicking out Flock — but keeping license plate cameras</a> <font color=\"#6f6f6f\">The Denver Post</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Denver, Flock Safety, Mike Johnston, license plate readers",
+      "location": "Denver, Colorado",
+      "tags": [
+        "ALPR",
+        "surveillance",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "396e0096d9c459586f5ed34d87a47378",
+      "url": "https://fortune.com/2026/02/16/amazon-ring-surveillance-super-bowl-commercial-lost-dog-backlash/",
+      "title": "Amazon’s Ring decides maybe partnering with a police surveillance firm is a bad idea after wide revulsion at Super Bowl ad",
+      "source": "Fortune",
+      "date": "2026-02-16",
+      "date_discovered": "2026-02-18",
+      "summary": "<a href=\"https://fortune.com/2026/02/16/amazon-ring-surveillance-super-bowl-commercial-lost-dog-backlash/\" target=\"_blank\">Amazon’s Ring decides maybe partnering with a police surveillance firm is a bad idea after wide revulsion at Super Bowl ad</a> <font color=\"#6f6f6f\">Fortune</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Amazon Ring, Flock Safety, police surveillance",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "AI",
+        "policy",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "0b7ecc08e650adb94fa8f47d32c43a79",
+      "url": "https://www.gadgetreview.com/ring-owners-revolt-mass-returns-begin-after-shocking-privacy-betrayal",
+      "title": "Ring Owners Revolt: Mass Returns Begin After Shocking Privacy Betrayal",
+      "source": "Gadgetreview.com",
+      "date": "2026-02-16",
+      "date_discovered": "2026-02-18",
+      "summary": "<a href=\"https://www.gadgetreview.com/ring-owners-revolt-mass-returns-begin-after-shocking-privacy-betrayal\" target=\"_blank\">Ring Owners Revolt: Mass Returns Begin After Shocking Privacy Betrayal</a> <font color=\"#6f6f6f\">Gadgetreview.com</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Ring, Amazon, law enforcement",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "36f01bcf99c6fbf8d64f4e1c170b9af5",
       "url": "https://fortune.com/2026/02/14/amazon-ring-flock-safety-license-plate-reading-systems-super-bowl-ad-surveillance-society/",
