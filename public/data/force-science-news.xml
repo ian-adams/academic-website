@@ -4,7 +4,15 @@
     <title>Force Science News</title>
     <description>Force Science News - automated news feed</description>
     <link>https://ianadamsresearch.com/force-science</link>
-    <lastBuildDate>Tue, 17 Feb 2026 11:38:31 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Feb 2026 11:37:31 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Man shot, killed after confrontation with police in Cobb County neighborhood]]></title>
+      <link>https://www.wsbtv.com/news/local/armed-man-dead-after-police-shooting-cobb-county-neighborhood/CYPJPNZA6JHT7ODTQIEVO3GQQI/</link>
+      <guid>7115f1b5a22eafeacaf92490c11eaf27</guid>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 GMT</pubDate>
+      <source>WSB Atlanta</source>
+      <description><![CDATA[<a href="https://www.wsbtv.com/news/local/armed-man-dead-after-police-shooting-cobb-county-neighborhood/CYPJPNZA6JHT7ODTQIEVO3GQQI/" target="_blank">Man shot, killed after confrontation with police in Cobb County neighborhood</a> <font color="#6f6f6f">WSB Atlanta</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[After police shootings, Mamdani faces new pressure to overhaul NYC’s mental health crisis response]]></title>
       <link>https://gothamist.com/news/after-police-shootings-mamdani-faces-new-pressure-to-overhaul-nycs-mental-health-crisis-response</link>
@@ -396,14 +404,6 @@
       <pubDate>Mon, 26 Jan 2026 00:00:00 GMT</pubDate>
       <source>New York Magazine</source>
       <description><![CDATA[<a href="http://nymag.com/intelligencer/article/trump-alex-pretti-ice-minneapolis.html" target="_blank">Republican Revolt Forces Trump’s Hand on Minnesota</a> <font color="#6f6f6f">New York Magazine</font>]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Trump abandons attack mode as Minneapolis shooting backlash grows]]></title>
-      <link>https://www.bbc.com/news/articles/ckgn9q1wp0yo</link>
-      <guid>8e09a328f3ff67aaa01ce54a0f9418c3</guid>
-      <pubDate>Mon, 26 Jan 2026 00:00:00 GMT</pubDate>
-      <source>BBC News</source>
-      <description><![CDATA[<a href="https://www.bbc.com/news/articles/ckgn9q1wp0yo" target="_blank">Trump abandons attack mode as Minneapolis shooting backlash grows</a> <font color="#6f6f6f">BBC News</font>]]></description>
     </item>
   </channel>
 </rss>

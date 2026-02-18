@@ -1,7 +1,25 @@
 {
-  "updated": "2026-02-17T11:38:31.531Z",
-  "count": 187,
+  "updated": "2026-02-18T11:37:31.369Z",
+  "count": 188,
   "stories": [
+    {
+      "id": "7115f1b5a22eafeacaf92490c11eaf27",
+      "url": "https://www.wsbtv.com/news/local/armed-man-dead-after-police-shooting-cobb-county-neighborhood/CYPJPNZA6JHT7ODTQIEVO3GQQI/",
+      "title": "Man shot, killed after confrontation with police in Cobb County neighborhood",
+      "source": "WSB Atlanta",
+      "date": "2026-02-17",
+      "date_discovered": "2026-02-18",
+      "summary": "<a href=\"https://www.wsbtv.com/news/local/armed-man-dead-after-police-shooting-cobb-county-neighborhood/CYPJPNZA6JHT7ODTQIEVO3GQQI/\" target=\"_blank\">Man shot, killed after confrontation with police in Cobb County neighborhood</a> <font color=\"#6f6f6f\">WSB Atlanta</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Cobb County Police, Georgia Bureau of Investigation",
+      "location": "Cobb County, Georgia",
+      "tags": [
+        "deadly force",
+        "shooting"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "a6bbdb81e72eb6992f4ab73cacc2c5b2",
       "url": "https://gothamist.com/news/after-police-shootings-mamdani-faces-new-pressure-to-overhaul-nycs-mental-health-crisis-response",
