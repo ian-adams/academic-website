@@ -116,3 +116,31 @@ export interface JudgmentStatsResponse {
     discipline: number;
   };
 }
+
+// Killing Cascade Quiz Types
+export interface CascadeSubmitRequest {
+  responses: Array<{
+    caseId: number;
+    userGuess: 'survived' | 'died';
+    actualOutcome: 'survived' | 'died';
+    predictedPFatal: number;
+  }>;
+  totalCorrect: number;
+  totalCases: number;
+}
+
+export interface CascadeSubmitResponse {
+  sessionId: string;
+  totalVisitors: number;
+}
+
+export interface CascadeStatsResponse {
+  totalSessions: number;
+  totalResponses: number;
+  averageAccuracy: number;
+  perCase: Record<number, {
+    timesShown: number;
+    timesCorrect: number;
+    accuracyRate: number;
+  }>;
+}

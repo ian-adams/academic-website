@@ -1,0 +1,17 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import DashboardNav from '@/components/dashboard/DashboardNav.astro';
+import KillingCascade from '@/components/dashboard/KillingCascade';
+---
+
+<BaseLayout
+  title="The Killing Cascade - Case Fatality Predictor"
+  description="Interactive dashboard based on 2,041 real officer-involved shooting cases from California. Can you predict who survived? Based on Nix & Adams (2026)."
+>
+  <section class="section">
+    <div class="container-wide">
+      <DashboardNav />
+      <KillingCascade client:load />
+    </div>
+  </section>
+</BaseLayout>

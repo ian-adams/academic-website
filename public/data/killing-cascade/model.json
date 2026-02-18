@@ -1,0 +1,35 @@
+{
+  "name": "M5: Logistic Regression with Wound Location",
+  "n": 1857,
+  "pseudoR2": 0.1492,
+  "intercept": -4.4541,
+  "coefficients": {
+    "Black": -0.122,
+    "Hispanic": 0.0038,
+    "Age 10Yr": 0.2433,
+    "Female": -0.3012,
+    "Armed Assault": 0.3034,
+    "Num Involved Officers": 0.1196,
+    "Head Neck": 3.803,
+    "Chest": 3.9622,
+    "Abdomen": 2.4142
+  },
+  "oddsRatios": {
+    "Black": 0.885,
+    "Hispanic": 1.004,
+    "Age 10Yr": 1.275,
+    "Female": 0.74,
+    "Armed Assault": 1.354,
+    "Num Involved Officers": 1.127,
+    "Head Neck": 44.837,
+    "Chest": 52.574,
+    "Abdomen": 11.181
+  },
+  "overallCFR": 58.7,
+  "cfrByWound": {
+    "Head/Neck": 66.1,
+    "Chest": 69.0,
+    "Abdomen": 33.0,
+    "Extremities": 3.9
+  }
+}

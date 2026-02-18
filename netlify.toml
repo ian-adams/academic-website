@@ -30,6 +30,16 @@
   to = "/.netlify/functions/quiz-judgment-stats"
   status = 200
 
+[[redirects]]
+  from = "/api/quiz/cascade/submit"
+  to = "/.netlify/functions/quiz-cascade-submit"
+  status = 200
+
+[[redirects]]
+  from = "/api/quiz/cascade/stats"
+  to = "/.netlify/functions/quiz-cascade-stats"
+  status = 200
+
 # Headers for static assets
 [[headers]]
   for = "/data/*"
