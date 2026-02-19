@@ -27,7 +27,7 @@ interface UserGuess {
   predictedPFatal: number;
 }
 
-const CASES_PER_SESSION = 10;
+const CASES_PER_SESSION = 5;
 
 // ── Fisher-Yates shuffle ───────────────────────────────────────────────
 function shuffleArray<T>(arr: T[]): T[] {
@@ -48,6 +48,7 @@ export default function KillingCascade() {
   const [phase, setPhase] = useState<Phase>('loading');
   const [error, setError] = useState<string | null>(null);
   const [totalVisitors, setTotalVisitors] = useState<number | null>(null);
+  const [avgVisitorAccuracy, setAvgVisitorAccuracy] = useState<number | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
   // Load case data
@@ -146,6 +147,13 @@ export default function KillingCascade() {
           const data = await res.json();
           setTotalVisitors(data.totalVisitors ?? totalVisitors);
         }
+        // Fetch fresh stats (includes all visitors' average)
+        const statsRes = await fetch('/api/quiz/cascade/stats');
+        if (statsRes.ok) {
+          const stats = await statsRes.json();
+          setAvgVisitorAccuracy(stats.averageAccuracy ?? null);
+          setTotalVisitors(stats.totalSessions ?? totalVisitors);
+        }
       } catch {
         // Submission failure is non-critical
       } finally {
@@ -185,6 +193,7 @@ export default function KillingCascade() {
         modelScore={modelScore}
         totalCases={sessionCases.length}
         totalVisitors={totalVisitors}
+        avgVisitorAccuracy={avgVisitorAccuracy}
         onPlayAgain={startSession}
       />
     );
@@ -487,6 +496,7 @@ function ResultsScreen({
   modelScore,
   totalCases,
   totalVisitors,
+  avgVisitorAccuracy,
   onPlayAgain,
 }: {
   guesses: UserGuess[];
@@ -494,10 +504,12 @@ function ResultsScreen({
   modelScore: number;
   totalCases: number;
   totalVisitors: number | null;
+  avgVisitorAccuracy: number | null;
   onPlayAgain: () => void;
 }) {
   const userPct = Math.round((userScore / totalCases) * 100);
   const modelPct = Math.round((modelScore / totalCases) * 100);
+  const visitorPct = avgVisitorAccuracy !== null ? Math.round(avgVisitorAccuracy * 100) : null;
 
   let verdict: string;
   if (userScore > modelScore) {
@@ -519,8 +531,8 @@ function ResultsScreen({
         </p>
       </div>
 
-      {/* Score comparison */}
-      <div className="grid grid-cols-2 gap-4">
+      {/* Score comparison - three columns */}
+      <div className={`grid gap-4 ${visitorPct !== null ? 'grid-cols-3' : 'grid-cols-2'}`}>
         <div className="bg-gray-900 dark:bg-gray-950 rounded-xl p-5 text-center border border-gray-700">
           <p className="text-sm text-gray-400 mb-1">Your Score</p>
           <p className="text-4xl font-black text-gray-100">
@@ -535,6 +547,17 @@ function ResultsScreen({
           </p>
           <p className="text-sm text-gray-400 mt-1">{modelPct}% accuracy</p>
         </div>
+        {visitorPct !== null && (
+          <div className="bg-gray-900 dark:bg-gray-950 rounded-xl p-5 text-center border border-gray-700">
+            <p className="text-sm text-gray-400 mb-1">All Visitors</p>
+            <p className="text-4xl font-black text-gray-100">
+              {visitorPct}<span className="text-lg text-gray-500">%</span>
+            </p>
+            <p className="text-sm text-gray-400 mt-1">
+              avg accuracy{totalVisitors ? ` (n=${totalVisitors.toLocaleString()})` : ''}
+            </p>
+          </div>
+        )}
       </div>
 
       <p className="text-center text-gray-300 font-medium">{verdict}</p>
