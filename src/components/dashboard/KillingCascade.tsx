@@ -338,6 +338,14 @@ function StartScreen({
           Overall, approximately 59% of people shot by police in this dataset died.
           The statistical model gets about 70% right. Can you do better?
         </p>
+        <div className="mt-3 pt-3 border-t border-gray-700">
+          <p className="text-amber-400/90 text-xs font-medium leading-relaxed">
+            California is the only state in the U.S. that mandates reporting of <em>all</em> officer-involved
+            shootings — not just fatal ones. Most national databases (Washington Post, Mapping Police Violence,
+            Fatal Encounters) only track deaths, missing the 40&ndash;50% of people who are shot but survive.
+            This dashboard is possible only because California collects what no one else does.
+          </p>
+        </div>
       </div>
 
       <button
@@ -572,6 +580,18 @@ function ResultsScreen({
           or chest increases the odds of death by 45&ndash;53x compared to extremity wounds.
           Each additional officer firing increases fatality risk by ~13%, partly through
           a &ldquo;killing cascade&rdquo; where more officers produce more wounds in more lethal locations.
+        </p>
+      </div>
+
+      {/* Big picture */}
+      <div className="bg-amber-950/30 rounded-xl p-5 border border-amber-800/50 space-y-2">
+        <h3 className="font-semibold text-amber-300">Why Only California?</h3>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          California is the only state that mandates reporting of <em>all</em> officer-involved
+          shootings — fatal and non-fatal. National crowdsourced databases like the Washington Post&rsquo;s
+          Fatal Force, Mapping Police Violence, and Fatal Encounters only track deaths, missing the
+          40&ndash;50% of people who are shot by police but survive. This dashboard exists only because
+          California collects what no one else does.
         </p>
       </div>
 
