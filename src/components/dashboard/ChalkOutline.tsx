@@ -6,30 +6,72 @@ interface ChalkOutlineProps {
   fatal?: boolean;
 }
 
-// SVG coordinates for wound marker placement on front-facing human silhouette
-// Each region maps to [cx, cy] center point for the bullet hole marker
-const WOUND_POSITIONS: Record<string, [number, number][]> = {
-  head: [[100, 28]],
-  neck: [[100, 52]],
-  chest: [[100, 82], [85, 78], [115, 78]],
-  abdomen: [[100, 118], [90, 122], [110, 122]],
-  arms: [[50, 105], [150, 105], [44, 122], [156, 122]],
-  legs: [[83, 180], [119, 180], [80, 205], [121, 205]],
+// Bounding boxes for each region: [centerX, centerY, radiusX, radiusY]
+// Shots will be randomly placed within these zones
+const REGION_BOUNDS: Record<string, [number, number, number, number]> = {
+  head: [100, 28, 8, 10],
+  neck: [100, 52, 4, 3],
+  chest: [100, 80, 22, 14],
+  abdomen: [100, 120, 20, 12],
+  arms: [100, 108, 0, 0],    // special: randomly picks left or right arm
+  legs: [100, 190, 0, 0],    // special: randomly picks left or right leg
 };
 
-// Distribute wounds across available positions for a region
-function getWoundPositions(region: string): [number, number] {
-  const positions = WOUND_POSITIONS[region];
-  if (!positions) return [100, 100];
-  return positions[0];
+// Arm/leg specific zones (left and right)
+const LIMB_ZONES: Record<string, [number, number, number, number][]> = {
+  arms: [
+    [46, 108, 7, 16],   // left arm
+    [154, 108, 7, 16],  // right arm
+  ],
+  legs: [
+    [82, 190, 5, 22],   // left leg
+    [118, 190, 5, 22],  // right leg
+  ],
+};
+
+// Simple seeded pseudo-random for consistent placement per case
+function seededRandom(seed: number): () => number {
+  let s = seed;
+  return () => {
+    s = (s * 16807 + 0) % 2147483647;
+    return (s - 1) / 2147483646;
+  };
+}
+
+// Get a randomized position within a body region
+function getRandomPosition(region: string, rng: () => number): [number, number] {
+  // For arms and legs, pick left or right randomly
+  if (region === 'arms' || region === 'legs') {
+    const zones = LIMB_ZONES[region];
+    const zone = zones[rng() > 0.5 ? 1 : 0];
+    const angle = rng() * Math.PI * 2;
+    const r = Math.sqrt(rng()); // sqrt for uniform distribution in circle
+    return [
+      zone[0] + r * zone[2] * Math.cos(angle),
+      zone[1] + r * zone[3] * Math.sin(angle),
+    ];
+  }
+
+  const bounds = REGION_BOUNDS[region];
+  if (!bounds) return [100, 100];
+
+  const angle = rng() * Math.PI * 2;
+  const r = Math.sqrt(rng());
+  return [
+    bounds[0] + r * bounds[2] * Math.cos(angle),
+    bounds[1] + r * bounds[3] * Math.sin(angle),
+  ];
 }
 
 export default function ChalkOutline({ wounds, revealed, fatal }: ChalkOutlineProps) {
-  // Deduplicate wound regions and pick positions
+  // Deduplicate wound regions and generate randomized positions
   const uniqueWounds = [...new Set(wounds)];
+  // Seed from wound list so same case always renders same positions
+  const seed = uniqueWounds.reduce((acc, w) => acc + w.charCodeAt(0) * 31 + w.length * 997, 12345);
+  const rng = seededRandom(seed);
   const markers = uniqueWounds.map((region) => ({
     region,
-    pos: getWoundPositions(region),
+    pos: getRandomPosition(region, rng),
   }));
 
   return (
@@ -87,9 +129,16 @@ export default function ChalkOutline({ wounds, revealed, fatal }: ChalkOutlinePr
             strokeDasharray="4 1.5" opacity="0.9"
           />
 
-          {/* Mid-torso line (chest/abdomen divider) */}
-          <line x1="72" y1="105" x2="128" y2="105"
-            stroke="#d4d0c8" strokeWidth="0.5" strokeDasharray="2 3" opacity="0.3" />
+          {/* Mid-torso line (chest/abdomen divider) — prominent */}
+          <line x1="70" y1="105" x2="130" y2="105"
+            stroke="#d4d0c8" strokeWidth="1.2" strokeDasharray="4 2" opacity="0.7" />
+          {/* Region labels */}
+          <text x="100" y="90" textAnchor="middle"
+            fill="#d4d0c8" fontSize="7" fontFamily="sans-serif" opacity="0.5"
+            letterSpacing="1.5">CHEST</text>
+          <text x="100" y="130" textAnchor="middle"
+            fill="#d4d0c8" fontSize="7" fontFamily="sans-serif" opacity="0.5"
+            letterSpacing="1.5">ABDOMEN</text>
 
           {/* Left arm - closed shape with width */}
           <path
