@@ -340,10 +340,11 @@ function StartScreen({
         </p>
         <div className="mt-3 pt-3 border-t border-gray-700">
           <p className="text-amber-400/90 text-xs font-medium leading-relaxed">
-            California is the only state in the U.S. that mandates reporting of <em>all</em> officer-involved
-            shootings — not just fatal ones. Most national databases (Washington Post, Mapping Police Violence,
-            Fatal Encounters) only track deaths, missing the 40&ndash;50% of people who are shot but survive.
-            This dashboard is possible only because California collects what no one else does.
+            Only California and Texas mandate reporting of both fatal and non-fatal officer-involved
+            shootings — most national databases only track deaths, missing the 40&ndash;50% of people
+            who survive. But California goes further: it collects <em>wound location</em>, which our
+            research shows is the single most critical factor in understanding shooting fatality.
+            This dashboard is possible only because California collects what almost no one else does.
           </p>
         </div>
       </div>
@@ -587,11 +588,12 @@ function ResultsScreen({
       <div className="bg-amber-950/30 rounded-xl p-5 border border-amber-800/50 space-y-2">
         <h3 className="font-semibold text-amber-300">Why Only California?</h3>
         <p className="text-sm text-gray-300 leading-relaxed">
-          California is the only state that mandates reporting of <em>all</em> officer-involved
-          shootings — fatal and non-fatal. National crowdsourced databases like the Washington Post&rsquo;s
-          Fatal Force, Mapping Police Violence, and Fatal Encounters only track deaths, missing the
-          40&ndash;50% of people who are shot by police but survive. This dashboard exists only because
-          California collects what no one else does.
+          Only California and Texas mandate reporting of both fatal and non-fatal officer-involved
+          shootings. National databases like the Washington Post&rsquo;s Fatal Force and Mapping Police
+          Violence only track deaths, missing the 40&ndash;50% of people who are shot but survive.
+          California goes a step further by collecting <em>wound location</em> data — which this
+          research shows is the single most critical factor in predicting whether someone lives or
+          dies. This dashboard exists because California collects what almost no one else does.
         </p>
       </div>
 
