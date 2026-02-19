@@ -1,7 +1,47 @@
 {
-  "updated": "2026-02-18T09:40:48.976Z",
-  "count": 1462,
+  "updated": "2026-02-19T09:38:59.330Z",
+  "count": 1464,
   "stories": [
+    {
+      "id": "02e5ab7929950e6ed57eff7f0d1b1c75",
+      "url": "https://www.eff.org/press/releases/new-report-helps-journalists-dig-deeper-police-surveillance-technology",
+      "title": "New Report Helps Journalists Dig Deeper Into Police Surveillance Technology",
+      "source": "EFF",
+      "date": "2026-02-17",
+      "date_discovered": "2026-02-19",
+      "summary": "<a href=\"https://www.eff.org/press/releases/new-report-helps-journalists-dig-deeper-police-surveillance-technology\" target=\"_blank\">New Report Helps Journalists Dig Deeper Into Police Surveillance Technology</a> <font color=\"#6f6f6f\">EFF</font>",
+      "story_type": "research",
+      "relevance_score": 0.8,
+      "key_entities": "EFF, Center for Just Journalism, IPVM",
+      "location": "San Francisco",
+      "tags": [
+        "surveillance",
+        "policy",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "173a8e388628aea886f91558388bc858",
+      "url": "https://www.eff.org/deeplinks/2026/02/op-ed-san-jose-can-protect-immigrants-ending-flock-surveillance-system",
+      "title": "San Jose Can Protect Immigrants by Ending Flock Surveillance System",
+      "source": "EFF",
+      "date": "2026-02-17",
+      "date_discovered": "2026-02-19",
+      "summary": "<a href=\"https://www.eff.org/deeplinks/2026/02/op-ed-san-jose-can-protect-immigrants-ending-flock-surveillance-system\" target=\"_blank\">San Jose Can Protect Immigrants by Ending Flock Surveillance System</a> <font color=\"#6f6f6f\">EFF</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "San Jose, Flock Safety, EFF, SIREN, CAIR-SFBA, ICE",
+      "location": "San Jose, California",
+      "tags": [
+        "surveillance",
+        "ALPR",
+        "civil rights",
+        "policy",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "fa1414e29ef63a00991a6372e6cb8f28",
       "url": "https://www.denverpost.com/2026/02/16/denver-flock-cameras-license-plates-other-bidders/",
