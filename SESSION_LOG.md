@@ -1,3 +1,34 @@
+## Session: 2026-02-18 21:00
+
+### Completed
+- Built complete "Killing Cascade" interactive dashboard from plan through deployment (9 commits)
+- Data prep script: fits M5 logistic model on 1,857 CA DOJ cases, outputs de-identified JSON
+- SVG chalk outline component with randomized wound marker placement within body regions
+- Full quiz flow: start → 5-case session → reveal with model comparison → results with 3-way scoring
+- Supabase tracking: cascade_sessions + cascade_responses tables (SQL created, user ran in Supabase)
+- Netlify functions for submit/stats endpoints
+- Comprehensive frontend design review via /frontend-design: fixed contrast (WCAG AA), typography (font-serif consistency), RevealCard redesign, responsive grid, focus-visible states
+- Added coauthor's "Why Only California?" big-picture takeaway (CA+TX collect nonfatal, CA uniquely collects wound location)
+- Made paper links prominent button-style on start and results screens
+
+### Key Decisions
+- Front-only silhouette (rear wounds mapped to nearest front region)
+- 5 cases per session (reduced from 10 per user request)
+- Seeded PRNG for wound marker randomization (same case always renders same positions)
+- Pre-computed predicted probabilities in Python rather than reimplementing logistic model in JS
+- Direct push to master (no feature branch) per user workflow
+
+### Next Steps
+- Monitor Supabase data collection — verify visitor accuracy stats populate correctly
+- Consider adding per-case "X% of visitors got this right" stat on reveal cards
+- Light mode testing still incomplete — dark-themed components should be fine but page surrounds unverified
+
+### Open Questions
+- Raw CA data has no links to investigations/news — cross-referencing would require manual work
+- The 0.92 SE correction in PerCapitaChart (unrelated) still needs researcher verification
+
+---
+
 ## Session: 2026-02-10 09:40
 
 ### Completed
