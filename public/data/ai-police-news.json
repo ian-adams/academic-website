@@ -1,7 +1,47 @@
 {
-  "updated": "2026-02-19T09:38:59.330Z",
-  "count": 1464,
+  "updated": "2026-02-20T09:36:37.192Z",
+  "count": 1466,
   "stories": [
+    {
+      "id": "51656083f29632b32f49e331dd6c0c04",
+      "url": "https://www.techdirt.com/2026/02/18/free-surveillance-tech-still-comes-at-a-high-and-dangerous-cost/",
+      "title": "“Free” Surveillance Tech Still Comes At A High And Dangerous Cost",
+      "source": "Techdirt",
+      "date": "2026-02-18",
+      "date_discovered": "2026-02-20",
+      "summary": "<a href=\"https://www.techdirt.com/2026/02/18/free-surveillance-tech-still-comes-at-a-high-and-dangerous-cost/\" target=\"_blank\">“Free” Surveillance Tech Still Comes At A High And Dangerous Cost</a> <font color=\"#6f6f6f\">Techdirt</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.8,
+      "key_entities": "Techdirt, surveillance technology vendors, federal agencies, local law enforcement",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "policy",
+        "civil rights",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "a8abc6478ddc3c170477a44e012a36dd",
+      "url": "https://reason.com/2026/02/18/was-it-a-coincidental-traffic-stop-or-ai-powered-surveillance/",
+      "title": "Was It a Coincidental Traffic Stop or AI-Powered Surveillance?",
+      "source": "Reason",
+      "date": "2026-02-18",
+      "date_discovered": "2026-02-20",
+      "summary": "<a href=\"https://reason.com/2026/02/18/was-it-a-coincidental-traffic-stop-or-ai-powered-surveillance/\" target=\"_blank\">Was It a Coincidental Traffic Stop or AI-Powered Surveillance?</a> <font color=\"#6f6f6f\">Reason</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.9,
+      "key_entities": "Seth Ferranti, Nebraska deputies, license plate readers, Fourth Amendment",
+      "location": "Nebraska",
+      "tags": [
+        "ALPR",
+        "surveillance",
+        "civil rights",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "02e5ab7929950e6ed57eff7f0d1b1c75",
       "url": "https://www.eff.org/press/releases/new-report-helps-journalists-dig-deeper-police-surveillance-technology",
