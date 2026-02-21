@@ -1,7 +1,25 @@
 {
-  "updated": "2026-02-20T11:31:17.170Z",
-  "count": 188,
+  "updated": "2026-02-21T11:21:18.519Z",
+  "count": 189,
   "stories": [
+    {
+      "id": "1d9d23567e6021ab7f02c1cbaf95bb8e",
+      "url": "https://newrepublic.com/article/206693/transcript-minneapolis-mayor-trump-will-never-break-us",
+      "title": "Transcript: Minneapolis Mayor to Trump: You Will Never Break Us",
+      "source": "The New Republic",
+      "date": "2026-02-18",
+      "date_discovered": "2026-02-21",
+      "summary": "<a href=\"https://newrepublic.com/article/206693/transcript-minneapolis-mayor-trump-will-never-break-us\" target=\"_blank\">Transcript: Minneapolis Mayor to Trump: You Will Never Break Us</a> <font color=\"#6f6f6f\">The New Republic</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Minneapolis Mayor, FBI, Bureau of Criminal Apprehension, Alex Prettis",
+      "location": "Minneapolis, Minnesota",
+      "tags": [
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "7115f1b5a22eafeacaf92490c11eaf27",
       "url": "https://www.wsbtv.com/news/local/armed-man-dead-after-police-shooting-cobb-county-neighborhood/CYPJPNZA6JHT7ODTQIEVO3GQQI/",
