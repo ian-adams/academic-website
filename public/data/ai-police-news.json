@@ -1,7 +1,27 @@
 {
-  "updated": "2026-02-21T09:24:17.933Z",
-  "count": 1466,
+  "updated": "2026-02-22T09:25:21.290Z",
+  "count": 1467,
   "stories": [
+    {
+      "id": "8290281d70d7155e93eabdcab55e3102",
+      "url": "https://www.bloodinthemachine.com/p/across-the-us-people-are-dismantling",
+      "title": "Across the US, people are dismantling and destroying Flock surveillance cameras",
+      "source": "Bloodinthemachine.com",
+      "date": "2026-02-20",
+      "date_discovered": "2026-02-22",
+      "summary": "<a href=\"https://www.bloodinthemachine.com/p/across-the-us-people-are-dismantling\" target=\"_blank\">Across the US, people are dismantling and destroying Flock surveillance cameras</a> <font color=\"#6f6f6f\">Bloodinthemachine.com</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Flock Safety, ICE",
+      "location": "United States",
+      "tags": [
+        "surveillance",
+        "ALPR",
+        "civil rights",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "51656083f29632b32f49e331dd6c0c04",
       "url": "https://www.techdirt.com/2026/02/18/free-surveillance-tech-still-comes-at-a-high-and-dangerous-cost/",
