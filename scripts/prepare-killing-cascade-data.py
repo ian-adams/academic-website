@@ -18,7 +18,7 @@ import pandas as pd
 import statsmodels.api as sm
 
 # Paths
-CA_DATA = Path(r"C:\dev\research\ca_doj_use_of_force\merged_paper\outputs\study2\california_analysis_ready.csv")
+CA_DATA = Path(r"C:\Users\adams\dev\research\ca_doj_use_of_force\merged_paper\outputs\study2\california_analysis_ready.csv")
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "public" / "data" / "killing-cascade"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
