@@ -1,3 +1,49 @@
+## Session: 2026-02-22 afternoon
+
+### Completed
+- Pushed unpushed consulting page commit (`ba3812e`) — resolved stale git index.lock and HEAD.lock from crashed previous session
+- Diagnosed CV not updating on live site: `static/media/cv.pdf` (Hugo convention) was being ignored by Astro, which serves from `public/media/`; stale 2/15 copy in `public/` was overriding the updated 2/19 version
+- Fixed CV path: copied current CV to `public/media/cv.pdf`, updated automation script to target `public/`
+- Created `scripts/update-cv.py` — automated CV sync from Google Drive source (`G:\...\cv.pdf`) to repo, commits and pushes only on change
+- Set up Windows Task Scheduler task "Update Academic Website CV" to run daily at 8:00 AM
+- Deployed fix via Netlify CLI — confirmed 2/19 CV now live on site
+
+### Key Decisions
+- CV automation is local (Task Scheduler + Python script) since source is a local Google Drive file, not accessible from GitHub Actions
+- Astro uses `public/` not `static/` for static assets — `static/` is a Hugo leftover
+
+### Next Steps
+- Verify scheduled task fires correctly tomorrow at 8 AM
+- Consider cleaning up `static/media/cv.pdf` duplicate (or symlinking) to avoid future confusion
+
+### Open Questions
+- None
+
+---
+
+## Session: 2026-02-19 evening
+
+### Completed
+- Diagnosed stale citation counts: weekly workflow (Sunday) left 4-day gap since last run Feb 15
+- Ran `fetch-scholar-metrics.py` locally: 1835 → 1843 total citations (+8)
+- Ran `update-publication-citations.py` locally: 4 publications updated (W3048745813 98→99, W2892116713 13→14, W4415736314 1→3, W4414384504 0→1)
+- Changed citation workflow schedule from weekly (Sunday) to every 3 days (`0 3 */3 * *`)
+- Fixed stale CV PDF: `/media/*` had 7-day cache; added `/media/cv.pdf` rule with 5-min TTL
+- Updated MEMORY.md with new workflow schedule and CV caching fix
+
+### Key Decisions
+- Every-3-day citation schedule balances freshness vs API politeness
+- CV gets its own cache rule (300s) separate from other media files (604800s)
+
+### Next Steps
+- Monitor first few runs on the new 3-day schedule
+- Consider cache-busting query param on CV link if short TTL still causes issues
+
+### Open Questions
+- None
+
+---
+
 ## Session: 2026-02-18 21:00
 
 ### Completed
