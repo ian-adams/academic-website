@@ -1,7 +1,26 @@
 {
-  "updated": "2026-02-21T11:21:18.519Z",
-  "count": 189,
+  "updated": "2026-02-22T11:20:15.604Z",
+  "count": 190,
   "stories": [
+    {
+      "id": "0c4c8ab59f0abacbaeb65b6d8687d281",
+      "url": "https://nypost.com/2026/02/20/opinion/mamdani-just-revealed-his-utter-ignorance-of-how-to-handle-the-violent-mentally-ill/",
+      "title": "Mamdani just revealed his utter ignorance of how to handle the violent mentally ill",
+      "source": "New York Post",
+      "date": "2026-02-21",
+      "date_discovered": "2026-02-22",
+      "summary": "<a href=\"https://nypost.com/2026/02/20/opinion/mamdani-just-revealed-his-utter-ignorance-of-how-to-handle-the-violent-mentally-ill/\" target=\"_blank\">Mamdani just revealed his utter ignorance of how to handle the violent mentally ill</a> <font color=\"#6f6f6f\">New York Post</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Zohran Mamdani, Jabez Chakraborty, Queens Police",
+      "location": "Queens, New York",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "use of force"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "1d9d23567e6021ab7f02c1cbaf95bb8e",
       "url": "https://newrepublic.com/article/206693/transcript-minneapolis-mayor-trump-will-never-break-us",
