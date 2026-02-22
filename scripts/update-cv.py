@@ -14,7 +14,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CV_SOURCE = Path(r"G:\Other computers\My Computer\R\CV-stuff\(new) CV Academic and Website\cv.pdf")
-CV_DEST = REPO_ROOT / "static" / "media" / "cv.pdf"
+CV_DEST = REPO_ROOT / "public" / "media" / "cv.pdf"
 
 
 def run(cmd: list[str], **kwargs) -> subprocess.CompletedProcess:
