@@ -1,7 +1,26 @@
 {
-  "updated": "2026-02-21T10:34:12.221Z",
-  "count": 526,
+  "updated": "2026-02-22T10:32:44.601Z",
+  "count": 527,
   "stories": [
+    {
+      "id": "b499c509787e8bf579da59210419d6a5",
+      "url": "https://www.kqed.org/news/12074152/fremont-officer-accidentally-shot-suspect-after-being-bitten-by-k9-police-say",
+      "title": "Fremont Officer Accidentally Shot Suspect After Being Bitten by K9, Police Say",
+      "source": "KQED",
+      "date": "2026-02-21",
+      "date_discovered": "2026-02-22",
+      "summary": "<a href=\"https://www.kqed.org/news/12074152/fremont-officer-accidentally-shot-suspect-after-being-bitten-by-k9-police-say\" target=\"_blank\">Fremont Officer Accidentally Shot Suspect After Being Bitten by K9, Police Say</a> <font color=\"#6f6f6f\">KQED</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Fremont Police Department, Taylor, Nana Adomako",
+      "location": "Fremont, California",
+      "tags": [
+        "K9 bite",
+        "handler",
+        "incident"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "44391500a287a5b6da651935f82dae45",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbW9wRTg0VFdsdWwxUjlKMlJjQnU5Um90YVVLR2U4MUhaMnFMajJ0V0FRMFlLS3hqQlFleVFKQU53U1FRTXBFcU5QcklqcFBJejFUdEtkdDI1bmJmaWhMVENKR2syWDYzZ2Q2VHRQNU1XaG44N2NUbmRQaVNIc2NzcWtEc3Fybm4yNjFyZ0pnU09XYTI0U2taaFNGSmg3Zw?oc=5",
