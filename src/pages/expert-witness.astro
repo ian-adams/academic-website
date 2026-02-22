@@ -1,0 +1,321 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/data/site';
+
+const author = siteConfig.author;
+
+const expertKeywords = [
+  'police expert witness',
+  'use of force expert witness',
+  'Section 1983 expert witness',
+  'police K9 expert',
+  'policing consultant',
+  'force science critique',
+  'police policy expert',
+  'police training standards expert',
+  'qualified immunity expert witness',
+  'police canine expert witness',
+  'policing trainer',
+  'police continuing education',
+  'police agency consulting',
+];
+
+const description = 'Dr. Ian T. Adams consults on policing matters for litigation, law enforcement agencies, and public audiences. Expert witness services, agency policy review, data analysis, and speaking engagements. Assistant Professor of Criminology at the University of South Carolina.';
+
+// JSON-LD for ProfessionalService
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Dr. Ian T. Adams — Policing Research & Consulting',
+  description: description,
+  url: `${siteConfig.url}/expert-witness`,
+  provider: {
+    '@type': 'Person',
+    name: author.name,
+    jobTitle: 'Assistant Professor, Criminology & Criminal Justice',
+    worksFor: {
+      '@type': 'Organization',
+      name: author.institution,
+    },
+    url: siteConfig.url,
+    sameAs: [
+      author.social.googleScholar,
+      author.social.researchGate,
+    ],
+  },
+  areaServed: ['US', 'AU', 'EU'],
+  serviceType: ['Expert Witness', 'Consulting', 'Training'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Consulting Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Police Use of Force Analysis',
+          description: 'Analysis of use-of-force incidents for alignment with generally accepted police practices.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Police Policy & Practice Review',
+          description: 'Evaluation of police policies and practices against generally accepted standards, including training, pursuits, and canine deployments.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Statistical & Analytic Support',
+          description: 'Quantitative analysis of police administrative data, including use-of-force records, K9 deployment patterns, and officer behavioral trends.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Expert Report Review',
+          description: 'Critical evaluation of opposing expert reports, assessing both scientific and practice-based claims.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Agency Consulting',
+          description: 'Policy review, data-driven assessment, and strategic guidance for law enforcement agencies.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Training',
+          description: 'Training on policing research for professional, policing, and legal audiences.',
+        },
+      },
+    ],
+  },
+};
+
+const expertiseAreas = [
+  {
+    title: 'Use of Force',
+    color: 'red',
+    bgLight: 'bg-red-100 dark:bg-red-900/50',
+    textColor: 'text-red-700 dark:text-red-400',
+    barColor: 'bg-red-700',
+    hoverColor: 'group-hover:text-red-700 dark:group-hover:text-red-400',
+    description: 'Analysis of use-of-force incidents for alignment with generally accepted police practices, including threat assessment and proportionality.',
+    icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z',
+  },
+  {
+    title: 'Policy, Practice & Behavior',
+    color: 'blue',
+    bgLight: 'bg-blue-100 dark:bg-blue-900/50',
+    textColor: 'text-blue-700 dark:text-blue-400',
+    barColor: 'bg-blue-700',
+    hoverColor: 'group-hover:text-blue-700 dark:group-hover:text-blue-400',
+    description: 'Evaluation of police policies and practices against generally accepted standards. Common areas include training, use-of-force policy, police pursuits, and K9 reliability assessment.',
+    icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+  },
+  {
+    title: 'Statistical & Analytic Support',
+    color: 'amber',
+    bgLight: 'bg-amber-100 dark:bg-amber-900/50',
+    textColor: 'text-amber-700 dark:text-amber-400',
+    barColor: 'bg-amber-700',
+    hoverColor: 'group-hover:text-amber-700 dark:group-hover:text-amber-400',
+    description: 'Quantitative analysis of police administrative data, including evaluation of policy effects, staffing analysis, and organizational trend identification.',
+    icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+  },
+  {
+    title: 'Expert Report Review',
+    color: 'purple',
+    bgLight: 'bg-purple-100 dark:bg-purple-900/50',
+    textColor: 'text-purple-700 dark:text-purple-400',
+    barColor: 'bg-purple-700',
+    hoverColor: 'group-hover:text-purple-700 dark:group-hover:text-purple-400',
+    description: 'Critical evaluation of opposing expert reports and claims. Assessment of both scientific and practice-based assertions, including identification of pseudoscientific methodology (particularly "Force Science").',
+    icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4',
+  },
+];
+---
+
+<BaseLayout
+  title="Consulting"
+  description={description}
+  keywords={expertKeywords}
+>
+  <!-- Additional structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} slot="head" />
+
+  <!-- Hero Section -->
+  <section class="section">
+    <div class="container-wide">
+      <header class="border-b-4 border-primary-700 dark:border-primary-500 pb-8 mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-1 h-12 bg-primary-700 dark:bg-primary-500"></div>
+          <span class="text-sm font-bold tracking-widest uppercase text-primary-700 dark:text-primary-400">
+            Research & Consulting
+          </span>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 dark:text-white leading-tight mb-6">
+          Consulting
+        </h1>
+
+        <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl font-light leading-relaxed">
+          Dr. Adams is an active researcher of policing with over fifty peer-reviewed publications on police behavior, use of force, technology, and policy. He consults for litigation attorneys, law enforcement agencies, and professional audiences seeking research-grounded perspectives on policing.
+        </p>
+      </header>
+    </div>
+  </section>
+
+  <!-- Litigation Support -->
+  <section class="section bg-gray-50 dark:bg-gray-900/50">
+    <div class="container-wide">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="w-1 h-8 bg-primary-700 dark:bg-primary-500"></div>
+        <span class="text-sm font-bold tracking-widest uppercase text-primary-700 dark:text-primary-400">
+          Litigation Support
+        </span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-white mb-4">
+        Expert Witness Services
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mb-8">
+        Dr. Adams has served as the retained expert on more than 110 cases, with experience providing deposition and trial testimony in matters involving police use of force, departmental policy, and officer conduct.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {expertiseAreas.map((area) => (
+          <div class="group bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden">
+            <div class={`h-2 ${area.barColor}`}></div>
+            <div class="p-6">
+              <div class={`w-12 h-12 ${area.bgLight} rounded-lg flex items-center justify-center mb-4`}>
+                <svg class={`w-6 h-6 ${area.textColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={area.icon} />
+                </svg>
+              </div>
+              <h3 class={`text-lg font-bold text-gray-900 dark:text-white mb-3 ${area.hoverColor} transition-colors`}>
+                {area.title}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                {area.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Agency Consulting & Speaking -->
+  <section class="section">
+    <div class="container-wide">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+        <!-- Agency Consulting -->
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-1 h-8 bg-primary-700 dark:bg-primary-500"></div>
+            <span class="text-sm font-bold tracking-widest uppercase text-primary-700 dark:text-primary-400">
+              Agency Work
+            </span>
+          </div>
+          <h2 class="text-3xl font-serif font-bold text-gray-900 dark:text-white mb-4">
+            Agency Consulting
+          </h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            Dr. Adams consults with law enforcement agencies on policy review, technology adoption, and data-driven assessment of operations. He has particular expertise in AI and emerging technology in policing, and has consulted with agencies across the United States, Australia, and the European Union.
+          </p>
+        </div>
+
+        <!-- Training -->
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-1 h-8 bg-primary-700 dark:bg-primary-500"></div>
+            <span class="text-sm font-bold tracking-widest uppercase text-primary-700 dark:text-primary-400">
+              Education
+            </span>
+          </div>
+          <h2 class="text-3xl font-serif font-bold text-gray-900 dark:text-white mb-4">
+            Training
+          </h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            Dr. Adams provides training for professional, policing, and legal audiences on topics including AI in policing, police use of force, body-worn cameras, and evidence-based policy. He has trained domestic and international audiences through conferences, agency programs, and continuing legal education.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Qualifications -->
+  <section class="section bg-gray-50 dark:bg-gray-900/50">
+    <div class="container-wide">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="w-1 h-8 bg-primary-700 dark:bg-primary-500"></div>
+        <span class="text-sm font-bold tracking-widest uppercase text-primary-700 dark:text-primary-400">
+          Background
+        </span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-white mb-8">
+        Qualifications
+      </h2>
+
+      <div class="max-w-4xl space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p>
+          Dr. Adams is an Assistant Professor in the Department of Criminology and Criminal Justice at the University of South Carolina. His <a href="/publications" class="text-primary-700 dark:text-primary-400 hover:underline font-medium">published research</a> spans police use of force, body-worn cameras, artificial intelligence in policing, and officer behavior, appearing in leading journals including <em>Criminology</em>, <em>Justice Quarterly</em>, <em>Criminology &amp; Public Policy</em>, and <em>Public Administration Review</em>.
+        </p>
+
+        <p>
+          Prior to his academic career, Dr. Adams served as a police officer, giving him direct operational experience with the practices and pressures at issue in litigation and policy review. He holds a Ph.D. in Political Science and a Masters of Public Administration from the University of Utah. His methodological training encompasses causal inference, experimental and quasi-experimental design, survey methodology, and quantitative analysis of administrative data. This combination of practitioner experience and methodological rigor is directly relevant to evaluating the evidentiary basis (or lack thereof) underlying claims made by opposing experts.
+        </p>
+
+        <p>
+          He is the recipient of the 2024 Early Career Award from the American Society of Criminology's Division of Policing, the 2025 Early Career Award from the Division of Experimental Criminology, and the 2026 Emerging Scholar Award from the Police Section of the Academy of Criminal Justice Sciences.
+        </p>
+
+        <p>
+          A current curriculum vitae is available for <a href={author.cv} target="_blank" rel="noopener noreferrer" class="text-primary-700 dark:text-primary-400 hover:underline font-medium">download</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section">
+    <div class="container-wide">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-1 h-8 bg-primary-700 dark:bg-primary-500"></div>
+          <span class="text-sm font-bold tracking-widest uppercase text-primary-700 dark:text-primary-400">
+            Contact
+          </span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-white mb-6">
+          Inquiries
+        </h2>
+
+        <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+          For litigation matters, consultations typically begin with a preliminary case review. For agency consulting and training, reach out to discuss scope and availability.
+        </p>
+
+        <a
+          href="mailto:adams.po@gmail.com?subject=Consulting%20Inquiry"
+          class="btn-primary px-8 py-4 text-lg font-semibold inline-flex items-center"
+        >
+          <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Contact for Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -164,6 +164,9 @@ const articleSchema = article ? {
     <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
     {articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
 
+    <!-- Additional head content from child pages -->
+    <slot name="head" />
+
     <!-- Theme initialization (prevent flash) -->
     <script is:inline>
       const theme = (() => {

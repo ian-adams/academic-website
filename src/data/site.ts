@@ -36,6 +36,7 @@ Dr. Adams has over fifty peer-reviewed publications on these and related topics,
     { name: 'Home', href: '/' },
     { name: 'Publications', href: '/publications' },
     { name: 'Posts', href: '/posts' },
+    { name: 'Consulting', href: '/expert-witness' },
     {
       name: 'Dashboards',
       items: [
