@@ -1,7 +1,26 @@
 {
-  "updated": "2026-02-24T11:40:02.766Z",
-  "count": 190,
+  "updated": "2026-02-25T11:39:22.738Z",
+  "count": 191,
   "stories": [
+    {
+      "id": "ff1710fc505cfdbece444eb39e788344",
+      "url": "https://www.cbsnews.com/news/ice-whistleblower-new-recruits-receiving-defective-training/",
+      "title": "ICE whistleblower warns new recruits are receiving \"defective\" training",
+      "source": "CBS News",
+      "date": "2026-02-23",
+      "date_discovered": "2026-02-25",
+      "summary": "<a href=\"https://www.cbsnews.com/news/ice-whistleblower-new-recruits-receiving-defective-training/\" target=\"_blank\">ICE whistleblower warns new recruits are receiving \"defective\" training</a> <font color=\"#6f6f6f\">CBS News</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.7,
+      "key_entities": "ICE, U.S. Immigration and Customs Enforcement, Congress",
+      "location": null,
+      "tags": [
+        "use of force",
+        "training",
+        "policy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "0c4c8ab59f0abacbaeb65b6d8687d281",
       "url": "https://nypost.com/2026/02/20/opinion/mamdani-just-revealed-his-utter-ignorance-of-how-to-handle-the-violent-mentally-ill/",
