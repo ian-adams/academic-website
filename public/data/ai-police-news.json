@@ -1,7 +1,105 @@
 {
-  "updated": "2026-02-24T09:45:25.912Z",
-  "count": 1469,
+  "updated": "2026-02-25T09:46:31.959Z",
+  "count": 1474,
   "stories": [
+    {
+      "id": "c676777eb5683945d8375b1138aa8097",
+      "url": "https://www.techdirt.com/2026/02/23/rings-super-bowl-ad-generates-so-much-backlash-it-has-ended-its-partnership-with-flock-safety/",
+      "title": "Ring’s Super Bowl Ad Generates So Much Backlash It Has Ended Its Partnership With Flock Safety",
+      "source": "Techdirt",
+      "date": "2026-02-23",
+      "date_discovered": "2026-02-25",
+      "summary": "<a href=\"https://www.techdirt.com/2026/02/23/rings-super-bowl-ad-generates-so-much-backlash-it-has-ended-its-partnership-with-flock-safety/\" target=\"_blank\">Ring’s Super Bowl Ad Generates So Much Backlash It Has Ended Its Partnership With Flock Safety</a> <font color=\"#6f6f6f\">Techdirt</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Ring, Flock Safety",
+      "location": null,
+      "tags": [
+        "surveillance",
+        "ALPR",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "412a32b64548017f594b1abecaf9d0f1",
+      "url": "https://www.technologyreview.com/2026/02/23/1132740/inside-chicago-surveillance-panopticon/",
+      "title": "Inside Chicago’s surveillance panopticon",
+      "source": "MIT Technology Review",
+      "date": "2026-02-23",
+      "date_discovered": "2026-02-25",
+      "summary": "<a href=\"https://www.technologyreview.com/2026/02/23/1132740/inside-chicago-surveillance-panopticon/\" target=\"_blank\">Inside Chicago’s surveillance panopticon</a> <font color=\"#6f6f6f\">MIT Technology Review</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.9,
+      "key_entities": "Chicago Police Department, Chicago Transit Authority, MIT Technology Review",
+      "location": "Chicago, Illinois",
+      "tags": [
+        "surveillance",
+        "drones",
+        "ALPR",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "9e6d85f69f49ad036d268d49c0cd0e92",
+      "url": "https://thenevadaindependent.com/article/vegas-police-are-big-users-of-license-plate-readers-public-has-little-input-because-its-a-gift",
+      "title": "Flock cameras gifted by Horowitz Foundation, avoiding public oversight",
+      "source": "The Nevada Independent",
+      "date": "2026-02-23",
+      "date_discovered": "2026-02-25",
+      "summary": "<a href=\"https://thenevadaindependent.com/article/vegas-police-are-big-users-of-license-plate-readers-public-has-little-input-because-its-a-gift\" target=\"_blank\">Flock cameras gifted by Horowitz Foundation, avoiding public oversight</a> <font color=\"#6f6f6f\">The Nevada Independent</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.9,
+      "key_entities": "Las Vegas Metropolitan Police Department, LVMPD, Flock Security, Horowitz Foundation",
+      "location": "Las Vegas, Nevada",
+      "tags": [
+        "ALPR",
+        "surveillance",
+        "privacy",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "a63868c9573d71ff07e0255b6da2ea30",
+      "url": "https://techcrunch.com/2026/02/23/americans-are-destroying-flock-surveillance-cameras/",
+      "title": "Americans are destroying Flock surveillance cameras | TechCrunch",
+      "source": "TechCrunch",
+      "date": "2026-02-23",
+      "date_discovered": "2026-02-25",
+      "summary": "<a href=\"https://techcrunch.com/2026/02/23/americans-are-destroying-flock-surveillance-cameras/\" target=\"_blank\">Americans are destroying Flock surveillance cameras | TechCrunch</a> <font color=\"#6f6f6f\">TechCrunch</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Flock Safety, ICE, Blood in the Machine, Brian Merchant",
+      "location": "United States",
+      "tags": [
+        "surveillance",
+        "ALPR",
+        "civil rights",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "913ceb2f065f8431a30b0183059db648",
+      "url": "https://reason.com/2026/02/24/brickbat-4/",
+      "title": "Brickbat: Just Don't Look",
+      "source": "Reason",
+      "date": "2026-02-23",
+      "date_discovered": "2026-02-25",
+      "summary": "<a href=\"https://reason.com/2026/02/24/brickbat-4/\" target=\"_blank\">Brickbat: Just Don't Look</a> <font color=\"#6f6f6f\">Reason</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Joseph Gullett, Georgia state legislature",
+      "location": "Georgia",
+      "tags": [
+        "body cameras",
+        "policy",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "ea05f09b6810ae126c5fac06d025e6db",
       "url": "https://economictimes.indiatimes.com/news/new-updates/sharing-a-picture-online-this-ai-tool-can-find-your-location-from-that-single-selfie-without-any-other-information/articleshow/128706427.cms",
