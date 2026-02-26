@@ -4,7 +4,15 @@
     <title>Force Science News</title>
     <description>Force Science News - automated news feed</description>
     <link>https://ianadamsresearch.com/force-science</link>
-    <lastBuildDate>Wed, 25 Feb 2026 11:39:22 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Feb 2026 11:39:06 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Police investigate officer-involved shooting in Buckhead]]></title>
+      <link>https://www.wsbtv.com/news/local/atlanta/police-investigate-officer-involved-shooting-buckhead/GRH3E7CEDNEYVCG4EDAYHS4SRY/</link>
+      <guid>3ff2544044a8626d8a77cc03b9eadb2c</guid>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate>
+      <source>WSB Atlanta</source>
+      <description><![CDATA[<a href="https://www.wsbtv.com/news/local/atlanta/police-investigate-officer-involved-shooting-buckhead/GRH3E7CEDNEYVCG4EDAYHS4SRY/" target="_blank">Police investigate officer-involved shooting in Buckhead</a> <font color="#6f6f6f">WSB Atlanta</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[ICE whistleblower warns new recruits are receiving "defective" training]]></title>
       <link>https://www.cbsnews.com/news/ice-whistleblower-new-recruits-receiving-defective-training/</link>
@@ -396,14 +404,6 @@
       <pubDate>Mon, 26 Jan 2026 00:00:00 GMT</pubDate>
       <source>Boston Herald</source>
       <description><![CDATA[<a href="https://www.bostonherald.com/2026/01/26/minneapolis-shooting-government-statement-contradictions/" target="_blank">Videos of deadly Minneapolis shooting contradict government statements</a> <font color="#6f6f6f">Boston Herald</font>]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Videos of deadly Minneapolis shooting of Alex Pretti contradict Trump administration statements]]></title>
-      <link>https://www.pbs.org/newshour/nation/videos-of-deadly-minneapolis-shooting-of-alex-pretti-contradict-trump-administration-statements</link>
-      <guid>d3e08cbf6ebcefd58fa68cef8d553028</guid>
-      <pubDate>Mon, 26 Jan 2026 00:00:00 GMT</pubDate>
-      <source>PBS</source>
-      <description><![CDATA[<a href="https://www.pbs.org/newshour/nation/videos-of-deadly-minneapolis-shooting-of-alex-pretti-contradict-trump-administration-statements" target="_blank">Videos of deadly Minneapolis shooting of Alex Pretti contradict Trump administration statements</a> <font color="#6f6f6f">PBS</font>]]></description>
     </item>
   </channel>
 </rss>

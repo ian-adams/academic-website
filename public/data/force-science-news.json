@@ -1,7 +1,26 @@
 {
-  "updated": "2026-02-25T11:39:22.738Z",
-  "count": 191,
+  "updated": "2026-02-26T11:39:06.509Z",
+  "count": 192,
   "stories": [
+    {
+      "id": "3ff2544044a8626d8a77cc03b9eadb2c",
+      "url": "https://www.wsbtv.com/news/local/atlanta/police-investigate-officer-involved-shooting-buckhead/GRH3E7CEDNEYVCG4EDAYHS4SRY/",
+      "title": "Police investigate officer-involved shooting in Buckhead",
+      "source": "WSB Atlanta",
+      "date": "2026-02-24",
+      "date_discovered": "2026-02-26",
+      "summary": "<a href=\"https://www.wsbtv.com/news/local/atlanta/police-investigate-officer-involved-shooting-buckhead/GRH3E7CEDNEYVCG4EDAYHS4SRY/\" target=\"_blank\">Police investigate officer-involved shooting in Buckhead</a> <font color=\"#6f6f6f\">WSB Atlanta</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Atlanta Police Department, Channel 2 Action News",
+      "location": "Atlanta, Georgia",
+      "tags": [
+        "use of force",
+        "shooting",
+        "deadly force"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "ff1710fc505cfdbece444eb39e788344",
       "url": "https://www.cbsnews.com/news/ice-whistleblower-new-recruits-receiving-defective-training/",
