@@ -1,7 +1,47 @@
 {
-  "updated": "2026-02-26T09:43:10.978Z",
-  "count": 1475,
+  "updated": "2026-02-27T09:35:15.213Z",
+  "count": 1477,
   "stories": [
+    {
+      "id": "512bd293b72bca3a4c106704e22e163a",
+      "url": "https://www.aclu.org/news/privacy-technology/alpr-as-public-data",
+      "title": "License Plate Readings Shouldn’t Be Public Data",
+      "source": "Aclu.org",
+      "date": "2026-02-25",
+      "date_discovered": "2026-02-27",
+      "summary": "<a href=\"https://www.aclu.org/news/privacy-technology/alpr-as-public-data\" target=\"_blank\">License Plate Readings Shouldn’t Be Public Data</a> <font color=\"#6f6f6f\">Aclu.org</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "ACLU, law enforcement",
+      "location": null,
+      "tags": [
+        "ALPR",
+        "surveillance",
+        "privacy",
+        "civil rights",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "c3366ec135c93f64d87e731b1480a759",
+      "url": "https://richmond.com/news/local/government-politics/article_15e372ce-1528-4d3a-abbb-b195c1c8c9df.html",
+      "title": "Richmond police defend use of Flock license plate readers",
+      "source": "Richmond.com",
+      "date": "2026-02-25",
+      "date_discovered": "2026-02-27",
+      "summary": "<a href=\"https://richmond.com/news/local/government-politics/article_15e372ce-1528-4d3a-abbb-b195c1c8c9df.html\" target=\"_blank\">Richmond police defend use of Flock license plate readers</a> <font color=\"#6f6f6f\">Richmond.com</font>",
+      "story_type": "general",
+      "relevance_score": 0.9,
+      "key_entities": "Richmond Police, Flock Safety, automatic license plate readers, gunshot detection",
+      "location": "Richmond, Virginia",
+      "tags": [
+        "ALPR",
+        "surveillance",
+        "policy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "db92abc2a0dc332e064268754d65a02d",
       "url": "https://news.livedoor.com/article/detail/30646063/",
