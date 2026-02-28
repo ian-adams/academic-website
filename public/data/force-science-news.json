@@ -1,7 +1,27 @@
 {
-  "updated": "2026-02-27T11:31:10.961Z",
-  "count": 192,
+  "updated": "2026-02-28T11:18:22.813Z",
+  "count": 193,
   "stories": [
+    {
+      "id": "f66b5f687d20e1801d1f3be3f06c48aa",
+      "url": "https://www.cbc.ca/news/canada/spit-hoods-misuse-deaths-9.7107138",
+      "title": "Why putting spit hoods on people is risky — and can be deadly",
+      "source": "CBC News",
+      "date": "2026-02-27",
+      "date_discovered": "2026-02-28",
+      "summary": "<a href=\"https://www.cbc.ca/news/canada/spit-hoods-misuse-deaths-9.7107138\" target=\"_blank\">Why putting spit hoods on people is risky — and can be deadly</a> <font color=\"#6f6f6f\">CBC News</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.8,
+      "key_entities": "CBC News, the fifth estate, Radio-Canada, Enquête",
+      "location": "Canada",
+      "tags": [
+        "restraint",
+        "use of force",
+        "policy",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "3ff2544044a8626d8a77cc03b9eadb2c",
       "url": "https://www.wsbtv.com/news/local/atlanta/police-investigate-officer-involved-shooting-buckhead/GRH3E7CEDNEYVCG4EDAYHS4SRY/",

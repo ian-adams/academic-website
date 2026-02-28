@@ -4,7 +4,15 @@
     <title>Force Science News</title>
     <description>Force Science News - automated news feed</description>
     <link>https://ianadamsresearch.com/force-science</link>
-    <lastBuildDate>Fri, 27 Feb 2026 11:31:10 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 28 Feb 2026 11:18:22 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Why putting spit hoods on people is risky — and can be deadly]]></title>
+      <link>https://www.cbc.ca/news/canada/spit-hoods-misuse-deaths-9.7107138</link>
+      <guid>f66b5f687d20e1801d1f3be3f06c48aa</guid>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
+      <source>CBC News</source>
+      <description><![CDATA[<a href="https://www.cbc.ca/news/canada/spit-hoods-misuse-deaths-9.7107138" target="_blank">Why putting spit hoods on people is risky — and can be deadly</a> <font color="#6f6f6f">CBC News</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[Police investigate officer-involved shooting in Buckhead]]></title>
       <link>https://www.wsbtv.com/news/local/atlanta/police-investigate-officer-involved-shooting-buckhead/GRH3E7CEDNEYVCG4EDAYHS4SRY/</link>
@@ -396,14 +404,6 @@
       <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
       <source>The Denver Post</source>
       <description><![CDATA[<a href="https://www.denverpost.com/2026/01/26/edgewater-police-shooting-fatality/" target="_blank">Man shot by Edgewater police in Wheat Ridge has died</a> <font color="#6f6f6f">The Denver Post</font>]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Videos of deadly Minneapolis shooting contradict government statements]]></title>
-      <link>https://www.bostonherald.com/2026/01/26/minneapolis-shooting-government-statement-contradictions/</link>
-      <guid>f9248a9a51b45387150e7c9151926e9f</guid>
-      <pubDate>Mon, 26 Jan 2026 00:00:00 GMT</pubDate>
-      <source>Boston Herald</source>
-      <description><![CDATA[<a href="https://www.bostonherald.com/2026/01/26/minneapolis-shooting-government-statement-contradictions/" target="_blank">Videos of deadly Minneapolis shooting contradict government statements</a> <font color="#6f6f6f">Boston Herald</font>]]></description>
     </item>
   </channel>
 </rss>
