@@ -1,7 +1,47 @@
 {
-  "updated": "2026-02-28T09:20:30.583Z",
-  "count": 1478,
+  "updated": "2026-03-01T09:24:09.098Z",
+  "count": 1480,
   "stories": [
+    {
+      "id": "4c5a48ff7d0445ee79ca9f1620f82b4c",
+      "url": "https://www.thestranger.com/news/2026/02/27/80497612/councilmember-kettle-insists-surveillance-tech-is-safe",
+      "title": "Councilmember Kettle Insists Surveillance Tech is Safe",
+      "source": "TheStranger.com",
+      "date": "2026-02-27",
+      "date_discovered": "2026-03-01",
+      "summary": "<a href=\"https://www.thestranger.com/news/2026/02/27/80497612/councilmember-kettle-insists-surveillance-tech-is-safe\" target=\"_blank\">Councilmember Kettle Insists Surveillance Tech is Safe</a> <font color=\"#6f6f6f\">TheStranger.com</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Bob Kettle, Seattle Public Safety Committee, Seattle Police Department",
+      "location": "Seattle, Washington",
+      "tags": [
+        "surveillance",
+        "policy",
+        "civil rights"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "71427edca8d22d6d2ca6d2275a61da77",
+      "url": "https://newrepublic.com/article/206992/flock-safety-cameras-alpr-deflock-resistance-nationwide",
+      "title": "The Nationwide Revolt Against Flock Safety Cameras",
+      "source": "The New Republic",
+      "date": "2026-02-27",
+      "date_discovered": "2026-03-01",
+      "summary": "<a href=\"https://newrepublic.com/article/206992/flock-safety-cameras-alpr-deflock-resistance-nationwide\" target=\"_blank\">The Nationwide Revolt Against Flock Safety Cameras</a> <font color=\"#6f6f6f\">The New Republic</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.9,
+      "key_entities": "Flock Safety, Austin Texas, Evanston Illinois, NPR",
+      "location": "Austin, Texas; Evanston, Illinois",
+      "tags": [
+        "AI",
+        "surveillance",
+        "ALPR",
+        "civil rights",
+        "policy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "1d038b7264a2128dc3a642c50d5a693c",
       "url": "https://www.memeorandum.com/260226/p124",
