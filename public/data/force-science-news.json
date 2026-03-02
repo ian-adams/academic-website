@@ -1,7 +1,25 @@
 {
-  "updated": "2026-03-01T11:19:25.940Z",
-  "count": 193,
+  "updated": "2026-03-02T11:31:22.035Z",
+  "count": 194,
   "stories": [
+    {
+      "id": "8250c4db6fdabeae7e5289f32be8ddc1",
+      "url": "https://www.ibtimes.com.au/austin-shooting-mass-shooting-austins-west-6th-street-leaves-20-injured-suspect-shot-police-1862392",
+      "title": "Austin Shooting: Mass Shooting on Austin's West 6th Street Leaves Up to 20 Injured; Suspect Shot by Police",
+      "source": "Ibtimes.com.au",
+      "date": "2026-03-01",
+      "date_discovered": "2026-03-02",
+      "summary": "<a href=\"https://www.ibtimes.com.au/austin-shooting-mass-shooting-austins-west-6th-street-leaves-20-injured-suspect-shot-police-1862392\" target=\"_blank\">Austin Shooting: Mass Shooting on Austin's West 6th Street Leaves Up to 20 Injured; Suspect Shot by Police</a> <font color=\"#6f6f6f\">Ibtimes.com.au</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Austin Police",
+      "location": "Austin, Texas",
+      "tags": [
+        "deadly force",
+        "shooting"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "f66b5f687d20e1801d1f3be3f06c48aa",
       "url": "https://www.cbc.ca/news/canada/spit-hoods-misuse-deaths-9.7107138",
