@@ -1,7 +1,27 @@
 {
-  "updated": "2026-03-01T10:32:03.684Z",
-  "count": 527,
+  "updated": "2026-03-02T10:51:14.957Z",
+  "count": 528,
   "stories": [
+    {
+      "id": "9bee65b5106abaf6622c60141df487d5",
+      "url": "https://www.kqed.org/news/12074955/fremont-sergeant-bitten-by-police-dog-is-departments-k-9-supervisor",
+      "title": "Fremont Sergeant Bitten by Police Dog is Department’s K-9 Supervisor",
+      "source": "KQED",
+      "date": "2026-02-28",
+      "date_discovered": "2026-03-02",
+      "summary": "<a href=\"https://www.kqed.org/news/12074955/fremont-sergeant-bitten-by-police-dog-is-departments-k-9-supervisor\" target=\"_blank\">Fremont Sergeant Bitten by Police Dog is Department’s K-9 Supervisor</a> <font color=\"#6f6f6f\">KQED</font>",
+      "story_type": "incident",
+      "relevance_score": 0.9,
+      "key_entities": "Fremont Police, K-9 Unit supervisor, Snelson",
+      "location": "Fremont, California",
+      "tags": [
+        "K9 bite",
+        "K9 deployment",
+        "handler",
+        "excessive force"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "b499c509787e8bf579da59210419d6a5",
       "url": "https://www.kqed.org/news/12074152/fremont-officer-accidentally-shot-suspect-after-being-bitten-by-k9-police-say",
