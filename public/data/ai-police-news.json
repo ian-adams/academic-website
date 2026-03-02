@@ -1,7 +1,25 @@
 {
-  "updated": "2026-03-01T09:24:09.098Z",
-  "count": 1480,
+  "updated": "2026-03-02T09:41:26.761Z",
+  "count": 1481,
   "stories": [
+    {
+      "id": "98c4a2c9d1f326a11dd4e416d956509e",
+      "url": "https://siliconangle.com/2026/02/27/multitude-insights-raises-10m-modernize-intelligence-sharing-law-enforcement/",
+      "title": "Multitude Insights raises $10M to modernize intelligence sharing for law enforcement",
+      "source": "SiliconANGLE News",
+      "date": "2026-02-27",
+      "date_discovered": "2026-03-02",
+      "summary": "<a href=\"https://siliconangle.com/2026/02/27/multitude-insights-raises-10m-modernize-intelligence-sharing-law-enforcement/\" target=\"_blank\">Multitude Insights raises $10M to modernize intelligence sharing for law enforcement</a> <font color=\"#6f6f6f\">SiliconANGLE News</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "Multitude Insights Inc.",
+      "location": null,
+      "tags": [
+        "AI",
+        "policy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "4c5a48ff7d0445ee79ca9f1620f82b4c",
       "url": "https://www.thestranger.com/news/2026/02/27/80497612/councilmember-kettle-insists-surveillance-tech-is-safe",
