@@ -1,7 +1,25 @@
 {
-  "updated": "2026-03-02T11:31:22.035Z",
-  "count": 194,
+  "updated": "2026-03-03T11:31:13.052Z",
+  "count": 195,
   "stories": [
+    {
+      "id": "7f5b20316c40a12391ea3142e9ac3cf3",
+      "url": "https://www.newser.com/story/384598/2-people-dog-die-in-virginia-road-rage-incident.html",
+      "title": "2 People, Dog Die in Virginia Road Rage Incident",
+      "source": "Newser",
+      "date": "2026-03-02",
+      "date_discovered": "2026-03-03",
+      "summary": "<a href=\"https://www.newser.com/story/384598/2-people-dog-die-in-virginia-road-rage-incident.html\" target=\"_blank\">2 People, Dog Die in Virginia Road Rage Incident</a> <font color=\"#6f6f6f\">Newser</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Virginia State Police, Capital Beltway",
+      "location": "Northern Virginia",
+      "tags": [
+        "deadly force",
+        "shooting"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "8250c4db6fdabeae7e5289f32be8ddc1",
       "url": "https://www.ibtimes.com.au/austin-shooting-mass-shooting-austins-west-6th-street-leaves-20-injured-suspect-shot-police-1862392",
