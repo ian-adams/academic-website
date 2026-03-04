@@ -1,7 +1,26 @@
 {
-  "updated": "2026-03-03T09:35:57.486Z",
-  "count": 1481,
+  "updated": "2026-03-04T09:34:33.602Z",
+  "count": 1482,
   "stories": [
+    {
+      "id": "f96c6b2780e5ebfbe185ed0f14393a4e",
+      "url": "https://www.denverpost.com/2026/03/02/colorado-big-data-privacy-surveillance-bills-legislature/",
+      "title": "Colorado lawmakers debate limits on police surveillance, data and tech: ‘It’s not just coming down the pipe — it’s here’",
+      "source": "The Denver Post",
+      "date": "2026-03-02",
+      "date_discovered": "2026-03-04",
+      "summary": "<a href=\"https://www.denverpost.com/2026/03/02/colorado-big-data-privacy-surveillance-bills-legislature/\" target=\"_blank\">Colorado lawmakers debate limits on police surveillance, data and tech: ‘It’s not just coming down the pipe — it’s here’</a> <font color=\"#6f6f6f\">The Denver Post</font>",
+      "story_type": "general",
+      "relevance_score": 0.8,
+      "key_entities": "Colorado lawmakers, state Rep. Jennifer Bacon, Denver Post",
+      "location": "Colorado",
+      "tags": [
+        "surveillance",
+        "policy",
+        "privacy"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "98c4a2c9d1f326a11dd4e416d956509e",
       "url": "https://siliconangle.com/2026/02/27/multitude-insights-raises-10m-modernize-intelligence-sharing-law-enforcement/",
