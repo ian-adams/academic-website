@@ -1,7 +1,27 @@
 {
-  "updated": "2026-03-04T09:34:33.602Z",
-  "count": 1482,
+  "updated": "2026-03-05T09:37:08.023Z",
+  "count": 1483,
   "stories": [
+    {
+      "id": "83068c20c6ad47fca7b1366adbafd3c3",
+      "url": "https://www.activistpost.com/flock-off-how-flock-safety-is-turning-roads-into-surveillance-networks-and-what-you-can-do-about-it/",
+      "title": "Flock Off! How Flock Safety Is Turning Roads Into Surveillance Networks – And What You Can Do About It",
+      "source": "Activistpost.com",
+      "date": "2026-03-04",
+      "date_discovered": "2026-03-05",
+      "summary": "<a href=\"https://www.activistpost.com/flock-off-how-flock-safety-is-turning-roads-into-surveillance-networks-and-what-you-can-do-about-it/\" target=\"_blank\">Flock Off! How Flock Safety Is Turning Roads Into Surveillance Networks – And What You Can Do About It</a> <font color=\"#6f6f6f\">Activistpost.com</font>",
+      "story_type": "investigative",
+      "relevance_score": 0.8,
+      "key_entities": "Flock Safety, automated license plate readers, ALPR",
+      "location": null,
+      "tags": [
+        "ALPR",
+        "surveillance",
+        "privacy",
+        "civil rights"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "f96c6b2780e5ebfbe185ed0f14393a4e",
       "url": "https://www.denverpost.com/2026/03/02/colorado-big-data-privacy-surveillance-bills-legislature/",
