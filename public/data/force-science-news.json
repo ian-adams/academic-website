@@ -1,7 +1,84 @@
 {
-  "updated": "2026-03-04T11:29:45.021Z",
-  "count": 195,
+  "updated": "2026-03-05T11:33:05.595Z",
+  "count": 199,
   "stories": [
+    {
+      "id": "5296f454cb49a8889697b15bb2cf0e7c",
+      "url": "https://kffhealthnews.org/news/article/police-mental-health-calls-988-911-mobile-crisis-teams-funding/",
+      "title": "Despite Their Successes, Some Mobile Crisis Response Teams Are in Crisis",
+      "source": "Kffhealthnews.org",
+      "date": "2026-03-04",
+      "date_discovered": "2026-03-05",
+      "summary": "<a href=\"https://kffhealthnews.org/news/article/police-mental-health-calls-988-911-mobile-crisis-teams-funding/\" target=\"_blank\">Despite Their Successes, Some Mobile Crisis Response Teams Are in Crisis</a> <font color=\"#6f6f6f\">Kffhealthnews.org</font>",
+      "story_type": "general",
+      "relevance_score": 0.7,
+      "key_entities": "mobile crisis teams, Bozeman",
+      "location": "Bozeman, Montana",
+      "tags": [
+        "de-escalation",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "b3cc10dbdfbe6766769b98849b0954b6",
+      "url": "https://www.foxnews.com/us/austin-police-officers-no-charges-terror-attack-response-criticism-mandatory-grand-jury-review",
+      "title": "Texas DA says no charges for police in terror attack response amid criticism of mandatory grand jury review",
+      "source": "Fox News",
+      "date": "2026-03-04",
+      "date_discovered": "2026-03-05",
+      "summary": "<a href=\"https://www.foxnews.com/us/austin-police-officers-no-charges-terror-attack-response-criticism-mandatory-grand-jury-review\" target=\"_blank\">Texas DA says no charges for police in terror attack response amid criticism of mandatory grand jury review</a> <font color=\"#6f6f6f\">Fox News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Austin Police Department, Texas District Attorney",
+      "location": "Austin, Texas",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "54218884403d7ae09d8e71187111ae1a",
+      "url": "https://www.wnd.com/2026/03/insane-cops-who-stopped-islamic-mass-shooter-face/",
+      "title": "‘Insane’: Cops who stopped Islamic mass shooter to face grand jury for possible criminal charges",
+      "source": "Wnd.com",
+      "date": "2026-03-03",
+      "date_discovered": "2026-03-05",
+      "summary": "<a href=\"https://www.wnd.com/2026/03/insane-cops-who-stopped-islamic-mass-shooter-face/\" target=\"_blank\">‘Insane’: Cops who stopped Islamic mass shooter to face grand jury for possible criminal charges</a> <font color=\"#6f6f6f\">Wnd.com</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Austin Police Department, grand jury, George Floyd",
+      "location": "Austin, Texas",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability",
+        "policy"
+      ],
+      "needs_review": 0
+    },
+    {
+      "id": "ed35686703215aa496ad0ec6726c4eed",
+      "url": "https://nypost.com/2026/03/03/us-news/3-hero-austin-cops-who-stopped-deadly-bar-shooting-expected-to-be-dragged-before-grand-jury-thanks-to-george-floyd-era-policy/",
+      "title": "3 hero Austin cops who stopped deadly bar shooting expected to be dragged before grand jury thanks to George Floyd-era policy",
+      "source": "New York Post",
+      "date": "2026-03-03",
+      "date_discovered": "2026-03-05",
+      "summary": "<a href=\"https://nypost.com/2026/03/03/us-news/3-hero-austin-cops-who-stopped-deadly-bar-shooting-expected-to-be-dragged-before-grand-jury-thanks-to-george-floyd-era-policy/\" target=\"_blank\">3 hero Austin cops who stopped deadly bar shooting expected to be dragged before grand jury thanks to George Floyd-era policy</a> <font color=\"#6f6f6f\">New York Post</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Austin Police Department",
+      "location": "Austin, Texas",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "policy",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "7f5b20316c40a12391ea3142e9ac3cf3",
       "url": "https://www.newser.com/story/384598/2-people-dog-die-in-virginia-road-rage-incident.html",
