@@ -1,7 +1,26 @@
 {
-  "updated": "2026-03-05T11:33:05.595Z",
-  "count": 199,
+  "updated": "2026-03-06T11:27:43.830Z",
+  "count": 200,
   "stories": [
+    {
+      "id": "dffa0d57fa41f8519d3664495847dda6",
+      "url": "https://www.cbsnews.com/news/police-officers-austin-gunman-shooting/",
+      "title": "Officers who killed Austin gunman won't face charges",
+      "source": "CBS News",
+      "date": "2026-03-04",
+      "date_discovered": "2026-03-06",
+      "summary": "<a href=\"https://www.cbsnews.com/news/police-officers-austin-gunman-shooting/\" target=\"_blank\">Officers who killed Austin gunman won't face charges</a> <font color=\"#6f6f6f\">CBS News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Travis County DA Jose Garza, Austin Police Department",
+      "location": "Austin, Texas",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "5296f454cb49a8889697b15bb2cf0e7c",
       "url": "https://kffhealthnews.org/news/article/police-mental-health-calls-988-911-mobile-crisis-teams-funding/",

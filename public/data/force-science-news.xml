@@ -4,7 +4,15 @@
     <title>Force Science News</title>
     <description>Force Science News - automated news feed</description>
     <link>https://ianadamsresearch.com/force-science</link>
-    <lastBuildDate>Thu, 05 Mar 2026 11:33:05 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2026 11:27:43 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Officers who killed Austin gunman won't face charges]]></title>
+      <link>https://www.cbsnews.com/news/police-officers-austin-gunman-shooting/</link>
+      <guid>dffa0d57fa41f8519d3664495847dda6</guid>
+      <pubDate>Wed, 04 Mar 2026 00:00:00 GMT</pubDate>
+      <source>CBS News</source>
+      <description><![CDATA[<a href="https://www.cbsnews.com/news/police-officers-austin-gunman-shooting/" target="_blank">Officers who killed Austin gunman won't face charges</a> <font color="#6f6f6f">CBS News</font>]]></description>
+    </item>
     <item>
       <title><![CDATA[Despite Their Successes, Some Mobile Crisis Response Teams Are in Crisis]]></title>
       <link>https://kffhealthnews.org/news/article/police-mental-health-calls-988-911-mobile-crisis-teams-funding/</link>
@@ -396,14 +404,6 @@
       <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
       <source>CBS News</source>
       <description><![CDATA[<a href="https://www.cbsnews.com/news/alex-pretti-shooting-minneapolis-growing-number-of-republicans-criticize-trump-admin-response/" target="_blank">More Republicans criticize Trump officials' response to Alex Pretti shooting</a> <font color="#6f6f6f">CBS News</font>]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Former Virginia Gov. Youngkin pardoned ex-police sergeant in fatal 2023 shooting of unarmed man]]></title>
-      <link>https://abcnews.go.com/US/wireStory/former-virginia-gov-youngkin-pardoned-police-sergeant-fatal-129610471</link>
-      <guid>d45e8b037e65cfc9ab916e5ee3633db4</guid>
-      <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
-      <source>ABC News</source>
-      <description><![CDATA[<a href="https://abcnews.go.com/US/wireStory/former-virginia-gov-youngkin-pardoned-police-sergeant-fatal-129610471" target="_blank">Former Virginia Gov. Youngkin pardoned ex-police sergeant in fatal 2023 shooting of unarmed man</a> <font color="#6f6f6f">ABC News</font>]]></description>
     </item>
   </channel>
 </rss>
