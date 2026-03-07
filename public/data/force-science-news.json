@@ -1,7 +1,27 @@
 {
-  "updated": "2026-03-06T11:27:43.830Z",
-  "count": 200,
+  "updated": "2026-03-07T11:19:13.692Z",
+  "count": 201,
   "stories": [
+    {
+      "id": "d13db768a50c8a76753ada7bed20a056",
+      "url": "https://www.foxnews.com/us/austin-bar-shooting-bodycam-due-out-da-makes-major-call-about-cops-who-shot-suspected-terrorist",
+      "title": "Austin bar shooting bodycam due out as DA makes major call about cops who shot suspected terrorist",
+      "source": "Fox News",
+      "date": "2026-03-05",
+      "date_discovered": "2026-03-07",
+      "summary": "<a href=\"https://www.foxnews.com/us/austin-bar-shooting-bodycam-due-out-da-makes-major-call-about-cops-who-shot-suspected-terrorist\" target=\"_blank\">Austin bar shooting bodycam due out as DA makes major call about cops who shot suspected terrorist</a> <font color=\"#6f6f6f\">Fox News</font>",
+      "story_type": "incident",
+      "relevance_score": 0.8,
+      "key_entities": "Austin Police Department, Travis County District Attorney",
+      "location": "Austin, Texas",
+      "tags": [
+        "deadly force",
+        "shooting",
+        "body cameras",
+        "accountability"
+      ],
+      "needs_review": 0
+    },
     {
       "id": "dffa0d57fa41f8519d3664495847dda6",
       "url": "https://www.cbsnews.com/news/police-officers-austin-gunman-shooting/",
